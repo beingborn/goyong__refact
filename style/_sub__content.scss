@@ -1,0 +1,296 @@
+// 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap을 이용합니다.
+// page 1 - 회계공시 열람
+
+// .mo__open__wrap {
+//   display: none;
+// }
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0.1rem;
+    height: 0.1rem;
+    clip: rect(0, 0, 0, 0);
+    margin: -0.1rem;
+  }
+}
+
+#sub__wrap {
+  .content {
+    .visual__bg {
+      width: 100%;
+      height: 25rem;
+      background: url(../img/bg__sub1-1.png) no-repeat center;
+      background-size: cover;
+      position: relative;
+
+      .visual__text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+
+        h2 {
+          font-size: 3.2rem;
+          margin-bottom: 2.8rem;
+          white-space: nowrap;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.mobile__tab {
+  display: none;
+}
+.mobile__tab__content {
+  display: none;
+}
+
+.tab__wrap {
+  width: 128rem;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  padding-top: 8rem;
+
+  .tab__btn {
+    width: 25%;
+    height: 4.5rem;
+    text-align: center;
+
+    button {
+      cursor: pointer;
+      width: 100%;
+      background: transparent;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      color: #767676;
+      border-bottom: 0.1rem solid #d8d8d8;
+    }
+
+    .active {
+      color: $second-color;
+      border-bottom: 0.4rem solid $second-color;
+    }
+  }
+}
+
+
+
+.tab__content {
+  padding-top: 8rem;
+
+  .data__title {
+    margin-bottom: 1.6rem;
+    text-align: left;
+    position: relative;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  table {
+    width: 100%;
+    font-size: 1.5rem;
+
+    tbody th {
+      font-weight: 500;
+      color: #000;
+      border-right: 0.1rem solid #ddd;
+      border-bottom: 0.1rem solid #ddd;
+    }
+  }
+}
+
+.no__border__wrap .table__horizontal table tbody th {border-bottom: 0}
+.no__border__wrap .table__horizontal td {border-bottom: 0}
+
+.must__write {
+  position: relative;
+}
+.must__write::after {
+  content: " *";
+  color: #fe5555;
+  font-weight: bold;
+  position: absolute;
+  right: -0.8rem;
+}
+
+.table__horizontal {
+  height: 5.8rem;
+  border-top: 0.2rem solid #333;
+
+  table {
+    height: 100%;
+  }
+
+  tbody th {
+    font-weight: 500;
+    background: #f8f8f8;
+    text-align: left;
+    padding: 0 1.5rem;
+    line-height: 4.5rem;
+  }
+
+  td {
+    padding: 0 1rem;
+
+    select {
+      width: 100%;
+      height: 4rem;
+      border: 0.1rem solid #ccc;
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+    input {
+      width: calc(50% - 1.4rem);
+      border: 0.1rem solid #ccc;
+      height: 4rem;
+      font-size: 1.5rem;
+    }
+    border-bottom: 0.1rem solid #ddd;
+  }
+}
+
+.input--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.tab {
+  .dis__info:not(:first-child) {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+  }
+
+  .table__vertical {
+    border-top: 0.2rem solid #333;
+    width: 100%;
+  }
+}
+
+.table__vertical .align__cols,
+.table__horizontal .align__cols {
+  width: 15.38%;
+}
+
+.tab__4 .table__horizontal table tbody th {border-bottom: 0;}
+.tab__4 .table__horizontal td {border-bottom: 0;}
+
+.table__vertical table {
+  // 테이블 공통 영역
+  tr th:nth-child(1) {
+    font-weight: 500;
+    // border-left: 0.1rem solid #ddd;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  tr th:nth-last-child(1){
+    border-right: 0;
+  }
+
+
+  tr td:nth-last-child(1){
+    border-right: 0;
+  }
+
+  tr th.border-right {border-right: 0.1rem solid #ddd;}
+
+  td {
+    text-align: right;
+    border-right: 0.1rem solid #ddd;
+    border-bottom: 0.1rem solid #ddd;
+  }
+
+  // 테이블 제목 영역
+  thead {
+    tr th {
+      font-weight: 500;
+      height: 6rem;
+      background-color: #f8f8f8;
+      line-height: 6rem;
+      border-right: 0.1rem solid #ddd;
+      border-bottom: 0.1rem solid #ddd;
+      text-align: center;
+      vertical-align: middle;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
+  }
+
+  // 테이블 내용 영역
+  tbody {
+    th {
+      background-color: #f8f8f8;
+    }
+    td {
+      padding-right: 0.8rem;
+    }
+    td,
+    th {
+      height: 6rem;
+      line-height: 6rem;
+    }
+  }
+}
+
+// 지출 현황
+.expend__sit .table__vertical table thead tr th {
+  line-height: 150%;
+}
+
+.expend__sit .table__vertical table {table-layout: fixed;}
+
+.tab__content .tab .expend__sit {
+  padding-bottom: 0;
+  margin-bottom: 5.6rem;
+}
+
+
+.earn__sit {
+  .tab__detail {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 84rem;
+  }
+}
+
+
+.expend__sit {
+
+
+  .tab__detail {
+    // 부모에 overflow-x : auto
+    overflow-x: auto;
+  }
+  table {
+    min-width: 102.4rem;
+    table-layout: fixed;
+  }
+}
+
+// 주석폼
+
+.table__last {
+  .input--flex input {
+    width: 100%;
+  }
+}

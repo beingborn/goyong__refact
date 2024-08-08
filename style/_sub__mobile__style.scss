@@ -1,0 +1,282 @@
+// 모바일 탭
+
+.mobile__tab {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  .swiper {
+    border: 0.1rem dashed green;
+
+    .swiper-slide {
+      max-width: 13rem;
+      text-align: center;
+
+      .btn--active {
+        color: $second-color;
+        border-bottom: 0.2rem solid $second-color;
+        font-weight: 700;
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        color: #555555;
+        background: transparent;
+        font-size: 1.9rem;
+        padding: 2rem 1.6rem;
+        white-space: nowrap;
+        border-bottom: 0.2rem solid #ddd;
+        font-weight: 500;
+        // white-space: nowrap;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    border-radius: 50%;
+    background: url(../img/mo__tab__next.png) no-repeat center;
+    background-size: 100% auto;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .swiper-button-prev {
+    border-radius: 50%;
+    background: url(../img/mo__tab__prev.png) no-repeat center;
+    background-size: 100% auto;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: 0;
+    margin-top: calc(0px - (2.4rem / 2));
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// 첫번째 모바일 탭만 마진탑 5em
+.mobile__tab .first__mo {
+  margin-top: 5rem;
+}
+
+// 전체 테이블 기본 스타일
+.mo__open__wrap {
+  .mobile__con {
+    margin: 4rem 0;
+    .market {
+      margin-bottom: 4rem;
+    }
+  }
+
+  table {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: left;
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+
+      th:nth-of-type(2) {
+        margin-top: 2rem;
+      }
+
+      td {
+        margin-top: 1rem;
+      }
+
+      th,
+      td {
+        width: 100%;
+        select {
+          width: 100%;
+          height: 4rem;
+          border: 0.1rem solid #ccc;
+          padding: 0.8rem;
+        }
+        input {
+          width: calc(50% - 1.4rem);
+          border: 0.1rem solid #ccc;
+          height: 4rem;
+        }
+      }
+    }
+  }
+
+  .data__title {
+    font-size: 2.5rem;
+  }
+}
+
+// 아코디언 테이블 스타일
+.mo__open__wrap {
+  .mo__column {
+
+    tr {
+      flex-wrap: nowrap;
+      margin-top: 1.6rem;
+
+      td {
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+
+    // 계층 구조 1 (당기수입)
+    .sub__element {
+      font-weight: 700;
+      font-size: 1.8rem;
+      padding-left: 0.8rem;
+      color: #333;
+      margin-top: 2.4rem;
+
+      &.depth2 {
+        padding-left: 1.6rem;
+      }
+    }
+
+    // 계층 구조 2 (하부내역)
+    .sub__item-depth2 {
+      padding-left: 1.2rem;
+    }
+
+    // 계층 구조 3 (하부내역)
+    .sub__item-depth3 {
+      padding-left: 1.6rem;
+    }
+
+    td {
+      margin-top: 0;
+    }
+  }
+}
+
+.data--open {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+.data__toggle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+
+.last--open {
+  &::after{
+    content: '';
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 0.1rem;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+  }
+
+}
+
+.data--open {
+  position: relative;
+  padding: 1.6rem 0;
+
+  &::before{
+    content: '';
+    display: inline-block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 0.1rem;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+  }
+
+  .arrow__wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+
+    .arrow__top {
+      display: none;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(../img/arrow__top.png) no-repeat center;
+    }
+    .arrow__bottom {
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(../img/arrow__bottom.png) no-repeat center;
+    }
+  }
+}
+
+.data--open.on .arrow__top {
+  display: block;
+} // 열렸을때
+.data--open.on .arrow__bottom {
+  display: none;
+}
+
+//공통 table 스타일
+
+.t__title__wrap {
+  padding-bottom: 1.3rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+.mo__column .t__title {
+  font-size: 2rem;
+}
+
+.t__last__data {
+  margin-bottom: 5rem;
+}
+
+
+
+// 노동 조합 정보
+
+.list__btn__group {
+  text-align: right;
+
+  button {
+    background-color: #246BEB;
+    color: #fff;
+    border: 0;
+    font-size: 2rem;
+    height: 5.6rem;
+    // line-height: 5.6rem;
+    padding: 0 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+}
+
+.mo__open__wrap .mobile__market__input {width: 100%;}
+.mo__open__wrap .mobile__market__input__2 {width: calc(50% - 1em);}
+.mo__open__wrap .mobile__market__input__3 {width: calc(33.33% - 1em);}
+
+
+.tab__content table tbody .cols2 {line-height: 130%; width: 15.38%; height: 100%;}
+.tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
+
+// 탭 4 시계열 차트
+
+.tab__4__table {
+  margin-bottom: 2.8rem;
+}

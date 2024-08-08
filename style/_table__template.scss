@@ -1,0 +1,87 @@
+//////////////
+
+// 사용자 테이블
+
+.table__horizontal__ex {
+
+    tr:first-child{border-top: 0.2rem solid #000;}
+    tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;}
+    th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1;}
+    td {padding: 0 1rem; width: auto}
+    
+    input[type="text"]{border: 0.1rem solid #ddd; height: 4rem; width: 100%;}
+
+    tr.r2 td{width: calc( (100% - (15.38% * 2)) / 2 );}
+
+    .find--width td {width: calc(100% - 15.38%);}
+
+    .input-3--flex {
+        display: flex;
+        gap: 1rem;
+        width: 100%; 
+    }
+
+    .input-3--flex input {
+        flex: 1; 
+    }
+
+}
+
+
+
+
+
+
+
+/////////////////////
+.table__template__radio {
+    tr {display: flex;}
+    th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;}
+    td {border-bottom: 1px solid #ddd;}
+}
+
+
+.table__template__radio .radio__wrap {
+    input[type="radio"]{
+        appearance: none;
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        margin-right: 0.7rem;
+        border: 1px solid #ccc;
+    }
+
+    input[type="radio"]:checked {
+        border: 0.6rem solid #000;
+    }
+    .flex {padding-left: 1rem;}
+}
+
+.radio__table th, td {border-bottom: 1px solid #ddd;}
+
+.radio__table th {width: 12.5%; line-height: 5.8rem;}
+.radio__table td {width: calc(100% - 12.5%);}
+.radio__table tr {line-height: 5.8rem;}
+
+
+
+.radio__table .flex {display: flex; align-items: center;}
+
+.radio__table .flex label:not(:last-child) {margin-right: 2rem;}
+
+
+.table__template__horizontal {
+    table {width: 100%; font-size: 1.5rem;}
+    tr {display: flex;}
+    th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;}
+    td {border-bottom: 1px solid #ddd;}
+
+    .default__table {
+        tr {line-height: 5.8rem;}
+        th, td {border-bottom: 1px solid #ddd;}
+        th {width: auto;}
+        td {width: auto;}
+
+    }
+
+}

@@ -1,0 +1,121 @@
+.top__visual {
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+
+    .main__hero {
+        width: 100%;
+        height: 45rem;
+        background: url(../img/main__hero.png) no-repeat center;
+        background-size: cover;
+
+        .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main__text {
+            position: absolute;
+            top: 9.7rem;
+            left: 0;
+
+            .main__bold {
+                font-size: 4rem;
+                line-height: 150%;
+                margin-bottom: 3.2rem;
+            }
+
+            .main__medium {
+                font-size: 1.7rem;
+                line-height: 180%;
+            }
+        }
+
+        .quick__menu {
+            position: absolute;
+            right: 0;
+            top: 12.8rem;
+            display: flex;
+
+            .quick__wrap {
+                width: 14rem;
+                height: 14rem;
+                border-radius: 50%;
+                border: 0.2rem solid #DBDBDB;
+                background-color: #373737;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-right: 4.8rem;
+                cursor: pointer;
+
+                &:nth-last-child(1) {
+                    margin-right: 0;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                    padding-top: 1.6rem;
+                    color: #fff;
+                    line-height: 120%;
+                }
+            }
+        }
+    }
+}
+
+.manual {
+    position: relative;
+
+    .tip {
+        position: absolute;
+        top: -6rem;
+    }
+}
+
+.count__group {
+    position: relative;
+    z-index: 2;
+    top: -8.6rem;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .count {
+        width: 29.6rem;
+        height: 18rem;
+        background-color: #fff;
+        box-shadow: 0px 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #1d1d1d;
+
+        .title {
+            font-size: 1.7rem;
+            line-height: 150%;
+            font-weight: 600;
+        }
+
+        .subc {
+            display: flex;
+            align-items: center;
+            font-size: 5rem;
+            font-weight: 700;
+            color: $main-color;
+            margin-top: 3.2rem;
+
+            span {
+                font-size: 1.6rem;
+                color: #1d1d1d;
+                opacity: 0.3;
+                padding-left: 8px;
+            }
+        }
+    }
+}
