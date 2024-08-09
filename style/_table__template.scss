@@ -85,3 +85,23 @@
     }
 
 }
+
+
+.modal__error__table table tr th:nth-child(1) {
+    width: 15.38%;
+}
+
+ .modal__result .modal__error__table tr {min-height: 5.8rem;}
+
+.modal__error__table table tbody th, .modal__error__table table tbody td {
+    vertical-align: middle;
+}
+.modal__error__table table tbody tr td {text-align: left; padding-left: 0.8rem;}
+
+.modal__error__table .error__desc {padding: 8px 0;}
+
+.modal__result .modal__error__table tbody tr td {line-height: 150%;}
+
+.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
+    background-color: #fff;
+}

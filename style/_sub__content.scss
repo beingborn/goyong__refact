@@ -192,6 +192,8 @@ table {
 .tab__4 .table__horizontal td {border-bottom: 0;}
 
 .table__vertical table {
+
+  font-size: 1.5rem;
   // 테이블 공통 영역
   tr th:nth-child(1) {
     font-weight: 500;

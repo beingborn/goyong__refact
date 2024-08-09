@@ -28,9 +28,29 @@
     
 }
 
+.function__group.y__flex {
+    // border: 1px solid blue;
+    align-items: center;
 
+    .year__form {
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        
+        input {
+            border: 0.1rem solid #ddd;
+            height: 4rem;
+            line-height: 4rem;
+            padding: 0 0.8rem;
+            margin-left: 1rem;
+            font-size: 1.6rem;
+        }
+    }
+
+}
 
 .function__group {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: end;
 
@@ -41,8 +61,7 @@
         font-size: 2rem;
         height: 5.6rem;
         padding: 0 2rem;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
+ 
         border-radius: 0.7rem;
         font-weight: 600;
         cursor: pointer;
@@ -672,7 +691,7 @@ a {color: #000;}
     }
 }
 
-.data__modal .data__group__title {
+.data__modal .data__group__title, .data__error__modal .data__group__title {
     margin-top: 4rem;
 
     h2 {
@@ -686,22 +705,18 @@ a {color: #000;}
 .data__modal__wrap {
     position: relative;
 
-    
 
-    .data__modal {
+
+    .data__modal, .data__error__modal {
         display: none;
-        width: calc(100% - 2rem); height: 72rem;  overflow-y: auto;background-color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        width: calc(100% - 2rem); 
+        overflow-y: auto;background-color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
         border: 0.3rem solid #CBCCCD;
 
         .modal__inner {
             width: calc(100% - 7.2rem);
             margin: 0rem auto;
         }
-
-
-
-
-
         .modal__close {text-align: center; padding-top: 1.2rem;
             
             button{
@@ -719,6 +734,9 @@ a {color: #000;}
         }
     }
 
+    .data__error__modal .modal__close {padding-bottom: 4rem;}
+    .data__modal {height: 72rem;}
+    .data__error__modal {height: auto;}
 
     .manage__report__modal {
         height: 83.6rem;
@@ -726,7 +744,7 @@ a {color: #000;}
 }
 
 
-.data__modal .modal__table {
+.data__modal .modal__table , .data__error__modal .modal__table{
     padding-top: 5.8rem;
 }
 
@@ -736,7 +754,7 @@ a {color: #000;}
     table {width: 100%; font-size: 1.5rem;
         
         thead tr th:nth-child(1), thead tr th:nth-last-child(1) {
-            border-right: 0;
+            // border-right: 0;
         }
 
         tbody tr td {text-align: center; padding-right: 0;

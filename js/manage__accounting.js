@@ -34,7 +34,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-
     $('.check__data').click(function(){
         $('.data__modal').show()
     })
@@ -43,10 +42,31 @@ $(document).ready(function(){
         $('.data__modal').hide()
     })
 
+
+    
+    $('.error__display').click(function(){
+        $('.data__error__modal').show()
+    })
+
+    $('.modal__close button').click(function(){
+        $('.data__error__modal').hide()
+    })
+
+
+
+
+
+
+
+
+
     for (i = 0; i <= 34; i++) {
         if(i % 2 == 0 ){
             $('.table__template__radio .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
         }
     }
+
+
+
 
 })

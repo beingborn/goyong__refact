@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>관리자>통계및보고서관리>회계관리현황</title>
+    <!-- css 영역 -->
+    <link rel="stylesheet" href="style/default.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/korea__favicon.ico">
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="skip__nav">
+        <a href="#sub__content">본문 바로가기</a>
+    </div>
+
+    <div class="wrap manage__wrap" id="wrap">
+        <!-- 상단 띠 영역 -->
+        <div class="top__banner">
+            <div class="inner">
+                <div class="banner__wrap">
+                <span class="korea"></span>
+                <p class="banner__text">이 누리집은 대한민국 공식 전자정부 누리집입니다. <a href="#">공식 누리집 확인방법</a></p>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="inner">
+            <div class="header__top">
+                <a href="#">누리집안내지도</a>
+                <a href="#">화면크기</a>
+                <a href="#">Language</a>
+            </div>
+            <div class="header__btm">
+                <h1 class="logo">
+                    <a href="#" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                        <span class="blind">노동조합 회계공시시스템</span>
+                        <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
+                    </a>
+                </h1>
+                <div class="mobile__logo">
+                    <img src="img/mobile__logo.png" alt="모바일 버전 로고">
+                </div>
+                <div class="right__icon__set">
+                    <a href="#">
+                    <img src="img/icon20.png" alt="검색 아이콘">
+                        <span>통합검색</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/icon20-1.png" alt="검색 아이콘">
+                        <span>로그인</span>
+                    </a>
+
+                    <!-- 전체메뉴 -->
+                    <a href="#" class="hamburger">
+                        <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
+                        <span>전체메뉴</span>
+                    </a>
+
+                    <a href="#" class="sign__up">
+                        <img src="img/icon20-2.png" alt="회원가입 아이콘">
+                        <span>회원가입</span>
+                    </a>
+                    <a href="#" class="talk">
+                        <span>알림톡</span>
+                        <span class="talk__count">5</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="base__gnb">
+                <a href="sub1-1.html">회계공시안내</a>
+                <a href="#">회계공시정보</a>
+                <a href="#">고객센터</a>
+            </div>
+            </div>
+        </header>
+        <div class="visual__bg">
+            <div class="inner">
+              <div class="visual__text">
+                <h2>통계 및 보고서 관리</h2>
+                <p>시스템 관리를 통해 OO할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+       <main class="main__content report__content" style="padding-bottom: 40px;" id="sub__content">
+        <div class="inner">
+            <div class="function__group">
+                <button type="button" class="check__data">조회</button>
+                <button type="button">다운로드</button>
+            </div>
+
+            <div class="table__horizontal search__report search__work">
+                    <table class="main__table width__100">
+                        <caption>~~</caption>
+                        <colgroup>
+                            
+                            <col class="main__th">
+                            <col class="search__td">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                              <th scope="col" class="border-btm">
+                                <select name="category" id="category" class="select__renew">
+                                <option value="전체">전체</option>
+                                </select>
+                              </th>
+                              <td class="search__report__bg">
+                              </td>
+                            </tr>
+                          </tbody>
+                    </table>
+            </div>
+
+            <div class="ac__manage__ment__wrap">
+                <div class="tab__detail table__vertical">
+                  <table>
+                    <caption>
+                      조회결과
+                    </caption>
+                    <colgroup>
+                      <col class="align__cols">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분</th>
+                        <th>자산</th>
+                        <th>현금및예금</th>
+                        <th>토지</th>
+                        <th>건물</th>
+                        <th>기타자산</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">a총계(=b+c+d+e)</th>
+                        <td>34,527,278</td>
+                        <td>1,496,004</td>
+                        <td>803,117</td>
+                        <td>16,887,358</td>
+                        <td>15,340,799</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">a일반회계</th>
+                        <td>135,767,948</td>
+                        <td>535,154,151</td>
+                        <td>300000</td>
+                        <td>4444000</td>
+                        <td>2323211</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">a특별회계</th>
+                        <td>135,767,948</td>
+                        <td>535,154,151</td>
+                        <td>300000</td>
+                        <td>4444000</td>
+                        <td>2323211</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">b보조금사업회계</th>
+                        <td>135,767,948</td>
+                        <td>535,154,151</td>
+                        <td>300000</td>
+                        <td>4444000</td>
+                        <td>2323211</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">c수입사업회계</th>
+                        <td>135,767,948</td>
+                        <td>535,154,151</td>
+                        <td>300000</td>
+                        <td>4444000</td>
+                        <td>2323211</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+          
+
+        </div>
+       </main>
+            <!-- 푸터 영역 -->
+            <footer>
+                <div class="footer__top">
+                    <div class="inner">
+                        <div class="btn__flex">
+                            <div class="top__btn">
+                                <a href="#" title="관련단체">관련단체</a>
+                            </div>
+                            <div class="top__btn">
+                                <a href="#" title="정부기관">정부기관</a>
+                            </div>
+                            <div class="top__btn">
+                                <a href="#" title="관련기관링크">관련기관링크</a>
+                            </div>
+                            <div class="top__btn">
+                                <a class="last__btn" href="#" title="관련기관링크">관련기관링크</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.png" alt="하단 로고">
+                        </div>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="하단 모바일 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
+                                <p class="call"><strong>대표전화 1350</strong> (평일 09시~18시)</p>
+                                <p class="fax"><strong>팩스 02-123-5678 </strong></p>
+                            </div>
+                            <div class="sns__info">
+                                <div class="info__btn">
+                                    <a href="">이용안내</a> 
+                                </div>
+                                <div class="info__btn">
+                                    <a href="">찾아오시는 길</a>
+                                </div>
+                                <div class="icon__wrap">
+                                    <a class="insta" href="#"></a>
+                                    <a class="youtube" href="#"></a>
+                                    <a class="twitter" href="#"></a>
+                                    <a class="facebook" href="#"></a>
+                                    <a class="naverblog" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__global">
+                            <div class="g__flex">
+                                <div class="global__link">
+                                    <a href="#">이용안내</a>
+                                    <a href="#" class="strong">개인정보처리방침</a>
+                                    <a href="#">저작권정책</a>
+                                    <a href="#">웹 접근성 품질인증 마크 획득</a>
+                                </div>
+                                <div class="copyright">
+                                    <p>@ The Government of the Republic of Korea. All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                </div>
+            </footer>
+        </div>
+
+    <!-- jquery 스와이퍼 cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- 스와이퍼 js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/default.js"></script>
+    <script src="js/manage__accounting.js"></script>
+    <!-- <script src="js/manage__menu.js"></script> -->
+    
+
+
+</body>
+</html>

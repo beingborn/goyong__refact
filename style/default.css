@@ -1725,6 +1725,9 @@ table caption {
   border-bottom: 0;
 }
 
+.table__vertical table {
+  font-size: 1.5rem;
+}
 .table__vertical table tr th:nth-child(1) {
   font-weight: 500;
   word-break: keep-all;
@@ -2331,7 +2334,25 @@ table caption {
   font-size: 1.5rem;
 }
 
+.function__group.y__flex {
+  align-items: center;
+}
+.function__group.y__flex .year__form {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+.function__group.y__flex .year__form input {
+  border: 0.1rem solid #ddd;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 0.8rem;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}
+
 .function__group {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: end;
 }
@@ -2342,8 +2363,6 @@ table caption {
   font-size: 2rem;
   height: 5.6rem;
   padding: 0 2rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
   border-radius: 0.7rem;
   font-weight: 600;
   cursor: pointer;
@@ -2927,10 +2946,10 @@ a {
   font-size: 2rem;
 }
 
-.data__modal .data__group__title {
+.data__modal .data__group__title, .data__error__modal .data__group__title {
   margin-top: 4rem;
 }
-.data__modal .data__group__title h2 {
+.data__modal .data__group__title h2, .data__error__modal .data__group__title h2 {
   font-size: 3rem;
   font-weight: 700;
 }
@@ -2938,10 +2957,9 @@ a {
 .data__modal__wrap {
   position: relative;
 }
-.data__modal__wrap .data__modal {
+.data__modal__wrap .data__modal, .data__modal__wrap .data__error__modal {
   display: none;
   width: calc(100% - 2rem);
-  height: 72rem;
   overflow-y: auto;
   background-color: #fff;
   position: absolute;
@@ -2950,15 +2968,15 @@ a {
   transform: translate(-50%, -50%);
   border: 0.3rem solid #CBCCCD;
 }
-.data__modal__wrap .data__modal .modal__inner {
+.data__modal__wrap .data__modal .modal__inner, .data__modal__wrap .data__error__modal .modal__inner {
   width: calc(100% - 7.2rem);
   margin: 0rem auto;
 }
-.data__modal__wrap .data__modal .modal__close {
+.data__modal__wrap .data__modal .modal__close, .data__modal__wrap .data__error__modal .modal__close {
   text-align: center;
   padding-top: 1.2rem;
 }
-.data__modal__wrap .data__modal .modal__close button {
+.data__modal__wrap .data__modal .modal__close button, .data__modal__wrap .data__error__modal .modal__close button {
   border: 0;
   background-color: #246BEB;
   height: 5.6rem;
@@ -2970,11 +2988,20 @@ a {
   font-size: 2rem;
   cursor: pointer;
 }
+.data__modal__wrap .data__error__modal .modal__close {
+  padding-bottom: 4rem;
+}
+.data__modal__wrap .data__modal {
+  height: 72rem;
+}
+.data__modal__wrap .data__error__modal {
+  height: auto;
+}
 .data__modal__wrap .manage__report__modal {
   height: 83.6rem;
 }
 
-.data__modal .modal__table {
+.data__modal .modal__table, .data__error__modal .modal__table {
   padding-top: 5.8rem;
 }
 
@@ -2984,9 +3011,6 @@ a {
 .modal__result table {
   width: 100%;
   font-size: 1.5rem;
-}
-.modal__result table thead tr th:nth-child(1), .modal__result table thead tr th:nth-last-child(1) {
-  border-right: 0;
 }
 .modal__result table tbody tr td {
   text-align: center;
@@ -3227,6 +3251,35 @@ a {
 }
 .table__template__horizontal .default__table td {
   width: auto;
+}
+
+.modal__error__table table tr th:nth-child(1) {
+  width: 15.38%;
+}
+
+.modal__result .modal__error__table tr {
+  min-height: 5.8rem;
+}
+
+.modal__error__table table tbody th, .modal__error__table table tbody td {
+  vertical-align: middle;
+}
+
+.modal__error__table table tbody tr td {
+  text-align: left;
+  padding-left: 0.8rem;
+}
+
+.modal__error__table .error__desc {
+  padding: 8px 0;
+}
+
+.modal__result .modal__error__table tbody tr td {
+  line-height: 150%;
+}
+
+.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
+  background-color: #fff;
 }
 
 .sign__up__inner {
