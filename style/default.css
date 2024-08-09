@@ -2912,6 +2912,9 @@ a {
   text-align: center;
   border-left: 0.1rem solid #ddd;
 }
+.check__year__result .sign__date {
+  text-align: center;
+}
 
 .year__data__wrap {
   width: 100%;
@@ -3180,6 +3183,10 @@ a {
   line-height: 5.8rem;
 }
 
+.user__wrap .content {
+  margin-top: 4rem;
+}
+
 .table__horizontal__ex tr:first-child {
   border-top: 0.2rem solid #000;
 }
@@ -3344,6 +3351,40 @@ a {
 
 .ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
   background-color: #fff;
+}
+
+.manage__user__table {
+  border-top: 0.2rem solid #000;
+}
+.manage__user__table tr {
+  line-height: 5.8rem;
+  height: 5.8rem;
+  border-bottom: 0.1rem solid #ddd;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.manage__user__table th {
+  width: 15.38%;
+  background-color: #f8f8f8;
+  text-align: left;
+  padding-left: 1rem;
+  z-index: -1;
+  height: 100%;
+}
+.manage__user__table td {
+  padding: 0 1rem;
+  width: auto;
+}
+.manage__user__table tr.r2 td {
+  width: 34.62%;
+}
+
+.table__information .first__td {
+  width: 15.38%;
+}
+.table__information .second__td {
+  width: 19.24%;
 }
 
 .sign__up__inner {
@@ -3624,6 +3665,61 @@ a {
 }
 .public__table input[type=radio]:checked {
   border: 0.6rem solid #000;
+}
+
+form {
+  width: 100%;
+}
+
+.search__box {
+  height: 5.8rem;
+  background-color: #F9F9FA;
+  border-top: 0.1rem solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
+}
+.search__box input, .search__box select {
+  border: 0.1rem solid #ddd;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.width--100 {
+  width: 100%;
+}
+
+.search--flex {
+  display: flex;
+  align-items: center;
+}
+
+.padding--10 {
+  padding-left: 1rem;
+}
+
+.flex--box {
+  display: flex;
+  align-items: center;
+}
+
+.search__select__wrap {
+  width: 15.38%;
+  margin-right: 1rem;
+}
+
+.auth__select__wrap {
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  width: 33.33%;
+}
+
+.select {
+  width: 80%;
+}
+.select select {
+  min-width: 10rem;
+  margin-left: 1rem;
 }
 
 * {

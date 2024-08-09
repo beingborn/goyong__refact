@@ -113,3 +113,21 @@
 .ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
     background-color: #fff;
 }
+
+
+
+.manage__user__table {
+    border-top: 0.2rem solid #000;
+
+    tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;}
+    th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1;  height: 100%;}
+    td {padding: 0 1rem; width: auto}
+    tr.r2 td{width: calc( (100% - (15.38% * 2)) / 2 );}
+    
+}
+
+
+.table__information {
+    .first__td {width: 15.38%;}
+    .second__td {width: 19.24%}
+}

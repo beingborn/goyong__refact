@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>관리자>사용자관리>사용자관리</title>
+
+    <!-- css 영역 -->
+    <link rel="stylesheet" href="style/default.css">
+    <link rel="stylesheet" href="style/reset.css">
+    
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/korea__favicon.ico">
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="skip__nav">
+        <a href="#main__content">본문 바로가기</a>
+    </div>
+
+    <div class="wrap manage__wrap" id="wrap">
+        <!-- 상단 띠 영역 -->
+        <div class="top__banner">
+            <div class="inner">
+                <div class="banner__wrap">
+                <span class="korea"></span>
+                <p class="banner__text">이 누리집은 대한민국 공식 전자정부 누리집입니다. <a href="#">공식 누리집 확인방법</a></p>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="inner">
+            <div class="header__top">
+                <a href="#">누리집안내지도</a>
+                <a href="#">화면크기</a>
+                <a href="#">Language</a>
+            </div>
+            <div class="header__btm">
+                <h1 class="logo">
+                    <a href="#" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                        <span class="blind">노동조합 회계공시시스템</span>
+                        <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
+                    </a>
+                </h1>
+                <div class="mobile__logo">
+                    <img src="img/mobile__logo.png" alt="모바일 버전 로고">
+                </div>
+                <div class="right__icon__set">
+                    <a href="#">
+                    <img src="img/icon20.png" alt="검색 아이콘">
+                        <span>통합검색</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/icon20-1.png" alt="검색 아이콘">
+                        <span>로그인</span>
+                    </a>
+
+                    <!-- 전체메뉴 -->
+                    <a href="#" class="hamburger">
+                        <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
+                        <span>전체메뉴</span>
+                    </a>
+
+                    <a href="#" class="sign__up">
+                        <img src="img/icon20-2.png" alt="회원가입 아이콘">
+                        <span>회원가입</span>
+                    </a>
+                    <a href="#" class="talk">
+                        <span>알림톡</span>
+                        <span class="talk__count">5</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="base__gnb">
+                <a href="sub1-1.html">회계공시안내</a>
+                <a href="#">회계공시정보</a>
+                <a href="#">고객센터</a>
+            </div>
+            </div>
+        </header>
+        <div class="visual__bg">
+            <div class="inner">
+              <div class="visual__text">
+                <h2>사용자 관리</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+       <main class="main__content" style="padding-bottom: 40px;">
+        <div class="inner">
+            <div class="function__group">
+
+                <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 만들었습니다. -->
+                <button type="button" class="error__display">초기화</button>
+                <button type="button">신규</button>
+                <button type="button" class="check__data">조회</button>
+                <button type="button">저장</button>
+                <button type="button">삭제</button>
+            </div>
+
+            <form class="search__box flex--box" id="frmSearch" method="POST">
+                <div class="padding--10 search--flex width--100">
+                    <div class="search__select__wrap">
+                        <label for="select" class="blind">검색조건 선택</label> 
+                        <select name="searchField" id="select">
+                            <option value="">전체</option><option value="40">대한민국노동조합총연맹</option>
+                            <option value="30">전국노동조합총연맹</option><option value="20">전국민주노동조합총연맹</option>
+                            <option value="99">총연합단체미가입</option><option value="10">한국노동조합총연맹</option>
+                            <option value="98">기타</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="searchText" class="blind">검색어 입력</label> 
+                        <input type="text" id="searchText" name="searchText"  value="" data-listener-added_91b8974b="true">
+                    </div>
+
+                    <div class="search--flex auth__select__wrap ">
+                        <label for="select2">승인여부</label>
+                        <div class="select" >
+                            <select name="searchField2" id="select2">
+                                <option value="">전체</option>
+                                <option value="Y">승인</option>
+                                <option value="N">미승인</option>
+                                <option value="R">반려</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+			</form>
+            <div class="">
+                <div class="user__wrap">
+                    <div class="content">
+                        <div class="lnb__title flex__title">
+                            <h2>조회결과</h2>
+                            <span>건수: 3건</span>
+                        </div>
+                        <div class="dis__info check__result check__year__result">
+                            <div class="tab__detail table__vertical">
+                              <table>
+                                <caption>
+                                  자산 및 부채현황 {구분, 자산}
+                                </caption>
+                                <colgroup>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                  <col>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">번호</th>
+                                    <th>노동조합명</th>
+                                    <th>사용자ID</th>
+                                    <th>조직단위</th>
+                                    <th>조합형태</th>
+                                    <th>총연합단체</th>
+                                    <th>연합단체</th>
+                                    <th>단위노동조합</th>
+                                    <th>가입일자</th>
+                                    <th>공개여부</th>
+                                    <th>승인여부</th>
+                                    <th>파일첨부</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td class="name">테스트</td>
+                                    <td class="division">test1</td>
+                                    <td class="division">전국</td>
+                                    <td class="ex">지부</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sign__date">2024-01-01</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td class="name">테스트</td>
+                                    <td class="division">test1</td>
+                                    <td class="division">전국</td>
+                                    <td class="ex">지부</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sign__date">2024-01-01</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td class="name">테스트</td>
+                                    <td class="division">test1</td>
+                                    <td class="division">전국</td>
+                                    <td class="ex">지부</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sign__date">2024-01-01</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <!-- paging : 웹 -->
+                            <div class="pagination w-page">
+                                <a class="page-navi prev" href="#">이전</a>
+                                <div class="page-links">
+                                    <a class="page-link " href="#">1</a>
+                                    <span class="page-link link-dot">
+                                        &middot;&middot;&middot;
+                                    </span>
+                                    <a class="page-link" href="#">6</a>
+                                    <a class="page-link" href="#">7</a>
+                                    <a class="page-link" href="#">8</a>
+                                    <a class="page-link" href="#">9</a>
+                                    <a class="page-link" href="#">10</a>
+                                    <a class="page-link" href="#">11</a>
+                                    <span class="page-link link-dot">
+                                        &middot;&middot;&middot;
+                                    </span>
+                                    <a class="page-link" href="#">120</a>
+                                </div>
+                                <a class="page-navi next" href="#">다음</a>
+                            </div>
+                          </div>
+
+                        <div class="lnb__title flex__title">
+                            <h2>노동조합정보</h2>
+                        </div>
+
+                          <div class="table__template__horizontal table__information">
+                            <div class="manage__user__table">
+                                <table>
+                                    <caption>사용자용 회원가입 폼입니다.</caption>
+                                    <tbody>
+
+                                        <tr>
+                                            <th>
+                                                <span class="must__type">노동조합명</span>
+                                            </th>
+                                            <td class="td--flex first__td">
+                                                <div class="td--width">
+                                                    테스트
+                                                </div>
+                                            </td>
+                                            <th>
+                                                <span class="must__type">비밀번호</span>
+                                            </th>
+                                            <td class="td--flex">
+                                                <div class="td--width">
+                                                    <span>전국노동조합총연맹</span>
+                                                    <span>전국노동조합총연맹</span>
+                                                    <span>전국노동조합총연맹</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                대표자명
+                                            </th>
+                                            <td class="td--flex first__td">
+                                                테스트
+                                            </td>
+                                            <!-- 2 -->
+                                            <th>
+                                                조직단위
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                테스트
+                                            </td>
+                                            <!-- 3 -->
+                                            <th>
+                                                조합형태
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                테스트
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <th>
+                                                사용자ID
+                                            </th>
+                                            <td class="td--flex first__td">
+                                                test1
+                                            </td>
+                                            <!-- 2 -->
+                                            <th>
+                                                담당자
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                테스트
+                                            </td>
+                                            <!-- 3 -->
+                                            <th>
+                                                담당자이메일
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                example@example.com
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                유선연락처
+                                            </th>
+                                            <td class="td--flex first__td">
+                                                000-000-0000
+                                            </td>
+                                            <!-- 2 -->
+                                            <th>
+                                                무선연락처
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                010-0000-0000
+                                            </td>
+                                            <!-- 3 -->
+                                            <th>
+                                                수신동의 여부
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                수신
+                                            </td>
+                                        </tr>
+                                     
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                 
+                    </div>
+                </div>
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+       </main>
+            <!-- 푸터 영역 -->
+            <footer>
+                <div class="footer__top">
+                    <div class="inner">
+                        <div class="btn__flex">
+                            <div class="top__btn">
+                                <a href="#" title="관련단체">관련단체</a>
+                            </div>
+                            <div class="top__btn">
+                                <a href="#" title="정부기관">정부기관</a>
+                            </div>
+                            <div class="top__btn">
+                                <a href="#" title="관련기관링크">관련기관링크</a>
+                            </div>
+                            <div class="top__btn">
+                                <a class="last__btn" href="#" title="관련기관링크">관련기관링크</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.png" alt="하단 로고">
+                        </div>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="하단 모바일 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
+                                <p class="call"><strong>대표전화 1350</strong> (평일 09시~18시)</p>
+                                <p class="fax"><strong>팩스 02-123-5678 </strong></p>
+                            </div>
+                            <div class="sns__info">
+                                <div class="info__btn">
+                                    <a href="">이용안내</a> 
+                                </div>
+                                <div class="info__btn">
+                                    <a href="">찾아오시는 길</a>
+                                </div>
+                                <div class="icon__wrap">
+                                    <a class="insta" href="#"></a>
+                                    <a class="youtube" href="#"></a>
+                                    <a class="twitter" href="#"></a>
+                                    <a class="facebook" href="#"></a>
+                                    <a class="naverblog" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__global">
+                            <div class="g__flex">
+                                <div class="global__link">
+                                    <a href="#">이용안내</a>
+                                    <a href="#" class="strong">개인정보처리방침</a>
+                                    <a href="#">저작권정책</a>
+                                    <a href="#">웹 접근성 품질인증 마크 획득</a>
+                                </div>
+                                <div class="copyright">
+                                    <p>@ The Government of the Republic of Korea. All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                </div>
+            </footer>
+        </div>
+
+    <!-- jquery 스와이퍼 cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- 스와이퍼 js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/default.js"></script>
+    <script src="js/manage__accounting.js"></script>
+    
+
+
+</body>
+</html>

@@ -32,15 +32,6 @@ var swiper = new Swiper(".bannerSwiper", {
 
 });
 
-
-
-
-
-
-
-
-
-
 $(document).on('keydown', function(event) {
     if (event.key === 'Tab') {
         console.log("탭 키 눌렸음");
@@ -67,11 +58,7 @@ $(document).on('keydown', function(event) {
     }
 });
 
-
-
-
 // 메인 스와이퍼
-
   var swiper = new Swiper(".mainSwiper", {
     slidesPerView : 'auto',
     loop: true,               
