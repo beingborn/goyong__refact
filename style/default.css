@@ -1642,8 +1642,6 @@ table caption {
 .tab__content table tbody th {
   font-weight: 500;
   color: #000;
-  border-right: 0.1rem solid #ddd;
-  border-bottom: 0.1rem solid #ddd;
 }
 
 .no__border__wrap .table__horizontal table tbody th {
@@ -1766,6 +1764,8 @@ table caption {
 .table__vertical table tbody th {
   height: 6rem;
   line-height: 6rem;
+  border-bottom: 0.1rem solid #ddd;
+  border-right: 0.1rem solid #ddd;
 }
 
 .expend__sit .table__vertical table thead tr th {

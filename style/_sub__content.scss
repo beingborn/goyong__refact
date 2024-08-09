@@ -108,8 +108,8 @@ table {
     tbody th {
       font-weight: 500;
       color: #000;
-      border-right: 0.1rem solid #ddd;
-      border-bottom: 0.1rem solid #ddd;
+      // border-right: 0.1rem solid #ddd;
+      // border-bottom: 0.1rem solid #ddd;
     }
   }
 }
@@ -234,6 +234,8 @@ table {
     }
   }
 
+
+
   // 테이블 내용 영역
   tbody {
     th {
@@ -246,6 +248,7 @@ table {
     th {
       height: 6rem;
       line-height: 6rem;
+      border-bottom: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;
     }
   }
 }
