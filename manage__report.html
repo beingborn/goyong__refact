@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>노동조합 회계공시시스템</title>
+    <title>관리자>통계및보고서관리>노동조합회계공시조회</title>
     <!-- css 영역 -->
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/reset.css">
@@ -250,9 +250,20 @@
                     </div>
                 <div class="data__modal manage__report__modal">
                     <div class="modal__inner">
+                        <div class="modal__check">
+                            <button type="button">조회</button>
+                        </div>
                         <div class="modal__table">
-                            <div class="lnb__title flex__title">
+                            <div class="modal__info flex--start">
                                 <h2>조회정보</h2>
+                                <div class="radio__wrap">
+                                    <div class="flex">
+                                        <input type="radio" name="mo-2" id="whole">
+                                        <label for="whole">전체</label>
+                                        <input type="radio" name="mo-2" id="thowsand">
+                                        <label for="thowsand">1,000인 이상</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="dis__info modal__result select__wrap">
                                 <div class="table__horizontal report__check__table">

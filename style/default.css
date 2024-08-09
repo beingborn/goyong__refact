@@ -2971,6 +2971,7 @@ a {
 .data__modal__wrap .data__modal .modal__inner, .data__modal__wrap .data__error__modal .modal__inner {
   width: calc(100% - 7.2rem);
   margin: 0rem auto;
+  position: relative;
 }
 .data__modal__wrap .data__modal .modal__close, .data__modal__wrap .data__error__modal .modal__close {
   text-align: center;
@@ -3102,6 +3103,65 @@ a {
 
 .last__select {
   border-bottom: 0.1rem solid #ddd;
+}
+
+.modal__check {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+}
+.modal__check button {
+  background-color: #246BEB;
+  color: #fff;
+  border: 0;
+  font-size: 2rem;
+  height: 5.6rem;
+  padding: 0 2rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal__info {
+  margin-bottom: 1.6rem;
+}
+.modal__info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.flex--start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.modal__info .radio__wrap label:nth-of-type(1) {
+  margin-right: 1.2rem;
+}
+.modal__info .radio__wrap label {
+  font-size: 1.5rem;
+}
+.modal__info .radio__wrap .flex {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+.modal__info .radio__wrap input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 0.7rem;
+}
+.modal__info .radio__wrap input[type=radio]:checked {
+  border: 0.6rem solid #000;
+}
+.modal__info .radio__wrap input[type=radio]:not(:checked) {
+  border: 0.1rem solid #ddd;
 }
 
 .modal__result .report__check__table tbody tr td {
@@ -3276,6 +3336,10 @@ a {
 
 .modal__result .modal__error__table tbody tr td {
   line-height: 150%;
+}
+
+.ac__manage__ment__wrap {
+  border-top: 0.2rem solid #000;
 }
 
 .ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
