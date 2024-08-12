@@ -1,3 +1,7 @@
+/* 
+  버튼 CSS
+*/
+
 .btn__blue {
     background-color: $main-color;
     color: #fff;
@@ -11,26 +15,14 @@
 }
 
 
-.function__group {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: end;
-}
+.function__group { margin-top: 4rem; margin-bottom: 2rem; display: flex; justify-content: end;}
 
 
-.function__group .btn__blue:not(:last-child) {
-    margin-right: 1rem;
-}
+.function__group .btn__blue:not(:last-child) { margin-right: 1rem;}
 
 
 // 서브 페이지 상단 탭 버튼 스타일
-.tab__wrap {
-    width: 128rem;
-    margin: 0px auto;
-    display: flex;
-    align-items: center;
-    padding-top: 8rem;
+.tab__wrap { width: 128rem; margin: 0px auto; display: flex; align-items: center; padding-top: 8rem; }
   
     .tab__btn {
       width: 25%;
@@ -53,7 +45,9 @@
         border-bottom: 0.4rem solid $second-color;
       }
     }
-  }
+
+ 
+
 
 
 

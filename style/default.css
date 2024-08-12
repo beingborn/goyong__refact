@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* 
+  색상 값들을 변수로써 통합관리합니다.
+*/
+/* 
+  기본 공통 CSS
+*/
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
@@ -41,8 +47,25 @@ input[type=reset], textarea, select, button {
   font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-.flex--box {
-  display: flex;
+input[type=text], select {
+  border: 0.1rem solid #ddd;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 0.7rem;
+  border: 0.1rem solid #ddd;
+  vertical-align: middle;
+}
+
+input[type=radio]:checked {
+  border: 0.6rem solid #000;
 }
 
 .inner {
@@ -95,6 +118,9 @@ input[type=reset], textarea, select, button {
   z-index: 0;
 }
 
+/* 텍스트 제어 관련 
+   i가 뒤에 붙을 시 important로 최우선순위 적용
+*/
 .txt--c {
   text-align: center;
 }
@@ -119,8 +145,32 @@ input[type=reset], textarea, select, button {
   text-align: right !important;
 }
 
+/* 패딩 제어 관련 
+   i가 뒤에 붙을 시 important로 최우선순위 적용
+*/
+.pd--10-l {
+  padding-left: 1rem;
+}
+
+/* 마진 제어 관련 
+   i가 뒤에 붙을 시 important로 최우선순위 적용
+*/
+.mg--20-r {
+  margin-right: 2rem;
+}
+
 .border-top-large {
   border-top: 0.2rem solid #000;
+}
+
+/* 레이아웃 제어 관련 */
+.flex--box {
+  display: flex;
+}
+
+.flex--box--c {
+  display: flex;
+  align-items: center;
 }
 
 .btn--active {
@@ -133,6 +183,9 @@ input[type=reset], textarea, select, button {
   color: #1d1d1d;
 }
 
+/* 
+  버튼 CSS
+*/
 .btn__blue {
   background-color: #246BEB;
   color: #fff;
@@ -163,12 +216,13 @@ input[type=reset], textarea, select, button {
   align-items: center;
   padding-top: 8rem;
 }
-.tab__wrap .tab__btn {
+
+.tab__btn {
   width: 25%;
   height: 4.5rem;
   text-align: center;
 }
-.tab__wrap .tab__btn button {
+.tab__btn button {
   cursor: pointer;
   width: 100%;
   background: transparent;
@@ -178,7 +232,7 @@ input[type=reset], textarea, select, button {
   color: #767676;
   border-bottom: 0.1rem solid #d8d8d8;
 }
-.tab__wrap .tab__btn .active {
+.tab__btn .active {
   color: #003675;
   border-bottom: 0.4rem solid #003675;
 }
@@ -201,6 +255,9 @@ input[type=reset], textarea, select, button {
   font-size: 2rem;
 }
 
+/* 
+  테이블 CSS
+*/
 table caption {
   position: absolute;
   top: 0;
@@ -215,6 +272,7 @@ table caption {
 .table__horizontal__ex tr:first-child {
   border-top: 0.2rem solid #000;
 }
+
 .table__horizontal__ex tr {
   line-height: 5.8rem;
   height: 5.8rem;
@@ -223,6 +281,7 @@ table caption {
   display: flex;
   align-items: center;
 }
+
 .table__horizontal__ex th {
   width: 15.38%;
   background-color: #f8f8f8;
@@ -230,26 +289,32 @@ table caption {
   padding-left: 1rem;
   z-index: -1;
 }
+
 .table__horizontal__ex td {
   padding: 0 1rem;
   width: auto;
 }
+
 .table__horizontal__ex input[type=text] {
   border: 0.1rem solid #ddd;
   height: 4rem;
   width: 100%;
 }
+
 .table__horizontal__ex tr.r2 td {
   width: 34.62%;
 }
+
 .table__horizontal__ex .find--width td {
   width: 84.62%;
 }
+
 .table__horizontal__ex .input-3--flex {
   display: flex;
   gap: 1rem;
   width: 100%;
 }
+
 .table__horizontal__ex .input-3--flex input {
   flex: 1;
 }
@@ -257,6 +322,7 @@ table caption {
 .table__template__radio tr {
   display: flex;
 }
+
 .table__template__radio th {
   line-height: 100%;
   padding-left: 3rem;
@@ -266,6 +332,7 @@ table caption {
   background-color: #F9F9FA;
   font-weight: 500;
 }
+
 .table__template__radio td {
   border-bottom: 1px solid #ddd;
 }
@@ -280,9 +347,11 @@ table caption {
   margin-right: 0.7rem;
   border: 1px solid #ccc;
 }
+
 .table__template__radio .radio__wrap input[type=radio]:checked {
   border: 0.6rem solid #000;
 }
+
 .table__template__radio .radio__wrap .flex {
   padding-left: 1rem;
 }
@@ -320,13 +389,43 @@ td {
   margin-right: 2rem;
 }
 
+.table__horizontal__wrap th {
+  background-color: #F9F9FA;
+}
+
+.table__horizontal__wrap tr {
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.table__horizontal__wrap td {
+  padding: 0 1rem;
+}
+
+.table__horizontal__wrap .note__td {
+  line-height: 15rem;
+}
+
+.table__horizontal__wrap .note__td-txt-area {
+  height: 100%;
+}
+
+.table__horizontal__wrap input[type=text] {
+  height: 4rem;
+}
+
+.table__horizontal__wrap select {
+  height: 4rem;
+}
+
 .table__template__horizontal table {
   width: 100%;
   font-size: 1.5rem;
 }
+
 .table__template__horizontal tr {
   display: flex;
 }
+
 .table__template__horizontal th {
   line-height: 100%;
   padding-left: 3rem;
@@ -336,18 +435,24 @@ td {
   background-color: #F9F9FA;
   font-weight: 500;
 }
+
 .table__template__horizontal td {
   border-bottom: 1px solid #ddd;
 }
+
 .table__template__horizontal .default__table tr {
   line-height: 5.8rem;
 }
-.table__template__horizontal .default__table th, .table__template__horizontal .default__table td {
+
+.table__template__horizontal .default__table th,
+.table__template__horizontal .default__table td {
   border-bottom: 1px solid #ddd;
 }
+
 .table__template__horizontal .default__table th {
   width: auto;
 }
+
 .table__template__horizontal .default__table td {
   width: auto;
 }
@@ -388,6 +493,7 @@ td {
 .manage__user__table {
   border-top: 0.2rem solid #000;
 }
+
 .manage__user__table tr {
   line-height: 5.8rem;
   height: 5.8rem;
@@ -396,6 +502,7 @@ td {
   display: flex;
   align-items: center;
 }
+
 .manage__user__table th {
   width: 15.38%;
   background-color: #f8f8f8;
@@ -404,10 +511,12 @@ td {
   z-index: -1;
   height: 100%;
 }
+
 .manage__user__table td {
   padding: 0 1rem;
   width: auto;
 }
+
 .manage__user__table tr.r2 td {
   width: 34.62%;
 }
@@ -415,6 +524,7 @@ td {
 .table__information .first__td {
   width: 15.38%;
 }
+
 .table__information .second__td {
   width: 19.24%;
 }
@@ -438,18 +548,22 @@ td {
   word-break: keep-all;
   white-space: nowrap;
 }
+
 .table__vertical tr th:nth-last-child(1) {
   border-right: 0;
 }
 
-.table__vertical tbody td, .table__vertical tbody th {
+.table__vertical tbody td,
+.table__vertical tbody th {
   height: 100%;
   line-height: 6rem;
   border-right: 0.1rem solid #ddd;
 }
+
 .table__vertical tbody th {
   background-color: #f8f8f8;
 }
+
 .table__vertical tbody td {
   padding-right: 0.8rem;
 }
@@ -458,25 +572,9 @@ td {
   border-right: 0.1rem solid #ddd;
 }
 
-.division {
-  text-align: center;
-  border-left: 0.1rem solid #ddd;
-}
-
-.sign__date {
-  text-align: center;
-}
-
-.name {
-  text-align: left;
-  padding-left: 0.8rem;
-  border-left: 0.1rem solid #ddd;
-}
-
-.ex {
-  text-align: center;
-}
-
+/* 
+  폼 CSS
+*/
 form {
   width: 100%;
 }
@@ -1536,13 +1634,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   display: inline-block;
   width: 100%;
   height: 100%;
-  height: 4rem;
   padding: 0.8rem 1rem 0.8rem 1.6rem;
   -webkit-appearance: none; /* 크롬 화살표 없애기 */
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
   appearance: none; /* 화살표 없애기 */
-  position: relative;
-  font-size: 1.6rem;
 }
 
 .select__renew {
@@ -1561,22 +1656,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .radio__wrap .flex label:nth-of-type(1) {
   margin-right: 2rem;
-}
-
-input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  margin: 0;
-  margin-right: 0.7rem;
-  border: 0.1rem solid #ddd;
-}
-
-input[type=radio]:checked {
-  border: 0.6rem solid #000;
 }
 
 .border-btm {

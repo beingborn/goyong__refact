@@ -203,37 +203,38 @@
                                 </thead>
                                 <tbody>
                                   <tr>
+                                    <!-- 동일하게 txt--c로 제어 가능합니다. -->
                                     <th scope="row">1</th>
-                                    <td class="name">테스트</td>
-                                    <td class="ex">주</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="txt--l pd--10-l">테스트</td>
+                                    <td class="txt--c">주</td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">2</th>
-                                    <td class="name">테스트</td>
-                                    <td class="ex">주</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row">1</th>
+                                    <td class="txt--l pd--10-l">테스트</td>
+                                    <td class="txt--c">주</td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">3</th>
-                                    <td class="name">테스트</td>
-                                    <td class="ex">주</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row">1</th>
+                                    <td class="txt--l pd--10-l ">테스트</td>
+                                    <td class="txt--c">주</td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
+                                    <td class="txt--c"></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -266,21 +267,23 @@
                             <div class="lnb__title">
                                 <h2>노동조합 체계정보</h2>
                             </div>
-                            <div class="table__horizontal">
+
+                            <div class="table__horizontal__wrap">
                                 <table class="border-top-large main__table">
                                     <caption>~~</caption>
                                     <colgroup>
-                                        <col class="main__th">
-                                        <col style="width: 494px;">
-                                        <col class="main__th">
-                                        <col style="width: auto;">
+                                        <col style="width: 15.38%;">
+                                        <col>
+                                        <col style="width: 15.38%;">
+                                        <col>
+                                        <col style="width: 15.38%;">
+                                        <col>
                                     </colgroup>
                                     <tbody>
+
                                         <tr>
-                                          <th scope="col">
-                                            노동조합명
-                                          </th>
-                                          <td class="flex--box">
+                                          <th scope="row">노동조합명</th>
+                                          <td colspan="3">
                                             <!-- width--100 == width100% -->
                                             <input type="text" value="" id="example22222" class="width--100">
                                           </td>
@@ -293,147 +296,69 @@
                                             </select>
                                           </td>
                                         </tr>
-                                        <tr>
-                                            
+                                        <tr >
+                                            <th scope="row">총연합단체</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">연합단체</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">단위노동조합</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
                                         </tr>
-
-
-
-
-                                      </tbody>
-                                </table>
-                            </div>
-                            <!-- 총연합단체 -->
-                            <div class="table__horizontal">
-                                <table class="main__table">
-                                    <caption>~~</caption>
-                                    <colgroup>
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                    </colgroup>
-                                    <tbody>
-                                      <tr>
-                                        <th scope="col">
-                                          총연합단체
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-1" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="col">
-                                          연합단체
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-2" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="col">
-                                          단위 노동조합
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-3" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                      </tbody>
-                                </table>
-                            </div>
-                            <div class="table__horizontal">
-                                <table class="main__table">
-                                    <caption>~~</caption>
-                                    <colgroup>
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                    </colgroup>
-                                    <tbody>
-                                      <tr>
-                                        <th scope="col">
-                                          지부
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-4" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="col">
-                                          지회
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-5" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="col">
-                                          분회
-                                        </th>
-                                        <td>
-                                            <select name="category" id="category-6" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                      </tbody>
-                                </table>
-                            </div>
-                            <div class="table__horizontal">
-                                <table class="main__table">
-                                    <caption>~~</caption>
-                                    <colgroup>
-                                        <col class="main__th">
-                                        <col style="width: auto;">
-                                    </colgroup>
-                                    <tbody>
+                                        <tr >
+                                            <th scope="row">지부</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">지회</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">분회</th>
+                                            <td>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </td>
+                                        </tr>
                                         <tr>
-                                          <th scope="col">
-                                            <label for="example22">사용여부</label>
-                                          </th>
-                                          <td class="radio__wrap">
-                                            <div class="flex">
-                                                <input type="radio" name="rdo_5-1" id="rdo_5-1">
-                                                <label for="rdo_5-1">사용</label>
-                                                <input type="radio" name="rdo_5-2" id="rdo_5-2">
-                                                <label for="rdo_5-2">미사용</label>
-                                            </div>
-                                          </td>
+                                            <th scope="row">사용여부</th>
+                                            <td class="radio__wrap">
+                                                <div>
+                                                    <input type="radio" name="rdo_5-1" id="rdo_5-1">
+                                                    <label for="rdo_5-1" class="mg--20-r">사용</label>
+                                                    <input type="radio" name="rdo_5-2" id="rdo_5-2">
+                                                    <label for="rdo_5-2">미사용</label>
+                                                </div>
+                                              </td>                              
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="note__th">
+                                                <label for="example22">비고</label>
+                                              </th>
+                                              <td class="note__td">
+                                                <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly class="note__td-txt-area width--100">전국민주노동조합총연맹</textarea>
+                                              </td>                    
                                         </tr>
                                       </tbody>
                                 </table>
                             </div>
-                                   
-                        <!-- 비고 -->
-                        <div class="table__horizontal table__note">
-                            <table class="main__table">
-                                <caption>~~</caption>
-                                <colgroup>
-                                    <col class="main__th">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr class="no__border__note">
-                                      <th scope="col" class="note__th">
-                                        <label for="example22">비고</label>
-                                      </th>
-                                      <td>
-                                        <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly>전국민주노동조합총연맹</textarea>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                            </table>
-                        </div>
                          </div>
-                      
-                 
                     </div>
                 </div>
             </div>
