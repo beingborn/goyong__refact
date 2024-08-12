@@ -6,7 +6,6 @@
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
   
 
-
 // thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
 .table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
@@ -70,7 +69,6 @@ td {line-height: 5.8rem;}
 .table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
 .table__template__horizontal .default__table th {width: auto;} 
 .table__template__horizontal .default__table td {width: auto;}
-
 
 
 .modal__error__table table tr th:nth-child(1) {width: 15.38%;}

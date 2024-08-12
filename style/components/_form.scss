@@ -42,5 +42,11 @@ form {width: 100%;}
 .select {   
     width: 80%;
  select {min-width: 10rem; margin-left: 1rem; }
-
 }
+
+
+.search__form { width: 100%; border: 0.1px solid blue;}
+.search__form > form {height: 100%; border: 1px solid pink}
+.search__form .form-input, .search__form .form-radio {height: 5.8rem;}
+.search__form .form-title {display: flex; justify-content: center; align-items: center;}
+
