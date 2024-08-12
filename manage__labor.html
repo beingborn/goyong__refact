@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>노동조합 회계공시시스템</title>
     <!-- css 영역 -->
+    <link rel="stylesheet" href="style/base/reset.css">
     <link rel="stylesheet" href="style/default.css">
-    <link rel="stylesheet" href="style/reset.css">
+
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
@@ -90,14 +91,14 @@
        <main class="main__content" style="padding-bottom: 40px;">
         <div class="inner">
             <div class="function__group">
-                <button type="button">초기화</button>
-                <button type="button">신규</button>
-                <button type="button">조회</button>
-                <button type="button">저장</button>
+                <button type="button" class="btn__blue" >초기화</button>
+                <button type="button" class="btn__blue">신규</button>
+                <button type="button" class="btn__blue">조회</button>
+                <button type="button" class="btn__blue">저장</button>
             </div>
 
             <div class="table__horizontal search__work">
-                    <table class="main__table width__100">
+                    <table class="width__100 seach__work-table ">
                         <caption>~~</caption>
                         <colgroup>
                             <col class="main__th">
@@ -171,7 +172,8 @@
                         </div>
                         <div class="dis__info check__result">
                             <div class="tab__detail table__vertical">
-                              <table>
+                            <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더를 넣습니다. -->
+                              <table class="border-top-large">
                                 <caption>
                                   자산 및 부채현황 {구분, 자산}
                                 </caption>
@@ -265,7 +267,7 @@
                                 <h2>노동조합 체계정보</h2>
                             </div>
                             <div class="table__horizontal">
-                                <table class="main__table">
+                                <table class="border-top-large main__table">
                                     <caption>~~</caption>
                                     <colgroup>
                                         <col class="main__th">
@@ -278,8 +280,9 @@
                                           <th scope="col">
                                             노동조합명
                                           </th>
-                                          <td>
-                                            <input type="text" value="" id="example22222">
+                                          <td class="flex--box">
+                                            <!-- width--100 == width100% -->
+                                            <input type="text" value="" id="example22222" class="width--100">
                                           </td>
                                           <th scope="col">
                                             주 / 부 여부
@@ -290,6 +293,13 @@
                                             </select>
                                           </td>
                                         </tr>
+                                        <tr>
+                                            
+                                        </tr>
+
+
+
+
                                       </tbody>
                                 </table>
                             </div>

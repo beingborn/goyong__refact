@@ -1,14 +1,8 @@
-
-$(document).ready(function(){
-    for (i = 0; i <= 5; i++) {
-        if(i % 2 == 0 ){
-            $('.search__accounting .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
-        }
-    }
-
-})
-
-
+/**
+ * table 버튼 클릭 시
+ * active class를 토글하여
+ * 강조 색상을 지정합니다. (css에 따로 지정)
+ */
 
 $(document).ready(function(){
     let tablePagination = $('.pagination .page-link') 
@@ -28,7 +22,10 @@ $(document).ready(function(){
 })
 
 
-
+/**
+ * 조회 버튼 클릭 시 모달 팝업
+ * 
+ */
 
 
 
@@ -54,19 +51,18 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
+    // 임시로 radio 체크 상태 지정
 
     for (i = 0; i <= 34; i++) {
         if(i % 2 == 0 ){
             $('.table__template__radio .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
         }
     }
-
-
-
+    
+    for (i = 0; i <= 5; i++) {
+        if(i % 2 == 0 ){
+            $('.search__accounting .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
+        }
+    }
 
 })

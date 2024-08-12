@@ -1,0 +1,75 @@
+.btn__blue {
+    background-color: $main-color;
+    color: #fff;
+    border: 0;
+    font-size: 2rem;
+    height: 5.6rem;
+    padding: 0 2rem;
+    border-radius: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.function__group {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: end;
+}
+
+
+.function__group .btn__blue:not(:last-child) {
+    margin-right: 1rem;
+}
+
+
+// 서브 페이지 상단 탭 버튼 스타일
+.tab__wrap {
+    width: 128rem;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding-top: 8rem;
+  
+    .tab__btn {
+      width: 25%;
+      height: 4.5rem;
+      text-align: center;
+  
+      button {
+        cursor: pointer;
+        width: 100%;
+        background: transparent;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        color: #767676;
+        border-bottom: 0.1rem solid #d8d8d8;
+      }
+  
+      .active {
+        color: $second-color;
+        border-bottom: 0.4rem solid $second-color;
+      }
+    }
+  }
+
+
+
+  // 모달 닫기 버튼 스타일
+  .close__btn__wrap { text-align: center; padding-top: 1.2rem;}
+
+    .close__btn {
+        cursor: pointer;
+        border: 0;
+        background-color: $main-color;
+        height: 5.6rem;
+        line-height: 4.8rem;
+        padding: 0.4rem 2rem;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 0.7rem;
+        font-size: 2rem;
+    }
+

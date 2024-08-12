@@ -35,7 +35,8 @@
     .with__submit input[type="text"]  {width: calc(90%); }
     .with__submit input[type="submit"] {width: calc(10% - 1rem); background-color: #004A98; color: #fff;}
 
-    .col2__th {      flex-direction: column; align-items: flex-start;
+    .col2__th {      
+        flex-direction: column; align-items: flex-start;
         align-items: flex-start;
         justify-content: center;
         min-height: 5.8rem;

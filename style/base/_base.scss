@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(
+      0,
+      0,
+      0,
+      0
+    ) !important; // 터치 장치 하이라이트 색상 제거 -> 사용자 경험 향상
+  }
+
+  
+
+#wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #skip-nav {
+    display: none;
+  }
+  
+  html {
+    font-size: 62.5%; // 접근성 향상 16px / 62.5%
+  }
+  
+  
+  table {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  
+  body {
+    font-size: 1.6rem;
+    color: #1d1d1d;
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    overflow-x: hidden;
+  }
+
+  label {font-size: 1.5rem;}
+
+  
+  
+  input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
+  input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
+  input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
+  input[type="week"], input[type="file"], input[type="submit"], input[type="button"], 
+  input[type="reset"], textarea, select, button {
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
+
+  .flex--box {display: flex;}
+  
+  .inner {
+    width: 1280px;
+    margin: 0px auto;
+  }
+  
+  .mobile__logo {
+    display: none;
+  }
+  
+  .header__btm .right__icon__set .hamburger {
+    display: none;
+  }
+  
+  // 웹 접근성 skip navigation, blind
+  
+  .skip__nav {
+    position: relative;
+    z-index: 300;
+  }
+  
+  .skip__nav a {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 0.7rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+  }
+  .skip__nav a:focus {
+    top: 0;
+    z-index: 100;
+    outline: 0.2rem dashed #0cc;
+  }
+  
+  .blind {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: -99999.9rem;
+    left: -99999.9rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    line-height: 0;
+    font-size: 0;
+    text-indent: -99999.9rem;
+    z-index: 0;
+  }
+
+
+
+  // 제어 관련 
+  .txt--c { text-align: center; }
+  .txt--l {text-align: left;}
+  .txt--r {text-align: right;}
+
+  // 우선적으로 적용
+  .txt--c-i { text-align: center!important; }
+  .txt--l-i {text-align: left!important;}
+  .txt--r-i {text-align: right!important;}
+
+
+
+  // 테이블 border에 주로 활용됩니다.
+  .border-top-large {border-top: 0.2rem solid #000;}
+
+
+
+  .btn--active {
+    background-color: $second-color;
+    color: #fff;
+  }
+  
+  .btn--disabled {
+    background-color: #fff;
+    color: #1d1d1d;
+  }

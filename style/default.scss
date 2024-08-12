@@ -1,130 +1,37 @@
-// 공통 변수
-@import "variables";
+// 1. 공통 변수 및 공통 스타일 관리 항상 상단에 위치해야합니다.
+@import "base/variables";
+@import "base/base";
 
-@import "header.scss";
-@import "main.scss";
-@import "swiper.scss";
-@import "cs_footer.scss";
-@import "media__query.scss";
-
-// 서브 scss
-@import "sub__content.scss";
-@import "sub__media__query.scss";
-@import "sub__mobile__style.scss";
-@import "data__chart.scss";
-@import "manage__menu";
-@import "table__template";
-@import "sign__up";
-@import "public__register";
-@import "form";
-
-* {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(
-    0,
-    0,
-    0,
-    0
-  ) !important; // 터치 장치 하이라이트 색상 제거 -> 사용자 경험 향상
-}
-
-#wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-#skip-nav {
-  display: none;
-}
-
-html {
-  font-size: 62.5%; // 접근성 향상 16px / 62.5%
-}
+// 2. ui 컴포넌트 스타일 관리
+@import "components/button";
+@import 'components/table';
+@import "components/form";
 
 
-table {
-  width: 100%;
-  font-size: 1.5rem;
-}
-
-body {
-  font-size: 1.6rem;
-  color: #1d1d1d;
-  font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  overflow-x: hidden;
-}
+// 3. 레이아웃 관련 스타일 ex) header, footer, grid 등 레이아웃 요소
+@import "layout/header";
+@import "layout/footer";
 
 
-input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
-input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
-input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
-input[type="week"], input[type="file"], input[type="submit"], input[type="button"], 
-input[type="reset"], textarea, select, button {
-  font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
-  system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
-  "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
+// 4. 독립 페이지를 관리합니다.
+@import 'pages/main'; // 메인 페이지
+@import 'pages/sign__up'; // 회원가입 페이지
+@import 'pages/public__register'; // 회계 공시 등록 페이지
+  
+@import 'pages/manage/manage__menu'; // 관리자 페이지 관리
 
-.inner {
-  width: 1280px;
-  margin: 0px auto;
-}
+@import "pages/sub/sub__content.scss"; // 서브 페이지 관리
+@import "pages/sub/sub__mobile__style.scss";
 
-.btn--active {
-  background-color: $second-color;
-  color: #fff;
-}
 
-.btn--disabled {
-  background-color: #fff;
-  color: #1d1d1d;
-}
+// 기능별 스타일
+@import 'utilities/data__chart';
+@import 'utilities/swiper';
+@import 'utilities/media__query';
+@import 'utilities/sub__media__query';
 
-.mobile__logo {
-  display: none;
-}
 
-.header__btm .right__icon__set .hamburger {
-  display: none;
-}
 
-// 웹 접근성 skip navigation, blind
 
-.skip__nav {
-  position: relative;
-  z-index: 300;
-}
 
-.skip__nav a {
-  position: absolute;
-  top: -5rem;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-  text-align: center;
-  padding: 0.7rem 0;
-  font-size: 1.6rem;
-  color: #fff;
-}
-.skip__nav a:focus {
-  top: 0;
-  z-index: 100;
-  outline: 0.2rem dashed #0cc;
-}
 
-.blind {
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  top: -99999.9rem;
-  left: -99999.9rem;
-  width: 0.1rem;
-  height: 0.1rem;
-  line-height: 0;
-  font-size: 0;
-  text-indent: -99999.9rem;
-  z-index: 0;
-}

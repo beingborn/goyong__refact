@@ -1,7 +1,7 @@
 
 
 // 배너 스와이퍼
-var swiper = new Swiper(".bannerSwiper", {
+let swiper = new Swiper(".bannerSwiper", {
   slidesPerView : 1,
   loop: true,
   loopAdditionalSlides : 1,
@@ -59,7 +59,7 @@ $(document).on('keydown', function(event) {
 });
 
 // 메인 스와이퍼
-  var swiper = new Swiper(".mainSwiper", {
+  let swiper2 = new Swiper(".mainSwiper", {
     slidesPerView : 'auto',
     loop: true,               
     loopAdditionalSlides : 1,
@@ -110,14 +110,14 @@ $(document).on('keydown', function(event) {
 
 
   // document.addEventListener('DOMContentLoaded', function() {
-    const img = document.querySelector('.swiper__pause img');
-    let slideBtns = $('.main__swiper .btn__group button')
-
+    const img = $('.swiper__pause img');
+    let slideBtns = $('.main__swiper .btn__group button');
+    
     const updateImage = (isPlaying) => {
-      img.src = isPlaying ? 'img/pause.png' : 'img/play.png';
+      img.attr('src', isPlaying ? 'img/pause.png' : 'img/play.png');
     };
-  
-    img.addEventListener('click', function() {
+    
+    img.on('click', function() {
       if (swiper.autoplay.running) {
         swiper.autoplay.stop();
         updateImage(false);
@@ -126,24 +126,23 @@ $(document).on('keydown', function(event) {
         updateImage(true);
       }
     });
-  
-    img.addEventListener('mouseenter', function() {
-        swiper.autoplay.stop();
-        updateImage(false);
-    });
-  
-    img.addEventListener('mouseleave', function() {
-      updateImage(swiper.autoplay.running);
-    });
-  
-    img.addEventListener('focus', function() {
+    
+    img.on('mouseenter', function() {
+      swiper.autoplay.stop();
       updateImage(false);
     });
-  
-    img.addEventListener('blur', function() {
+    
+    img.on('mouseleave', function() {
       updateImage(swiper.autoplay.running);
     });
-
+    
+    img.on('focus', function() {
+      updateImage(false);
+    });
+    
+    img.on('blur', function() {
+      updateImage(swiper.autoplay.running);
+    });
 
 
   // });
@@ -161,7 +160,7 @@ $(document).on('keydown', function(event) {
 
 
 
-  var slide = $('.main__swiper .swiper-slide')
+  let slide = $('.main__swiper .swiper-slide')
 
   $(document).ready(function() {
     $('.main__swiper .swiper-slide').each(function(index,slide) {

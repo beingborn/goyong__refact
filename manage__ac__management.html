@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>관리자>통계및보고서관리>회계관리현황</title>
     <!-- css 영역 -->
+    <link rel="stylesheet" href="style/base/reset.css">
     <link rel="stylesheet" href="style/default.css">
-    <link rel="stylesheet" href="style/reset.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
@@ -90,15 +90,13 @@
        <main class="main__content report__content" style="padding-bottom: 40px;" id="sub__content">
         <div class="inner">
             <div class="function__group">
-                <button type="button" class="check__data">조회</button>
-                <button type="button">다운로드</button>
+                <button type="button" class="check__data btn__blue">조회</button>
+                <button type="button" class="btn__blue">다운로드</button>
             </div>
-
             <div class="table__horizontal search__report search__work">
                     <table class="main__table width__100">
                         <caption>~~</caption>
-                        <colgroup>
-                            
+                        <colgroup>         
                             <col class="main__th">
                             <col class="search__td">
                         </colgroup>
@@ -118,7 +116,7 @@
 
             <div class="ac__manage__ment__wrap">
                 <div class="tab__detail table__vertical">
-                  <table>
+                  <table class="ac__manage__wrap-table">
                     <caption>
                       조회결과
                     </caption>
@@ -141,101 +139,102 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <!-- txt--c 클래스 추가시 표 내용이 중앙 정렬됩니다. -->
                       <tr>
-                        <th scope="row">한국노총</th>
-                        <td>34,527,278</td>
-                        <td>1,496,004</td>
-                        <td>803,117</td>
-                        <td>16,887,358</td>
-                        <td>15,340,799</td>
+                        <th scope="row" class="txt--center">한국노총</th>
+                        <td class="txt--r-i">34,527,278</td>
+                        <td class="txt--r-i">1,496,004</td>
+                        <td class="txt--r-i">803,117</td>
+                        <td class="txt--r-i">16,887,358</td>
+                        <td class="txt--r-i">15,340,799</td>
                       </tr>
                       <tr>
-                        <th scope="row">총연합</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">총연합</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">연합</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">연합</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">산별노조</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">산별노조</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">단위노조(산별제외)</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">단위노조(산별제외)</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">지부지회</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">지부지회</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" class="txt--center">지부지회</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
-                        <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <th scope="row" >지부지회</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
                         <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                       <tr>
                         <th scope="row">지부지회</th>
-                        <td>135,767,948</td>
-                        <td>535,154,151</td>
-                        <td>300000</td>
-                        <td>4444000</td>
-                        <td>2323211</td>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">지부지회</th>
+                        <td class="txt--r-i">135,767,948</td>
+                        <td class="txt--r-i">535,154,151</td>
+                        <td class="txt--r-i">300000</td>
+                        <td class="txt--r-i">4444000</td>
+                        <td class="txt--r-i">2323211</td>
                       </tr>
                     </tbody>
                   </table>

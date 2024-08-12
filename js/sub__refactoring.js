@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 
 // Pie Chart 1
-var pieChart1 = echarts.init(document.getElementById("pieChart1"));
+let pieChart1 = echarts.init(document.getElementById("pieChart1"));
 
 window.onresize = function () {
   // console.log('차트 리사이징')
@@ -112,7 +112,7 @@ function chartResize(){
 
 
 
-var pieOption1 = {
+let pieOption1 = {
   chart__title: {
     text: "Pie Chart 1",
     left: "center",
@@ -141,8 +141,8 @@ var pieOption1 = {
 pieChart1.setOption(pieOption1);
 
 // Pie Chart 2
-var pieChart2 = echarts.init(document.getElementById("pieChart2"));
-var pieOption2 = {
+let pieChart2 = echarts.init(document.getElementById("pieChart2"));
+let pieOption2 = {
   chart__title: {
     text: "Pie Chart 2",
     left: "center",
@@ -171,8 +171,8 @@ var pieOption2 = {
 pieChart2.setOption(pieOption2);
 
 // Pie Chart 3
-var pieChart3 = echarts.init(document.getElementById("pieChart3"));
-var pieOption3 = {
+let pieChart3 = echarts.init(document.getElementById("pieChart3"));
+let pieOption3 = {
   chart__title: {
     text: "Pie Chart 3",
     left: "center",
@@ -201,8 +201,8 @@ var pieOption3 = {
 pieChart3.setOption(pieOption3);
 
 // Pie Chart 4
-var pieChart4 = echarts.init(document.getElementById("pieChart4"));
-var pieOption4 = {
+let pieChart4 = echarts.init(document.getElementById("pieChart4"));
+let pieOption4 = {
   chart__title: {
     text: "Pie Chart 4",
     left: "center",
@@ -231,8 +231,8 @@ var pieOption4 = {
 pieChart4.setOption(pieOption4);
 
 // Bar Chart 1
-var barChart1 = echarts.init(document.getElementById("barChart1"));
-var barOption1 = {
+let barChart1 = echarts.init(document.getElementById("barChart1"));
+let barOption1 = {
   chart__title: {
     text: "Bar Chart 1",
     left: "center",
@@ -277,8 +277,8 @@ var barOption1 = {
 barChart1.setOption(barOption1);
 
 // Bar Chart 2
-var barChart2 = echarts.init(document.getElementById("barChart2"));
-var barOption2 = {
+let barChart2 = echarts.init(document.getElementById("barChart2"));
+let barOption2 = {
   chart__title: {
     text: "Bar Chart 2",
     left: "center",
@@ -329,8 +329,8 @@ barChart2.setOption(barOption2);
 // 시계열 차트에서 나오는 부분
 
 
-var barChart3 = echarts.init(document.getElementById("barChart3"));
-var barOption3 = {
+let barChart3 = echarts.init(document.getElementById("barChart3"));
+let barOption3 = {
   chart__title: {
     text: "Bar Chart 3",
     left: "center",
@@ -387,8 +387,8 @@ barChart3.setOption(barOption3);
 
 
 // Bar Chart 4
-var barChart4 = echarts.init(document.getElementById("barChart4"));
-var barOption4 = {
+let barChart4 = echarts.init(document.getElementById("barChart4"));
+let barOption4 = {
   chart__title: {
     text: "Bar Chart 4",
     left: "center",
@@ -442,8 +442,8 @@ var barOption4 = {
 barChart4.setOption(barOption4);
 
 // Bar Chart 5
-var barChart5 = echarts.init(document.getElementById("barChart5"));
-var barOption5 = {
+let barChart5 = echarts.init(document.getElementById("barChart5"));
+let barOption5 = {
   chart__title: {
     text: "Bar Chart 5",
     left: "center",
@@ -502,8 +502,8 @@ barChart5.setOption(barOption5);
 
 
 // Bar Chart 6
-var barChart6 = echarts.init(document.getElementById("barChart6"));
-var barOption6 = {
+let barChart6 = echarts.init(document.getElementById("barChart6"));
+let barOption6 = {
   chart__title: {
     text: "Bar Chart 6",
     left: "center",
@@ -626,7 +626,7 @@ let dataOpen = $(".data--open");
 
 $(document).ready(function () {
   dataOpen.click(function () {
-    var currentSlide = $(this).next(".mo__slide");
+    let currentSlide = $(this).next(".mo__slide");
 
     $(this).next(".mo__slide").stop().slideToggle();
     $(this).toggleClass("on").siblings().removeClass("on");
@@ -639,7 +639,7 @@ $(document).ready(function () {
   $(".mo__slide").hide();
 });
 
-var swiper = new Swiper(".moTabSwiper", {
+let swiper = new Swiper(".moTabSwiper", {
   slidesPerView: "auto",
 
   // spaceBetween: 4,

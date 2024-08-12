@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>노동조합 회계공시시스템</title>
     <!-- css 영역 -->
-    <link rel="stylesheet" href="style/default.css">
-    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/default.css"?ver=220610 type="text/css">
+    <link rel="stylesheet" href="style/base/reset.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
@@ -99,10 +99,10 @@
                 </div>
 
                 <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 만들었습니다. -->
-                <button type="button" class="error__display">초기화</button>
-                <button type="button" class="check__data">조회</button>
-                <button type="button">다운로드</button>
-                <button type="button">업로드</button>
+                <button type="button" class="btn__blue error__display">초기화</button>
+                <button type="button" class="btn__blue check__data">조회</button>
+                <button type="button" class="btn__blue">다운로드</button>
+                <button type="button" class="btn__blue">업로드</button>
             </div>
 
             <div class="table__horizontal search__work search__accounting">
@@ -194,9 +194,12 @@
                         <div class="lnb__title flex__title">
                             <h2>회계공시 대상년월 : 2024-07</h2>
                         </div>
-                        <div class="dis__info check__result check__year__result">
-                            <div class="tab__detail table__vertical">
-                              <table>
+
+              
+                        <div class="check__result check__year__result">
+                            <div class="tab__detail table__vertical check__year__result">
+                              <!-- border-top-large 사용 시 table 상단에 border가 추가됩니다. -->
+                              <table class="check__year__result-table border-top-large">
                                 <caption>
                                   자산 및 부채현황 {구분, 자산}
                                 </caption>
@@ -311,7 +314,7 @@
                             <div class="lnb__title flex__title">
                                 <h2>회계공시 대상년월 : 2024-07</h2>
                             </div>
-                            <div class="dis__info modal__result">
+                            <div class="modal__result">
                                 <div class="tab__detail table__vertical">
                                   <table>
                                     <caption>
@@ -377,7 +380,7 @@
                             <div class="lnb__title flex__title">
                                 <h2>회계공시 대상년월 : 2024-07</h2>
                             </div>
-                            <div class="dis__info modal__result">
+                            <div class="modal__result">
                                 <div class="tab__detail table__vertical">
                                   <table>
                                     <caption>
@@ -482,7 +485,7 @@
                   </div>
 
                   <div class="modal__table">
-                      <div class="dis__info modal__result">
+                      <div class="modal__result">
                           <div class="tab__detail table__vertical modal__error__table">
                             <table>
                               <caption>

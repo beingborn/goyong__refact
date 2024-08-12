@@ -13,11 +13,11 @@
 
 
   $(document).ready(function() {
-    var lastScrollTop = 0;
+    let lastScrollTop = 0;
 
     $(window).scroll(function() {
-      var scrollTop = $(this).scrollTop();
-      var headerHeight = $('.header').outerHeight();
+      let scrollTop = $(this).scrollTop();
+      let headerHeight = $('.header').outerHeight();
   
       if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
         // 스크롤을 내릴 때 헤더를 숨김 (단 스크롤이 헤더 높이보다 높을 때만)
