@@ -20,14 +20,7 @@
 
     <div class="wrap manage__wrap" id="wrap">
         <!-- 상단 띠 영역 -->
-        <div class="top__banner">
-            <div class="inner">
-                <div class="banner__wrap">
-                <span class="korea"></span>
-                <p class="banner__text">이 누리집은 대한민국 공식 전자정부 누리집입니다. <a href="#">공식 누리집 확인방법</a></p>
-                </div>
-            </div>
-        </div>
+     
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -131,28 +124,33 @@
                           </tbody>
                     </table>
             </div> -->
-            <div class="search__form">
-                <form action="POST">
-                    <div class="flex--box" >
-                        <div class="form-input flex--box--c">
-                            <div class="form-title ">
-                                <span>노동조합명</span>
-                            </div>
-                            <input type="text" placeholder="노동조합명을 입력하세요">
-                        </div>
-                        <div class="form-radio flex--box--c">
+            <div class="search__form" style="margin-bottom: 5.6rem;">
+                <form action="POST" class="flex--box border-top-large">
+                        <div class="form-input">
                             <div class="form-title">
                                 <span>노동조합명</span>
                             </div>
-                            <div class="radio__wrap">
+
+                            <div class="form-content">
+                                <select name="name2" id="name2">
+                                    <option value="option1">전체</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-radio">
+                            <div class="form-title">
+                                <span>사용여부</span>
+                            </div>
+                            <div class="form-content radio__wrap">
                                 <input type="radio" id="radio">
                                 <label for="radio">사용</label>
                                 <input type="radio" id="radio">
                                 <label for="radio">미사용</label>
                             </div>
                         </div>
-                    </div>
                 </form>
+
             </div>
 
             <div class="content--flex system__margin">
@@ -304,7 +302,6 @@
                                         <col>
                                     </colgroup>
                                     <tbody>
-
                                         <tr>
                                           <th scope="row">노동조합명</th>
                                           <td colspan="3">
@@ -390,24 +387,7 @@
        </main>
             <!-- 푸터 영역 -->
             <footer>
-                <div class="footer__top">
-                    <div class="inner">
-                        <div class="btn__flex">
-                            <div class="top__btn">
-                                <a href="#" title="관련단체">관련단체</a>
-                            </div>
-                            <div class="top__btn">
-                                <a href="#" title="정부기관">정부기관</a>
-                            </div>
-                            <div class="top__btn">
-                                <a href="#" title="관련기관링크">관련기관링크</a>
-                            </div>
-                            <div class="top__btn">
-                                <a class="last__btn" href="#" title="관련기관링크">관련기관링크</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
                     <div class="inner">
                         <div class="footer__logo">
@@ -429,13 +409,18 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                <div class="icon__wrap">
+                               <!-- 
+                                    수정 24.08.13
+                                    하단 아이콘 영역 삭제하는 것으로 수정
+                                -->
+
+                                <!-- <div class="icon__wrap">
                                     <a class="insta" href="#"></a>
                                     <a class="youtube" href="#"></a>
                                     <a class="twitter" href="#"></a>
                                     <a class="facebook" href="#"></a>
                                     <a class="naverblog" href="#"></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">

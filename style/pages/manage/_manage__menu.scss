@@ -1,3 +1,8 @@
+.union__member {
+    font-size: 1.9rem!important;
+    color: #0c3975;
+}
+
 // visual__bg 
 .manage__wrap {
     .visual__bg {
@@ -74,93 +79,100 @@
 
 
 // 메뉴별 권한 관리 아코디언 CSS
-.lnb {
-    .menu__depth-1 {
-        border-bottom: 0.1rem solid #ddd;
-        font-size: 1.7rem;
-
-        ol {
-            background-color: #FAFAFB;
-        }
-
-        > a {
-            display: block;
-            // line-height: 4rem;
-            padding: 2.5rem 1rem;
-            font-weight: 600;
-            font-size: 1.8rem;
-        }
+.lnb__wrap {width: 80%;}
 
 
-        li:first-child {
-            padding-top: 1rem;            
-            border-top: 0.3rem solid #16408D;
-        }
+// depth 1번 
+// .lnb .menu__depth-1 {border-bottom: 0.1rem solid #ddd; font-size: 1.7rem;} 
+// .lnb .menu__depth-1 ol.depth__list-2 {background-color: #FAFAFB; }  
+// .lnb .menu__depth-1 ol.depth__list-3 {background-color: #e0e0e0; }  
+// .lnb .menu__depth-1 > a {display: block; padding: 2.5rem 1rem; font-weight: 600; font-size: 1.8rem;}
+// .lnb .menu__depth-1 li.menu__depth-2:first-child {padding-top: 1rem; border-top: 0.3rem solid #16408D;} 
+// .lnb .menu__depth-1 li:last-child {padding-bottom: 1rem;} 
 
-        li:last-child {
-            padding-bottom: 1rem;
-        }
-    }
+// .menu__depth-1 > .depth__1-title {position: relative;} 
+// .menu__depth-1 > .depth__1-title::after {
+//     content: ''; position: absolute; top: 50%; right: 1.8rem; transform: translateY(-50%); background: url(../img/arrow__top-blue.png) 
+//     no-repeat center; background-size: cover; width: 2rem; height: 2rem; rotate: 0deg;
+// } 
 
-    .menu__depth-2 {
-        font-size: 1.5rem;
+// // depth 1번 액티브 시
+// .menu__depth-1.active ol {display: block;} 
+// .menu__depth-1.active .depth__1-title::after {background: url(../img/arrow__bottom-blue.png) no-repeat center;}
 
-        > a {
-            line-height: 4.8rem;
-            display: block;
-            padding : 0 1.5rem;
-            color: #767676;
-        }
 
-      
-    }
-    .active > a {
-        color: #000;
+// .lnb .menu__depth-2 {font-size: 1.5rem;}
+// .lnb .menu__depth-2 li.menu__depth-3:first-child {border-top: 0.1rem solid #1d1d1d;}
+// .lnb .menu__depth-2 > a {line-height: 4.8rem; display: flex; align-items: center;padding: 0 1.5rem; color: #767676; position: relative; z-index: 999;} 
+// .lnb .menu__depth-2 > input {position: absolute; top: 50%; z-index: 999;}
 
-        span {
-            text-decoration: underline;
-            text-underline-position : under;
-        }
-    }
+
+// .lnb .menu__depth-3 > a {line-height: 4.8rem; display: flex; align-items: center; padding: 0 3rem; color: #000; position: relative;} 
+
+// .lnb .active > a {color: #000;} 
+// .lnb .active > a span {text-decoration: underline; text-underline-position: under;} 
+
+
+// .menu__depth-2 > .depth__2-title {position: relative;}
+// .menu__depth-2 > .depth__2-title::after {
+//     content: ''; position: absolute; top: 50%; right: 1.8rem; transform: translateY(-50%); background: url(../img/arrow__top-blue.png) 
+//     no-repeat center; background-size: cover; width: 2rem; height: 2rem; rotate: 0deg;
+// }
+
+
+.menu-list {
+    width: 280px;
 }
 
 
-/* depth-1 항목에 active 클래스 추가 시 스타일 변경 */
-.menu__depth-1.active ol {
-    display: block;
+
+.menu-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    // padding: 10px 0;
 }
 
-.menu__depth-1.active {
-    .arrow__top {
-        display: block;
-    }
+.depth-2-first {border-top: 0.3rem solid #16408D;}
 
-    .arrow__bottom {
-        display: none;
-    }
+.depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
+.depth-1 .tit {font-size: 1.8rem; font-weight: 600;}
+.depth-2 {background-color: #FAFAFB; padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
+.depth-3 {padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
+
+/* 초기 상태 안보이게 지정 */
+.menu-body {
+    display: none;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.menu__depth-1 {
-    > a {
-        position: relative;
+/* js 로 인해 active class가 붙을 시 보이게 지정*/
+// .acco-body.active {
+//     display: block;
+// }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 1.8rem;
-            transform: translateY(-50%);
-            background: url(../img/arrow__top-blue.png) no-repeat center;
-            background-size: cover;
-            width: 2rem;
-            height: 2rem;
-            rotate: 0deg;
-        }
-    }
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-.menu__depth-1.active a::after {
-    background: url(../img/arrow__bottom-blue.png) no-repeat center;
-}
+
+.tit {padding-left: 10px;}
+.tit2 {padding-left: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+.lnb input[type="checkbox"] {width: 2.6rem; height: 2.6rem; zoom: 1;}
+
 
 
 
@@ -171,7 +183,7 @@
     }
     
 
-    .lnb__wrap {
+    .auth__table__wrap {
         width: 28rem;
         margin-right: auto;
     }
@@ -220,7 +232,6 @@
 
 
 // 회계공시 조회
-
 
 .search__accounting .main__th {width: 16rem;}
 .search__accounting .search__td {width: 28rem;}
@@ -411,7 +422,7 @@ a {color: #000;}
 
 .check__result .table__vertical table tbody tr th:nth-child(1){
     border-left: 0;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .check__result .table__vertical table tbody td:nth-last-child(1) {
@@ -488,18 +499,6 @@ a {color: #000;}
 
 
 
-
-// 권한별 메뉴관리
-
-
-.auth__wrap { display: flex;}
-.auth__control { width: calc(100% - 29rem);}
-.auth__wrap .radio__wrap { position: absolute;}
-    // 권한별 input, label 박스       
-    .auth__radio {height: 4rem;
-        label:nth-of-type(1){ margin-right: 2rem;}
-    }   
-.align--flex {display: flex; align-items: center;}
 
 
 

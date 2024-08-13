@@ -20,14 +20,7 @@
 
     <div class="wrap manage__wrap" id="wrap">
         <!-- 상단 띠 영역 -->
-        <div class="top__banner">
-            <div class="inner">
-                <div class="banner__wrap">
-                <span class="korea"></span>
-                <p class="banner__text">이 누리집은 대한민국 공식 전자정부 누리집입니다. <a href="#">공식 누리집 확인방법</a></p>
-                </div>
-            </div>
-        </div>
+      
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -91,14 +84,14 @@
        <main class="main__content">
         <div class="inner">
             <div class="function__group">
-                <button type="button">초기화</button>
-                <button type="button">신규</button>
-                <button type="button">조회</button>
-                <button type="button">저장</button>
+                <button type="button" class="btn__blue">초기화</button>
+                <button type="button" class="btn__blue">신규</button>
+                <button type="button" class="btn__blue">조회</button>
+                <button type="button" class="btn__blue">저장</button>
             </div>
             <div class="content--flex system__margin  ">
                 <div class="sub" >
-                    <div class="lnb__title">
+                    <div class="lnb__title ">
                         <h2>메뉴 상세정보</h2>
                     </div>
                     <div class="tree" style="border-top: 1px solid #ddd; padding-top: 20px;">
@@ -145,18 +138,18 @@
                 </div>
                 <div class="main">
                     <div class="content">
-                        <div class="lnb__title">
+                        <div class="lnb__title ">
                             <h2>메뉴 상세정보</h2>
 
                         </div>
-                        <div class="table__horizontal">
-                            <table class="main__table">
+                        <div class="table__horizontal__wrap">
+                            <table class="main__table border-top-large">
                                 <caption>~~</caption>
                                 <colgroup>
-                                    <col class="menu__th">
-                                    <col class="menu__td">
-                                    <col class="menu__th">
-                                    <col class="menu__td">
+                                    <col style="width: 15.38%;">
+                                    <col>
+                                    <col style="width: 15.38%;">
+                                    <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
@@ -177,43 +170,45 @@
                                             <label for="rdo_1-2">미사용</label>
                                         </div>
                 
-                                      </td>
-
-                
+                                      </td>       
                                     </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <label for="example22">상위메뉴</label>
+                                          </th>
+                                          <td class="menu__find">
+                                            <input type="text" value="" id="example24" class="width--80">
+                                            <button type="button">검색</button>
+                                          </td>
+                                          <th scope="col">
+                                           설립연월일
+                                          </th>
+                                          <td>
+                                            <input type="text" name="text" id="text_1-1" class="input--flex width--100">
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <label for="example22">메뉴 URL</label>
+                                          </th>
+                                          <td colspan="3">
+                                            <input type="text" value="" style="width: 100%" id="example223">
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="note__th">
+                                          <label for="example22">비고</label>
+                                        </th>
+                                        <td colspan="3">
+                                          <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly contenteditable='true'>전국민주노동조합총연맹</textarea>
+                                        </td>
+                                      </tr>
                                   </tbody>
                             </table>
                         </div>
                         <!-- 검색 -->
-                        <div class="table__horizontal">
-                            <table class="main__table">
-                                <caption>~~</caption>
-                                <colgroup>
-                                    <col class="menu__th">
-                                    <col class="menu__td">
-                                    <col class="menu__th">
-                                    <col class="menu__td">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                      <th scope="col">
-                                        <label for="example22">상위메뉴</label>
-                                      </th>
-                                      <td class="menu__find">
-                                        <input type="text" value="" id="example24">
-                                        <input type="submit" value="검색">
-                                      </td>
-                                      <th scope="col">
-                                       설립연월일
-                                      </th>
-                                      <td>
-                                        <input type="text" name="text" id="text_1-1" class="input--flex">
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                            </table>
-                        </div>
-                        <div class="table__horizontal menu__url">
+                       
+                        <!-- <div class="table__horizontal menu__url">
                             <table class="main__table">
                                 <caption>~~</caption>
                                 <colgroup>
@@ -231,9 +226,9 @@
                                     </tr>
                                   </tbody>
                             </table>
-                        </div>
+                        </div> -->
                         <!-- 비고 -->
-                        <div class="table__horizontal table__note">
+                        <!-- <div class="table__horizontal table__note">
                             <table class="main__table">
                                 <caption>~~</caption>
                                 <colgroup>
@@ -251,7 +246,7 @@
                                     </tr>
                                   </tbody>
                             </table>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -261,24 +256,7 @@
        </main>
             <!-- 푸터 영역 -->
             <footer>
-                <div class="footer__top">
-                    <div class="inner">
-                        <div class="btn__flex">
-                            <div class="top__btn">
-                                <a href="#" title="관련단체">관련단체</a>
-                            </div>
-                            <div class="top__btn">
-                                <a href="#" title="정부기관">정부기관</a>
-                            </div>
-                            <div class="top__btn">
-                                <a href="#" title="관련기관링크">관련기관링크</a>
-                            </div>
-                            <div class="top__btn">
-                                <a class="last__btn" href="#" title="관련기관링크">관련기관링크</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
                     <div class="inner">
                         <div class="footer__logo">
@@ -300,13 +278,18 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                <div class="icon__wrap">
+                               <!-- 
+                                    수정 24.08.13
+                                    하단 아이콘 영역 삭제하는 것으로 수정
+                                -->
+
+                                <!-- <div class="icon__wrap">
                                     <a class="insta" href="#"></a>
                                     <a class="youtube" href="#"></a>
                                     <a class="twitter" href="#"></a>
                                     <a class="facebook" href="#"></a>
                                     <a class="naverblog" href="#"></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">

@@ -45,8 +45,46 @@ form {width: 100%;}
 }
 
 
-.search__form { width: 100%; border: 0.1px solid blue;}
-.search__form > form {height: 100%; border: 1px solid pink}
-.search__form .form-input, .search__form .form-radio {height: 5.8rem;}
-.search__form .form-title {display: flex; justify-content: center; align-items: center;}
+// .search__form {width: 100%;}
+// .search__form > form {height: 100%; border: 1px solid pink}
+// .form-input {width: 30%; display: inline-flex;}
+// .form-title {min-width: 13rem; display: inline-flex; justify-content: space-between; align-items: center; text-align: center;}
 
+// .search__form .form-input, .search__form .form-radio {height: 5.8rem;}
+
+// .search__form .form-title {
+//     display: inline-flex; justify-content: center; align-items: center; height: 100%;
+//     background-color: #F9F9FA; min-width: 16rem;
+// }
+// .form-content {border: 1px solid pink; height: 100%; display: flex; align-items: center; }
+// .form-content > select {min-height: 4rem; width: 100%;}
+
+.search__form {border-bottom: 0.1rem solid #ddd;}
+
+.form-input, .form-radio {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 100%; /* 부모의 너비를 100%로 */
+    height: 5.8rem;
+}
+
+.form-title {
+    width: 15.38%; /* 전체 너비의 15.38% */
+    min-width: 15.38%; /* 최소 너비를 15.38%로 */
+    text-align: center; /* 제목을 왼쪽 정렬 */
+    background-color: #F9F9FA;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    flex-grow: 1; /* 남은 공간을 채움 */
+    padding: 10px; /* padding 추가 */
+    display: flex; /* 내부 요소들을 flex로 정렬 */
+    align-items: center; /* 내부 요소들을 세로 중앙 정렬 */
+    gap: 10px; /* 내부 요소들 사이의 간격 */
+}
+
+.form-content > select {width: 100%; min-height: 4rem;}

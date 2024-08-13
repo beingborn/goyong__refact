@@ -130,6 +130,18 @@
   }
 
 
+  /* 
+    상태 변경 클래스 네이밍 규칙
+
+    (a)--(b)-(c)
+    
+    a = 상태 변경 요소 혹은 스타일 속성
+    b = 속성 수치
+    c = 속성 값
+
+  */
+
+
 
   /* 텍스트 제어 관련 
      i가 뒤에 붙을 시 important로 최우선순위 적용
@@ -149,6 +161,7 @@
      i가 뒤에 붙을 시 important로 최우선순위 적용
   */ 
   .pd--10-l {padding-left: 1rem;}
+  .pd--20-l {padding-left: 2rem;}
 
     /* 마진 제어 관련 
      i가 뒤에 붙을 시 important로 최우선순위 적용
@@ -157,20 +170,18 @@
 
 
   
-
-
   // 테이블 border에 주로 활용됩니다.
   .border-top-large {border-top: 0.2rem solid #000;}
 
-
-
-
-  /* 레이아웃 제어 관련 */
-
+  
+  /* 레이아웃 제어 관련 with flex */
   .flex--box {display: flex;}
   .flex--box--c {display: flex; align-items: center;}
-  
 
+  .width--80 {width: 80%;}
+
+  // flex grow 적용 시 flew된 아이템 기준 나머지 넓이를 꽉 채웁니다.
+  .flex--grow-100 {flex-grow: 1;}
 
 
   .btn--active {

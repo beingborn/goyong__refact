@@ -17,18 +17,13 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
 
-
-
-.table__template__radio tr {display: flex;} 
+.table__template__radio tr {display: flex; border-bottom: 0.1rem solid #ddd;} 
 .table__template__radio th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;} 
-.table__template__radio td {border-bottom: 1px solid #ddd;}
-
-
+// .table__template__radio td {border-bottom: 1px solid #ddd;}
 
 .table__template__radio .radio__wrap input[type="radio"] {appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc;} 
 .table__template__radio .radio__wrap input[type="radio"]:checked {border: 0.6rem solid #000;} 
 .table__template__radio .radio__wrap .flex {padding-left: 1rem;}
-
 
 .search__work .seach__work-table {
     .main__th {width: 15.38%;}
@@ -85,7 +80,7 @@ td {line-height: 5.8rem;}
 // ac__manage__ment__wrap 
 
 .ac__manage__ment__wrap {border-top: 0.2rem solid #000;}
-.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {background-color: #fff;}
+.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {background-color: transparent;}
 
 
 
@@ -113,8 +108,15 @@ td {line-height: 5.8rem;}
 .table__vertical tbody td {padding-right: 0.8rem;} 
 .border-right {border-right: 0.1rem solid #ddd;}
 
+// 표 호버 배경색상 지정 영역입니다.
+.table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
 
 
 
 // 표 칸 형식
 
+
+// 관리자 메뉴 권한 관리 표 영역입니다.
+.auth__table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
+.auth__table tr {border-bottom: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
+.auth__table tbody tr td > a:hover {color: $second-color;}
