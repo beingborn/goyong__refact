@@ -1525,8 +1525,28 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.6rem;
 }
 
-.lnb__wrap {
-  width: 80%;
+.main__content .sub {
+  position: relative;
+}
+.main__content .auth__table__wrap {
+  width: 28rem;
+  margin-right: auto;
+}
+.main__content .content--flex {
+  display: flex;
+}
+.main__content .main {
+  width: calc(100% - 31.6rem);
+  margin-left: auto;
+}
+
+.--flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.--flex input:last-of-type {
+  margin-left: 2rem;
 }
 
 .menu-list {
@@ -1573,7 +1593,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* js 로 인해 active class가 붙을 시 보이게 지정*/
 .menu-btn {
   background: none;
   border: none;
@@ -1592,30 +1611,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 2.6rem;
   height: 2.6rem;
   zoom: 1;
-}
-
-.main__content .sub {
-  position: relative;
-}
-.main__content .auth__table__wrap {
-  width: 28rem;
-  margin-right: auto;
-}
-.main__content .content--flex {
-  display: flex;
-}
-.main__content .main {
-  width: calc(100% - 31.6rem);
-  margin-left: auto;
-}
-
-.--flex {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.--flex input:last-of-type {
-  margin-left: 2rem;
 }
 
 .content .table__horizontal {

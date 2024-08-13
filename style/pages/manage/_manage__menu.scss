@@ -1,9 +1,7 @@
-.union__member {
-    font-size: 1.9rem!important;
-    color: #0c3975;
-}
+// 관리자 메뉴 공통 영역
+.union__member { font-size: 1.9rem!important; color: #0c3975;}
 
-// visual__bg 
+// 관리자 상단 비주얼 영역
 .manage__wrap {
     .visual__bg {
         width: 100%;
@@ -50,36 +48,49 @@
             font-size: 1.6rem;
         }
     }
-
 }
 
 
-
-// lnb
-
-.lnb__title {
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.6rem;
-        font-weight: 500;
-    }
-}
-
-// 건수 및 결과 값을 포함하는 제목에 포함됩니다.
-
-.flex__title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+.lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 500;} // 관리자 페이지 제목
+.flex__title { display: flex; align-items: center; justify-content: space-between; // 관리자 페이지 예시 (건수 등 결과 값이 있을 시 넣는 클래스)
     span {
         font-size: 1.6rem;
     }
 }
 
 
+
+
+
+// 페이지 두 개 구분될 시 가로 정렬 및 넓이 지정
+.main__content {
+    .sub { position: relative;}
+    .auth__table__wrap {
+        width: 28rem;
+        margin-right: auto;
+    }
+    
+    .content--flex {
+    display: flex;
+    }
+
+    .main {
+        width: calc(100% - (28rem + 3.6rem));
+        margin-left: auto;
+    }
+}
+
+.--flex {display: flex; align-items: center; height: 100%;
+
+  input:last-of-type {
+    margin-left: 2rem;
+  }
+}
+
+
+
+
 // 메뉴별 권한 관리 아코디언 CSS
-.lnb__wrap {width: 80%;}
 
 
 // depth 1번 
@@ -120,6 +131,8 @@
 // }
 
 
+
+// 메뉴별 권한 관리 아코디언 
 .menu-list {
     width: 280px;
 }
@@ -144,11 +157,6 @@
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* js 로 인해 active class가 붙을 시 보이게 지정*/
-// .acco-body.active {
-//     display: block;
-// }
-
 .menu-btn {
     background: none;
     border: none;
@@ -157,52 +165,10 @@
 
 .tit {padding-left: 10px;}
 .tit2 {padding-left: 10px;}
-
-
-
-
-
-
-
-
-
-
-
 .lnb input[type="checkbox"] {width: 2.6rem; height: 2.6rem; zoom: 1;}
 
 
 
-
-.main__content {
-
-    .sub {
-        position: relative;
-    }
-    
-
-    .auth__table__wrap {
-        width: 28rem;
-        margin-right: auto;
-    }
-
-    
-    .content--flex {
-    display: flex;
-    }
-
-    .main {
-        width: calc(100% - (28rem + 3.6rem));
-        margin-left: auto;
-
-    }
-}
-
-.--flex {display: flex; align-items: center; height: 100%;
-
-  input:last-of-type {
-    margin-left: 2rem;
-  }
-}
 
 
 
