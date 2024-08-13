@@ -124,8 +124,6 @@
     width: 280px;
 }
 
-
-
 .menu-head {
     display: flex;
     justify-content: space-between;
@@ -135,7 +133,6 @@
 }
 
 .depth-2-first {border-top: 0.3rem solid #16408D;}
-
 .depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
 .depth-1 .tit {font-size: 1.8rem; font-weight: 600;}
 .depth-2 {background-color: #FAFAFB; padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
@@ -143,7 +140,7 @@
 
 /* 초기 상태 안보이게 지정 */
 .menu-body {
-    display: none;
+    display: block;
     border-bottom: 1px solid #e0e0e0;
 }
 

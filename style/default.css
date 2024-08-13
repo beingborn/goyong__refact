@@ -1565,7 +1565,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 /* 초기 상태 안보이게 지정 */
 .menu-body {
-  display: none;
+  display: block;
   border-bottom: 1px solid #e0e0e0;
 }
 

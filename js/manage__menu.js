@@ -33,6 +33,15 @@ $(document).ready(function() {
 // })
 
 $(document).ready(function(){
+    let menuList = $('.menu-list')
+    let menuHeight = menuList.innerHeight();
+
+    menuList.css('height', menuHeight)
+    
+})
+
+
+$(document).ready(function(){
     let tablePagination = $('.pagination .page-link') 
     tablePagination.click(function (e) {
     e.preventDefault(); // 링크 기본 동작 방지

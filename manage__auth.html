@@ -351,6 +351,8 @@
             
 $(document).ready(function() {
     $('.menu-head').on('click', function() {
+
+        const defaultBody = $('.menu-body')
         const $currentBody = $(this).next('.menu-body');
         
         // 현재 선택된 .menu-body의 display 속성 토글
