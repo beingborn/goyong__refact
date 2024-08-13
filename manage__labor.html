@@ -292,7 +292,7 @@
                             </div>
 
                             <div class="table__horizontal__wrap">
-                                <table class="border-top-large main__table">
+                                <table class="border-top-large main__table table--fixed">
                                     <caption>~~</caption>
                                     <colgroup>
                                         <col style="width: 15.38%;">
@@ -318,6 +318,7 @@
                                             </select>
                                           </td>
                                         </tr>
+
                                         <tr >
                                             <th scope="row">총연합단체</th>
                                             <td>
@@ -338,6 +339,39 @@
                                                 </select>
                                             </td>
                                         </tr>
+                                        <!-- type 2 -->
+                                        <!-- 
+                                            가이드를 따른 table 태그의 특성상 내용이 한개가 되더라도 나머지 부분을 차지하게 하려면 
+                                            colspan값을 조절해야합니다. colspan 값을 넣고 해당 부분에 select를 넣으면 자동으로 
+                                            3개 이상시 select가 내려가게 만들었습니다.
+                                        -->
+
+                                        <tr >
+                                            <th scope="row">총연합단체</th>
+                                            <td colspan="5">
+                                                <div class="td__container">
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
                                         <tr >
                                             <!-- 
                                             셀렉트 삭제 및 변경을 원할 시

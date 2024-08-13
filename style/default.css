@@ -195,6 +195,10 @@ input[type=radio]:checked {
   flex-grow: 1;
 }
 
+.table--fixed {
+  table-layout: fixed;
+}
+
 .btn--active {
   background-color: #003675;
   color: #fff;
@@ -2191,6 +2195,18 @@ a {
 }
 .modal__info .radio__wrap input[type=radio]:not(:checked) {
   border: 0.1rem solid #ddd;
+}
+
+.td__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.td__container select {
+  flex: 1 1 calc(33.33% - 1rem);
+  min-width: 100px;
 }
 
 .modal__result .report__check__table tbody tr td {

@@ -754,6 +754,9 @@ a {color: #000;}
 }
 
 
+// manage__labor 셀렉터 조정영역
+.td__container {display: flex; flex-wrap: wrap; width: 100%; gap: 1rem;}
+.td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px; }
 
 
 .modal__result .report__check__table tbody tr td {
