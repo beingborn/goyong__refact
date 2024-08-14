@@ -3,6 +3,13 @@
 */
 
 
+// manage__labor 다중 셀렉터 및 인풋 조정 영역
+.td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem 0;}
+.td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px;} // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
+.td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
+
+
+
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
   
 
@@ -105,7 +112,7 @@ td {line-height: 5.8rem;}
 .table__vertical tbody td, 
 .table__vertical tbody th {height: 100%; line-height: 6rem; border-right: 0.1rem solid #ddd;} 
 .table__vertical tbody th {background-color: #f8f8f8;} 
-.table__vertical tbody td {padding-right: 0.8rem;} 
+.table__vertical tbody td {padding-left:1rem; padding-right: 1rem;} 
 .border-right {border-right: 0.1rem solid #ddd;}
 
 // 표 호버 배경색상 지정 영역입니다.

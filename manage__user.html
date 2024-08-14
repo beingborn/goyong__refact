@@ -21,7 +21,6 @@
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        <!-- 상단 띠 영역 -->
      
         <header class="header">
             <div class="inner">
@@ -432,7 +431,8 @@
 
     <script>
         $('.table__vertical tbody tr').click(function(){
-            $(this).css('background-color' , 'blue');
+            $(this).css('background-color' , '#DEEBF7');
+            $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
         })
     </script>
     

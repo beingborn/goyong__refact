@@ -20,8 +20,6 @@
 
     <div class="wrap manage__wrap" id="wrap">
       
-        <!-- 상단 띠 영역 -->
-      
 
         <header class="header">
             <div class="inner">
@@ -110,6 +108,10 @@
                     </table>
             </div>
 
+            <div class="flex--box flex--end" style="margin-top: 5.6rem; margin-bottom: 1.6rem;">
+              <span>건수 :23건</span>
+            </div>
+
             <div class="ac__manage__ment__wrap">
                 <div class="tab__detail table__vertical">
                   <table class="ac__manage__wrap-table">
@@ -135,7 +137,11 @@
                       </tr>
                     </thead>
                     <tbody>    
-                      <!-- txt--c 클래스 추가시 표 내용이 중앙 정렬됩니다. -->
+                      <!-- 
+                        td 클래스 영역에 txt--c 클래스  삽입 시 중앙 정렬
+                        td 클래스 영역에 txt--l 클래스  삽입 시 왼쪽 정렬
+                        td 클래스 영역에 txt--r 클래스  삽입 시 오른쪽 정렬
+                      -->
                       <tr>
                         <th scope="row" class="txt--center">한국노총</th>
                         <td class="txt--r-i">34,527,278</td>
@@ -264,18 +270,6 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                  <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">
@@ -305,8 +299,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
-    <!-- <script src="js/manage__menu.js"></script> -->
-    
+    <script>      
+      $('.table__vertical tbody tr').click(function(){
+            $(this).css('background-color' , '#DEEBF7');
+            $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
+        })
+    </script>
 
 
 </body>

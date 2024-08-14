@@ -25,11 +25,10 @@
     tr {line-height: 5.8rem; width: 100%;}
     
     th {width: 12.5%; line-height: 5.8rem; border-bottom: 1px solid #ddd;}
-    td {width: calc(100% - 12.5%); line-height: 100%;}
+    td {flex-grow: 1; line-height: 100%;}
 
     td input[type="text"]{border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px;}
     td input[type="submit"]{border: 1px solid #ddd; line-height: 4rem;}
-    td input[type="file"]{background: 0;}
     td select {height: 4rem; border: 1px solid #ddd;}
 
     .with__submit input[type="text"]  {width: calc(90%); }

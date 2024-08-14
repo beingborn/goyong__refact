@@ -3,9 +3,7 @@
 */
 
 
-
 form {width: 100%;}
-
 
 .search__box {
     height: 5.8rem;
@@ -16,9 +14,7 @@ form {width: 100%;}
     input, select {border: 0.1rem solid #ddd; height: 4rem; line-height: 4rem; font-size: 1.6rem; width: 100%;}
 }
 
-.width--100 {
-    width: 100%;
-}
+.table__horizontal__wrap .note__td .note__input {height: calc(15rem - 2rem);} // 비고
 
 .search--flex {
     display: flex;
@@ -42,6 +38,18 @@ form {width: 100%;}
 .select {   
     width: 80%;
  select {min-width: 10rem; margin-left: 1rem; }
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #004A98;
+    border: 0;
+    color: white;
+    width: 10rem;
+    height: 4rem;
+    line-height: 4rem;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
 }
 
 
@@ -88,3 +96,19 @@ form {width: 100%;}
 }
 
 .form-content > select {width: 100%; min-height: 4rem;}
+
+.form__head {height: 5.8rem;}
+.form__row {border-bottom: 0.1rem solid #ddd;}
+.form__row > .form-wrap {height: 5.8rem;}
+.form__head > .form-title-file {display: flex; align-items: center; justify-content: center;}
+.form__body .form__row input {height: 4rem;}
+
+.btn__add, .btn__remove {height: 4rem; background-color: $main-color;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+    }

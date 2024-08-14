@@ -1,10 +1,8 @@
 @charset "UTF-8";
 /* 
-  색상 값들을 변수로써 통합관리합니다.
+  색상 값 변수 관리
 */
-/* 
-  기본 공통 CSS
-*/
+/*  기본 공통 CSS  */
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
@@ -33,6 +31,11 @@ body {
   color: #1d1d1d;
   font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   overflow-x: hidden;
+}
+
+.inner {
+  width: 1280px;
+  margin: 0px auto;
 }
 
 label {
@@ -68,9 +71,23 @@ input[type=radio]:checked {
   border: 0.6rem solid #000;
 }
 
-.inner {
-  width: 1280px;
-  margin: 0px auto;
+textarea {
+  border: 0.1rem solid #ddd;
+  width: 100%;
+}
+
+.blind {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: -99999.9rem;
+  left: -99999.9rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  line-height: 0;
+  font-size: 0;
+  text-indent: -99999.9rem;
+  z-index: 0;
 }
 
 .mobile__logo {
@@ -104,20 +121,6 @@ input[type=radio]:checked {
   outline: 0.2rem dashed #0cc;
 }
 
-.blind {
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  top: -99999.9rem;
-  left: -99999.9rem;
-  width: 0.1rem;
-  height: 0.1rem;
-  line-height: 0;
-  font-size: 0;
-  text-indent: -99999.9rem;
-  z-index: 0;
-}
-
 /* 
   상태 변경 클래스 네이밍 규칙
 
@@ -125,11 +128,12 @@ input[type=radio]:checked {
 
   a = 상태 변경 요소 혹은 스타일 속성
   b = 속성 수치
-  c = 속성 값
+  c = 속성 값 
 
 */
-/* 텍스트 제어 관련 
-   i가 뒤에 붙을 시 important로 최우선순위 적용
+/* 
+  텍스트 제어  
+  i가 뒤에 붙을 시 important로 최우선순위 적용
 */
 .txt--c {
   text-align: center;
@@ -141,6 +145,17 @@ input[type=radio]:checked {
 
 .txt--r {
   text-align: right;
+  padding-right: 1rem;
+}
+
+.txt--l-p {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.txt--l-r {
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .txt--c-i {
@@ -155,8 +170,8 @@ input[type=radio]:checked {
   text-align: right !important;
 }
 
-/* 패딩 제어 관련 
-   i가 뒤에 붙을 시 important로 최우선순위 적용
+/* 
+  패딩 제어 i가 뒤에 붙을 시 important로 최우선순위 적용
 */
 .pd--10-l {
   padding-left: 1rem;
@@ -166,9 +181,29 @@ input[type=radio]:checked {
   padding-left: 2rem;
 }
 
-/* 마진 제어 관련 
-   i가 뒤에 붙을 시 important로 최우선순위 적용
+.pd--10-r {
+  padding-right: 1rem;
+}
+
+.pd--10-m {
+  padding: 0 1rem;
+}
+
+/* 
+  마진 제어 i가 뒤에 붙을 시 important로 최우선순위 적용
 */
+.mg--10-l {
+  margin-left: 1rem;
+}
+
+.mg--20-l {
+  margin-left: 2rem;
+}
+
+.mg--10-r {
+  margin-right: 1rem;
+}
+
 .mg--20-r {
   margin-right: 2rem;
 }
@@ -177,7 +212,7 @@ input[type=radio]:checked {
   border-top: 0.2rem solid #000;
 }
 
-/* 레이아웃 제어 관련 with flex */
+/* flex 레이아웃 제어 */
 .flex--box {
   display: flex;
 }
@@ -187,12 +222,58 @@ input[type=radio]:checked {
   align-items: center;
 }
 
-.width--80 {
-  width: 80%;
+.flex--space {
+  justify-content: space-between;
+}
+
+.flex--end {
+  justify-content: end;
+}
+
+.flex--center-s {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex--grow-100 {
   flex-grow: 1;
+}
+
+.width--10 {
+  width: 10%;
+}
+
+.width--15 {
+  width: 15%;
+}
+
+.width--20 {
+  width: 20%;
+}
+
+.width--80 {
+  width: 80%;
+}
+
+.width--100 {
+  width: 100%;
+}
+
+.height--100 {
+  height: 100%;
+}
+
+.tb--height-find {
+  height: 5.8rem;
+}
+
+.display--none {
+  display: none;
+}
+
+.bg--f9f9 {
+  background-color: #F9F9FA;
 }
 
 .table--fixed {
@@ -288,9 +369,39 @@ input[type=radio]:checked {
   font-size: 2rem;
 }
 
+.btn__select {
+  height: 9rem;
+  background-color: #003675;
+  color: #fff;
+  border-radius: 0.7rem;
+}
+
+.btn__find {
+  height: 4rem;
+  line-height: 4rem;
+  background: transparent;
+  border: 0.1rem solid #ddd;
+}
+
 /* 
   테이블 CSS
 */
+.td__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.td__container select {
+  flex: 1 1 calc(33.33% - 1rem);
+  min-width: 100px;
+}
+
+.td__container input[type=text] {
+  flex: 1 1 calc(33.33% - 1rem);
+}
+
 table caption {
   position: absolute;
   top: 0;
@@ -595,7 +706,8 @@ td {
 }
 
 .table__vertical tbody td {
-  padding-right: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .border-right {
@@ -646,8 +758,8 @@ form {
   width: 100%;
 }
 
-.width--100 {
-  width: 100%;
+.table__horizontal__wrap .note__td .note__input {
+  height: 13rem;
 }
 
 .search--flex {
@@ -683,6 +795,18 @@ form {
   margin-left: 1rem;
 }
 
+input[type=file]::file-selector-button {
+  background-color: #004A98;
+  border: 0;
+  color: white;
+  width: 10rem;
+  height: 4rem;
+  line-height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
+}
+
 .search__form {
   border-bottom: 0.1rem solid #ddd;
 }
@@ -716,6 +840,104 @@ form {
 .form-content > select {
   width: 100%;
   min-height: 4rem;
+}
+
+.form__head {
+  height: 5.8rem;
+}
+
+.form__row {
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.form__row > .form-wrap {
+  height: 5.8rem;
+}
+
+.form__head > .form-title-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__body .form__row input {
+  height: 4rem;
+}
+
+.btn__add, .btn__remove {
+  height: 4rem;
+  background-color: #246BEB;
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.menu-list {
+  width: 280px;
+}
+
+.menu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.depth-2-first {
+  border-top: 0.3rem solid #16408D;
+}
+
+.depth-1 {
+  padding: 2.5rem 1rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.depth-1 .tit {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.depth-2 {
+  background-color: #FAFAFB;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 4.8rem;
+}
+
+.depth-3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 4.8rem;
+}
+
+/* 초기 상태 안보이게 지정 */
+.menu-body {
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tit {
+  padding-left: 10px;
+}
+
+.tit2 {
+  padding-left: 10px;
+}
+
+.lnb input[type=checkbox] {
+  width: 2.6rem;
+  height: 2.6rem;
+  zoom: 1;
 }
 
 .header {
@@ -1221,7 +1443,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   border-bottom: 1px solid #ddd;
 }
 .sign__up__table td {
-  width: 87.5%;
+  flex-grow: 1;
   line-height: 100%;
 }
 .sign__up__table td input[type=text] {
@@ -1233,9 +1455,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .sign__up__table td input[type=submit] {
   border: 1px solid #ddd;
   line-height: 4rem;
-}
-.sign__up__table td input[type=file] {
-  background: 0;
 }
 .sign__up__table td select {
   height: 4rem;
@@ -1472,6 +1691,36 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   color: #0c3975;
 }
 
+.sub {
+  position: relative;
+}
+
+.auth__table__wrap {
+  width: 28rem;
+  margin-right: auto;
+}
+
+.content--flex {
+  display: flex;
+}
+
+.main {
+  width: calc(100% - 31.6rem);
+  margin-left: auto;
+}
+.main.width--100 {
+  width: 100%;
+}
+
+.--flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.--flex input:last-of-type {
+  margin-left: 2rem;
+}
+
 .manage__wrap .visual__bg {
   width: 100%;
   height: 25rem;
@@ -1494,6 +1743,22 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.5rem;
 }
 
+.lnb__title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+
+.flex__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex__title span {
+  font-size: 1.6rem;
+}
+
 .function__group.y__flex {
   align-items: center;
 }
@@ -1508,109 +1773,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding: 0 0.8rem;
   margin-left: 1rem;
   font-size: 1.6rem;
-}
-
-.lnb__title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.6rem;
-  font-weight: 500;
-}
-
-.flex__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.flex__title span {
-  font-size: 1.6rem;
-}
-
-.main__content .sub {
-  position: relative;
-}
-.main__content .auth__table__wrap {
-  width: 28rem;
-  margin-right: auto;
-}
-.main__content .content--flex {
-  display: flex;
-}
-.main__content .main {
-  width: calc(100% - 31.6rem);
-  margin-left: auto;
-}
-
-.--flex {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.--flex input:last-of-type {
-  margin-left: 2rem;
-}
-
-.menu-list {
-  width: 280px;
-}
-
-.menu-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.depth-2-first {
-  border-top: 0.3rem solid #16408D;
-}
-
-.depth-1 {
-  padding: 2.5rem 1rem;
-  border-bottom: 0.1rem solid #ddd;
-}
-
-.depth-1 .tit {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.depth-2 {
-  background-color: #FAFAFB;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 4.8rem;
-}
-
-.depth-3 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 4.8rem;
-}
-
-/* 초기 상태 안보이게 지정 */
-.menu-body {
-  display: block;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.tit {
-  padding-left: 10px;
-}
-
-.tit2 {
-  padding-left: 10px;
-}
-
-.lnb input[type=checkbox] {
-  width: 2.6rem;
-  height: 2.6rem;
-  zoom: 1;
 }
 
 .content .table__horizontal {
@@ -1948,9 +2110,6 @@ a {
 .check__year__result .pagination {
   margin-bottom: 6rem;
 }
-.check__year__result .table__vertical table td {
-  padding-right: 0;
-}
 .check__year__result .table__vertical colgroup col:nth-child(1), .check__year__result .table__vertical colgroup col:nth-child(2) {
   width: 6.6%;
 }
@@ -2037,10 +2196,6 @@ a {
 .modal__result {
   border-top: 0.2rem solid #000;
 }
-.modal__result table {
-  width: 100%;
-  font-size: 1.5rem;
-}
 .modal__result table tbody tr td {
   text-align: center;
   padding-right: 0;
@@ -2072,6 +2227,9 @@ a {
 .check__result .report__col col:nth-child(3) {
   width: 4.7%;
 }
+.check__result .report__col col:nth-child(11) {
+  width: auto;
+}
 .check__result .report__col col:nth-child(4) {
   width: 6.6%;
 }
@@ -2092,9 +2250,6 @@ a {
 }
 .check__result .report__col col:nth-child(10) {
   width: 6.6%;
-}
-.check__result .report__col col:nth-child(11) {
-  width: 7.5%;
 }
 .check__result .report__col col:nth-child(12) {
   width: 7.5%;
@@ -2192,18 +2347,6 @@ a {
   border: 0.1rem solid #ddd;
 }
 
-.td__container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 1rem;
-}
-
-.td__container select {
-  flex: 1 1 calc(33.33% - 1rem);
-  min-width: 100px;
-}
-
 .modal__result .report__check__table tbody tr td {
   padding: 0 1rem;
 }
@@ -2222,6 +2365,10 @@ a {
 
 .user__wrap .content {
   margin-top: 4rem;
+}
+
+.radio__container-margin label:first-child .radio__container-margin label:not(:last-child) {
+  margin-right: 1rem;
 }
 
 #sub__wrap .content .visual__bg {

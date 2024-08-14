@@ -1,6 +1,27 @@
 // 관리자 메뉴 공통 영역
 .union__member { font-size: 1.9rem!important; color: #0c3975;}
 
+
+// 페이지 두 개 구분될 시 가로 정렬 및 넓이 지정 manage__accounting, manage__labor, manage__menu만 해당
+.sub {position: relative;}
+.auth__table__wrap { width: 28rem; margin-right: auto; }
+.content--flex { display: flex;}
+
+
+// .sub의 display 가 none이면, .main의 width를 100%로 지정
+.main { width: calc(100% - (28rem + 3.6rem)); margin-left: auto;
+    &.width--100 {
+        width: 100%;
+    }
+}
+
+
+.--flex {display: flex; align-items: center; height: 100%;
+  input:last-of-type {
+    margin-left: 2rem;
+  }
+}
+
 // 관리자 상단 비주얼 영역
 .manage__wrap {
     .visual__bg {
@@ -29,8 +50,12 @@
           }
         }
       }
-    
 }
+
+// 타이틀 영역 전체 적용
+.lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 500;} // 관리자 페이지 제목
+.flex__title { display: flex; align-items: center; justify-content: space-between;} // 관리자 페이지 예시 (건수 등 결과 값이 있을 시 넣는 클래스)
+.flex__title span {font-size: 1.6rem;}
 
 .function__group.y__flex {
     align-items: center;
@@ -50,42 +75,6 @@
     }
 }
 
-
-.lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 500;} // 관리자 페이지 제목
-.flex__title { display: flex; align-items: center; justify-content: space-between; // 관리자 페이지 예시 (건수 등 결과 값이 있을 시 넣는 클래스)
-    span {
-        font-size: 1.6rem;
-    }
-}
-
-
-
-
-
-// 페이지 두 개 구분될 시 가로 정렬 및 넓이 지정
-.main__content {
-    .sub { position: relative;}
-    .auth__table__wrap {
-        width: 28rem;
-        margin-right: auto;
-    }
-    
-    .content--flex {
-    display: flex;
-    }
-
-    .main {
-        width: calc(100% - (28rem + 3.6rem));
-        margin-left: auto;
-    }
-}
-
-.--flex {display: flex; align-items: center; height: 100%;
-
-  input:last-of-type {
-    margin-left: 2rem;
-  }
-}
 
 
 
@@ -132,40 +121,7 @@
 
 
 
-// 메뉴별 권한 관리 아코디언 
-.menu-list {
-    width: 280px;
-}
 
-.menu-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    // padding: 10px 0;
-}
-
-.depth-2-first {border-top: 0.3rem solid #16408D;}
-.depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
-.depth-1 .tit {font-size: 1.8rem; font-weight: 600;}
-.depth-2 {background-color: #FAFAFB; padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
-.depth-3 {padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
-
-/* 초기 상태 안보이게 지정 */
-.menu-body {
-    display: block;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.tit {padding-left: 10px;}
-.tit2 {padding-left: 10px;}
-.lnb input[type="checkbox"] {width: 2.6rem; height: 2.6rem; zoom: 1;}
 
 
 
@@ -175,34 +131,24 @@
 
 
 .content .table__horizontal {border-top: 0.1rem solid #ddd;}
-
 // col group
 .main__table .main__th {width: 15.38%;}
 .main__table .sub__th {width: 34.62%;}
-
-
 // 메뉴 상세정보 colgroup 
-
 .main__table .menu__th {width: 18.9%; min-width: 12rem;}
 .main__table .menu__td {width: 30.6%;}
 
 
 
-.system__margin .main .content .table__horizontal .main__table tbody th {
-    padding: 0 3rem;
-}
+.system__margin .main .content .table__horizontal .main__table tbody th { padding: 0 3rem;}
 
 
 
 // 회계공시 조회
-
 .search__accounting .main__th {width: 16rem;}
 .search__accounting .search__td {width: 28rem;}
 .search__accounting .radio__th {width: 13rem;}
-
-.search__accounting .main__table .radio__wrap .flex label:nth-of-type(2) {
-    margin-right: 2rem;
-}
+.search__accounting .main__table .radio__wrap .flex label:nth-of-type(2) {margin-right: 2rem;}
 
 
 
@@ -218,6 +164,7 @@
     input:nth-child(1){
         width: 18.35rem;
     }
+
     input:nth-child(2){
         padding: 0.8rem 2.6rem;
         background-color: #fff;
@@ -471,7 +418,7 @@ a {color: #000;}
     margin-bottom: 6rem;
     }
     .table__vertical {
-        table td {padding-right: 0;}
+        // table td {padding-right: 0;}
         colgroup {
             col {
                 &:nth-child(1),  &:nth-child(2) {
@@ -563,24 +510,14 @@ a {color: #000;}
 
 .modal__result {
     border-top: 0.2rem solid #000;
-
-    table {width: 100%; font-size: 1.5rem;
-        
-        thead tr th:nth-child(1), thead tr th:nth-last-child(1) {
-            // border-right: 0;
-        }
-
+    table {
         tbody tr td {text-align: center; padding-right: 0;
             &:nth-last-child(1){
                 border-right: 0;
             }
         }
-
         .count {background-color: #DCE7FC;}
     }
-
-
-
 }
 
 
@@ -596,11 +533,9 @@ a {color: #000;}
 
 }
 
-
 .report__content .content {
     width: 100%;
 }
-
 
 
 .check__result .report__col {
@@ -615,18 +550,21 @@ a {color: #000;}
             width: 4.7%;
         }
 
+        &:nth-child(11){
+            width: auto;
+        }
+
         @for $i from 4 through 10 {
             &:nth-child(#{$i}) {
               width: 6.6%;
             }
           }
 
-          @for $j from 11 through 15 {
+          @for $j from 12 through 15 {
             &:nth-child(#{$j}) {
               width: 7.5%;
             }
           }
-     
     }
 }
 
@@ -720,31 +658,16 @@ a {color: #000;}
 }
 
 
-// manage__labor 셀렉터 조정영역
-.td__container {display: flex; flex-wrap: wrap; width: 100%; gap: 1rem;}
-.td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px; }
-
-
-.modal__result .report__check__table tbody tr td {
-    padding: 0 1rem;
-}
 
 
 
-.wrap .report__content .table__horizontal .main__table .radio__wrap .flex label {
-    margin-right: 2rem;
-}
+.modal__result .report__check__table tbody tr td { padding: 0 1rem; }
+
+.wrap .report__content .table__horizontal .main__table .radio__wrap .flex label { margin-right: 2rem;}
 
 
-.modal__result .radio__table tr td {
-    text-align: left;
-}
-
+.modal__result .radio__table tr td {text-align: left;}
 .modal__result tr {line-height: 5.8rem;}
-
-
-
-
 .user__wrap .content {margin-top: 4rem;}
 
 
@@ -752,3 +675,6 @@ a {color: #000;}
 // 통계 및 보고서 관리 페이지
 
 // .ac__manage__wrap-table td {text-align: right;}
+
+.radio__container-margin label:first-child
+.radio__container-margin label:not(:last-child) {margin-right: 1rem;}

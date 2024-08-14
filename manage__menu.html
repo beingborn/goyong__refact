@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>노동조합 회계공시시스템</title>
+    <title>관리자>회계공시관리>회계공시조합관리</title>
     <!-- css 영역 -->
     <link rel="stylesheet" href="style/base/reset.css">
     <link rel="stylesheet" href="style/default.css">
@@ -19,8 +19,6 @@
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        <!-- 상단 띠 영역 -->
-      
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -89,8 +87,12 @@
                 <button type="button" class="btn__blue">조회</button>
                 <button type="button" class="btn__blue">저장</button>
             </div>
-            <div class="content--flex system__margin  ">
-                <div class="sub" >
+            <div class="content--flex system__margin">
+
+
+                <!-- 클래스 삽입 위치 -->
+                <div class="sub"> 
+
                     <div class="lnb__title ">
                         <h2>메뉴 상세정보</h2>
                     </div>
@@ -136,6 +138,12 @@
                         </ul>
                     </div>
                 </div>
+
+                    <!--  
+                    관리자 페이지 왼쪽 영역이 사라지더라도 표를 100%로 지정하시고 싶으시면
+                    상단 html class sub 옆에 display--none을 추가하시면 됩니다.
+                    -->
+
                 <div class="main">
                     <div class="content">
                         <div class="lnb__title ">
@@ -177,8 +185,11 @@
                                             <label for="example22">상위메뉴</label>
                                           </th>
                                           <td class="menu__find">
-                                            <input type="text" value="" id="example24" class="width--80">
-                                            <button type="button">검색</button>
+                                            <div class="flex--box flex--space tb--height-find">
+                                                <input type="text" value="" id="example24" class="width--80">
+                                                <button type="button" class="flex--grow-100 mg--10-l btn__find">검색</button>
+                                            </div>
+                                    
                                           </td>
                                           <th scope="col">
                                            설립연월일
@@ -196,12 +207,13 @@
                                           </td>
                                     </tr>
                                     <tr>
-                                        <th scope="col" class="note__th">
-                                          <label for="example22">비고</label>
-                                        </th>
-                                        <td colspan="3">
-                                          <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly contenteditable='true'>전국민주노동조합총연맹</textarea>
-                                        </td>
+                                        <th scope="row" class="note__th">
+                                            <label for="example22">비고</label>
+                                          </th>
+                                          <td colspan="3" class="note__td">
+                                                <input class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                            <!-- <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly class="note__td-txt-area width--100">전국민주노동조합총연맹</textarea> -->
+                                          </td>
                                       </tr>
                                   </tbody>
                             </table>
@@ -328,6 +340,18 @@
         }
         }
         })
+
+
+        $(document).ready(function(){
+            const subElement = $('.sub')
+            const mainElement = $('.main')
+
+            if (subElement.css('display') === 'none'){
+                mainElement.addClass('width--100')
+            }
+        })
+
+        
     </script>
     
     

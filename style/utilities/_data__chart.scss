@@ -1,19 +1,12 @@
-.chart-block {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.chart__wrapper {
-  width: calc(50% - 20px);
-}
+.chart-block { display: flex; justify-content: space-between; flex-wrap: wrap;}
+.chart__wrapper { width: calc(50% - 20px);}
 
 .mo__tab__table {display: none; margin-bottom: 5rem;}
 
+
+
 .tab__content .mo__tab__table table {font-size: 1.5rem;}
-
 .tab__content .mo__tab__table table tr {display: flex; flex-wrap: wrap;}
-
 .tab__content .mo__tab__table table tbody th {
   font-size: 1.6rem;
   text-align: left;
@@ -21,20 +14,13 @@
   width: 100%;
   margin-bottom: 1rem;
 }
-
-.tab__content .mo__tab__table table tbody td {
-  font-size: 1.6rem;
-  width: 100%;
-
-}
-
+.tab__content .mo__tab__table table tbody td {font-size: 1.6rem;width: 100%;}
 .mo__4__input, .mo__4__select {
   height: 4rem;
   line-height: 4rem;
   border: 1px solid #CDCCCD;
   width: calc(50% - 1rem);
 }
-
 .mo__4__group__wrap {margin-bottom: 2rem;}
 .mo__4__group {
   height: 4rem;

@@ -19,7 +19,6 @@
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        <!-- 상단 띠 영역 -->
      
         <header class="header">
             <div class="inner">
@@ -137,11 +136,17 @@
                                 </select>
                             </div>
                         </div>
+                        
 
                         <div class="form-radio">
                             <div class="form-title">
                                 <span>사용여부</span>
                             </div>
+
+
+                        <!-- 라디오 옵션을 추가하시려면 input과 radio를 복사 붙여넣기  
+                             검색 조건 자체를 추가하려면 radio__wrap 전체 복사 붙여넣기
+                        -->
                             <div class="form-content radio__wrap">
                                 <input type="radio" id="radio">
                                 <label for="radio">사용</label>
@@ -155,7 +160,7 @@
             </div>
 
             <div class="content--flex system__margin">
-                <div class="sub">
+                <div class="sub">  <!-- display--none 탈부착 위치 -->
                     <div class="lnb__title">
                         <h2>노동조합 체계</h2>
                     </div>
@@ -187,6 +192,12 @@
                         </ul>
                     </div>
                 </div>
+
+                <!--  
+                    관리자 페이지 왼쪽 영역이 사라지더라도 표를 100%로 지정하시고 싶으시면
+                    상단 html class sub 옆에 display--none을 추가하시면 됩니다.
+                -->
+
                 <div class="main">
                     <div class="content">
                         <div class="lnb__title flex__title">
@@ -319,7 +330,13 @@
                                           </td>
                                         </tr>
 
-                                        <tr >
+
+                                        <!-- type 1 -->
+                                        <!-- 
+                                            노동조합 체계 정보 기존
+                                        -->
+
+                                        <!-- <tr >
                                             <th scope="row">총연합단체</th>
                                             <td>
                                                 <select name="category" id="category2323" class="select--no--style select__renew">
@@ -338,15 +355,16 @@
                                                     <option value="전체">전체</option>
                                                 </select>
                                             </td>
-                                        </tr>
+                                        </tr> -->
+
+
                                         <!-- type 2 -->
                                         <!-- 
                                             가이드를 따른 table 태그의 특성상 내용이 한개가 되더라도 나머지 부분을 차지하게 하려면 
                                             colspan값을 조절해야합니다. colspan 값을 넣고 해당 부분에 select를 넣으면 자동으로 
                                             3개 이상시 select가 내려가게 만들었습니다.
                                         -->
-
-                                        <tr >
+                                        <!-- <tr >
                                             <th scope="row">총연합단체</th>
                                             <td colspan="5">
                                                 <div class="td__container">
@@ -368,11 +386,48 @@
                                                     <select name="category" id="category2323" class="select--no--style select__renew">
                                                         <option value="전체">전체</option>
                                                     </select>
+      
+                                                </div>
+                                            </td>
+                                        </tr> -->
+
+                                        
+                                        <!-- type 3 -->
+                                        <!-- 
+                                            버튼 크기는 width 20, 10, 80 등으로 조절가능 합니다.
+                                            input 및 셀렉트는 flex--grow--100을 이용해서 자동으로 나머지 부분을 채웁니다.
+                                        -->
+                                        <tr >
+                                            <th scope="row">총연합단체</th>
+                                            <td colspan="5">
+                                                <div class="flex--box flex--space">
+                                                    <button type="button" class="btn__select width--20 mg--10-r">선택입력</button>
+                                                    <div class="td__container flex--grow-100">
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <input type="text" value="input" style="    padding: 0.8rem 1rem 0.8rem 1.6rem;">
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
 
-                                        <tr >
+
+                                        
+
+                                        <tr>
                                             <!-- 
                                             셀렉트 삭제 및 변경을 원할 시
                                             th, td를 삭제한 후 
@@ -400,12 +455,13 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">사용여부</th>
-                                            <td class="radio__wrap">
-                                                <div>
+                                            <td class="radio__wrap" colspan="5">
+                                                <div class="">
                                                     <input type="radio" name="rdo_5-1" id="rdo_5-1">
                                                     <label for="rdo_5-1" class="mg--20-r">사용</label>
                                                     <input type="radio" name="rdo_5-2" id="rdo_5-2">
                                                     <label for="rdo_5-2">미사용</label>
+                                                    
                                                 </div>
                                               </td>                              
                                         </tr>
@@ -413,8 +469,9 @@
                                             <th scope="row" class="note__th">
                                                 <label for="example22">비고</label>
                                               </th>
-                                              <td class="note__td">
-                                                <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly class="note__td-txt-area width--100">전국민주노동조합총연맹</textarea>
+                                              <td colspan="5" class="note__td">
+                                                    <input class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                                <!-- <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly class="note__td-txt-area width--100">전국민주노동조합총연맹</textarea> -->
                                               </td>                    
                                         </tr>
                                       </tbody>
@@ -493,11 +550,21 @@
     <script src="js/manage__menu.js"></script>
     <script>
         $(document).ready(function(){
-        for (i = 0; i <= 4; i++) {
-        if(i % 2 == 0 ){
-            $('.radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
-        }
-        }
+            const subElement = $('.sub')
+            const mainElement = $('.main')
+
+            if (subElement.css('display') === 'none'){
+                mainElement.addClass('width--100')
+            }
+
+
+            
+        $('.table__vertical tbody tr').click(function(){
+            $(this).css('background-color' , '#DEEBF7');
+            $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
+        })
+        
+
         })
     </script>
     

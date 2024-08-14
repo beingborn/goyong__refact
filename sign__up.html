@@ -20,7 +20,6 @@
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        <!-- 상단 띠 영역 -->
         
         <header class="header">
             <div class="inner">
@@ -315,9 +314,7 @@
                             </th>
                             <td class="td--flex">
                                 <div class="file-upload-wrapper">
-                                    <input type="file" id="file-input" hidden>
-                                    <label for="file-input" class="custom-file-label">파일 선택</label>
-                                    <span id="file-name">선택된 파일 없음</span>
+                                    <input type="file" id="file-input">
                                 </div>
                             </td>
                         </tr>
@@ -335,12 +332,48 @@
                 </p>
                 <p>(공문에"노동조합 회계공시시스템 회원가입을 신청한다"는 의사를 명시하고 대표자 직인 날인, 파일은 1개만 첨부가능)</p>
             </div>
+
+
+
             <div class="function__group">
-                <button type="button">저장</button>
+                <button type="button" class="btn__blue">저장</button>
             </div>
 
 
-  
+
+
+            <div class="union__code">
+                <div class="upload__manager">
+
+                    <form action="POST">
+
+                        <div class="form__head flex--box--c">
+                            <div class="form-title" style="border-right: 1px solid #ddd;">
+                                <span>규약명</span>
+                            </div>
+                            <div class="form-title-file flex--grow-100 txt--c bg--f9f9 height--100">
+                                <span>첨부파일</span>
+                            </div>
+                        </div>
+
+                        <div class="form__body">
+                            <div class="form__row flex--box--c">
+                                <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
+                                    <input type="text" name="rule_name[]" placeholder="조합원 가입" class="input__text" />
+                                </div>
+
+                                <div class="form-content form-wrap">
+                                    <div class="file-upload-wrapper flex--box--c">
+                                        <input type="file" id="file-input" >
+                                    </div>
+                                    <button type="button" class="btn__add" style="margin-left: auto;">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
        </main>
             <!-- 푸터 영역 -->
@@ -414,6 +447,43 @@
             $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
 
         })
+
+        $(document).ready(function(){
+
+            $('.btn__add').click(function(){
+                // 추가 줄 생성
+                const newRow = $('<div class="form__row flex--box--c"></div>')
+                
+                /** 임시로 하드 코딩해서 넣어놨습니다. */
+                const newRowDesc = $(        
+                `
+                                <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
+                                    <input type="text" name="rule_name[]" placeholder="조합원 가입" class="input__text" />
+                                </div>
+
+                                <div class="form-content form-wrap">
+                                    <div class="file-upload-wrapper flex--box--c">
+                                        <input type="file" id="file-input" >
+                                    </div>
+                                    <button type="button" class="btn__remove" style="margin-left: auto;">-</button>
+                                </div>
+                `
+                )
+
+                
+                // 추가 줄 내용 삽입
+                newRow.append(newRowDesc)
+
+                // 내용에 줄 추가
+                $('.form__body').append(newRow);
+
+            })
+        })
+
+        // 가까운 row 삭제
+        $('.form__body').on('click', '.btn__remove', function() {
+            $(this).closest('.form__row').remove();
+        });
 
 
 

@@ -19,7 +19,6 @@
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        <!-- 상단 띠 영역 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -82,7 +81,7 @@
 
        <main class="main__content" style="padding-bottom: 40px;">
         <div class="inner">
-          <!-- y__flex를 가진 버튼 그룹은 세로 중앙 정렬됩니다. -->
+          <!-- y__flex를 가진 버튼 그룹은 세로 중앙 정렬 -->
             <div class="function__group y__flex">
                 <div class="year__form">
                   <label for="year__select">회계공시 대상년도</label>
@@ -90,7 +89,13 @@
                   <input type="text" id="year__select2" value="1000">
                 </div>
 
-                <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 만들었습니다. -->
+                <div class="radio__wrap mg--20-r">
+                  <input type="radio" id="">
+                  <label for="dd" class="mg--20-r">일괄</label>
+                  <input type="radio" id="">
+                  <label for="ee">부분</label>
+                </div>
+                <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼 지정, 클릭 시 에러 모달 팝업-->
                 <button type="button" class="btn__blue error__display">초기화</button>
                 <button type="button" class="btn__blue check__data">조회</button>
                 <button type="button" class="btn__blue">다운로드</button>
@@ -149,7 +154,9 @@
                     </table>
             </div>
             <div class="content--flex system__margin data__modal__wrap">
-                <div class="sub">
+
+                <div class="sub">  <!-- 클래스 삽입 위치 -->
+
                     <div class="lnb__title">
                         <h2>노동조합 체계</h2>
                     </div>
@@ -181,17 +188,22 @@
                         </ul>
                     </div>
                 </div>
+
+                <!--  
+                    트리 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
+                    158번째 줄 상단 sub 클래스를 가진 요소 옆에 display--none 클래스를 추가
+                -->
+
                 <div class="main">
                     <div class="content">
                         <div class="lnb__title flex__title">
                             <h2>회계공시 대상년월 : 2024-07
-
                                 <span class="union__member pd--20-l">1000 명</span>
                             </h2>
+                            <span>건수: 3건</span>
                         </div>
                         <div class="check__result check__year__result">
                             <div class="tab__detail table__vertical check__year__result">
-                              <!-- border-top-large 사용 시 table 상단에 border가 추가됩니다. -->
                               <table class="check__year__result-table border-top-large">
                                 <caption>
                                   자산 및 부채현황 {구분, 자산}
@@ -297,6 +309,7 @@
                         <div class="modal__table">
                             <div class="lnb__title flex__title">
                                 <h2>회계공시 대상년월 : 2024-07</h2>
+                                <span>건수 1건</span>
                             </div>
                             <div class="modal__result">
                                 <div class="tab__detail table__vertical">
@@ -363,6 +376,7 @@
                         <div class="modal__table">
                             <div class="lnb__title flex__title">
                                 <h2>회계공시 대상년월 : 2024-07</h2>
+                                <span>건수 2건</span>
                             </div>
                             <div class="modal__result">
                                 <div class="tab__detail table__vertical">
@@ -439,10 +453,6 @@
                                       </tr>
                                     </tbody>
                                   </table>
-
-
-
-                                  
                                 </div>
                             </div>
                         </div>
@@ -458,18 +468,18 @@
             </div>
 
 
-            <!-- data__error__modal -->
-
-
-                 
+            <!-- 데이터 에러 모달 -->                 
             <div class="data__error__modal">
               <div class="modal__inner">
                   <div class="data__group__title">
                       <h2>에러정보</h2>
                   </div>
-
-                  <div class="modal__table">
+                  <div>
+                    <div class="flex--box flex--end" style="margin-top: 5.6rem; margin-bottom: 1.6rem;">
+                      <span>건수 4건</span>
+                    </div>
                       <div class="modal__result">
+                        
                           <div class="tab__detail table__vertical modal__error__table">
                             <table>
                               <caption>
@@ -524,12 +534,6 @@
 
 
 
-
-
-
-
-
-
         </div>
         </div>
        </main>
@@ -556,18 +560,6 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                              <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">
@@ -597,6 +589,24 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          const subElement = $('.sub')
+          const mainElement = $('.main')
+
+          if (subElement.css('display') === 'none'){
+              mainElement.addClass('width--100')
+          }
+
+          
+        $('.table__vertical tbody tr').click(function(){
+            $(this).css('background-color' , '#DEEBF7');
+            $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
+        })
+
+      })
+  </script>
     
 
 
