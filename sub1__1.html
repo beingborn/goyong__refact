@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   </head>
   <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
       <a href="#main__content">본문 바로가기</a>
     </div>
     <div id="sub__wrap" class="wrap">
+      <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header__top">
@@ -193,6 +195,7 @@
                 </div>
               </div>
             </div>
+            <!-- 모바일 탭 index2 -->
             <div class="mobile__con motab-2">
               <!-- 공시 정보 -->
               <div class="market">
@@ -233,7 +236,7 @@
                   </table>
                 </div>
               </div>
-              <!-- 모바일 자산 및 부채 현황 주석 -->
+              <!-- 모바일 자산 및 부채 현황  -->
               <div class="dis__info first__mo">
                 <div class="data--open">
                   <span class="data__toggle">자산 및 부채현황</span>
@@ -665,7 +668,7 @@
                   </table>
                 </div>
               </div>
-              <!-- 모바일 지출 현황 주석 -->
+              <!-- 모바일 지출 현황  -->
               <div class="dis__info 지출">
                 <div class="data--open last--open">
                   <span class="data__toggle">지출현황</span>
@@ -1051,7 +1054,6 @@
             </div>
           </div>
         </div>
-        <!-- 모바일 탭 엔드 -->
         <!-- pc탭 -->
         <!-- PC 노동조합정보 -->
         <div
@@ -1504,7 +1506,6 @@
                   </table>
                 </div>
               </div>
-              <!-- 주석 -->
               <div
                 class="tab__detail table__horizontal table__last"
                 style="margin-bottom: 20px"
@@ -1540,6 +1541,7 @@
                         <h2>자산 및 부채현황</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 원형 차트 1 -->
                       <div id="pieChart1" class="echart"></div>
                     </div>
 
@@ -1548,6 +1550,7 @@
                         <h2>수입 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 원형 차트 2 -->
                       <div id="pieChart2" class="echart"></div>
                     </div>
                   </div>
@@ -1558,6 +1561,7 @@
                         <h2>지출 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 원형 차트 3 -->
                       <div id="pieChart3" class="echart"></div>
                     </div>
                     <div class="chart__wrapper">
@@ -1574,6 +1578,7 @@
                         <h2>비교 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트 1 -->
                       <div id="barChart1" class="echart"></div>
                     </div>
                     <div class="chart__wrapper">
@@ -1581,6 +1586,7 @@
                         <h2>비교 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트 2 -->
                       <div id="barChart2" class="echart"></div>
                     </div>
                   </div>
@@ -1671,13 +1677,13 @@
                 </div>
              
 
-                <!--  -->
                   <div class="chart-block">
                     <div class="tab__4__chart__wrapper">
                       <div class="chart__title">
                         <h2>자산</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트  3 -->
                       <div id="barChart3" class="echart"></div>
                     </div>
                     <div class="tab__4__chart__wrapper">
@@ -1685,6 +1691,7 @@
                         <h2>부채</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트  4 -->
                       <div id="barChart4" class="echart"></div>
                     </div>
                     <div class="tab__4__chart__wrapper">
@@ -1692,6 +1699,7 @@
                         <h2>수입</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트  5 -->
                       <div id="barChart5" class="echart"></div>
                     </div>
                     <div class="tab__4__chart__wrapper">
@@ -1699,21 +1707,24 @@
                         <h2>지출</h2>
                         <span>(단위:천원)</span>
                       </div>
+                      <!-- 막대 차트  6 -->
                       <div id="barChart6" class="echart"></div>
                     </div>
                     </div>
                 </div>
               </div>
+
               <div class="list__btn__group">
                 <button type="button">목록</button>
               </div>
+
             </div>
           </div>
         </div>
       </main>
-      <!-- 푸터 영역 -->
-      <footer>
-       
+
+      <!-- 푸터 -->
+      <footer> 
         <div class="footer__bottom" style="background-color: #f0f0f0">
           <div class="inner">
             <div class="footer__logo">
@@ -1762,7 +1773,6 @@
         </div>
       </footer>
     </div>
-    <!-- 스크립트 -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -1774,6 +1784,7 @@
     <script src="js/default.js"></script>
     <script src="js/sub.js"></script>
     <script>
+      // 테이블 행 클릭 시 색상 변경 , (아닌 것들은 비활성화)
          $('.table__vertical tbody tr').click(function(){
             $(this).css('background-color' , '#DEEBF7');
             $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')

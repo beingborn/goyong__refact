@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-     
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -81,12 +82,12 @@
               </div>
             </div>
           </div>
-
+        <!-- 컨텐츠 -->
        <main class="main__content" style="padding-bottom: 40px;">
         <div class="inner">
             <div class="function__group">
 
-                <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 만들었습니다. -->
+                <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 설정한 상태 -->
                 <button type="button" class="error__display btn__blue">초기화</button>
                 <button type="button" class="btn__blue">신규</button>
                 <button type="button" class="check__data btn__blue">조회</button>
@@ -94,6 +95,7 @@
                 <button type="button" class="btn__blue">삭제</button>
             </div>
 
+            <!-- 상단 검색 폼 -->
             <form class="search__box flex--box" id="frmSearch" method="POST">
                 <div class="padding--10 search--flex width--100">
                     <div class="search__select__wrap">
@@ -123,9 +125,10 @@
                         </div>
                     </div>
                 </div>
-
 			</form>
-            <div class="">
+
+            <!-- 조회 결과 테이블 -->
+            <div>
                 <div class="user__wrap">
                     <div class="content">
                         <div class="lnb__title flex__title">
@@ -212,7 +215,7 @@
                                 </tbody>
                               </table>
                             </div>
-                            <!-- paging : 웹 -->
+                            <!-- 테이블 페이지 이동 -->
                             <div class="pagination w-page">
                                 <a class="page-navi prev" href="#">이전</a>
                                 <div class="page-links">
@@ -239,6 +242,7 @@
                             <h2>노동조합정보</h2>
                         </div>
 
+                        <!-- 노동조합정보 테이블 -->
                           <div class="table__template__horizontal table__information">
                             <div class="manage__user__table">
                                 <table>
@@ -273,14 +277,12 @@
                                             <td class="td--flex first__td">
                                                 테스트
                                             </td>
-                                            <!-- 2 -->
                                             <th>
                                                 조직단위
                                             </th>
                                             <td class="td--flex second__td">
                                                 테스트
                                             </td>
-                                            <!-- 3 -->
                                             <th>
                                                 조합형태
                                             </th>
@@ -297,14 +299,12 @@
                                             <td class="td--flex first__td">
                                                 test1
                                             </td>
-                                            <!-- 2 -->
                                             <th>
                                                 담당자
                                             </th>
                                             <td class="td--flex second__td">
                                                 테스트
                                             </td>
-                                            <!-- 3 -->
                                             <th>
                                                 담당자이메일
                                             </th>
@@ -320,14 +320,12 @@
                                             <td class="td--flex first__td">
                                                 000-000-0000
                                             </td>
-                                            <!-- 2 -->
                                             <th>
                                                 무선연락처
                                             </th>
                                             <td class="td--flex second__td">
                                                 010-0000-0000
                                             </td>
-                                            <!-- 3 -->
                                             <th>
                                                 수신동의 여부
                                             </th>
@@ -363,7 +361,7 @@
         </div>
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터  -->
             <footer>
               
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -387,18 +385,7 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
+                          
                             </div>
                         </div>
                         <div class="footer__global">
@@ -430,6 +417,7 @@
     <script src="js/manage__accounting.js"></script>
 
     <script>
+        // 테이블 행 클릭 시 해당 행 배경색 지정 (아닌것들 배경색 해제)
         $('.table__vertical tbody tr').click(function(){
             $(this).css('background-color' , '#DEEBF7');
             $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')

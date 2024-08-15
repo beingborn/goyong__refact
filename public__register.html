@@ -15,12 +15,13 @@
 
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-     
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -79,7 +80,7 @@
               </div>
             </div>
           </div>
-
+          <!-- 컨텐츠 -->
        <main class="main__content report__content public__register" style="padding-bottom: 40px;">
         <div class="inner">
             <div class="tab__wrap">
@@ -95,11 +96,11 @@
                     <div class="lnb__title flex__title">
                         <h2>기본사항</h2>
                     </div>
+                    <!-- 노동조합정보 테이블 -->
                     <div class="table__template__horizontal public__table__wrap">
                         <div class="public__table">
                             <table>
-                                <caption>사용자용 회원가입 폼입니다.</caption>
-                                
+                                <caption>사용자용 회원가입 폼입니다.</caption>     
                                 <tr>
                                     <th class="col2__th">
                                         <span>노동조합 명칭</span>
@@ -514,7 +515,7 @@
   
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터  -->
             <footer>
                
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -538,18 +539,7 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
+                   
                             </div>
                         </div>
                         <div class="footer__global">
@@ -580,18 +570,16 @@
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
     <script>
+
+        // 상단 탭 기능 전환
         $(document).ready(function () {
             let subTabBtn = $(".tab__wrap .tab__btn button");
             let subTabContent = $(".tab__content .tab");
 
 
-
-
-
             subTabBtn.click(function(){
                 let tabIndex = $(this).parent().index();
 
-                console.log(tabIndex)
 
                 subTabBtn.removeClass("active");
                 $(this).addClass("active");
@@ -600,12 +588,8 @@
 
             subTabContent.hide().eq(0).show();
             subTabBtn.eq(0).addClass('active')
-
-
-
-
             
-   
+            // 임시로 radio 체크 표시
             $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
 
         })

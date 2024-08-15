@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <!-- 스킵 내비게이션  -->
     <div class="skip__nav">
         <a href="#sub__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-      
-
+      <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -80,13 +80,14 @@
               </div>
             </div>
           </div>
-
+       <!-- 컨텐츠 -->
        <main class="main__content report__content" style="padding-bottom: 40px;" id="sub__content">
         <div class="inner">
             <div class="function__group">
                 <button type="button" class="check__data btn__blue">조회</button>
                 <button type="button" class="btn__blue">다운로드</button>
             </div>
+            <!-- 상단 검색 폼  -->
             <div class="table__horizontal search__report search__work">
                     <table class="main__table width__100">
                         <caption>~~</caption>
@@ -107,14 +108,15 @@
                           </tbody>
                     </table>
             </div>
-
+            <!-- 조회 데이터 수 -->
             <div class="flex--box flex--end" style="margin-top: 5.6rem; margin-bottom: 1.6rem;">
               <span>건수 :23건</span>
             </div>
 
-            <div class="ac__manage__ment__wrap">
+            <!-- 노동조합별 통계 -->
+            <div>
                 <div class="tab__detail table__vertical">
-                  <table class="ac__manage__wrap-table">
+                  <table class="border-top-large">
                     <caption>
                       조회결과
                     </caption>
@@ -141,6 +143,8 @@
                         td 클래스 영역에 txt--c 클래스  삽입 시 중앙 정렬
                         td 클래스 영역에 txt--l 클래스  삽입 시 왼쪽 정렬
                         td 클래스 영역에 txt--r 클래스  삽입 시 오른쪽 정렬
+                        
+                        현재 임시로 i 추가 클래스 적용
                       -->
                       <tr>
                         <th scope="row" class="txt--center">한국노총</th>
@@ -242,12 +246,9 @@
                   </table>
                 </div>
               </div>
-
-          
-
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터 -->
             <footer>
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
                     <div class="inner">
@@ -299,7 +300,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
-    <script>      
+    <script>    
+      // 테이블 행 클릭 시 해당 행 색상 변경, 다른 행들은 해제 
       $('.table__vertical tbody tr').click(function(){
             $(this).css('background-color' , '#DEEBF7');
             $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')

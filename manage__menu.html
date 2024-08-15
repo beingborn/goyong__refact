@@ -14,11 +14,13 @@
 
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -78,7 +80,7 @@
               </div>
             </div>
           </div>
-
+          <!-- 컨텐츠 -->
        <main class="main__content">
         <div class="inner">
             <div class="function__group">
@@ -90,12 +92,13 @@
             <div class="content--flex system__margin">
 
 
-                <!-- 클래스 삽입 위치 -->
-                <div class="sub"> 
+             
+                <div class="sub">     <!-- 클래스 삽입 위치 -->
 
                     <div class="lnb__title ">
                         <h2>메뉴 상세정보</h2>
                     </div>
+                    <!-- 메뉴 트리 구조 -->
                     <div class="tree" style="border-top: 1px solid #ddd; padding-top: 20px;">
                         <strong class="tree_tit"> 
                             <span class="tree_label">
@@ -138,18 +141,17 @@
                         </ul>
                     </div>
                 </div>
-
-                    <!--  
-                    관리자 페이지 왼쪽 영역이 사라지더라도 표를 100%로 지정하시고 싶으시면
-                    상단 html class sub 옆에 display--none을 추가하시면 됩니다.
-                    -->
+                <!--  
+                    트리 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
+                    상단 sub 클래스를 가진 요소 옆에 display--none 클래스를 추가
+                -->
 
                 <div class="main">
                     <div class="content">
                         <div class="lnb__title ">
                             <h2>메뉴 상세정보</h2>
-
                         </div>
+                        <!-- 메뉴 상세정보 테이블 -->
                         <div class="table__horizontal__wrap">
                             <table class="main__table border-top-large">
                                 <caption>~~</caption>
@@ -220,45 +222,7 @@
                         </div>
                         <!-- 검색 -->
                        
-                        <!-- <div class="table__horizontal menu__url">
-                            <table class="main__table">
-                                <caption>~~</caption>
-                                <colgroup>
-                                    <col class="menu__th">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                      <th scope="col">
-                                        <label for="example22">메뉴 URL</label>
-                                      </th>
-                                      <td>
-                                        <input type="text" value="" style="width: 100%" id="example223">
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                            </table>
-                        </div> -->
-                        <!-- 비고 -->
-                        <!-- <div class="table__horizontal table__note">
-                            <table class="main__table">
-                                <caption>~~</caption>
-                                <colgroup>
-                                    <col class="menu__th">
-                                    <col class="note__menu__td">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                      <th scope="col" class="note__th">
-                                        <label for="example22">비고</label>
-                                      </th>
-                                      <td>
-                                        <textarea name="text-area" id="text-area" title="내용" maxlength="100" readonly contenteditable='true'>전국민주노동조합총연맹</textarea>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                            </table>
-                        </div> -->
+               
 
 
                     </div>
@@ -266,7 +230,7 @@
             </div>
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터  -->
             <footer>
               
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -290,18 +254,6 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                               <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">
@@ -317,8 +269,7 @@
                                 </div>
                             </div>
                         </div>    
-                    </div>
-                    
+                    </div>                    
                 </div>
             </footer>
         </div>
@@ -333,6 +284,8 @@
     <script src="js/manage__menu.js"></script>
 
     <script>
+
+        // 임시로 radio checked 표시
         $(document).ready(function(){
         for (i = 0; i <= 2; i++) {
         if(i % 2 == 0 ){
@@ -341,7 +294,7 @@
         }
         })
 
-
+        // 트리 구조 삭제 시 테이블 꽉차게 적용     
         $(document).ready(function(){
             const subElement = $('.sub')
             const mainElement = $('.main')

@@ -15,12 +15,13 @@
 
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-        
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -79,12 +80,13 @@
               </div>
             </div>
           </div>
-
+          <!-- 컨텐츠 -->
        <main class="main__content report__content" style="padding-bottom: 40px;">
         <div class="inner sign__up__inner">
             <div class="must__help__message">
                 <span><span style="color: #FE5555;">*</span> 필수 입력항목입니다.</span>
             </div>
+            <!-- 회원 가입 테이블 -->
             <div class="sign__up__table__wrap table__template__horizontal ">
                 <div class="sign__up__table">
                     <table>
@@ -173,7 +175,6 @@
                                 </div>
                             </td>
                         </tr>
-                        <!-- select__third -->
                         <tr>
                             <th>
                                 <span>조직형태</span>
@@ -341,12 +342,10 @@
 
 
 
-
+            <!-- 노동조합규약 추가 -->
             <div class="union__code">
                 <div class="upload__manager">
-
                     <form action="POST">
-
                         <div class="form__head flex--box--c">
                             <div class="form-title" style="border-right: 1px solid #ddd;">
                                 <span>규약명</span>
@@ -376,7 +375,7 @@
 
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터  -->
             <footer>
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
                     <div class="inner">
@@ -399,18 +398,7 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                                   <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
+                               
                             </div>
                         </div>
                         <div class="footer__global">
@@ -442,7 +430,7 @@
     <script src="js/manage__accounting.js"></script>
     <script>
 
-
+        // 임시로 radio 체크
         $(document).ready(function(){
             $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
 
@@ -454,7 +442,7 @@
                 // 추가 줄 생성
                 const newRow = $('<div class="form__row flex--box--c"></div>')
                 
-                /** 임시로 하드 코딩해서 넣어놨습니다. */
+                /** 임시 코드 */
                 const newRowDesc = $(        
                 `
                                 <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">

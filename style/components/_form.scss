@@ -112,3 +112,7 @@ input[type="file"]::file-selector-button {
     text-align: center;
     font-size: 2rem;
     }
+
+// 파일 업로드 커스텀
+
+.preview {min-width: 50rem ;height: 3.8rem; border: 0.1rem solid #ddd; border-radius: 0.5rem;}

@@ -1,8 +1,6 @@
 /**
- * 서브 탭 변환
+ * 서브 탭 변환 (PC 모바일)
  */
-
-
 
 $(document).ready(function () {
   let subTabBtn = $(".tab__wrap .tab__btn button");
@@ -12,7 +10,7 @@ $(document).ready(function () {
   let activeTabIndex = 0; // PC 및 모바일 공통의 활성화된 탭 인덱스
   let isMobileView = window.innerWidth < 767; // 초기 화면 크기 판단
 
-
+  // 활성값 업데이트 및 초기화
   function initializeTabs() {
     if ($('.tab__wrap').css('display') == 'block') {
       activeTabIndex  = subTabBtn.index($(".tab__wrap .tab__btn button.active"));
@@ -25,7 +23,7 @@ $(document).ready(function () {
   }
 
 
-
+  // 탭 변환 핸들러
   function updateView() {
     console.log("현재", isMobileView)
     if (isMobileView) {
@@ -57,6 +55,7 @@ $(document).ready(function () {
     }
   }
 
+
   function handleClick(tabIndex){
     activeTabIndex = tabIndex;
     updateView()
@@ -78,6 +77,7 @@ $(document).ready(function () {
 
   initializeTabs();
 
+  // 화면 리사이즈 시 초기화
   function handleResize() {
     isMobileView = window.innerWidth < 767;
     initializeTabs();
@@ -92,8 +92,9 @@ $(document).ready(function () {
 // Pie Chart 1
 let pieChart1 = echarts.init(document.getElementById("pieChart1"));
 
+
+// 차트 리사이즈
 window.onresize = function () {
-  // console.log('차트 리사이징')
   chartResize()
 };
 

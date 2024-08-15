@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#sub__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">      
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -76,7 +78,7 @@
               </div>
             </div>
           </div>
-
+          <!-- 컨텐츠 -->
        <main class="main__content report__content" style="padding-bottom: 40px;" id="sub__content">
         <div class="inner">
             <div class="function__group">
@@ -86,11 +88,10 @@
                 <button type="button" class="btn__blue">설정</button>
             </div>
 
-            <div class="table__horizontal search__report search__work">
+            <!-- 상단 검색 -->
+            <div class="table__horizontal search__report search__work mg--56-b">
                     <table class="main__table width__100">
-                        <caption>~~</caption>
                         <colgroup>
-                            
                             <col class="main__th">
                             <col class="search__td">
                         </colgroup>
@@ -115,6 +116,7 @@
                             <h2>조회결과</h2>
                             <span>건수: 3건</span>
                         </div>
+                        <!-- 조회 결과 테이블 -->
                         <div class="dis__info check__result">
                             <div class="tab__detail table__vertical">
                               <table class="border-top-large">
@@ -214,7 +216,7 @@
                                 </tbody>
                               </table>
                             </div>
-                            <!-- paging : 웹 -->
+                            <!-- 테이블 페이지 이동 -->
                             <div class="pagination w-page">
                                 <a class="page-navi prev" href="#">이전</a>
                                 <div class="page-links">
@@ -237,8 +239,8 @@
                             </div>
                           </div>
 
-                        <!-- 해당 데이터 정보 -->                 
                     </div>
+                <!--  데이터 정보 -->                 
                 <div class="data__modal manage__report__modal">
                     <div class="modal__inner">
                         <div class="modal__check">
@@ -258,32 +260,11 @@
                             </div>
 
 
-                            <!-- <div class="dis__info modal__result select__wrap">
-                                <div class="table__horizontal report__check__table">
-                                    <table class="main__table width__100">
-                                        <caption>~~</caption>
-                                        <colgroup>
-                                            <col class="result__th">
-                                            <col class="input__th">
-                                            <col>
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                              <th scope="col" class="border-btm report__th">
-                                                <label for="example22">노동조합명</label>
-                                              </th>
-                                              <td class="search__work__group border--no">
-                                                <input type="text" value="" id="example22" placeholder="노동조합명을 입력하세요.">
-                                              </td>
-                                              <td class="border--no"></td>
-                                            </tr>
-                                          </tbody>
-                                    </table>
-                                </div> -->
-                               
+                     
+                            <!-- 모달 조회 정보 테이블 -->
                             <div class="table__horizontal__wrap">
                                 <table class="border-top-large main__table table--fixed">
-                                    <caption>~~</caption>
+                                    <caption>모달 조회 정보 테이블</caption>
                                     <colgroup>
                                         <col style="width: 15.38%;">
                                         <col>
@@ -363,6 +344,7 @@
                                 </div>
                             </div>
 
+                            <!-- 조회 모달 radio 테이블 -->
                             <div class="modal__table" id="result__object">
                               <div class="lnb__title flex__title">
                                 <h2>결과항목</h2>
@@ -548,8 +530,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
-    <!-- <script src="js/manage__menu.js"></script> -->
+
+
         <script>
+            // 테이블 행 클릭 시 배경 색 변경 (아닌 것들 비활성화)
             $('.table__vertical tbody tr').click(function(){
                 $(this).css('background-color' , '#DEEBF7');
                 $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')

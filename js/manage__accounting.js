@@ -1,7 +1,10 @@
+
+
 /**
- * table 버튼 클릭 시
- * active class를 토글하여
- * 강조 색상을 지정합니다. (css에 따로 지정)
+ *  table 버튼 클릭 시
+ *  active class를 토글하여
+ *  강조 색상을 지정 (css에 따로 지정)
+ *  모든 테이블 페이지 네이션에 적용
  */
 
 $(document).ready(function(){
@@ -30,7 +33,6 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-
     $('.check__data').click(function(){
         $('.data__modal').show()
     })

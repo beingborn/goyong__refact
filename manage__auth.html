@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>노동조합 회계공시시스템</title>
+    <title>관리자 > 메뉴권한 관리</title>
     <!-- css 영역 -->
     <link rel="stylesheet" href="style/base/reset.css">
     <link rel="stylesheet" href="style/default.css">
@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
 
     <div class="wrap manage__wrap" id="wrap">
-  
+        <!-- 헤더 -->
         <header class="header">
             <div class="inner">
             <div class="header__top">
@@ -78,7 +79,7 @@
               </div>
             </div>
           </div>
-
+          <!-- 컨텐츠 -->
        <main class="main__content">
         <div class="inner">
             <div class="function__group">
@@ -120,14 +121,13 @@
                 <div class="main">
                     <div class="content">
                         <div class="lnb__title">
-                            <h2>권한별 메뉴 
-                                <!-- <span style="color: #ccc;">- 관리자</span> -->
-                            </h2>
+                            <h2>권한별 메뉴 </h2>
 
                         </div>
 
                         
                         <div class="manager__auth auth__wrap border-top-large">
+                            <!-- 메뉴 권한 설정 아코디언 -->
                             <ul class="menu-list lnb-list" data-action="accordion">
                                 <li class="li">
                                     <!-- 1depth title -->
@@ -194,78 +194,6 @@
                                 </li>
                             </ul>
 
-
-                            <!-- <div class="lnb__wrap">
-                                <ul class="lnb">
-                                    <li class="menu__depth-1">
-                                        <a href="#" class="depth__1-title">홈</a>
-
-                                        <ol class="depth__list-2">
-                                            <li class="menu__depth-2">
-                                                <a href="#" class="depth__2-title">
-                                                     <span>- 시스템 안내</span>
-                                                </a>
-
-                                                <ol class="depth__list-3">
-                                                    <li class="menu__depth-3">
-                                                        회계공시 시스템이란
-                                                    </li>
-                                                    
-                                                    <li class="menu__depth-3">
-                                                        주요회계 공시항목 설명
-                                                    </li>
-
-                                                    <li class="menu__depth-3">
-                                                        공지사항
-                                                    </li>
-
-                                                    <li class="menu__depth-3">
-                                                        자주 묻는 질문
-                                                    </li>
-                                                </ol>
-                                            </li>
-
-
-
-
-                                            <li class="menu__depth-2">
-                                                <a href="#" class="depth__2-title">
-                                                     <span>- 회계공시열람</span>
-
-                                                </a>
-
-                                                <ol class="depth__list-3">
-                                                    <li class="menu__depth-3">
-                                                        <a href="#">회계공시 열람
-                                                        </a> 
-                                                    </li>
-                                                    <li class="menu__depth-3">
-                                                        <a href="#">회계공시여부 조회
-                                                        </a>
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li class="menu__depth-2">
-                                                <a href="#" class="depth__2-title">
-                                                     <span>- 회계공시등록</span>
-                                                </a>
-                                                <ol class="depth__list-3">
-                                                    <li class="menu__depth-3">
-                                                        <a href="#">회계공시 등록
-                                                        </a> 
-                                                    </li>
-                                                    <li class="menu__depth-3">
-                                                        
-                                                        가맹노조(산하조직)관리
-                                                        <input type="checkbox" name="" id="" value="sss">
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                        
-                                        </ol>
-                                    </li>
-                                </ul>
-                            </div> -->
                         </div>
 
                     
@@ -281,7 +209,7 @@
             </div>
         </div>
        </main>
-            <!-- 푸터 영역 -->
+            <!-- 푸터  -->
             <footer>
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
                     <div class="inner">
@@ -304,18 +232,6 @@
                                 <div class="info__btn">
                                     <a href="">찾아오시는 길</a>
                                 </div>
-                               <!-- 
-                                    수정 24.08.13
-                                    하단 아이콘 영역 삭제하는 것으로 수정
-                                -->
-
-                                <!-- <div class="icon__wrap">
-                                    <a class="insta" href="#"></a>
-                                    <a class="youtube" href="#"></a>
-                                    <a class="twitter" href="#"></a>
-                                    <a class="facebook" href="#"></a>
-                                    <a class="naverblog" href="#"></a>
-                                </div> -->
                             </div>
                         </div>
                         <div class="footer__global">
@@ -338,8 +254,6 @@
 
     <!-- jquery 스와이퍼 cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-
     <!-- 스와이퍼 js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
@@ -347,8 +261,10 @@
 
 
     <script>
+
+    // 메뉴 버튼 클릭 시 메뉴 바디 슬라이드    
             
-$(document).ready(function() {
+    $(document).ready(function() {
     $('.menu-head').on('click', function() {
 
         const defaultBody = $('.menu-body')
@@ -364,7 +280,6 @@ $(document).ready(function() {
         }
     });
 
-    // Checkboxes 이벤트 차단: 클릭 시 체크박스는 열리지 않게
     $('.menu-head input[type="checkbox"]').on('click', function(e) {
         e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
     });
