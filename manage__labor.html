@@ -97,20 +97,23 @@
             <div class="search__form" style="margin-bottom: 5.6rem;">
                 <form action="POST" class="flex--box border-top-large">
                         <div class="form-input">
-                            <div class="form-title">
+                            <!-- <div class="form-title">
                                 <span>노동조합명</span>
-                            </div>
+                            </div> -->
 
                             <div class="form-content">
-                                <select name="name2" id="name2">
-                                    <option value="option1">전체</option>
-                                </select>
+                                <div style="min-width: 16rem;">
+                                    <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                        <option value="option1">전체</option>
+                                    </select>
+                                </div>
+                                <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
                             </div>
                         </div>
                         
 
                         <div class="form-radio">
-                            <div class="form-title">
+                            <div class="form-title" style="min-width: 16rem;">
                                 <span>사용여부</span>
                             </div>
 
@@ -219,7 +222,7 @@
 
                 <!--  
                     관리자 페이지 왼쪽 영역 (현재 트리 영역) 삭제 시에도 테이블 100% 적용하려면
-                    상단 131번째 줄 sub 클래스 옆에 display--none 텍스트 추가
+                    상단 137번째 줄 sub 클래스 옆에 display--none 텍스트 추가
                 -->
 
                 <div class="main">
@@ -593,7 +596,7 @@
             $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });

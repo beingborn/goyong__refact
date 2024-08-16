@@ -134,6 +134,21 @@
 .search__accounting .search__td {width: 28rem;}
 .search__accounting .radio__th {width: 13rem;}
 
+// manage__accounting 바뀐 테이블 타이틀 영역
+.lnb__title .item {margin-right: 3rem; position: relative; padding-right: 3rem; font-size: 2rem;}
+
+.table__title-3 .last__item::after{display: none;}
+.table__title-3 .item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px; /* 원하는 높이 설정 */
+    border-right: 0.15rem solid #e4e4e4 ; /* 원하는 색상 설정 */
+}
+
+
 
 
 
@@ -342,7 +357,7 @@
 .modal__result {
     border-top: 0.2rem solid #000;
     table {
-        tbody tr td {text-align: center; padding-right: 0;
+        tbody tr td {text-align: center;
             &:nth-last-child(1){
                 border-right: 0;
             }

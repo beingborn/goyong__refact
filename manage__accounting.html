@@ -282,17 +282,18 @@
                 </div>
 
                 <!--  
-                    트리 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
-                    162번째 줄 상단 sub 클래스를 가진 요소 옆에 display--none 클래스를 추가
+                    왼쪽 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
+                    196번째 줄 상단 sub 클래스를 가진 요소 옆에 display--none 클래스를 추가
                 -->
 
                 <div class="main">
                     <div class="content">
-                        <div class="lnb__title flex__title">
-                            <h2>회계공시 대상년월 : 2024-07
-                                <span class="union__member pd--20-l">1000 명</span>
-                            </h2>
-                            <span>건수: 3건</span>
+                        <div class="lnb__title flex--box-c table__title-3" style="position: relative;">
+                            <h2 class="item">회계공시 대상년월 : 2024-07</h2>
+                            <h2 class="item">회계공시 대상년도 : 2023</h2>
+                            <h2 class="item last__item">대상인원 : 1000명 </h2>
+                            <!-- <span class="union__member pd--20-l">1000 명</span> -->
+                            <span style="margin-left: auto;">건수: 3건</span>
                         </div>
                         <!-- 회계공시 대상년월 테이블 -->
                         <div class="check__result check__year__result">
@@ -754,7 +755,7 @@ input.on('change', displayFileNames);
             $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });

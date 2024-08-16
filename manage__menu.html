@@ -121,7 +121,6 @@
                                                             <span class="menu-title">시스템 안내</span>
                                                             <div>
                                                                 <button type="button" class="btn btn-ico menu-btn"></button>
-                                                                <label><input type="checkbox"></label>
                                                             </div>
                                                         </div>
                                                         <div class="menu-body depth-3">
@@ -129,19 +128,15 @@
                                                             <ul class="sub-ul">
                                                                 <li>
                                                                     <span class="flex--center-s">회계공시 시스템이란</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                                 <li>
                                                                     <span class="flex--center-s">주요회계 공시항목 설명</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                                 <li>
                                                                     <span class="flex--center-s">공지사항</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                                 <li>
                                                                     <span class="flex--center-s">자주 묻는 질문</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -152,7 +147,6 @@
                                                             <span class="menu-title">회계공시열람</span>
                                                             <div>
                                                                 <button type="button" class="btn btn-ico menu-btn"></button>
-                                                                <label><input type="checkbox"></label>
                                                             </div>
                                                         </div>
                                                         <div class="menu-body depth-3">
@@ -160,11 +154,9 @@
                                                             <ul class="sub-ul">
                                                                 <li>
                                                                     <span class="flex--center-s">회계공시 열람</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                                 <li>
                                                                     <span class="flex--center-s">회계공시여부 조회</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                           
                                                             </ul>
@@ -176,7 +168,6 @@
                                                             <span class="menu-title">회계공시등록</span>
                                                             <div>
                                                                 <button type="button" class="btn btn-ico menu-btn"></button>
-                                                                <label><input type="checkbox"></label>
                                                             </div>
                                                         </div>
                                                         <div class="menu-body depth-3">
@@ -184,11 +175,9 @@
                                                             <ul class="sub-ul">
                                                                 <li>
                                                                     <span class="flex--center-s">회계공시 등록</span>
-                                                                    <label><input type="checkbox"> </label>
                                                                 </li>
                                                                 <li>
                                                                     <span class="flex--center-s">가맹노조(산하조직)관리</span>
-                                                                    <label><input type="checkbox"></label>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -202,7 +191,7 @@
     
                 </div>
                 <!--  
-                    트리 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
+                    왼쪽 영역이 사라지더라도 테이블을 100%로 지정하시고 싶으시면
                     상단 sub 클래스를 가진 요소 옆에 display--none 클래스를 추가
                 -->
 
@@ -382,7 +371,7 @@
             $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });

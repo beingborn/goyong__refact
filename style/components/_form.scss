@@ -35,9 +35,19 @@ form {width: 100%;}
     width: 33.33%;
 }
 
-.select {   width: 80%;
+.select {width: 80%;
  select {min-width: 10rem; margin-left: 1rem; }
 }
+.search__form .form-content select {
+    position: relative;
+    background-color: #fff; /* 배경색을 명확하게 설정 */
+    background-image: url(/img/select__renew.png); /* 배경 이미지를 따로 설정 */
+    background-position: center right 1rem; /* 이미지 위치 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 안 함 */
+
+}
+
+.select__form-arrow {background: url(../img/select__renew.png) no-repeat 93% 50%;}
 
 input[type="file"]::file-selector-button {
     background-color: #004A98;
@@ -66,7 +76,7 @@ input[type="file"]::file-selector-button {
 // .form-content {border: 1px solid pink; height: 100%; display: flex; align-items: center; }
 // .form-content > select {min-height: 4rem; width: 100%;}
 
-.search__form {border-bottom: 0.1rem solid #ddd;}
+.search__form {border-bottom: 0.1rem solid #ddd; background-color: #F9F9FA;}
 
 .form-input, .form-radio {
     display: flex;
@@ -75,11 +85,16 @@ input[type="file"]::file-selector-button {
     height: 5.8rem;
 }
 
-.form-title {
-    width: 15.38%; /* 전체 너비의 15.38% */
-    min-width: 15.38%; /* 최소 너비를 15.38%로 */
-    text-align: center; /* 제목을 왼쪽 정렬 */
+.form__head .form-title {
+    min-width: 16rem;
+    width: 15.38%;
     background-color: #F9F9FA;
+}
+
+.form-title {
+    // width: 15.38%; /* 전체 너비의 15.38% */
+    // min-width: 15.38%; /* 최소 너비를 15.38%로 */
+    text-align: center; /* 제목을 왼쪽 정렬 */
     height: 100%;
     display: inline-flex;
     justify-content: center;
@@ -94,7 +109,8 @@ input[type="file"]::file-selector-button {
     gap: 10px; /* 내부 요소들 사이의 간격 */
 }
 
-.form-content > select {width: 100%; min-height: 4rem;}
+.form-content > select {width: 100%; min-height: 4rem; background-color: #fff;}
+.form-content > input[type="text"] {width: 100%; min-height: 4rem; background-color: #fff;}
 
 .form__head {height: 5.8rem;}
 .form__row {border-bottom: 0.1rem solid #ddd;}

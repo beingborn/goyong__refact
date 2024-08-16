@@ -16,9 +16,10 @@
 .menu-list input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
 .depth--active {border-top: 0.3rem solid #16408D;}
 .depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
-.depth-1 .tit {font-size: 1.8rem; font-weight: 600;}
+.depth-1 .tit {font-size: 2.1rem; font-weight: 700;}
 .depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
 .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
+.depth-3 .sub-ul {padding-left: 1.6rem;}
 .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
 .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
 
@@ -31,12 +32,10 @@
     width: 2rem;
     height: 2rem;
  
-    background: url(/img/arrow__bottom.png) no-repeat center ;
+    background: url(/img/arrow__bottom-bk.png) no-repeat center ;
     border: none;
     cursor: pointer;
 }
 
 
-.tit {padding-left: 10px;}
-.tit2 {padding-left: 10px;}
 .lnb input[type="checkbox"] {width: 2.6rem; height: 2.6rem; zoom: 1;}

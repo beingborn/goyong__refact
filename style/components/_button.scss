@@ -5,9 +5,12 @@
 /*
   색상 코드 앞 문자를 넣으시면서 색상을 확인하시면 됩니다.  
 
+
   $theme-btn-blue-00 : #246BEB;
   $theme-btn-blue-01 : #003675;
-  $theme-btn-blue-02 : #20787e;
+  $theme-btn-bk-00 : #000000;
+  $theme-btn-red-00 : #B9131E;
+
 */
 
 // 관리자 페이지 상단 버튼입니다.
@@ -53,7 +56,7 @@
   
       .active {
         color: $second-color;
-        border-bottom: 0.4rem solid $second-color;
+        border-bottom: 0.4rem solid $theme-btn-blue-01;
       }
     }
 
@@ -65,7 +68,7 @@
     .close__btn {
         cursor: pointer;
         border: 0;
-        background-color: $main-color;
+        background-color: $theme-btn-blue-00;
         height: 5.6rem;
         line-height: 4.8rem;
         padding: 0.4rem 2rem;
@@ -76,7 +79,7 @@
     }
 
 
-    .btn__select {height: 9rem; background-color: $second-color; color: #fff; border-radius: 0.7rem;}
+    .btn__select {height: 9rem; background-color: transparent; color: #000; border-radius: 1rem; border: 0.1rem solid #000; font-size: 1.6rem;}
     .btn__find {height: 4rem; line-height: 4rem; background: transparent; border: 0.1rem solid #ddd;}
     .btn__file__select {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000; background: transparent; max-height: 4rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;}
     .btn__upload {font-size: 1.6rem; padding: 0.8rem 2rem; background-color: $main-color; color: #fff; max-height: 4rem; height: 4rem; border-radius: 0.5rem;}
@@ -91,11 +94,11 @@
     }
     .btn__add, .btn__remove {height: 4rem; background-color: #000;
       color: white;
-      width: 4rem;
+      width: 5rem;
       height: 4rem;
       line-height: 4rem;
       cursor: pointer;
       text-align: center;
-      font-size: 2rem;
+      font-size: 3rem;
       border-radius: 0.5rem;
   }

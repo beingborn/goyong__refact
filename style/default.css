@@ -60,6 +60,7 @@ input[type=reset], textarea, select, button {
 
 input[type=text], select {
   border: 0.1rem solid #ddd;
+  border-radius: 0.5rem;
 }
 
 input[type=radio] {
@@ -73,6 +74,7 @@ input[type=radio] {
   margin-right: 0.7rem;
   border: 0.1rem solid #ddd;
   vertical-align: middle;
+  background-color: #fff;
 }
 
 input[type=radio]:checked {
@@ -354,9 +356,12 @@ textarea {
 /*
   색상 코드 앞 문자를 넣으시면서 색상을 확인하시면 됩니다.  
 
+
   $theme-btn-blue-00 : #246BEB;
   $theme-btn-blue-01 : #003675;
-  $theme-btn-blue-02 : #20787e;
+  $theme-btn-bk-00 : #000000;
+  $theme-btn-red-00 : #B9131E;
+
 */
 .btn__blue {
   background-color: #246BEB;
@@ -429,9 +434,11 @@ textarea {
 
 .btn__select {
   height: 9rem;
-  background-color: #003675;
-  color: #fff;
-  border-radius: 0.7rem;
+  background-color: transparent;
+  color: #000;
+  border-radius: 1rem;
+  border: 0.1rem solid #000;
+  font-size: 1.6rem;
 }
 
 .btn__find {
@@ -479,12 +486,12 @@ textarea {
   height: 4rem;
   background-color: #000;
   color: white;
-  width: 4rem;
+  width: 5rem;
   height: 4rem;
   line-height: 4rem;
   cursor: pointer;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   border-radius: 0.5rem;
 }
 
@@ -896,6 +903,18 @@ form {
   margin-left: 1rem;
 }
 
+.search__form .form-content select {
+  position: relative;
+  background-color: #fff; /* 배경색을 명확하게 설정 */
+  background-image: url(/img/select__renew.png); /* 배경 이미지를 따로 설정 */
+  background-position: center right 1rem; /* 이미지 위치 설정 */
+  background-repeat: no-repeat; /* 이미지 반복 안 함 */
+}
+
+.select__form-arrow {
+  background: url(../img/select__renew.png) no-repeat 93% 50%;
+}
+
 input[type=file]::file-selector-button {
   background-color: #004A98;
   border: 0;
@@ -910,6 +929,7 @@ input[type=file]::file-selector-button {
 
 .search__form {
   border-bottom: 0.1rem solid #ddd;
+  background-color: #F9F9FA;
 }
 
 .form-input, .form-radio {
@@ -919,11 +939,14 @@ input[type=file]::file-selector-button {
   height: 5.8rem;
 }
 
-.form-title {
-  width: 15.38%; /* 전체 너비의 15.38% */
-  min-width: 15.38%; /* 최소 너비를 15.38%로 */
-  text-align: center; /* 제목을 왼쪽 정렬 */
+.form__head .form-title {
+  min-width: 16rem;
+  width: 15.38%;
   background-color: #F9F9FA;
+}
+
+.form-title {
+  text-align: center; /* 제목을 왼쪽 정렬 */
   height: 100%;
   display: inline-flex;
   justify-content: center;
@@ -941,6 +964,13 @@ input[type=file]::file-selector-button {
 .form-content > select {
   width: 100%;
   min-height: 4rem;
+  background-color: #fff;
+}
+
+.form-content > input[type=text] {
+  width: 100%;
+  min-height: 4rem;
+  background-color: #fff;
 }
 
 .form__head {
@@ -1015,8 +1045,8 @@ input[type=file]::file-selector-button {
 }
 
 .depth-1 .tit {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2.1rem;
+  font-weight: 700;
 }
 
 .depth-2 {
@@ -1032,6 +1062,10 @@ input[type=file]::file-selector-button {
 
 .depth-3 {
   padding: 2.4rem 2rem 2.4rem 1rem;
+}
+
+.depth-3 .sub-ul {
+  padding-left: 1.6rem;
 }
 
 .depth-3 .sub-ul > li {
@@ -1059,17 +1093,9 @@ input[type=file]::file-selector-button {
 .menu-btn {
   width: 2rem;
   height: 2rem;
-  background: url(/img/arrow__bottom.png) no-repeat center;
+  background: url(/img/arrow__bottom-bk.png) no-repeat center;
   border: none;
   cursor: pointer;
-}
-
-.tit {
-  padding-left: 10px;
-}
-
-.tit2 {
-  padding-left: 10px;
 }
 
 .lnb input[type=checkbox] {
@@ -1701,7 +1727,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .sign__up__table .with__submit input[type=submit] {
   width: calc(10% - 1rem);
-  background-color: #004A98;
+  background-color: #000;
   color: #fff;
 }
 .sign__up__table .col2__th {
@@ -2123,6 +2149,27 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 13rem;
 }
 
+.lnb__title .item {
+  margin-right: 3rem;
+  position: relative;
+  padding-right: 3rem;
+  font-size: 2rem;
+}
+
+.table__title-3 .last__item::after {
+  display: none;
+}
+
+.table__title-3 .item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px; /* 원하는 높이 설정 */
+  border-right: 0.15rem solid #e4e4e4; /* 원하는 색상 설정 */
+}
+
 .table__horizontal .main__table .menu__find {
   display: flex;
   border-bottom: 0;
@@ -2329,7 +2376,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .modal__result table tbody tr td {
   text-align: center;
-  padding-right: 0;
 }
 .modal__result table tbody tr td:nth-last-child(1) {
   border-right: 0;
@@ -3478,6 +3524,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background: conic-gradient(#767676 0% 70%, #ededed 70% 100%);
 }
 
+/*
+   미디어 쿼리 CSS
+*/
 /* 큰 화면에서 중앙 정렬이 안맞는 오류가 있었음*/
 @media all and (min-width: 1441px) {
   .banner__swiper .swiper-button-next,
