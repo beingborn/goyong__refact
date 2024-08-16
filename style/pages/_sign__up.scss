@@ -1,5 +1,8 @@
-.sign__up__inner {padding-top: 7rem;}
+/*
+    회원가입 페이지 CSS
+*/ 
 
+.sign__up__inner {padding-top: 7rem;}
 .must__help__message span, .must__help__message p{ font-size: 1.5rem;}
 
 
@@ -22,9 +25,9 @@
 .sign__up__table__wrap {border-top: 2px solid #000;}
 
 .sign__up__table {
-    tr {line-height: 5.8rem; width: 100%;}
+    tr {line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd;}
     
-    th {width: 12.5%; line-height: 5.8rem; border-bottom: 1px solid #ddd;}
+    th {width: 12.5%; line-height: 5.8rem;}
     td {flex-grow: 1; line-height: 100%;}
 
     td input[type="text"]{border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px;}

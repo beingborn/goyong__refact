@@ -13,6 +13,10 @@
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- jquery 스와이퍼 cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
@@ -300,6 +304,173 @@
                             </table>
                         </div>
                     </div>
+
+                             <!-- 노동조합규약 -->
+                             <div class="lnb__title flex__title" style="margin-top: 2.6rem;">
+                                <h2>노동조합 규약</h2>
+                            </div>
+                             <div class="union__code border-top-large" >
+                                <div class="upload__manager">
+                                    <form action="POST">
+                                        <div class="form__head flex--box-c border--btm">
+                                            <div class="form-title" style="border-right: 1px solid #ddd;">
+                                                <span>규약명</span>
+                                            </div>
+                                            <div class="form-title-file flex--grow-100 txt--c bg--f9f9 height--100">
+                                                <span>첨부파일</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="form__body">
+
+                                            <div class="form__row flex--box-c">
+                                                <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" />
+                                                </div>
+                
+                                                <div class="form-content form-wrap">
+
+                                                    <div class="flex--box-c">
+                                                        <div class="preview flex--box-c pd--10-m mg--10-r">
+                                                          <p></p>
+                                                        </div>
+                                                        <label class="mg--10-r btn__file__select" for="profile_pics">파일선택</label>
+                                                        <!-- <div>
+                                                          <button class="btn__upload">업로드</button>
+                                                        </div> -->
+                                                        <input type="file" class="file__post" id="profile_pics" name="profile_pics" style="opacity: 0; width: 0px;">
+                                                    </div>
+
+                                                    <button type="button" class="btn__add" style="margin-left: auto;">+</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <!-- 하반시 공시 등 근거자료 -->
+                            <div class="lnb__title flex__title" style="margin-top: 2.6rem;">
+                                <h2>하반기 공시 등 근거자료</h2>
+                            </div>
+                            <div class="table__horizontal__wrap" >
+                                <table class="border-top-large">
+                                    <caption>하반기 공시 등 근거자료</caption>
+                                    <colgroup>
+                                        <col style="width: 15.38%;">
+                                        <col>
+                                    </colgroup>
+                            
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="txt--c border--r">공시사유구분</th>
+                                            <td>
+                                                하반기 공시
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="txt--c border--r" style="vertical-align: middle;">근거파일첨부</th>
+                                     
+                                            <td>
+                                                 
+                                                <div class="flex--box" style="height: 5.8rem;">
+                                                    <div class="preview flex--box-c pd--10-m mg--10-r">
+                                                    <p></p>
+                                                    </div>
+                                                    <label class="mg--10-r btn__file__select" for="profile_pic">파일선택</label>
+                                                    <input type="file" class="file__post" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <!-- 자바스크립트 input 파일 커스텀 -->
+
+                            <script>
+
+                            // change 발생한 input을 특정
+                            // 임시 코드 : 파일 업로드 표시
+                            
+                            
+                                    let inputs = $(".file__post");
+                                    let preview = $(".preview");
+                                    
+                                    inputs.css({
+                                    "opacity": 0,
+                                    "width": 0
+                                    });
+                                    function displayFileNames(event){
+
+                          
+
+                                let currentInput = $(event.target);
+
+                                let index = inputs.index(currentInput)
+
+                                let previewBox = $(preview[index])
+
+                                previewBox.empty();  // preview 내 모든 자식 요소 제거
+
+                                const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
+                            
+                                if (currentFile.length === 0) {
+                                const para = $("<span>").text("아무파일도 입력되지 않았어요");
+                                previewBox.append(para);
+                                } else {
+                                const fileList = $("<div>");
+                                previewBox.append(fileList);
+
+                                for (const file of currentFile) {
+                                const listItem = $("<p>").text(file.name);
+                                fileList.append(listItem);
+                                }
+                            }
+                            }
+
+                            inputs.on('change', displayFileNames);
+
+
+
+
+                          
+                            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
                 </div>
 
                 <!-- 회계공시 열람 탭 -->
@@ -501,20 +672,23 @@
                             </table>
                         </div>
                     </div>
+
+           
                 </div>
             </div>
 
 
 
             <div class="function__group">
-                <button type="button">저장</button>
-                <button type="button">다음</button>
+                <button type="button" class="btn__blue">저장</button>
+                <button type="button" class="btn__blue">다음</button>
             </div>
 
 
   
         </div>
        </main>
+
             <!-- 푸터  -->
             <footer>
                
@@ -561,9 +735,7 @@
             </footer>
         </div>
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
+   
 
     <!-- 스와이퍼 js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -593,6 +765,50 @@
             $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
 
         })
+
+        $(document).ready(function(){
+
+        $('.btn__add').click(function(){
+        // 추가 줄 생성
+        const newRow = $('<div class="form__row flex--box-c"></div>')
+    
+        /** 임시 코드 */
+        const newRowDesc = $(        
+        `
+                    <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" />
+                                                </div>
+                
+                                                <div class="form-content form-wrap">
+                                                    <div class="flex--box-c">
+                                                        <div class="preview flex--box-c pd--10-m mg--10-r">
+                                                          <p></p>
+                                                        </div>
+                                                        <label class="mg--10-r btn__file__select" for="profile_pic">파일선택</label>
+                                                        <input type="file" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
+                                                    </div>
+                                                    <button type="button" class="btn__remove" style="margin-left: auto;">-</button>
+                                                </div>
+        `
+        )
+
+    
+        // 추가 줄 내용 삽입
+        newRow.append(newRowDesc)
+
+        // 내용에 줄 추가
+        $('.form__body').append(newRow);
+
+        })
+        })
+
+        // 가까운 row 삭제
+        $('.form__body').on('click', '.btn__remove', function() {
+        $(this).closest('.form__row').remove();
+        });
+
+
+
     </script>
     
 

@@ -35,8 +35,7 @@ form {width: 100%;}
     width: 33.33%;
 }
 
-.select {   
-    width: 80%;
+.select {   width: 80%;
  select {min-width: 10rem; margin-left: 1rem; }
 }
 
@@ -101,18 +100,24 @@ input[type="file"]::file-selector-button {
 .form__row {border-bottom: 0.1rem solid #ddd;}
 .form__row > .form-wrap {height: 5.8rem;}
 .form__head > .form-title-file {display: flex; align-items: center; justify-content: center;}
-.form__body .form__row input {height: 4rem;}
+.form__body .form__row input {height: 4rem; border-radius: 0.5rem;}
 
-.btn__add, .btn__remove {height: 4rem; background-color: $main-color;
-    color: white;
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
-    cursor: pointer;
-    text-align: center;
-    font-size: 2rem;
-    }
+
 
 // 파일 업로드 커스텀
 
-.preview {min-width: 50rem ;height: 3.8rem; border: 0.1rem solid #ddd; border-radius: 0.5rem;}
+.preview {min-width: 50rem ;height: 4rem; border: 0.1rem solid #ddd; border-radius: 0.5rem;}
+
+
+// manage__accounting 회계공시 대상년도 폼
+.year__form { margin-right: 2rem; font-size: 1.5rem;
+    
+    input {
+        border: 0.1rem solid #ddd;
+        height: 4rem;
+        line-height: 4rem;
+        padding: 0 0.8rem;
+        margin-left: 1rem;
+        font-size: 1.6rem;
+    }
+}

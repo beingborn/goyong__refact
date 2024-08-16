@@ -12,6 +12,9 @@
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> 
+
+     <!-- jquery 스와이퍼 cdn -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
@@ -133,33 +136,85 @@
                         <h2>노동조합 체계</h2>
                     </div>
                     <!-- 메뉴 트리 -->
-                    <div class="tree" style="border-top: 1px solid #ddd; padding-top: 20px;">
-                        <strong class="tree_tit"> 
-                            <span class="tree_label">
-                            노동조합
-                            </span>
-                        </strong>
-                        <ul class="depth">
-                            <li class="depth__1__tree">
-                                <a href="" class="tree_label">
-                                    한국노동조합총연맹
-                                </a>
-                                <ul>
-                                    <li class="depth__2__tree"> <a href="#" class="tree_label">홍길동연합</a></li>
-                                    <li class="tree_last_node depth__2__tree"><a href="#" class="tree_label">김철수단위조합</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="depth__1__tree">
-                                <a class="tree_label">전국민주노동조합총연맹</a>
-                            </li>
-
-                            <li class="depth__1__tree tree_last_node">
-                                <a class="tree_label">미가입</a>
-                            </li>
-
-                        </ul>
-                    </div>
+                    <ul class="menu-list lnb-list" data-action="accordion">
+                        <li class="li">
+                            <!-- 1depth title -->
+                            <div class="menu-head depth-1">
+                                <h3 class="tit">노동조합</h3>
+                                <!-- <button type="button" class="btn btn-ico menu-btn" style="border: 1px solid blue;">&#9650;</button> -->
+                            </div>
+                            <div class="menu-body depth-1-body">
+                                <div class="acco-in">
+                                    <!-- 2depth 목록 -->
+                                    <ul class="sub-ul">
+                                        <li>
+                                            <!-- 2depth title -->
+                                            <div class="menu-head depth-2 depth--active">
+                                                <span class="menu-title">한국노동조합총연맹</span>
+                                                <div>
+                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                </div>
+                                            </div>
+                                            <div class="menu-body depth-3">
+                                                <!-- 3depth 목록 -->
+                                                <ul class="sub-ul">
+                                                    <li>
+                                                        <span class="flex--center-s">홍길동 연합</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="flex--center-s">김철수단위조합</span>
+                                                    </li>
+                                                  
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <!-- 2depth title -->
+                                            <div class="menu-head depth-2">
+                                                <span class="menu-title">전국민주노동조합 총연맹</span>
+                                                <div>
+                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                </div>
+                                            </div>
+                                            <div class="menu-body depth-3">
+                                                <!-- 3depth 목록 -->
+                                                <ul class="sub-ul">
+                                                    <li>
+                                                        <span class="flex--center-s">노동조합1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="flex--center-s">노동조합2</span>
+                                                    </li>
+                                              
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <!-- 2depth title -->
+                                            <div class="menu-head depth-2">
+                                                <span class="menu-title">미가입</span>
+                                                <div>
+                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                </div>
+                                            </div>
+                                            <div class="menu-body depth-3">
+                                                <!-- 3depth 목록 -->
+                                                <ul class="sub-ul">
+                                                    <li>
+                                                        <span class="flex--center-s">미가입1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="flex--center-s">미가입2</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  -->                           
+                        </li>
+                    </ul>
                 </div>
 
                 <!--  
@@ -485,8 +540,7 @@
             </footer>
         </div>
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   
 
 
     <!-- 스와이퍼 js cdn -->
@@ -515,6 +569,41 @@
         
 
         })
+
+    $(document).ready(function() {
+    let menuList = $('.menu-list')
+    let menuHeight = menuList.innerHeight();
+    menuList.css('height', menuHeight)
+  
+    if($('.menu-body').css('display') === 'none'){
+        $('.depth-2').css('border-bottom', '0.1rem solid #ddd')
+    } else {
+        $('.depth-2').css('border-bottom', '0.3rem solid #16408D')
+    }
+
+    $('.menu-body .menu-head').on('click', function() {
+
+        const defaultBody = $('.menu-body')
+        const $currentBody = $(this).next('.menu-body');
+        
+        // 현재 선택된 .menu-body의 display 속성 토글
+        if ($currentBody.css('display') === 'none') {
+            $currentBody.slideDown(); // 열기 (display: block)
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
+            $(this).css('border-bottom', '0.3rem solid #16408D')
+        } else {
+            $currentBody.slideUp(); // 닫기 (display: none)
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom.png) no-repeat center'); // 위로 화살표 변경
+            $(this).css('border-bottom', '0.1rem solid #ddd')
+        }
+    });
+
+
+
+    $('.menu-head input[type="checkbox"]').on('click', function(e) {
+        e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
+    });
+});
     </script>
     
 

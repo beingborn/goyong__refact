@@ -67,6 +67,8 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 }
 
 // 셀렉터
+
+.select__box select {height: 4rem; min-width: 10rem;}
 .select__renew {background: url(../img/select__renew.png) no-repeat 93% 50%;}
 .select--no--style {
   display: inline-block;
@@ -151,6 +153,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mg--10-r {margin-right: 1rem;}
   .mg--20-r {margin-right: 2rem;}
   
+  .mg--20-b {margin-bottom: 2rem;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
 
@@ -162,7 +165,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   
   /* flex 레이아웃 제어 */
   .flex--box {display: flex;}
-  .flex--box--c {display: flex; align-items: center;}
+  .flex--box-c {display: flex; align-items: center;}
   .flex--box-end {display: flex; justify-content: end;}
   .flex--space {justify-content: space-between;}
   .flex--end {justify-content: end;}
@@ -190,8 +193,10 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .bg--f9f9 {background-color: #F9F9FA;}
   .table--fixed {table-layout: fixed;}
 
+
   // 보더 제어
-  .border-btm {border-bottom: 0.1rem solid #ddd;}
+  .border--btm {border-bottom: 0.1rem solid #ddd;}
+  .border--r {border-right: 0.1rem solid #ddd;}
 
 
 

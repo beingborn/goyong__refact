@@ -1,3 +1,8 @@
+/*
+    관리자 CSS
+*/
+
+
 // 관리자 메뉴 공통 영역
 .union__member { font-size: 1.9rem!important; color: #0c3975;}
 
@@ -96,21 +101,7 @@
 .flex__title span {font-size: 1.6rem;}
 
 .function__group.y__flex {
-    align-items: center;
-
-    .year__form {
-        margin-right: 2rem;
-        font-size: 1.5rem;
-        
-        input {
-            border: 0.1rem solid #ddd;
-            height: 4rem;
-            line-height: 4rem;
-            padding: 0 0.8rem;
-            margin-left: 1rem;
-            font-size: 1.6rem;
-        }
-    }
+    align-items: center;  
 }
 
 
@@ -445,3 +436,15 @@
 // .ac__manage__wrap-table td {text-align: right;}
 
 .radio__container-margin label:not(:last-child) {margin-right: 1rem;}
+
+
+
+
+
+/*
+    manage__user
+    관리자 > 사용자 관리
+*/
+
+.manage__user__table .group {border: 0.1rem solid #ddd; line-height: 4rem; padding: 0 1rem;}
+.manage__user__table .container .group:nth-child(even) {margin: 0 1rem}

@@ -64,7 +64,7 @@ td {line-height: 5.8rem;}
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
 .table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;} 
-.table__template__horizontal td {border-bottom: 1px solid #ddd;} 
+// .table__template__horizontal td {border-bottom: 1px solid #ddd;} 
 .table__template__horizontal .default__table tr {line-height: 5.8rem;} 
 .table__template__horizontal .default__table th, 
 .table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
@@ -124,3 +124,7 @@ td {line-height: 5.8rem;}
 .auth__table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
 .auth__table tr {border-bottom: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
 .auth__table tbody tr td > a:hover {color: $second-color;}
+
+
+// thead를 포함하고 있는 가로형 테이블 (manage user)
+.table__horizontal__wrap.with__thead thead tr th {line-height: 5.8rem;}

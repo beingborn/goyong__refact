@@ -166,7 +166,7 @@ $(document).on('keydown', function(event) {
     $('.main__swiper .swiper-slide').each(function(index,slide) {
       // 각 슬라이드 내의 버튼 요소를 선택
       let buttons = $(slide).find('.btn__group button');
-  
+   
       // 버튼 클릭 이벤트 핸들러 추가
       buttons.click(function() {
         // 클릭된 버튼에 active--style 클래스 추가

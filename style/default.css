@@ -98,6 +98,11 @@ textarea {
   z-index: 0;
 }
 
+.select__box select {
+  height: 4rem;
+  min-width: 10rem;
+}
+
 .select__renew {
   background: url(../img/select__renew.png) no-repeat 93% 50%;
 }
@@ -230,6 +235,10 @@ textarea {
   margin-right: 2rem;
 }
 
+.mg--20-b {
+  margin-bottom: 2rem;
+}
+
 .mg--40-b {
   margin-bottom: 4rem;
 }
@@ -247,7 +256,7 @@ textarea {
   display: flex;
 }
 
-.flex--box--c {
+.flex--box-c {
   display: flex;
   align-items: center;
 }
@@ -321,8 +330,12 @@ textarea {
   table-layout: fixed;
 }
 
-.border-btm {
+.border--btm {
   border-bottom: 0.1rem solid #ddd;
+}
+
+.border--r {
+  border-right: 0.1rem solid #ddd;
 }
 
 .btn--active {
@@ -433,9 +446,13 @@ textarea {
   padding: 0.8rem 1.2rem;
   border: 0.1rem solid #000;
   background: transparent;
-  max-height: 3.8rem;
+  max-height: 4rem;
+  min-height: 4rem;
   border-radius: 0.5rem;
   box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn__upload {
@@ -443,8 +460,31 @@ textarea {
   padding: 0.8rem 2rem;
   background-color: #246BEB;
   color: #fff;
+  max-height: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.btn__input {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #000;
+  background: transparent;
   max-height: 3.8rem;
-  height: 3.8rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+.btn__add, .btn__remove {
+  height: 4rem;
+  background-color: #000;
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
   border-radius: 0.5rem;
 }
 
@@ -642,10 +682,6 @@ td {
   font-weight: 500;
 }
 
-.table__template__horizontal td {
-  border-bottom: 1px solid #ddd;
-}
-
 .table__template__horizontal .default__table tr {
   line-height: 5.8rem;
 }
@@ -798,6 +834,10 @@ td {
   color: #003675;
 }
 
+.table__horizontal__wrap.with__thead thead tr th {
+  line-height: 5.8rem;
+}
+
 /* 
   폼 CSS
 */
@@ -923,27 +963,32 @@ input[type=file]::file-selector-button {
 
 .form__body .form__row input {
   height: 4rem;
-}
-
-.btn__add, .btn__remove {
-  height: 4rem;
-  background-color: #246BEB;
-  color: white;
-  width: 4rem;
-  height: 4rem;
-  line-height: 4rem;
-  cursor: pointer;
-  text-align: center;
-  font-size: 2rem;
+  border-radius: 0.5rem;
 }
 
 .preview {
   min-width: 50rem;
-  height: 3.8rem;
+  height: 4rem;
   border: 0.1rem solid #ddd;
   border-radius: 0.5rem;
 }
 
+.year__form {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+.year__form input {
+  border: 0.1rem solid #ddd;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 0.8rem;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}
+
+/*
+    메뉴별 권한 관리 및 체계 아코디언 CSS
+*/
 .menu-list {
   width: 280px;
 }
@@ -955,7 +1000,12 @@ input[type=file]::file-selector-button {
   cursor: pointer;
 }
 
-.depth-2-first {
+.menu-list input[type=checkbox] {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.depth--active {
   border-top: 0.3rem solid #16408D;
 }
 
@@ -970,26 +1020,46 @@ input[type=file]::file-selector-button {
 }
 
 .depth-2 {
-  background-color: #FAFAFB;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 4.8rem;
+  border-bottom: 0.1rem solid #ddd;
+  border-top: 0.1rem solid #ddd;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2.4rem 2rem 2.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .depth-3 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 4.8rem;
+  padding: 2.4rem 2rem 2.4rem 1rem;
+}
+
+.depth-3 .sub-ul > li {
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.depth-3 .sub-ul > li > span::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 0.8rem;
 }
 
 /* 초기 상태 안보이게 지정 */
 .menu-body {
   display: block;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .menu-btn {
-  background: none;
+  width: 2rem;
+  height: 2rem;
+  background: url(/img/arrow__bottom.png) no-repeat center;
   border: none;
   cursor: pointer;
 }
@@ -1008,6 +1078,9 @@ input[type=file]::file-selector-button {
   zoom: 1;
 }
 
+/*
+    기타 컴포넌트 CSS
+*/
 .tree {
   font-size: 1.5rem;
   color: #000;
@@ -1083,6 +1156,17 @@ input[type=file]::file-selector-button {
   font-weight: 500;
 }
 
+.file__icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2.4rem;
+  background-size: cover;
+  background: url(../../img/file__icon.svg) no-repeat center;
+}
+
+/*
+    헤더 CSS
+*/
 .header {
   position: relative;
   width: 100%;
@@ -1235,6 +1319,9 @@ input[type=file]::file-selector-button {
   border: 0.1rem solid #D8D8D8;
 }
 
+/*
+    푸터 CSS
+*/
 .foot__container {
   position: relative;
   top: -22.8rem;
@@ -1445,6 +1532,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.5rem;
 }
 
+/*
+    메인 페이지 스타일 CSS
+*/
 .top__visual {
   width: 100%;
   color: #fff;
@@ -1552,6 +1642,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding-left: 8px;
 }
 
+/*
+    회원가입 페이지 CSS
+*/
 .sign__up__inner {
   padding-top: 7rem;
 }
@@ -1579,11 +1672,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .sign__up__table tr {
   line-height: 5.8rem;
   width: 100%;
+  border-bottom: 0.1rem solid #ddd;
 }
 .sign__up__table th {
   width: 12.5%;
   line-height: 5.8rem;
-  border-bottom: 1px solid #ddd;
 }
 .sign__up__table td {
   flex-grow: 1;
@@ -1711,6 +1804,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-right: 10px;
 }
 
+/*
+    회계공시등록페이지 CSS
+*/
 .public__register .tab__wrap .tab__btn {
   width: 50%;
 }
@@ -1726,11 +1822,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .public__table tr {
   line-height: 5.8rem;
   width: 100%;
+  border-bottom: 0.1rem solid #ddd;
 }
 .public__table th {
   width: 12.5%;
   line-height: 5.8rem;
-  border-bottom: 1px solid #ddd;
 }
 .public__table td {
   width: 87.5%;
@@ -1829,6 +1925,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   border: 0.6rem solid #000;
 }
 
+/*
+    관리자 CSS
+*/
 .union__member {
   font-size: 1.9rem !important;
   color: #0c3975;
@@ -1960,18 +2059,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .function__group.y__flex {
   align-items: center;
-}
-.function__group.y__flex .year__form {
-  margin-right: 2rem;
-  font-size: 1.5rem;
-}
-.function__group.y__flex .year__form input {
-  border: 0.1rem solid #ddd;
-  height: 4rem;
-  line-height: 4rem;
-  padding: 0 0.8rem;
-  margin-left: 1rem;
-  font-size: 1.6rem;
 }
 
 .auth__table__wrap {
@@ -2382,6 +2469,23 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-right: 1rem;
 }
 
+/*
+    manage__user
+    관리자 > 사용자 관리
+*/
+.manage__user__table .group {
+  border: 0.1rem solid #ddd;
+  line-height: 4rem;
+  padding: 0 1rem;
+}
+
+.manage__user__table .container .group:nth-child(even) {
+  margin: 0 1rem;
+}
+
+/*
+    서브 페이지 CSS
+*/
 #sub__wrap .content .visual__bg {
   width: 100%;
   height: 25rem;
@@ -2531,6 +2635,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 100%;
 }
 
+/*
+    서브 모바일 스타일 CSS
+*/
 .mobile__tab {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -2780,6 +2887,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-bottom: 2.8rem;
 }
 
+/*
+    데이터 차트 CSS
+*/
 .chart-block {
   display: flex;
   justify-content: space-between;
@@ -2923,6 +3033,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     width: 100%;
   }
 }
+/*
+    스와이퍼 CSS
+*/
 .swiper__container {
   width: 109.6rem;
   padding-left: 9.2rem;
@@ -4007,6 +4120,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     margin-top: 4rem;
   }
 }
+/*
+   서브 미디어 쿼리 CSS
+*/
 .motab-1,
 .motab-2 {
   display: none;

@@ -1,4 +1,6 @@
-// 메뉴별 권한 관리 아코디언 
+/*
+    메뉴별 권한 관리 및 체계 아코디언 CSS
+*/ 
 .menu-list {
     width: 280px;
 }
@@ -11,24 +13,29 @@
     // padding: 10px 0;
 }
 
-.depth-2-first {border-top: 0.3rem solid #16408D;}
+.menu-list input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
+.depth--active {border-top: 0.3rem solid #16408D;}
 .depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
 .depth-1 .tit {font-size: 1.8rem; font-weight: 600;}
-.depth-2 {background-color: #FAFAFB; padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
-.depth-3 {padding-left: 1rem; padding-right: 1rem; line-height: 4.8rem;}
-
+.depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
+.depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
+.depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
+.depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
 
 /* 초기 상태 안보이게 지정 */
 .menu-body {
     display: block;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 .menu-btn {
-    background: none;
+    width: 2rem;
+    height: 2rem;
+ 
+    background: url(/img/arrow__bottom.png) no-repeat center ;
     border: none;
     cursor: pointer;
 }
+
 
 .tit {padding-left: 10px;}
 .tit2 {padding-left: 10px;}

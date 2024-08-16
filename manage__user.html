@@ -14,6 +14,10 @@
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- jquery 스와이퍼 cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
@@ -86,7 +90,6 @@
        <main class="main__content" style="padding-bottom: 40px;">
         <div class="inner">
             <div class="function__group">
-
                 <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 설정한 상태 -->
                 <button type="button" class="error__display btn__blue">초기화</button>
                 <button type="button" class="btn__blue">신규</button>
@@ -259,13 +262,13 @@
                                                 </div>
                                             </td>
                                             <th>
-                                                <span class="must__type">비밀번호</span>
+                                                <span class="must__type">노동조합소속</span>
                                             </th>
                                             <td class="td--flex">
-                                                <div class="td--width">
-                                                    <span>전국노동조합총연맹</span>
-                                                    <span>전국노동조합총연맹</span>
-                                                    <span>전국노동조합총연맹</span>
+                                                <div class="container td--width">
+                                                    <span class="group">전국노동조합총연맹</span>
+                                                    <span class="group">노동조합총연맹</span>
+                                                    <span class="group">전국노동총연맹</span>
                                                 </div>
                                             </td>
                                         </tr>
@@ -333,13 +336,109 @@
                                                 수신
                                             </td>
                                         </tr>
-                                     
+
                                         
-                                        
+                                        <tr>
+                                            <th>
+                                                가입일자
+                                            </th>
+                                            <td class="td--flex first__td">
+                                                2024-08-16
+                                            </td>
+                                            <th>
+                                                승인여부
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                <div class="radio__wrap">
+                                                    <input type="radio" name="ee" id="ee">
+                                                    <label for="ee">승인</label>
+                                                    <input type="radio" name="ee" id="ee">
+                                                    <label for="ee">미승인</label>
+                                                    <input type="radio" name="ee" id="ee">
+                                                    <label for="ee">반려</label>
+                                                </div>
+                                            </td>
+                                            <th>
+                                                비밀번호
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                <button type="button" class="btn__input">초기화</button>
+                                            </td>
+                                        </tr>
+
+                                          
+                                        <tr>
+                                            <th>
+                                                회계연도
+                                            </th>
+                                            <td class="td--flex first__td">
+
+                                            </td>
+                                            <th>
+                                                주석
+                                            </th>
+                                            <td class="td--flex second__td">
+
+                                            </td>
+                                            <th>
+                                                공개여부
+                                            </th>
+                                            <td class="td--flex second__td">
+                                                <div class="select__box">
+                                                    <select name="" id="" style="width: 70%;" class="mg--10-r select--no--style select__renew">
+                                                        <option value="공개">공개</option>
+                                                    </select>
+                                                </div>
+                                                <button type="button" class="btn__input">저장</button>
+                                            </td>
+                                        </tr>                                        
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                        <!-- 노동조합 규약 -->
+                        <div class="lnb__title flex__title" style="margin-top: 2.6rem;">
+                            <h2>노동조합규약</h2>
+                        </div>
+                        <div class="table__horizontal__wrap with__thead">
+                            <table class="border-top-large">
+                                <caption>노동조합규약</caption>
+                                <colgroup>
+                                    <col style="width: 15.38%;">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="border--r">규약명</th>
+                                        <th>첨부파일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="txt--l pd--10-l border--r">조합원가입</th>
+                                        <td>
+                                            <p class="flex--box-c">
+                                                조합원가입규약.pdf
+                                                <span class="file__icon  mg--10-l"></span>
+                                            </p>
+                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="txt--l pd--10-l border--r">조합원탈퇴</th>
+                                        <td>
+                                            <p class="flex--box-c">
+                                                조합원가입규약.pdf
+                                                <span class="file__icon mg--10-l"></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+
+
                  
                     </div>
                 </div>
@@ -407,9 +506,7 @@
             </footer>
         </div>
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
+  
 
     <!-- 스와이퍼 js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -11,6 +11,9 @@
     <link rel="shortcut icon" href="img/korea__favicon.ico">
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+      <!-- jquery 스와이퍼 cdn -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
@@ -132,8 +135,8 @@
                                 <li class="li">
                                     <!-- 1depth title -->
                                     <div class="menu-head depth-1">
-                                        <h3 class="tit">1depth-title</h3>
-                                        <button type="button" class="btn btn-ico menu-btn" style="border: 1px solid blue;">&#9650;</button>
+                                        <h3 class="tit">HOME</h3>
+                                        <!-- <button type="button" class="btn btn-ico menu-btn" style="border: 1px solid blue;">&#9650;</button> -->
                                     </div>
                                     <div class="menu-body depth-1-body">
                                         <div class="acco-in">
@@ -141,56 +144,86 @@
                                             <ul class="sub-ul">
                                                 <li>
                                                     <!-- 2depth title -->
-                                                    <div class="menu-head depth-2 depth-2-first">
-                                                        <label><input type="checkbox"><span class="">2depth title</span></label>
-                                                        <button type="button" class="btn btn-ico menu-btn">&#9660;</button>
+                                                    <div class="menu-head depth-2 depth--active">
+                                                        <span class="menu-title">시스템 안내</span>
+                                                        <div>
+                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            <label><input type="checkbox"></label>
+                                                        </div>
                                                     </div>
                                                     <div class="menu-body depth-3">
                                                         <!-- 3depth 목록 -->
                                                         <ul class="sub-ul">
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
+                                                            <li>
+                                                                <span class="flex--center-s">회계공시 시스템이란</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                            <li>
+                                                                <span class="flex--center-s">주요회계 공시항목 설명</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                            <li>
+                                                                <span class="flex--center-s">공지사항</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                            <li>
+                                                                <span class="flex--center-s">자주 묻는 질문</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <!-- 2depth title -->
                                                     <div class="menu-head depth-2">
-                                                        <label><input type="checkbox"> 2depth title</label>
-                                                        <button type="button" class="btn btn-ico menu-btn">&#9660;</button>
+                                                        <span class="menu-title">회계공시열람</span>
+                                                        <div>
+                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            <label><input type="checkbox"></label>
+                                                        </div>
                                                     </div>
                                                     <div class="menu-body depth-3">
                                                         <!-- 3depth 목록 -->
                                                         <ul class="sub-ul">
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
+                                                            <li>
+                                                                <span class="flex--center-s">회계공시 열람</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                            <li>
+                                                                <span class="flex--center-s">회계공시여부 조회</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                      
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <!-- 2depth title -->
                                                     <div class="menu-head depth-2">
-                                                        <label><input type="checkbox"> 2depth title</label>
-                                                        <button type="button" class="btn btn-ico menu-btn">&#9660;</button>
+                                                        <span class="menu-title">회계공시등록</span>
+                                                        <div>
+                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            <label><input type="checkbox"></label>
+                                                        </div>
                                                     </div>
                                                     <div class="menu-body depth-3">
                                                         <!-- 3depth 목록 -->
                                                         <ul class="sub-ul">
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
-                                                            <li><label><input type="checkbox"> 3depth title</label></li>
+                                                            <li>
+                                                                <span class="flex--center-s">회계공시 등록</span>
+                                                                <label><input type="checkbox"> </label>
+                                                            </li>
+                                                            <li>
+                                                                <span class="flex--center-s">가맹노조(산하조직)관리</span>
+                                                                <label><input type="checkbox"></label>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!--  -->
-                            
-                                    
-                            
+                                    <!--  -->                           
                                 </li>
                             </ul>
 
@@ -252,8 +285,7 @@
             </footer>
         </div>
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
     <!-- 스와이퍼 js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
@@ -262,10 +294,17 @@
 
     <script>
 
-    // 메뉴 버튼 클릭 시 메뉴 바디 슬라이드    
+    // 메뉴 버튼 클릭 시 메뉴 바디 슬라이드 임시    
             
     $(document).ready(function() {
-    $('.menu-head').on('click', function() {
+    
+    if($('.menu-body').css('display') === 'none'){
+        $('.depth-2').css('border-bottom', '0.1rem solid #ddd')
+    } else {
+        $('.depth-2').css('border-bottom', '0.3rem solid #16408D')
+    }
+
+    $('.menu-body .menu-head').on('click', function() {
 
         const defaultBody = $('.menu-body')
         const $currentBody = $(this).next('.menu-body');
@@ -273,12 +312,16 @@
         // 현재 선택된 .menu-body의 display 속성 토글
         if ($currentBody.css('display') === 'none') {
             $currentBody.slideDown(); // 열기 (display: block)
-            $(this).find('.btn-ico').html('&#9650;'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
+            $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.btn-ico').html('&#9660;'); // 아래로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom.png) no-repeat center'); // 위로 화살표 변경
+            $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });
+
+
 
     $('.menu-head input[type="checkbox"]').on('click', function(e) {
         e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
