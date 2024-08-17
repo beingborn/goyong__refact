@@ -205,7 +205,6 @@
     관리자>통계및보고서관리>회계관리현황
 */
 
-.search__work {
     // margin-bottom: 5.6rem;
     select {
         display: inline-block;
@@ -228,16 +227,10 @@
         padding: 0.8rem 1rem;
         font-size: 1.6rem;
     }
-}
-.search__report .border-btm { width: 16rem;}
-.search__report__bg { background-color: #FAFAFB;}
 
 
 .table__horizontal .main__table tbody th {line-height: 5.8rem;}
 .menu__url .main__table .sub__th {width: auto;}
-
-
-
 
 
 // 조회결과 표 스타일
@@ -339,11 +332,7 @@
     height: 40rem; overflow: hidden;
     border: 0.1rem solid #ddd;
     
-    img {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
+    img { width: 100%; object-fit: cover; height: 100%;}
 }
 
 

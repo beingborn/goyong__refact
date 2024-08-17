@@ -94,28 +94,21 @@
             </div>
 
             <!-- 상단 검색 -->
-            <div class="table__horizontal search__report search__work mg--56-b">
-                    <table class="main__table width__100">
-                        <colgroup>
-                            <col class="main__th">
-                            <col class="search__td">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                              <th scope="col" class="border--btm">
-                                <select name="category" id="category" class="select__renew">
-                                <option value="전체">전체</option>
-                                </select>
-                              </th>
-                              <td class="search__report__bg">
-                              </td>
-                            </tr>
-                          </tbody>
-                    </table>
+            <div class="search__form" style="margin-bottom: 5.6rem;">
+                <form action="POST" class="flex--box border-top-large">
+                        <div class="form-input">
+                            <div class="form-content">
+                                <div style="min-width: 16rem;">
+                                    <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                        <option value="option1">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>    
+                </form>
             </div>
-            <div class="content--flex system__margin data__modal__wrap">
-             
-               
+
+            <div class="content--flex system__margin data__modal__wrap">                            
                     <div class="content">
                         <div class="lnb__title flex__title">
                             <h2>조회결과</h2>

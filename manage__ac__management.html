@@ -92,26 +92,21 @@
                 <button type="button" class="btn__blue">다운로드</button>
             </div>
             <!-- 상단 검색 폼  -->
-            <div class="table__horizontal search__report search__work">
-                    <table class="main__table width__100">
-                        <caption>~~</caption>
-                        <colgroup>         
-                            <col class="main__th">
-                            <col class="search__td">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                              <th scope="col" class="border--btm">
-                                <select name="category" id="category" class="select__renew">
-                                <option value="전체">전체</option>
-                                </select>
-                              </th>
-                              <td class="search__report__bg">
-                              </td>
-                            </tr>
-                          </tbody>
-                    </table>
-            </div>
+            <div class="search__form">
+              <form action="POST" class="flex--box border-top-large">
+                      <div class="form-input">
+                          <div class="form-content">
+                              <div style="min-width: 16rem;">
+                                  <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                      <option value="option1">전체</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>    
+              </form>
+          </div>
+
+
             <!-- 조회 데이터 수 -->
             <div class="flex--box flex--end" style="margin-top: 5.6rem; margin-bottom: 1.6rem;">
               <span>건수 :23건</span>

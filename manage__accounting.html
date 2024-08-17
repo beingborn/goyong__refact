@@ -116,60 +116,57 @@
             </div>
           
 
-       
+                    <!-- 상단 검색 -->
+                    <div class="search__form" style="margin-bottom: 1.6rem;">
+                      <form action="POST" class="flex--box border-top-large">
+                              <div class="form-input">                                   
+                                  <div class="form-content">
+                                      <div style="min-width: 16rem;">
+                                          <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                              <option value="option1">전체</option>
+                                          </select>
+                                      </div>
+                                      <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
+                                  </div>
+                              </div>
+                              
+      
+                              <div class="form-radio">
+                                  <div class="form-title" style="min-width: 9.8rem;">
+                                      <span>사용여부</span>
+                                  </div>      
+                              <!-- 라디오 옵션을 추가하시려면 input과 radio를 복사 붙여넣기  
+                                   검색 조건 자체를 추가하려면 radio__wrap 전체 복사 붙여넣기
+                              -->
+                                  <div class="form-content radio__wrap">
+                                      <input type="radio" id="radio">
+                                      <label for="radio">전체</label>
+                                      <input type="radio" id="radio">
+                                      <label for="radio">신규</label>
+                                      <input type="radio" id="radio">
+                                      <label for="radio">수정</label>
+                                  </div>
+                              </div>
 
-            <!-- 상단 검색 조건 설정  -->
-            <div class="table__horizontal search__work search__accounting" style="margin-bottom: 1.3rem;">
-                    <table class="main__table width__100">
-                        <caption>~~</caption>
-                        <colgroup>
-                            <col class="main__th">
-                            <col class="search__td">
-                            <col class="radio__th" >
-                            <col class="radio__td">
-                            <col class="main__th">
-                            <col class="radio__td">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                              <th scope="col" class="border--btm">
-                                <select name="category" id="category" class="select__renew">
-                                <option value="전체">전체</option>
-                                </select>
-                              </th>
-                              <td class="search__work__group">
-                                <input type="text" value="" id="example22" placeholder="노동조합명을 입력하세요.">
-                              </td>
-                              <th scope="col" class="border--btm">
-                                구분
-                              </th>
-                              <td class="radio__wrap">
-                                <div class="flex">
-                                    <input type="radio" name="rdo_3-2" id="rdo_3-2">
-                                    <label for="rdo_3-2" class="mg--20-r">전체</label>
-                                    <input type="radio" name="rdo_3-3" id="rdo_3-3">
-                                    <label for="rdo_3-3" class="mg--20-r">신규</label>
-                                    <input type="radio" name="rdo_3-4" id="rdo_3-4">
-                                    <label for="rdo_3-4">수정</label>
+                              <div class="form-radio">
+                                <div class="form-title" style="min-width: 9.8rem;">
+                                    <span>공시대상</span>
+                                </div>      
+                                <div class="form-content radio__wrap">
+                                    <input type="radio" id="radio">
+                                    <label for="radio">전체</label>
+                                    <input type="radio" id="radio">
+                                    <label for="radio">대상</label>
+                                    <input type="radio" id="radio">
+                                    <label for="radio">미대상</label>
                                 </div>
-                              </td>
-                              <th scope="col" class="border--btm">
-                                공시대상
-                              </th>
-                              <td class="radio__wrap">
-                                <div class="flex">
-                                    <input type="radio" name="rdo_4-2" id="rdo_4-2">
-                                    <label for="rdo_4-2" class="mg--20-r">전체</label>
-                                    <input type="radio" name="rdo_4-3" id="rdo_4-3">
-                                    <label for="rdo_4-3" class="mg--20-r">대상</label>
-                                    <input type="radio" name="rdo_4-4" id="rdo_4-4">
-                                    <label for="rdo_4-4">미대상</label>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                    </table>
-            </div>
+                            </div>
+                              
+                      </form>
+                  </div>
+
+
+
 
             <!-- 업로드 영역 -->
             <div class="upload__wrap mg--40-b">

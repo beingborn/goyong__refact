@@ -99,36 +99,40 @@
             </div>
 
             <!-- 상단 검색 폼 -->
-            <form class="search__box flex--box" id="frmSearch" method="POST">
-                <div class="padding--10 search--flex width--100">
-                    <div class="search__select__wrap">
-                        <label for="select" class="blind">검색조건 선택</label> 
-                        <select name="searchField" id="select" class="select__renew" style="appearance: none; padding: 0 1rem;">
-                            <option value="">전체</option><option value="40">대한민국노동조합총연맹</option>
-                            <option value="30">전국노동조합총연맹</option><option value="20">전국민주노동조합총연맹</option>
-                            <option value="99">총연합단체미가입</option><option value="10">한국노동조합총연맹</option>
-                            <option value="98">기타</option>
-                        </select>
-                    </div>
-                
-                    <div>
-                        <label for="searchText" class="blind">검색어 입력</label> 
-                        <input type="text" id="searchText" name="searchText"  value="" data-listener-added_91b8974b="true">
-                    </div>
+          
+            <!-- 상단 검색 -->
+            <div class="search__form" style="margin-bottom: 5.6rem;">
+                <form action="POST" class="flex--box border-top-large">
+                        <div class="form-input">
+                            <!-- <div class="form-title">
+                                <span>노동조합명</span>
+                            </div> -->
 
-                    <div class="search--flex auth__select__wrap ">
-                        <label for="select2">승인여부</label>
-                        <div class="select" >
-                            <select name="searchField2" id="select2">
-                                <option value="">전체</option>
-                                <option value="Y">승인</option>
-                                <option value="N">미승인</option>
-                                <option value="R">반려</option>
-                            </select>
+                            <div class="form-content">
+                                <div style="min-width: 16rem;">
+                                    <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                        <option value="option1">전체</option>
+                                    </select>
+                                </div>
+                                <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
+                            </div>
+
+                            <div class="form-content">
+                                <div class="form-title" style="min-width: 16rem;">
+                                    <span>구분</span>
+                                </div>
+                                <div style="min-width: 16rem;">
+                                    <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                        <option value="option1">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-                </div>
-			</form>
+                   
+                        
+                </form>
+            </div>
 
             <!-- 조회 결과 테이블 -->
             <div>
