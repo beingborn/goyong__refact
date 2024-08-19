@@ -467,7 +467,6 @@ textarea {
 
 .btn__find {
   height: 4rem;
-  line-height: 4rem;
   background: transparent;
   border: 0.1rem solid #ddd;
 }
@@ -876,6 +875,15 @@ td {
   line-height: 5.8rem;
 }
 
+.table__information input[type=text] {
+  border: 0;
+  width: 100%;
+}
+
+.table__information input[type=text] {
+  font-size: 1.5rem;
+}
+
 /* 
   폼 CSS
 */
@@ -1088,6 +1096,28 @@ input[type=file]::file-selector-button {
 }
 
 /* 기존 depth 3 까지 코드 */
+.menu-wrap .depth-3 {
+  padding: 2.4rem 2rem 2.4rem 1rem;
+}
+.menu-wrap .depth-3 .sub-ul {
+  padding-left: 1.6rem;
+}
+.menu-wrap .depth-3 .sub-ul > li {
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-wrap .depth-3 .sub-ul > li > span::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 0.8rem;
+}
+
 .depth-3.menu-head {
   border: 1px solid blue;
   padding: 1.5rem 1.2rem;

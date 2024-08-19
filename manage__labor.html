@@ -108,10 +108,12 @@
                             </div> -->
                             <div class="form-content">
                                 <div style="min-width: 16rem;">
+                                    <label class="blind" for="name2">검색조건선택</label>
                                     <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
                                         <option value="option1">전체</option>
                                     </select>
                                 </div>
+                                <label class="blind" for="abc">검색어 입력</label>
                                 <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
                             </div>
                         </div>
@@ -344,12 +346,14 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                          <th scope="row">노동조합명</th>
+                                          <th scope="row">
+                                            <label for="example22222">노동조합명</label>
+                                          </th>
                                           <td colspan="3">
                                             <input type="text" value="" id="example22222" class="width--100">
                                           </td>
                                           <th scope="col">
-                                            주 / 부 여부
+                                            <label for="category2323">주 / 부 여부</label>
                                           </th>
                                           <td>
                                             <select name="category" id="category2323" class="select--no--style select__renew">
@@ -363,7 +367,7 @@
                     <!-- 셀렉터 td type 1  -->  
                     <tr>
                         <th scope="row">
-                            총연합단체
+                            <label for="ct1">총연합단체</label>
                         </th>
                         <td colspan="5">
                             <!-- 
@@ -374,7 +378,7 @@
                             <div class="flex--box">
                                 <button type="button" class="btn__select width--20 mg--10-r">선택입력</button>
                                 <div class="td__container flex--grow-100">
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                    <select name="category" id="ct1" class="select--no--style select__renew">
                                         <option value="전체">전체</option>
                                     </select>
                                     <select name="category" id="category2323" class="select--no--style select__renew">
@@ -401,9 +405,11 @@
                                         
 
                                         <tr>
-                                            <th scope="row">지부</th>
+                                            <th scope="row">
+                                                <label for="ct2">지부</label>
+                                            </th>
                                             <td>
-                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                <select name="category" id="ct2" class="select--no--style select__renew">
                                                     <option value="전체">전체</option>
                                                 </select>
                                             </td>
@@ -421,23 +427,24 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">사용여부</th>
+                                            <th scope="row">
+                                                <label for="rdo_5-1">사용여부</label>
+                                            </th>
                                             <td class="radio__wrap" colspan="5">
                                                 <div class="">
                                                     <input type="radio" name="rdo_5-1" id="rdo_5-1">
                                                     <label for="rdo_5-1" class="mg--20-r">사용</label>
                                                     <input type="radio" name="rdo_5-2" id="rdo_5-2">
                                                     <label for="rdo_5-2">미사용</label>
-                                                    
                                                 </div>
                                               </td>                              
                                         </tr>
                                         <tr>
                                             <th scope="row" class="note__th">
-                                                <label for="example22">비고</label>
+                                                <label for="ct4">비고</label>
                                               </th>
                                               <td colspan="5" class="note__td">
-                                                    <input class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                                    <input id="ct4" class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
                                               </td>                    
                                         </tr>
                                       </tbody>

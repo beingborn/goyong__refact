@@ -21,7 +21,12 @@
 
 
 /* 기존 depth 3 까지 코드 */
-
+.menu-wrap {
+    .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
+    .depth-3 .sub-ul {padding-left: 1.6rem;}
+    .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
+    .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
+}
 // .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
 // .depth-3 .sub-ul {padding-left: 1.6rem;}
 // .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}

@@ -264,16 +264,20 @@
 
                                         <tr class="height--auto">
                                             <th style="line-height: 11.6rem;">
-                                                <span class="must__type">노동조합명</span>
+                                                <!-- <span class="must__type"> -->
+                                                    <label for="excting">노동조합명</label>
+                                                <!-- </span> -->
                                             </th>
                                             <td class="td--flex first__td">
-                                                <div class="td--width">
-                                                    테스트
-                                                </div>
+                                                <input id="excting" type="text" value="테스트" readonly >
+                                                <!-- <div class="td--width">
+                                                </div> -->
                                             </td>
                                             <!-- 테이블 태그 특성으로 인해 style inline으로 기입 -->
                                             <th style="line-height: 11.6rem;">
-                                                <span class="must__type">노동조합소속</span>
+                                                <span class="must__type">
+                                                    <label for="category23232">노동조합소속</label>
+                                                </span>
                                             </th>
 
 
@@ -281,7 +285,7 @@
                                                 <div class="flex--box">
                                                     <!-- <button type="button" class="btn__select width--20 mg--10-r">선택입력</button> -->
                                                     <div class="td__container flex--grow-100">
-                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <select name="category" id="category23232" class="select--no--style select__renew">
                                                             <option value="전체">전체</option>
                                                         </select>
                                                         <select name="category" id="category2323" class="select--no--style select__renew">
@@ -307,94 +311,97 @@
 
                                         <tr>
                                             <th>
-                                                대표자명
+                                                <label for="ex3">대표자명</label>
+                                                
                                             </th>
                                             <td class="td--flex first__td">
-                                                테스트
+                                                <input id="ex3" value="테스트" type="text" readonly>
                                             </td>
                                             <th>
-                                                조직단위
+                                                <label for="ex4">조직단위</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                테스트
+                                                <input id="ex4" value="테스트" type="text" readonly>
                                             </td>
                                             <th>
-                                                조합형태
+                                                <label for="ex5">조합형태</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                테스트
+                                                <input id="ex5" value="테스트" type="text" readonly>
                                             </td>
                                         </tr>
 
 
                                         <tr>
                                             <th>
-                                                사용자ID
+                                                <label for="ex6">사용자ID</label>
                                             </th>
                                             <td class="td--flex first__td">
-                                                test1
+                                                <input type="text" value="test1" readonly>
                                             </td>
                                             <th>
-                                                담당자
+                                                <label for="ex7">담당자</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                테스트
+                                                <input id="ex7" value="테스트" type="text" readonly>
                                             </td>
                                             <th>
-                                                담당자이메일
+                                                <label for="ex8">담당자이메일</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                example@example.com
+                                                <input id="ex8" value="example@example.com" type="text" readonly>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <th>
-                                                유선연락처
+                                                <label for="ex9">유선연락처</label>
                                             </th>
                                             <td class="td--flex first__td">
-                                                000-000-0000
+                                                <input id="ex9" value="000-000-0000" type="text" readonly>
                                             </td>
                                             <th>
-                                                무선연락처
+                                                <label for="ex10">무선연락처</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                010-0000-0000
+                                                <input id="ex10" value="010-0000-0000" type="text" readonly>
                                             </td>
                                             <th>
-                                                수신동의 여부
+                                                <label for="ex11">수신동의 여부</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                수신
+                                                <input id="ex11" value="수신" type="text" readonly>
                                             </td>
                                         </tr>
 
                                         
                                         <tr>
                                             <th>
-                                                가입일자
+                                                <label for="ex12">가입일자</label>
                                             </th>
                                             <td class="td--flex first__td">
-                                                2024-08-16
+                                                <input id="ex12" value="2024-08-16" type="text" readonly aria-label="가입일자">
                                             </td>
                                             <th>
-                                                승인여부
+                                                <label for="ee1">승인여부</label>
                                             </th>
                                             <td class="td--flex second__td">
                                                 <div class="radio__wrap">
-                                                    <input type="radio" name="ee" id="ee">
-                                                    <label for="ee">승인</label>
-                                                    <input type="radio" name="ee" id="ee">
-                                                    <label for="ee">미승인</label>
-                                                    <input type="radio" name="ee" id="ee">
-                                                    <label for="ee">반려</label>
+                                                    <input type="radio" name="approval" id="ee1">
+                                                    <label for="ee1">승인</label>
+                                                    <input type="radio" name="approval" id="ee2">
+                                                    <label for="ee2">미승인</label>
+                                                    <input type="radio" name="approval" id="ee3">
+                                                    <label for="ee3">반려</label>
                                                 </div>
                                             </td>
+
+                                            <!--  -->
                                             <th>
-                                                비밀번호
+                                                <label for="ee2">비밀번호</label>
                                             </th>
                                             <td class="td--flex second__td">
-                                                <button type="button" class="btn__input">초기화</button>
+                                                <button type="button" class="btn__input" id="ee2">초기화</button>
                                             </td>
                                         </tr>
 
