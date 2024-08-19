@@ -2,11 +2,10 @@
 
 // 메뉴 권한 애니메이션 높이 제어
 $(document).ready(function(){
-    let menuList = $('.menu-list')
+    let menuList = $('.menu-wrap')
     let menuHeight = menuList.innerHeight();
 
     menuList.css('height', menuHeight)
-    
 })
 
 // 테이블 페이지 네이션 전환

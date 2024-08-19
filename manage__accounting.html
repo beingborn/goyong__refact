@@ -15,7 +15,6 @@
      <!-- jquery 스와이퍼 cdn -->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-
 </head>
 <body>
     <!-- 스킵 네비게이션  -->
@@ -90,7 +89,12 @@
           <!-- y__flex를 가진 버튼 그룹은 세로 중앙 정렬 -->
             <div class="function__group y__flex">
 
-               
+                <!-- 
+                아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
+                색상 목록 : blue, black, red, green, gray
+
+                ex) 회색 버튼 <button type="button" class= "btn__control bg--gray-00">조회</button> 
+                -->
                 
                 <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼 지정, 클릭 시 에러 모달 팝업-->
                 <button type="button" class="btn__control bg--blue-00 error__display">초기화</button>
@@ -176,9 +180,9 @@
                     <div class="preview flex--box-c pd--10-m mg--10-r">
                       <p></p>
                     </div>
-                    <label class="mg--10-r btn__file__select" for="profile_pic">파일선택</label>
+                    <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
                     <div>
-                      <button class="btn__upload">업로드</button>
+                      <button class="btn__upload bg--blue-00">업로드</button>
                     </div>
                     <input type="file" id="profile_pic" name="profile_pic"/>
                   </div>
@@ -197,7 +201,7 @@
                     </div>
                     <!-- 왼쪽 메뉴 트리 영역 -->
                <!-- 메뉴 권한 설정 아코디언 -->
-               <ul class="menu-list lnb-list" data-action="accordion">
+               <ul class="menu-list lnb-list system-list" data-action="accordion">
                 <li class="li">
                     <!-- 1depth title -->
                     <div class="menu-head depth-1">
@@ -730,9 +734,9 @@ input.on('change', displayFileNames);
     // 메뉴 버튼 클릭 시 메뉴 바디 슬라이드 임시    
             
     $(document).ready(function() {
-    let menuList = $('.menu-list')
-    let menuHeight = menuList.innerHeight();
-    menuList.css('height', menuHeight)
+    // let menuList = $('.menu-list')
+    // let menuHeight = menuList.innerHeight();
+    // menuList.css('height', menuHeight)
   
     if($('.menu-body').css('display') === 'none'){
         $('.depth-2').css('border-bottom', '0.1rem solid #ddd')

@@ -86,6 +86,12 @@
        <main class="main__content">
         <div class="inner">
             <div class="function__group">
+                  <!-- 
+                아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
+                색상 목록 : blue, black, red, green, gray
+
+                ex) 회색 버튼 <button type="button" class= "btn__control bg--gray-00">조회</button> 
+                -->
                 <button type="button" class="btn__control bg--blue-00">저장</button>
             </div>
             <div class="content--flex system__margin  ">
@@ -106,12 +112,12 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="#" class="pd--10-l">관리자</a>
+                                            <a  href='javascript:void(0)' class="pd--10-l">관리자</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="#" class="pd--10-l">노동조합</a>
+                                            <a  href='javascript:void(0)' class="pd--10-l">노동조합</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -130,7 +136,7 @@
                         
                         <div class="manager__auth auth__wrap border-top-large">
                             <!-- 메뉴 권한 설정 아코디언 -->
-                            <ul class="menu-list lnb-list" data-action="accordion">
+                            <ul class="menu-list lnb-list menu-wrap" data-action="accordion">
                                 <li class="li">
                                     <!-- 1depth title -->
                                     <div class="menu-head depth-1">
@@ -325,6 +331,17 @@
     $('.menu-head input[type="checkbox"]').on('click', function(e) {
         e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
     });
+
+
+        // 테이블 행 클릭 시 배경 색 변경 (아닌 것들 비활성화)
+        $('.auth__table tbody tr td > a').click(function(){
+                $(this).css('background-color' , '#DEEBF7');
+                $('.auth__table tbody tr td > a').not($(this)).css('background-color', 'transparent')
+            })
+
+
+
+
 });
     </script>
     

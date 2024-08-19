@@ -59,8 +59,9 @@ input[type=reset], textarea, select, button {
 }
 
 input[type=text], select {
-  border: 0.1rem solid #ddd;
+  border: 0.1rem solid #ccc;
   border-radius: 0.5rem;
+  padding: 1.2rem;
 }
 
 input[type=radio] {
@@ -475,7 +476,6 @@ textarea {
   font-size: 1.6rem;
   padding: 0.8rem 1.2rem;
   border: 0.1rem solid #000;
-  background: transparent;
   max-height: 4rem;
   min-height: 4rem;
   border-radius: 0.5rem;
@@ -488,7 +488,6 @@ textarea {
 .btn__upload {
   font-size: 1.6rem;
   padding: 0.8rem 2rem;
-  background-color: #246BEB;
   color: #fff;
   max-height: 4rem;
   height: 4rem;
@@ -861,6 +860,12 @@ td {
   border-bottom: 0.1rem solid #ddd;
   border-left: 0.1rem solid #ddd;
   border-right: 0.1rem solid #ddd;
+}
+
+.auth__table tbody tr td > a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .auth__table tbody tr td > a:hover {
@@ -1981,6 +1986,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   color: #0c3975;
 }
 
+.system-list {
+  max-height: 120rem;
+  overflow-y: auto;
+}
+
 .data__modal .data__group__title, .data__error__modal .data__group__title {
   margin-top: 4rem;
 }
@@ -2909,7 +2919,6 @@ select {
   text-align: right;
 }
 .list__btn__group button {
-  background-color: #246BEB;
   color: #fff;
   border: 0;
   font-size: 2rem;

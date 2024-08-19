@@ -6,6 +6,9 @@
 // 관리자 메뉴 공통 영역
 .union__member { font-size: 1.9rem!important; color: #0c3975;}
 
+// 체계 영역만 height 값 설정
+.system-list {max-height: 120rem; overflow-y: auto;}
+
 
 // 관리자 조회 모달 기본 스타일
 .data__modal .data__group__title, .data__error__modal .data__group__title { margin-top: 4rem;

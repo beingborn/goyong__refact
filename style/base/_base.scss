@@ -39,7 +39,7 @@ label {font-size: 1.5rem;}
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
-input[type="text"], select {border: 0.1rem solid #ddd; border-radius: 0.5rem;}
+input[type="text"], select {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
 input[type="radio"]{
     appearance: none;
     width: 2.6rem;
