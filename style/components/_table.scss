@@ -90,6 +90,8 @@ td {line-height: 5.8rem;}
 
 .manage__user__table {border-top: 0.2rem solid #000;} 
 .manage__user__table tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
+.manage__user__table .height--auto {height: auto; }
+
 .manage__user__table th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1; height: 100%;} 
 .manage__user__table td {padding: 0 1rem; width: auto;} 
 .manage__user__table tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);}

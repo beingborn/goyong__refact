@@ -91,11 +91,11 @@
         <div class="inner">
             <div class="function__group">
                 <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼으로 설정한 상태 -->
-                <button type="button" class="error__display btn__blue">초기화</button>
-                <button type="button" class="btn__blue">신규</button>
-                <button type="button" class="check__data btn__blue">조회</button>
-                <button type="button" class="btn__blue">저장</button>
-                <button type="button" class="btn__blue">삭제</button>
+                <button type="button" class="error__display btn__control bg--blue-00">초기화</button>
+                <button type="button" class="btn__control bg--blue-00">신규</button>
+                <button type="button" class="check__data btn__control bg--blue-00">조회</button>
+                <button type="button" class="btn__control bg--blue-00">저장</button>
+                <button type="button" class="btn__control bg--blue-00">삭제</button>
             </div>
 
             <!-- 상단 검색 폼 -->
@@ -256,8 +256,8 @@
                                     <caption>사용자용 회원가입 폼입니다.</caption>
                                     <tbody>
 
-                                        <tr>
-                                            <th>
+                                        <tr class="height--auto">
+                                            <th style="line-height: 11.6rem;">
                                                 <span class="must__type">노동조합명</span>
                                             </th>
                                             <td class="td--flex first__td">
@@ -265,16 +265,38 @@
                                                     테스트
                                                 </div>
                                             </td>
-                                            <th>
+                                            <!-- 테이블 태그 특성으로 인해 style inline으로 기입 -->
+                                            <th style="line-height: 11.6rem;">
                                                 <span class="must__type">노동조합소속</span>
                                             </th>
-                                            <td class="td--flex">
-                                                <div class="container td--width">
-                                                    <span class="group">전국노동조합총연맹</span>
-                                                    <span class="group">노동조합총연맹</span>
-                                                    <span class="group">전국노동총연맹</span>
+
+
+                                            <td>
+                                                <div class="flex--box">
+                                                    <!-- <button type="button" class="btn__select width--20 mg--10-r">선택입력</button> -->
+                                                    <div class="td__container flex--grow-100">
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </td>
+
                                         </tr>
 
                                         <tr>

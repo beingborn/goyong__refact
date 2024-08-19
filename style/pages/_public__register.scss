@@ -57,14 +57,17 @@
 }
 
 .select__wrap__3 {
-    select:nth-of-type(1){
-       width: calc(20% - 0.4rem);
-    }
 
-    select:not(:first-of-type){
-        width: calc(40% - 0.4rem);
-    }
+    // select:nth-of-type(1){
+    //    width: calc(20% - 0.4rem);
+    // }
 
+    // select:not(:first-of-type){
+    //     width: calc(40% - 0.4rem);
+    // }
+    select {
+        width: calc(33.33% - 0.4rem);
+    }
 }
 
 .p-td__calender {

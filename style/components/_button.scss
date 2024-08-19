@@ -13,12 +13,18 @@
 
 */
 
+
+.bg--blue-00 {background-color: #246BEB;}
+.bg--black-00 {background-color: #000000;}
+.bg--gray-00 {background-color: gray;}
+.bg--red-00 {background-color: red;}
+.bg--green-00 {background-color: green;}
+.bg--transparent-00 {background-color: none;}
+
+
 // 관리자 페이지 상단 버튼입니다.
-.btn__blue {
+.btn__control {
   
-    background-color: $theme-btn-blue-00; // 색상 코드 기입
-
-
   color: #fff;
   border: 0;
   font-size: 2rem;
@@ -33,7 +39,7 @@
 
 
 .function__group { margin-top: 4rem; margin-bottom: 2rem; display: flex; justify-content: end;}
-.function__group .btn__blue:not(:last-child) { margin-right: 1rem;}
+.function__group .btn__control:not(:last-child) { margin-right: 1rem;}
 
 // 서브 페이지 상단 탭 버튼 스타일
 .tab__wrap { width: 128rem; margin: 0px auto; display: flex; align-items: center; padding-top: 8rem; }
@@ -92,7 +98,9 @@
       border-radius: 0.5rem;
       box-sizing: border-box;
     }
-    .btn__add, .btn__remove {height: 4rem; background-color: #000;
+    .btn__add, .btn__remove {
+      height: 4rem; 
+      // background-color: #000;
       color: white;
       width: 5rem;
       height: 4rem;

@@ -363,8 +363,31 @@ textarea {
   $theme-btn-red-00 : #B9131E;
 
 */
-.btn__blue {
+.bg--blue-00 {
   background-color: #246BEB;
+}
+
+.bg--black-00 {
+  background-color: #000000;
+}
+
+.bg--gray-00 {
+  background-color: gray;
+}
+
+.bg--red-00 {
+  background-color: red;
+}
+
+.bg--green-00 {
+  background-color: green;
+}
+
+.bg--transparent-00 {
+  background-color: none;
+}
+
+.btn__control {
   color: #fff;
   border: 0;
   font-size: 2rem;
@@ -382,7 +405,7 @@ textarea {
   justify-content: end;
 }
 
-.function__group .btn__blue:not(:last-child) {
+.function__group .btn__control:not(:last-child) {
   margin-right: 1rem;
 }
 
@@ -484,7 +507,6 @@ textarea {
 
 .btn__add, .btn__remove {
   height: 4rem;
-  background-color: #000;
   color: white;
   width: 5rem;
   height: 4rem;
@@ -746,6 +768,10 @@ td {
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+.manage__user__table .height--auto {
+  height: auto;
 }
 
 .manage__user__table th {
@@ -1725,9 +1751,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .sign__up__table .with__submit input[type=text] {
   width: 90%;
 }
-.sign__up__table .with__submit input[type=submit] {
+.sign__up__table .with__submit .btn__check__dup {
   width: calc(10% - 1rem);
-  background-color: #000;
   color: #fff;
 }
 .sign__up__table .col2__th {
@@ -1897,11 +1922,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background: url(../img/select__renew.png) no-repeat 98% 50%;
 }
 
-.select__wrap__3 select:nth-of-type(1) {
-  width: calc(20% - 0.4rem);
-}
-.select__wrap__3 select:not(:first-of-type) {
-  width: calc(40% - 0.4rem);
+.select__wrap__3 select {
+  width: calc(33.33% - 0.4rem);
 }
 
 .p-td__calender {
@@ -1973,13 +1995,13 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .data__modal__wrap .data__modal, .data__modal__wrap .data__error__modal {
   display: none;
   width: calc(100% - 2rem);
-  overflow-y: auto;
   background-color: #fff;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   border: 0.3rem solid #CBCCCD;
+  z-index: 999;
 }
 .data__modal__wrap .data__modal .modal__inner, .data__modal__wrap .data__error__modal .modal__inner {
   width: calc(100% - 7.2rem);
@@ -2012,7 +2034,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   height: auto;
 }
 .data__modal__wrap .manage__report__modal {
-  height: 83.6rem;
+  height: auto;
+  padding-bottom: 2rem;
 }
 
 .data__modal .modal__table, .data__error__modal .modal__table {
@@ -2214,7 +2237,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     ac__management
     관리자>통계및보고서관리>회계관리현황
 */
-.search__work select {
+select {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -2227,21 +2250,15 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.6rem;
   border: 0.1rem solid #ccc;
 }
-.search__work .select__renew {
+
+.select__renew {
   background: url(../img/select__renew.png) no-repeat 93% 50%;
   background-color: #fff;
 }
-.search__work .search__work__group input {
+
+.search__work__group input {
   padding: 0.8rem 1rem;
   font-size: 1.6rem;
-}
-
-.search__report .border-btm {
-  width: 16rem;
-}
-
-.search__report__bg {
-  background-color: #FAFAFB;
 }
 
 .table__horizontal .main__table tbody th {
