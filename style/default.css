@@ -1066,10 +1066,6 @@ input[type=file]::file-selector-button {
   height: 2.4rem;
 }
 
-.depth--active {
-  border-top: 0.3rem solid #16408D;
-}
-
 .depth-1 {
   padding: 2.5rem 1rem;
   border-bottom: 0.1rem solid #ddd;
@@ -1091,29 +1087,22 @@ input[type=file]::file-selector-button {
   align-items: center;
 }
 
-.depth-3 {
-  padding: 2.4rem 2rem 2.4rem 1rem;
+/* 기존 depth 3 까지 코드 */
+.depth-3.menu-head {
+  border: 1px solid blue;
+  padding: 1.5rem 1.2rem;
 }
 
-.depth-3 .sub-ul {
-  padding-left: 1.6rem;
+.depth-4.menu-head {
+  border: 1px solid red;
 }
 
-.depth-3 .sub-ul > li {
-  height: 4.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.depth-5.menu-head {
+  border: 1px solid purple;
 }
 
-.depth-3 .sub-ul > li > span::before {
-  content: "";
-  display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background-color: #000;
-  margin-right: 0.8rem;
+.depth-6.menu-head {
+  border: 1px solid blue;
 }
 
 /* 초기 상태 안보이게 지정 */
