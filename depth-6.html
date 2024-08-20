@@ -283,7 +283,6 @@
 
 
 
-
                                 </ul>
                             </div>
                         </div>
@@ -318,12 +317,12 @@
         // 현재 선택된 .menu-body의 display 속성 토글
         if ($currentBody.css('display') === 'none') {
             $currentBody.slideDown(); // 열기 (display: block)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
 
             // currentBody가 존재하지 않을때 (마지막 요소일때)           
         } else {
             $currentBody.slideUp(); 
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
         
