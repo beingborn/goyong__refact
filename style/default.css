@@ -880,6 +880,14 @@ td {
   font-size: 1.5rem;
 }
 
+.checkbox__container-margin label {
+  padding-left: 1rem;
+}
+
+.checkbox__container-margin label:not(:last-child) {
+  padding-right: 1rem;
+}
+
 /* 
   폼 CSS
 */
@@ -1065,7 +1073,7 @@ input[type=file]::file-selector-button {
   cursor: pointer;
 }
 
-.menu-list input[type=checkbox] {
+input[type=checkbox] {
   width: 2.4rem;
   height: 2.4rem;
 }

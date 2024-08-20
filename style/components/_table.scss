@@ -134,3 +134,10 @@ td {min-height: 5.8rem;}
 
 .table__information input[type="text"]{border: 0; width: 100%;}
 .table__information input[type="text"]{font-size: 1.5rem;}
+
+
+// checkbox__container == report
+
+
+.checkbox__container-margin label {padding-left: 1rem;}
+.checkbox__container-margin label:not(:last-child) {padding-right: 1rem;}

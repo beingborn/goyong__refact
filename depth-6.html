@@ -319,8 +319,9 @@
             $currentBody.slideDown(); // 열기 (display: block)
             $(this).find('.menu-btn').css('background', 'url(img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
 
-            // currentBody가 존재하지 않을때 (마지막 요소일때)           
-        } else {
+                   
+        } else { 
+            // 해당 뎁스 이하 닫기   
             $currentBody.slideUp(); 
             $(this).find('.menu-btn').css('background', 'url(img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
