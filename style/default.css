@@ -1880,7 +1880,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .public__table th {
   width: 12.5%;
-  line-height: 5.8rem;
 }
 .public__table td {
   width: 87.5%;
@@ -1901,8 +1900,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   line-height: 4rem;
 }
 .public__table .col2__th {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   align-items: flex-start;
   justify-content: center;
 }

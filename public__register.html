@@ -106,17 +106,26 @@
                             <table>
                                 <caption>사용자용 회원가입 폼입니다.</caption>     
                                 <tr>
-                                    <th class="col2__th">
-                                        <span>
-                                            노동조합 명칭
+                                    <th>
+                                        <!-- <span>
+                                            <label for="css">
+                                                노동조합 명칭
+                                            </label>
                                         </span>
                                         <span class="must__type">
-                                            (또는 산하조직)
-                                        </span>
+                                            <label for="css">
+                                                (또는 산하조직)
+                                            </label>
+                                        </span> -->
+                                        <label for="css" class="txt--l">
+                                            노동조합 명칭 
+                                            <br>
+                                            <span class="must__type"> (또는 산하조직)</span>
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="css">
                                         </div>
                                     </td>
                                     <th>
@@ -135,7 +144,9 @@
 
                                 <tr class="with__long__select">
                                     <th>
+                                        <label for="s1-1">
                                             조직단위
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td ">
                                         <div class="td--width">
@@ -145,7 +156,9 @@
                                         </div>
                                     </td>
                                     <th>
-                                        <span>조합형태</span>
+                                        <label for="s1-2">
+                                            조합형태
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
@@ -158,7 +171,9 @@
 
                                 <tr class="with__long__select">
                                     <th>
-                                        <span>상급단체의 명칭</span>
+                                        <label for="s-1-3">
+                                            상급단체의 명칭
+                                        </label>
                                     </th>
                                     <td class="td--flex" colspan="3">
                                         <div class="td--width select__wrap__3">
@@ -177,19 +192,25 @@
 
                                 <tr>
                                     <th>
-                                        <span class="must__type">대표자</span>
+                                        <span class="must__type">
+                                            <label for="fdf">
+                                                대표자
+                                            </label>
+                                        </span>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="fdf">
                                         </div>
                                     </td>
                                   
                                     <th class="col2__th">
-                                        <span>사업자등록번호</span>
-                                        <span>
-                                            (고유번호증번호 등)
-                                        </span>
+                                   
+                                        <label for="css" class="txt--l">
+                                            사업자등록번호
+                                            <br>
+                                            <span class="must__type"> (고유번호증번호 등)</span>
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
@@ -202,17 +223,21 @@
 
                                 <tr>
                                     <th>
-                                        <span>설립연월일</span>
+                                        <label for="year">
+                                            설립연월일
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width p-td__calender">
-                                            <input type="text">
+                                            <input type="text" id="year">
                                             <span class="calender__icon"></span>
                                         </div>
                                     </td>
                                   
                                     <th>
-                                        <span>회계기간</span>
+                                        <label for="d-4-1">
+                                            회계기간
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
@@ -237,53 +262,71 @@
 
                                 <tr>
                                     <th>
-                                        <span>조합원 수</span>
+                                        <label for="pe">
+                                        조합원 수
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text" value="0">
+                                            <input type="text" value="0" id="pe">
                                         </div>
                                     </td>
                                     <th>
-                                        <span class="must__type">담당자명</span>
+                                        <span class="must__type">
+                                            <label for="pea">
+                                                담당자명
+                                            </label>
+                                        </span>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th>
-                                        <span class="must__type">유선연락처</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span class="must__type">담당자명 이메일</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="pea">
                                         </div>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <th>
-                                        <span>휴대폰</span>
+                                        <span class="must__type">
+                                            <label for="peb">
+                                                유선연락처
+                                            </label>
+                                        </span>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="peb">
                                         </div>
                                     </td>
                                     <th>
-                                        <span>수신동의 여부</span>
+                                        <span class="must__type">
+                                            <label for="pee">
+                                                담당자명 이메일
+                                            </label>
+                                        </span>
+                                    </th>
+                                    <td class="td--flex harf__td">
+                                        <div class="td--width">
+                                            <input type="text" id="pee">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <label for="pef">
+                                            휴대폰
+                                        </label>
+                                    </th>
+                                    <td class="td--flex harf__td">
+                                        <div class="td--width">
+                                            <input type="text" id="pef">
+                                        </div>
+                                    </td>
+                                    <th>
+                                        <label for="rdo_32-1">
+                                            수신동의 여부
+                                        </label>
                                     </th>
                                     <td class="td--flex harf__td radio__wrap">
                                         <div class="td--width">
@@ -299,11 +342,13 @@
 
                                 <tr>
                                     <th>
-                                        <span>소재지</span>
+                                        <label for="peg">
+                                            소재지
+                                        </label>
                                     </th>
                                     <td class="td--flex" colspan="3">
                                         <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="peg">
                                         </div>
                                     </td>
                                 </tr>
@@ -383,14 +428,21 @@
                             
                                     <tbody>
                                         <tr>
-                                            <th scope="row" class="txt--c border--r">공시사유구분</th>
+                                            <th scope="row" class="txt--c border--r">
+                                                공시사유구분
+                                            </th>
                                             <td>
 
                                                 <span style="line-height: 5.8rem;" class="mg--10-l">하반기 공시</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row" class="txt--c border--r" style="vertical-align: middle;">근거파일첨부</th>
+                                            <th scope="row" class="txt--c border--r" style="vertical-align: middle;">
+                                                <label for="profile_pic">
+                                                    근거파일첨부
+                                                </label>
+                                                
+                                            </th>
                                      
                                             <td>
                                                  
@@ -492,7 +544,7 @@
 
                 </div>
 
-                <!-- 회계공시 열람 탭 -->
+                <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
                 <div class="tab" title="회계공시 열람 탭">
                     <div class="lnb__title flex__title">
                         <h2>기본사항</h2>

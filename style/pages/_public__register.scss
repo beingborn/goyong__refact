@@ -16,7 +16,7 @@
 .public__table {
     tr {line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd;}
     
-    th {width: 12.5%; line-height: 5.8rem; }
+    th {width: 12.5%;}
     td {
         width: calc(100% - 12.5%); 
         line-height: 100%;
@@ -27,7 +27,8 @@
 
 
     .col2__th {
-        flex-direction: column; align-items: flex-start;
+        display: flex;
+        flex-direction: column; 
         align-items: flex-start;
         justify-content: center;
 
