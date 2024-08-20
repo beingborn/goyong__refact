@@ -368,6 +368,10 @@ textarea {
   background-color: #246BEB;
 }
 
+.bg--navy-00 {
+  background-color: #003675;
+}
+
 .bg--black-00 {
   background-color: #000000;
 }
@@ -377,7 +381,7 @@ textarea {
 }
 
 .bg--red-00 {
-  background-color: red;
+  background-color: #B9131E;
 }
 
 .bg--green-00 {
@@ -684,6 +688,10 @@ td {
 
 .table__horizontal__wrap select {
   height: 4rem;
+}
+
+.table--margin {
+  margin: 0.9rem 1rem;
 }
 
 .table__template__horizontal table {
@@ -1122,6 +1130,38 @@ input[type=checkbox] {
   margin-right: 0.8rem;
 }
 
+.system-list {
+  max-height: 1200px;
+  overflow-y: auto;
+}
+
+.system-list .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.system-list .menu-head.depth-3 {
+  padding: 1.5rem 1.2rem;
+}
+
+.system-list .menu-head.depth-4 {
+  padding-left: 20px;
+}
+
+.system-list .menu-head.depth-5 {
+  padding-left: 28px;
+}
+
+.system-list .menu-head.depth-6 {
+  padding-left: 36px;
+}
+
+.system-list .list-span {
+  font-size: 1.2rem;
+  color: rgb(67, 55, 179);
+  font-weight: 700;
+}
+
 /* 초기 상태 안보이게 지정 */
 .menu-body {
   display: block;
@@ -1130,7 +1170,7 @@ input[type=checkbox] {
 .menu-btn {
   width: 2rem;
   height: 2rem;
-  background: url(../img/arrow__bottom-bk.png) no-repeat center;
+  background: url(../img/arrow__bottom-bk.svg) no-repeat center;
   border: none;
   cursor: pointer;
 }
@@ -3233,7 +3273,6 @@ select {
   width: 15rem;
   border: 0;
   border-bottom: 0.1rem solid #dbdbdb;
-  padding: 1.6rem;
   font-size: 1.9rem;
   -webkit-appearance: none; /* 크롬 화살표 없애기 */
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */

@@ -14,15 +14,15 @@
             border: 2px dashed gray;
         }
 
-        .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {padding-top: 12px; padding-bottom: 12px;}
         
-        .menu-head.depth-3 {padding: 1.5rem 1.2rem;}
-        .menu-head.depth-4{padding-left: 20px;}
-        .menu-head.depth-5{padding-left: 28px;}
-        .menu-head.depth-6{padding-left: 36px;}
+            
         .system-list {max-height: 1200px; overflow-y: auto;}
-
-        .list-span {font-size: 1.2rem; color: rgb(67, 55, 179); font-weight: 700;}
+        .system-list  .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {padding-top: 12px; padding-bottom: 12px;}
+        .system-list  .menu-head.depth-3 {padding: 1.5rem 1.2rem;}
+        .system-list  .menu-head.depth-4{padding-left: 20px;}
+        .system-list  .menu-head.depth-5{padding-left: 28px;}
+        .system-list  .menu-head.depth-6{padding-left: 36px;}
+        .system-list  .list-span {font-size: 1.2rem; color: rgb(67, 55, 179); font-weight: 700;}
 
 
     </style>
@@ -39,271 +39,215 @@
             <br>
             <span>- 일정 높이 이상 커질 시 세로 스크롤 바 형성</span>
         </p>
+    </div>
 
         <!-- <div class="lnb__title">
             <h2>노동조합 체계</h2>
         </div> -->
         <!-- 왼쪽 메뉴 트리 영역 -->
    <!-- 메뉴 권한 설정 아코디언 -->
-   <ul class="menu-list lnb-list system-list" data-action="accordion">
-    <li class="li">
-        <!-- 1depth title -->
-        <!-- <button type="button" class="btn btn-ico menu-btn" style="border: 1px solid blue;">&#9650;</button> -->
-
-        <!-- <div class="menu-head depth-1">
-            <h3 class="tit">노동조합</h3>
-        </div> -->
+    <ul class="menu-list lnb-list system-list" data-action="accordion">
+        <li class="home-li">
         <div class="menu-body depth-1-body">
-            <div class="acco-in">
-                <ul class="menu-list lnb-list system-list" data-action="accordion">
-                    <li class="li">
-                        <div class="menu-head depth-1" style="border-bottom: 0.5rem solid #246BEB;">
-                            <h3 class="tit" >노동조합
-                                <span class="list-span">1-depth</span>
-                            </h3>
+            <div class="acco-in first-acco">
+            <ul class="sub-ul">
+                <li class="depth-1-li">
+                <div class="menu-head depth-1" style="border-bottom: 0.5rem solid #246BEB;">
+                    <h3 class="tit">노동조합
+                    <span class="list-span">1-depth</span>
+                    </h3>
+                </div>
+                <!-- depth-1-body 안에 depth-2 head 및 -> 하위요소 -->
+                <div class="menu-body depth-1-body">
+                    <div class="acco-in">
+                    <ul class="sub-ul">
+                        <!-- First depth-2-li -->
+                        <li class="depth-2-li">
+                        <div class="menu-head depth-2">
+                            <span class="menu-title">한국노동조합총연맹
+                            <span class="list-span">2-depth</span>
+                            </span>
+                            <button type="button" class="btn btn-ico menu-btn"></button>
                         </div>
-                        <div class="menu-body depth-1-body">
-                            <div class="acco-in">
+                        <!-- depth-3 start -->
+                        <div class="menu-body depth-3">
+                            <ul class="sub-ul">
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 공무원 노동조합 연맹
+                                    <span class="list-span">3-depth</span>
+                                </span>
+                                </div>
+                                <div class="menu-body depth-4">
                                 <ul class="sub-ul">
-                                    <li class="depth-2-li">
-                                        <div class="menu-head depth-2">
-                                            <span class="menu-title">한국노동조합총연맹
-                                                <span class="list-span">2-depth</span>
+                                    <li class="depth-4-li">
+                                    <div class="menu-head depth-4">
+                                        <span class="menu-title">&#9495; XXX 공무원 노동조합
+                                        <span class="list-span">4-depth</span>
+                                        </span>
+                                    </div>
+                                    <div class="menu-body depth-5">
+                                        <ul class="sub-ul">
+                                        <li class="depth-5-li">
+                                            <div class="menu-head depth-5">
+                                            <span class="menu-title">&#9495; XXX 공무원 노동조합 지부
+                                                <span class="list-span">5-depth</span>
                                             </span>
-                                            <button type="button" class="btn btn-ico menu-btn"></button>
-                                        </div>
-                                        <!-- depth-3 start -->
-                                        <div class="menu-body depth-3">
-                                            <ul class="sub-ul">
-
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 공무원 노동조합 연맹
-                                                        <span class="list-span">3-depth</span>
-                                                        </span>
-                                                        <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                    </div>
-                                                    <div class="menu-body depth-4">
-                                                        <ul class="sub-ul">
-                                                            <li class="depth-4-li">
-                                                                <div class="menu-head depth-4">
-                                                                    <span class="menu-title">&#9495; XXX 공무원 노동조합
-                                                                        <span class="list-span">4-depth</span>
-
-                                                                    </span>
-
-                                                                    <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                                </div>
-                                                                <div class="menu-body depth-5">
-                                                                    <ul class="sub-ul">
-                                                                        <li class="depth-5-li">
-                                                                            <div class="menu-head depth-5">
-                                                                                <span class="menu-title">&#9495; XXX 공무원 노동조합 지부
-                                                                                <span class="list-span">5-depth</span>
-
-                                                                                </span>
-                                                                                <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                                            </div>
-                                                                            <div class="menu-body depth-6">
-                                                                                <ul class="sub-ul">
-                                                                                    <li class="depth-6-li">
-                                                                                        <div class="menu-head depth-6">
-                                                                                            <span class="menu-title">&#9495; 공무원 노동조합 분회
-                                                                                                <span class="list-span">6-depth</span>
-
-                                                                                            </span>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <!-- depth -3 second -->
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <!-- second depth-2 -->
-                                    <li class="depth-2-li">
-                                        <div class="menu-head depth-2">
-                                            <span class="menu-title">전국민주노동총연맹</span>
-                                            <button type="button" class="btn btn-ico menu-btn"></button>
-                                        </div>
-                                        <!-- depth-3 start -->
-                                        <div class="menu-body depth-3">
-                                            <ul class="sub-ul">
-
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 공무원 노동조합 연맹</span>
-                                                        <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                    </div>
-                                                    <div class="menu-body depth-4">
-                                                        <ul class="sub-ul">
-                                                            <li class="depth-4-li">
-                                                                <div class="menu-head depth-4">
-                                                                    <span class="menu-title">&#9495; XXX 공무원 노동조합</span>
-                                                                    <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                                </div>
-                                                                <div class="menu-body depth-5">
-                                                                    <ul class="sub-ul">
-                                                                        <li class="depth-5-li">
-                                                                            <div class="menu-head depth-5">
-                                                                                <span class="menu-title">&#9495; XXX 공무원 노동조합 지부</span>
-                                                                                <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
-                                                                            </div>
-                                                                            <div class="menu-body depth-6">
-                                                                                <ul class="sub-ul">
-                                                                                    <li class="depth-6-li">
-                                                                                        <div class="menu-head depth-6">
-                                                                                            <span class="menu-title">&#9495; 공무원 노동조합 분회</span>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <!-- depth -3 second -->
-                                            </ul>
-                                        </div>
-                                    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <!-- third- deptth 2 -->
-                                    <li class="depth-2-li">
-                                        <div class="menu-head depth-2">
-                                            <span class="menu-title">미가입</span>
-                                            <button type="button" class="btn btn-ico menu-btn"></button>
-                                        </div>
-                                        <div class="menu-body depth-3">
-                                            <ul class="sub-ul">
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 미가입1
-                                                            <span class="list-span">3depth</span>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 미가입2
-                                                            <span class="list-span">3depth</span>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <!-- 임시  -->
-                                    <li class="depth-2-li">
-                                        <div class="menu-head depth-2">
-                                            <span class="menu-title">회원가입</span>
-                                            <button type="button" class="btn btn-ico menu-btn"></button>
-                                        </div>
-                                        <div class="menu-body depth-3">
-                                            <ul class="sub-ul">
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 회원가입1
-                                                            <span class="list-span">3depth</span>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li class="depth-3-li">
-                                                    <div class="menu-head depth-3">
-                                                        <span class="menu-title">&#9495; 회원가입2
-                                                            <span class="list-span">3depth</span>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                           <!-- 임시  -->
-                                           <li class="depth-2-li">
-                                            <div class="menu-head depth-2">
-                                                <span class="menu-title">입찰연맹 지사</span>
-                                                <button type="button" class="btn btn-ico menu-btn"></button>
                                             </div>
-                                            <div class="menu-body depth-3">
-                                                <ul class="sub-ul">
-                                                    <li class="depth-3-li">
-                                                        <div class="menu-head depth-3">
-                                                            <span class="menu-title">&#9495; 지사 연맹 입찰
-                                                                <span class="list-span">3depth</span>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="depth-3-li">
-                                                        <div class="menu-head depth-3">
-                                                            <span class="menu-title">&#9495; 연맹 입찰 가입
-                                                                <span class="list-span">3depth</span>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                            <div class="menu-body depth-6">
+                                            <ul class="sub-ul">
+                                                <li class="depth-6-li">
+                                                <div class="menu-head depth-6">
+                                                    <span class="menu-title">&#9495; 공무원 노동조합 분회
+                                                    <span class="list-span">6-depth</span>
+                                                    </span>
+                                                </div>
+                                                </li>
+                                            </ul>
                                             </div>
                                         </li>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                        </ul>
+                                    </div>
+                                    </li>
                                 </ul>
-                            </div>
+                                </div>
+                            </li>
+                            </ul>
                         </div>
-                    </li>
-                </ul>
-    </div>
+                        </li>
+                        <!-- Second depth-2-li -->
+                        <li class="depth-2-li">
+                        <div class="menu-head depth-2">
+                            <span class="menu-title">전국민주노동총연맹</span>
+                            <button type="button" class="btn btn-ico menu-btn"></button>
+                        </div>
+                        <!-- depth-3 start -->
+                        <div class="menu-body depth-3">
+                            <ul class="sub-ul">
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 공무원 노동조합 연맹</span>
+                                </div>
+                                <div class="menu-body depth-4">
+                                <ul class="sub-ul">
+                                    <li class="depth-4-li">
+                                    <div class="menu-head depth-4">
+                                        <span class="menu-title">&#9495; XXX 공무원 노동조합</span>
+                                    </div>
+                                    <div class="menu-body depth-5">
+                                        <ul class="sub-ul depth-5-ul">
+                                        <li class="depth-5-li">
+                                            <div class="menu-head depth-5">
+                                            <span class="menu-title">&#9495; XXX 공무원 노동조합 지부</span>
+                                            </div>
+                                            <div class="menu-body depth-6">
+                                            <ul class="sub-ul">
+                                                <li class="depth-6-li">
+                                                <div class="menu-head depth-6">
+                                                    <span class="menu-title">&#9495; 공무원 노동조합 분회</span>
+                                                </div>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                    </li>
+                                </ul>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <!-- Third depth-2-li -->
+                        <li class="depth-2-li">
+                        <div class="menu-head depth-2">
+                            <span class="menu-title">미가입</span>
+                            <button type="button" class="btn btn-ico menu-btn"></button>
+                        </div>
+                        <div class="menu-body depth-3">
+                            <ul class="sub-ul">
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 미가입1
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 미가입2
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <!-- Fourth depth-2-li -->
+                        <li class="depth-2-li">
+                        <div class="menu-head depth-2">
+                            <span class="menu-title">회원가입</span>
+                            <button type="button" class="btn btn-ico menu-btn"></button>
+                        </div>
+                        <div class="menu-body depth-3">
+                            <ul class="sub-ul">
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 회원가입1
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 회원가입2
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <!-- Fifth depth-2-li -->
+                        <li class="depth-2-li">
+                        <div class="menu-head depth-2">
+                            <span class="menu-title">입찰연맹 지사</span>
+                            <button type="button" class="btn btn-ico menu-btn"></button>
+                        </div>
+                        <div class="menu-body depth-3">
+                            <ul class="sub-ul">
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 지사 연맹 입찰
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            <li class="depth-3-li">
+                                <div class="menu-head depth-3">
+                                <span class="menu-title">&#9495; 연맹 입찰 가입
+                                    <span class="list-span">3depth</span>
+                                </span>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </li>
+    </ul>
 </body>
 
 
 <script>
      $(document).ready(function() {
-    // let menuList = $('.menu-list')
-    // let menuHeight = menuList.innerHeight();
-    // menuList.css('height', menuHeight)
-        
-    // 3번의 css 가 none일때
-    //  if($('.menu-head.depth-3').css('display') === 'none'){
-    //      $('.depth-2').css('border-bottom', '0.1rem solid #ddd')
-    //  } else {
-    //      $('.depth-2').css('border-bottom', '0.3rem solid #16408D')
-    //  }
 
     $('.menu-head.depth-2').on('click', function() {
         $(this).css('border-bottom', '0.3rem solid #003675')

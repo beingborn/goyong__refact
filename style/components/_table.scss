@@ -53,6 +53,7 @@ td {min-height: 5.8rem;}
 
 .table__horizontal__wrap th {background-color: #F9F9FA;}
 .table__horizontal__wrap tr {border-bottom: 0.1rem solid #ddd;}
+
 // .table__horizontal__wrap td input[type="text"],.table__horizontal__wrap td select {margin: 0.9rem 1rem;}
 .table__horizontal__wrap .note__td {line-height: 15rem;}
 .table__horizontal__wrap .note__td-txt-area {height: 100%;}
@@ -60,6 +61,7 @@ td {min-height: 5.8rem;}
 .table__horizontal__wrap select {height: 4rem;}
 
 
+.table--margin {margin: 0.9rem 1rem}
 
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
@@ -137,7 +139,6 @@ td {min-height: 5.8rem;}
 
 
 // checkbox__container == report
-
-
+// manage__report 조회 모달 체크 박스 
 .checkbox__container-margin label {padding-left: 1rem;}
 .checkbox__container-margin label:not(:last-child) {padding-right: 1rem;}

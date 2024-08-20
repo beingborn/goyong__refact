@@ -117,7 +117,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a  href='javascript:void(0)' class="pd--10-l" style="line-height: 5.8rem;">노동조합</a>
+                                            <a  href='javascript:void(0)' class="pd--10-l" style="line-height: 5.8rem ;">노동조합</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -317,11 +317,11 @@
         // 현재 선택된 .menu-body의 display 속성 토글
         if ($currentBody.css('display') === 'none') {
             $currentBody.slideDown(); // 열기 (display: block)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.svg) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.svg) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });

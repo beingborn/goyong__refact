@@ -350,15 +350,19 @@
                                             <label for="example22222">노동조합명</label>
                                           </th>
                                           <td colspan="3">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <div class="td__container">
+                                                <input type="text" value="" id="example22222" class="width--100">
+                                            </div>
                                           </td>
                                           <th scope="col">
                                             <label for="category2323">주 / 부 여부</label>
                                           </th>
                                           <td>
-                                            <select name="category" id="category2323" class="select--no--style select__renew">
-                                                <option value="전체">전체</option>
-                                            </select>
+                                            <div class="td__container">
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </div>
                                           </td>
                                         </tr>
 
@@ -376,7 +380,7 @@
                              select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
                               -->
                             <div class="flex--box">
-                                <button type="button" class="btn__select width--20 mg--10-r">선택입력</button>
+                                <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>
                                 <div class="td__container flex--grow-100">
                                     <select name="category" id="ct1" class="select--no--style select__renew">
                                         <option value="전체">전체</option>
@@ -409,42 +413,52 @@
                                                 <label for="ct2">지부</label>
                                             </th>
                                             <td>
+                                                <div class="td__container">
                                                 <select name="category" id="ct2" class="select--no--style select__renew">
                                                     <option value="전체">전체</option>
                                                 </select>
+                                                </div>
                                             </td>
                                             <th scope="row">지회</th>
                                             <td>
-                                                <select name="category" id="category2323" class="select--no--style select__renew">
-                                                    <option value="전체">전체</option>
-                                                </select> 
-                                            </td>
-                                            <th scope="row">분회</th>
-                                            <td>
+                                                <div class="td__container">
                                                 <select name="category" id="category2323" class="select--no--style select__renew">
                                                     <option value="전체">전체</option>
                                                 </select>
+                                                </div> 
+                                            </td>
+                                            <th scope="row">분회</th>
+                                            <td>
+                                                <div class="td__container">
+                                                    <select name="category" id="category2323" class="select--no--style select__renew">
+                                                        <option value="전체">전체</option>
+                                                    </select>
+                                                </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="rdo_5-1">사용여부</label>
+                                        <tr style="vertical-align: middle;">
+                                            <th scope="row" style="position: relative;">
+                                                <label for="rdo_5-1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">사용여부</label>
                                             </th>
                                             <td class="radio__wrap" colspan="5">
-                                                <div class="">
-                                                    <input type="radio" name="rdo_5-1" id="rdo_5-1">
-                                                    <label for="rdo_5-1" class="mg--20-r">사용</label>
-                                                    <input type="radio" name="rdo_5-2" id="rdo_5-2">
-                                                    <label for="rdo_5-2">미사용</label>
+                                                <div class="td__container">
+                                                    <div class="flex--box-c" style="height: 4rem;">
+                                                        <input type="radio" name="rdo_5-1" id="rdo_5-1">
+                                                        <label for="rdo_5-1" class="mg--20-r">사용</label>
+                                                        <input type="radio" name="rdo_5-2" id="rdo_5-2">
+                                                        <label for="rdo_5-2">미사용</label>
+                                                    </div>
                                                 </div>
                                               </td>                              
                                         </tr>
-                                        <tr>
-                                            <th scope="row" class="note__th">
+                                        <tr style="vertical-align: middle;">
+                                            <th scope="row" class="note__th" >
                                                 <label for="ct4">비고</label>
                                               </th>
                                               <td colspan="5" class="note__td">
+                                                <div class="td__container">
                                                     <input id="ct4" class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                                </div>
                                               </td>                    
                                         </tr>
                                       </tbody>
@@ -550,11 +564,11 @@
         // 현재 선택된 .menu-body의 display 속성 토글
         if ($currentBody.css('display') === 'none') {
             $currentBody.slideDown(); // 열기 (display: block)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.svg) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.3rem solid #16408D')
         } else {
             $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.png) no-repeat center'); // 위로 화살표 변경
+            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.svg) no-repeat center'); // 위로 화살표 변경
             $(this).css('border-bottom', '0.1rem solid #ddd')
         }
     });

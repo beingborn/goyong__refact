@@ -28,18 +28,15 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
     .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
     .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
 }
-// .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
-// .depth-3 .sub-ul {padding-left: 1.6rem;}
-// .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
-// .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
 
-// .depth-3.menu-head {border: 1px solid blue; padding: 1.5rem 1.2rem;}
-// .depth-4.menu-head {border: 1px solid red;}
-// .depth-5.menu-head {border: 1px solid purple;}
-// .depth-6.menu-head {border: 1px solid blue;}
+.system-list {max-height: 1200px; overflow-y: auto;}
+.system-list  .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {padding-top: 12px; padding-bottom: 12px;}
+.system-list  .menu-head.depth-3 {padding: 1.5rem 1.2rem;}
+.system-list  .menu-head.depth-4{padding-left: 20px;}
+.system-list  .menu-head.depth-5{padding-left: 28px;}
+.system-list  .menu-head.depth-6{padding-left: 36px;}
 
-
-
+.system-list  .list-span {font-size: 1.2rem; color: rgb(67, 55, 179); font-weight: 700;}
 
 
 
@@ -52,7 +49,7 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
 .menu-btn {
     width: 2rem;
     height: 2rem;
-    background: url(../img/arrow__bottom-bk.png) no-repeat center ;
+    background: url(../img/arrow__bottom-bk.svg) no-repeat center ;
  
 //    background: url(img/arrow__bottom-bk.png) no-repeat center ;
     border: none;

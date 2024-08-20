@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/default.css">
+   <!-- jquery 스와이퍼 cdn -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<style>
+
+    a {text-decoration: none;}
+
+    .inner {width: 1280px; margin: 0px auto;}
+
+    html {font-size: 62.5%;}
+
+    #gnb1 > ul {display: flex;}
+    #gnb1 > ul > li {flex: 0 0 auto; margin-right: 16px;}
+    #gnb1 > ul > li > a {
+        line-height: 6.4rem;
+        font-weight: bold;
+        font-size: 1.9rem;
+        color: #555555;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .header_bottom {border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; position: relative;}
+
+    #gnb1 .topmenu > li.plus {border: 1px solid red;}
+    #gnb1 .submenu > ul > li {display: flex;}
+    #gnb1 .submenu > ul > li.active > a {background: #fff;}
+
+
+    /* #gnb1 {position: relative;} */
+    #gnb1 .submenu {
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        visibility: hidden;
+        overflow: hidden;
+        width: 128rem;
+        height: auto;
+        min-height: 20rem;
+        opacity: 0;
+        top: calc(100% - 1px);
+        z-index: 10;
+        max-width: 100%;
+        text-align: left;
+        border: 1px dashed blueviolet;
+    }
+
+    #gnb1 .submenu > ul > li > a {
+        width: 26rem;
+        height: 5.6rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0 2.4rem;
+        transition: all 0.2s;
+        background: #edf1f5;
+        font-weight: 700;
+        color: #1d1d1d;
+        font-size: 1.9rem;
+    }
+
+    #gnb1 .submenu > ul > li .dep3 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 26rem);
+    margin-left: 26rem;
+    padding: 2.4rem 4rem;
+    }
+
+    .dep3_title {
+    display: flex;
+    height: 5.6rem;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    }
+
+
+    #gnb1 .submenu > ul > li.active > .dep3 {display: block;}
+
+
+
+    #gnb1 > ul > li.active .submenu { visibility: visible; overflow: visible; opacity: 1;}
+
+    /* #gnb1 .submenu > ul > li > .dep3 {display: none;} */
+    /* #gnb1 .submenu > ul ul {} */
+
+
+</style>
+
+<body>
+    <div>
+        
+    </div>
+    <div class="header_bottom">
+        <div class="inner">
+            <nav id="gnb1">
+                <ul id="head_menu" class="topmenu">
+                    <li class="plus"> <a href="javascript:void(0);">시스템안내<span class="sr_only">닫기</span></a>
+                        <div class="submenu">
+                            <ul>
+                                <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">회계공시시스템이란</a> </strong>
+                                        <!-- <ul>
+                                            <li> <a href="/minwon/guid/use_info_A.do">민원신청방법</a> </li>
+                                            <li> <a href="/minwon/info/use_info_B1.do">민원따라하기</a> </li>
+                                            <li> <a href="/minwon/rigion/rigion_C1.do">관할관서찾기</a> </li>
+                                        </ul> -->
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                    <!-- dep3 오른쪽 영역 -->
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">주요회계공시항목설명</a> </strong>
+                                        <!-- <ul>
+                                            <li> <a href="/minwon/apply/formApplyList.do">온라인민원신청</a> </li>
+                                            <li> <a href="/minwon/qnaApply.do">질의민원</a> </li>
+                                            <li> <a href="/minwon/fastcounsel/fastcounselList.do">빠른인터넷상담</a> </li>
+                                        </ul> -->
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                    <!-- dep3 오른쪽 영역 -->
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">공지사항</a> </strong>
+                                        <!-- <ul>
+                                            <li> <a href="/minwon/apply/formApplyList.do">온라인민원신청</a> </li>
+                                            <li> <a href="/minwon/qnaApply.do">질의민원</a> </li>
+                                            <li> <a href="/minwon/fastcounsel/fastcounselList.do">빠른인터넷상담</a> </li>
+                                        </ul> -->
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                    <!-- dep3 오른쪽 영역 -->
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">자주묻는질문</a></strong>
+                                        <!-- <ul>
+                                            <li> <a href="/minwon/apply/formApplyList.do">온라인민원신청</a> </li>
+                                            <li> <a href="/minwon/qnaApply.do">질의민원</a> </li>
+                                            <li> <a href="/minwon/fastcounsel/fastcounselList.do">빠른인터넷상담</a> </li>
+                                        </ul> -->
+                                    </div>
+                                </li>
+                           
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">국민참여<span class="sr_only">열기</span></a>
+                        <div class="submenu">
+                            <ul>
+                                <li class="plus"> <a href="javascript:void(0);">국민참여</a>
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">국민참여</a> </strong>
+                                        <ul>
+                      
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">규제혁신</a>
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">규제혁신</a> </strong>
+                                        <ul>
+                
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">적극행정</a>
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="javascript:void(0);">적극행정</a> </strong>
+                                        <ul>
+                                   
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a href="javascript:void(0);">크리에이터 협업</a>
+                                    <div class="dep3"> <strong class="dep3_title"> <a href="/participate/creator/main.do">크리에이터 협업</a> </strong>
+                                        <ul> </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+<!-- 헤드 메뉴 클릭 시 해당 li에 active class 추가 하고 나머지에는 없애기 -->
+<script>
+    // $('#gnb1 > .topmenu li.plus a').on('click','.topmenu li.plus a' ,function(){
+
+    //     $(this).parent().addClass('active')
+    // })
+
+    $(document).ready(function(){
+
+    const gnbTopMenu = $('#gnb1 > .topmenu > li.plus > a');
+    const gnbSubMenu = $('#gnb1 .submenu > ul > li > a');
+
+    gnbTopMenu.click(function(){
+
+    gnbTopMenu.css('border', '1px solid blue');
+    const gnbOpenMenu = $(this).parent(); // 오픈 요소 (depth -2)
+
+    // 상위 메뉴 활성화
+    gnbOpenMenu.addClass('active');
+    gnbTopMenu.not($(this)).parent().removeClass('active');
+
+    // 서브메뉴 중 첫 번째 요소에 active 클래스 추가
+    const firstSubMenuItem = gnbOpenMenu.find('.submenu ul li:first-child a');
+    firstSubMenuItem.parent().addClass('active');
+
+    // 다른 서브메뉴는 active 제거
+    gnbOpenMenu.siblings().find('.submenu ul li').removeClass('active');
+});
+
+gnbSubMenu.click(function(){
+    gnbSubMenu.css('border', '1px solid green');
+
+    const gnbOpenSubMenu = $(this).parent();
+    gnbOpenSubMenu.addClass('active');
+
+    // 다른 서브메뉴 항목에서 active 제거
+    gnbSubMenu.not($(this)).parent().removeClass('active');
+});
+
+});
+
+
+
+
+ 
+
+    
+</script>
+
+</html>
