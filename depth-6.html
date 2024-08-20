@@ -33,7 +33,7 @@
 <body>
     <div class="sub depth-in" style="position: relative;">  <!-- 클래스 삽입 위치 -->
         <p style="color: rgb(255, 0, 0); position: absolute; top: 50%; left: 20%;">
-            <span>화살표 임시 제거 버전</span>
+            <span>depth 2 이상 화살표 임시 제거 버전</span>
             <br>
             <span>- depth 6까지 제작</span>
             <br>
@@ -70,7 +70,7 @@
                                             <span class="menu-title">한국노동조합총연맹
                                                 <span class="list-span">2-depth</span>
                                             </span>
-                                            <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
+                                            <button type="button" class="btn btn-ico menu-btn"></button>
                                         </div>
                                         <!-- depth-3 start -->
                                         <div class="menu-body depth-3">
@@ -131,7 +131,7 @@
                                     <li class="depth-2-li">
                                         <div class="menu-head depth-2">
                                             <span class="menu-title">전국민주노동총연맹</span>
-                                            <!-- <button type="button" class="btn btn-ico menu-btn"></button> -->
+                                            <button type="button" class="btn btn-ico menu-btn"></button>
                                         </div>
                                         <!-- depth-3 start -->
                                         <div class="menu-body depth-3">
@@ -330,7 +330,7 @@
         if($currentBody.length === 0 || $(this).hasClass('depth-2') === false){ // 마지막 요소이거나, depth-2 클래스를 가지고 있지 않으면
 
             if($(this).hasClass('depth-1') === false) {
-                $(this).css('background-color', '#ddd')
+                $(this).css('background-color', '#eee')
                 $('.menu-body .menu-head').not(this).css('background-color', 'transparent')
             }
         }
