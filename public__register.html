@@ -107,7 +107,9 @@
                                 <caption>사용자용 회원가입 폼입니다.</caption>     
                                 <tr>
                                     <th class="col2__th">
-                                        <span>노동조합 명칭</span>
+                                        <span>
+                                            노동조합 명칭
+                                        </span>
                                         <span class="must__type">
                                             (또는 산하조직)
                                         </span>
@@ -118,18 +120,22 @@
                                         </div>
                                     </td>
                                     <th>
-                                        <span class="must__type">노동조합 약어명</span>
+                                        <span class="must__type">
+                                            <label for="ddd">
+                                                노동조합 약어명
+                                            </label>
+                                        </span>
                                     </th>
                                     <td class="td--flex harf__td">
                                         <div class="td--width">
-                                            <input type="text">
+                                            <input type="text" id="ddd" name="ddd">
                                         </div>
                                     </td>
                                 </tr>
 
                                 <tr class="with__long__select">
                                     <th>
-                                        <span>조직단위</span>
+                                            조직단위
                                     </th>
                                     <td class="td--flex harf__td ">
                                         <div class="td--width">
@@ -327,7 +333,7 @@
                                             -->
                                             <div class="form__row flex--box-c">
                                                 <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
-                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" />
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;"/>
                                                 </div>
                                                 <div class="form-content form-wrap">
                                                     <div class="flex--box-c">
@@ -343,7 +349,7 @@
                                             <!-- 두번째 줄 -->
                                             <div class="form__row flex--box-c">
                                                 <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
-                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" />
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;"/>
                                                 </div>
                                                 <div class="form-content form-wrap">
                                                     <div class="flex--box-c">
@@ -379,7 +385,8 @@
                                         <tr>
                                             <th scope="row" class="txt--c border--r">공시사유구분</th>
                                             <td>
-                                                하반기 공시
+
+                                                <span style="line-height: 5.8rem;" class="mg--10-l">하반기 공시</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -388,7 +395,7 @@
                                             <td>
                                                  
                                                 <div class="flex--box" style="height: 5.8rem;">
-                                                    <div class="preview flex--box-c pd--10-m mg--10-r">
+                                                    <div class="preview flex--box-c mg--10-l mg--10-r">
                                                     <p></p>
                                                     </div>
                                                     <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>

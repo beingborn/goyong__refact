@@ -4,7 +4,7 @@
 
 
 // manage__labor 다중 셀렉터 및 인풋 조정 영역
-.td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem 0;}
+.td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;}
 .td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px;} // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
 .td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
 
@@ -38,7 +38,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 }
 
 
-td {line-height: 5.8rem;}
+td {min-height: 5.8rem;}
   
 .radio__table th {width: 12.5%; line-height: 5.8rem;}
 .radio__table td {width: calc(100% - 12.5%);}
@@ -53,7 +53,7 @@ td {line-height: 5.8rem;}
 
 .table__horizontal__wrap th {background-color: #F9F9FA;}
 .table__horizontal__wrap tr {border-bottom: 0.1rem solid #ddd;}
-.table__horizontal__wrap td {padding: 0 1rem;}
+// .table__horizontal__wrap td input[type="text"],.table__horizontal__wrap td select {margin: 0.9rem 1rem;}
 .table__horizontal__wrap .note__td {line-height: 15rem;}
 .table__horizontal__wrap .note__td-txt-area {height: 100%;}
 .table__horizontal__wrap input[type="text"] {height: 4rem;}

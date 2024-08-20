@@ -522,7 +522,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .td__container select {
@@ -637,7 +637,7 @@ table caption {
 }
 
 td {
-  line-height: 5.8rem;
+  min-height: 5.8rem;
 }
 
 .radio__table th {
@@ -668,10 +668,6 @@ td {
 
 .table__horizontal__wrap tr {
   border-bottom: 0.1rem solid #ddd;
-}
-
-.table__horizontal__wrap td {
-  padding: 0 1rem;
 }
 
 .table__horizontal__wrap .note__td {
