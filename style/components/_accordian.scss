@@ -10,36 +10,66 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    position: relative;
     // padding: 10px 0;
 }
 
 // .menu-list 
 input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
 // .depth--active {border-top: 0.3rem solid #16408D;}
-.depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
-.depth-1 .tit {font-size: 2.1rem; font-weight: 700;}
-.depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
 
 
-/* 기존 depth 3 까지 코드 */
-.menu-wrap {
+// 메뉴 관리 > 권한 체크 표시 있는 버전
+
+.menu-check {
+    .depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
+    .depth-1 .tit {font-size: 2.1rem; font-weight: 700;}
+    .depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
     .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
     .depth-3 .sub-ul {padding-left: 1.6rem;}
     .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
+}
+
+
+/* 메뉴별 권한 관리 기존 depth 3 까지 코드 */
+.menu-wrap {
+    
+    .depth-1 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
+    .depth-1 .tit {font-size: 2.1rem; font-weight: 700;}
+    .depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
+    .depth-3 .sub-ul {padding: 2rem 0;}
+    // .depth-3 .sub-ul > li  {background-color: lightgray; border: 0.1rem solid blue;}
+    .depth-3 .sub-ul > li > a {width: 100%; height: 100%; display: block; padding-left: 2.5rem; padding-top: 1.5rem; padding-bottom: 1.5rem;}
     .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem;}
 }
 
+// 노동 조합 체계
+.system-list .menu-head.depth-0 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
+.system-list .menu-head.depth-0 .tit {font-size: 2.1rem; font-weight: 700;}
+
+.system-list .menu-head:not(.depth-0) {font-size: 1.5rem;}
+
 .system-list {max-height: 1200px; overflow-y: auto;}
-.system-list  .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {padding-top: 12px; padding-bottom: 12px;}
+.system-list  .menu-head.depth-3, .menu-head.depth-4, .menu-head.depth-5 {padding-top: 12px; padding-bottom: 12px;}
+.system-list  .menu-head.depth-2 {padding: 1.5rem 1.2rem;}
+.system-list  .menu-head.depth-3{padding-left: 20px;}
+.system-list  .menu-head.depth-4{padding-left: 28px;}
+.system-list  .menu-head.depth-5{padding-left: 36px;}
+
+.system-list  .list-span {font-size: 1.2rem; color: rgb(67, 55, 179); font-weight: 700;}
+
+.system-list .depth-0 {padding: 2.5rem 1rem; border-bottom: 0.1rem solid #ddd;}
+.system-list .depth-0 .tit {font-size: 2.1rem; font-weight: 700;}
+.system-list .depth-1 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
+
+.system-list {max-height: 1200px; overflow-y: auto;}
+.system-list  .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6, .menu-head.depth-7 {padding-top: 12px; padding-bottom: 12px;}
 .system-list  .menu-head.depth-3 {padding: 1.5rem 1.2rem;}
 .system-list  .menu-head.depth-4{padding-left: 20px;}
 .system-list  .menu-head.depth-5{padding-left: 28px;}
 .system-list  .menu-head.depth-6{padding-left: 36px;}
-
+.system-list  .menu-head.depth-7{padding-left: 44px;}
 .system-list  .list-span {font-size: 1.2rem; color: rgb(67, 55, 179); font-weight: 700;}
-
-
-
 
 /* 초기 상태 안보이게 지정 */
 .menu-body {
@@ -50,7 +80,10 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
     width: 2rem;
     height: 2rem;
     background: url(../img/arrow__bottom-bk.svg) no-repeat center ;
- 
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);       
 //    background: url(img/arrow__bottom-bk.png) no-repeat center ;
     border: none;
     cursor: pointer;

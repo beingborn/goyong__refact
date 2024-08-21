@@ -142,6 +142,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .pd--20-l {padding-left: 2rem;}
 
   .pd--10-r {padding-right: 1rem;}
+  .pd--10-b {padding-bottom: 1rem;}
 
   .pd--10-m {padding: 0 1rem;}
 
@@ -154,6 +155,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mg--10-r {margin-right: 1rem;}
   .mg--20-r {margin-right: 2rem;}
   
+  .mg--10-b {margin-bottom: 1rem;}
   .mg--20-b {margin-bottom: 2rem;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
@@ -204,3 +206,10 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   // 메인 버튼
   .btn--active { background-color: $second-color; color: #fff;}
   .btn--disabled { background-color: #fff; color: #1d1d1d;}
+
+
+
+  // 필수 입력 표시
+
+  .must__write { position: relative;}
+  .must__write::after {content: " *"; color: #fe5555; font-weight: bold; position: absolute; right: -1rem; }

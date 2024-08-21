@@ -17,8 +17,14 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
 .table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .table__horizontal__ex th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1;} 
-.table__horizontal__ex td {padding: 0 1rem; width: auto;} 
-.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem; width: 100%;} 
+.table__horizontal__ex td {
+  // padding: 0 1rem;
+  width: auto;
+} 
+.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem; 
+  width: 100%;
+}
+
 .table__horizontal__ex tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);} 
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
@@ -51,7 +57,7 @@ td {min-height: 5.8rem;}
 .radio__table .flex label:not(:last-child) {margin-right: 2rem;}
 
 
-.table__horizontal__wrap th {background-color: #F9F9FA;}
+.table__horizontal__wrap th {background-color: #F9F9FA; vertical-align: middle;}
 .table__horizontal__wrap tr {border-bottom: 0.1rem solid #ddd;}
 
 // .table__horizontal__wrap td input[type="text"],.table__horizontal__wrap td select {margin: 0.9rem 1rem;}

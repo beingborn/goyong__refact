@@ -17,9 +17,9 @@
 .bg--blue-00 {background-color: #246BEB;}
 .bg--navy-00 {background-color: #003675;}
 .bg--black-00 {background-color: #000000;}
-.bg--gray-00 {background-color: gray;}
+.bg--gray-00 {background-color: #D8D8D8;}
 .bg--red-00 {background-color: #B9131E;}
-.bg--green-00 {background-color: green;}
+.bg--green-00 {background-color: #008A1E;}
 .bg--transparent-00 {background-color: none;}
 
 
@@ -87,7 +87,7 @@
 
 
     .btn__select {height: 9rem; background-color: transparent; color: #000; border-radius: 1rem; border: 0.1rem solid #000; font-size: 1.6rem;}
-    .btn__find {height: 4rem; background: transparent; border: 0.1rem solid #ddd;}
+    .btn__find {height: 4rem; background: transparent; border: 0.1rem solid #ddd; border-radius: 0.5rem;}
     .btn__file__select {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000;  max-height: 4rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;}
     .btn__upload {font-size: 1.6rem; padding: 0.8rem 2rem; color: #fff; max-height: 4rem; height: 4rem; border-radius: 0.5rem;}
     .btn__input {
@@ -110,4 +110,10 @@
       text-align: center;
       font-size: 3rem;
       border-radius: 0.5rem;
+  }
+
+
+  .input__find {
+    // font-size: 1.6rem;
+    padding: 0.8rem 2.6rem;
   }

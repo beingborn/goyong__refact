@@ -133,16 +133,24 @@
                                                             <!-- 3depth 목록 -->
                                                             <ul class="sub-ul">
                                                                 <li>
-                                                                    <span class="flex--center-s">회계공시 시스템이란</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            회계공시 시스템이란
+                                                                        </a>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="flex--center-s">주요회계 공시항목 설명</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            주요회계 공시항목 설명
+                                                                        </a>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="flex--center-s">공지사항</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            공지사항
+                                                                        </a>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="flex--center-s">자주 묻는 질문</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            자주 묻는 질문
+                                                                        </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -159,10 +167,14 @@
                                                             <!-- 3depth 목록 -->
                                                             <ul class="sub-ul">
                                                                 <li>
-                                                                    <span class="flex--center-s">회계공시 열람</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            회계공시 열람
+                                                                        </a>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="flex--center-s">회계공시여부 조회</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            회계공시 여부 조회
+                                                                        </a>
                                                                 </li>
                                                           
                                                             </ul>
@@ -180,10 +192,14 @@
                                                             <!-- 3depth 목록 -->
                                                             <ul class="sub-ul">
                                                                 <li>
-                                                                    <span class="flex--center-s">회계공시 등록</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            회계공시 등록
+                                                                        </a>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="flex--center-s">가맹노조(산하조직)관리</span>
+                                                                        <a href="javascript:void(0)">
+                                                                            가맹노조(산하조직)관리
+                                                                        </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -344,6 +360,15 @@
 
     <script>
 
+        let depthBody3 = $('.menu-wrap .depth-3 .sub-ul > li > a')
+
+        depthBody3.click(function(){
+            $(this).parent().css('background', '#eee')
+            // 다른 depthBody3의 부모 요소들 배경색을 transparent로 설정
+            depthBody3.not(this).parent().css('background', 'transparent');
+        })
+
+
         // 임시로 radio checked 표시
         $(document).ready(function(){
         for (i = 0; i <= 2; i++) {
@@ -396,6 +421,11 @@
         e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
     });
 });
+
+
+
+
+
 
 
         

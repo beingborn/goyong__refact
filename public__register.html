@@ -92,7 +92,7 @@
                   <button type="button">노동조합정보</button>
                 </div>
                 <div class="tab__btn">
-                  <button type="button">회계공시열람</button>
+                  <button type="button">회계공시</button>
                 </div>
             </div>
             <div class="tab__content">
@@ -527,6 +527,16 @@
 
 
 
+<div class="function__group">
+    <!-- 
+  아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
+  색상 목록 : blue, black, red, green, gray
+
+  ex) 회색 버튼 <button type="button" class= "btn__control bg--gray-00">조회</button> 
+  -->
+  <button type="button" class="btn__control bg--blue-00">저장</button>
+  <button type="button" class="btn__control bg--blue-00">다음</button>
+</div>
 
 
 
@@ -545,224 +555,425 @@
                 </div>
 
                 <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
-                <div class="tab" title="회계공시 열람 탭">
-                    <div class="lnb__title flex__title">
-                        <h2>기본사항</h2>
-                    </div>
-                    <div class="table__template__horizontal public__table__wrap">
-                        <div class="public__table">
-                            <table>
-                                <caption>사용자용 회원가입 폼입니다.</caption>
-                                <tr>
-                                    <th class="col2__th">
-                                        <span>노동조합 명칭</span>
-                                        <span class="must__type">
-                                            (또는 산하조직)
-                                        </span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span class="must__type">노동조합 약어명</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="with__long__select">
-                                    <th>
-                                        <span>조직단위</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <select name="s-10-1" id="s10-1" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span>조합형태</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <select name="s-1-21" id="s1-21" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="with__long__select">
-                                    <th>
-                                        <span>상급단체의 명칭</span>
-                                    </th>
-                                    <td class="td--flex" colspan="3">
-                                        <div class="td--width select__wrap__3">
-                                            <select name="s-1-31" id="s1-31" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                            <select name="s-1-32" id="s1-32" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                            <select name="s-1-33" id="s1-33" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                        </div>
-                                    </td>
 
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span class="must__type">대표자</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                  
-                                    <th class="col2__th">
-                                        <span>사업자등록번호</span>
-                                        <span>
-                                            (고유번호증번호 등)
-                                        </span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span>설립연월일</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width p-td__calender">
-                                            <input type="text">
-                                            <span class="calender__icon"></span>
-                                        </div>
-                                    </td>
-                                  
-                                    <th>
-                                        <span>회계기간</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <div class="p-td__date">
-                                                <select name="d-4-17" id="d-4-17" class="p-select--no--style select__renew">
-                                                    <option value="월 선택">월 선택</option>
-                                                </select>
-                                                <select name="d-4-27" id="d-4-27" class="p-select--no--style  select__renew">
-                                                    <option value="&nbsp;">&nbsp;</option>
-                                                </select>
-                                                <span>~</span>
-                                                <select name="d-4-37" id="d-4-37" class="p-select--no--style  select__renew">
-                                                    <option value="월 선택">월 선택</option>
-                                                </select>
-                                                <select name="d-4-47" id="d-4-47" class="p-select--no--style  select__renew">
-                                                    <option value="&nbsp;">&nbsp;</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span>조합원 수</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text" value="0">
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span class="must__type">담당자명</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span class="must__type">유선연락처</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span class="must__type">담당자명 이메일</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span>휴대폰</span>
-                                    </th>
-                                    <td class="td--flex harf__td">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                    <th>
-                                        <span>수신동의 여부</span>
-                                    </th>
-                                    <td class="td--flex harf__td radio__wrap">
-                                        <div class="td--width">
-                                            <div class="flex">
-                                                <input type="radio" name="rdo_52-1" id="rdo_52-1">
-                                                <label for="rdo_52-1">동의</label>
-                                                <input type="radio" name="rdo_62-1" id="rdo_62-1">
-                                                <label for="rdo_62-1">비동의</label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span>소재지</span>
-                                    </th>
-                                    <td class="td--flex" colspan="3">
-                                        <div class="td--width">
-                                            <input type="text">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+
+                <div class="tab">
+                    <!-- 상단 공시정보 -->
+                    <div class="dis__info">
+                      <h2 class="data__title">공시정보</h2>
+                      <div class="tab__detail table__horizontal__ex">
+                        <table>
+                          <caption>
+                            공시정보 검색 폼
+                          </caption>
+                          <tbody>
+                            <tr style="position: relative" class="r2">
+                              <th scope="row" style="white-space: nowrap;">
+                                <label for="abc">
+                                    <span class="must__write">회계연도</span>
+                                </label>
+                              </th>
+                              <td>
+                                <div class="td__container">
+                                    <select name="abc" id="abc" class="select--no--style select__renew">
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                              </td>
+                              <th scope="row" style="white-space: nowrap;">
+                                <label for="examples1033">
+                                    <span class="must__write">회계기간</span>
+                                </label>
+                              </th>
+                              <td>
+                                <div class="td__container flex--box-c">
+                                    <input type="text"id="examples1033" >
+                                    <span>~</span>
+                                    <input type="text"id="examples1033" >
+                                </div> 
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+      
+                    </div>
+                    <!-- 자산 및 부채 현황 -->
+                    <div class="dis__info">
+                      <h2 class="data__title">자산 및 부채 현황</h2>
+                      <div class="tab__detail table__vertical">
+                        <table>
+                          <caption>
+                            자산 및 부채현황 {구분, 자산}
+                          </caption>
+                          <colgroup>
+                            <col class="align__cols">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">구분</th>
+                              <th>자산</th>
+                              <th>현금및예금</th>
+                              <th>토지</th>
+                              <th>건물</th>
+                              <th>기타자산</th>
+                              <th>부채</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">a총계(=b+c+d+e)</th>
+                              <td class="txt--l">1,233,000</td>
+                              <td class="txt--l">1,496,004</td>
+                              <td class="txt--l">803,117</td>
+                              <td class="txt--l">16,887,358</td>
+                              <td class="txt--l">15,340,799</td>
+                              <td class="txt--l">4,535,449</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a일반회계</th>
+                              <td class="txt--l">34,527,278</td>
+                              <td class="txt--l">1,496,004</td>
+                              <td class="txt--l">803,117</td>
+                              <td class="txt--l">16,887,358</td>
+                              <td class="txt--l">15,340,799</td>
+                              <td class="txt--l">4,535,449</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a특별회계</th>
+                              <td class="txt--l">34,527,278</td>
+                              <td class="txt--l">1,496,004</td>
+                              <td class="txt--l">803,117</td>
+                              <td class="txt--l">16,887,358</td>
+                              <td class="txt--l">15,340,799</td>
+                              <td class="txt--l">4,535,449</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">b보조금사업회계</th>
+                              <td class="txt--l">34,527,278</td>
+                              <td class="txt--l">1,496,004</td>
+                              <td class="txt--l">803,117</td>
+                              <td class="txt--l">16,887,358</td>
+                              <td class="txt--l">15,340,799</td>
+                              <td class="txt--l">4,535,449</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">c수입사업회계</th>
+                              <td class="txt--l">34,527,278</td>
+                              <td class="txt--l">1,496,004</td>
+                              <td class="txt--l">803,117</td>
+                              <td class="txt--l">16,887,358</td>
+                              <td class="txt--l">15,340,799</td>
+                              <td class="txt--l">4,535,449</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 수입현황 -->
+                    <div class="dis__info earn__sit">
+                      <h2 class="data__title">수입 현황</h2>
+                      <div class="tab__detail table__vertical">
+                        <table>
+                          <caption>
+                            수입현황 {구분, 자산}
+                          </caption>
+                          <colgroup>
+                            <col class="align__cols">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col" rowspan="2">구분</th>
+                              <th rowspan="2">수입총계</th>
+                              <th rowspan="2">전년도 이월금</th>
+                              <th colspan="8">당기수입</th>
+                            </tr>
+                            <tr>
+                              <th>조합비</th>
+                              <th>상급단체 교부금</th>
+                              <th>하부조직 부과금</th>
+                              <th>후원금</th>
+                              <th>타회계 전입금</th>
+                              <th>보조금 수입</th>
+                              <th>수익사업 수입</th>
+                              <th>기타</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">a총계(=b+c+d+e)</th>
+                              <td class="txt--l">135,7627,948</td>
+                              <td class="txt--l">535,154,151</td>
+                              <td class="txt--l">300005</td>
+                              <td class="txt--l">4444060</td>
+                              <td class="txt--l">2323211</td>
+                              <td class="txt--l">555555</td>
+                              <td class="txt--l">552313</td>
+                              <td class="txt--l">131331</td>
+                              <td class="txt--l">23224</td>
+                              <td class="txt--l">13132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a일반회계</th>
+                              <td class="txt--l">135,7627,948</td>
+                              <td class="txt--l">535,154,151</td>
+                              <td class="txt--l">300005</td>
+                              <td class="txt--l">4444060</td>
+                              <td class="txt--l">2323211</td>
+                              <td class="txt--l">555555</td>
+                              <td class="txt--l">552313</td>
+                              <td class="txt--l">131331</td>
+                              <td class="txt--l">23224</td>
+                              <td class="txt--l">13132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a특별회계</th>
+                              <td class="txt--l">135,7627,948</td>
+                              <td class="txt--l">535,154,151</td>
+                              <td class="txt--l">300005</td>
+                              <td class="txt--l">4444060</td>
+                              <td class="txt--l">2323211</td>
+                              <td class="txt--l">555555</td>
+                              <td class="txt--l">552313</td>
+                              <td class="txt--l">131331</td>
+                              <td class="txt--l">23224</td>
+                              <td class="txt--l">13132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a보조금사업회계</th>
+                              <td class="txt--l">135,7627,948</td>
+                              <td class="txt--l">535,154,151</td>
+                              <td class="txt--l">300005</td>
+                              <td class="txt--l">4444060</td>
+                              <td class="txt--l">2323211</td>
+                              <td class="txt--l">555555</td>
+                              <td class="txt--l">552313</td>
+                              <td class="txt--l">131331</td>
+                              <td class="txt--l">23224</td>
+                              <td class="txt--l">13132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">c수익사업회계</th>
+                              <td class="txt--l">135,7627,948</td>
+                              <td class="txt--l">535,154,151</td>
+                              <td class="txt--l">300005</td>
+                              <td class="txt--l">4444060</td>
+                              <td class="txt--l">2323211</td>
+                              <td class="txt--l">555555</td>
+                              <td class="txt--l">552313</td>
+                              <td class="txt--l">131331</td>
+                              <td class="txt--l">23224</td>
+                              <td class="txt--l">13132</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 지출 현황 -->
+                    <div class="dis__info expend__sit">
+                      <h2 class="data__title">지출 현황</h2>
+                      <div class="tab__detail table__vertical">
+                        <table class="min--width">
+                          <caption>
+                            수입현황 {구분, 자산}
+                          </caption>
+                          <colgroup>
+                            <col class="align__cols" >
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col" rowspan="3">구분</th>
+                              <th rowspan="3">수입총계</th>
+                              <th colspan="13">당기지출</th>
+                              <th rowspan="3">차년도<br>이월금</th>
+                            </tr>
+                            <tr>
+                              <th colspan="3">일반관리비용</th>
+                              <th colspan="6">사업수행비용</th>
+                              <th rowspan="2">상급단체<br >부과금</th>
+                              <th rowspan="2">하부조직<br >교부금</th>
+                              <th rowspan="2">타회계<br >전출금</th>
+                              <th rowspan="2" class="border-right">기타</th>
+                            </tr>
+                            <tr>
+                              <th>인건비</th>
+                              <th>업무추진비</th>
+                              <th>기타운영비</th>
+                              <th>총회 등 <br >대회비</th>
+                              <th>조직사업비</th>
+                              <th>정책사업비</th>
+                              <th>교육·홍보<br >사업비</th>
+                              <th>교섭·쟁의<br >사업비</th>
+                              <th class="border-right">기타사업비</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">a총계(=b+c+d+e)</th>
+                              <td class="txt--l">2725</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">313</td>
+                              <td class="txt--l">1331</td>
+                              <td class="txt--l">224</td>
+                              <td class="txt--l">13132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">1332</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a일반회계</th>
+                              <td class="txt--l">2725</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">313</td>
+                              <td class="txt--l">1331</td>
+                              <td class="txt--l">224</td>
+                              <td class="txt--l">13132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">1332</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a특별회계</th>
+                              <td class="txt--l">2725</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">313</td>
+                              <td class="txt--l">1331</td>
+                              <td class="txt--l">224</td>
+                              <td class="txt--l">13132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">1332</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a보조금사업회계</th>
+                              <td class="txt--l">2725</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">313</td>
+                              <td class="txt--l">1331</td>
+                              <td class="txt--l">224</td>
+                              <td class="txt--l">13132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">1332</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">a수익사업회계</th>
+                              <td class="txt--l">2725</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">4</td>
+                              <td class="txt--l">184</td>
+                              <td class="txt--l">313</td>
+                              <td class="txt--l">1331</td>
+                              <td class="txt--l">224</td>
+                              <td class="txt--l">13132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">1332</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                              <td class="txt--l">132</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div
+                      class="tab__detail table__horizontal table__last"
+                      style="margin-bottom: 20px"
+                    >
+                      <table>
+                        <caption>
+                          공시정보(회계연도, 회계기간)출력폼
+                        </caption>
+                        <colgroup>
+                          <col class="align__cols">
+                          <col class="algin__last" style="width: 85%;" >
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="col">
+                              <label for="examples17">주석</label>
+                            </th>
+                            <td class="input--flex">
+                              <input type="text" value="" id="examples17">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    
+                        <div class="function__group">
+                            <!-- 
+                        아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
+                        색상 목록 : blue, black, red, green, gray
+
+                        ex) 회색 버튼 <button type="button" class= "btn__control bg--gray-00">조회</button> 
+                        -->
+                        <button type="button" class="btn__control bg--blue-00">가맹노조(산하조직)관리</button>
                         </div>
-                    </div>
 
-           
-                </div>
-            </div>
-
-
-
-            <div class="function__group">
-                  <!-- 
-                아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
-                색상 목록 : blue, black, red, green, gray
-
-                ex) 회색 버튼 <button type="button" class= "btn__control bg--gray-00">조회</button> 
-                -->
-                <button type="button" class="btn__control bg--blue-00">저장</button>
-                <button type="button" class="btn__control bg--blue-00">다음</button>
-            </div>
-
-
+                  </div>
   
+            </div>
         </div>
        </main>
 

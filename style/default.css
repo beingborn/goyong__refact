@@ -215,6 +215,10 @@ textarea {
   padding-right: 1rem;
 }
 
+.pd--10-b {
+  padding-bottom: 1rem;
+}
+
 .pd--10-m {
   padding: 0 1rem;
 }
@@ -236,6 +240,10 @@ textarea {
 
 .mg--20-r {
   margin-right: 2rem;
+}
+
+.mg--10-b {
+  margin-bottom: 1rem;
 }
 
 .mg--20-b {
@@ -351,6 +359,18 @@ textarea {
   color: #1d1d1d;
 }
 
+.must__write {
+  position: relative;
+}
+
+.must__write::after {
+  content: " *";
+  color: #fe5555;
+  font-weight: bold;
+  position: absolute;
+  right: -1rem;
+}
+
 /* 
   버튼 CSS
 */
@@ -377,7 +397,7 @@ textarea {
 }
 
 .bg--gray-00 {
-  background-color: gray;
+  background-color: #D8D8D8;
 }
 
 .bg--red-00 {
@@ -385,7 +405,7 @@ textarea {
 }
 
 .bg--green-00 {
-  background-color: green;
+  background-color: #008A1E;
 }
 
 .bg--transparent-00 {
@@ -473,6 +493,7 @@ textarea {
   height: 4rem;
   background: transparent;
   border: 0.1rem solid #ddd;
+  border-radius: 0.5rem;
 }
 
 .btn__file__select {
@@ -517,6 +538,10 @@ textarea {
   text-align: center;
   font-size: 3rem;
   border-radius: 0.5rem;
+}
+
+.input__find {
+  padding: 0.8rem 2.6rem;
 }
 
 /* 
@@ -571,7 +596,6 @@ table caption {
 }
 
 .table__horizontal__ex td {
-  padding: 0 1rem;
   width: auto;
 }
 
@@ -668,6 +692,7 @@ td {
 
 .table__horizontal__wrap th {
   background-color: #F9F9FA;
+  vertical-align: middle;
 }
 
 .table__horizontal__wrap tr {
@@ -1079,6 +1104,7 @@ input[type=file]::file-selector-button {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 input[type=checkbox] {
@@ -1086,17 +1112,15 @@ input[type=checkbox] {
   height: 2.4rem;
 }
 
-.depth-1 {
+.menu-check .depth-1 {
   padding: 2.5rem 1rem;
   border-bottom: 0.1rem solid #ddd;
 }
-
-.depth-1 .tit {
+.menu-check .depth-1 .tit {
   font-size: 2.1rem;
   font-weight: 700;
 }
-
-.depth-2 {
+.menu-check .depth-2 {
   border-bottom: 0.1rem solid #ddd;
   border-top: 0.1rem solid #ddd;
   font-size: 1.8rem;
@@ -1106,19 +1130,48 @@ input[type=checkbox] {
   justify-content: space-between;
   align-items: center;
 }
-
-/* 기존 depth 3 까지 코드 */
-.menu-wrap .depth-3 {
+.menu-check .depth-3 {
   padding: 2.4rem 2rem 2.4rem 1rem;
 }
-.menu-wrap .depth-3 .sub-ul {
+.menu-check .depth-3 .sub-ul {
   padding-left: 1.6rem;
 }
-.menu-wrap .depth-3 .sub-ul > li {
+.menu-check .depth-3 .sub-ul > li {
   height: 4.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* 메뉴별 권한 관리 기존 depth 3 까지 코드 */
+.menu-wrap .depth-1 {
+  padding: 2.5rem 1rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+.menu-wrap .depth-1 .tit {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.menu-wrap .depth-2 {
+  border-bottom: 0.1rem solid #ddd;
+  border-top: 0.1rem solid #ddd;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2.4rem 2rem 2.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-wrap .depth-3 .sub-ul {
+  padding: 2rem 0;
+}
+.menu-wrap .depth-3 .sub-ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .menu-wrap .depth-3 .sub-ul > li > span::before {
   content: "";
@@ -1130,12 +1183,79 @@ input[type=checkbox] {
   margin-right: 0.8rem;
 }
 
+.system-list .menu-head.depth-0 {
+  padding: 2.5rem 1rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.system-list .menu-head.depth-0 .tit {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.system-list .menu-head:not(.depth-0) {
+  font-size: 1.5rem;
+}
+
 .system-list {
   max-height: 1200px;
   overflow-y: auto;
 }
 
-.system-list .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {
+.system-list .menu-head.depth-3, .menu-head.depth-4, .menu-head.depth-5 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.system-list .menu-head.depth-2 {
+  padding: 1.5rem 1.2rem;
+}
+
+.system-list .menu-head.depth-3 {
+  padding-left: 20px;
+}
+
+.system-list .menu-head.depth-4 {
+  padding-left: 28px;
+}
+
+.system-list .menu-head.depth-5 {
+  padding-left: 36px;
+}
+
+.system-list .list-span {
+  font-size: 1.2rem;
+  color: rgb(67, 55, 179);
+  font-weight: 700;
+}
+
+.system-list .depth-0 {
+  padding: 2.5rem 1rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.system-list .depth-0 .tit {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.system-list .depth-1 {
+  border-bottom: 0.1rem solid #ddd;
+  border-top: 0.1rem solid #ddd;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2.4rem 2rem 2.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.system-list {
+  max-height: 1200px;
+  overflow-y: auto;
+}
+
+.system-list .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6, .menu-head.depth-7 {
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -1156,6 +1276,10 @@ input[type=checkbox] {
   padding-left: 36px;
 }
 
+.system-list .menu-head.depth-7 {
+  padding-left: 44px;
+}
+
 .system-list .list-span {
   font-size: 1.2rem;
   color: rgb(67, 55, 179);
@@ -1171,6 +1295,10 @@ input[type=checkbox] {
   width: 2rem;
   height: 2rem;
   background: url(../img/arrow__bottom-bk.svg) no-repeat center;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
   cursor: pointer;
 }
@@ -2043,16 +2171,13 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-weight: 700;
 }
 
-.data__modal__wrap {
-  position: relative;
-}
 .data__modal__wrap .data__modal, .data__modal__wrap .data__error__modal {
   display: none;
   width: calc(100% - 2rem);
   background-color: #fff;
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -50%);
   border: 0.3rem solid #CBCCCD;
   z-index: 999;
@@ -2092,8 +2217,28 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding-bottom: 2rem;
 }
 
+.menu__find-modal .data__modal {
+  height: auto;
+}
+
+.menu__find-modal .table__vertical table tbody tr th:nth-child(1) {
+  background-color: transparent;
+}
+
+.menu__find-modal .modal__position {
+  padding: 4.8rem 0;
+}
+
+.menu__find-modal .table thead {
+  position: relative;
+}
+
 .data__modal .modal__table, .data__error__modal .modal__table {
   padding-top: 5.8rem;
+}
+
+.function__group .btn__control.bg--gray-00 {
+  color: #000;
 }
 
 .sub {
@@ -2647,18 +2792,6 @@ select {
 .tab__content table tbody th {
   font-weight: 500;
   color: #000;
-}
-
-.must__write {
-  position: relative;
-}
-
-.must__write::after {
-  content: " *";
-  color: #fe5555;
-  font-weight: bold;
-  position: absolute;
-  right: -0.8rem;
 }
 
 .table__horizontal {

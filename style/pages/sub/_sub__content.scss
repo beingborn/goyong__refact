@@ -61,14 +61,6 @@
 }
 
 
-.must__write { position: relative;}
-.must__write::after {
-  content: " *";
-  color: #fe5555;
-  font-weight: bold;
-  position: absolute;
-  right: -0.8rem;
-}
 
 
 

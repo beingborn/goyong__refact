@@ -14,8 +14,9 @@
 .data__modal .data__group__title, .data__error__modal .data__group__title { margin-top: 4rem;
     h2 {font-size: 3rem; font-weight: 700;}
 }
+
 .data__modal__wrap {
-    position: relative;
+    // position: relative;
     .data__modal, .data__error__modal {
         display: none;
         width: calc(100% - 2rem); 
@@ -23,7 +24,7 @@
         background-color: #fff;
         position: absolute; 
         left: 50%;
-        top: 40%;
+        top: 50%;
         transform: translate(-50%, -50%);
         border: 0.3rem solid #CBCCCD;
         z-index: 999;
@@ -49,14 +50,34 @@
     }
     .data__error__modal .modal__close {padding-bottom: 4rem;}
     .data__modal {height: 72rem;}
+
     .data__error__modal {height: auto;}
+
 
     .manage__report__modal {
         height: auto;
         padding-bottom: 2rem;
     }
 }
+
+
+
+// 검색 조건 모달 스타일
+.menu__find-modal .data__modal {height: auto;}
+.menu__find-modal .table__vertical table tbody tr th:nth-child(1) { background-color: transparent;}
+.menu__find-modal .modal__position {padding: 4.8rem 0;}
+
+.menu__find-modal .table thead {position: relative;}
+// .menu__find-modal .table {overflow-x: auto;}
+
+
+
+
 .data__modal .modal__table , .data__error__modal .modal__table {padding-top: 5.8rem;}
+
+
+
+.function__group .btn__control.bg--gray-00 { color: #000;}
 
 
 

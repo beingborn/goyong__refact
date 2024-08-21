@@ -84,8 +84,8 @@
             </div>
           </div>
 
-       <main class="main__content" style="padding-bottom: 40px;">
-        <div class="inner">
+       <main class="main__content" style="padding-bottom: 40px; border: 1px solid blue;">
+        <div class="inner" style="position: relative;">
             <div class="function__group">
                   <!-- 
                 아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
@@ -144,83 +144,259 @@
                         <h2>노동조합 체계</h2>
                     </div>
                     <!-- 메뉴 트리 -->
-                    <ul class="menu-list lnb-list" data-action="accordion">
-                        <li class="li">
-                            <!-- 1depth title -->
-                            <div class="menu-head depth-1">
-                                <h3 class="tit">노동조합</h3>
-                                <!-- <button type="button" class="btn btn-ico menu-btn" style="border: 1px solid blue;">&#9650;</button> -->
+                    <ul class="menu-list lnb-list system-list" data-action="accordion">
+                        <li class="home-li">
+                        <div class="menu-body depth-1-body">
+                            <div class="acco-in first-acco">
+                                <ul class="sub-ul">
+                                    <li class="depth-1-li">
+                                    <div class="menu-head depth-0" style="border-bottom: 0.5rem solid #246BEB;">
+                                        <h3 class="tit">노동조합</h3>
+                                    </div>
+
+
+                                    <!-- depth를 추가하시려면 depth-()-li를 복사 붙여넣기 하시면 됩니다. -->
+                                    <!-- ex) 뎁스 6 추가 => depth-6-li 추가 -->
+
+                                    <div class="menu-body depth-1-body">
+                                        <div class="acco-in">
+                                            <ul class="sub-ul">
+                                                <!-- First depth-2-li -->
+                                                <li class="depth-2-li">
+                                                <div class="menu-head depth-2">
+                                                    <span class="menu-title">한국노동조합총연맹</span>
+                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                </div>
+                                                <div class="menu-body depth-3">
+                                                    <ul class="sub-ul">
+                                                        <li class="depth-3-li">
+                                                        <div class="menu-head depth-3">
+                                                            <span class="menu-title">&#9495; 공무원 노동조합 연맹</span>
+                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                        </div>
+                                                        <div class="menu-body depth-4">
+                                                            <ul class="sub-ul">
+                                                                <li class="depth-4-li">
+                                                                <div class="menu-head depth-4">
+                                                                    <span class="menu-title">&#9495; XXX 공무원 노동조합</span>
+                                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                </div>
+                                                                <div class="menu-body depth-5">
+                                                                    <ul class="sub-ul">
+                                                                        <li class="depth-5-li">
+                                                                        <div class="menu-head depth-5">
+                                                                            <span class="menu-title">&#9495; XXX 공무원 노동조합 지부</span>
+                                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                        </div>
+                                                                        <div class="menu-body depth-6">
+                                                                            <ul class="sub-ul">
+                                                                                <li class="depth-6-li">
+                                                                                <div class="menu-head depth-6">
+                                                                                    <span class="menu-title">&#9495; XXX 공무원 노동조합 지회</span>
+                                                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                                </div>
+                                                                                <div class="menu-body depth-7">
+                                                                                    <ul>
+                                                                                        <li class="depth-7-li">
+                                                                                        <div class="menu-head depth-7">
+                                                                                            <span class="menu-title">&#9495; 공무원 노동조합 분회</span>
+                                                                                        </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                </li>
+                                                <!-- 1 - depth-2 li end -->
+
+                                                <li class="depth-2-li">
+                                                    <div class="menu-head depth-2">
+                                                        <span class="menu-title">전국총연맹</span>
+                                                        <button type="button" class="btn btn-ico menu-btn"></button>
+                                                    </div>
+                                                    <div class="menu-body depth-3">
+                                                        <ul class="sub-ul">
+                                                            <li class="depth-3-li">
+                                                            <div class="menu-head depth-3">
+                                                                <span class="menu-title">&#9495; 전국 노동조합 연맹</span>
+                                                                <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            </div>
+                                                            <div class="menu-body depth-4">
+                                                                <ul class="sub-ul">
+                                                                    <li class="depth-4-li">
+                                                                    <div class="menu-head depth-4">
+                                                                        <span class="menu-title">&#9495; 전국 공무원 노동조합</span>
+                                                                        <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                    </div>
+                                                                    <div class="menu-body depth-5">
+                                                                        <ul class="sub-ul">
+                                                                            <li class="depth-5-li">
+                                                                            <div class="menu-head depth-5">
+                                                                                <span class="menu-title">&#9495; 전국 공무원 노동조합 지부</span>
+                                                                                <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                            </div>
+                                                                            <div class="menu-body depth-6">
+                                                                                <ul class="sub-ul">
+                                                                                    <li class="depth-6-li">
+                                                                                    <div class="menu-head depth-6">
+                                                                                        <span class="menu-title">&#9495; 전국 공무원 노동조합 지회</span>
+                                                                                        <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                                    </div>
+                                                                                    <div class="menu-body depth-7">
+                                                                                        <ul>
+                                                                                            <li class="depth-7-li">
+                                                                                            <div class="menu-head depth-7">
+                                                                                                <span class="menu-title">&#9495; 전국 노동조합 분회</span>
+                                                                                            </div>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    </li>
+
+
+                                                    <!-- third depth-2-li -->
+
+                                                    <li class="depth-2-li">
+                                                        <div class="menu-head depth-2">
+                                                            <span class="menu-title">경기총연맹</span>
+                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                        </div>
+                                                        <div class="menu-body depth-3">
+                                                            <ul class="sub-ul">
+                                                                <li class="depth-3-li">
+                                                                <div class="menu-head depth-3">
+                                                                    <span class="menu-title">&#9495; 경기 노동조합 연맹</span>
+                                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                </div>
+                                                                <div class="menu-body depth-4">
+                                                                    <ul class="sub-ul">
+                                                                        <li class="depth-4-li">
+                                                                        <div class="menu-head depth-4">
+                                                                            <span class="menu-title">&#9495; 경기 공무원 노동조합</span>
+                                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                        </div>
+                                                                        <div class="menu-body depth-5">
+                                                                            <ul class="sub-ul">
+                                                                                <li class="depth-5-li">
+                                                                                <div class="menu-head depth-5">
+                                                                                    <span class="menu-title">&#9495; 경기 공무원 노동조합 지부</span>
+                                                                                    <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                                </div>
+                                                                                <div class="menu-body depth-6">
+                                                                                    <ul class="sub-ul">
+                                                                                        <li class="depth-6-li">
+                                                                                        <div class="menu-head depth-6">
+                                                                                            <span class="menu-title">&#9495; 경기 공무원 노동조합 지회</span>
+                                                                                            <button type="button" class="btn btn-ico menu-btn"></button>
+                                                                                        </div>
+                                                                                        <div class="menu-body depth-7">
+                                                                                            <ul>
+                                                                                                <li class="depth-7-li">
+                                                                                                <div class="menu-head depth-7">
+                                                                                                    <span class="menu-title">&#9495; 경기 노동조합 분회</span>
+                                                                                                </div>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        </li>
+
+
+                                                        <li class="depth-2-li">
+                                                            <div class="menu-head depth-2">
+                                                                <span class="menu-title">미가입</span>
+                                                                <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            </div>
+                                                            <div class="menu-body depth-3">
+                                                                <ul class="sub-ul">
+                                                                    <li class="depth-3-li">
+                                                                        <div class="menu-head depth-3">
+                                                                            <span class="menu-title">&#9495; 미가입 연맹 1</span>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="depth-2-li">
+                                                            <div class="menu-head depth-2">
+                                                                <span class="menu-title">미가입2</span>
+                                                                <button type="button" class="btn btn-ico menu-btn"></button>
+                                                            </div>
+                                                            <div class="menu-body depth-3">
+                                                                <ul class="sub-ul">
+                                                                    <li class="depth-3-li">
+                                                                        <div class="menu-head depth-3">
+                                                                            <span class="menu-title">&#9495; 미가입 연맹 2</span>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="menu-body depth-1-body">
-                                <div class="acco-in">
-                                    <!-- 2depth 목록 -->
-                                    <ul class="sub-ul">
-                                        <li>
-                                            <!-- 2depth title -->
-                                            <div class="menu-head depth-2 depth--active">
-                                                <span class="menu-title">한국노동조합총연맹</span>
-                                                <div>
-                                                    <button type="button" class="btn btn-ico menu-btn"></button>
-                                                </div>
-                                            </div>
-                                            <div class="menu-body depth-3">
-                                                <!-- 3depth 목록 -->
-                                                <ul class="sub-ul">
-                                                    <li>
-                                                        <span class="flex--center-s">홍길동 연합</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="flex--center-s">김철수단위조합</span>
-                                                    </li>
-                                                  
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <!-- 2depth title -->
-                                            <div class="menu-head depth-2">
-                                                <span class="menu-title">전국민주노동조합 총연맹</span>
-                                                <div>
-                                                    <button type="button" class="btn btn-ico menu-btn"></button>
-                                                </div>
-                                            </div>
-                                            <div class="menu-body depth-3">
-                                                <!-- 3depth 목록 -->
-                                                <ul class="sub-ul">
-                                                    <li>
-                                                        <span class="flex--center-s">노동조합1</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="flex--center-s">노동조합2</span>
-                                                    </li>
-                                              
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <!-- 2depth title -->
-                                            <div class="menu-head depth-2">
-                                                <span class="menu-title">미가입</span>
-                                                <div>
-                                                    <button type="button" class="btn btn-ico menu-btn"></button>
-                                                </div>
-                                            </div>
-                                            <div class="menu-body depth-3">
-                                                <!-- 3depth 목록 -->
-                                                <ul class="sub-ul">
-                                                    <li>
-                                                        <span class="flex--center-s">미가입1</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="flex--center-s">미가입2</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--  -->                           
+                        </div>
                         </li>
                     </ul>
                 </div>
@@ -368,7 +544,11 @@
 
 
                          
-                    <!-- 셀렉터 td type 1  -->  
+                    <!-- 셀렉터 td type 1 
+                    
+                    셀렉터 밑에 검색 버튼과 input이 함께 있는 수정 버전입니다.
+                    -->  
+                                    
                     <tr>
                         <th scope="row">
                             <label for="ct1">총연합단체</label>
@@ -379,63 +559,85 @@
                              클래스 제어 상관없이 버튼 생성 삭제만으로 두 타입 제어 가능.
                              select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
                               -->
-                            <div class="flex--box">
-                                <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>
-                                <div class="td__container flex--grow-100">
-                                    <select name="category" id="ct1" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
+                            <div class="flex--box-c">
+                                <div class="pd--10-l" style="min-width: 8.4rem;">
+                                    <button type="button" class="btn__select width--100">선택<br>입력</button>
+                                </div>
+                           
+                                <div class="td__container" style="flex-grow: 1;">
+                                    <div class="flex--box-c width--100">
+                                        <div>
+                                            <select name="category" id="ct1" class="select--no--style select__renew mg--10-b">
+                                                <option value="전체">전체</option>
+                                            </select>
+                                            <div class="flex--box flex--space">
+                                                <input type="text" value="" id="example24" class="width--80">
+                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="pd--10-m" style="flex-grow: 1;">
+                                            <select name="category" id="category2323" class="select--no--style select__renew mg--10-b">
+                                                <option value="전체">전체</option>
+                                            </select>
+                                            <div class="flex--box flex--space ">
+                                                <input type="text" value="" id="example24" class="width--80">
+                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="flex-grow: 1;">
+                                            <select name="category" id="category2323" class="select--no--style select__renew mg--10-b">
+                                                <option value="전체">전체</option>
+                                            </select>
+                                            <div class="flex--box flex--space">
+                                                <input type="text" value="" id="example24" class="width--80">
+                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </td>
-                    </tr>           
+                    </tr>  
+                    
+  
 
 
-                                        
-
-                                        <tr>
+                                     
+                                        <!-- 총연합 단체 수정 전 (검색 버튼 X)-->  
+                                        <!-- <tr>
                                             <th scope="row">
-                                                <label for="ct2">지부</label>
+                                                총연합단체
                                             </th>
-                                            <td>
-                                                <div class="td__container">
-                                                <select name="category" id="ct2" class="select--no--style select__renew">
-                                                    <option value="전체">전체</option>
-                                                </select>
+                                            <td colspan="5">
+                                                <div class="flex--box">
+                                                    <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>
+                                                    <div class="td__container flex--grow-100">
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+
+                                                        <input type="text" id="1" placeholder="1번 인풋">
+                                                        <input type="text" id="2" placeholder="2번 인풋">
+                                                        <input type="text" id="3" placeholder="3번 인풋">
+
+
+                                                        <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                            <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                            <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select> 
+                                                        
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <th scope="row">지회</th>
-                                            <td>
-                                                <div class="td__container">
-                                                <select name="category" id="category2323" class="select--no--style select__renew">
-                                                    <option value="전체">전체</option>
-                                                </select>
-                                                </div> 
-                                            </td>
-                                            <th scope="row">분회</th>
-                                            <td>
-                                                <div class="td__container">
-                                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                                        <option value="전체">전체</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        </tr>           -->
+
                                         <tr style="vertical-align: middle;">
                                             <th scope="row" style="position: relative;">
                                                 <label for="rdo_5-1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">사용여부</label>
@@ -467,8 +669,158 @@
                          </div>
                     </div>
                 </div>
+
+
+                
             </div>
+
+                  
+             
+                
+                        <!-- 검색 버튼 클릭시 나오는 팝업-->
+                        <div class="data__modal__wrap menu__find-modal">
+                            <div class="content">
+                                <div class="data__modal">
+                                    <div class="modal__inner">
+                                        <div class="data__group__title">
+                                            <h2>홍길동 조합 상세정보</h2>
+                                        </div>
+                                        <div class="function__group">
+                                            <button type="button" class="btn__control bg--blue-00">초기화</button>
+                                            <button type="button" class="btn__control bg--black-00">조회</button>
+                                            <button type="button" class="btn__control bg--gray-00">선택</button>
+                                        </div>
+
+                                        <div class="modal__table" style="padding: 0;">
+                                            <div class="lnb__title flex__title">
+                                                <h2>노동조합검색</h2>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="search__form" style="margin-bottom: 5.6rem;">
+                                            <form action="POST" class="flex--box border-top-large">
+                                                    <div class="form-input">
+                                                        <div class="form-content">
+                                                            <div style="min-width: 16rem;">
+                                                                <label for="abc">노동조합명</label>
+                                                            </div>
+                                                            <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
+                                                        </div>
+                                                    </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- 데이터 모달 -->
+                                        <div class="lnb__title flex__title">
+                                            <h2>노동조합목록</h2>
+                                            <span>건수 : 4건</span>
+                                        </div>
+                                        <div class="modal__result" style="height: 30rem; overflow-x: auto;">
+                                            <div class="tab__detail table__vertical">
+                                              <table class="table">
+                                                <caption>
+                                                  자산 및 부채현황 {구분, 자산}
+                                                </caption>
+                                                <colgroup>
+                                                  <col>
+                                                  <col>
+                                                </colgroup>
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">노동조합명</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">120</th>
+                                                    <td>
+                                                      <div class="desc">
+                                                        <p>순천향대학교천안병원 노동조합</p>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">121</th>
+                                                    <td>
+                                                        <div class="desc">
+                                                            <p>부천도시공사노동조합</p>
+                                                          </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">122</th>
+                                                    <td>
+                                                        <div class="desc">
+                                                            <p>한전MCS노동조합</p>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">123</th>
+                                                    <td>
+                                                        <div class="desc">
+                                                            <p>한국산업인력공단 노동조합</p>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">124</th>
+                                                    <td>
+                                                        <div class="desc">
+                                                            <p>한국산업인력공단 노동조합</p>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">125</th>
+                                                    <td>
+                                                        <div class="desc">
+                                                            <p>인력공단 노동조합</p>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                  
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+
+                                        <!--  -->
+                                        <div class="modal__position">
+                                            <div class="modal__close">
+                                                <button type="button">닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <script>
+                            // 1. btn find 누를 시 해당 모달 팝업 시키기
+                            
+
+                            $('.check__data').click(function(){
+                                $('.data__modal').show()
+                            })
+    
+                            $('.modal__close button').click(function(){
+                            $('.data__modal').hide()
+                            })
+        
+                            $('.error__display').click(function(){
+                            $('.data__error__modal').show()})
+                            $('.modal__close button').click(function(){
+                            $('.data__error__modal').hide()
+                            })
+                        </script>
+
         </div>
+
+        
+
        </main>
             <!-- 푸터 -->
             <footer>
@@ -545,40 +897,100 @@
 
         })
 
-    $(document).ready(function() {
-    let menuList = $('.menu-list')
-    let menuHeight = menuList.innerHeight();
-    menuList.css('height', menuHeight)
-  
-    if($('.menu-body').css('display') === 'none'){
-        $('.depth-2').css('border-bottom', '0.1rem solid #ddd')
-    } else {
-        $('.depth-2').css('border-bottom', '0.3rem solid #16408D')
+        $(document).ready(function() {
+
+// depth-2 메뉴 클릭 시 스타일 적용 및 다른 메뉴 스타일 초기화
+$('.menu-head.depth-2').on('click', function() {
+
+const $this = $(this)
+const $currentBody = $this.next('menu-body');
+const isClosed = $currentBody.css('display') === 'none';
+
+if(!isClosed) {
+    resetSubMenuStyles($this)
+}
+
+
+$(this).css('border-bottom', '0.3rem solid #003675');
+$('.menu-head.depth-2').not($(this)).css('border-bottom', '0.1rem solid #ddd');
+});
+
+// 메뉴의 클릭 이벤트 핸들러
+$('.menu-body .menu-head:not(.depth-0)').on('click', function() {
+const $currentBody = $(this).next('.menu-body');
+const isClosed = $currentBody.css('display') === 'none';
+
+toggleMenuBody($currentBody, isClosed); // 클릭 시 body 오픈
+toggleMenuButton($(this), isClosed); // 클릭 시 버튼 이미지 변경
+
+if ($currentBody.length === 0 || !$(this).hasClass('depth-2')) {
+    handleBackgroundColor($(this));
+}
+
+// 주석의 요구사항: depth-2인 경우 스타일 적용하고 열려있는 body가 있으면 닫기
+if ($(this).hasClass('depth-2')) {
+    // closeOtherBodies($currentBody);
+    handleBackgroundColor($(this));
+
+}
+});
+
+// .menu-body의 display 상태를 토글하는 함수 = 클릭되면 인수로 nextbody를 받아서 slide down up 해줌
+function toggleMenuBody($body, open) {
+if (open) {
+    $body.slideDown();
+} else {
+    $body.slideUp();
+}
+}
+
+    
+    function toggleMenuButton($menuHead, open) {
+        const newBackground = open
+            ? 'url(img/arrow__top-blue.svg) no-repeat center'
+            : 'url(img/arrow__bottom-bk.svg) no-repeat center';
+
+        $menuHead.find('.menu-btn').css('background', newBackground);
+        if (!open) {
+            $menuHead.css('border-bottom', '0.1rem solid #ddd');
+        }
     }
 
-    $('.menu-body .menu-head').on('click', function() {
+// 다른 메뉴의 배경색을 투명하게 변경하는 함수
+function handleBackgroundColor($menuHead) {
+    if (!$menuHead.hasClass('depth-2')) {
+        $menuHead.css('background-color', '#eee');
+        $('.menu-body .menu-head').not($menuHead).css('background-color', 'transparent');
+    }
+}
 
-        const defaultBody = $('.menu-body')
-        const $currentBody = $(this).next('.menu-body');
-        
-        // 현재 선택된 .menu-body의 display 속성 토글
-        if ($currentBody.css('display') === 'none') {
-            $currentBody.slideDown(); // 열기 (display: block)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__top-blue.svg) no-repeat center'); // 위로 화살표 변경
-            $(this).css('border-bottom', '0.3rem solid #16408D')
-        } else {
-            $currentBody.slideUp(); // 닫기 (display: none)
-            $(this).find('.menu-btn').css('background', 'url(/img/arrow__bottom-bk.svg) no-repeat center'); // 위로 화살표 변경
-            $(this).css('border-bottom', '0.1rem solid #ddd')
-        }
-    });
-
-
-
-    $('.menu-head input[type="checkbox"]').on('click', function(e) {
-        e.stopPropagation(); // 체크박스 클릭 시 이벤트 전파를 중지
-    });
+// 현재 열린 menu-body 이외의 다른 menu-body를 닫는 함수
+function closeOtherBodies($currentBody) {
+    $('.menu-body').not($currentBody).slideUp();
+    $('.menu-btn').not($currentBody.prev('.menu-head').find('.menu-btn'))
+        .css('background', 'url(img/arrow__bottom-bk.png) no-repeat center');
+}
 });
+
+ // 하위 메뉴 스타일 초기화 함수
+function resetSubMenuStyles($menuHead) {
+    // 다음 menu body의 menu head를 찾아서 모두 비활성화
+    $menuHead.next('.menu-body').find('.menu-head').each(function() {
+        $(this).css({
+            'background-color': 'transparent',
+            'border-bottom': '0.1rem solid #ddd'
+        });
+        $(this).find('.menu-btn').css('background', 'url(img/arrow__bottom-bk.png) no-repeat center');
+        $(this).next('.menu-body').slideUp();
+    });
+}
+
+
+
+
+$('.menu-head.depth-2').css('border-bottom', '0.1rem solid #ddd');
+$('.menu-body:not(.depth-1-body)').slideUp();
+$('.menu-head input[type="checkbox"]').on('click', function(e) {e.stopPropagation();});;
     </script>
     
 
