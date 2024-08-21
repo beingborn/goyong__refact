@@ -34,26 +34,36 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                  <th scope="row">노동조합명</th>
+                                  <th scope="row">
+                                    <label for="example22222">노동조합명</label>
+                                  </th>
                                   <td colspan="3">
-                                    <input type="text" value="" id="example22222" class="width--100">
+                                    <div class="td__container">
+                                        <input type="text" value="" id="example22222" class="width--100">
+                                    </div>
                                   </td>
                                   <th scope="col">
-                                    주 / 부 여부
+                                    <label for="category2323">주 / 부 여부</label>
                                   </th>
                                   <td>
-                                    <select name="category" id="category2323" class="select--no--style select__renew">
-                                        <option value="전체">전체</option>
-                                    </select>
+                                    <div class="td__container">
+                                        <select name="category" id="category2323" class="select--no--style select__renew">
+                                            <option value="전체">전체</option>
+                                        </select>
+                                    </div>
                                   </td>
                                 </tr>
 
 
                  
-            <!-- 총연합 단체 : 2번째 줄 영역-->  
+            <!-- 셀렉터 td type 1 
+            
+            셀렉터 밑에 검색 버튼과 input이 함께 있는 수정 버전입니다.
+            -->  
+                            
             <tr>
                 <th scope="row">
-                    총연합단체
+                    <label for="ct1">노동조합 체계</label>
                 </th>
                 <td colspan="5">
                     <!-- 
@@ -61,44 +71,108 @@
                      클래스 제어 상관없이 버튼 생성 삭제만으로 두 타입 제어 가능.
                      select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
                       -->
-                    <div class="flex--box">
-                        <button type="button" class="btn__select width--20 mg--10-r">선택입력</button>
-                        <div class="td__container flex--grow-100">
-                            <select name="category" id="category2323" class="select--no--style select__renew">
-                                <option value="전체">전체</option>
-                            </select>
-                            <select name="category" id="category2323" class="select--no--style select__renew">
-                                   <option value="전체">전체</option>
-                            </select>
-                            <select name="category" id="category2323" class="select--no--style select__renew">
-                                <option value="전체">전체</option>
-                            </select>
-
-                            <input type="text" id="1" placeholder="1번 인풋">
-                            <input type="text" id="2" placeholder="2번 인풋">
-                            <input type="text" id="3" placeholder="3번 인풋">
-
-                            <!-- 상위 클래스가 input의 넓이를 자동으로 맞춰줍니다. html 태그만 생성 삭제 하시면 됩니다. -->
-
-                            <!-- <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
-                                <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
-                                <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select> -->
-                            
+                    <div class="flex--box-c">
+                        <div class="pd--10-l" style="min-width: 8.4rem;">
+                            <button type="button" class="btn__select width--100">선택<br>입력</button>
+                        </div>
+                   
+                        <div class="td__container" style="flex-grow: 1;">
+                            <div class="flex--box-c width--100">
+                                <div>
+                                    <select name="category" id="ct1" class="select--no--style select__renew mg--10-b">
+                                        <option value="전체">전체</option>
+                                    </select>
+                                    <div class="flex--box flex--space">
+                                        <input type="text" value="" id="example24" class="width--80">
+                                        <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="pd--10-m" style="flex-grow: 1;">
+                                    <select name="category" id="category2323" class="select--no--style select__renew mg--10-b">
+                                        <option value="전체">전체</option>
+                                    </select>
+                                    <div class="flex--box flex--space ">
+                                        <input type="text" value="" id="example24" class="width--80">
+                                        <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                    </div>
+                                </div>
+                                
+                                <div style="flex-grow: 1;">
+                                    <select name="category" id="category2323" class="select--no--style select__renew mg--10-b">
+                                        <option value="전체">전체</option>
+                                    </select>
+                                    <div class="flex--box flex--space">
+                                        <input type="text" value="" id="example24" class="width--80">
+                                        <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </td>
-            </tr>           
+            </tr>  
+            
 
 
-                                
 
-                            
-                                <tr>
-                                    <th scope="row" class="note__th">
-                                        <label for="example22">비고</label>
+                             
+                                <!-- 총연합 단체 수정 전 (검색 버튼 X)-->  
+                                <!-- <tr>
+                                    <th scope="row">
+                                        총연합단체
+                                    </th>
+                                    <td colspan="5">
+                                        <div class="flex--box">
+                                            <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>
+                                            <div class="td__container flex--grow-100">
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+
+                                                <input type="text" id="1" placeholder="1번 인풋">
+                                                <input type="text" id="2" placeholder="2번 인풋">
+                                                <input type="text" id="3" placeholder="3번 인풋">
+
+
+                                                <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select> 
+                                                
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>           -->
+
+                                <tr style="vertical-align: middle;">
+                                    <th scope="row" style="position: relative;">
+                                        <label for="rdo_5-1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">사용여부</label>
+                                    </th>
+                                    <td class="radio__wrap" colspan="5">
+                                        <div class="td__container">
+                                            <div class="flex--box-c" style="height: 4rem;">
+                                                <input type="radio" name="rdo_5-1" id="rdo_5-1">
+                                                <label for="rdo_5-1" class="mg--20-r">사용</label>
+                                                <input type="radio" name="rdo_5-2" id="rdo_5-2">
+                                                <label for="rdo_5-2">미사용</label>
+                                            </div>
+                                        </div>
+                                      </td>                              
+                                </tr>
+                                <tr style="vertical-align: middle;">
+                                    <th scope="row" class="note__th" >
+                                        <label for="ct4">비고</label>
                                       </th>
                                       <td colspan="5" class="note__td">
-                                            <input class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                        <div class="td__container">
+                                            <input id="ct4" class="note__input width--100" type="text" value="전국민주노동조합총연맹" readonly >
+                                        </div>
                                       </td>                    
                                 </tr>
                               </tbody>
