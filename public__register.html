@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>노동조합 회계공시시스템</title>
     <!-- css 영역 -->
-    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/default.css">
-
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- 로컬 폰트 CSS -->
+    <link rel="stylesheet" crossorigin href="style/pretendardvariable-gov-dynamic-subset.min.css">
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- 로컬 jquery 스와이퍼 cdn -->
+    <script src="js/jquery-3.7.1.js"></script>
 
 
 </head>
@@ -107,16 +106,6 @@
                                 <caption>사용자용 회원가입 폼입니다.</caption>     
                                 <tr>
                                     <th>
-                                        <!-- <span>
-                                            <label for="css">
-                                                노동조합 명칭
-                                            </label>
-                                        </span>
-                                        <span class="must__type">
-                                            <label for="css">
-                                                (또는 산하조직)
-                                            </label>
-                                        </span> -->
                                         <label for="css" class="txt--l">
                                             노동조합 명칭 
                                             <br>
@@ -175,17 +164,36 @@
                                             상급단체의 명칭
                                         </label>
                                     </th>
-                                    <td class="td--flex" colspan="3">
-                                        <div class="td--width select__wrap__3">
-                                            <select name="s-1-3" id="s1-3" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                            <select name="s-1-4" id="s1-4" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
-                                            <select name="s-1-5" id="s1-5" class="select--no--style select__renew">
-                                                <option value="선택">선택</option>
-                                            </select>
+                                    <td>
+                                        <!-- 
+                                         버튼 유무에 따라 자동으로 나머지가 정렬되게 제작 
+                                         클래스 제어 상관없이 버튼 생성 삭제만으로 두 타입 제어 가능.
+                                         select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
+                                          -->
+                                        <div class="flex--box">
+                                            <!-- <button type="button" class="btn__select width--20 mg--10-r mg--10-l">선택입력</button> -->
+                                            <div class="td__container flex--grow-100">
+                                                <select name="category" id="category23233" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                       <option value="전체">전체</option>
+                                                </select>
+                                                <select name="category" id="category2323" class="select--no--style select__renew">
+                                                    <option value="전체">전체</option>
+                                                </select>
+                    
+                                                <!-- <input type="text" id="1" placeholder="1번 인풋"> -->
+                                                <!-- <input type="text" id="2" placeholder="2번 인풋"> -->
+                                                <!-- <input type="text" id="3" placeholder="3번 인풋"> -->
+                    
+                                                <!-- 상위 클래스가 input의 넓이를 자동으로 맞춰줍니다. html 태그만 생성 삭제 하시면 됩니다. -->
+                    
+                                                <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                    <select name="category" id="category2323" class="select--no--style select__renew"> <option value="전체">전체</option> </select>
+                                                
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -209,7 +217,7 @@
                                         <label for="css" class="txt--l">
                                             사업자등록번호
                                             <br>
-                                            <span class="must__type"> (고유번호증번호 등)</span>
+                                            <span> (고유번호증번호 등)</span>
                                         </label>
                                     </th>
                                     <td class="td--flex harf__td">
@@ -1024,9 +1032,7 @@
         </div>
 
    
-
-    <!-- 스와이퍼 js cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
     <script>

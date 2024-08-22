@@ -313,12 +313,20 @@ textarea {
   width: 20%;
 }
 
+.width--60 {
+  width: 60%;
+}
+
 .width--80 {
   width: 80%;
 }
 
 .width--100 {
   width: 100%;
+}
+
+.min--h-4 {
+  min-height: 4rem;
 }
 
 .height--100 {
@@ -802,16 +810,15 @@ td {
 }
 
 .manage__user__table th {
-  width: 15.38%;
+  width: 11.72%;
   background-color: #f8f8f8;
   text-align: left;
-  padding-left: 1rem;
+  padding-left: rem;
   z-index: -1;
   height: 100%;
 }
 
 .manage__user__table td {
-  padding: 0 1rem;
   width: auto;
 }
 
@@ -820,11 +827,11 @@ td {
 }
 
 .table__information .first__td {
-  width: 15.38%;
+  width: 20.31%;
 }
 
 .table__information .second__td {
-  width: 19.24%;
+  width: 21.88%;
 }
 
 .table__vertical table thead tr th {
@@ -851,8 +858,7 @@ td {
   border-right: 0;
 }
 
-.table__vertical tbody td,
-.table__vertical tbody th {
+.table__vertical tbody td, .table__vertical tbody th {
   height: 100%;
   line-height: 6rem;
   border-right: 0.1rem solid #ddd;
@@ -865,6 +871,10 @@ td {
 .table__vertical tbody td {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.table__vertical tbody td:nth-last-child(1) {
+  border-right: 0;
 }
 
 .border-right {
@@ -1141,6 +1151,18 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.menu-check .depth-3 .sub-ul > li > span {
+  position: relative;
+}
+.menu-check .depth-3 .sub-ul > li > span::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 0.8rem;
 }
 
 /* 메뉴별 권한 관리 기존 depth 3 까지 코드 */
@@ -2153,9 +2175,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .data__modal__wrap .data__error__modal .modal__close {
   padding-bottom: 4rem;
-}
-.data__modal__wrap .data__modal {
-  height: 72rem;
 }
 .data__modal__wrap .data__error__modal {
   height: auto;

@@ -49,7 +49,6 @@
         }
     }
     .data__error__modal .modal__close {padding-bottom: 4rem;}
-    .data__modal {height: 72rem;}
 
     .data__error__modal {height: auto;}
 
@@ -60,13 +59,10 @@
     }
 }
 
-
-
 // 검색 조건 모달 스타일
 .menu__find-modal .data__modal {height: auto;}
 .menu__find-modal .table__vertical table tbody tr th:nth-child(1) { background-color: transparent;}
 .menu__find-modal .modal__position {padding: 4.8rem 0;}
-
 .menu__find-modal .table thead {position: relative;}
 // .menu__find-modal .table {overflow-x: auto;}
 

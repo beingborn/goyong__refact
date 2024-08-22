@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>관리자>사용자관리>사용자관리</title>
-
     <!-- css 영역 -->
-    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/default.css">
-
-    
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- 로컬 폰트 CSS -->
+    <link rel="stylesheet" crossorigin href="style/pretendardvariable-gov-dynamic-subset.min.css">
 
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- 로컬 jquery 스와이퍼 cdn -->
+    <script src="js/jquery-3.7.1.js"></script>
 
 </head>
 <body>
@@ -110,21 +107,19 @@
             <div class="search__form" style="margin-bottom: 5.6rem;">
                 <form action="POST" class="flex--box border-top-large">
                         <div class="form-input">
-                            <!-- <div class="form-title">
-                                <span>노동조합명</span>
-                            </div> -->
-
-                            <div class="form-content">
+                            <div class="form-content" style="max-width: 47rem;">
                                 <div style="min-width: 16rem;">
-                                    <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                    <select name="name2" id="name2" class="select--no--style min--h-4" style="position: relative;">
                                         <option value="option1">전체</option>
                                     </select>
                                 </div>
-                                <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;">
+                                <div class="width--60" style="min-width: 28rem;">
+                                    <input type="text" name="abc" id="abc" placeholder="노동조합명을 입력해주세요" style="height: 4rem; padding: 0 0.8rem;" class="width--100">
+                                </div>
                             </div>
 
                             <div class="form-content">
-                                <div class="form-title" style="min-width: 16rem;">
+                                <div class="form-title" style="min-width: 8.8rem;">
                                     <span>구분</span>
                                 </div>
                                 <div style="min-width: 16rem;">
@@ -170,7 +165,7 @@
                                   <tr>
                                     <th scope="col">번호</th>
                                     <th>노동조합명</th>
-                                    <th>사용자ID</th>
+                                    <th>사용자 ID</th>
                                     <th>조직단위</th>
                                     <th>조합형태</th>
                                     <th>총연합단체</th>
@@ -264,24 +259,20 @@
 
                                         <tr class="height--auto">
                                             <th style="line-height: 11.6rem;">
-                                                <!-- <span class="must__type"> -->
+                                                <!-- <  span class="must__type"> -->
                                                     <label for="excting">노동조합명</label>
                                                 <!-- </span> -->
                                             </th>
-                                            <td class="td--flex first__td">
-                                                <input id="excting" type="text" value="테스트" readonly >
-                                                <!-- <div class="td--width">
-                                                </div> -->
+                                            <td class="first__td">
+                                                <div class="td__container">
+                                                    <input id="excting" type="text" value="테스트" readonly >
+                                                </div>
                                             </td>
                                             <!-- 테이블 태그 특성으로 인해 style inline으로 기입 -->
                                             <th style="line-height: 11.6rem;">
-                                                <span class="must__type">
                                                     <label for="category23232">노동조합소속</label>
-                                                </span>
                                             </th>
-
-
-                                            <td>
+                                            <td class="flex--grow-100 ">
                                                 <div class="flex--box">
                                                     <!-- <button type="button" class="btn__select width--20 mg--10-r">선택입력</button> -->
                                                     <div class="td__container flex--grow-100">
@@ -314,63 +305,85 @@
                                                 <label for="ex3">대표자명</label>
                                                 
                                             </th>
-                                            <td class="td--flex first__td">
-                                                <input id="ex3" value="테스트" type="text" readonly>
+                                            <td class="first__td">
+                                                <div class="td__container">
+                                                    <input id="ex3" value="테스트" type="text" readonly>
+                                                </div>   
                                             </td>
                                             <th>
                                                 <label for="ex4">조직단위</label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <input id="ex4" value="테스트" type="text" readonly>
+                                            <td class="second__td">
+                                                <div class="td__container">
+                                                    <input id="ex4" value="테스트" type="text" readonly>
+                                                </div>
                                             </td>
                                             <th>
                                                 <label for="ex5">조합형태</label>
                                             </th>
-                                            <td class="td--flex second__td">
+                                            <td class="second__td flex--grow-100">
+                                                <div class="td__container">
                                                 <input id="ex5" value="테스트" type="text" readonly>
+
+                                                </div>
                                             </td>
                                         </tr>
 
 
                                         <tr>
                                             <th>
-                                                <label for="ex6">사용자ID</label>
+                                                <label for="ex6">사용자 ID</label>
                                             </th>
-                                            <td class="td--flex first__td">
-                                                <input type="text" value="test1" readonly>
+                                            <td class="first__td">
+                                                <div class="td__container">
+                                                    <input type="text" value="test1" readonly>
+                                                </div>
                                             </td>
                                             <th>
                                                 <label for="ex7">담당자</label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <input id="ex7" value="테스트" type="text" readonly>
+                                            <td class="second__td">
+                                                <div class="td__container">
+                                                    <input id="ex7" value="테스트" type="text" readonly>
+                                                </div>
                                             </td>
                                             <th>
-                                                <label for="ex8">담당자이메일</label>
+                                                <label for="ex8">담당자 이메일</label>
                                             </th>
-                                            <td class="td--flex second__td">
+                                            <td class="second__td flex--grow-100">
+                                                <div class="td__container">
                                                 <input id="ex8" value="example@example.com" type="text" readonly>
+
+                                                </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <th>
-                                                <label for="ex9">유선연락처</label>
+                                                <label for="ex9">유선 연락처</label>
                                             </th>
-                                            <td class="td--flex first__td">
-                                                <input id="ex9" value="000-000-0000" type="text" readonly>
+                                            <td class="first__td">
+                                                <div class="td__container">
+                                                    <input id="ex9" value="000-000-0000" type="text" readonly>
+
+                                                </div>
                                             </td>
                                             <th>
-                                                <label for="ex10">무선연락처</label>
+                                                <label for="ex10">무선 연락처</label>
                                             </th>
-                                            <td class="td--flex second__td">
+                                            <td class="second__td">
+                                                <div class="td__container">
                                                 <input id="ex10" value="010-0000-0000" type="text" readonly>
+
+                                                </div>
                                             </td>
                                             <th>
                                                 <label for="ex11">수신동의 여부</label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <input id="ex11" value="수신" type="text" readonly>
+                                            <td class="second__td flex--grow-100">
+                                                <div class="td__container">
+                                                    <input id="ex11" value="수신" type="text" readonly>
+                                                </div>
                                             </td>
                                         </tr>
 
@@ -379,20 +392,24 @@
                                             <th>
                                                 <label for="ex12">가입일자</label>
                                             </th>
-                                            <td class="td--flex first__td">
-                                                <input id="ex12" value="2024-08-16" type="text" readonly aria-label="가입일자">
+                                            <td class="first__td">
+                                                <div class="td__container">
+                                                    <input id="ex12" value="2024-08-16" type="text" readonly aria-label="가입일자">
+                                                </div>
                                             </td>
                                             <th>
                                                 <label for="ee1">승인여부</label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <div class="radio__wrap">
-                                                    <input type="radio" name="approval" id="ee1">
-                                                    <label for="ee1">승인</label>
-                                                    <input type="radio" name="approval" id="ee2">
-                                                    <label for="ee2">미승인</label>
-                                                    <input type="radio" name="approval" id="ee3">
-                                                    <label for="ee3">반려</label>
+                                            <td class="second__td">
+                                                <div class="td__container">
+                                                    <div class="radio__wrap">
+                                                        <input type="radio" name="approval" id="ee1">
+                                                        <label for="ee1" class="pd--10-r">승인</label>
+                                                        <input type="radio" name="approval" id="ee2">
+                                                        <label for="ee2" class="pd--10-r" >미승인</label>
+                                                        <input type="radio" name="approval" id="ee3">
+                                                        <label for="ee3">반려</label>
+                                                    </div>
                                                 </div>
                                             </td>
 
@@ -400,38 +417,46 @@
                                             <th>
                                                 <label for="ee2">비밀번호</label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <button type="button" class="btn__input" id="ee2">초기화</button>
+                                            <td class="second__td flex--grow-100">
+                                                <div class="td__container">
+                                                    <button type="button" class="btn__input" id="ee2">초기화</button>
+                                                </div>
                                             </td>
                                         </tr>
 
                                           
                                         <tr>
                                             <th>
-                                                회계연도
+                                                <label for="">
+                                                    회계연도
+                                                </label>
                                             </th>
-                                            <td class="td--flex first__td">
-
+                                            <td class="first__td">
+                                                <div class="td__container"></div>
                                             </td>
                                             <th>
-                                                주석
+                                                <label for="">
+                                                    주석
+                                                </label>
                                             </th>
-                                            <td class="td--flex second__td">
-
+                                            <td class="second__td">
+                                                <div class="td__container"></div>
                                             </td>
                                             <th>
-                                                공개여부
+                                                <label for="scs">
+                                                    공개여부
+                                                </label>
                                             </th>
-                                            <td class="td--flex second__td">
-                                                <div class="select__box">
-                                                    <select name="" id="" style="width: 70%;" class="mg--10-r select--no--style select__renew">
-                                                        <option value="공개">공개</option>
-                                                    </select>
-                                                </div>
-                                                <button type="button" class="btn__input">저장</button>
+                                            <td class="second__td flex--grow-100">
+                                                    <div class="td__container">
+                                                        <select name="scs" id="scs"class="select--no--style select__renew width--60" style="min-width: 17rem;">
+                                                            <option value="공개">공개</option>
+                                                        </select>
+                                                        <button type="button" class="btn__input min--h-4 flex--grow-100">저장</button>
+                                                    </div>
                                             </td>
                                         </tr>                                        
-                                    </tbody>
+                                    </tbody>       
                                 </table>
                             </div>
                         </div>
@@ -439,7 +464,7 @@
                         <div class="lnb__title flex__title" style="margin-top: 2.6rem;">
                             <h2>노동조합규약</h2>
                         </div>
-                        <div class="table__horizontal__wrap with__thead">
+                        <div class="table__horizontal__wrap with__thead" style="margin-bottom: 40rem;">
                             <table class="border-top-large">
                                 <caption>노동조합규약</caption>
                                 <colgroup>
@@ -482,21 +507,6 @@
                  
                     </div>
                 </div>
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         </div>
        </main>
@@ -547,9 +557,7 @@
         </div>
 
   
-
-    <!-- 스와이퍼 js cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
 

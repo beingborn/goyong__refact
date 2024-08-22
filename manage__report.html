@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>관리자>통계및보고서관리>노동조합회계공시조회</title>
     <!-- css 영역 -->
-    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/default.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- 로컬 폰트 CSS -->
+    <link rel="stylesheet" crossorigin href="style/pretendardvariable-gov-dynamic-subset.min.css">
 
-    
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- 로컬 jquery 스와이퍼 cdn -->
+    <script src="js/jquery-3.7.1.js"></script>
 
 </head>
 <body>
@@ -392,21 +391,24 @@
                                         </td> -->
                                         <td class="checkbox__wrap pd--10-l">
                                             <div class="flex--box-c checkbox__container-margin">
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-1">
+                                                <input type="checkbox" name="chk" id="jchk_All">
                                                 <label for="chk_6-1-1" class="mg--10-r">전체</label>
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-2">
+                                                <input type="checkbox" name="chk" id="chk_6-1-2">
                                                 <label for="chk_6-1-2">현금 및 예금</label>
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-3">
+                                                <input type="checkbox" name="chk" id="chk_6-1-3">
                                                 <label for="chk_6-1-3">토지</label>
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-4">
+                                                <input type="checkbox" name="chk" id="chk_6-1-4">
                                                 <label for="chk_6-1-4">건물</label>
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-5">
+                                                <input type="checkbox" name="chk" id="chk_6-1-5">
                                                 <label for="chk_6-1-5">기타 자산</label>
-                                                <input type="checkbox" name="chk_6-1" id="chk_6-1-6">
+                                                <input type="checkbox" name="chk" id="chk_6-1-6">
                                                 <label for="chk_6-1-6">부채</label>
                                             </div>
                                         </td>
                                     </tr>
+
+                        
+
                                     <tr>
                                         <th scope="col">
                                             <label for="rdo_6-2-1">사용여부</label>
@@ -415,7 +417,7 @@
                                             <div style="display: flex;">
                                                 <div class="pd--10-m mg--10-r">
                                                     <div class="flex--box-c">
-                                                        <input type="checkbox" name="rdo_6-2" id="rdo_6-2-1">
+                                                        <input type="checkbox" name="rdo_6-2" id="schk_All">
                                                         <label for="rdo_6-2-1" class="pd--10-l">전체</label>
                                                     </div>
                                                 </div>
@@ -446,27 +448,27 @@
                                                         <label for="rdo_6-3-5">기타</label>
                                                     </div> -->
                                                     <div class="checkbox__container-margin flex--box-c">
-                                                        <input type="checkbox" name="chk_6-2" id="chk_6-2-2">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-2-2">
                                                         <label for="chk_6-2-2">수입총계</label>
-                                                        <input type="checkbox" name="chk_6-2" id="chk_6-2-3">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-2-3">
                                                         <label for="chk_6-2-3">전년도 이월금</label>
-                                                        <input type="checkbox" name="chk_6-2" id="chk_6-2-4">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-2-4">
                                                         <label for="chk_6-2-4">조합비</label>
-                                                        <input type="checkbox" name="chk_6-2" id="chk_6-2-5">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-2-5">
                                                         <label for="chk_6-2-5">상급단체 교부금</label>
-                                                        <input type="checkbox" name="chk_6-2" id="chk_6-2-6">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-2-6">
                                                         <label for="chk_6-2-6">하부조직 부과금</label>
                                                     </div>
                                                     <div class="checkbox__container-margin flex--box-c">
-                                                        <input type="checkbox" name="chk_6-3" id="chk_6-3-1">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-3-1">
                                                         <label for="chk_6-3-1">후원금</label>
-                                                        <input type="checkbox" name="chk_6-3" id="chk_6-3-2">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-3-2">
                                                         <label for="chk_6-3-2">타회계 전입금</label>
-                                                        <input type="checkbox" name="chk_6-3" id="chk_6-3-3">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-3-3">
                                                         <label for="chk_6-3-3">보조금 수입</label>
-                                                        <input type="checkbox" name="chk_6-3" id="chk_6-3-4">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-3-4">
                                                         <label for="chk_6-3-4">수익사업 수입</label>
-                                                        <input type="checkbox" name="chk_6-3" id="chk_6-3-5">
+                                                        <input type="checkbox" name="chk-2" id="chk_6-3-5">
                                                         <label for="chk_6-3-5">기타</label>
                                                     </div>
                                                 </div>
@@ -482,53 +484,53 @@
                                             <div style="display: flex;">
                                                 <div class="pd--10-m mg--10-r">
                                                     <div class="flex--box-c">
-                                                        <input type="checkbox" name="rdo_6-2" id="rdo_6-2-1">
+                                                        <input type="checkbox" name="rdo_6-2" id="rchk_All">
                                                         <label for="rdo_6-2-1" class="pd--10-l">전체</label>
                                                     </div>
                                                 </div>
                                                 
                                                 <div>
                                                     <div class="checkbox__container-margin flex--box-c">
-                                                        <input type="checkbox" name="chk_6-4" id="chk_6-4-2">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-4-2">
                                                         <label for="chk_6-4-2">지출총계</label>
-                                                        <input type="checkbox" name="chk_6-4" id="chk_6-4-3">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-4-3">
                                                         <label for="chk_6-4-3">일반관리비용 전체</label>
-                                                        <input type="checkbox" name="chk_6-4" id="chk_6-4-4">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-4-4">
                                                         <label for="chk_6-4-4">인건비</label>
-                                                        <input type="checkbox" name="chk_6-4" id="chk_6-4-5">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-4-5">
                                                         <label for="chk_6-4-5">업무추진비</label>
-                                                        <input type="checkbox" name="chk_6-4" id="chk_6-4-6">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-4-6">
                                                         <label for="chk_6-4-6">기타운영비</label>
                                                     </div>
                                                 
                                                     <div class="checkbox__container-margin flex--box-c">
-                                                        <input type="checkbox" name="chk_6-5" id="chk_6-5-1">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-5-1">
                                                         <label for="chk_6-5-1">사업수행 비용전체</label>
-                                                        <input type="checkbox" name="chk_6-5" id="chk_6-5-2">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-5-2">
                                                         <label for="chk_6-5-2">총회 등 대회비</label>
-                                                        <input type="checkbox" name="chk_6-5" id="chk_6-5-3">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-5-3">
                                                         <label for="chk_6-5-3">조직 사업비</label>
-                                                        <input type="checkbox" name="chk_6-5" id="chk_6-5-4">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-5-4">
                                                         <label for="chk_6-5-4">정책 사업비</label>
-                                                        <input type="checkbox" name="chk_6-5" id="chk_6-5-5">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-5-5">
                                                         <label for="chk_6-5-5">교육홍보 사업비</label>
                                                     </div>
                                                 
                                                     <div class="checkbox__container-margin flex--box-c">
-                                                        <input type="checkbox" name="chk_6-6" id="chk_6-6-1">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-6-1">
                                                         <label for="chk_6-6-1">교섭 쟁의 사업비</label>
-                                                        <input type="checkbox" name="chk_6-6" id="chk_6-6-2">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-6-2">
                                                         <label for="chk_6-6-2">상급단체 부과금</label>
-                                                        <input type="checkbox" name="chk_6-6" id="chk_6-6-3">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-6-3">
                                                         <label for="chk_6-6-3">하부조직 교부금</label>
-                                                        <input type="checkbox" name="chk_6-6" id="chk_6-6-4">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-6-4">
                                                         <label for="chk_6-6-4">타회계 전출금</label>
-                                                        <input type="checkbox" name="chk_6-6" id="chk_6-6-5">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-6-5">
                                                         <label for="chk_6-6-5">기타</label>
                                                     </div>
                                                 
                                                     <div class="checkbox__container-margin">
-                                                        <input type="checkbox" name="chk_6-7" id="chk_6-7-1">
+                                                        <input type="checkbox" name="chk-3" id="chk_6-7-1">
                                                         <label for="chk_6-7-1">기타 사업비</label>
                                                     </div>
                                                 </div>
@@ -536,6 +538,68 @@
                                         </td>
                                     </tr>
                                 </table>
+
+
+                                <script>
+                                    /* 
+                                        1. 체크 박스 전체 클릭 시  해당 div 안의 나머지에 모두 체크 표시하기
+                                        2. 만약 다시 전체를 다시 클릭하면 전체 비활성화 
+                                        3. 총합 체크 개수와 체크 개수 값 비교해서 전체 체크 활성화 비활성화
+                                    */
+
+                                    $(document).ready(function() {
+
+                                        $("#jchk_All").click(function() { // 1번째 줄
+                                            if($("#jchk_All").is(":checked")) $("input[name=chk]").prop("checked", true);
+                                            else $("input[name=chk]").prop("checked", false);
+                                        });
+                                        
+                                        $("input[name=chk]").click(function() {
+                                            var total = $("input[name=chk]").length;
+                                            var checked = $("input[name=chk]:checked").length;
+                                            
+                                            if(total != checked) $("#jchk_All").prop("checked", false);
+                                            else $("#jchk_All").prop("checked", true); 
+                                        });
+
+                                        
+                                        $("#schk_All").click(function() { // 2번째 줄
+                                            if($("#schk_All").is(":checked")) $("input[name=chk-2]").prop("checked", true);
+                                            else $("input[name=chk-2]").prop("checked", false);
+                                        });
+                                        
+                                        $("input[name=chk-2]").click(function() {
+                                            var total = $("input[name=chk-2]").length;
+                                            var checked = $("input[name=chk-2]:checked").length;
+                                            
+                                            if(total != checked) $("#schk_All").prop("checked", false);
+                                            else $("#schk_All").prop("checked", true); 
+                                        });
+
+
+                                        $("#rchk_All").click(function() {
+                                            if($("#rchk_All").is(":checked")) $("input[name=chk-3]").prop("checked", true);
+                                            else $("input[name=chk-3]").prop("checked", false);
+                                        });
+                                        
+
+                                        
+                                        $("input[name=chk-3]").click(function() { // 3번째 줄
+                                            var total = $("input[name=chk-3]").length;
+                                            var checked = $("input[name=chk-3]:checked").length;
+                                            
+                                            if(total != checked) $("#rchk_All").prop("checked", false);
+                                            else $("#rchk_All").prop("checked", true); 
+                                        });
+
+                                    });
+                                </script>
+
+
+
+
+
+
                                 </div>
                                 <div class="modal__close">
                                     <button type="button">닫기</button>

@@ -182,9 +182,13 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .width--10 {width: 10%;}
   .width--15 {width: 15%;}
   .width--20 {width: 20%;}
+  .width--60 {width: 60%;}
   .width--80 {width: 80%;}
   .width--100 {width: 100%;}
-  
+
+
+  // 높이 제어
+  .min--h-4 {min-height: 4rem;}
   .height--100 {height: 100%;}
   .tb--height-find {height: 5.8rem;}
 

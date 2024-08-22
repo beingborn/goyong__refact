@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>관리자>통계및보고서관리>회계관리현황</title>
     <!-- css 영역 -->
-    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/default.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- 로컬 폰트 CSS -->
+    <link rel="stylesheet" crossorigin href="style/pretendardvariable-gov-dynamic-subset.min.css">    
+    <!-- 로컬 jquery 스와이퍼 cdn -->
+    <script src="js/jquery-3.7.1.js"></script>
     
-    <!-- jquery 스와이퍼 cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 스킵 내비게이션  -->
@@ -297,10 +297,10 @@
             </footer>
         </div>
 
-    <!-- 스와이퍼 js cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
+
     <script>    
       // 테이블 행 클릭 시 해당 행 색상 변경, 다른 행들은 해제 
       $('.table__vertical tbody tr').click(function(){

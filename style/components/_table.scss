@@ -96,17 +96,21 @@ td {min-height: 5.8rem;}
 
 
 
+// manageuser__ 메인 테이블
+
 .manage__user__table {border-top: 0.2rem solid #000;} 
 .manage__user__table tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .manage__user__table .height--auto {height: auto; }
 
-.manage__user__table th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1; height: 100%;} 
-.manage__user__table td {padding: 0 1rem; width: auto;} 
+.manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
+.manage__user__table td {width: auto;} 
 .manage__user__table tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);}
 
 
-.table__information .first__td {width: 15.38%;}
-.table__information .second__td {width: 19.24%}
+
+
+.table__information .first__td {width: 20.31%;}
+.table__information .second__td {width: 21.88%}
 
 
 
@@ -116,10 +120,13 @@ td {min-height: 5.8rem;}
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical tr th:nth-child(1) {font-weight: 500; word-break: keep-all; white-space: nowrap;} 
 .table__vertical tr th:nth-last-child(1) {border-right: 0;} 
-.table__vertical tbody td, 
-.table__vertical tbody th {height: 100%; line-height: 6rem; border-right: 0.1rem solid #ddd;} 
+
+.table__vertical tbody td, .table__vertical tbody th {height: 100%; line-height: 6rem; border-right: 0.1rem solid #ddd;} 
 .table__vertical tbody th {background-color: #f8f8f8;} 
 .table__vertical tbody td {padding-left:1rem; padding-right: 1rem;} 
+.table__vertical tbody td:nth-last-child(1) {border-right: 0;} 
+
+
 .border-right {border-right: 0.1rem solid #ddd;}
 
 // 표 호버 배경색상 지정 영역입니다.
