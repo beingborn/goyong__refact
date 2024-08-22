@@ -32,39 +32,34 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    $('.check__data').click(function(){
-        $('.data__modal').show()
-    })
+$(document).ready(function() {
 
-    $('.modal__close button').click(function(){
-        $('.data__modal').hide()
-    })
+    // 모달의 너비 설정 함수 호출
+    setModalWidth();
 
+   
+    $('[data-target]').click(function() {  // 모달 열기 이벤트 핸들러
+        const targetModal = $(this).data('target');
+        setModalWidth(targetModal)
 
-    
-    $('.error__display').click(function(){
-        $('.data__error__modal').show()
-    })
+        $(targetModal).show();
+        $('.modal__bg').show();
 
-    $('.modal__close button').click(function(){
-        $('.data__error__modal').hide()
-    })
+    });
 
+    // 모달 닫기 이벤트 핸들러
+    $('.modal__close button').click(function() {
+        $('.modal, .modal__bg').hide();  // 모든 모달 요소를 숨김
+    });
 
+    // 배경 숨기기
 
-    // 임시로 radio 체크 상태 지정
-
-    for (i = 0; i <= 34; i++) {
-        if(i % 2 == 0 ){
-            $('.table__template__radio .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
-        }
-    }
-    
-    for (i = 0; i <= 5; i++) {
-        if(i % 2 == 0 ){
-            $('.search__accounting .radio__wrap input[type="radio"]').eq(i).first().prop('checked', true)
-        }
+    // 모달의 너비를 부모 요소에 맞게 설정하는 함수
+    function setModalWidth(targetModal) {
+        const modalWidth = $('.main__inner').innerWidth() - 20;
+        $(targetModal).css('width', modalWidth);
     }
 
-})
+    $('.modal__bg').hide();
+
+});

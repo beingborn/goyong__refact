@@ -84,7 +84,7 @@
           </div>
 
        <main class="main__content" style="padding-bottom: 40px;">
-        <div class="inner" style="position: relative;">
+        <div class="inner main__inner" style="position: relative;">
             <div class="function__group">
                   <!-- 
                 아래 버튼 색상을 변경하시려면 bg--색상-00  부분에서 색상의 클래스명을 변경해주시면 됩니다.
@@ -558,7 +558,7 @@
                                             </select>
                                             <div class="flex--box flex--space">
                                                 <input type="text" value="" id="example24" class="width--80">
-                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                                <button type="button" data-target=".find__modal" class="mg--10-l btn__find input__find check__data">검색</button>
                                             </div>
                                         </div>
                                         
@@ -568,7 +568,7 @@
                                             </select>
                                             <div class="flex--box flex--space ">
                                                 <input type="text" value="" id="example24" class="width--80">
-                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                                <button type="button" data-target=".find__modal" class="mg--10-l btn__find input__find check__data">검색</button>
                                             </div>
                                         </div>
                                         
@@ -578,7 +578,7 @@
                                             </select>
                                             <div class="flex--box flex--space">
                                                 <input type="text" value="" id="example24" class="width--80">
-                                                <button type="button" class="mg--10-l btn__find input__find check__data">검색</button>
+                                                <button type="button" data-target=".find__modal" class="mg--10-l btn__find input__find check__data">검색</button>
                                             </div>
                                         </div>
                                     </div>
@@ -666,7 +666,7 @@
                         <!-- 검색 버튼 클릭시 나오는 팝업-->
                         <div class="data__modal__wrap menu__find-modal">
                             <div class="content">
-                                <div class="data__modal">
+                                <div class="data__modal find__modal modal">
                                     <div class="modal__inner">
                                         <div class="data__group__title">
                                             <h2>홍길동 조합 상세정보</h2>
@@ -790,19 +790,38 @@
                             // 1. btn find 누를 시 해당 모달 팝업 시키기
                             
 
-                            $('.check__data').click(function(){
-                                $('.data__modal').show()
-                            })
-    
-                            $('.modal__close button').click(function(){
-                            $('.data__modal').hide()
-                            })
-        
-                            $('.error__display').click(function(){
-                            $('.data__error__modal').show()})
-                            $('.modal__close button').click(function(){
-                            $('.data__error__modal').hide()
-                            })
+                            $(document).ready(function() {
+
+                            // 모달의 너비 설정 함수 호출
+                            setModalWidth();
+
+
+                            $('[data-target]').click(function() {  // 모달 열기 이벤트 핸들러
+                                const targetModal = $(this).data('target');
+                                console.log(targetModal)
+                                setModalWidth(targetModal)
+
+                                $(targetModal).show();
+                                $('.modal__bg').show();
+
+                            });
+
+                            // 모달 닫기 이벤트 핸들러
+                            $('.modal__close button').click(function() {
+                                $('.modal, .modal__bg').hide();  // 모든 모달 요소를 숨김
+                            });
+
+                            // 배경 숨기기
+
+                            // 모달의 너비를 부모 요소에 맞게 설정하는 함수
+                            function setModalWidth(targetModal) {
+                                const modalWidth = $('.main__inner').innerWidth() - 20;
+                                $(targetModal).css('width', modalWidth);
+                            }
+
+                            $('.modal__bg').hide();
+
+                            });
                         </script>
 
         </div>
@@ -853,6 +872,7 @@
                     
                 </div>
             </footer>
+            <div class="modal__bg"></div>
         </div>
 
    

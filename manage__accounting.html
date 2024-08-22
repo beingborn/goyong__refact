@@ -86,7 +86,7 @@
 
        <!-- 컨텐츠 -->
        <main class="main__content" style="padding-bottom: 40px;">
-        <div class="inner" style="position: relative;">
+        <div class="inner main__inner" style="position: relative;">
           <!-- y__flex를 가진 버튼 그룹은 세로 중앙 정렬 -->
             <div class="function__group y__flex">
 
@@ -98,8 +98,8 @@
                 -->
                 
                 <!-- 임시로 초기화 버튼을 에러 모달 팝업 버튼 지정, 클릭 시 에러 모달 팝업-->
-                <button type="button" class="btn__control bg--blue-00 error__display">초기화</button>
-                <button type="button" class="btn__control bg--blue-00 check__data">조회</button>
+                <button type="button" data-target=".data__error__modal" class="btn__control bg--blue-00 error__display">초기화</button>
+                <button type="button" data-target=".data__modal" class="btn__control bg--blue-00 check__data">조회</button>
                 <button type="button" class="btn__control bg--blue-00">다운로드</button>
                 <!-- 수정 08.14 업로드 하단 영역 시작 -->
                 <!-- <button type="button" class="btn__control">업로드</button> -->
@@ -566,7 +566,7 @@
                     </div>
                 </div>
                 <!-- 조회 버튼 팝업 1 -->
-                <div class="data__modal">
+                <div class="data__modal modal">
                     <div class="modal__inner">
                         <div class="data__group__title">
                             <h2>홍길동 조합 상세정보</h2>
@@ -736,7 +736,7 @@
 
 
             <!-- 데이터 에러 시 모달 -->                 
-            <div class="data__error__modal">
+            <div class="data__error__modal modal">
               <div class="modal__inner">
                   <div class="data__group__title">
                       <h2>에러정보</h2>
@@ -745,8 +745,7 @@
                     <div class="flex--box flex--end" style="margin-top: 5.6rem; margin-bottom: 1.6rem;">
                       <span>건수 4건</span>
                     </div>
-                      <div class="modal__result">
-                        
+                      <div class="modal__result table--overflow-y">                        
                           <div class="tab__detail table__vertical modal__error__table">
                             <table>
                               <caption>
@@ -781,6 +780,10 @@
                                 </tr>
                                 <tr>
                                   <th scope="row">100</th>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">200</th>
                                   <td></td>
                                 </tr>
                               </tbody>
@@ -842,6 +845,8 @@
                     
                 </div>
             </footer>
+            <!-- 모달 창 백그라운드 -->
+            <div class="modal__bg"></div>
         </div>
 
    
@@ -1004,6 +1009,9 @@ $(document).ready(function () {
     $('.menu-head input[type="checkbox"]').on("click", function (e) {
       e.stopPropagation();
     });
+
+
+
 
 
   </script>

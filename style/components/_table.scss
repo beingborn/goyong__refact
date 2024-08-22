@@ -101,10 +101,12 @@ td {min-height: 5.8rem;}
 .manage__user__table {border-top: 0.2rem solid #000;} 
 .manage__user__table tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .manage__user__table .height--auto {height: auto; }
-
 .manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
 .manage__user__table td {width: auto;} 
-.manage__user__table tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);}
+.manage__user__table td input[type="text"] {border: 0.1rem solid #ddd;}
+// .manage__user__table tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);}
+
+
 
 
 
@@ -119,15 +121,18 @@ td {min-height: 5.8rem;}
 .table__vertical table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle;} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical tr th:nth-child(1) {font-weight: 500; word-break: keep-all; white-space: nowrap;} 
-.table__vertical tr th:nth-last-child(1) {border-right: 0;} 
+.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
 
-.table__vertical tbody td, .table__vertical tbody th {height: 100%; line-height: 6rem; border-right: 0.1rem solid #ddd;} 
-.table__vertical tbody th {background-color: #f8f8f8;} 
-.table__vertical tbody td {padding-left:1rem; padding-right: 1rem;} 
+.table__vertical tbody td, .table__vertical tbody th {height: 100%; 
+  // line-height: 6rem;
+    height: 6rem;
+   border-right: 0.1rem solid #ddd;} 
+.table__vertical tbody th {background-color: #f8f8f8; vertical-align: middle;} 
+.table__vertical tbody td {padding-left:1rem; padding-right: 1rem; vertical-align: middle;} 
 .table__vertical tbody td:nth-last-child(1) {border-right: 0;} 
 
 
-.border-right {border-right: 0.1rem solid #ddd;}
+.border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
 .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
@@ -155,3 +160,12 @@ td {min-height: 5.8rem;}
 // manage__report 조회 모달 체크 박스 
 .checkbox__container-margin label {padding-left: 1rem;}
 .checkbox__container-margin label:not(:last-child) {padding-right: 1rem;}
+
+
+
+
+// 관리자 페이지의 표 경우, 가로 값이 더 커질 시 table을 감싸는 부모에 스크롤을 줍니다.
+.manage__wrap .table__vertical {overflow-x: auto;}
+.manage__wrap .table__vertical table {min-width: 96rem;}
+
+.manage__wrap .table__vertical colgroup col {min-width: 5rem;}

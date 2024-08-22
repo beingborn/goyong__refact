@@ -379,6 +379,25 @@ textarea {
   right: -1rem;
 }
 
+.table--overflow-y {
+  height: 30rem;
+  overflow-x: auto;
+}
+
+.table--overflow-x {
+  overflow-x: auto;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
 /* 
   버튼 CSS
 */
@@ -428,6 +447,10 @@ textarea {
   padding: 0 2rem;
   border-radius: 0.7rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -822,8 +845,8 @@ td {
   width: auto;
 }
 
-.manage__user__table tr.r2 td {
-  width: 34.62%;
+.manage__user__table td input[type=text] {
+  border: 0.1rem solid #ddd;
 }
 
 .table__information .first__td {
@@ -854,23 +877,25 @@ td {
   white-space: nowrap;
 }
 
-.table__vertical tr th:nth-last-child(1) {
+.table__vertical thead tr th:nth-last-child(1) {
   border-right: 0;
 }
 
 .table__vertical tbody td, .table__vertical tbody th {
   height: 100%;
-  line-height: 6rem;
+  height: 6rem;
   border-right: 0.1rem solid #ddd;
 }
 
 .table__vertical tbody th {
   background-color: #f8f8f8;
+  vertical-align: middle;
 }
 
 .table__vertical tbody td {
   padding-left: 1rem;
   padding-right: 1rem;
+  vertical-align: middle;
 }
 
 .table__vertical tbody td:nth-last-child(1) {
@@ -878,7 +903,7 @@ td {
 }
 
 .border-right {
-  border-right: 0.1rem solid #ddd;
+  border-right: 0.1rem solid #ddd !important;
 }
 
 .table__vertical tbody tr:hover {
@@ -929,6 +954,18 @@ td {
 
 .checkbox__container-margin label:not(:last-child) {
   padding-right: 1rem;
+}
+
+.manage__wrap .table__vertical {
+  overflow-x: auto;
+}
+
+.manage__wrap .table__vertical table {
+  min-width: 96rem;
+}
+
+.manage__wrap .table__vertical colgroup col {
+  min-width: 5rem;
 }
 
 /* 
@@ -1111,6 +1148,10 @@ input[type=file]::file-selector-button {
 .search__form-2 .form-desc {
   flex-grow: 1;
   padding: 0 1rem;
+}
+
+.hasDatePicker {
+  background: #fff url(../../img/iconDatePicker.png) no-repeat 95% center;
 }
 
 /*
@@ -2158,12 +2199,12 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   display: none;
   width: calc(100% - 2rem);
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border: 0.3rem solid #CBCCCD;
-  z-index: 999;
+  z-index: 1003;
 }
 .data__modal__wrap .data__modal .modal__inner, .data__modal__wrap .data__error__modal .modal__inner {
   width: calc(100% - 7.2rem);
@@ -2790,7 +2831,6 @@ select {
 }
 .table__horizontal td {
   padding: 0 1rem;
-  border-bottom: 0.1rem solid #ddd;
 }
 .table__horizontal td select {
   width: 100%;

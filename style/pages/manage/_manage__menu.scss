@@ -20,14 +20,14 @@
     .data__modal, .data__error__modal {
         display: none;
         width: calc(100% - 2rem); 
-        // overflow-y: auto;
         background-color: #fff;
-        position: absolute; 
+        // position: absolute; 
+        position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         border: 0.3rem solid #CBCCCD;
-        z-index: 999;
+        z-index: 1003;
         .modal__inner {
             width: calc(100% - 7.2rem);
             margin: 0rem auto;
