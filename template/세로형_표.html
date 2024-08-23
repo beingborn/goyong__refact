@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/default.css">
+
+    <style>
+        body {width: 1280px; margin: 0px auto;} /* 템플릿용 기본 사이즈 지정 */
+        h2 {font-size: 24px;}
+        .border--red {
+            border: 1px solid red; 
+        }
+
+        .desc > p {line-height: 200%;}
+
+        .bg--lightblue {background-color: lightblue;}
+    </style>
+</head>
+<body>
+    <br><br><br><br>
+
+    <h2>세로형 표 열 추가, 행 추가</h2>
+    <div class="desc" style="margin-top: 12px;">
+        <p>세로형 표 데이터를 추가할 때 현재 html 태그의 특성상 CSS 클래스만으로 조작할 수 없습니다.</p>
+        <p>또한 현재의 표에서 어디까지 추가할 수 있는 지 확인 후 명시해놓을테니</p>
+        <p>데이터 상 칸이 몇개까지는 대응되어야 하는지에 대해 기준과 한계점에 대해 조율이 필요합니다.</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="desc">
+        <p> * 태그관련 설명 :  tr : 테이블의 행을 의미, th: 테이블의 제목을 의미 , td: 테이블의 내용을 의미 행을 추가하려면 tr, th , td를 순서대로 추가해야합니다.</p>
+        <p> 다음 테이블의 경우 가로형 테이블과 달리 colgroup에 col 태그도 먼저 추가를 해주어야 합니다. 자세한 방법은 아래 주석을 참고하세요.</p>       
+    </div>
+ 
+    <br>
+    <br>
+    <br>
+
+    <h2> 데이터 행을 추가하는 방법 : </h2>
+
+    <div class="desc" style="margin-top: 12px;">
+        <p>  1. colgroup안 col 태그 복사 붙여넣기 (열 간격 조정 및 설정) </p>
+        <p>  2. thead 태그안의 th 태그 추가하기  (제목 추가) </p>
+        <p>  3. tbody 태그안의 td 태그 추가하기  (내용 추가) </p>
+        <p>  4. 데이터 추가가 많아서 표가 망가질 경우 col tag 속성 조정 </p>
+    </div>
+
+
+    <br>
+    <br>
+
+
+
+    <br><br><br><br><br>
+
+
+    <!-- 세로형 표 시작 -->    
+        <!-- 표 제목 및 데이터 개수 표시 -->
+        <div class="lnb__title flex__title">
+            <h2>기본 템플릿</h2>
+            <span>건수: 3건</span>
+        </div>
+        <div class="table__vertical check__result">
+          <table class="border-top-large"> <!-- border-top-large 클래스넣으면 테이블 상단에 굵은 띠 추가 -->
+            <caption>
+              조회결과 표
+            </caption>
+            <colgroup>
+            <!-- 칸 넓이 조정하기  -->
+              <col style="width: 5.6%;">
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <!-- 상단 제목 행 부분 -->
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th>노동조합명</th>
+                <th class="ex">주/부 여부</th>
+                <th>연합단체</th>
+                <th>단위노동조합</th>
+                <th>지부</th>
+                <th>지회</th>
+                <th>분회</th>
+                <th>사용여부</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <!-- txt--c 중앙정렬 txt--l 왼쪽 정렬 txt--r 오른쪽 정렬  -->
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l ">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 
+            세로형 표 끝 여기까지 드래그해서
+            원하시는 영역에 복사 붙여넣기하세요. 
+        -->
+        
+
+        <br><br><br><br>
+
+
+        <!-- 데이터 추가된 버전 -->
+        <div class="lnb__title flex__title">
+            <h2>데이터 추가버전</h2>
+            <span>건수: 3건</span>
+        </div>
+        <div class="table__vertical">
+          <table class="border-top-large"> <!-- border-top-large 클래스넣으면 테이블 상단에 굵은 띠 추가 -->
+            <caption>
+              조회결과 표
+            </caption>
+            <colgroup>
+            <!-- 열 너비 조정 width 속성 이외로는 auto로 나머지 차지 -->
+              <col width="4%">
+              <col width="8%">
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+
+              <!-- 추가 -->
+              <col>
+
+            </colgroup>
+            <!-- 상단 제목 행 부분 -->
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th>노동조합명</th>
+                <th class="ex">주/부 여부</th>
+                <th>연합단체</th>  
+                <th>단위노동조합</th>
+                <th>지부</th>
+                <th>지회</th>
+                <th>분회</th>
+                <th>사용여부</th>
+
+                <!-- 추가 -->
+                <th class="border--red">추가된 열</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr >
+                <!-- txt--c 중앙정렬 txt--l 왼쪽 정렬 txt--r 오른쪽 정렬  -->
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                
+                <td class="txt--c">추가된 행</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c">추가된 행</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td class="txt--l pd--10-l ">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c">추가된 행</td>
+              </tr>
+              
+              <!-- 하단  -->
+              <tr class="bg--lightblue">
+                <th scope="row">4</th>
+                <td class="txt--l pd--10-l ">테스트</td>
+                <td class="txt--c">주</td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c"></td>
+                <td class="txt--c">추가된 행</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <br><br><br><br>
+
+                <!-- 데이터 추가된 버전 -->
+                <div class="lnb__title flex__title">
+                    <h2>데이터 추가 영역 너비 조정</h2>
+                    <span>건수: 3건</span>
+                </div>
+                <div class="table__vertical">
+                  <table class="border-top-large"> <!-- border-top-large 클래스넣으면 테이블 상단에 굵은 띠 추가 -->
+                    <caption>
+                      조회결과 표
+                    </caption>
+                    <colgroup>
+                    <!-- 열 너비 조정 width 속성 이외로는 auto로 나머지 차지 -->
+                      <col width="4%">
+                      <col width="8%">
+                      <col width="12%">
+                      <col width="20%">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+        
+                      <!-- 추가 -->
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+        
+                    </colgroup>
+                    <!-- 상단 제목 행 부분 -->
+                    <thead>
+                      <tr>
+                        <th scope="col">번호</th>
+                        <th>노동조합명</th>
+                        <th class="ex">주/부 여부</th>
+                        <th>연합단체</th>  
+                        <th>단위노동조합</th>
+                        <th>지부</th>
+                        <th>지회</th>
+                        <th>분회</th>
+                        <th>사용여부</th>
+        
+                        <!-- 추가 -->
+                        <th class="border--red">추가된 열</th>
+                        <th class="border--red">추가된 열</th>
+                        <th class="border--red">추가된 열</th>
+                        <th class="border--red">추가된 열</th>
+                        <th class="border--red">추가된 열</th>
+        
+                      </tr>
+                    </thead>
+        
+                    <tbody>
+                      <tr >
+                        <!-- txt--c 중앙정렬 txt--l 왼쪽 정렬 txt--r 오른쪽 정렬  -->
+                        <th scope="row">1</th>
+                        <td class="txt--l pd--10-l">테스트</td>
+                        <td class="txt--c">주</td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <!-- 추가 -->
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td class="txt--l pd--10-l">테스트</td>
+                        <td class="txt--c">주</td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <!-- 추가 -->
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td class="txt--l pd--10-l ">테스트</td>
+                        <td class="txt--c">주</td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <!-- 추가 -->
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                      </tr>
+                      
+                      <!-- 하단  -->
+                      <tr>
+                        <th scope="row">4</th>
+                        <td class="txt--l pd--10-l ">테스트</td>
+                        <td class="txt--c">주</td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <td class="txt--c"></td>
+                        <!-- 추가 -->
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                        <td class="txt--c">추가된 행</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                
+
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+</body>
+</html>

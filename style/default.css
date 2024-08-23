@@ -58,7 +58,7 @@ input[type=reset], textarea, select, button {
   font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-input[type=text], select {
+input[type=text], select, input[type=password] {
   border: 0.1rem solid #ccc;
   border-radius: 0.5rem;
   padding: 1.2rem;
@@ -270,6 +270,12 @@ textarea {
 .flex--box-c {
   display: flex;
   align-items: center;
+}
+
+.flex--box-cs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .flex--box-end {
@@ -1574,15 +1580,181 @@ input[type=checkbox] {
   border: 0.1rem solid #D8D8D8;
 }
 
+#gnb1 > ul {
+  display: flex;
+}
+
+#gnb1 > ul > li {
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+#gnb1 > ul > li > a {
+  line-height: 6.4rem;
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: #555555;
+  display: inline-flex;
+  align-items: center;
+}
+
+#gnb1 > ul > li.plus > a::after {
+  content: "";
+  background: url(../img/arrow__bottom-bk.svg) no-repeat center;
+  display: inline-block;
+  margin-left: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem auto;
+  transition: all 0.3s;
+}
+
+#gnb1 > ul > li.plus.active > a::after {
+  transform: rotate(180deg);
+  background: url(../img/arrow__top-blue.svg);
+}
+
+#gnb1 .sub__menu > ul:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26rem;
+  height: 100%;
+  background: #edf1f5;
+}
+
+.header__gnb {
+  /* border-top: 0.1rem solid #ddd; */
+  position: relative;
+}
+
+.header__gnb::after {
+  content: "";
+  display: inline-block;
+  width: 100vw;
+  height: 0.1rem;
+  background-color: #ddd;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* #gnb1 .top__menu > li.plus {border: 1px solid red;} */
+#gnb1 .sub__menu > ul > li {
+  display: flex;
+}
+
+#gnb1 .sub__menu > ul > li.active > a {
+  background: #fff;
+}
+
+/* #gnb1 {position: relative;} */
+#gnb1 .sub__menu {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  width: 128rem;
+  height: auto;
+  min-height: 20rem;
+  opacity: 0;
+  top: calc(100% - 1px);
+  z-index: 10;
+  max-width: 100%;
+  text-align: left;
+  /* border: 1px dashed blueviolet; */
+}
+
+#gnb1 .sub__menu::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  border-top: 0.1rem solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
+  background-color: #fff;
+}
+
+#gnb1 .sub__menu > ul > li > a {
+  width: 26rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 2.4rem;
+  transition: all 0.2s;
+  background: #edf1f5;
+  font-weight: 700;
+  color: #1d1d1d;
+  font-size: 1.9rem;
+}
+
+#gnb1 .sub__menu > ul > li .dep3 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 26rem);
+  margin-left: 26rem;
+  padding: 2.4rem 4rem;
+}
+
+.dep3__title {
+  display: flex;
+  height: 5.6rem;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.dep3__title a:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -0.2rem;
+  margin-left: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(img/arrow__right-gray.svg) center no-repeat;
+  background-size: 2rem auto;
+  vertical-align: middle;
+}
+
+#gnb1 .sub__menu > ul > li.active > .dep3 {
+  display: block;
+}
+
+#gnb1 .sub__menu > ul {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: calc(100% + 2rem);
+  height: 100%;
+  min-height: 20rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: -2rem;
+  padding: 1.6rem 0;
+  color: #1d1d1d;
+}
+
+#gnb1 > ul > li.active .sub__menu {
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+}
+
 /*
     푸터 CSS
 */
-.foot__container {
-  position: relative;
-  top: -22.8rem;
-  margin-bottom: -22.8rem;
-}
-
 .cs__center {
   position: relative;
   height: 73rem;
@@ -1623,7 +1795,6 @@ input[type=checkbox] {
 .cs__center .content {
   display: flex;
   justify-content: space-between;
-  padding-top: 33.8rem;
 }
 .cs__center .content .item {
   width: 61rem;
@@ -1798,8 +1969,16 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .top__visual .main__hero {
   width: 100%;
   height: 45rem;
-  background: url(../img/main__hero.png) no-repeat center;
+  background: url(../img/main__hero.jpg) no-repeat center;
   background-size: cover;
+  position: relative;
+}
+.top__visual .main__hero .black__bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 .top__visual .main__hero .inner {
   position: relative;
@@ -1866,11 +2045,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   justify-content: space-between;
 }
 .count__group .count {
-  width: 29.6rem;
+  width: 40.5rem;
   height: 18rem;
   background-color: #fff;
   box-shadow: 0px 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.8rem;
+  border-radius: 3.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1885,9 +2064,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .count__group .count .subc {
   display: flex;
   align-items: center;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #246BEB;
+  color: #000;
   margin-top: 3.2rem;
 }
 .count__group .count .subc span {
@@ -2172,6 +2351,65 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 .public__table input[type=radio]:checked {
   border: 0.6rem solid #000;
+}
+
+/* 로그인 페이지에서만 적용되는 스타일 */
+.login__page body {
+  position: relative;
+  height: 100vh;
+}
+.login__page .wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.login__page .header {
+  flex: 0 0 auto;
+}
+.login__page #login__body {
+  flex: 1 0 auto;
+  overflow: auto;
+  font-size: 1.5rem;
+}
+.login__page footer {
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+.login__page #login__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+.login__page #login__body .login__block {
+  width: 100%;
+  max-width: 480px;
+}
+.login__page #login__body .login__block .title {
+  color: #fff;
+  text-align: center;
+  font-size: 3.2rem;
+}
+.login__page #login__body .login__block .desc {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.login__page #login__body .login__block > div {
+  background-color: #fff;
+  margin-top: 3rem;
+}
+.login__page #login__body .login__block > div > div {
+  padding: 3rem 4rem;
+}
+.login__page #login__body .login__block > div > div button {
+  background: #003764;
+  color: #fff;
+  height: 5.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 100%;
+  margin: 3rem 0 2rem 0;
 }
 
 /*

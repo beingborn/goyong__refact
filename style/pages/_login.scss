@@ -1,0 +1,65 @@
+ /* 로그인 페이지에서만 적용되는 스타일 */
+
+        // 로그인 페이지 html 에 class login__page 할당
+        .login__page {
+
+
+
+
+
+
+
+
+
+            body {position: relative; height: 100vh;}
+            .wrap {display: flex; flex-direction: column; height: 100%;}
+            .header {flex: 0 0 auto}
+            #login__body {flex: 1 0 auto; overflow: auto; font-size: 1.5rem;}
+
+            footer {flex: 0 0 auto; margin-top: auto;}
+
+            // .login__block > div {display: flex; justify-content: center;}
+
+            #login__body {display: flex; justify-content: center; align-items: center; background-color: lightgray;} 
+            #login__body .login__block {width: 100%; max-width: 480px;}
+            #login__body .login__block .title {color: #fff; text-align: center; font-size: 3.2rem;}
+            #login__body .login__block .desc {color: #fff; text-align: center; font-size: 1.8rem;}
+
+            #login__body .login__block > div {background-color: #fff; margin-top: 3rem;}
+            #login__body .login__block > div > div {padding: 3rem 4rem;}
+            #login__body .login__block > div > div button { background: #003764; color: #fff; height: 5.2rem; font-size: 1.8rem; font-weight: 500; width: 100%; margin: 3rem 0 2rem 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+

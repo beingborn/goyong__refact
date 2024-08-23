@@ -39,7 +39,9 @@ label {font-size: 1.5rem;}
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
-input[type="text"], select {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
+input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
+
+
 input[type="radio"]{
     appearance: none;
     width: 2.6rem;
@@ -169,6 +171,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   /* flex 레이아웃 제어 */
   .flex--box {display: flex;}
   .flex--box-c {display: flex; align-items: center;}
+  .flex--box-cs {display: flex; align-items: center; justify-content: space-between;} 
   .flex--box-end {display: flex; justify-content: end;}
   .flex--space {justify-content: space-between;}
   .flex--end {justify-content: end;}

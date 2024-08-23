@@ -2,9 +2,9 @@
     푸터 CSS
 */
 .foot__container {
-    position: relative;
-    top: -22.8rem;
-    margin-bottom: -22.8rem;
+    // position: relative;
+    // top: -22.8rem;
+    // margin-bottom: -22.8rem;
 }
 
 .cs__center {
@@ -53,7 +53,7 @@
     .content {
         display: flex;
         justify-content: space-between;
-        padding-top: 33.8rem;
+        // padding-top: 33.8rem;
 
         .item {
             width: 61rem;
@@ -99,6 +99,8 @@
         }
     }
 }
+
+
 footer {
     position: relative;
     overflow: hidden;
