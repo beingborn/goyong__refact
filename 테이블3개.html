@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/default.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main__echart">
+        <div class="inner flex--box-c">
+            <div class="table table__vertical">
+                <h2 class="title relative">노동조합 회계공시<span>(단위 : 천원)</span></h2>
+                <table class="tdHover" id="tableList">
+                    <caption>노동조합 회계공시(노동조합명, 총연합, 자산, 부채, 수입, 지출)</caption>
+                    <colgroup>
+                        <col width="30%">
+                        <col width="15%">
+                        <col>
+                        <col>
+                        <col>
+                        <col width="11%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>노동조합명</th><th>총연합</th><th>자산</th><th>부채</th><th>수입</th><th>지출</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td class="txt--l"> (1) abc노동조합</td><td class="txt_l">abc총연맹</td><td>1,590</td><td>210</td><td>120</td><td>115</td>
+                        </tr>
+                        <tr class="on">
+                            <td class="txt--l"> (2) ○○기업 노동조합</td><td class="txt_l">○○총연맹</td><td>2,360</td><td>1,250</td><td>870</td><td>643</td>
+                        </tr>
+                        <tr>
+                            <td class="txt--l"> (3) ▲▲지역지회</td><td class="txt_l">총연합단체미가입</td><td>3,150</td><td>2,420</td><td>1,120</td><td>1,098</td>
+                        </tr>
+                        <tr>
+                            <td class="txt--l"> (4) △△기업분회</td><td class="txt_l">기타</td><td>1,320</td><td>357</td><td>254</td><td>204</td>
+                        </tr><tr>
+                            <td class="txt--l"> (5) □□산업노동조합</td><td class="txt_l">□□총연맹</td><td>315</td><td>25</td><td>90</td><td>84</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart1">
+                <h2 class="title">자산 부채 현황<span>(단위 : 천원)</span></h2>
+    <!-- 				<div class="chartBox" id="mainChartDiv"><canvas id="mainChart" width="100%" height="100%"></canvas></div> -->
+                <div class="chartBox">
+                    <div id="pieChart" class="echart" style="width: 100%; height: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1724498288483"><div style="position: relative; width: 236px; height: 235px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="236" height="235" style="position: absolute; left: 0px; top: 0px; width: 236px; height: 235px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+                </div>
+            </div>
+            <div class="chart2">
+                <h2 class="title">수입 지출 현황<span>(단위 : 천원)</span></h2>
+    <!-- 				<div class="chartBox" id="mainChartDiv2"><canvas id="mainChart2" width="100%" height="100%"></canvas></div> -->
+                <div class="chartBox">
+                    <div id="barChart" class="echart" style="width: 100%; height: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1724498288484"><div style="position: relative; width: 236px; height: 236px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="236" height="236" style="position: absolute; left: 0px; top: 0px; width: 236px; height: 236px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+                </div>
+            </div>
+    </div>
+    </div>
+     
+</body>
+<script src="
+https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
+"></script>
+<script>
+$(document).ready(function() {
+	var strDate = 2024082420;
+	if(strDate > 2024032508) {
+		$("#popup").hide();
+	}else {
+		cookiedata = document.cookie;
+		if(cookiedata.indexOf("popup=done") < 0) {
+			$("#popup").show();
+		}else {
+			$("#popup").hide();
+		}
+	}
+	
+	var myChart;
+	var myChart2;
+	//처음에 첫번째 데이터 선택
+	
+	//테이블 tr 선택 차트출력
+	$("#tableList tbody").on("click", "tr", function(e){
+		var trNum = $(e.target).closest('tr').prevAll().length;
+		cnt = trNum;
+		//튤팁제거(선택시 튤팁이 생기므로)
+		$(".tooltip").remove();
+		
+		var d = parseInt(($(this).find("td:eq(2)").text()).replace(",",""));//자산-자본
+		var e = parseInt(($(this).find("td:eq(3)").text()).replace(",",""));//부채
+		var f = parseInt(($(this).find("td:eq(4)").text()).replace(",",""));//수익
+		var g = parseInt(($(this).find("td:eq(5)").text()).replace(",",""));//지출
+		
+// 		$("#mainChart").remove();
+// 		$("#mainChart2").remove();
+// 		var chartHtml = "<canvas id='mainChart' width='100%' height='100%'>";
+// 		var chartHtml2 = "<canvas id='mainChart2' width='100%' height='100%'>";
+// 		$("#mainChartDiv").append(chartHtml);
+// 		$("#mainChartDiv2").append(chartHtml2);
+// 		Chart.register(ChartDataLabels);
+// 		var ctx = document.getElementById('mainChart');
+// 		var ctx2 = document.getElementById('mainChart2');
+		
+// 		var config = {
+// 		    type: 'pie',
+// 		    data: {
+// 		      	labels: [ '자산','부채' ],
+// 			  	datasets: [{
+// 				    label: '자산 부채 현황',
+// 				    data: [d, e],
+// 				    backgroundColor: [ 'RGB(86,113,195)','RGB(248,200,98)' ],
+// 				    hoverOffset: 4
+// 				}]
+// 		    },
+// 		    plugins: [ChartDataLabels],
+// 		    options: {
+// 		    	plugins: {
+// // 		    		title: {display:true, text:'(백만원)   ', align:'end', font:{size:14} },
+// 			    	datalabels: {
+// 					    color: '#fff',
+// 					    font:{size:18},
+// 						formatter: function(value){
+// 							var result = gfnAddCommas(value);
+// 							return result;
+// 						}
+// 					},
+// 					legend: {
+// 						position: 'bottom',
+// 						labels: {boxWidth: 16, boxHeight:16}
+// 		            }
+// 				}
+// 		    }
+// 		}
+// 		myChart = new Chart(ctx, config);
+		
+// 		//2번차트
+// 	    var config2 = {
+// 	    	type: 'bar',
+// 		    data: {
+// 		      	labels: [ '수입','지출' ],
+// 			  	datasets: [{
+// 				    data: [f, g],
+// 				    backgroundColor: [ 'RGB(115,192,220)','RGB(86,113,195)' ],
+// 				    maxBarThickness: 50
+// 				}]
+// 		    },
+// 		    plugins: [ChartDataLabels],
+// 		    options: {
+// 		    	plugins: {
+// // 		    		title: {display:true, text:'(2022, 백만원)   ', align:'end', font:{size:14} },
+// 			    	datalabels: {
+// 					    color: '#fff',
+// 					    font:{size:18},
+// 						formatter: function(value){
+// 							var result = gfnAddCommas(value);
+// 							return result;
+// 						}
+// 					},
+// 					legend: {
+// 						display:false
+// 		            }
+// 				}
+// 		    }	
+// 	    }
+// 	    myChart2 = new Chart(ctx2, config2);
+		
+		
+	 	// 파이 차트 옵션
+		var pieChartOption = {
+			tooltip: {
+				trigger: 'item'
+			},
+			legend: {
+				orient: 'horizontal',
+				bottom: 5,
+				itemWidth: 16,
+				itemHeight: 16
+			},
+			series: [{
+				top: -40,
+				type: 'pie',
+				radius: '75%',
+				label: {
+					show: true,
+					position: 'inside',
+					fontSize: 18,
+					// formatter: function(d) {
+					// 	if(d.value == 0) return '';
+					// 	return gfnAddCommas(d.value);
+					// }
+				},
+				emphasis: {
+					itemStyle: {
+						shadowBlur: 10,
+						shadowOffsetX: 0,
+						shadowColor: 'rgba(0, 0, 0, 0.5)'
+					}
+				},
+				data: [
+					{ value: d, name: '자산', itemStyle: {color: 'rgb(86,113,195)'} },
+					{ value: e, name: '부채', itemStyle: {color: 'rgb(248,200,98)'} }
+				]
+			}]
+		};
+	 	
+		var pieChart = echarts.init( document.querySelector("#pieChart") );
+		pieChart.setOption(pieChartOption);
+		
+		// 바 차트 옵션
+		var barChartOption = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: { type: 'shadow' }
+			},
+			grid: {
+				top: '3%',
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				data: ['수입', '지출']
+			}],
+			yAxis: [{
+				type: 'value'
+			}],
+			series: [{
+				type: 'bar',
+				label: {
+					show: true,
+					fontSize: 18,
+					// formatter: function(d) {
+					// 	return gfnAddCommas(d.value);
+					// }
+				},
+				emphasis: { focus: 'series' },
+				data: [
+					{ value: f, itemStyle: {color: 'rgb(115,192,220)'} },
+    				{ value: g, itemStyle: {color: 'rgb(86,113,195)'} }
+				]
+			}]
+		};
+		
+		var barChart = echarts.init( document.querySelector("#barChart") );
+		barChart.setOption(barChartOption);
+		
+		
+		
+	    $("#tableList tbody tr").removeClass('on');
+		$(this).addClass('on');
+	    });
+	
+	
+	    fn_tblClick();
+	
+	    setInterval(function(){
+		fn_tblClickInterval();
+	    }, 10000);
+	
+	    $("#popup .float").on("click", function(event) { 
+		setCookie("mainPopup", "Y", 1);
+		$("#popup").fadeOut(400);
+	    });
+    });
+function fn_tblClick(){
+	$("#tableList tbody tr:first").click();
+}
+function fn_tblClickInterval(){
+   cnt += 1;
+   if(cnt==5){
+	   cnt =0;
+   }
+   $("#tableList tbody tr:eq("+cnt+")").click();
+}
+
+function setCookie(name, value, exDay) {
+	var todayDate = new Date();
+	todayDate.setDate(todayDate.getDate() + exDay);
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+}
+function closeToday() {
+	$("#popup").fadeOut(400);
+    $(".bgPopup").fadeOut(400);
+    setCookie("popup", "done", 1);
+}
+</script>
+</html>
