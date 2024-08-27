@@ -9,17 +9,26 @@
 </head>
 
 <style>
-    .breadcrumb {display: flex; align-items: center; font-size: 1.5rem;}
-    .breadcrumb .path .home {width: 2rem; height: 2rem; background-color: gray;}
-    .breadcrumb .path > li {display: inline; position: relative;}
+    .breadcrumb {display: flex; align-items: center; font-size: 1.5rem; font-weight: 700; padding-left: 2.4rem;}
 
+    .breadcrumb .path .home > a {position: relative;}
+    .breadcrumb .path .home > a::before { 
+    content: ""; display: inline-block; width: 2.4rem; 
+    height: 2.4rem; background: url(img/Base-Breadcrumb.svg) no-repeat center;
+    position: absolute; top: 50%; right: 1.2rem; transform: translateY(-50%);
+    }
+
+
+    .breadcrumb .path > li {display: inline; position: relative;}
+    .breadcrumb .path > li > a {padding-bottom: 0.1rem; position: relative;}
+    .breadcrumb .path > li > a::after {content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 0.15rem; background-color: #000;}
     .breadcrumb .path > li + li::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
     width: 2rem;
     height: 2rem;
-    background: url(img/arrow__right-gray.svg) no-repeat center;
+    background: url(img/arrow__right-bk.svg) no-repeat center;
     }
 
 </style>
