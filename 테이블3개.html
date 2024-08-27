@@ -11,16 +11,32 @@
 
     <style>
         .main__echart {
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
         }
 
         .chartBox {
-            background: #F8F8F8;
-            min-height: 40rem;
+            background: #FFF;
+            height: 40rem;
             border-top: 1px solid #E5E5E5;
-            /* padding: 3rem 1rem 0rem 1rem; */
-            padding: 3rem 3.5rem;
+            border-radius: 2.4rem;
+            padding: 3rem 3.5rem 0 3.5rem;
+            /* padding: 3rem 3.5rem; */
+            box-shadow: 0rem 0rem 2rem 0 rgba(0, 0, 0, 0.1);
         }
+
+        .main__echart .chartBox .title {margin-bottom: 3.2rem;}
+
+
+
+        .main__echart .chartBox .echart {width: 100%; height: 18.8rem;}
+
+        .chartBox .container { display: flex; justify-content: center; align-items: center;}
+
+        .main__echart .data .unit {color: #767676; font-size: 1.3rem; margin-left: 0.4rem;}
+        .data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
+        .main__echart .data > h2 {font-size: 1.7rem; color: #767676;}
+
+        .chartBox .title {font-size: 2.5rem;}
 
         .chart1,
         .chart2 {
@@ -28,8 +44,11 @@
         }
 
         #tableList tbody tr.on {
-            background-color: #85f1f5;
+            background-color: #DEEBF7;
         }
+
+        .chartData__wrap {display: flex; padding-top: 4rem;}
+        .chartData__wrap .data {text-align: center; width: 50%;}
 
 
         /* .table, .chart1, .chart2 {
@@ -39,15 +58,8 @@
         } */
 
 
-        .chartBox>div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        #tableList tbody tr.on {
-            background-color: #85f1f5;
-        }
+      
 
         .table>#tableList {
             min-height: 40rem;
@@ -69,14 +81,14 @@
 
 <body>
     <div class="main__echart">
-        <div class="inner flex--box-c" style="align-items: stretch;">
+        <div class="inner flex--box-c" style="align-items: stretch; justify-content: space-between;">
             <div class="table table__vertical">
                 <!-- <h2 class="title relative">노동조합 회계공시<span>(단위 : 천원)</span></h2> -->
                 <table class="tdHover" id="tableList">
                     <caption>노동조합 회계공시(노동조합명, 총연합, 자산, 부채, 수입, 지출)</caption>
                     <colgroup>
                         <col width="30%">
-                        <col width="15%">
+                        <col width="25%">
                         <col>
                         <col>
                         <col>
@@ -95,7 +107,7 @@
                     <tbody>
                         <tr class="">
                             <td class="txt--l"> (1) abc노동조합</td>
-                            <td class="txt_l">abc총연맹</td>
+                            <td class="txt--c">abc총연맹</td>
                             <td>1,590</td>
                             <td>210</td>
                             <td>120</td>
@@ -103,7 +115,7 @@
                         </tr>
                         <tr class="on">
                             <td class="txt--l"> (2) ○○기업 노동조합</td>
-                            <td class="txt_l">○○총연맹</td>
+                            <td class="txt--c">○○총연맹</td>
                             <td>2,360</td>
                             <td>1,250</td>
                             <td>870</td>
@@ -111,7 +123,7 @@
                         </tr>
                         <tr>
                             <td class="txt--l"> (3) ▲▲지역지회</td>
-                            <td class="txt_l">총연합단체미가입</td>
+                            <td class="txt--c">총연합단체미가입</td>
                             <td>3,150</td>
                             <td>2,420</td>
                             <td>1,120</td>
@@ -119,7 +131,7 @@
                         </tr>
                         <tr>
                             <td class="txt--l"> (4) △△기업분회</td>
-                            <td class="txt_l">기타</td>
+                            <td class="txt--c">기타</td>
                             <td>1,320</td>
                             <td>357</td>
                             <td>254</td>
@@ -127,7 +139,7 @@
                         </tr>
                         <tr>
                             <td class="txt--l"> (5) □□산업노동조합</td>
-                            <td class="txt_l">□□총연맹</td>
+                            <td class="txt--c">□□총연맹</td>
                             <td>315</td>
                             <td>25</td>
                             <td>90</td>
@@ -139,38 +151,50 @@
             <div class="chart1">
                 <!-- 				<div class="chartBox" id="mainChartDiv"><canvas id="mainChart" width="100%" height="100%"></canvas></div> -->
                 <div class="chartBox">
-                    <h2 class="title" style="margin-bottom: 32px;">자산 부채 현황<span>(단위 : 천원)</span></h2>
-                    <div id="pieChart" class="echart" style="width: 100%; min-height: 18.8rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1724498288483">
-      
-                        <!-- <div style="position: relative; padding: 0px; margin: 0px; border-width: 0px;">
-                            <canvas data-zr-dom-id="zr_0" style="width: 18.8rem; height: 18.8rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
-                            </canvas></div>
-                        <div class=""></div> -->
+                    <h2 class="title">자산 부채 현황</h2>
+
+                    <div class="container">
+                        <div id="pieChart" class="echart" style="user-select: none; height: 20rem; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; overflow: visible;"  _echarts_instance_="ec_1724498288483"></div>
                     </div>
                     <div class="chartData__wrap">
-                        <div class="data">
+                        <div class="data  dataEx">
                             <h2>자산</h2>
-                            <p>데이터</p>
+                            <div class="flex--box-c" style="justify-content: center;">
+                                <p class="asset data--bold">데이터</p><span class="unit">(천원)</span>
+                            </div>
                         </div>
-                        <div class="data" id="dataEx">
-                            <h2>자산</h2>
-                            <p>데이터</p>
+                        <div class="data dataEx">
+                            <h2>부채</h2>
+                            <div class="flex--box-c" style="justify-content: center;">
+                                <p class="income  data--bold">데이터 </p><span class="unit">(천원)</span>
+                            </div>
                         </div>
-                        <div id="dataDisplay"></div>
                     </div>
                 </div>
             </div>
             <div class="chart2">
                 <!-- 				<div class="chartBox" id="mainChartDiv2"><canvas id="mainChart2" width="100%" height="100%"></canvas></div> -->
                 <div class="chartBox">
-                    <h2 class="title">수입 지출 현황<span>(단위 : 천원)</span></h2>
-                    <div>
-                        <div id="barChart" class="echart" style="width: 100%; height: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1724498288484">
-                            <div style="position: relative; width: 236px; height: 236px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="236" height="236" style="position: absolute; left: 0px; top: 0px; width: 236px; height: 236px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
-                            <div class=""></div>
+                    <h2 class="title">수입 지출 현황</h2>
+                    <div class="container">
+                        <div id="barChart" class="echart" style="width: 100%; height: 20rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1724498288484"></div>
+                    </div>
+                    <div class="chartData__wrap">
+                        <div class="data  dataEx">
+                            <h2>자산</h2>
+                            <div class="flex--box-c" style="justify-content: center;">
+                                <p class="revenue  data--bold">데이터</p><span class="unit">(천원)</span>
+                            </div>
+                        </div>
+                        <div class="data dataEx">
+                            <h2>부채</h2>
+                            <div class="flex--box-c" style="justify-content: center;">
+                                <p class="expend  data--bold">데이터 </p><span class="unit">(천원)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -201,8 +225,13 @@ https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
             var f = parseInt(($(this).find("td:eq(4)").text()).replace(",", "")); //수익
             var g = parseInt(($(this).find("td:eq(5)").text()).replace(",", "")); //지출
 
-            $('#dataEx p').html(e)
-            $('#dataEx p').html(d)
+            //파이그래프
+            $('.chart1 .dataEx .asset').html(d) // 자산 데이터 바인딩
+            $('.chart1 .dataEx .income').html(e) // 부채 데이터 바인딩
+
+            // 막대그래프
+            $('.chart2 .dataEx .revenue').html(f) // 자산 데이터 바인딩
+            $('.chart2 .dataEx .expend').html(g) // 부채 데이터 바인딩
 
 
             // 파이 차트 옵션
@@ -211,32 +240,53 @@ https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
                     trigger: 'item',
                     confine:true
                 },
-                // legend: {
-                //     orient: 'horizontal',
-                //     // top: 5,
-                //     itemWidth: 16,
-                //     itemHeight: 16
-                // },
+
+   
                 
                 series: [{
-                    // top: 0,
+                    top: 0,
                     type: 'pie',
                     radius: ['42.6%', '100%'],
                     label: {
-                        // show: true,
-                        // position: 'inside',
-                        // fontSize: 18,
+                        show: true,
+                        textStyle: {
+                            color: '#767676',
+                            lineHeight: 24,
+                            align: 'center'
+                        },
+                        position: 'center',
+                        // align: 'center',  // 리치 텍스트의 중앙 정렬
+                        fontSize: 18,
+                        formatter: function(params){
+                        return `자산\n {value|${e}}`    
+                        },
+
+                    
+                        
+                        rich: {
+                            value: {
+                            
+                                fontSize: 18,
+                                fontWeight:'bold',
+                                align: 'center',  // 리치 텍스트의 중앙 정렬
+                                padding: [0,4,0,0]
+                            }
+                        }
+                        
+
                         // formatter: function(d) {
                         // 	if(d.value == 0) return '';
                         // 	return gfnAddCommas(d.value);
                         // }
                     },
+
+
                     emphasis: {
-                        // itemStyle: {
-                        //     shadowBlur: 10,
-                        //     shadowOffsetX: 0,
-                        //     shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        // }
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
                     },
                     data: [{
                             value: d,
@@ -260,12 +310,6 @@ https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
             var pieChart = echarts.init(document.querySelector("#pieChart"));
             pieChart.setOption(pieChartOption);
 
-            // pieChart.on('mouseover', function (params) {
-            // // 데이터 바인딩
-            // var dataDisplay = document.getElementById('dataDisplay');
-            // dataDisplay.innerHTML = '항목: ' + params.name + '<br>값: ' + params.value + ' 천원';
-            // });
-
 
 
             // 바 차트 옵션
@@ -281,37 +325,49 @@ https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
                     left: '3%',
                     right: '4%',
                     bottom: '3%',
-                    containLabel: true
+                    containLabel: false,
                 },
                 xAxis: [{
                     type: 'category',
-                    data: ['수입', '지출']
+                    data: ['수입', '지출'],
+                    axisLine: { show: false }, // 축 선 숨기기
+                    axisTick: { show: false }, // 축 눈금선 숨기기
+                    splitLine: { show: false }, // 축 분할선 숨기기
+                    axisLabel: { show: true } // 축 레이블은 보이도록 설정
                 }],
                 yAxis: [{
-                    type: 'value'
+                    type: 'value',
+                    axisLine: { show: false }, // 축 선 숨기기
+                    axisTick: { show: false }, // 축 눈금선 숨기기
+                    splitLine: { show: false }, // 축 분할선 숨기기
+                    axisLabel: { show: true } // 축 레이블은 보이도록 설정
                 }],
                 series: [{
                     type: 'bar',
                     label: {
-                        show: true,
+                        show: false,
                         fontSize: 18,
                         // formatter: function(d) {
                         // 	return gfnAddCommas(d.value);
                         // }
                     },
-                    emphasis: {
-                        focus: 'series'
-                    },
+                    barWidth : '80px',
+                    // barCategoryGap: '80',
+                    barGap: '80px',
+
+                    // emphasis: {
+                    //     focus: 'series'
+                    // },
                     data: [{
                             value: f,
                             itemStyle: {
-                                color: 'rgb(115,192,220)'
+                                color: '#005187'
                             }
                         },
                         {
                             value: g,
                             itemStyle: {
-                                color: 'rgb(86,113,195)'
+                                color: '#00BA63'
                             }
                         }
                     ]
@@ -345,6 +401,7 @@ https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
     }
 
     function fn_tblClickInterval() { 
+        console.log(cnt)
         cnt += 1; // 카운트 늘어나고
         if (cnt == 5) { // 끝나면 초기화
             cnt = 0;
