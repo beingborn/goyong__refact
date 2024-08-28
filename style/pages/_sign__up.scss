@@ -23,10 +23,8 @@
 
 
 .sign__up__table__wrap {border-top: 2px solid #000;}
-
 .sign__up__table {
     tr {line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd;}
-    
     th {width: 12.5%;}
     td {flex-grow: 1; line-height: 100%;}
 
@@ -37,10 +35,8 @@
     .with__submit input[type="text"]  {width: calc(90%); }
     .with__submit .btn__check__dup {
         width: calc(10% - 1rem); 
-        // background-color: #000; 
         color: #fff;}
-    // .with__submit input[type="submit"] {width: calc(10% - 1rem); background-color: #000; color: #fff;}
-
+     
     .col2__th {      
         flex-direction: column; align-items: flex-start;
         align-items: flex-start;
@@ -50,6 +46,21 @@
         span {line-height: 150%; text-align: left;}
     }
 }
+
+
+// 공통 폼 tablle
+.form__table tr {line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd;}
+.form__table th {width: 19.53%;}
+.form__table td {flex-grow: 1; line-height: 100%;}
+
+
+.form__table td input[type="text"], .form__table td input[type="password"] {border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem;}
+.form__table td input[type="submit"]{border: 1px solid #ddd; line-height: 4rem;}
+.form__table td select {height: 4rem; border: 1px solid #ddd;}
+.form__table .secret__Check .icon__pw-visible {right: 1.8rem; transform: translateY(-50%);}
+.form__table .error-message {padding-left: 2rem; padding-bottom: 1rem;}
+
+
 
 .must__type {
     position: relative;

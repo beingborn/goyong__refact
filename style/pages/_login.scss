@@ -2,15 +2,6 @@
 
         // 로그인 페이지 html 에 class login__page 할당
         .login__page {
-
-
-
-
-
-
-
-
-
             body {position: relative; 
                 // height: 100vh;
             }
@@ -27,7 +18,7 @@
             #login__body .login__block .desc {text-align: center; font-size: 1.8rem; color: #555555;}
             #login__body .login__block > div {background-color: #fff; margin-top: 3rem;}
             // #login__body .login__block > div > div {padding: 3rem 4rem;}
-            #login__body .login__block > div > div button { color: #fff; height: 5.2rem; font-size: 1.8rem; font-weight: 500; width: 100%; margin: 2.4rem 0 2.4rem 0; border-radius: 0.8rem;}
+            #login__body .login__block > div > div > button { color: #fff; height: 5.2rem; font-size: 1.8rem; font-weight: 500; width: 100%; margin: 2.4rem 0 2.4rem 0; border-radius: 0.8rem;}
            
             #login__body .login__block .login__input:nth-of-type(1) {padding-bottom: 2.4rem;}
             #login__body .login__block .login__input:nth-of-type(2) {padding-bottom: 1.2rem;}
@@ -35,7 +26,6 @@
             #login__body .save__info {display: flex; align-items: center; padding-top: 2.4rem;}
             #login__body .save__info input[type="checkbox"] {margin-right: 0.8rem;}
             #login__body .login__help a:not(:last-child)::after {content: ""; width: 1px; height: 12px; background: #ddd; margin: 0 7px 0 13px;display: inline-block;}
-            #login__body .error-message {color: #E71825;}
 
             .helper__box { width: 100%; padding: 2.4rem; background-color: $theme-krds-skyblue-00; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
             .helper__box .helper__tit {display: flex; position: relative; color: $theme-krds-navy-00; font-weight: 700;}
@@ -44,36 +34,13 @@
             .helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 1.6rem;}
             .helper__box .helper__desc__wrap {margin-top: 1.6rem; margin-left: 4.8rem; color: #555555;}
 
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
         }
 
 
+       // .secret__Check input[type="password"],  .secret__Check input[type="text"]{position: relative; border: 1px solid blue;}
+
+
+       .secret__Check {position: relative;}
+       .secret__Check .icon__pw-visible {position: absolute; top: 50%; background: none; border: none; cursor: pointer; padding: 0; max-height: 2.4rem;}
+       .show__icon {width: 2.4rem; height: 2.4rem;}

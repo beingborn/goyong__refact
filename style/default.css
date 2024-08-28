@@ -425,6 +425,13 @@ textarea {
   height: 100%;
 }
 
+.error-message {
+  color: #E71825;
+}
+
+/*
+  특정 html만 100vh에 맞추기 (임시)
+*/
 /* 
   버튼 CSS
 */
@@ -1446,6 +1453,60 @@ input[type=checkbox] {
   background: url(../../img/file__icon.svg) no-repeat center;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 2.4rem;
+}
+
+.breadcrumb .path .home > a {
+  position: relative;
+}
+
+.breadcrumb .path .home > a::before {
+  content: "";
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../../img/Base-Breadcrumb.svg) no-repeat center;
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.breadcrumb .path > li {
+  display: inline;
+  position: relative;
+}
+
+.breadcrumb .path > li > a {
+  padding-bottom: 0.1rem;
+  position: relative;
+}
+
+.breadcrumb .path > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.1rem;
+  background-color: #000;
+}
+
+.breadcrumb .path > li + li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  background: url(../../img/arrow__right-bk.svg) no-repeat center;
+  margin: 0 0.4rem;
+}
+
 /*
     헤더 CSS
 */
@@ -2300,6 +2361,49 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   text-align: left;
 }
 
+.form__table tr {
+  line-height: 5.8rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.form__table th {
+  width: 19.53%;
+}
+
+.form__table td {
+  flex-grow: 1;
+  line-height: 100%;
+}
+
+.form__table td input[type=text], .form__table td input[type=password] {
+  border: 1px solid #ddd;
+  line-height: 4rem;
+  width: 100%;
+  padding: 0 8px;
+  font-size: 1.6rem;
+}
+
+.form__table td input[type=submit] {
+  border: 1px solid #ddd;
+  line-height: 4rem;
+}
+
+.form__table td select {
+  height: 4rem;
+  border: 1px solid #ddd;
+}
+
+.form__table .secret__Check .icon__pw-visible {
+  right: 1.8rem;
+  transform: translateY(-50%);
+}
+
+.form__table .error-message {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
 .must__type {
   position: relative;
   text-align: left;
@@ -2553,7 +2657,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background-color: #fff;
   margin-top: 3rem;
 }
-.login__page #login__body .login__block > div > div button {
+.login__page #login__body .login__block > div > div > button {
   color: #fff;
   height: 5.2rem;
   font-size: 1.8rem;
@@ -2586,9 +2690,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background: #ddd;
   margin: 0 7px 0 13px;
   display: inline-block;
-}
-.login__page #login__body .error-message {
-  color: #E71825;
 }
 .login__page .helper__box {
   width: 100%;
@@ -2623,6 +2724,28 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-top: 1.6rem;
   margin-left: 4.8rem;
   color: #555555;
+}
+.login__page #login__body .secret__Check .icon__pw-visible {
+  right: 1.6rem;
+}
+
+.secret__Check {
+  position: relative;
+}
+
+.secret__Check .icon__pw-visible {
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  max-height: 2.4rem;
+}
+
+.show__icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 /*
@@ -4311,6 +4434,12 @@ select {
   .wrap .header__top {
     display: none;
   }
+  .wrap .header__gnb {
+    display: none;
+  }
+  .wrap .count__group .count {
+    width: 32%;
+  }
   .wrap .top__banner {
     height: auto;
   }
@@ -4325,12 +4454,6 @@ select {
     width: 196px;
     display: flex;
     align-items: center;
-  }
-  .wrap .header__btm {
-    margin: 0.8rem 0;
-  }
-  .wrap .base__gnb {
-    display: none;
   }
   .wrap .header__btm .right__icon__set .talk {
     display: none;
@@ -4350,9 +4473,6 @@ select {
   }
   .wrap .header__btm .right__icon__set a img {
     margin: 0;
-  }
-  .wrap .top__visual .main__hero {
-    height: auto;
   }
   .wrap .top__visual .main__hero .main__text {
     position: static;
@@ -4382,10 +4502,6 @@ select {
     padding-top: 0.8rem;
     font-size: 1.3rem;
   }
-  .wrap .count__group {
-    position: static;
-    padding: 4rem 0;
-  }
   .wrap .count__group .count:nth-child(1),
   .wrap .count__group .count:nth-child(2) {
     margin-bottom: 1.6rem;
@@ -4393,11 +4509,8 @@ select {
   .wrap .count__group .inner {
     flex-wrap: wrap;
   }
-  .wrap .count__group .count {
-    width: calc(50% - 0.8rem);
-  }
   .wrap .count__group .count .subc {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
   .wrap .wrap .swiper__container {
     width: 80%;
@@ -4563,20 +4676,8 @@ select {
   .wrap .header__gnb {
     display: none;
   }
-  .wrap .top__banner {
-    height: auto;
-  }
   .wrap .banner__wrap {
     display: flex;
-  }
-  .wrap .header__btm .right__icon__set .talk {
-    display: none;
-  }
-  .wrap .header__btm .right__icon__set .sign__up {
-    display: none;
-  }
-  .wrap .header__btm .right__icon__set .hamburger {
-    display: inline-flex;
   }
   .wrap .logo {
     display: none;
@@ -4725,13 +4826,6 @@ select {
     position: static;
     transform: none;
   }
-  .wrap .footer__info p:nth-child(1) {
-    margin-bottom: 3.2rem;
-  }
-  .wrap .footer__info p:nth-child(2) {
-    border-top: 0.1rem solid #ddd;
-    padding-top: 1.6rem;
-  }
   .wrap footer .footer__top {
     height: auto;
   }
@@ -4770,6 +4864,17 @@ select {
   }
   .wrap .sns__info .icon__wrap {
     padding: 3.2rem 0;
+  }
+}
+/* 모바일 최소 사이즈 ~ 태블릿 세로 */
+@media all and (min-width: 360px) and (max-width: 767px) {
+  .footer__info p:nth-child(1) {
+    margin-bottom: 3.2rem;
+  }
+  .footer__info p:nth-child(2) {
+    border-top: 0.1rem solid #ddd;
+    padding-top: 1.6rem;
+    color: #555555;
   }
 }
 /* 모바일 최소 사이즈*/
