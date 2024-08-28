@@ -48,7 +48,7 @@
        .form__table .btn__file__select--mo {display: none;}
 
        // 비밀번호 변경 페이지
-       .info__change__form {margin-bottom: 44rem;}
+       .info__change__form {margin-top: 8rem;margin-bottom: 44rem;}
 
 
  /* 모바일 세로 (해상도 ~ 479px) 까지 */ 
@@ -68,7 +68,7 @@
     .form__table .btn__file__select--mo {display: block;position: absolute; top: 50%; transform: translateY(-50%); right: 1.6rem; width: 2.4rem; height: 2.4rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: cover;}
 
     // 변경 페이지
-    .info__change__form {margin-bottom: 9.2rem;}
+    .info__change__form {margin-top : 6.4rem ;margin-bottom: 9.2rem;}
     .info__change__form .form__table tr{margin-bottom: 2.4rem;}
     .info__change__form .function__group {margin: 0;}
     .info__change__form .btn__control {width: 100%;}

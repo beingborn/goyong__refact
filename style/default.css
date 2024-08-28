@@ -612,6 +612,13 @@ button {
 /* 
   테이블 CSS
 */
+.table__title {
+  font-size: 2.5rem;
+  margin-bottom: 3.6rem;
+  margin-top: 8rem;
+  font-weight: 500;
+}
+
 .td__container {
   display: flex;
   flex-wrap: wrap;
@@ -2298,71 +2305,68 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 /*
     회원가입 페이지 CSS
 */
-.sign__up__inner {
-  padding-top: 7rem;
-}
-
-.must__help__message span, .must__help__message p {
-  font-size: 1.5rem;
-}
-
 .td--flex {
   display: flex;
   align-items: center;
   padding-left: 1rem;
   flex-wrap: nowrap;
 }
+
 .td--flex .td--width {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.sign__up__table__wrap {
-  border-top: 2px solid #000;
+.must__help__message span, .must__help__message p {
+  font-size: 1.5rem;
 }
 
-.sign__up__table tr {
-  line-height: 5.8rem;
-  width: 100%;
-  border-bottom: 0.1rem solid #ddd;
+.btn__check__dup {
+  width: 10%;
+  color: #000;
+  border: 0.1rem solid #1d1d1d;
+  border-radius: 0.5rem;
+  max-width: 8rem;
 }
-.sign__up__table th {
-  width: 12.5%;
+
+.must__help__message {
+  margin-top: 2.4rem;
 }
-.sign__up__table td {
-  flex-grow: 1;
-  line-height: 100%;
+
+.file-upload-wrapper {
+  display: flex;
+  align-items: center;
 }
-.sign__up__table td input[type=text] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-  width: 100%;
-  padding: 0 8px;
-}
-.sign__up__table td input[type=submit] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-}
-.sign__up__table td select {
+
+.custom-file-label {
+  background-color: #004A98;
+  color: white;
+  width: 10rem;
   height: 4rem;
-  border: 1px solid #ddd;
+  line-height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
 }
-.sign__up__table .with__submit input[type=text] {
+
+.form__table .with__submit input[type=text] {
   width: 90%;
 }
-.sign__up__table .with__submit .btn__check__dup {
+
+.form__table .with__submit .btn__check__dup {
   width: calc(10% - 1rem);
   color: #fff;
 }
-.sign__up__table .col2__th {
+
+.form__table .col2__th {
   flex-direction: column;
-  align-items: flex-start;
   align-items: flex-start;
   justify-content: center;
   min-height: 5.8rem;
 }
-.sign__up__table .col2__th span {
+
+.form__table .col2__th span {
   line-height: 150%;
   text-align: left;
 }
@@ -2419,6 +2423,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   position: relative;
   text-align: left;
 }
+
 .must__type::after {
   content: " *";
   color: #FE5555;
@@ -2428,51 +2433,19 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-weight: bold;
 }
 
-.sign__up__table .with__select__triple select {
-  width: calc(33.33% - 0.4rem);
-}
-
-.sign__up__table .with__select__double .select__renew, .sign__up__table .with__select__triple .select__renew {
+.sign__up__table__wrap .select__renew {
   background: url(../img/select__renew.png) no-repeat 98% 50%;
-}
-
-.sign__up__table .with__select__double select {
-  width: calc(50% - 0.4rem);
-}
-
-.td__calender {
-  position: relative;
-  width: 33.33%;
-}
-.td__calender .calender__icon {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  background: url(../img/calendar-days-regular.svg) no-repeat center;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1.2rem;
-}
-
-.td__date {
-  width: 38%;
-}
-
-.s-select--no--style {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 22%;
-  padding: 0 8px;
 }
 
 .sign__up__table .radio__wrap .flex {
   display: flex;
   align-items: center;
 }
+
 .sign__up__table .radio__wrap .flex label:nth-of-type(1) {
   margin-right: 2rem;
 }
+
 .sign__up__table .radio__wrap input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2483,24 +2456,40 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-right: 0.7rem;
   border: 1px solid #ccc;
 }
+
 .sign__up__table .radio__wrap input[type=radio]:checked {
   border: 0.6rem solid #000;
 }
 
-.file-upload-wrapper {
-  display: flex;
-  align-items: center;
+.sign__up__table__wrap .td__date .select__renew {
+  background: url(../img/select__renew.png) no-repeat 92% 50%;
 }
 
-.custom-file-label {
-  background-color: #004A98; /* 원하는 배경 색상 */
-  color: white; /* 원하는 텍스트 색상 */
-  width: 10rem;
-  height: 4rem;
-  line-height: 4rem;
-  cursor: pointer;
-  text-align: center;
-  margin-right: 10px;
+.td__calender {
+  position: relative;
+  width: 33.33%;
+}
+
+.td__calender .calender__icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/calendar-days-regular.svg) no-repeat center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.2rem;
+}
+
+.td__date select {
+  min-width: 12rem;
+}
+
+.s-select--no--style {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 22%;
+  padding: 0 8px;
 }
 
 /*
@@ -2772,6 +2761,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 
 .info__change__form {
+  margin-top: 8rem;
   margin-bottom: 44rem;
 }
 
@@ -2818,6 +2808,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     background-size: cover;
   }
   .info__change__form {
+    margin-top: 6.4rem;
     margin-bottom: 9.2rem;
   }
   .info__change__form .form__table tr {

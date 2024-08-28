@@ -3,6 +3,10 @@
 */
 
 
+// 사용자 공통 테이블 타이틀
+.table__title {font-size: 2.5rem; margin-bottom: 3.6rem; margin-top: 8rem; font-weight: 500;}
+
+
 // manage__labor 다중 셀렉터 및 인풋 조정 영역
 .td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;}
 .td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px;} // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
