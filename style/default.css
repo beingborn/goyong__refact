@@ -2367,6 +2367,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   text-align: left;
 }
 
+.form__table .preview {
+  min-width: auto;
+}
+
 .form__table tr {
   line-height: 5.8rem;
   width: 100%;
@@ -2375,6 +2379,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .form__table th {
   width: 19.53%;
+  min-width: 18rem;
 }
 
 .form__table td {
@@ -2762,7 +2767,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding-right: 0;
 }
 
-.password__change__form {
+.form__table .btn__file__select--mo {
+  display: none;
+}
+
+.info__change__form {
   margin-bottom: 44rem;
 }
 
@@ -2777,7 +2786,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     margin-bottom: 1.2rem;
     width: 100%;
     background-color: transparent;
-    min-width: 18rem;
   }
   .form__table.border-top-large {
     border-top: 0;
@@ -2788,28 +2796,45 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   .form__table td input[type=text], .form__table td input[type=password] {
     padding: 0.8rem 0.8rem;
   }
-  .password__change__form {
+  .form__table .file__select__container {
+    position: relative;
+    gap: 0;
+  }
+  .form__table .preview {
+    height: 5.8rem;
+  }
+  .form__table .btn__file__select {
+    display: none;
+  }
+  .form__table .btn__file__select--mo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../../img/file__select--mo.svg) no-repeat center;
+    background-size: cover;
+  }
+  .info__change__form {
     margin-bottom: 9.2rem;
   }
-  .password__change__form .form__table tr {
+  .info__change__form .form__table tr {
     margin-bottom: 2.4rem;
   }
-  .password__change__form .function__group {
+  .info__change__form .function__group {
     margin: 0;
   }
-  .password__change__form .btn__control {
+  .info__change__form .btn__control {
     width: 100%;
   }
-  .password__change__form .error-message {
+  .info__change__form .error-message {
     padding-left: 0;
     padding-top: 1rem;
     padding-bottom: 0;
   }
 }
-.form__table .file__select__container .preview {
-  flex-grow: 1;
-}
-
 /*
     관리자 CSS
 */
@@ -4980,8 +5005,7 @@ select {
 /*
    서브 미디어 쿼리 CSS
 */
-.motab-1,
-.motab-2 {
+.motab-1, .motab-2 {
   display: none;
 }
 
@@ -5073,6 +5097,12 @@ select {
 @media all and (max-width: 479px) {
   .content .tab__content {
     padding-top: 4rem;
+  }
+  #sub__wrap .content .visual__bg {
+    height: 16.6rem;
+  }
+  #sub__wrap .content .visual__bg .visual__text p {
+    white-space: nowrap;
   }
   #sub__wrap .content .visual__bg .visual__text {
     text-align: center;

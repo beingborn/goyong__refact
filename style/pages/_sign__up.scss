@@ -49,8 +49,9 @@
 
 
 // 공통 폼 tablle
+.form__table .preview {min-width: auto;}
 .form__table tr {line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd;}
-.form__table th {width: 19.53%;}
+.form__table th {width: 19.53%; min-width: 18rem;} // 해당 min-width 수치는 임시
 .form__table td {flex-grow: 1; line-height: 100%;}
 
 

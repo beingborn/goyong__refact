@@ -59,7 +59,6 @@
 				<nav id="gnb1">
 				<ul id="head_menu" class="top__menu">
 					<li class="plus"><a href="javascript:void(0);">시스템안내 
-					<!-- <span class="sr_only">닫기</span> -->
 					</a>
 					<div class="sub__menu">
 						<ul>
@@ -157,8 +156,7 @@
 		</ol>
 		</nav>
 
-        <form action="POST" id="file_check_frm" name="file_check_frm" style="margin-bottom: 44rem;">
-
+        <form action="POST" class="info__change__form" id="file_check_frm" name="file_check_frm">
             <input type="hidden" name="username">
             <input type="hidden" name="password">
             <input type="hidden" name="fileType" value="file">
@@ -208,12 +206,15 @@
                                     </label>
                                 </span>
                             </th>
+
+							<!-- 모바일로 변경 시 파일 선택을 모바일용 아이콘으로 변경 (스타일 적용이 많아서 display= none 처리해야할듯함)-->
                             <td>
                                 <div class="td__container file__select__container" id="pwLength">
 										<div class="preview flex--box-c">
 											<p class="upload__file__name">선택된 파일없음</p>
 										</div>
 										<label class="btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+										<label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
 										<input type="file" class="file__post" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
                                 </div>
                             </td>

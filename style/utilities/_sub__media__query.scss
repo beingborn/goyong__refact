@@ -3,16 +3,11 @@
 */ 
 
 // pc 비활성화
-.motab-1,
-.motab-2 {
-  display: none;
-}
+.motab-1,.motab-2 { display: none;}
 
 /* 노트북 소형~ 중형 1080px ~ 1440px */
 @media all and (min-width: 1080px) and (max-width: 1440px) {
-  .table__horizontal table tbody th th {
-    font-size: 1.3rem;
-  }
+  .table__horizontal table tbody th th {font-size: 1.3rem;}
 
   .table__vertical table tbody td,
   .table__vertical table thead th {
@@ -121,7 +116,8 @@
 
   .content .tab__content {padding-top: 4rem;}
 
-
+  #sub__wrap .content .visual__bg {height: 16.6rem;}
+  #sub__wrap .content .visual__bg .visual__text p {white-space: nowrap;}
   #sub__wrap .content .visual__bg .visual__text {
     text-align: center;
     left: 50%;

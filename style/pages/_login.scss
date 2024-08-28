@@ -34,7 +34,9 @@
             #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
         }
 
-        // 공통 비밀번호 표시 / 숨기기
+        // 공통 
+
+        // 공통 input 숨기기 / 보기
        .secret__Check {position: relative;}
        .secret__Check .icon__pw-visible {position: absolute; top: 50%; background: none; border: none; cursor: pointer; padding: 0; max-height: 2.4rem;}
        .show__icon {width: 2.4rem; height: 2.4rem;}
@@ -43,33 +45,39 @@
         // 파일 업로드 공통
        .form__table .file__select__container .preview  {flex-grow: 1;}
        .form__table .file__select__container {padding-right: 0;}
+       .form__table .btn__file__select--mo {display: none;}
 
        // 비밀번호 변경 페이지
-       .password__change__form {margin-bottom: 44rem;}
+       .info__change__form {margin-bottom: 44rem;}
 
 
  /* 모바일 세로 (해상도 ~ 479px) 까지 */ 
 @media all and (max-width: 479px) {
     // form__table 공통
     .form__table tr {flex-direction: column; border-bottom: 0;}
-    .form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; min-width: 18rem;} // 해당 min-width 수치는 임시
+    .form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; } 
     .form__table.border-top-large{border-top: 0;}
     .form__table .td__container {padding: 0;}
     .form__table td input[type="text"], .form__table td input[type="password"]{padding: 0.8rem 0.8rem;}    
 
+    // 파일 업로드
+    .form__table .file__select__container {position: relative; gap: 0;}
+    .form__table .preview {height: 5.8rem;}
 
-    // 비밀번호 변경 페이지
-    .password__change__form {margin-bottom: 9.2rem;}
-    .password__change__form .form__table tr{margin-bottom: 2.4rem;}
-    .password__change__form .function__group {margin: 0;}
-    .password__change__form .btn__control {width: 100%;}
-    .password__change__form .error-message {padding-left: 0; padding-top: 1rem; padding-bottom: 0;}
+    .form__table .btn__file__select {display: none;}
+    .form__table .btn__file__select--mo {display: block;position: absolute; top: 50%; transform: translateY(-50%); right: 1.6rem; width: 2.4rem; height: 2.4rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: cover;}
+
+    // 변경 페이지
+    .info__change__form {margin-bottom: 9.2rem;}
+    .info__change__form .form__table tr{margin-bottom: 2.4rem;}
+    .info__change__form .function__group {margin: 0;}
+    .info__change__form .btn__control {width: 100%;}
+    .info__change__form .error-message {padding-left: 0; padding-top: 1rem; padding-bottom: 0;}
 }
 
 
 
 
-.form__table .file__select__container .preview  {flex-grow: 1;}
 
 
 
