@@ -1,14 +1,10 @@
- /* 로그인 페이지에서만 적용되는 스타일 */
+ /* 사용자 폼 관련 페이지 스타일 */
 
-        // 로그인 페이지 html 에 class login__page 할당
+        // 로그인 페이지 class login__page 
         .login__page {
-            body {position: relative; 
-                // height: 100vh;
-            }
+            body {position: relative; }
             .wrap {display: flex; flex-direction: column; }
-            // .header {flex: 0 0 auto}
             #login__body {overflow: auto; font-size: 1.5rem; padding-top: 12.8rem; padding-bottom: 8rem;} // flex: 1 0 auto; 
-            // footer {flex: 0 0 auto; margin-top: auto;}
 
             #login__body input[type="text"], #login__body input[type="password"] {height: 5.8rem;}
             #login__body input::placeholder {font-size: 1.9rem;}
@@ -17,7 +13,6 @@
             #login__body .login__block .title {text-align: center; font-size: 3.2rem;}
             #login__body .login__block .desc {text-align: center; font-size: 1.8rem; color: #555555;}
             #login__body .login__block > div {background-color: #fff; margin-top: 3rem;}
-            // #login__body .login__block > div > div {padding: 3rem 4rem;}
             #login__body .login__block > div > div > button { color: #fff; height: 5.2rem; font-size: 1.8rem; font-weight: 500; width: 100%; margin: 2.4rem 0 2.4rem 0; border-radius: 0.8rem;}
            
             #login__body .login__block .login__input:nth-of-type(1) {padding-bottom: 2.4rem;}
@@ -27,20 +22,54 @@
             #login__body .save__info input[type="checkbox"] {margin-right: 0.8rem;}
             #login__body .login__help a:not(:last-child)::after {content: ""; width: 1px; height: 12px; background: #ddd; margin: 0 7px 0 13px;display: inline-block;}
 
+            // 로그인 도움말
             .helper__box { width: 100%; padding: 2.4rem; background-color: $theme-krds-skyblue-00; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
             .helper__box .helper__tit {display: flex; position: relative; color: $theme-krds-navy-00; font-weight: 700;}
             .helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../../img/icon__helper__info.svg);background-size: contain;}
             .helper__box .helper__desc__wrap .info-list {list-style: disc;}
             .helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 1.6rem;}
             .helper__box .helper__desc__wrap {margin-top: 1.6rem; margin-left: 4.8rem; color: #555555;}
-
+            
+            // 비밀번호 표시 / 숨기기
             #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
         }
 
-
-       // .secret__Check input[type="password"],  .secret__Check input[type="text"]{position: relative; border: 1px solid blue;}
-
-
+        // 공통 비밀번호 표시 / 숨기기
        .secret__Check {position: relative;}
        .secret__Check .icon__pw-visible {position: absolute; top: 50%; background: none; border: none; cursor: pointer; padding: 0; max-height: 2.4rem;}
        .show__icon {width: 2.4rem; height: 2.4rem;}
+
+
+        // 파일 업로드 공통
+       .form__table .file__select__container .preview  {flex-grow: 1;}
+       .form__table .file__select__container {padding-right: 0;}
+
+       // 비밀번호 변경 페이지
+       .password__change__form {margin-bottom: 44rem;}
+
+
+ /* 모바일 세로 (해상도 ~ 479px) 까지 */ 
+@media all and (max-width: 479px) {
+    // form__table 공통
+    .form__table tr {flex-direction: column; border-bottom: 0;}
+    .form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; min-width: 18rem;} // 해당 min-width 수치는 임시
+    .form__table.border-top-large{border-top: 0;}
+    .form__table .td__container {padding: 0;}
+    .form__table td input[type="text"], .form__table td input[type="password"]{padding: 0.8rem 0.8rem;}    
+
+
+    // 비밀번호 변경 페이지
+    .password__change__form {margin-bottom: 9.2rem;}
+    .password__change__form .form__table tr{margin-bottom: 2.4rem;}
+    .password__change__form .function__group {margin: 0;}
+    .password__change__form .btn__control {width: 100%;}
+    .password__change__form .error-message {padding-left: 0; padding-top: 1rem; padding-bottom: 0;}
+}
+
+
+
+
+.form__table .file__select__container .preview  {flex-grow: 1;}
+
+
+

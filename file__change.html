@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>비밀번호 변경</title>
+<title>첨부파일 변경</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=, initial-scale=1.0">
 <title>노동조합 회계공시시스템</title>
@@ -140,9 +140,9 @@
 	<div class="visual__bg">
 		<div class="inner">
 			<div class="visual__text">
-				<h2>비밀번호 변경</h2>
+				<h2>첨부파일 변경</h2>
 				<p>
-					노동조합 회계공시시스템 비밀번호 변경 화면입니다.
+					노동조합 회계공시시스템 첨부파일 변경 화면입니다.
 				</p>
 			</div>
 		</div>
@@ -153,15 +153,15 @@
 		<ol class="path">
 			<li class="home"><a href="#" class="txt">홈</a></li>
 			<li><a href="#" class="txt">로그인</a></li>
-			<li><a href="#" class="txt">비밀번호 변경</a></li>
+			<li><a href="#" class="txt">첨부파일 변경</a></li>
 		</ol>
 		</nav>
 
-        <form action="POST" id="password_check_frm" class="password__change__form" name="password_check_frm">
+        <form action="POST" id="file_check_frm" name="file_check_frm" style="margin-bottom: 44rem;">
 
             <input type="hidden" name="username">
             <input type="hidden" name="password">
-            <input type="hidden" name="loginType" value="ID">
+            <input type="hidden" name="fileType" value="file">
 
             <div class="table__template__horizontal ">
                 <div class="form__table border-top-large">
@@ -203,34 +203,18 @@
                         <tr>
                             <th>
                                 <span class="must__type">
-                                    <label for="pwcheck">
-                                        비밀번호 확인
+                                    <label for="filecheck">
+                                        파일첨부
                                     </label>
                                 </span>
                             </th>
                             <td>
-                                <div class="td__container secret__Check" id="pwLength">
-                                    <input class="password__input" id="pwcheck" type="password" placeholder="변경할 비밀번호를 입력하세요."  maxlength="20">
-                                    <button type="button" class="btn icon__pw-visible">
-                                        <img src="img/icon__see.svg" alt="비밀번호 보이기" class="show__icon">
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="col2__th">
-                                <span class="must__type">
-                                    <label for="pwcheck2">
-                                        변경할 비밀번호 확인
-                                    </label>
-                                </span>
-                            </th>
-                            <td>
-                                <div class="td__container secret__Check" id="checkPwValue">
-                                    <input class="password__input" type="password" id="pwcheck2" placeholder="변경할 비밀번호 확인을 입력하세요." maxlength="20">
-                                    <button type="button" class="btn icon__pw-visible">
-                                        <img src="img/icon__see.svg" alt="비밀번호 보이기" class="show__icon">
-                                    </button>
+                                <div class="td__container file__select__container" id="pwLength">
+										<div class="preview flex--box-c">
+											<p class="upload__file__name">선택된 파일없음</p>
+										</div>
+										<label class="btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+										<input type="file" class="file__post" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
                                 </div>
                             </td>
                         </tr>
@@ -238,6 +222,58 @@
                 </table>
                 </div>
             </div>
+
+
+                        <!-- 자바스크립트 input 파일 커스텀 -->
+
+						<script>
+
+                            // change 발생한 input을 특정
+                            // 임시 코드 : 파일 업로드 표시
+                            
+                            
+                                    let inputs = $(".file__post");
+                                    let preview = $(".preview");
+                                    
+                                    inputs.css({
+                                    "opacity": 0,
+                                    "width": 0
+                                    });
+                                    function displayFileNames(event){
+
+                          
+
+                                let currentInput = $(event.target);
+
+                                let index = inputs.index(currentInput)
+
+                                let previewBox = $(preview[index])
+
+                                previewBox.empty();  // preview 내 모든 자식 요소 제거
+
+                                const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
+                            
+                                if (currentFile.length === 0) {
+                                const para = $("<span>").text("아무파일도 입력되지 않았어요");
+                                previewBox.append(para);
+                                } else {
+                                const fileList = $("<div>");
+                                previewBox.append(fileList);
+
+                                for (const file of currentFile) {
+                                const listItem = $("<p>").text(file.name).addClass('upload__file__name');
+                                fileList.append(listItem);
+                                }
+                            }
+                            }
+
+                            inputs.on('change', displayFileNames);
+
+
+
+
+                          
+                            </script>
 
             <div class="function__group y__flex">
                 <!-- 
