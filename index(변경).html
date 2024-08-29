@@ -213,8 +213,9 @@
                             <table class="tdHover border-top-large" id="tableList">
                                 <caption>노동조합 회계공시(노동조합명, 총연합, 자산, 부채, 수입, 지출)</caption>
                                 <colgroup>
-                                    <col width="30%">
-                                    <col width="25%">
+                                    <!-- 30, 25 -->
+                                    <col>
+                                    <col>
                                     <col>
                                     <col>
                                     <col>
@@ -274,55 +275,59 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="chart1">
-                            <!-- 				<div class="chartBox" id="mainChartDiv"><canvas id="mainChart" width="100%" height="100%"></canvas></div> -->
-                            <div class="chartBox">
-                                <h2 class="title">자산 부채 현황</h2>
-            
-                                <div class="container">
-                                    <div id="pieChart" class="echart" style="user-select: none; height: 20rem; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; overflow: visible;"  _echarts_instance_="ec_1724498288483"></div>
+
+                        <div class="main__echart__wrap">
+                            <div class="chart1">
+                                <!-- 				<div class="chartBox" id="mainChartDiv"><canvas id="mainChart" width="100%" height="100%"></canvas></div> -->
+                                <div class="chartBox">
+                                    <h2 class="title">자산 부채 현황</h2>
+                
+                                    <div class="container">
+                                        <div id="pieChart" class="echart" style="user-select: none; height: 20rem; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; overflow: visible;"  _echarts_instance_="ec_1724498288483"></div>
+                                    </div>
+                                    
+                                    <div class="chartData__wrap">
+                                        <div class="data  dataEx">
+                                            <h2>자산</h2>
+                                            <div class="flex--box-c" style="justify-content: center;">
+                                                <p class="asset data--bold">데이터</p><span class="unit">(천원)</span>
+                                            </div>
+                                        </div>
+                                        <div class="data dataEx">
+                                            <h2>부채</h2>
+                                            <div class="flex--box-c" style="justify-content: center;">
+                                                <p class="income  data--bold">데이터 </p><span class="unit">(천원)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart2">
+                                <!-- 				<div class="chartBox" id="mainChartDiv2"><canvas id="mainChart2" width="100%" height="100%"></canvas></div> -->
+                                <div class="chartBox">
+                                    <h2 class="title">수입 지출 현황</h2>
+                                    <div class="container">
+                                        <div id="barChart" class="echart" style="width: 100%; height: 20rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" _echarts_instance_="ec_1724498288484"></div>
+                                    </div>
+                                    <div class="chartData__wrap">
+                                        <div class="data  dataEx">
+                                            <h2>자산</h2>
+                                            <div class="flex--box-c" style="justify-content: center;">
+                                                <p class="revenue  data--bold">데이터</p><span class="unit">(천원)</span>
+                                            </div>
+                                        </div>
+                                        <div class="data dataEx">
+                                            <h2>부채</h2>
+                                            <div class="flex--box-c" style="justify-content: center;">
+                                                <p class="expend  data--bold">데이터 </p><span class="unit">(천원)</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 
-                                <div class="chartData__wrap">
-                                    <div class="data  dataEx">
-                                        <h2>자산</h2>
-                                        <div class="flex--box-c" style="justify-content: center;">
-                                            <p class="asset data--bold">데이터</p><span class="unit">(천원)</span>
-                                        </div>
-                                    </div>
-                                    <div class="data dataEx">
-                                        <h2>부채</h2>
-                                        <div class="flex--box-c" style="justify-content: center;">
-                                            <p class="income  data--bold">데이터 </p><span class="unit">(천원)</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="chart2">
-                            <!-- 				<div class="chartBox" id="mainChartDiv2"><canvas id="mainChart2" width="100%" height="100%"></canvas></div> -->
-                            <div class="chartBox">
-                                <h2 class="title">수입 지출 현황</h2>
-                                <div class="container">
-                                    <div id="barChart" class="echart" style="width: 100%; height: 20rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" _echarts_instance_="ec_1724498288484"></div>
-                                </div>
-                                <div class="chartData__wrap">
-                                    <div class="data  dataEx">
-                                        <h2>자산</h2>
-                                        <div class="flex--box-c" style="justify-content: center;">
-                                            <p class="revenue  data--bold">데이터</p><span class="unit">(천원)</span>
-                                        </div>
-                                    </div>
-                                    <div class="data dataEx">
-                                        <h2>부채</h2>
-                                        <div class="flex--box-c" style="justify-content: center;">
-                                            <p class="expend  data--bold">데이터 </p><span class="unit">(천원)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
+                      
                     </div>
                 </div>
             </div>

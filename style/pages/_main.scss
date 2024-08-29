@@ -138,7 +138,7 @@
 
 // 메인 차트 영역
 .main__echart .chartBox {background: #FFF; height: 40rem; border-top: 1px solid #E5E5E5; border-radius: 2.4rem; padding: 3rem 3.5rem 0 3.5rem; box-shadow: 0rem 0rem 2rem 0 rgba(0, 0, 0, 0.1);}
-.main__echart > div {display: flex; justify-content: space-between; align-items: center;}
+.main__echart > div {display: flex; justify-content: space-between; align-items: center; gap: 4rem;}
 .main__echart .chartBox .title {margin-bottom: 3.2rem;}
 .main__echart .chartBox .echart {width: 100%; height: 18.8rem;}
 .main__echart .table__vertical {width: 44%; font-size: 1.5rem;}
@@ -151,7 +151,7 @@
 .data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
 
 #tableList tbody tr.on {background-color:  $theme-krds-skyblue-00;}
-.chartData__wrap {display: flex; padding-top: 4rem;}
+.chartData__wrap {display: flex; padding-top: 3rem;}
 .chartData__wrap .data {text-align: center; width: 50%;}
 
 
@@ -163,17 +163,13 @@
     max-height: 40rem;
 }
 
-.main__echart .table tbody td {
-    height: 6.5rem;
-    // white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    min-width: 5rem;
-}
-
+.main__echart .table tbody td { height: 6.5rem; text-overflow: ellipsis; overflow: hidden; }// white-space: nowrap; min-width: 5rem;
 .main__echart .table tbody td :nth-child(1) {min-width: 10rem;}
 .main__echart .table tbody td :nth-child(2) {min-width: 8rem;}
+.main__echart .table colgroup col:nth-child(1){width: 30%;}
+.main__echart .table colgroup col:nth-child(2){width: 25%;}
+.main__echart__wrap {display: flex; justify-content: space-between; gap: 3.2rem;}
+
 
 
 // #tableList td {
