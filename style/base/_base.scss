@@ -175,18 +175,34 @@ label {font-size: 1.5rem;}
 input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
 
 
+// 수신 동의 및 여부 확인
+.chk__area label {color: #000;}
+.chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: #D8D8D8; border: 0.1rem solid #C6C6C6;}
+.chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
+
 input[type="radio"]{
-    appearance: none;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     margin: 0;
-    margin-right: 0.7rem;
-    border: 0.1rem solid #ddd;
     vertical-align: middle;
-    background-color: #fff;
+
+  // 기본 디자인 코드
+
+    //appearance: none;
+    // margin-right: 0.7rem;
+    // border: 0.1rem solid #ddd;
+    // background-color: #fff;
+    // input[type="radio"]:checked {border: 0.6rem solid #000;}
+
+
 }
-input[type="radio"]:checked {border: 0.6rem solid #000;}
+
+
+br.onlyMo {display: none;}
+
+
+
 textarea {border: 0.1rem solid #ddd; width: 100%;}
 .blind {
   overflow: hidden;

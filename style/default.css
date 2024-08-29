@@ -64,22 +64,32 @@ input[type=text], select, input[type=password] {
   padding: 1.2rem;
 }
 
-input[type=radio] {
+.chk__area label {
+  color: #000;
+}
+
+.chk__area input[type=radio]:not(:checked) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  margin: 0;
-  margin-right: 0.7rem;
-  border: 0.1rem solid #ddd;
-  vertical-align: middle;
-  background-color: #fff;
+  background-color: #D8D8D8;
+  border: 0.1rem solid #C6C6C6;
 }
 
-input[type=radio]:checked {
-  border: 0.6rem solid #000;
+.chk__area input[type=radio]:not(:checked) + label {
+  color: #D8D8D8;
+}
+
+input[type=radio] {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  margin: 0;
+  vertical-align: middle;
+}
+
+br.onlyMo {
+  display: none;
 }
 
 textarea {
@@ -1110,8 +1120,7 @@ input[type=file]::file-selector-button {
 }
 
 .form__head .form-title {
-  min-width: 16rem;
-  width: 15.38%;
+  min-width: 20.4rem;
   background-color: #F9F9FA;
 }
 
@@ -1145,6 +1154,10 @@ input[type=file]::file-selector-button {
 
 .form__head {
   height: 5.8rem;
+}
+
+.form__head .form-title:nth-of-type(1) {
+  width: 15.38%;
 }
 
 .form__row {
@@ -1197,8 +1210,16 @@ input[type=file]::file-selector-button {
   padding: 0 1rem;
 }
 
-.hasDatePicker {
-  background: #fff url(../../img/iconDatePicker.png) no-repeat 95% center;
+.btn__file__select--mo {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../../img/file__select--mo.svg) no-repeat center;
+  background-size: cover;
 }
 
 /*
@@ -2336,11 +2357,16 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 
 .btn__check__dup {
-  width: 10%;
-  color: #000;
-  border: 0.1rem solid #1d1d1d;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #000;
+  max-height: 5.6rem;
+  min-height: 4rem;
   border-radius: 0.5rem;
-  max-width: 8rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .must__help__message {
@@ -2483,14 +2509,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 33.33%;
 }
 
-.td__calender .calender__icon {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
+.calender__icon {
+  width: 3rem;
+  height: 3rem;
   background: url(../img/calendar-days-regular.svg) no-repeat center;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1.2rem;
 }
 
 .td__date select {
@@ -2778,8 +2800,23 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-bottom: 44rem;
 }
 
+@media all and (min-width: 480px) and (max-width: 1440px) {
+  .sign__up__table__wrap .form__table tr:nth-child(4) br.onlyMo {
+    display: block;
+  }
+}
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (max-width: 479px) {
+  br.pcOnly {
+    display: none;
+  }
+  .btn__check__dup {
+    min-width: 10rem;
+    font-size: 1.9rem;
+  }
+  .form__table td input[type=text], .form__table td input[type=password] {
+    font-size: 1.9rem;
+  }
   .form__table tr {
     flex-direction: column;
     border-bottom: 0;
@@ -2798,6 +2835,12 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   }
   .form__table td input[type=text], .form__table td input[type=password] {
     padding: 0.8rem 0.8rem;
+    max-height: 5.6rem;
+  }
+  .form__table td select {
+    min-height: 5.6rem;
+    font-size: 1.7rem;
+    color: #555555;
   }
   .form__table .file__select__container {
     position: relative;
@@ -2811,14 +2854,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   }
   .form__table .btn__file__select--mo {
     display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     right: 1.6rem;
-    width: 2.4rem;
-    height: 2.4rem;
-    background: url(../../img/file__select--mo.svg) no-repeat center;
-    background-size: cover;
   }
   .info__change__form {
     margin-top: 6.4rem;
@@ -2837,6 +2873,115 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     padding-left: 0;
     padding-top: 1rem;
     padding-bottom: 0;
+  }
+  .table__title.flex__title {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .table__title.flex__title > h2 {
+    font-size: 3.2rem;
+  }
+  .table__title {
+    margin-top: 3.6rem;
+  }
+  .table__title .must__help__message {
+    margin: 0;
+  }
+  .sign__up__table__wrap .form__table tr {
+    margin-bottom: 1.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(6) .td__container {
+    flex-direction: column;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(5) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(6) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(8) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(9) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(10) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(11) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(16) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(17) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(18) {
+    padding-bottom: 3.6rem;
+  }
+  .sign__up__table__wrap .form__table tr:nth-child(8) .td__container {
+    flex-direction: column;
+  }
+  .sign__up__table__wrap .td__calender {
+    width: 100%;
+    position: relative;
+  }
+  .sign__up__table__wrap .calender__icon {
+    position: absolute;
+    right: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../../img/calendar-days-regular--mo.svg) no-repeat center;
+  }
+  .sign__up__table__wrap .form__table .col2__th {
+    min-height: auto;
+  }
+  .s-select--no--style {
+    padding: 0 1.6rem;
+  }
+  .sign__up__table__wrap .td__date {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+  }
+  .sign__up__table__wrap .td__date select {
+    min-width: auto;
+  }
+  .sign__up__table__wrap .select__renew {
+    background: url(../../img/select__renew__mo.svg) no-repeat 98% 50%;
+  }
+  .sign__up__table__wrap .td__date .select__renew {
+    background: url(../../img/select__renew__mo.svg) no-repeat 92% 50%;
+  }
+  .btn__full__wrap .function__group .btn__control {
+    width: 100%;
+  }
+  .radio__wrap label {
+    font-size: 1.9rem;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 767px) {
+  .form__head .form-title:nth-of-type(1) {
+    min-width: 10rem;
+  }
+  .upload__manager .form__row .td__container:nth-of-type(1) {
+    max-width: 10rem;
+  }
+  .upload__manager .form__row .td__container input {
+    width: 8rem;
+  }
+  .upload__manager .file__select__container > .preview {
+    position: relative;
+    margin-right: 1rem;
+  }
+  .upload__manager .btn__file__select {
+    display: none;
+  }
+  .upload__manager .btn__file__select--mo {
+    display: block;
+    right: 0;
   }
 }
 /*
@@ -4474,7 +4619,7 @@ select {
     padding: 2rem 0;
   }
   .count__group .count .subc {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
   .top__visual .main__hero .quick__menu {
     position: static;
@@ -4780,6 +4925,18 @@ select {
     display: none;
   }
 }
+@media all and (min-width: 360px) and (max-width: 1080px) {
+  .upload__manager .preview {
+    min-width: auto;
+    flex-grow: 1;
+  }
+  .upload__manager .file__select__container {
+    gap: 0;
+  }
+  .upload__manager .btn__file__select, .upload__manager .btn__file__select--mo {
+    margin: 0 1rem;
+  }
+}
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (max-width: 479px) {
   .wrap .top__banner .banner__wrap {
@@ -4816,6 +4973,7 @@ select {
   }
   .wrap .header__btm {
     margin: 0.8rem 0;
+    padding-top: 0;
   }
   .wrap .header__btm .right__icon__set a {
     flex-direction: column;

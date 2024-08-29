@@ -5,7 +5,7 @@
 .td--flex { display: flex; align-items: center; padding-left: 1rem; flex-wrap: nowrap; }
 .td--flex .td--width { width: 100%; display: flex; justify-content: space-between; }
 .must__help__message span, .must__help__message p { font-size: 1.5rem; }
-.btn__check__dup { width: 10%; color: #000; border: 0.1rem solid #1d1d1d; border-radius: 0.5rem; max-width: 8rem; }
+.btn__check__dup {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000; max-height: 5.6rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;} // width: 10%; color: #000; border: 0.1rem solid #1d1d1d; border-radius: 0.5rem; max-width: 8rem; 
 .must__help__message { margin-top: 2.4rem;}
 .file-upload-wrapper { display: flex; align-items: center; }
 .custom-file-label { background-color: #004A98; color: white; width: 10rem; height: 4rem; line-height: 4rem; cursor: pointer; text-align: center; margin-right: 10px; }
@@ -39,7 +39,7 @@
 
 // 달력 공통
 .td__calender { position: relative; width: 33.33%; }
-.td__calender .calender__icon { position: absolute; width: 2rem; height: 2rem; background: url(../img/calendar-days-regular.svg) no-repeat center; top: 50%; transform: translateY(-50%); right: 1.2rem; }
+.calender__icon { width: 3rem; height: 3rem; background: url(../img/calendar-days-regular.svg) no-repeat center;}
 .td__date select { min-width: 12rem;}
 .s-select--no--style { appearance: none; width: 22%; padding: 0 8px; }
 
