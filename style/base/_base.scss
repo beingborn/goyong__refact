@@ -19,26 +19,37 @@ table {width: 100%; font-size: 1.5rem;}
 
 // 폰트
 
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 900;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Black'), url(./woff2/PretendardGOV-Black.woff2) format('woff2'), url(./woff/PretendardGOV-Black.woff) format('woff');
-// }
 
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 800;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV ExtraBold'), url(./woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(./woff/PretendardGOV-ExtraBold.woff) format('woff');
-// }
 
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 700;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Bold'), url(./woff2/PretendardGOV-Bold.woff2) format('woff2'), url(./woff/PretendardGOV-Bold.woff) format('woff');
-// }
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard GOV ExtraBold'), url(../../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../../woff/PretendardGOV-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard GOV Bold'), url(../../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../../font/woff/PretendardGOV-Bold.woff) format('woff');
+}
+
+
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard GOV Medium'), url(../../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../../font/PretendardGOV-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard GOV Regular'), url(./woff2/PretendardGOV-Regular.woff2) format('woff2'), url(./woff/PretendardGOV-Regular.woff) format('woff');
+}
 
 // @font-face {
 // 	font-family: 'Pretendard GOV';
@@ -46,105 +57,6 @@ table {width: 100%; font-size: 1.5rem;}
 // 	font-display: swap;
 // 	src: local('Pretendard GOV SemiBold'), url(./woff2/PretendardGOV-SemiBold.woff2) format('woff2'), url(./woff/PretendardGOV-SemiBold.woff) format('woff');
 // }
-
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 500;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Medium'), url(./woff2/PretendardGOV-Medium.woff2) format('woff2'), url(./woff/PretendardGOV-Medium.woff) format('woff');
-// }
-
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 400;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Regular'), url(./woff2/PretendardGOV-Regular.woff2) format('woff2'), url(./woff/PretendardGOV-Regular.woff) format('woff');
-// }
-
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 300;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Light'), url(./woff2/PretendardGOV-Light.woff2) format('woff2'), url(./woff/PretendardGOV-Light.woff) format('woff');
-// }
-
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 200;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV ExtraLight'), url(./woff2/PretendardGOV-ExtraLight.woff2) format('woff2'), url(./woff/PretendardGOV-ExtraLight.woff) format('woff');
-// }
-
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 100;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV Thin'), url(./woff2/PretendardGOV-Thin.woff2) format('woff2'), url(./woff/PretendardGOV-Thin.woff) format('woff');
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -180,13 +92,17 @@ input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; b
 .chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: #D8D8D8; border: 0.1rem solid #C6C6C6;}
 .chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
 
+// 페이지 제목
+
+.page__title {font-size: 4rem;}
+
+
 input[type="radio"]{
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
     margin: 0;
     vertical-align: middle;
-
   // 기본 디자인 코드
 
     //appearance: none;
@@ -194,15 +110,10 @@ input[type="radio"]{
     // border: 0.1rem solid #ddd;
     // background-color: #fff;
     // input[type="radio"]:checked {border: 0.6rem solid #000;}
-
-
 }
 
 
 br.onlyMo {display: none;}
-
-
-
 textarea {border: 0.1rem solid #ddd; width: 100%;}
 .blind {
   overflow: hidden;

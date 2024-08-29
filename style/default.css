@@ -26,6 +26,30 @@ table {
   font-size: 1.5rem;
 }
 
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard GOV ExtraBold"), url(../../font/woff2/PretendardGOV-ExtraBold.woff2) format("woff2"), url(../../woff/PretendardGOV-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard GOV Bold"), url(../../font/woff2/PretendardGOV-Bold.woff2) format("woff2"), url(../../font/woff/PretendardGOV-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard GOV Medium"), url(../../font/woff2/PretendardGOV-Medium.woff2) format("woff2"), url(../../font/PretendardGOV-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard GOV Regular"), url(./woff2/PretendardGOV-Regular.woff2) format("woff2"), url(./woff/PretendardGOV-Regular.woff) format("woff");
+}
 body {
   font-size: 1.6rem;
   color: #1d1d1d;
@@ -78,6 +102,10 @@ input[type=text], select, input[type=password] {
 
 .chk__area input[type=radio]:not(:checked) + label {
   color: #D8D8D8;
+}
+
+.page__title {
+  font-size: 4rem;
 }
 
 input[type=radio] {
@@ -459,6 +487,10 @@ textarea {
   background-color: #246BEB;
 }
 
+.bg--blue-01 {
+  background-color: #1D56BC;
+}
+
 .bg--navy-00 {
   background-color: #003675;
 }
@@ -534,7 +566,7 @@ button {
 }
 .tab__btn .active {
   color: #003675;
-  border-bottom: 0.4rem solid #003675;
+  border-bottom: 0.4rem solid #1D56BC;
 }
 
 .close__btn__wrap {
@@ -2958,6 +2990,9 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   .btn__full__wrap .function__group .btn__control {
     width: 100%;
   }
+  .btn__half__wrap .function__group .btn__control {
+    width: 50%;
+  }
   .radio__wrap label {
     font-size: 1.9rem;
   }
@@ -3269,7 +3304,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 */
 select {
   display: inline-block;
-  width: 100%;
   height: 100%;
   height: 4rem;
   padding: 0.8rem 1rem 0.8rem 1.6rem;
@@ -3586,17 +3620,20 @@ select {
   background-size: cover;
   position: relative;
 }
+
 #sub__wrap .content .visual__bg .visual__text {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
 }
+
 #sub__wrap .content .visual__bg .visual__text h2 {
   font-size: 3.2rem;
   margin-bottom: 2.8rem;
   white-space: nowrap;
 }
+
 #sub__wrap .content .visual__bg .visual__text p {
   font-size: 1.5rem;
 }
@@ -3612,6 +3649,7 @@ select {
 .tab__content {
   padding-top: 8rem;
 }
+
 .tab__content .data__title {
   margin-bottom: 1.6rem;
   text-align: left;
@@ -3620,6 +3658,7 @@ select {
   color: #333;
   font-weight: 600;
 }
+
 .tab__content table tbody th {
   font-weight: 500;
   color: #000;
@@ -3629,9 +3668,11 @@ select {
   height: 5.8rem;
   border-top: 0.2rem solid #333;
 }
+
 .table__horizontal table {
   height: 100%;
 }
+
 .table__horizontal tbody th {
   font-weight: 500;
   background: #f8f8f8;
@@ -3639,9 +3680,11 @@ select {
   padding: 0 1.5rem;
   line-height: 4.5rem;
 }
+
 .table__horizontal td {
   padding: 0 1rem;
 }
+
 .table__horizontal td select {
   width: 100%;
   height: 4rem;
@@ -3649,6 +3692,7 @@ select {
   font-size: 1.5rem;
   padding: 0.8rem;
 }
+
 .table__horizontal td input[type=text] {
   border: 0.1rem solid #ccc;
   height: 4rem;
@@ -3666,6 +3710,7 @@ select {
   padding-top: 5.6rem;
   padding-bottom: 5.6rem;
 }
+
 .tab .table__vertical {
   border-top: 0.2rem solid #333;
   width: 100%;
@@ -3699,6 +3744,7 @@ select {
 .earn__sit .tab__detail {
   overflow-x: auto;
 }
+
 .earn__sit table {
   min-width: 84rem;
 }
@@ -3706,6 +3752,7 @@ select {
 .expend__sit .tab__detail {
   overflow-x: auto;
 }
+
 .expend__sit table {
   min-width: 102.4rem;
   table-layout: fixed;
@@ -3713,6 +3760,70 @@ select {
 
 .table__last .input--flex input {
   width: 100%;
+}
+
+.page__title__wrap {
+  margin-top: 8rem;
+  margin-bottom: 6.4rem;
+}
+
+.search__form__user {
+  background-color: #EDF1F5;
+  border-radius: 1.2rem;
+}
+
+.search__form__user .search {
+  padding: 4rem;
+}
+
+.search__form__user .search .flex--box-c:nth-of-type(1) {
+  padding-bottom: 2.4rem;
+}
+
+.search__form__user .search input {
+  font-size: 1.7rem;
+}
+
+.search__form__user .search .select__box {
+  min-width: 18rem;
+  height: 4.8rem;
+}
+
+.search__form__user .search .input__box {
+  height: 4.8rem;
+  display: flex;
+  flex: 1;
+}
+
+.search__form__user .search .input__box > input {
+  height: 100%;
+  flex: 1;
+  margin: 0 2.4rem;
+}
+
+.search__form__user .search .select__box > select {
+  width: 100%;
+  height: 100%;
+}
+
+.search__form__user .search > div label {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 1.2rem;
+}
+
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
+
+.btn__control__u {
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 0.7rem;
+  padding: 0 1.6rem;
+  height: 4.8rem;
 }
 
 /*
