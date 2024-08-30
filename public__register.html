@@ -197,16 +197,33 @@
 
 
 
-                    <!-- 툴팁 혹은 ? -->
-                    <!-- 상단 제목 -->
-                    <div class="flex--box-c table__title__wrap">
-                        <h2 class="table__title">기본사항</h2>
-                        <button type="button" class="info__tip mg--10-l"></button>
-                    </div>
+         
+
+
+
 
                     <!-- 임시로 패딩탑 0 -->
                     <div class="tab__content" style="padding-top: 0;"> 
                         <div class="tab">
+
+                                    
+                    <!-- 상단 제목 -->
+
+                    <div class="flex--box-c table__title__wrap info__tip__box">
+                        <h2 class="table__title">기본사항</h2>
+                        <button type="button" class="info__tip mg--10-l"></button>
+                        <div class="tooltip__layer">
+                            <div class="tooltip__top flex--box-s">
+                                <p class="tooltip__title">기본사항</p>
+                                <button type="button" class="info__close__btn"></button>
+                            </div>
+                            <div class="tooltip__content">
+                                <p><strong>가</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지 않을경우에는</p>
+                                <p><strong>나</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                <p><strong>다</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                            </div>
+                    </div>
+                    </div>
                         
                             <form action="POST" id="public__register__form">
                                 <div class="table__template__horizontal">
@@ -324,7 +341,7 @@
                                                 </th>
                                                 <td class="td__calender__wrap">
                                                     <div class="td__container" style="align-items: center;">
-                                                            <input type="text" id="testPicker" maxlength="10" placeholder="YYYY.MM.DD">
+                                                            <input type="text" class="datePicker" id="testPicker" maxlength="10" placeholder="YYYY.MM.DD">
                                                         <label for="testPicker" class="calender__icon mg--10-l"></label>
                                                         <!-- <label for="testPicker" class="calender__icon--mo mg--10-l"></label> -->
                                                     </div>
@@ -436,16 +453,19 @@
                                         // init();
                             
                                         /*Date Picker*/
-                                        var dateFormat = "yymmdd",
-                                        from = $( '#testPicker' ).datepicker({
-                                        dateFormat : "yymmdd",
-                                        //     	          defaultDate: "+1w",
-                                        changeMonth: true,
-                                        changeYear : true,
-                                        yearRange : 'c-80y:c',
-                                        numberOfMonths: 1
-                                        });
-                         
+                                        var dateFormat = "yymmdd"
+
+                                        // from = $( '#testPicker' ).datepicker({
+                                        // dateFormat : "yymmdd",
+                                        // //     	          defaultDate: "+1w",
+                                        // changeMonth: true,
+                                        // changeYear : true,
+                                        // yearRange : 'c-80y:c',
+                                        // numberOfMonths: 1
+                                        // });
+                                            
+
+
                                         function getDate( element ) {
                                                 var date;
                                                 try {
@@ -457,20 +477,33 @@
                                             }
                             
                             
-                            $.datepicker.setDefaults({
-                                closeText : "닫기",
-                                currentText : "오늘",
-                                prevText : "이전 달",
-                                nextText : "다음 달",
-                                monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                                monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                                dayNames : ['일','월','화','수','목','금','토'],
-                                dayNamesShort : ['일','월','화','수','목','금','토'],
-                                dayNamesMin : ['일','월','화','수','목','금','토'],
-                                weekHeader : "주",
-                                yearSuffix : "년",
-                            });
-                        })
+                                        $.datepicker.setDefaults({
+                                            closeText : "닫기",
+                                            currentText : "오늘",
+                                            prevText : "이전 달",
+                                            nextText : "다음 달",
+                                            monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                            monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                            dayNames : ['일','월','화','수','목','금','토'],
+                                            dayNamesShort : ['일','월','화','수','목','금','토'],
+                                            dayNamesMin : ['일','월','화','수','목','금','토'],
+                                            weekHeader : "주",
+                                            yearSuffix : "년",
+                                        });
+
+
+                                        $('.datePicker').each(function() {
+                                        $(this).datepicker({
+                                            dateFormat: dateFormat,
+                                            changeMonth: true,
+                                            changeYear: true,
+                                            yearRange: 'c-80y:c',
+                                            numberOfMonths: 1
+                                        });
+                                    });
+
+
+                                    })
                 
                                                 </script>
                                         </table>
@@ -969,20 +1002,45 @@
                                                 </th>
                                                 <td>
                                                     <div class="td__container flex--box-c">
-                                                        <input type="text" id="examples1033" class="hasDatePicker">
-                                                        <span>~</span>
-                                                        <input type="text" id="examples1033" class="hasDatePicker">
+                                                        <!-- <input type="text" id="examples1033" class="hasDatePicker"> -->
+                                                        <!-- <span>~</span> -->
+                                                        <!-- <input type="text" id="examples1033" class="hasDatePicker"> -->
+                                                        <input type="text" class="datePicker" id="testPicker_h" maxlength="10" placeholder="YYYY.MM.DD">
+                                                        <input type="text" class="datePicker" id="testPicker_h2" maxlength="10" placeholder="YYYY.MM.DD">
+
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-
                             </div>
+
+
+
+
                             <!-- 자산 및 부채 현황 -->
                             <div class="dis__info">
-                                <h2 class="data__title">자산 및 부채 현황</h2>
+                                
+                                <div class="flex--box-c table__title__wrap info__tip__box">
+                                    <h2 class="table__title">자산 및 부채현황</h2>
+                                    <button type="button" class="info__tip mg--10-l"></button>
+                                    <div class="tooltip__layer">
+                                        <div class="tooltip__top flex--box-s">
+                                            <p class="tooltip__title">기본사항</p>
+                                            <button type="button" class="info__close__btn"></button>
+                                        </div>
+                                        <div class="tooltip__content">
+                                            <p><strong>가</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지 않을경우에는</p>
+                                            <p><strong>나</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                            <p><strong>다</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                        </div>
+                                </div>
+                                </div>
+
+
+
+
                                 <div class="tab__detail table__vertical">
                                     <table>
                                         <caption>
@@ -1011,7 +1069,9 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">a총계(=b+c+d+e)</th>
-                                                <td class="txt--l">1,233,000</td>
+                                                <td class="txt--l">
+                                                    <input type="text">
+                                                </td>
                                                 <td class="txt--l">1,496,004</td>
                                                 <td class="txt--l">803,117</td>
                                                 <td class="txt--l">16,887,358</td>
@@ -1060,7 +1120,32 @@
                             </div>
                             <!-- 수입현황 -->
                             <div class="dis__info earn__sit">
-                                <h2 class="data__title">수입 현황</h2>
+
+                                <div class="flex--box-c table__title__wrap info__tip__box">
+                                    <h2 class="table__title">수입현황</h2>
+                                    <button type="button" class="info__tip mg--10-l"></button>
+                                    <div class="tooltip__layer">
+                                        <div class="tooltip__top flex--box-s">
+                                            <p class="tooltip__title">기본사항</p>
+                                            <button type="button" class="info__close__btn"></button>
+                                        </div>
+                                        <div class="tooltip__content">
+                                            <p><strong>가</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지 않을경우에는</p>
+                                            <p><strong>나</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                            <p><strong>다</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                        </div>
+                                </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
                                 <div class="tab__detail table__vertical">
                                     <table>
                                         <caption>
@@ -1169,7 +1254,21 @@
                             </div>
                             <!-- 지출 현황 -->
                             <div class="dis__info expend__sit">
-                                <h2 class="data__title">지출 현황</h2>
+                                <div class="flex--box-c table__title__wrap info__tip__box">
+                                    <h2 class="table__title">지출 현황</h2>
+                                    <button type="button" class="info__tip mg--10-l"></button>
+                                    <div class="tooltip__layer">
+                                        <div class="tooltip__top flex--box-s">
+                                            <p class="tooltip__title">기본사항</p>
+                                            <button type="button" class="info__close__btn"></button>
+                                        </div>
+                                        <div class="tooltip__content">
+                                            <p><strong>가</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지 않을경우에는</p>
+                                            <p><strong>나</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                            <p><strong>다</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                        </div>
+                                </div>
+                                </div>
                                 <div class="tab__detail table__vertical">
                                     <table class="min--width">
                                         <caption>
@@ -1459,7 +1558,21 @@
                     .closest('.form__row')
                     .remove();
             });
+
+
+            // 도움말 버튼 클릭 시 창 팝업
+            $('.info__tip').on('click', function(){
+                            let tooltipLayer = $(this).next('.tooltip__layer')
+                            tooltipLayer.toggleClass('active')
+                        })
+
+                        $('.tooltip__layer .info__close__btn').on('click', function(){
+                            $(this).closest('.tooltip__layer').removeClass('active')
+                        })
         </script>
+
+         
+
 
     </body>
 </html>

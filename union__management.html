@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=, initial-scale=1.0">
-<title>회계공시열람</title>
+<title>회계공시등록 > 가맹노조(산하조직)관리</title>
 <!-- css 영역 -->
 <link rel="stylesheet" href="style/reset.css">
 <link rel="stylesheet" href="style/default.css">
@@ -21,7 +21,7 @@
 <div class="skip__nav">
 	<a href="#main__content">본문 바로가기</a>
 </div>
-<div class="wrap full__page__wrap" id="sub__wrap">
+<div class="union__management__wrap  wrap full__page__wrap" id="sub__wrap">
         <!-- 헤더 -->
         <header class="header">
             <div class="inner">
@@ -148,8 +148,8 @@
 	<div class="visual__bg">
 		<div class="inner">
 			<div class="visual__text">
-				<h2>회계공시열람</h2>
-				<p>회계공시정보를 열람하실 수 있습니다.</p>
+				<h2>가맹노조(산하조직) 관리</h2>
+				<p>회계공시를 입력해주세요.</p>
 			</div>
 		</div>
 	</div>
@@ -158,154 +158,26 @@
 		<nav class="breadcrumb" style="padding-top: 2.4rem;">
 		<ol class="path">
 			<li class="home"><a href="#" class="txt">홈</a></li>
-			<li><a href="#" class="txt">회계공시열람</a></li>
+			<li><a href="#" class="txt">회계공시등록</a></li>
+			<li><a href="#" class="txt">가맹노조(산하조직)관리</a></li>
 		</ol>
 		</nav>
 
-        <div class="page__title__wrap sysguide">
+        <!-- <div class="page__title__wrap sysguide">
             <div class="page__title flex__title">
                 <h2>회계공시열람</h2>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- 검색폼 시작 -->
-        <div class="user__form__wrapper">
-            <form class="search__form__user" action="POST">
-				<div class="search">
-					<input type="hidden" id="pageNo" name="pageNo" value=""/>
-					<input type="hidden" id="lbrUniId" name="lbrUniId" value="">
-					<input type="hidden" id="yearSel" name="yearSel" value="">
-	
-					<div class="flex--box-c">
-						<label for="year">회계연도</label>
-						<div class="select__box">
-							<select class="select--no--style select__renew" id="year" name="year">
-							<option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
-						</div>
-					</div>
-				
-					
-					<!-- 
-					
-					1. 현재 상황 flex 박스로 감싸짐
-					2. 전체 셀렉트 항목은 min-width로 지정되어있음
-					3. 남은 input__box는 flex의 나머지 넓이를 차지하고 있음
-					4. 그 input__box에서 input은 button의 크기를 제외하고 나머지를 모두 차지해야함
-					-->
-
-					<div class="flex--box-c">
-						<label for="select" class="blind">검색조건 선택</label>
-						<label for="year">검색항목</label>
-
-						<div class="select__box">
-							<select class="select--no--style select__renew" id="select" name="searchField">
-								<option value="">전체</option><option value="40">대한민국노동조합총연맹</option><option value="20">전국민주노동조합총연맹</option><option value="99">총연합단체미가입</option><option value="10">한국노동조합총연맹</option><option value="98">기타</option>
-							</select>
-						</div> 
-
-							<div class="input__box">
-								<label for="searchText" class="blind">검색어 입력</label>
-								<input type="text" id="searchText" name="searchText" class="ml4" placeholder="검색어를 입력하세요." value=""> 
-								<button type="button" id="" class="btn__control__u bg--blue-01" onclick="fn_search();">조회</button>
-							</div>
-					</div>
-			
-				</div>
-         
-            </form> 
-        </div>
-
-		<div class="table__title__wrap" >
-			<h2 class="table__title">조회결과</h2>
-		</div>
-
-		<p class="data__number" style="margin-bottom: 6.4rem;">전체 <span>652</span>건</p>
-		<!-- 조회결과 데이터 표  -->
-		<div class="accn__result check__result">
-			<div class="tab__detail table__vertical"  style="margin-bottom: 6.4rem;">
-			  <table class="border-top-large"> <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더 추가 -->
-				<caption>
-				  자산 및 부채현황 {구분, 자산}
-				</caption>
-				<colgroup>
-				  <col>
-				  <col>
-				  <col>
-				  <col>
-				  <col>
-				  <col>
-				</colgroup>
-				<thead>
-				  <tr>
-					<th scope="col">번호</th>
-					<th>노동조합(산하조직)명</th>
-					<th class="ex">총연합단체</th>
-					<th>연합단체</th>
-					<th>단위노동조합</th>
-					<th>기간</th>
-				
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr onclick="location.href='sub1__1.html'" style="cursor: pointer;">
-						<th scope="row">1</th>
-						<td class="txt--c pd--10-l">도레이노동조합</td>
-						<td class="txt--c">한국노총</td>
-						<td class="txt--c">섬유노동조합</td>
-						<td class="txt--c">도레이노동조합</td>
-						<td class="txt--c">2021-12-12</td>
-					<!-- txt--c 중앙정렬 txt--l 왼쪽 정렬 txt--r 오른쪽 정렬  -->
-	
-		
-				  </tr>
-				  <tr>
-					<th scope="row">2</th>
-					<td class="txt--c pd--10-l">도레이노동조합</td>
-					<td class="txt--c">한국노총</td>
-					<td class="txt--c">섬유노동조합</td>
-					<td class="txt--c">도레이노동조합</td>
-					<td class="txt--c">2021-12-12</td>
-					
-				  </tr>
-				  <tr>
-					<th scope="row">3</th>
-					<td class="txt--c pd--10-l">도레이노동조합</td>
-					<td class="txt--c">한국노총</td>
-					<td class="txt--c">섬유노동조합</td>
-					<td class="txt--c">도레이노동조합</td>
-					<td class="txt--c">2021-12-12</td>
-			
-				  </tr>
-				</tbody>
-			  </table>
-			</div>
-			<!-- 테이블 페이지 이동 버튼 -->
-			<div class="pagination w-page">
-				<a class="page-navi prev" href="#">이전</a>
-				<div class="page-links">
-					<a class="page-link active" href="#">1</a>
-					<span class="page-link link-dot">
-						···
-					</span>
-					<a class="page-link" href="#">6</a>
-					<a class="page-link" href="#">7</a>
-					<a class="page-link" href="#">8</a>
-					<a class="page-link" href="#">9</a>
-					<a class="page-link" href="#">10</a>
-					<a class="page-link" href="#">11</a>
-					<span class="page-link link-dot">
-						···
-					</span>
-					<a class="page-link" href="#">120</a>
-				</div>
-				<a class="page-navi next" href="#">다음</a>
-			</div>
-		  </div>
-
-
-
+    
 	</div>
+
+    <div class="example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem;">
+        <img src="img/가맹노조(임시).jpg" alt="가맹노조" >
+    </div>
+
 	</main>
 	<footer>
 	<div class="footer__bottom" style="background-color: #F0F0F0;">
