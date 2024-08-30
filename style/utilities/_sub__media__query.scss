@@ -58,7 +58,6 @@
 @media all and (min-width: 480px) and (max-width: 766px) {
 
   .content .tab__content {padding-top: 4rem;}
-
   #sub__wrap .content .visual__bg .visual__text {
     text-align: center;
     left: 50%;
@@ -106,9 +105,7 @@
 
 // 해상도 ~ 550px 까지는 max-width 130px , min-width 551~766까지는 max-width: 25%
 @media all and (max-width: 550px) {
-  .content .mobile__tab .swiper .swiper-slide {
-    max-width: 13rem;
-  }
+  .content .mobile__tab .swiper .swiper-slide { max-width: 13rem;}
 }
 
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
@@ -146,5 +143,11 @@
     .motab-2 {
       display: block;
     }
+  }
+}
+
+@media (min-width: 551px) and (max-width: 766px) {
+  .content .mobile__tab .swiper .swiper-slide {
+      max-width: 25%;
   }
 }

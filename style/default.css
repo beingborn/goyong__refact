@@ -5444,4 +5444,9 @@ select {
   .content .motab-2 {
     display: block;
   }
+}
+@media (min-width: 551px) and (max-width: 766px) {
+  .content .mobile__tab .swiper .swiper-slide {
+    max-width: 25%;
+  }
 }/*# sourceMappingURL=default.css.map */
