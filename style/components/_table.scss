@@ -4,7 +4,8 @@
 
 
 // 사용자 공통 테이블 타이틀
-.table__title {font-size: 2.5rem; margin-bottom: 3.6rem; margin-top: 8rem; font-weight: 500;}
+.table__title__wrap {margin-bottom: 3.6rem; margin-top: 8rem;}
+.table__title {font-size: 2.5rem; font-weight: 700;}
 
 
 // manage__labor 다중 셀렉터 및 인풋 조정 영역
@@ -20,16 +21,11 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
 .table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.table__horizontal__ex th {width: 15.38%; background-color: #f8f8f8; text-align: left; padding-left: 1rem; z-index: -1;} 
-.table__horizontal__ex td {
-  // padding: 0 1rem;
-  width: auto;
-} 
-.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem; 
-  width: 100%;
-}
+.table__horizontal__ex th {width: 19.53%; background-color: #f8f8f8; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
+.table__horizontal__ex td {width: auto; flex-grow: 1;} 
+.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 
-.table__horizontal__ex tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);} 
+// .table__horizontal__ex tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);} 
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
@@ -171,5 +167,8 @@ td {min-height: 5.8rem;}
 // 관리자 페이지의 표 경우, 가로 값이 더 커질 시 table을 감싸는 부모에 스크롤을 줍니다.
 .manage__wrap .table__vertical {overflow-x: auto;}
 .manage__wrap .table__vertical table {min-width: 96rem;}
-
 .manage__wrap .table__vertical colgroup col {min-width: 5rem;}
+
+
+// read__info__table은 등록 페이지가 아니므로 border을 없앱니다.
+.read__info__table input[type="text"] {border: 0;}

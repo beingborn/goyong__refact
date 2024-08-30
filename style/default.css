@@ -325,6 +325,11 @@ textarea {
   justify-content: space-between;
 }
 
+.flex--box-s {
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex--end {
   justify-content: end;
 }
@@ -470,6 +475,13 @@ textarea {
 /*
   특정 html만 100vh에 맞추기 (임시)
 */
+.info__tip {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../../img/info__tip.svg) no-repeat center;
+}
+
 /* 
   버튼 CSS
 */
@@ -542,7 +554,8 @@ button {
 }
 
 .tab__wrap {
-  width: 128rem;
+  width: 100%;
+  max-width: 128rem;
   margin: 0px auto;
   display: flex;
   align-items: center;
@@ -654,11 +667,14 @@ button {
 /* 
   테이블 CSS
 */
-.table__title {
-  font-size: 2.5rem;
+.table__title__wrap {
   margin-bottom: 3.6rem;
   margin-top: 8rem;
-  font-weight: 500;
+}
+
+.table__title {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .td__container {
@@ -702,25 +718,24 @@ table caption {
 }
 
 .table__horizontal__ex th {
-  width: 15.38%;
+  width: 19.53%;
   background-color: #f8f8f8;
   text-align: left;
-  padding-left: 1rem;
+  padding-left: 3rem;
   z-index: -1;
+  min-width: 18rem;
 }
 
 .table__horizontal__ex td {
   width: auto;
+  flex-grow: 1;
 }
 
 .table__horizontal__ex input[type=text] {
   border: 0.1rem solid #ddd;
   height: 4rem;
   width: 100%;
-}
-
-.table__horizontal__ex tr.r2 td {
-  width: 34.62%;
+  font-size: 1.6rem;
 }
 
 .table__horizontal__ex .find--width td {
@@ -1049,6 +1064,10 @@ td {
 
 .manage__wrap .table__vertical colgroup col {
   min-width: 5rem;
+}
+
+.read__info__table input[type=text] {
+  border: 0;
 }
 
 /* 
@@ -2562,6 +2581,38 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 /*
     회계공시등록페이지 CSS
 */
+#public__register__form .form__table th {
+  width: 15.38%;
+}
+
+#public__register__form .td__calender__wrap {
+  max-width: 44.3rem;
+}
+
+#public__register__form .td__calender {
+  width: auto;
+}
+
+#public__register__form .form__table .td__date > select {
+  border: 1px solid blue;
+  width: calc(25% - 1rem);
+  max-width: 10rem;
+}
+
+#public__register__form .td__select__25 .td__container select {
+  flex: 1 1 calc(25% - 1rem);
+  min-width: 9.3rem;
+}
+
+#public__register__form .td__select__25 {
+  max-width: 44.3rem;
+}
+
+#public__register__form .td__select__25 > .td__container {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 .public__register .tab__wrap .tab__btn {
   width: 50%;
 }
@@ -4061,9 +4112,13 @@ select {
   width: calc(33.33% - 1em);
 }
 
+.tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {
+  min-width: 42rem;
+}
+
 .tab__content table tbody .cols2 {
   line-height: 130%;
-  width: 15.38%;
+  width: 19.53%;
   height: 100%;
 }
 
@@ -4150,7 +4205,7 @@ select {
 }
 
 .chart__title h2 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2.5rem;
 }
 
@@ -4159,7 +4214,7 @@ select {
 }
 
 .tab__4__table {
-  margin-bottom: 2rem;
+  margin-bottom: 6.4rem;
 }
 
 .tab__4__table .input--flex input, .tab__4__table .input--flex select {

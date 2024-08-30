@@ -43,7 +43,7 @@ button {cursor: pointer;}
 .function__group .btn__control:not(:last-child) { margin-right: 1rem;}
 
 // 서브 페이지 상단 탭 버튼 스타일
-.tab__wrap { width: 128rem; margin: 0px auto; display: flex; align-items: center; padding-top: 8rem; }
+.tab__wrap { width: 100%; max-width: 128rem; margin: 0px auto; display: flex; align-items: center; padding-top: 8rem; }
   
     .tab__btn {
       width: 25%;

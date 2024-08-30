@@ -3,8 +3,7 @@
  * 
  */
 
-// 현재 문제 : 클릭 시 activeTabIndex값은 잘 출력되고 있으나. 어딘가에서 초기화가 되서 모바일보다 작아질 시 
-// 해당 값이 초기화되고 있음
+
 
 $(document).ready(function () {
   let subTabBtn = $(".tab__wrap .tab__btn button");
@@ -122,6 +121,22 @@ $(document).ready(function () {
   });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 // Pie Chart 1
 var pieChart1 = echarts.init(document.getElementById("pieChart1"));

@@ -234,6 +234,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .flex--box-cs {display: flex; align-items: center; justify-content: space-between;} 
   .flex--box-end {display: flex; justify-content: end;}
   .flex--space {justify-content: space-between;}
+  .flex--box-s {display: flex; justify-content: space-between;}
   .flex--end {justify-content: end;}
   .flex--center-s {display: flex; align-items: center; justify-content: center;}
   // flex grow 적용 시 flex된 아이템 기준 나머지 넓이 차지.
@@ -336,3 +337,8 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   // .full__page__wrap .full__page__body {overflow: auto; flex: 1 0 auto;}
   // .full__page__wrap .header {flex: 0 0 auto;}
   // .full__page__wrap footer {flex: 0 0 auto; margin-top: auto;}
+
+
+  // 도움말
+
+  .info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../../img/info__tip.svg) no-repeat center;}
