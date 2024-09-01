@@ -1059,6 +1059,10 @@ td {
   background-color: #DDEAF6 !important;
 }
 
+.border__input__wrap .table__vertical tbody tr:hover {
+  background-color: transparent !important;
+}
+
 .auth__table thead tr th {
   font-weight: 500;
   height: 6rem;
@@ -3776,6 +3780,15 @@ select {
   color: #000;
 }
 
+.border__input__wrap .table__vertical tbody tr td input {
+  width: 100%;
+  border-radius: 0;
+}
+
+.border__input__wrap .table__vertical tbody tr:nth-child(1) input {
+  background-color: #DAE5FA;
+}
+
 .table__horizontal {
   height: 5.8rem;
   border-top: 0.2rem solid #333;
@@ -4272,10 +4285,10 @@ select {
 }
 
 .tab .echart {
-  padding-top: 3.2rem;
   width: 100%;
   height: 400px;
   position: relative;
+  background-color: #F8F8F8;
 }
 
 .chart__title {
@@ -4304,7 +4317,7 @@ select {
 }
 
 .tab__4__chart__wrapper {
-  width: calc(25% - 2rem);
+  width: calc(50% - 2rem);
 }
 
 @media all and (min-width: 480px) and (max-width: 766px) {

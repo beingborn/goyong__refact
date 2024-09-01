@@ -13,14 +13,15 @@
 .mo__4__input, .mo__4__select { height: 4rem; line-height: 4rem; border: 1px solid #CDCCCD; width: calc(50% - 1rem); }
 .mo__4__group__wrap { margin-bottom: 2rem; }
 .mo__4__group { height: 4rem; line-height: 4rem; border: 1px solid #CDCCCD; }
-.tab .echart { padding-top: 3.2rem; width: 100%; height: 400px; position: relative; }
+.tab .echart {  width: 100%; height: 400px; position: relative; background-color: #F8F8F8;}
+// padding-top: 3.2rem;
 .chart__title { align-items: center; display: flex; justify-content: space-between; border-bottom: 2px solid #000; padding-bottom: 12px; }
 // 차트 제목 
 .chart__title h2 { font-weight: 700; font-size: 2.5rem; }
 .chart__title span { font-size: 1.7rem; }
 .tab__4__table { margin-bottom: 6.4rem; }
 .tab__4__table .input--flex input, .tab__4__table .input--flex select { width: calc(50% - 1rem); }
-.tab__4__chart__wrapper { width: calc(25% - 2rem); }
+.tab__4__chart__wrapper { width: calc(50% - 2rem); }
 
 
 @media all and (min-width: 480px) and (max-width: 766px) {

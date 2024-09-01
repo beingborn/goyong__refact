@@ -18,8 +18,10 @@
 .tab__content { padding-top: 8rem; }
 .tab__content .tab:nth-child(2) {padding-top: 8rem;}
 .tab__content .data__title { margin-bottom: 1.6rem; text-align: left; position: relative; font-size: 2rem; color: #333; font-weight: 600; }
-.tab__content table tbody th { font-weight: 500; color: #000; }
-
+.tab__content table tbody th { font-weight: 500; color: #000;}
+// 임시 코드
+.border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; }
+.border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
 
 // thead가 없는 가로형 표 스타일
 .table__horizontal { height: 5.8rem; border-top: 0.2rem solid #333; }

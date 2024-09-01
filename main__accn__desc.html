@@ -159,7 +159,7 @@
 		<ol class="path">
 			<li class="home"><a href="#" class="txt">홈</a></li>
 			<li><a href="#" class="txt">시스템안내</a></li>
-			<li><a href="#" class="txt">회계공시시스템이란</a></li>
+			<li><a href="#" class="txt">주요 공시항목 설명</a></li>
 		</ol>
 		</nav>
 
@@ -169,9 +169,66 @@
     
 	</div>
 
-    <div class="example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem;">
-        <img src="img/주요공시항목설명(임시).jpg" alt="회계공시 시스템이란" >
-    </div>
+               <!-- 탭 버튼 -->
+                <div class="public__register">
+                    <div class="tab__wrap">
+                        <div class="tab__btn">
+                            <button type="button">노동조합정보</button>
+                        </div>
+                        <div class="tab__btn">
+                            <button type="button">회계공시</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                                // 상단 탭 기능 전환
+            $(document).ready(function () {
+                let subTabBtn = $(".tab__wrap .tab__btn button");
+                let subTabContent = $(".tab__content .tab");
+
+                subTabBtn.click(function () {
+                    let tabIndex = $(this)
+                        .parent()
+                        .index();
+
+                    subTabBtn.removeClass("active");
+                    $(this).addClass("active");
+                    subTabContent
+                        .hide()
+                        .eq(tabIndex)
+                        .show();
+                })
+
+                subTabContent
+                    .hide()
+                    .eq(0)
+                    .show();
+                subTabBtn
+                    .eq(0)
+                    .addClass('active')
+
+               
+              
+
+            })
+                </script>
+        
+
+            <div class="tab__content">
+                <div class=" tab example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem;">
+                    <img src="img/주요공시항목설명(임시).jpg" alt="회계공시 시스템이란" >
+                </div>
+
+
+                <div class=" tab example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem; padding: 0;">
+                    <img src="img/주요공시항목설명(임시)탭2.jpg" alt="회계공시 시스템이란" >
+                </div>
+
+
+            </div>
+
 
 	</main>
 	<footer>
