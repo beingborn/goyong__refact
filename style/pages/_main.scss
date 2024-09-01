@@ -121,9 +121,11 @@
             
             &::before{content: ''; width: 6rem; height: 6rem; display: block; margin: 0px auto; margin-bottom: 3.2rem;}
         }
-        .subc.open::before {background: url(../../img/icons__open.png) no-repeat center;}
-        .subc.write::before {background: url(../../img/icons__write.png) no-repeat center;}
-        .subc.manual::before {background: url(../../img/icons__manual.png) no-repeat center;}
+        
+        // .subc.open::before {background: url(../../img/icons__open.png) no-repeat center;}
+        .subc.open::before {background: url(../img/icons__open.png) no-repeat center;}
+        .subc.write::before {background: url(../img/icons__write.png) no-repeat center;}
+        .subc.manual::before {background: url(../img/icons__manual.png) no-repeat center;}
 
     }
 }

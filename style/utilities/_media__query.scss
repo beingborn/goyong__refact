@@ -75,7 +75,7 @@
     .content .tab__wrap { width: 100%; padding: 0 1.6rem; }
     // 헤더 영역
     .header__top { display: none; }
-    .header__gnb { display: none; }
+    .header__gnb #gnb1{ display: none; }
     .header__btm .right__icon__set .talk { display: none; }
     .header__btm .right__icon__set .sign__up { display: none; }
     .header__btm .right__icon__set .hamburger { display: inline-flex; }
@@ -166,7 +166,8 @@
     .banner__text a {margin-left: 0;}
     .inner {width: 100%;padding: 0 1.6rem;} 
     .header__top {display: none;}
-    .header__gnb{display: none;}
+    .header__gnb #gnb1{display: none;}
+    // .header__gnb #gnb2 {display: block;}
     .banner__wrap {display: flex;}
     .logo {display: none;}
     .mobile__logo {display: block;position: relative;}

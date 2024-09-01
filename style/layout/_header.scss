@@ -277,7 +277,7 @@ top: -.2rem;
 margin-left: .4rem;
 width: 2.4rem;
 height: 2.4rem;
-background: url(../../img/arrow__right-gray.svg) center no-repeat;
+background: url(../img/arrow__right-gray.svg) center no-repeat;
 background-size: cover;
 vertical-align: middle;
 }
@@ -301,3 +301,9 @@ color: #1d1d1d;
 }
 
 #gnb1 > ul > li.active .sub__menu { visibility: visible; overflow: visible; opacity: 1;}
+
+
+
+// 모바일 gnb2
+
+#gnb2 {display: none;}
