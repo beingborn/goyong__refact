@@ -404,7 +404,7 @@ var barOption3 = {
             show: true,
           },
           itemStyle: {
-            color: "#A4D594",
+            color: "#12A59C",
           },
         },
         {
@@ -413,7 +413,7 @@ var barOption3 = {
             show: true,
           },
           itemStyle: {
-            color: "#8ECCE2",
+            color: "#12A59C",
           },
         },
         {
@@ -422,7 +422,7 @@ var barOption3 = {
             show: true,
           },
           itemStyle: {
-            color: "#F8C862",
+            color: "#12A59C",
           },
         },
       ],
@@ -462,7 +462,7 @@ var barOption4 = {
             show: true,
           },
           itemStyle: {
-            color: "#A4D594",
+            color: "#186DBB",
           },
         },
         {
@@ -471,7 +471,7 @@ var barOption4 = {
             show: true,
           },
           itemStyle: {
-            color: "#A4D594",
+            color: "#186DBB",
           },
         },
         {
@@ -480,7 +480,7 @@ var barOption4 = {
             show: true,
           },
           itemStyle: {
-            color: "#F8C862",
+            color: "#186DBB",
           },
         },
       ],
@@ -521,7 +521,7 @@ var barOption5 = {
             show: true,
           },
           itemStyle: {
-            color: "#A4D594",
+            color: "#28BC78",
           },
         },
         {
@@ -530,7 +530,7 @@ var barOption5 = {
             show: true,
           },
           itemStyle: {
-            color: "#8F8CAA",
+            color: "#28BC78",
           },
         },
         {
@@ -539,7 +539,7 @@ var barOption5 = {
             show: true,
           },
           itemStyle: {
-            color: "#F8C862",
+            color: "#28BC78",
           },
         },
       ],
@@ -581,7 +581,7 @@ var barOption6 = {
             show: true,
           },
           itemStyle: {
-            color: "#A4D594",
+            color: "#3891E3",
           },
         },
         {
@@ -590,7 +590,7 @@ var barOption6 = {
             show: true,
           },
           itemStyle: {
-            color: "#FDD784",
+            color: "#3891E3",
           },
         },
         {
@@ -599,7 +599,7 @@ var barOption6 = {
             show: true,
           },
           itemStyle: {
-            color: "#F8C862",
+            color: "#3891E3",
           },
         },
       ],

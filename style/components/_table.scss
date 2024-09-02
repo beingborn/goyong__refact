@@ -44,7 +44,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 }
 
 
-td {min-height: 5.8rem;}
+// td {min-height: 5.8rem;}
   
 .radio__table th {width: 12.5%; line-height: 5.8rem;}
 .radio__table td {width: calc(100% - 12.5%);}
@@ -68,6 +68,10 @@ td {min-height: 5.8rem;}
 
 
 .table--margin {margin: 0.9rem 1rem}
+
+
+
+
 
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
@@ -117,18 +121,22 @@ td {min-height: 5.8rem;}
 
 
 // 상단 thead 제목이 있는 테이블의 스타일입니다.
-
-.table__vertical table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle;} 
+// 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
+.table__vertical table thead tr th {font-weight: 500; background-color: #f8f8f8; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
-.table__vertical tr th:nth-child(1) {font-weight: 500; word-break: keep-all; white-space: nowrap;} 
-.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
 
-.table__vertical tbody td, .table__vertical tbody th {height: 100%; 
-  // line-height: 6rem;
-    height: 6rem;
-   border-right: 0.1rem solid #ddd;} 
+.table__vertical thead .min__h__box {padding: 0}
+
+.table__vertical tr th:nth-child(1) {font-weight: 500; word-break: keep-all; white-space: nowrap;} 
+
+
+.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
+// line-height: 6rem; 
+.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
 .table__vertical tbody th {background-color: #f8f8f8; vertical-align: middle;} 
-.table__vertical tbody td {padding-left:1rem; padding-right: 1rem; vertical-align: middle;} 
+.table__vertical tbody td {
+  // padding-left:1rem; padding-right: 1rem;
+  vertical-align: middle; }  
 .table__vertical tbody td:nth-last-child(1) {border-right: 0;} 
 
 
@@ -139,10 +147,7 @@ td {min-height: 5.8rem;}
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
 
-
 // 표 칸 형식
-
-
 // 관리자 메뉴 권한 관리 표 영역입니다.
 .auth__table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
 .auth__table tr {border-bottom: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
@@ -152,7 +157,6 @@ td {min-height: 5.8rem;}
 
 // thead를 포함하고 있는 가로형 테이블 (manage user)
 .table__horizontal__wrap.with__thead thead tr th {line-height: 5.8rem;}
-
 .table__information input[type="text"]{border: 0; width: 100%;}
 .table__information input[type="text"]{font-size: 1.5rem;}
 
@@ -173,3 +177,29 @@ td {min-height: 5.8rem;}
 
 // read__info__table은 등록 페이지가 아니므로 border을 없앱니다.
 .read__info__table input[type="text"] {border: 0;}
+
+
+// 조회결과 테이블 공통
+.check__result tr {cursor: pointer;}
+
+// flex-cell
+
+.flex__cell {
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  min-height: 6rem;
+}
+
+
+// td의 min-height 적용 이슈로 다음과 같이 적용
+.min__h__box {
+  display: flex;
+  align-items: center;
+  min-height: 6rem;
+  padding: 0 1rem;
+}
+
+.text--r {justify-content: flex-end;}
+.text--l {justify-content: flex-start;}
+.text--c {justify-content: center;}

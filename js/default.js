@@ -104,3 +104,12 @@
   $('.modal__close button').click(function() {
       $('.modal, .modal__bg').hide();  // 모든 모달 요소를 숨김
   });
+
+
+
+  /** 메뉴 클릭 시 gnb2 메뉴 토글 */
+  $('.hamburger').on('click', function(){
+    $('#gnb2').addClass('active');
+  })
+
+

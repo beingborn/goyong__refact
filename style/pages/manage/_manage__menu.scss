@@ -20,6 +20,7 @@
     .data__modal, .data__error__modal {
         display: none;
         width: calc(100% - 2rem); 
+        max-width: 128rem;
         background-color: #fff;
         // position: absolute; 
         position: fixed;
