@@ -161,7 +161,11 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
-.table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
+
+
+///
+// .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
+.table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
 
