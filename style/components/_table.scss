@@ -14,13 +14,23 @@
 .td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
 
 
+// 달력 input의 아이콘 정렬
+.calender__body {position: relative;}
+.calender__body .calender__icon {position: absolute; top: 50%; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; right: 2rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; }
+
+
+
+
+
 
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
   
 
 // thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
-.table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
+.table__horizontal__ex tr {
+  line-height: 5.8rem; height: 5.8rem;
+  border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .table__horizontal__ex th {width: 19.53%; background-color: #f8f8f8; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1;} 
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
@@ -120,14 +130,17 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 
 
+// row와 col 제목이 함께 있는 테이블 전용 스타일
+.table__vertical .cross__table > tbody th {font-weight: 700;}
+
+
 // 상단 thead 제목이 있는 테이블의 스타일입니다.
 // 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
-.table__vertical table thead tr th {font-weight: 500; background-color: #f8f8f8; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
+.table__vertical table thead tr th {font-weight: 400; background-color: #f8f8f8; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 
 .table__vertical thead .min__h__box {padding: 0}
-
-.table__vertical tr th:nth-child(1) {font-weight: 500; word-break: keep-all; white-space: nowrap;} 
+.table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 
 
 
 .table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 

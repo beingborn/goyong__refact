@@ -322,10 +322,9 @@
                                                     </label>
                                                 </th>
                                                 <td class="td__calender__wrap">
-                                                    <div class="td__container" style="align-items: center;">
-                                                            <input type="text" class="datePicker" id="testPicker" maxlength="10" placeholder="YYYY.MM.DD">
-                                                        <label for="testPicker" class="calender__icon mg--10-l"></label>
-                                                        <!-- <label for="testPicker" class="calender__icon--mo mg--10-l"></label> -->
+                                                    <div class="calender__body td__container" style="align-items: center;">
+                                                                <input type="text" class="datePicker" id="testPicker" maxlength="10">
+                                                                <label for="testPicker" class="calender__icon mg--10-l"></label>
                                                     </div>
                                                 </td>
 
@@ -335,17 +334,17 @@
                                                 <td class="td__select__25">
                                                     <div class="td__container">
                                                         <select name="d-4-1-" id="d-4-1" class="select--no--style select__renew">
-                                                            <option value="1">1월</option>
+                                                            <option value="1">월 선택</option>
                                                         </select>
                                                         <select name="d-4-1-" id="d-4-1" class="select--no--style select__renew">
-                                                            <option value="1">1월</option>
+                                                            <option value="1"></option>
                                                         </select>
                                                         -
                                                         <select name="d-4-1-" id="d-4-1" class="select--no--style select__renew">
-                                                            <option value="1">1월</option>
+                                                            <option value="1">월 선택</option>
                                                         </select>
                                                         <select name="d-4-1-" id="d-4-1" class="select--no--style select__renew">
-                                                            <option value="1">1월</option>
+                                                            <option value="1"></option>
                                                         </select>
                                                 
                                                     </div>
@@ -418,13 +417,27 @@
                                                             </div>
                                                             <div>
                                                                 <input type="radio" name="rdo_22-1" id="rdo_22-3">
-                                                                <label for="rdo_22-3">비동의</label>
+                                                                <label for="rdo_22-3">거부</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
-
                                             </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <label for="peg">
+                                                        소재지
+                                                    </label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <input type="text" id="peg">
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
 
 
                 
@@ -782,6 +795,10 @@
                                                 </div>
                                             </td>
                                         </tr>
+
+
+
+
                                     </table>
                                 </div>
                             </div>
@@ -874,10 +891,11 @@
                                         </tr>
                                         <tr>
                                             <th scope="row" class="txt--c border--r" style="vertical-align: middle;">
-                                                <label for="profile_pic">
-                                                    근거파일첨부
-                                                </label>
-
+                                                <span class="must__type">
+                                                    <label for="profile_pic">
+                                                        근거파일첨부
+                                                    </label>
+                                                </span>
                                             </th>
 
                           
@@ -984,12 +1002,14 @@
                                                 </th>
                                                 <td>
                                                     <div class="td__container flex--box-c">
-                                                        <!-- <input type="text" id="examples1033" class="hasDatePicker"> -->
-                                                        <!-- <span>~</span> -->
-                                                        <!-- <input type="text" id="examples1033" class="hasDatePicker"> -->
-                                                        <input type="text" class="datePicker" id="testPicker_h" maxlength="10" placeholder="YYYY.MM.DD">
-                                                        <input type="text" class="datePicker" id="testPicker_h2" maxlength="10" placeholder="YYYY.MM.DD">
+                                                        <!-- <div class="calender__body"><input type="text" class="datePicker" id="testPicker_h" maxlength="10"><label for="testPicker" class="calender__icon mg--10-l"></label></div>
+                                                        ~
+                                                        <div class="calender__body"><input type="text" class="datePicker" id="testPicker_h2" maxlength="10"><label for="testPicker" class="calender__icon mg--10-l"></label></div> -->
 
+                                                        <!-- 임시 코드로 진행 -->
+                                                        <input type="text" class="text">
+                                                        ~
+                                                        <input type="text" class="text">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -1024,7 +1044,7 @@
 
 
                                 <div class="tab__detail table__vertical">
-                                    <table>
+                                    <table class="cross__table">
                                         <caption>
                                             자산 및 부채현황 {구분, 자산}
                                         </caption>
@@ -1127,7 +1147,7 @@
 
 
                                 <div class="tab__detail table__vertical">
-                                    <table>
+                                    <table class="cross__table">
                                         <caption>
                                             수입현황 {구분, 자산}
                                         </caption>
@@ -1251,7 +1271,7 @@
                                 </div>
                                 </div>
                                 <div class="tab__detail table__vertical">
-                                    <table class="min--width">
+                                    <table class="min--width cross__table">
                                         <caption>
                                             수입현황 {구분, 자산}
                                         </caption>

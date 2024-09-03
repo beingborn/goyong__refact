@@ -30,7 +30,7 @@
 .must__type::after { content: ' *'; color: #FE5555; position: absolute; top: -0.2rem; right: -1rem; font-weight: bold; }
 
 // 회원가입 페이지 
-.sign__up__table__wrap .select__renew { background: url(../img/select__renew.png) no-repeat 98% 50%; }
+// .sign__up__table__wrap .select__renew { background: url(../img/select__renew.png) no-repeat 98% 50%; }
 .sign__up__table .radio__wrap .flex { display: flex; align-items: center; }
 .sign__up__table .radio__wrap .flex label:nth-of-type(1) { margin-right: 2rem; }
 .sign__up__table .radio__wrap input[type="radio"] { appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc; }
@@ -39,7 +39,7 @@
 
 // 달력 공통
 .td__calender { position: relative; width: 33.33%; }
-.calender__icon { width: 3rem; height: 3rem; background: url(../img/calendar-days-regular.svg) no-repeat center;}
+// .calender__icon { width: 3rem; height: 3rem; background: url(../img/calendar-days-regular.svg) no-repeat center;}
 .td__date select { min-width: 12rem;}
 .s-select--no--style { appearance: none; width: 22%; padding: 0 8px; }
 
