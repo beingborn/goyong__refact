@@ -4713,10 +4713,6 @@ select {
   margin-bottom: 6.4rem;
 }
 
-.tab__4__table .chart-block .tab__4__chart__wrapper:last-child {
-  margin-bottom: 0;
-}
-
 @media all and (min-width: 480px) and (max-width: 766px) {
   .echart {
     width: 100%;
