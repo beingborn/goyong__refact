@@ -59,7 +59,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 }
 
 
-// td {min-height: 5.8rem;}
   
 .radio__table th {width: 12.5%; line-height: 5.8rem;}
 .radio__table td {width: calc(100% - 12.5%);}
@@ -86,8 +85,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 
 
-
-
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
 .table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;} 
@@ -107,9 +104,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .modal__result .modal__error__table tbody tr td {line-height: 150%;}
 
 
-
-
-
 // ac__manage__ment__wrap 
 .ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {background-color: transparent;}
 
@@ -123,17 +117,10 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
 .manage__user__table td {width: auto;} 
 .manage__user__table td input[type="text"] {border: 0.1rem solid #ddd;}
-// .manage__user__table tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);}
-
-
-
-
 
 
 .table__information .first__td {width: 20.31%;}
 .table__information .second__td {width: 21.88%}
-
-
 
 // row와 col 제목이 함께 있는 테이블 전용 스타일
 .table__vertical .cross__table > tbody th {font-weight: 700;}
@@ -143,28 +130,21 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
 .table__vertical table thead tr th {font-weight: 400; background-color: #f8f8f8; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
-
 .table__vertical thead .min__h__box {padding: 0}
 .table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 
 
 
 .table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
-// line-height: 6rem; 
 .table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
 .table__vertical tbody th {background-color: #f8f8f8; vertical-align: middle;} 
 .table__vertical tbody td {
-  // padding-left:1rem; padding-right: 1rem;
   vertical-align: middle; }  
 .table__vertical tbody td:nth-last-child(1) {border-right: 0;} 
-
 
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
-
-
-///
-// .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
+// 기존 관리자 색상 .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
 .table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
@@ -204,23 +184,9 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // 조회결과 테이블 공통
 .check__result tr {cursor: pointer;}
 
-// flex-cell
-
-.flex__cell {
-  display: flex;
-  align-items: center; /* 수직 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
-  min-height: 6rem;
-}
-
 
 // td의 min-height 적용 이슈로 다음과 같이 적용
-.min__h__box {
-  display: flex;
-  align-items: center;
-  min-height: 6rem;
-  padding: 0 1rem;
-}
+.min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
 
 .text--r {justify-content: flex-end;}
 .text--l {justify-content: flex-start;}
