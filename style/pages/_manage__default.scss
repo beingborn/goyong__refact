@@ -71,7 +71,7 @@ margin-bottom: 4px;
 
 
 // 관리자 페이지 배경 이미지
-.manage__wrap .manage__default__style .visual__bg {height: 16rem; background: url(../../img/manage__bg_sub1_2.png) no-repeat center; background-size: cover;}
+.manage__wrap .manage__default__style .visual__bg {height: 16rem; background: url(../img/manage__bg_sub1_2.png) no-repeat center; background-size: cover;}
 .manage__wrap .manage__default__style .visual__bg .visual__text h2 {margin-bottom: 1.5rem;}
 
 
@@ -124,8 +124,11 @@ margin-bottom: 4px;
 // 관리자 전용 제목
 .manage__default__style .search__form select {border-radius: 0; background-image: none;}
 .manage__default__style .table__vertical {border-radius: 0; background-image: none;}
+
+.manage__default__style .table__vertical tbody td { white-space: nowrap; padding: 0 0.4rem; overflow: hidden;} // 일정 크기 이상 텍스트 길이 길어질 시 ... 표시
+
 .manage__default__style .table__vertical tbody td, .manage__default__style .table__vertical tbody th {color: #191919; min-height: 3.5rem; height: 3.5rem;}
-.manage__default__style .table__template__horizontal tbody td {color: #191919; min-height: 3.5rem;}
+.manage__default__style .table__template__horizontal tbody td {color: #191919; min-height: 3.5rem; }
 .manage__default__style .lnb__title h2 {font-size: 2rem; color: #333; font-weight: 500; position: relative; padding-left: 2.2rem; margin-bottom: 1rem;}
 .manage__default__style .lnb__title span {font-size: 1.4rem; color: #505050;}
 .manage__default__style .lnb__title h2::before {content: ''; display: inline-block; width: 1rem; height: 1rem; border-radius: 50%; border: 0.2rem solid #e10011; opacity: 0.3; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
@@ -133,17 +136,16 @@ margin-bottom: 4px;
 
 
 // 관리자 전용 표 스타일
-.manage__default__style .table__vertical table thead tr th {line-height: 150%; background-color: #f8f8f8;}
+.manage__default__style .table__vertical table thead tr th {line-height: 150%; background-color: #f8f8f8; padding: 1.45rem 0.4rem;}
 .manage__default__style .table__template__horizontal th {background-color: #f8f8f8;}
 .manage__default__style .table__template__horizontal th {padding-left: 1rem;}
 
 // 대상자 관리 페이지 스타일
-.manage__default__style .user__manage .check__result colgroup col:nth-child(1){width: 5%;}
-.manage__default__style .user__manage .check__result colgroup col:not(:first-child){width: auto;}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(8){width: 11%;}
-.manage__default__style .user__manage .check__result colgroup col:nth-child(9){width: 11%;}
-.manage__default__style .user__manage .check__result colgroup col:nth-child(10){width:11%;}
+// .manage__default__style .user__manage .check__result colgroup col:nth-child(1){width: 5%;}
+// .manage__default__style .user__manage .check__result colgroup col:not(:first-child){width: auto;}
+// .manage__default__style .user__manage .check__result colgroup col:nth-child(8){width: 11%;}
+// .manage__default__style .user__manage .check__result colgroup col:nth-child(9){width: 11%;}
+// .manage__default__style .user__manage .check__result colgroup col:nth-child(10){width:11%;}
 
 
 .manage__default__style .modal__result tr {

@@ -25,14 +25,14 @@ table {width: 100%; font-size: 1.5rem;}
 	font-family: 'Pretendard GOV';
 	font-weight: 800;
 	font-display: swap;
-	src: local('Pretendard GOV ExtraBold'), url(../../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../../woff/PretendardGOV-ExtraBold.woff) format('woff');
+	src: local('Pretendard GOV ExtraBold'), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../font/woff/PretendardGOV-ExtraBold.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Pretendard GOV';
 	font-weight: 700;
 	font-display: swap;
-	src: local('Pretendard GOV Bold'), url(../../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../../font/woff/PretendardGOV-Bold.woff) format('woff');
+	src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
 }
 
 
@@ -41,14 +41,14 @@ table {width: 100%; font-size: 1.5rem;}
 	font-family: 'Pretendard GOV';
 	font-weight: 500;
 	font-display: swap;
-	src: local('Pretendard GOV Medium'), url(../../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../../font/PretendardGOV-Medium.woff) format('woff');
+	src: local('Pretendard GOV Medium'), url(../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../font/woff/PretendardGOV-Medium.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Pretendard GOV';
 	font-weight: 400;
 	font-display: swap;
-	src: local('Pretendard GOV Regular'), url(./woff2/PretendardGOV-Regular.woff2) format('woff2'), url(./woff/PretendardGOV-Regular.woff) format('woff');
+	src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
 }
 
 // @font-face {
@@ -341,7 +341,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 
   // 도움말
 
-  .info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../../img/info__tip.svg) no-repeat center;}
+  .info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../img/info__tip.svg) no-repeat center;}
 
   .info__tip__box {position:relative;}
   .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 9999; left: 7rem; top: 6rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}

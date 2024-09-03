@@ -262,16 +262,23 @@
 
 
 // 조회결과 표 스타일
-.check__result {
-    colgroup {
-        col:first-child {
-            width: 6.6%;
-        }
-        col:not(:first-child) {
-            width: calc((100% - 6.6%) / 8);
-        }
-    }
-}
+
+
+// .check__result {
+//     colgroup {
+//         col:first-child {
+//             width: 6.6%;
+//         }
+//         col:not(:first-child) {
+//             width: calc((100% - 6.6%) / 8);
+//         }
+//     }
+// }
+
+
+
+
+
 .check__result .table__vertical table thead tr th:nth-child(1) {border-left: 0;}
 .check__result .table__vertical table thead tr th:nth-last-child(1) {border-right: 0;}
 .check__result .table__vertical table tbody tr th:nth-child(1){border-left: 0; background-color: transparent;}
@@ -338,7 +345,7 @@
     margin-bottom: 6rem;
     }
     .table__vertical {
-        // table td {padding-right: 0;}
+        table td {padding-right: 0;}
         colgroup {
             col {
                 &:nth-child(1),  &:nth-child(2) {

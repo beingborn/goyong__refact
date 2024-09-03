@@ -171,7 +171,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 // 관리자 페이지의 표 경우, 가로 값이 더 커질 시 table을 감싸는 부모에 스크롤을 줍니다.
 .manage__wrap .table__vertical {overflow-x: auto;}
-.manage__wrap .table__vertical table {min-width: 96rem;}
+// .manage__wrap .table__vertical table {min-width: 96rem;}
 .manage__wrap .table__vertical colgroup col {min-width: 5rem;}
 
 

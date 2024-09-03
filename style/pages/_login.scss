@@ -25,7 +25,7 @@
             // 로그인 도움말
             .helper__box { width: 100%; padding: 2.4rem; background-color: $theme-krds-skyblue-00; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
             .helper__box .helper__tit {display: flex; position: relative; color: $theme-krds-navy-00; font-weight: 700;}
-            .helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../../img/icon__helper__info.svg);background-size: contain;}
+            .helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../img/icon__helper__info.svg);background-size: contain;}
             .helper__box .helper__desc__wrap .info-list {list-style: disc;}
             .helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 1.6rem;}
             .helper__box .helper__desc__wrap {margin-top: 1.6rem; margin-left: 4.8rem; color: #555555;}
@@ -109,15 +109,15 @@
     .sign__up__table__wrap .form__table tr:nth-child(18) {padding-bottom: 3.6rem;}
     .sign__up__table__wrap .form__table tr:nth-child(8) .td__container {flex-direction: column;}
     .sign__up__table__wrap .td__calender {width: 100%; position: relative;}
-    .sign__up__table__wrap .calender__icon {position: absolute; right: 2.4rem; width: 2.4rem; height: 2.4rem; background: url(../../img/calendar-days-regular--mo.svg) no-repeat center;}
+    .sign__up__table__wrap .calender__icon {position: absolute; right: 2.4rem; width: 2.4rem; height: 2.4rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center;}
     .sign__up__table__wrap .form__table .col2__th {min-height: auto;}
     .s-select--no--style {padding: 0 1.6rem;}
 
 
     .sign__up__table__wrap .td__date {display: flex; width: 100%; gap: 1rem; align-items: center;}
     .sign__up__table__wrap .td__date select {min-width: auto;}
-    .sign__up__table__wrap .select__renew{background: url(../../img/select__renew__mo.svg) no-repeat 98% 50%;}
-    .sign__up__table__wrap .td__date .select__renew {background: url(../../img/select__renew__mo.svg) no-repeat 92% 50%;}
+    .sign__up__table__wrap .select__renew{background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;}
+    .sign__up__table__wrap .td__date .select__renew {background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;}
 
     .btn__full__wrap .function__group .btn__control {width: 100%;}
     .btn__half__wrap .function__group .btn__control {width: 50%;}

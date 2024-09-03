@@ -30,25 +30,25 @@ table {
   font-family: "Pretendard GOV";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard GOV ExtraBold"), url(../../font/woff2/PretendardGOV-ExtraBold.woff2) format("woff2"), url(../../woff/PretendardGOV-ExtraBold.woff) format("woff");
+  src: local("Pretendard GOV ExtraBold"), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format("woff2"), url(../font/woff/PretendardGOV-ExtraBold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard GOV Bold"), url(../../font/woff2/PretendardGOV-Bold.woff2) format("woff2"), url(../../font/woff/PretendardGOV-Bold.woff) format("woff");
+  src: local("Pretendard GOV Bold"), url(../font/woff2/PretendardGOV-Bold.woff2) format("woff2"), url(../font/woff/PretendardGOV-Bold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard GOV Medium"), url(../../font/woff2/PretendardGOV-Medium.woff2) format("woff2"), url(../../font/PretendardGOV-Medium.woff) format("woff");
+  src: local("Pretendard GOV Medium"), url(../font/woff2/PretendardGOV-Medium.woff2) format("woff2"), url(../font/woff/PretendardGOV-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard GOV Regular"), url(./woff2/PretendardGOV-Regular.woff2) format("woff2"), url(./woff/PretendardGOV-Regular.woff) format("woff");
+  src: local("Pretendard GOV Regular"), url(../font/woff2/PretendardGOV-Regular.woff2) format("woff2"), url(../font/woff/PretendardGOV-Regular.woff) format("woff");
 }
 body {
   font-size: 1.6rem;
@@ -479,7 +479,7 @@ textarea {
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/info__tip.svg) no-repeat center;
+  background: url(../img/info__tip.svg) no-repeat center;
 }
 
 .info__tip__box {
@@ -1111,10 +1111,6 @@ table caption {
   overflow-x: auto;
 }
 
-.manage__wrap .table__vertical table {
-  min-width: 96rem;
-}
-
 .manage__wrap .table__vertical colgroup col {
   min-width: 5rem;
 }
@@ -1623,7 +1619,7 @@ input[type=checkbox] {
   width: 2rem;
   height: 2.4rem;
   background-size: cover;
-  background: url(../../img/file__icon.svg) no-repeat center;
+  background: url(../img/file__icon.svg) no-repeat center;
 }
 
 .breadcrumb {
@@ -2396,7 +2392,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .manage__wrap .manage__default__style .visual__bg {
   height: 16rem;
-  background: url(../../img/manage__bg_sub1_2.png) no-repeat center;
+  background: url(../img/manage__bg_sub1_2.png) no-repeat center;
   background-size: cover;
 }
 
@@ -2519,6 +2515,12 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background-image: none;
 }
 
+.manage__default__style .table__vertical tbody td {
+  white-space: nowrap;
+  padding: 0 0.4rem;
+  overflow: hidden;
+}
+
 .manage__default__style .table__vertical tbody td, .manage__default__style .table__vertical tbody th {
   color: #191919;
   min-height: 3.5rem;
@@ -2561,6 +2563,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .manage__default__style .table__vertical table thead tr th {
   line-height: 150%;
   background-color: #f8f8f8;
+  padding: 1.45rem 0.4rem;
 }
 
 .manage__default__style .table__template__horizontal th {
@@ -2569,26 +2572,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .manage__default__style .table__template__horizontal th {
   padding-left: 1rem;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(1) {
-  width: 5%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:not(:first-child) {
-  width: auto;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(8) {
-  width: 11%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(9) {
-  width: 11%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(10) {
-  width: 11%;
 }
 
 .manage__default__style .modal__result tr {
@@ -3287,7 +3270,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 2rem;
   height: 2rem;
   margin-top: 0.2rem;
-  background-image: url(../../img/icon__helper__info.svg);
+  background-image: url(../img/icon__helper__info.svg);
   background-size: contain;
 }
 .login__page .helper__box .helper__desc__wrap .info-list {
@@ -3473,7 +3456,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     right: 2.4rem;
     width: 2.4rem;
     height: 2.4rem;
-    background: url(../../img/calendar-days-regular--mo.svg) no-repeat center;
+    background: url(../img/calendar-days-regular--mo.svg) no-repeat center;
   }
   .sign__up__table__wrap .form__table .col2__th {
     min-height: auto;
@@ -3491,10 +3474,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     min-width: auto;
   }
   .sign__up__table__wrap .select__renew {
-    background: url(../../img/select__renew__mo.svg) no-repeat 98% 50%;
+    background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;
   }
   .sign__up__table__wrap .td__date .select__renew {
-    background: url(../../img/select__renew__mo.svg) no-repeat 92% 50%;
+    background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;
   }
   .btn__full__wrap .function__group .btn__control {
     width: 100%;
@@ -3843,13 +3826,6 @@ select {
   width: auto;
 }
 
-.check__result colgroup col:first-child {
-  width: 6.6%;
-}
-.check__result colgroup col:not(:first-child) {
-  width: 11.675%;
-}
-
 .check__result .table__vertical table thead tr th:nth-child(1) {
   border-left: 0;
 }
@@ -3926,6 +3902,9 @@ select {
 
 .check__year__result .pagination {
   margin-bottom: 6rem;
+}
+.check__year__result .table__vertical table td {
+  padding-right: 0;
 }
 .check__year__result .table__vertical colgroup col:nth-child(1), .check__year__result .table__vertical colgroup col:nth-child(2) {
   width: 6.6%;
