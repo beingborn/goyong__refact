@@ -2,7 +2,14 @@
     데이터 차트 CSS
 */ 
 .chart-block { display: flex; justify-content: space-between; flex-wrap: wrap; }
-.chart__wrapper { width: calc(50% - 20px); }
+
+
+.chart__wrapper { width: calc(50% - 20px); margin-bottom: 6.4rem;}
+
+
+
+
+
 .mo__tab__table { display: none; margin-bottom: 5rem; }
 
 // 모바일 탭 테이블
@@ -21,7 +28,9 @@
 .chart__title span { font-size: 1.7rem; }
 .tab__4__table { margin-bottom: 6.4rem; }
 .tab__4__table .input--flex input, .tab__4__table .input--flex select { width: calc(50% - 1rem); }
-.tab__4__chart__wrapper { width: calc(50% - 2rem); }
+.tab__4__chart__wrapper { width: calc(50% - 2rem); margin-bottom: 6.4rem;}
+
+.tab__4__table .chart-block .tab__4__chart__wrapper:last-child {margin-bottom: 0;}
 
 
 @media all and (min-width: 480px) and (max-width: 766px) {

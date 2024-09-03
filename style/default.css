@@ -4629,6 +4629,7 @@ select {
 
 .chart__wrapper {
   width: calc(50% - 20px);
+  margin-bottom: 6.4rem;
 }
 
 .mo__tab__table {
@@ -4709,6 +4710,11 @@ select {
 
 .tab__4__chart__wrapper {
   width: calc(50% - 2rem);
+  margin-bottom: 6.4rem;
+}
+
+.tab__4__table .chart-block .tab__4__chart__wrapper:last-child {
+  margin-bottom: 0;
 }
 
 @media all and (min-width: 480px) and (max-width: 766px) {
