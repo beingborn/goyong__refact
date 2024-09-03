@@ -353,10 +353,12 @@
                                     </label>
                                 </th>
                                 <td class="td__calender__wrap">
-                                    <div class="calender__body td__container" style="align-items: center; width: 33.33%;">
-                                            <input type="text" id="testPicker" maxlength="10">
-                                            <label for="testPicker" class="calender__icon mg--10-l"></label>
-                                    </div>
+                                        <div class="td__container" style="align-items: center; width: 33.33%;">
+                                            <div class="calender__body">
+                                                <input type="text" id="testPicker" maxlength="10">
+                                                <label for="testPicker" class="calender__icon mg--10-l"></label>
+                                            </div>
+                                        </div>
                                 </td>
 
                               
@@ -667,20 +669,7 @@
                                                 <div class="td__container" style="border-right: 1px solid #ddd;">
                                                     <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;" />
                                                 </div>
-                
-
-<!--                         
-                                                <div class="form-content form-wrap">
-                                                    <div class="flex--box-c">
-                                                        <div class="preview flex--box-c pd--10-m mg--10-r">
-                                                          <p></p>
-                                                        </div>
-                                                        <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_ps">파일선택</label>
-                                                        <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
-                                                        <input type="file" class="file__post" id="profile_ps" name="profile_ps" style="opacity: 0; width: 0px;">
-                                                    </div>
-                                                    <button type="button" class="btn__add bg--black-00" style="margin-left: auto;">-</button>
-                                                </div> -->
+            
                                                 <div class="td__container file__select__container flex--grow-100" id="pwLength">
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>
@@ -697,6 +686,51 @@
 
                                         </div>
                                     </form>
+
+                                <!-- template (임시) -->
+                                <!-- 기존 HTML 코드 위에 추가 -->
+                                <template id="row-template">
+                                    <div class="form__row flex--box-c">
+                                        <div class="td__container" style="border-right: 1px solid #ddd;">
+                                            <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;"/>
+                                        </div>
+                                        <div class="td__container file__select__container flex--grow-100">
+                                            <div class="preview flex--box-c">
+                                                <p class="upload__file__name">선택된 파일없음</p>
+                                                <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
+                                            </div>
+                                            <label class="btn__file__select bg--transparent-00">파일선택</label>
+                                            <input type="file" class="file__post" name="profile_pic" style="opacity: 0; width: 0px;">
+                                            <button type="button" class="btn__remove bg--black-00" style="margin-left: auto;">-</button>
+                                        </div>
+                                    </div>
+                                </template>
+                            <!-- template  -->
+
+                            <script>
+                                                           
+                            $(document).ready(function () {
+                                // + 버튼 클릭 시 추가하는 기능
+                                $('.form__body').on('click', '.btn__add', function () {
+                                    const template = document.getElementById('row-template'); // 템플릿 요소 참조
+                                    const newRow = template.content.cloneNode(true); // 템플릿 복제 (true는 깊은 복사)
+                                    
+                                    // 삭제 이벤트를 직접 바인딩
+                                    const deleteButton = newRow.querySelector('.btn__remove');
+                                    deleteButton.addEventListener('click', deleteItem);
+                                    
+                                    $('.form__body').append(newRow); // 새로운 행 추가
+                                });
+
+                                // 삭제 기능을 하는 함수
+                                function deleteItem(event) {
+                                    $(event.target).closest('.form__row').remove(); // 가까운 행 삭제
+                                }
+                            });
+                            </script>
+
+
+
                                 </div>
                             </div>
                             <div class="function__group">
@@ -751,50 +785,7 @@
 
         })
 
-        $(document).ready(function(){
-
-            $('.btn__add').click(function(){
-                // 추가 줄 생성
-                const newRow = $('<div class="form__row flex--box-c"></div>')
-                
-                /** 임시 코드 */
-                const newRowDesc = $(        
-                `
-                                <div class="form-wrap flex--center-s" style="width: 15.38%; border-right: 1px solid #ddd;">
-                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" />
-                                </div>
-
-                                               <div class="form-content form-wrap">
-
-                                                    <div class="flex--box-c">
-                                                        <div class="preview flex--box-c pd--10-m mg--10-r">
-                                                          <p></p>
-                                                        </div>
-                                                        <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_pics2">파일선택</label>
-                                                        <!-- <div>
-                                                          <button class="btn__upload bg--blue-00">업로드</button>
-                                                        </div> -->
-                                                        <input type="file" class="file__post" id="profile_pics2" name="profile_pics2" style="opacity: 0; width: 0px;">
-                                                    </div>
-                                                    <button type="button" class="btn__remove bg--black-00" style="margin-left: auto;">-</button>
-                                                </div>
-                `
-                )
-
-                
-                // 추가 줄 내용 삽입
-                newRow.append(newRowDesc)
-
-                // 내용에 줄 추가
-                $('.form__body').append(newRow);
-
-            })
-        })
-
-        // 가까운 row 삭제
-        $('.form__body').on('click', '.btn__remove', function() {
-            $(this).closest('.form__row').remove();
-        });  
+      
                             // change 발생한 input을 특정
                             // 임시 코드 : 파일 업로드 표시
                             

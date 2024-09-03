@@ -408,7 +408,7 @@ var barOption3 = {
           },
         },
         {
-          value: 1388700,
+          value: 13800,
           label: {
             show: true,
           },
