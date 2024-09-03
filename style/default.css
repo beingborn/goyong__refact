@@ -3958,52 +3958,6 @@ select {
   width: 100%;
 }
 
-.check__result .report__col col:nth-child(1) {
-  width: 3.5%;
-}
-.check__result .report__col col:nth-child(2) {
-  width: 7.5%;
-}
-.check__result .report__col col:nth-child(3) {
-  width: 4.7%;
-}
-.check__result .report__col col:nth-child(11) {
-  width: auto;
-}
-.check__result .report__col col:nth-child(4) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(5) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(6) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(7) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(8) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(9) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(10) {
-  width: 6.6%;
-}
-.check__result .report__col col:nth-child(12) {
-  width: 7.5%;
-}
-.check__result .report__col col:nth-child(13) {
-  width: 7.5%;
-}
-.check__result .report__col col:nth-child(14) {
-  width: 7.5%;
-}
-.check__result .report__col col:nth-child(15) {
-  width: 7.5%;
-}
-
 /** 리포트 조회 리스트 */
 .report__check__table .result__th {
   width: 12.5%;

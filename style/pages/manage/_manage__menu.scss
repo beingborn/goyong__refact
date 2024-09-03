@@ -393,16 +393,18 @@
 
 
 .report__content .content {width: 100%;}
-.check__result .report__col {
-    col {
-        &:nth-child(1) {width: 3.5%;}
-        &:nth-child(2) {width: 7.5%;}
-        &:nth-child(3) {width: 4.7%;}
-        &:nth-child(11){width: auto;}
-        @for $i from 4 through 10 {&:nth-child(#{$i}) {width: 6.6%;}}
-        @for $j from 12 through 15 {&:nth-child(#{$j}) {width: 7.5%;}}
-    }
-}
+
+
+// .check__result .report__col {
+//     col {
+//         &:nth-child(1) {width: 3.5%;}
+//         &:nth-child(2) {width: 7.5%;}
+//         &:nth-child(3) {width: 4.7%;}
+//         &:nth-child(11){width: auto;}
+//         @for $i from 4 through 10 {&:nth-child(#{$i}) {width: 6.6%;}}
+//         @for $j from 12 through 15 {&:nth-child(#{$j}) {width: 7.5%;}}
+//     }
+// }
 
 /** 리포트 조회 리스트 */
 
