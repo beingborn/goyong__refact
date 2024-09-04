@@ -19,6 +19,7 @@
 
 
         .inner {
+            height: 100%;
             position: relative;
             z-index: 1;
         }
@@ -26,17 +27,18 @@
         .main__text {
             position: absolute;
             top: 9.7rem;
+            // transform: translateY(-50%);
             left: 0;
 
             .main__bold {
                 font-size: 4rem;
-                line-height: 150%;
-                margin-bottom: 3.2rem;
+                line-height: 130%;
+                margin-bottom: 4rem;
             }
 
             .main__medium {
-                font-size: 1.7rem;
-                line-height: 180%;
+                font-size: 3rem;
+                line-height: 110%;
             }
         }
 
@@ -118,17 +120,42 @@
             font-weight: 700;
             color: #000;
             text-align: center;
+            line-height: 120%;
             
-            &::before{content: ''; width: 6rem; height: 6rem; display: block; margin: 0px auto; margin-bottom: 3.2rem;}
+            &::before{content: ''; width: 9rem; height: 9rem; display: block; margin: 0px auto; margin-bottom: 1.8rem; background-color: #fff; border-radius: 50%;}
         }
         
-        // .subc.open::before {background: url(../../img/icons__open.png) no-repeat center;}
-        .subc.open::before {background: url(../img/icons__open.png) no-repeat center;}
-        .subc.write::before {background: url(../img/icons__write.png) no-repeat center;}
-        .subc.manual::before {background: url(../img/icons__manual.png) no-repeat center;}
+        .subc.open::before {
+            background-image: url(../img/icons__open.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .subc.write::before {
+            background-image: url(../img/icons__write.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .subc.manual::before {
+            background-image: url(../img/icons__manual.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
     }
 }
+
+.count__group .count {
+    &:hover {background-color: #21A366;
+        .subc {color: #fff;}
+        // .subc::before {}
+    }
+}
+
+
+
+
+
 
 
 
@@ -145,6 +172,10 @@
 .main__echart .chartBox .echart {width: 100%; height: 18.8rem;}
 .main__echart .table__vertical {width: 44%; font-size: 1.5rem;}
 .main__echart .table__vertical table {table-layout: fixed;}
+.main__echart .table__vertical table tbody td {padding: 0 1rem;}
+
+
+
 .main__echart .data .unit {color: #767676; font-size: 1.3rem; margin-left: 0.4rem;}
 .main__echart .data > h2 {font-size: 1.7rem; color: #767676;}
 .main__echart .chart1, .chart2 { width: 320px;}
@@ -152,7 +183,7 @@
 .chartBox .title {font-size: 2.5rem;}
 .data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
 
-#tableList tbody tr.on {background-color:  $theme-krds-skyblue-00;}
+#tableList tbody tr.on {background-color:   #DDEAF6!important;}
 .chartData__wrap {display: flex; padding-top: 3rem;}
 .chartData__wrap .data {text-align: center; width: 50%;}
 

@@ -62,7 +62,7 @@ input[type="file"]::file-selector-button {
     height: 5.8rem;
 }
 
-.form__head .form-title {background-color: #F9F9FA;}
+.form__head {background-color: #F9FDFB;}
 
 .form-title {
     // width: 15.38%; /* 전체 너비의 15.38% */
@@ -75,11 +75,11 @@ input[type="file"]::file-selector-button {
 }
 
 .form-content {
-    flex-grow: 1; /* 남은 공간을 채움 */
-    padding: 10px; /* padding 추가 */
-    display: flex; /* 내부 요소들을 flex로 정렬 */
-    align-items: center; /* 내부 요소들을 세로 중앙 정렬 */
-    gap: 10px; /* 내부 요소들 사이의 간격 */
+    flex-grow: 1; 
+    padding: 10px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
 }
 
 .form-content > select {width: 100%; min-height: 4rem; background-color: #fff;}

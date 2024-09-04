@@ -79,4 +79,4 @@ a{
 
 
 textarea {-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:transparent;border:0;word-break:keep-all;word-wrap:break-word}
-button, input {-webkit-border-radius:0;border-radius:0;border:0}
+button, input {-webkit-border-radius:0;border-radius:0;border:0; background: inherit;}

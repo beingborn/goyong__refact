@@ -23,18 +23,30 @@
 #sub__wrap .file_change .visual__bg {background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
 
 
-#sub__wrap .content .visual__bg .visual__text { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; }
-#sub__wrap .content .visual__bg .visual__text h2 { font-size: 3.2rem; margin-bottom: 2.8rem; white-space: nowrap; }
-#sub__wrap .content .visual__bg .visual__text p { font-size: 1.5rem; }
+#sub__wrap .content .visual__bg .visual__text { 
+    position: absolute;
+    bottom: 7.2rem;
+    color: #fff;
+    // top: 50%; transform: translateY(-50%); 
+
+ }
+#sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
+#sub__wrap .content .visual__bg .visual__text p { font-size: 2.4rem; }
 
 .mobile__tab { display: none; }
 .mobile__tab__content { display: none;}
 
+
+// 회계 공시 열람의 탭 페이지만 padding-top 통일
+.sub1_1 .tab__content {padding-top: 8rem;}
+
+
 // 회계공시등록 페이지
-.tab__content { padding-top: 8rem; }
-// .tab__content .tab:nth-child(2) {padding-top: 8rem;}
+
 .tab__content .data__title { margin-bottom: 1.6rem; text-align: left; position: relative; font-size: 2rem; color: #333; font-weight: 700; align-items: baseline;}
 .tab__content table tbody th { font-weight: 700; color: #000;}
+
+
 // 임시 코드
 .border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; text-align: right;}
 .border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
@@ -42,10 +54,16 @@
 // thead가 없는 가로형 표 스타일
 .table__horizontal { height: 5.8rem; border-top: 0.2rem solid #333; }
 .table__horizontal table { height: 100%; }
-.table__horizontal tbody th { font-weight: 500; background: #f8f8f8; text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
+.table__horizontal tbody th { font-weight: 500; background: #EAF5F0; text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
 .table__horizontal td { padding: 0 1rem; }
 .table__horizontal td select { width: 100%; height: 4rem; border: 0.1rem solid #ccc; font-size: 1.5rem; padding: 0.8rem; }
 .table__horizontal td input[type="text"] { border: 0.1rem solid #ccc; height: 4rem; font-size: 1.5rem; }
+
+// 해당 태그들에 연한 색상을 적용합니다.
+.table__horizontal .table__light th {background: #F9FDFB;}
+.table__light th {background: #F9FDFB;}
+
+
 
 .input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%; }
 .tab .dis__info:not(:first-child) { padding-top: 5.6rem; padding-bottom: 5.6rem; }
@@ -71,11 +89,13 @@
 .page__title__wrap {margin-top: 8rem; margin-bottom: 6.4rem;}
 .search__form__user {background-color: $theme-krds-skyblue-01; border-radius: 1.2rem;}
 .search__form__user .search {padding: 4rem;}
-.search__form__user .search .flex--box-c:nth-of-type(1) {padding-bottom: 2.4rem;}
+
+// 검색 폼이 두 줄인. 회계공시 열람 페이지에만 적용
+.search__form__user .search .first__input__box {padding-bottom: 2.4rem;}
 .search__form__user .search input {font-size: 1.7rem;}
 .search__form__user .search .select__box {min-width: 18rem; height: 4.8rem;}
 .search__form__user .search .input__box {height: 4.8rem; display: flex; flex: 1;}
-.search__form__user .search .input__box > input {height: 100%; flex: 1; margin:0 2.4rem ;}
+.search__form__user .search .input__box > input {height: 100%; flex: 1; margin:0 2.4rem; background: #fff;}
 .search__form__user .search .select__box > select {width: 100%; height: 100%;}
 .search__form__user .search > div label {font-size: 1.7rem; font-weight: 700; margin-right: 1.2rem;}
 
@@ -88,3 +108,42 @@
 .accn__result table {font-size: 1.6rem;}
 .accn__result table thead th:not(:first-child){border-right: 0;}
 .accn__result table tbody td:not(:first-child){border-right: 0;}
+
+// 홈 > 시스템안내 > 자주묻는 질문
+
+.foldStyle__table {}
+.qna__container {display: inline-flex; justify-content: center; align-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; color: #fff;}
+.qna__container.question {background-color: #16C273;}
+.qna__container.answer {background-color: #000000;}
+
+
+.foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: center;}
+.foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
+.foldStyle__table .qna__title {min-width: 12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
+.foldStyle__table .answer__toggle {font-size: 1.6rem; font-weight: 700;}
+.foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
+.foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
+.foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
+
+.faq__page__wrap .pagination {margin-top: 7.6rem; margin-bottom: 4rem;}
+
+// .foldStyle__table .answer__tr {display: none;}
+
+
+
+// .question {font-size: 3rem; position: relative;}
+// .question::before {content: '';background-color: #16C273; width: 2.6rem; height: 2.6rem; border-radius: 50%; display: inline-block;}
+
+
+// 홈 > 시스템 안내 > 공지사항
+
+.notice__page .pagination {margin-bottom: 20rem;}
+
+// 홈 > 시스템 안내 > 공지사항 상세
+
+.notice__detail__wrap table {font-size: 1.6rem; border: 1px dashed red;}
+.notice__detail__wrap .content__desc {min-height: 45rem; font-size: 1.7rem; color: #555555;}
+.board__detail {padding: 6.4rem 0;}
+
+
+

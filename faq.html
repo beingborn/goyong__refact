@@ -162,16 +162,298 @@
 			<li><a href="#" class="txt">자주묻는질문</a></li>
 		</ol>
 		</nav>
+        <!-- 테이블 제목 -->
+        <div class="page__title__wrap sysguide">
+            <div class="page__title flex__title"><h2>자주묻는질문</h2></div>
+        </div>
 
-      
+        <!-- 검색 폼 시작 -->
+         <div class="user__form__wrapper">
+            <form class="search__form__user" action="POST">
+				<div class="search">
+					<input type="hidden" id="pageNo" name="pageNo" value=""/>
+					<input type="hidden" id="lbrUniId" name="lbrUniId" value="">
+					<input type="hidden" id="yearSel" name="yearSel" value="">
+	
+					<div class="flex--box-c">
+						<div class="select__box">
+							<select class="select--no--style select__renew" id="year" name="year">
+							<option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
+						</div>
 
-        <!-- 검색폼 시작 -->
+                        <div class="input__box">
+                            <label for="searchText" class="blind">질문조회</label>
+                            <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value=""> 
+                            <button type="button" id="" class="btn__control__u bg--mint-00 mg--24-r" onclick="fn_search();">초기화</button>
+                            <button type="button" id="" class="btn__control__u bg--blue-02 mg--24-r " onclick="fn_search();">조회</button>
+                            <button type="button" id="" class="btn__control__u bg--green-02" onclick="fn_search();">자료다운로드</button>
+                        </div>
+
+					</div>
+				</div>
+            </form>
+         </div>
+
+          <!-- 조회 결과 -->
+         <div class="table__title__wrap">	
+            <p class="data__number">총 게시글 <span>652</span>건</p>
+		 </div>
+
+         <div class="foldStyle__table">
+            <table class="border-top-large">
+                <caption>자주 묻는 질문 목록(번호, 제목)</caption>
+                <tbody>
+                    <!-- 1번 질문 -->
+                    <tr>
+                        <th class="qna__title"><div class="qna__container question"><span>Q</span></div></th>
+
+                        <td>
+                            <div class="td__container"> <button type="button" title="내용 자세히 보기" class="answer__toggle">노동조합 회계공시 시스템에 회계를 공시하는 것은 법적 의무사항인지?</button></div>
+                        </td>
+                        
+                        <td class="qna__function__group flex--box-c">
+                            <button type="button">
+                                <img src="img/download__icon.svg" alt="다운로드 아이콘" >
+                            </button>
+               
+                            <div class="arrow__box">
+                                <img src="img/qna__bg__top__arrow.svg" alt="">
+                            </div>
+                        </td>
+                              
+                    </tr>
     
+                    <tr class="answer__tr">
+                        <th class="qna__title">
+                            <div class="qna__container answer">
+                                <span>A</span>
+                            </div>
+                        </th>
+    
+                        <td>
+                            <div class="td__container preBox">
+                                <p>
+                                - 노동조합 또는 산하조직은 노동조합법 제11조의9에 따라 노동조합 회계공시 시스템에 결산결과를 공시할지 여부를 자율적으로 정할 수 있습니다. 
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 2번 질문 -->
+                    <tr>
+                        <th class="qna__title"><div class="qna__container question"><span>Q</span></div></th>
+
+                        <td>
+                            <div class="td__container"> <button type="button" title="내용 자세히 보기" class="answer__toggle">회계를 공시하는 것은 법적 의무사항인지?</button></div>
+                        </td>
+                        
+                        <td class="qna__function__group flex--box-c">
+                            <button type="button">
+                                <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                            </button>
+                            <!-- <button type="button">
+                                <img src="/pap/common/images/sub/iconFile.png" alt="파일첨부 아이콘" onclick="fn_fileDown(20240000000188)">
+                            </button> -->
+                            <div class="arrow__box">
+                                <img src="img/qna__bg__top__arrow.svg" alt="">
+                            </div>
+                        </td>
+                              
+                    </tr>
+    
+                    <tr class="answer__tr">
+
+                        <th class="qna__title">
+                            <div class="qna__container answer">
+                                <span>A</span>
+                            </div>
+                        </th>
+    
+                        <td>
+                            <div class="td__container preBox">
+                                <p>
+                                - 노동조합 또는 산하조직으로 정할 수 있습니다. 
+                                </p>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <!-- 3번 질문 -->
+                    <tr>
+                        <th class="qna__title"><div class="qna__container question"><span>Q</span></div></th>
+
+                        <td>
+                            <div class="td__container"> <button type="button" title="내용 자세히 보기" class="answer__toggle">의무사항은 무슨 의미인지?</button></div>
+                        </td>
+                        
+                        <td class="qna__function__group flex--box-c">
+                            <button type="button">
+                                <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                            </button>
+                            <div class="arrow__box">
+                                <img src="img/qna__bg__top__arrow.svg" alt="">
+                            </div>
+                        </td>
+                              
+                    </tr>
+    
+                    <tr class="answer__tr">
+                        <th class="qna__title">
+                            <div class="qna__container answer">
+                                <span>A</span>
+                            </div>
+                        </th>
+    
+                        <td>
+                            <div class="td__container preBox">
+                                <p>
+                                - 노동조합 또는 산하조직으로 정할 수 있습니다. 
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 4번 질문 -->
+                    <tr>
+                        <th class="qna__title"><div class="qna__container question"><span>Q</span></div></th>
+
+                        <td>
+                            <div class="td__container"> <button type="button" title="내용 자세히 보기" class="answer__toggle">의무사항은 무슨 의미인지?</button></div>
+                        </td>
+                        
+                        <td class="qna__function__group flex--box-c">
+                            <button type="button">
+                                <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                            </button>
+                            <div class="arrow__box">
+                                <img src="img/qna__bg__top__arrow.svg" alt="">
+                            </div>
+                        </td>
+                              
+                    </tr>
+    
+                    <tr class="answer__tr">
+                        <th class="qna__title">
+                            <div class="qna__container answer">
+                                <span>A</span>
+                            </div>
+                        </th>
+    
+                        <td>
+                            <div class="td__container preBox">
+                                <p>
+                                - 노동조합 또는 산하조직으로 정할 수 있습니다. 
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 5번 질문 -->
+                    <tr>
+                        <th class="qna__title"><div class="qna__container question"><span>Q</span></div></th>
+
+                        <td>
+                            <div class="td__container"> <button type="button" title="내용 자세히 보기" class="answer__toggle">의무사항은 무슨 의미인지?</button></div>
+                        </td>
+                        
+                        <td class="qna__function__group flex--box-c">
+                            <button type="button">
+                                <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                            </button>
+                            <div class="arrow__box">
+                                <img src="img/qna__bg__top__arrow.svg" alt="">
+                            </div>
+                        </td>
+                              
+                    </tr>
+    
+                    <tr class="answer__tr">
+                        <th class="qna__title">
+                            <div class="qna__container answer">
+                                <span>A</span>
+                            </div>
+                        </th>
+    
+                        <td>
+                            <div class="td__container preBox">
+                                <p>
+                                - 노동조합 또는 산하조직으로 정할 수 있습니다. 
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+
+
+            </table>
+
+			<!-- 테이블 페이지 이동 버튼 -->
+            <div class="faq__page__wrap">
+                <div class="pagination w-page">
+                    <a class="page-navi prev" href="#">이전</a>
+                    <div class="page-links">
+                        <a class="page-link active" href="#">1</a>
+                        <span class="page-link link-dot">
+                            ···
+                        </span>
+                        <a class="page-link" href="#">6</a>
+                        <a class="page-link" href="#">7</a>
+                        <a class="page-link" href="#">8</a>
+                        <a class="page-link" href="#">9</a>
+                        <a class="page-link" href="#">10</a>
+                        <a class="page-link" href="#">11</a>
+                        <span class="page-link link-dot">
+                            ···
+                        </span>
+                        <a class="page-link" href="#">120</a>
+                    </div>
+                    <a class="page-navi next" href="#">다음</a>
+                </div>
+            </div>
+
+
+
+
+
+            <script>
+
+                    // 클릭한 요소 tr의 다음 tr slide 토글하기
+                    // arrow__box의 img src 변경
+
+
+                    /*List Table style*/
+
+                    $(document).ready(function(){
+
+                        $('.foldStyle__table tr:even').click(function(){
+                        $(this).next('.answer__tr').slideToggle()
+
+
+                        if(true){
+                            $(this).find('.arrow__box > img').attr('src','img/qna__bg__down__arrow.svg')
+                        } else {
+                            $(this).find('.arrow__box > img').attr('src','img/qna__bg__top__arrow.svg')
+                        }
+                        });
+
+                        $('.answer__tr').slideUp();
+
+                    })
+             
+            </script>
+
+
+
+
+
+
+
+         </div>
+
+        
 	</div>
 
-    <div class="example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 12.8rem;">
-        <img src="img/자주묻는질문(임시).jpg" alt="회계공시 시스템이란" >
-    </div>
+    <!-- <div class="example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 12.8rem;"><img src="img/자주묻는질문(임시).jpg" alt="회계공시 시스템이란" ></div> -->
 
 	</main>
 	<footer>

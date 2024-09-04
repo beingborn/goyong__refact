@@ -15,24 +15,28 @@
 
 .bg--blue-00 {background-color: #246BEB;}
 .bg--blue-01 {background-color: #1D56BC;}
+.bg--blue-02 {background-color: #218BEE;}
+
 .bg--navy-00 {background-color: #003675;}
 .bg--black-00 {background-color: #000000;}
 .bg--gray-00 {background-color: #D8D8D8;}
 .bg--red-00 {background-color: #B9131E;}
 .bg--green-00 {background-color: #008A1E;}
+.bg--green-01 {background-color: #00BA63;}
+.bg--green-02 {background-color: #21A366;}
+.bg--mint-00 {background-color: #14BDB3;}
 .bg--transparent-00 {background-color: none;}
 
 
 // 관리자 페이지 상단 버튼입니다.
 .btn__control {
-  
   color: #fff;
   border: 0;
   font-size: 2rem;
   height: 5.6rem;
   padding: 0 2rem;
   border-radius: 0.7rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -62,8 +66,8 @@ button {cursor: pointer;}
       }
   
       .active {
-        color: $second-color;
-        border-bottom: 0.4rem solid $theme-btn-blue-01;
+        color: #21A366;
+        border-bottom: 0.4rem solid #21A366;
       }
     }
 
@@ -71,7 +75,6 @@ button {cursor: pointer;}
 
   // 모달 닫기 버튼 스타일
   .close__btn__wrap { text-align: center; padding-top: 1.2rem;}
-
     .close__btn {
         cursor: pointer;
         border: 0;

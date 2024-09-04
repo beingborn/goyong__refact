@@ -63,7 +63,6 @@
                                 <ul id="head_menu" class="top__menu">
                                     <li class="plus">
                                         <a href="javascript:void(0);">시스템안내
-                                            <!-- <span class="sr_only">닫기</span> -->
                                         </a>
                                         <div class="sub__menu">
                                             <ul>
@@ -187,9 +186,9 @@
                     <!-- 버튼 -->
                     <div class="function__group">
                         <button type="button" class="check__data btn__control bg--manage--gray--00">초기화</button>
-                        <button type="button" class="check__data btn__control bg--manage--blue--00" id="report__open">조회</button>
+                        <button type="button" class="check__data btn__control bg--manage--blue--00">조회</button>
                         <button type="button" class="btn__control bg--manage--black--00">다운로드</button>
-                        <button type="button" data-target=".data__modal" class="btn__control bg--manage--black--00">설정</button>
+                        <button type="button" data-target=".data__modal" class="btn__control bg--manage--black--00"  id="report__open">설정</button>
                     </div>
                     <!-- 상단 검색폼 -->
                     <div class="search__form" style="margin-bottom: 2rem;">
@@ -406,11 +405,11 @@
 
                       <!-- 조회 모달 -->
 
-                      <div class="data__modal manage__report__modal">
+                      <div class="data__modal manage__report__modal modal">
                         <div class="modal__inner">
                             <div class="modal__check">
                                 <button type="button" class="bg--manage--blue--00">조회</button>
-                                <button type="button" class="bg--manage--black--00">닫기</button>
+                                <button type="button" class="bg--manage--black--00 modal__hide" >닫기</button>
                             </div>
                             <div class="modal__table">
                                 <div class="modal__info flex--start">
@@ -668,30 +667,7 @@
     
     
                                     <script>
-                                        /* 
-                                            1. 체크 박스 전체 클릭 시  해당 div 안의 나머지에 모두 체크 표시하기
-                                            2. 만약 다시 전체를 다시 클릭하면 전체 비활성화 
-                                            3. 총합 체크 개수와 체크 개수 값 비교해서 전체 체크 활성화 비활성화
-                                        */
-
-                                        $(document).ready(function(){
-                                            $('#report__open').on('click', function(){
-                                            $('.manage__default__style .manage__report__modal').show();
-                                            $('.modal__bg').show();
-
-                                            $('.manage__default__style .modal__table').show();
-                                            $('.modal__check button').show();
-
-                                            })
-
-                                            $('.modal__check button').on('click',function(){
-                                            $('.manage__default__style .manage__report__modal').hide();
-                                            $('.manage__default__style .modal__table').hide();
-                                            $('.modal__check button').hide();
-                                            $('.modal__bg').hide();
-                                            })
-                                            // $('.modal__check button').hide();
-                                        })
+                                  
                                  
 
 

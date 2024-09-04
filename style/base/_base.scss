@@ -69,7 +69,12 @@ body {
       "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     overflow-x: hidden;
   }
-.inner {width: 1280px; margin: 0px auto;}
+.inner {
+  max-width: 128rem;
+  width: 128rem;
+  margin: 0px auto;
+}
+
 .mobile__logo {display: none;}  
 .header__btm .right__icon__set .hamburger {display: none;}
 
@@ -205,6 +210,8 @@ display: inline-block;
   .pd--10-r {padding-right: 1rem;}
   .pd--10-b {padding-bottom: 1rem;}
 
+  .pd--24-r {padding-right: 2.4rem;}
+
   .pd--10-m {padding: 0 1rem;}
 
   /* 
@@ -215,6 +222,7 @@ display: inline-block;
   .mg--20-l {margin-left: 2rem;}
   .mg--10-r {margin-right: 1rem;}
   .mg--20-r {margin-right: 2rem;}
+  .mg--24-r {margin-right: 2rem;}
   
   .mg--10-b {margin-bottom: 1rem;}
   .mg--20-b {margin-bottom: 2rem;}
@@ -339,12 +347,10 @@ display: inline-block;
 
 
   // 도움말
-
   .info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../img/info__tip.svg) no-repeat center;}
-
   .info__tip__box {position:relative;}
   .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 9999; left: 7rem; top: 6rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}
-  .info__tip__box .tooltip__layer::after { content: ''; display: inline-block; width: 2.2rem; height: 1.2rem; background: url(../../img/info__tip__arrow__top.svg) no-repeat center; position: absolute; left:2.4rem; top: -1.2rem; z-index: inherit}
+  .info__tip__box .tooltip__layer::after { content: ''; display: inline-block; width: 2.2rem; height: 1.2rem; background: url(../img/info__tip__arrow__top.svg) no-repeat center; position: absolute; left:2.4rem; top: -1.2rem; z-index: inherit}
   .info__tip__box .tooltip__layer.active {display: block;}
   .info__tip__box .tooltip__title {font-weight: 700; padding-bottom: 2rem;}
   .info__tip__box .tooltip__content strong {padding-right: 0.4rem;}

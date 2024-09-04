@@ -33,26 +33,34 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
-
-    // 모달의 너비 설정 함수 호출
     setModalWidth();
 
-   
+
     $('[data-target]').click(function() {  // 모달 열기 이벤트 핸들러
         const targetModal = $(this).data('target');
         setModalWidth(targetModal)
 
         $(targetModal).show();
         $('.modal__bg').show();
-
     });
 
-    // 모달 닫기 이벤트 핸들러
+   
     $('.modal__close button').click(function() {
-        $('.modal, .modal__bg').hide();  // 모든 모달 요소를 숨김
+        $('.modal, .modal__bg').hide();  
     });
 
-    // 배경 숨기기
+
+    $('.modal__hide').click(function(){
+        const targetModal = $(this).closest('.modal')
+        console.log(targetModal)
+
+        targetModal.hide();
+        $('.modal__bg').hide();
+    })
+
+
+
+
 
     // 모달의 너비를 부모 요소에 맞게 설정하는 함수
     function setModalWidth(targetModal) {

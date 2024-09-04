@@ -30,7 +30,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex tr {
   line-height: 5.8rem; height: 5.8rem;
   border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.table__horizontal__ex th {width: 19.53%; background-color: #f8f8f8; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
+.table__horizontal__ex th {width: 19.53%; background-color: #F9FDFB; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1;} 
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
@@ -39,8 +39,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 
 
-
-// .table__horizontal__ex tr.r2 td {width: calc((100% - (15.38% * 2)) / 2);} 
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
@@ -87,11 +85,13 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
-.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;} 
-// .table__template__horizontal td {border-bottom: 1px solid #ddd;} 
+.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9FDFB; font-weight: 500;} 
+// 제목 영역이 더 진한 테이블 제목 스타일
+.table__template__horizontal .table__strong th {background-color: #EAF5F0;}
+
+
 .table__template__horizontal .default__table tr {line-height: 5.8rem;} 
-.table__template__horizontal .default__table th, 
-.table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
+.table__template__horizontal .default__table th, .table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
 .table__template__horizontal .default__table th {width: auto;} 
 .table__template__horizontal .default__table td {width: auto;}
 
@@ -123,12 +123,12 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__information .second__td {width: 21.88%}
 
 // row와 col 제목이 함께 있는 테이블 전용 스타일
-.table__vertical .cross__table > tbody th {font-weight: 700;}
+.table__vertical .cross__table > tbody th {font-weight: 700; background: #F9FDFB;}
 
 
 // 상단 thead 제목이 있는 테이블의 스타일입니다.
 // 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
-.table__vertical table thead tr th {font-weight: 400; background-color: #f8f8f8; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
+.table__vertical table thead tr th {font-weight: 400; background-color: #F9FDFB; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
 .table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 
@@ -144,8 +144,11 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
-// 기존 관리자 색상 .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
-.table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
+// 기존 관리자 색상
+
+
+ .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
+// .table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
 
