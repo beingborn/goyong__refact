@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=, initial-scale=1.0">
-<title>공지사항</title>
+<title>회계공시등록 > 가맹노조(산하조직)관리</title>
 <!-- css 영역 -->
 <link rel="stylesheet" href="style/reset.css">
 <link rel="stylesheet" href="style/default.css">
@@ -21,9 +21,9 @@
 <div class="skip__nav">
 	<a href="#main__content">본문 바로가기</a>
 </div>
-<div class="wrap full__page__wrap" id="sub__wrap">
-       <!-- 헤더 -->
-       <header class="header">
+<div class="union__management__wrap   wrap full__page__wrap" id="sub__wrap" style="position: relative;">
+      <!-- 헤더 -->
+      <header class="header">
         <div class="inner">
         <div class="header__btm">
             <h1 class="logo">
@@ -143,13 +143,13 @@
         </div>
         </div>
     </header>
-	<main class="content notice_detail">
+	<main class="content union_management">
 	<!-- visual bg -->
 	<div class="visual__bg">
 		<div class="inner">
 			<div class="visual__text">
-				<h2>공지사항</h2>
-				<p>노동조합 회계공시시스템의 공지사항 상세입니다.</p>
+				<h2>가맹노조(산하조직) 관리</h2>
+				<p>회계공시를 입력해주세요.</p>
 			</div>
 		</div>
 	</div>
@@ -158,127 +158,181 @@
 		<nav class="breadcrumb" style="padding-top: 2.4rem;">
 		<ol class="path">
 			<li class="home"><a href="#" class="txt">홈</a></li>
-			<li><a href="#" class="txt">시스템안내</a></li>
-			<li><a href="#" class="txt">공지사항</a></li>
-			<li><a href="#" class="txt">공지사항 상세</a></li>
+			<li><a href="#" class="txt">회계공시등록</a></li>
+			<li><a href="#" class="txt">가맹노조(산하조직)관리</a></li>
 		</ol>
 		</nav>
-     
+
+
+             
         <!-- 테이블 제목 -->
         <div class="page__title__wrap sysguide">
-            <div class="page__title flex__title"><h2>공지사항</h2></div>
-        </div>
-
-        <!-- 상단 제목 구분 내역 -->
-        <div class="notice__detail__wrap">
-              <div class="table__horizontal__ex">
-                <table>
-                  <caption>
-                    공지사항 상세 상단 부분
-                  </caption>
-                  <tbody>
-                    <tr style="position: relative" class="wide__first">
-                      <th scope="row" style="white-space: nowrap;">
-                        <label for="name">
-                          <span>제목</span>
-                        </label>
-                      </th>
-                      <td>
-                        <div class="td__container"> 
-                            공지사항을 알려드립니다.
-                        </div>
-                      </td>
-                    </tr>
-                  <tr style="position: relative">
-                      <th scope="row" style="white-space: nowrap;">
-                        <label for="name">
-                          <span>구분</span>
-                        </label>
-                      </th>
-                      <td>
-                        <div class="td__container"> 
-                            공고
-                        </div>
-                      </td>
-                      <th scope="row" style="white-space: nowrap;">
-                      
-                        <label for="examples1033">
-                          <span>등록일</span>
-                        </label>
-                      </th>
-                      <td>
-                        <div class="td__container">
-                            2024-08-12
-                        </div>
-                      </td>
-                    </tr></tbody>
-                </table>
-              </div>
-
-              <div class="content__desc">
-                <div class="board__detail">
-                    <p>2024년 노동조합 회계공시 하반기 추가 공시 등록기간을 아래와 같이 운영합니다.</p>
-                    <p>• 공시 등록기간: 2024.8.1.부터 2024.9.30.(2개월간)</p>
-                    <br>
-            <p>• 추가 공시 대상 노동조합</p>
-<p>   - 합병ㆍ분할 또는 해산 등 부득이한 사유가 있는 경우</p>
-<p>   - 회계연도 종료일이 12월 31일이 아닌 경우</p>
-<br>
-<p>• 증빙자료 제출: 로그인-회계공시등록-노동조합 정보 화면에서 '근거파일' 첨부 목록에 추가 공시 사유(회계년도 종료일이 12월 31일이 아님 경우 등) 확인이 가능한 내용</p>
-<br>
-<p>   (회계년도 확인이 가능한 규약의 해당 내용 등)을 올려주시면 됩니다.</p>
-<br>
-<p>• 구체적인 공시방법은 시스템 안내 - 공지사항에 올려져 있는 관련 동영상*을 참조하시기 바랍니다.</p>
-<br>
-<p>  * 공지사항 7번째 노동조합 회계공시 시스템 이용방법</p>
+            <div class="page__title flex__title">
+                <h2>가맹노조(산하조직)관리</h2>
+                <div class="union__function__group">
+                    <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
+                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
+                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
+                    <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">저장</button>
+                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
+                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
                 </div>
-              </div>
-
-              <div class="file">
-                <div class="file__wrap border-top-large">
-                    <span class="file__header">첨부</span>
-                    <ul class="list flex--box-c pd--10-l">
-                        <img src="img/hwp__file__thumb.png" alt="파일 아이콘">
-                        <span>240812_노동조합 회계공시 수정기간 안내(최종).hwp</span>
-                    </ul>
-                    <span class="download">
-                        <button type="button" class="btn__file__select" onclick="fn_fileDown(20240000000185)">
-                            다운로드
-                        </button>
-                    </span>
-                </div>
-              </div>
-
-              <ul class="prev__next">
-       	
-       		
-                <li class="prev">
-                    <span class="prev__title">이전글</span>
-                    <a class="pd--10-l" href="#" >2024년 노동조합 회계공시 안내</a>
-                </li> 
-            
-            
-        
-     
-        
-                <li class="next">
-                    <span class="prev__title">다음글</span>
-                    <a class="pd--10-l" href="#" >2024년 노동조합 회계공시 안내</a>
-
-                </li>
- </ul>
-
-
+            </div>
         </div>
+            <!-- 검색 폼 시작 -->
+            <div class="user__form__wrapper">
+                <form class="search__form__user" action="POST">
+                    <div class="search">
+                        <input type="hidden" id="pageNo" name="pageNo" value=""/>
+                        <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
+                        <input type="hidden" id="yearSel" name="yearSel" value="">
+        
+                        <div class="flex--box-c">
+                            <div class="input__box">
+                                <label for="searchTexte" class="노동조합명 조회"></label>
+                                <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value=""> 
 
-        <div class="txt--r notice__list">
-            <button type="button" class="btn__control bg--blue-00">목록</button>
-        </div>
+                            </div>
+                            
+                            <div class="upload__wrap">
+                                <form method="post" enctype="multipart/form-data">
+                                    <div class="flex--box-end">
+                                        <div class="flex--box-c">
+                
+                                        
+                
+                                            <div class="preview flex--box-c pd--10-m mg--10-r">
+                                                <div>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                
+                
+                                            <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+                                            <div>
+                                                <button class="btn__upload bg--blue-00">업로드</button>
+                                            </div>
+                                            <input type="file" id="profile_pic" name="profile_pic" class="file__post" style="opacity: 0; width: 0px;">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+             </div>
+
+
+             <!-- 조회 결과 -->
+             <div class="table__title__wrap" >
+                <h2 class="table__title">조회결과</h2>
+            </div>
+    
+            <p class="data__number" style="margin-bottom: 6.4rem;">총 게시글<span>2</span>건</p>
+
+            <!-- 조회결과 표 -->
+            	<!-- 조회결과 데이터 표  -->
+		<div class="accn__result check__result">
+			<div class="tab__detail table__vertical"  style="margin-bottom: 6.4rem;">
+			  <table class="border-top-large"> <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더 추가 -->
+				<caption>
+				  자산 및 부채현황 {구분, 자산}
+				</caption>
+				<colgroup>
+				  <col>
+				  <col>
+				  <col>
+				  <col>
+				  <col>
+				  <col>
+				</colgroup>
+				<thead>
+				  <tr>
+					<th scope="col"><div class="min__h__box text--c">번호</div></th>
+					<th><div class="min__h__box text--c">노동조합(산하조직)명</div></th>
+					<th class="ex"><div class="min__h__box text--c">총연합단체</div></th>
+					<th><div class="min__h__box text--c">연합단체</div></th>
+					<th><div class="min__h__box text--c">단위노동조합</div></th>
+					<th><div class="min__h__box text--c">기간</div></th>
+				
+				
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr onclick="location.href='sub1__1.html'" style="cursor: pointer;">
+						<th scope="row"><div class="min__h__box text--c">1</div></th>
+						<td><div class="min__h__box text--c">도레이노동조합</div></td>
+						<td><div class="min__h__box text--c">한국노총</div></td>
+						<td><div class="min__h__box text--c">섬유노동조합</div></td>
+						<td><div class="min__h__box text--c">도레이노동조합</div></td>
+						<td><div class="min__h__box text--c">2021-12-12</div></td>	
+				  </tr>
+				  <tr onclick="location.href='sub1__1.html'" style="cursor: pointer;">
+					<th scope="row"><div class="min__h__box text--c">1</div></th>
+					<td><div class="min__h__box text--c">도레이노동조합</div></td>
+					<td><div class="min__h__box text--c">한국노총</div></td>
+					<td><div class="min__h__box text--c">섬유노동조합</div></td>
+					<td><div class="min__h__box text--c">도레이노동조합</div></td>
+					<td><div class="min__h__box text--c">2021-12-12</div></td>	
+			  	  </tr>
+				  <tr onclick="location.href='sub1__1.html'" style="cursor: pointer;">
+					<th scope="row"><div class="min__h__box text--c">1</div></th>
+					<td><div class="min__h__box text--c">도레이노동조합</div></td>
+					<td><div class="min__h__box text--c">한국노총</div></td>
+					<td><div class="min__h__box text--c">섬유노동조합</div></td>
+					<td><div class="min__h__box text--c">도레이노동조합</div></td>
+					<td><div class="min__h__box text--c">2021-12-12</div></td>		
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+
+
+
+
+             <script>
+
+                let inputs = $(".file__post");
+                let preview = $(".preview");
+    
+                inputs.css({"opacity": 0, "width": 0});
+                function displayFileNames(event) {
+    
+                    let currentInput = $(event.target);
+    
+                    let index = inputs.index(currentInput)
+    
+                    let previewBox = $(preview[index])
+    
+                    previewBox.empty(); // preview 내 모든 자식 요소 제거
+    
+                    const currentFile = currentInput[0].files; // jQuery 객체에서 DOM 요소로 접근
+    
+                    if (currentFile.length === 0) {
+                        const para = $("<span>").text("아무파일도 입력되지 않았어요");
+                        previewBox.append(para);
+                    } else {
+                        const fileList = $("<div>");
+                        previewBox.append(fileList);
+    
+                        for (const file of currentFile) {
+                            const listItem = $("<p>")
+                                .text(file.name)
+                                .addClass('upload__file__name');
+                            fileList.append(listItem);
+                        }
+                    }
+                }
+    
+                inputs.on('change', displayFileNames);
+            </script>
 
 
 
 
 
+    
 	</div>
 
 

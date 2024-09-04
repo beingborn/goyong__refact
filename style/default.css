@@ -703,6 +703,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 }
 
 .btn__upload {
@@ -4415,6 +4416,21 @@ select {
   padding: 4rem;
 }
 
+.search__form__user .preview {
+  background-color: #fff;
+  height: 4.8rem;
+}
+
+.search__form__user .upload__wrap .btn__file__select {
+  font-weight: 400;
+  min-height: 4.8rem;
+}
+
+.search__form__user .upload__wrap .btn__upload {
+  font-weight: 400;
+  min-height: 4.8rem;
+}
+
 .search__form__user .search .first__input__box {
   padding-bottom: 2.4rem;
 }
@@ -4548,7 +4564,6 @@ select {
 
 .notice__detail__wrap table {
   font-size: 1.6rem;
-  border: 1px dashed red;
 }
 
 .notice__detail__wrap .content__desc {
@@ -4559,6 +4574,91 @@ select {
 
 .board__detail {
   padding: 6.4rem 0;
+}
+
+.notice__detail__wrap .file__wrap {
+  min-height: 5.8rem;
+  background-color: #F9FDFB;
+  display: flex;
+  align-items: center;
+}
+
+.file__wrap .file__header {
+  min-width: 25rem;
+  padding-left: 3rem;
+  font-weight: 700;
+  line-height: 5.8rem;
+  border-right: 0.1rem solid #ddd;
+}
+
+.file__wrap .list {
+  flex-grow: 1;
+  max-width: 84rem;
+}
+
+.file__wrap .list > span {
+  font-weight: 500;
+}
+
+.file__wrap .download {
+  margin-left: auto;
+  padding-right: 3.6rem;
+}
+
+.prev__next {
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.prev__next > li {
+  overflow: hidden;
+  position: relative;
+  padding: 1.8rem 0 1.8rem 3rem;
+  max-height: 5.8rem;
+  display: flex;
+  align-items: center;
+  border-top: 0.1rem solid #ddd;
+}
+
+.prev__title {
+  font-weight: 700;
+}
+
+.prev__next .prev span, .prev__next .next span {
+  min-width: 22rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.prev__next .prev span::before {
+  content: "";
+  margin-right: 2rem;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../../img/arrow__top-bk.svg) no-repeat center;
+  background-size: 2.4rem auto;
+}
+
+.prev__next .next span::before {
+  content: "";
+  margin-right: 2rem;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../../img/arrow__bottom-bk.svg) no-repeat center;
+  background-size: 2.4rem auto;
+}
+
+.notice__list {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.union__function__group .btn__control__u {
+  padding: 0 1.2rem;
+  font-size: 1.5rem;
+  height: 4rem;
 }
 
 /*
