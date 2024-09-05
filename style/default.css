@@ -2074,7 +2074,6 @@ input[type=checkbox] {
   left: 0;
   top: 0;
   z-index: 1200;
-  border: 1px solid blue;
   width: 100%;
   height: 100vh;
   background: #fff;
@@ -2089,13 +2088,14 @@ input[type=checkbox] {
   width: 100%;
   height: 100%;
   overflow: visible;
+  position: relative;
 }
 
 #gnb2.active > ul > li {
   display: block;
 }
 
-#gnb2.active > ul > li > a {
+#gnb2 > ul > li > a {
   display: block;
   width: 14rem;
   margin-bottom: 0;
@@ -2115,8 +2115,50 @@ input[type=checkbox] {
   background-color: #edf1f5;
 }
 
+#gnb2 > ul .sub__menu {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  left: 14rem;
+  top: 0;
+  border: 1px solid blue;
+}
+
+#gnb2 > ul > li.active .sub__menu {
+  visibility: visible;
+}
+
 #gnb2 > .gnb__top2 {
   padding: 0 2.4rem;
+  padding-bottom: 2.4rem;
+  border: 1px solid pink;
+}
+
+#gnb2 .gnb__close {
+  position: fixed;
+  top: 2rem;
+  right: 2.4rem;
+}
+
+#gnb2 .login__info {
+  padding-top: 6.8rem;
+}
+
+.login__info .id__info {
+  font-weight: 700;
+  font-size: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.login__info .id__info::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../../img/login__info.svg) no-repeat center;
+  background-size: 2rem auto;
 }
 
 /*
