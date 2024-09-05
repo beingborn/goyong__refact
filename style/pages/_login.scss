@@ -23,7 +23,7 @@
             #login__body .login__help a:not(:last-child)::after {content: ""; width: 1px; height: 12px; background: #ddd; margin: 0 7px 0 13px;display: inline-block;}
 
             // 로그인 도움말
-            .helper__box { width: 100%; padding: 2.4rem; background-color: $theme-krds-skyblue-00; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
+            .helper__box { width: 100%; padding: 2.4rem; background-color: #EDF1F5; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
             .helper__box .helper__tit {display: flex; position: relative; color: $theme-krds-navy-00; font-weight: 700;}
             .helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../img/icon__helper__info.svg);background-size: contain;}
             .helper__box .helper__desc__wrap .info-list {list-style: disc;}
@@ -64,7 +64,6 @@
 @media all and (max-width: 479px) {
     // form__table 공통
     br.pcOnly {display: none;}
-
     .btn__check__dup {min-width: 10rem; font-size: 1.9rem;}
     .form__table td input[type=text], .form__table td input[type=password]{font-size: 1.9rem;}
     .form__table tr {flex-direction: column; border-bottom: 0;}
@@ -82,7 +81,7 @@
     .form__table .btn__file__select {display: none;}
     .form__table .btn__file__select--mo {display: block; right: 1.6rem;}
 
-    // 변경 페이지
+    // 비밀번호 변경 , 파일 변경 페이지
     .info__change__form {margin-top : 6.4rem ;margin-bottom: 9.2rem;}
     .info__change__form .form__table tr{margin-bottom: 2.4rem;}
     .info__change__form .function__group {margin: 0;}
@@ -122,6 +121,8 @@
     .btn__half__wrap .function__group .btn__control {width: 50%;}
     .radio__wrap label {font-size: 1.9rem;}
 
+    
+
 }
 
 
@@ -133,6 +134,18 @@
         .upload__manager .file__select__container > .preview {position: relative; margin-right: 1rem;}
         .upload__manager .btn__file__select {display: none;}
         .upload__manager .btn__file__select--mo {display: block; right: 0;}    
+
+
+        .file__change__wrap .td__container {flex-wrap: nowrap;}
+        .file__change__wrap .preview {white-space: nowrap;}
+        .file__change__wrap .btn__file__select {white-space: nowrap;}
+
+        .main__accn__desc__wrap .desc__banner {flex-direction: column; align-items: flex-start; max-height: none;}
+        .main__accn__desc__wrap .desc__banner {margin-top: 3.6rem; margin-bottom: 3.6rem; padding: 1.4rem 2.4rem;}
+        .main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {margin-bottom: 6rem;}
+        .main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {margin-bottom: 6rem;}
+        .main__accn__desc__wrap .table__vertical th {white-space: normal;}
+        .main__accn__desc__wrap .data__title {display: none;}
 }
 
 

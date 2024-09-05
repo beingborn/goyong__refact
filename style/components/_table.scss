@@ -3,6 +3,7 @@
 */
 
 
+
 // 사용자 공통 테이블 타이틀
 .table__title__wrap {margin-bottom: 3.6rem; margin-top: 8rem;}
 .table__title {font-size: 2.5rem; font-weight: 700;}
@@ -23,7 +24,8 @@
 
 
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
-  
+
+
 
 // thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
@@ -129,7 +131,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 // 상단 thead 제목이 있는 테이블의 스타일입니다.
 // 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
-.table__vertical table thead tr th {font-weight: 400; background-color: #F9FDFB; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
+.table__vertical table thead tr th {background-color: #F9FDFB; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
 .table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 
@@ -148,7 +150,8 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // 기존 관리자 색상
 
 
- .table__vertical tbody tr:hover {background-color: #DDEAF6!important;} 
+ .table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
+
 // .table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
@@ -186,7 +189,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 
 // 조회결과 테이블 공통
-.check__result tr {cursor: pointer;}
+// .check__result tr {cursor: pointer;}
 
 
 // td의 min-height 적용 이슈로 다음과 같이 적용
@@ -195,3 +198,4 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .text--r {justify-content: flex-end;}
 .text--l {justify-content: flex-start;}
 .text--c {justify-content: center;}
+

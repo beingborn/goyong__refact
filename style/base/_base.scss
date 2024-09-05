@@ -14,7 +14,7 @@
 #wrap {position: relative; overflow: hidden;}
 #skip-nav {display: none;}
 html {font-size: 62.5%;}
-table {width: 100%; font-size: 1.5rem;}
+table {width: 100%; font-size: 1.6rem;}
 
 
 // 폰트
@@ -75,7 +75,7 @@ body {
   margin: 0px auto;
 }
 
-.mobile__logo {display: none;}  
+.mobile__logo {display: none; min-height: 3rem;}  
 .header__btm .right__icon__set .hamburger {display: none;}
 
 label {font-size: 1.5rem;}

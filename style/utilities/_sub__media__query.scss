@@ -58,18 +58,12 @@
 @media all and (min-width: 480px) and (max-width: 766px) {
 
   .content .tab__content {padding-top: 4rem;}
-  #sub__wrap .content .visual__bg .visual__text {
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    h2 {
-      margin-bottom: 2rem;
-    }
-  }
+  // #sub__wrap .content .visual__bg .visual__text { text-align: center; left: 50%; transform: translate(-50%, -50%); h2 { margin-bottom: 2rem;}}
 
   // 기존 PC용 탭을 안보이게 합니다.
-  .content {
+
+  
+  .sub1__1__wrap .content {
     .tab__wrap {
       display: none;
     }
@@ -111,22 +105,19 @@
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (max-width: 479px) {
 
-  .content .tab__content {padding-top: 4rem;}
+  .sub1__1__wrap .content .tab__content {padding-top: 4rem;}
 
   #sub__wrap .content .visual__bg {height: 16.6rem;}
-  #sub__wrap .content .visual__bg .visual__text p {white-space: nowrap;}
-  #sub__wrap .content .visual__bg .visual__text {
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  #sub__wrap .content .visual__bg .visual__text h2 {font-size: 3.2rem;}
+  #sub__wrap .content .visual__bg .visual__text p {white-space: nowrap; font-size: 1.7rem;}
+  #sub__wrap .content .visual__bg .visual__text {text-align: center;  left: 50%; transform: translateX(-50%); bottom: 3.8rem;
     h2 {
       margin-bottom: 2rem;
     }
   }
 
-  .content {
-    .tab__wrap {
+  .sub1__1__wrap .content {
+  .tab__wrap {
       display: none;
     }
 

@@ -21,7 +21,7 @@
 <div class="skip__nav">
 	<a href="#main__content">본문 바로가기</a>
 </div>
-<div class="union__management__wrap   wrap full__page__wrap" id="sub__wrap" style="position: relative;">
+<div class="union__management__wrap wrap full__page__wrap" id="sub__wrap" style="position: relative;">
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
@@ -37,7 +37,7 @@
             </div>
             <div class="right__icon__set">
            
-                <a href="login.html">
+                <a href="login.html" class="login">
                     <img src="img/icon20-1.png" alt="검색 아이콘">
                     <span>로그인</span>
                 </a>
@@ -189,8 +189,8 @@
         
                         <div class="flex--box-c">
                             <div class="input__box">
-                                <label for="searchTexte" class="노동조합명 조회"></label>
-                                <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value=""> 
+                                <label for="searchTexte" class="blind">노동조합명 조회</label>
+                                <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합 또는 산하조직 명을 입력하세요." value=""> 
 
                             </div>
                             
@@ -201,14 +201,14 @@
                 
                                         
                 
-                                            <div class="preview flex--box-c pd--10-m mg--10-r">
+                                            <div class="preview flex--box-c pd--10-m mg--24-r">
                                                 <div>
                                                     <p></p>
                                                 </div>
                                             </div>
                 
                 
-                                            <label class="mg--10-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+                                            <label class="mg--24-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
                                             <div>
                                                 <button class="btn__upload bg--blue-00">업로드</button>
                                             </div>
@@ -231,8 +231,7 @@
     
             <p class="data__number" style="margin-bottom: 6.4rem;">총 게시글<span>2</span>건</p>
 
-            <!-- 조회결과 표 -->
-            	<!-- 조회결과 데이터 표  -->
+        <!-- 조회결과 데이터 표  -->
 		<div class="accn__result check__result">
 			<div class="tab__detail table__vertical"  style="margin-bottom: 6.4rem;">
 			  <table class="border-top-large"> <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더 추가 -->
@@ -287,6 +286,130 @@
 				</tbody>
 			  </table>
 			</div>
+
+                <!-- 가맹노조 -->
+                <div class="union__page">
+                    <div class="pagination w-page">
+                        <a class="page-navi prev" href="#">이전</a>
+                        <div class="page-links">
+                            <a class="page-link active" href="#">1</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <a class="page-link" href="#">9</a>
+                            <a class="page-link" href="#">10</a>
+                            <a class="page-link" href="#">11</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a class="page-link" href="#">120</a>
+                        </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                </div>
+
+                <!-- 하단 가로 테이블 제목 -->
+                <div class="union__table__title__wrap">
+                    <div class="flex--box-c info__tip__box">
+                        <h2 class="table__title">가맹노조(산하조직) 정보</h2>
+                        <button type="button" class="info__tip mg--10-l"></button>
+                            <div class="tooltip__layer">
+                                <div class="tooltip__top flex--box-s">
+                                    <p class="tooltip__title">기본사항</p>
+                                    <button type="button" class="info__close__btn"></button>
+                                </div>
+                                <div class="tooltip__content">
+                                    <p><strong>가</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지 않을경우에는</p>
+                                    <p><strong>나</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                    <p><strong>다</strong>회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- 하단 가맹 노조 정보 -->
+                <div class="table__horizontal__ex">
+                    <table>
+                      <caption>가맹노조(산하조직)정보 테이블</caption>
+                      <tbody>
+                        <tr style="position: relative">
+                          <th scope="row">
+                            <label for="examples9" class="must__write">
+                              노동조합명칭(산하조직) 명칭
+                            </label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" id="examples9" value="전국항운노동조합연맹" readonly="">
+                            </div>
+                          </td>
+                          <th scope="row" style="white-space: nowrap;">
+                            <label for="examples10">
+                              노동조합 산하조직 형태
+                            </label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" id="examples10" value="" readonly="">
+                            </div>
+                          </td>
+                        </tr>
+  
+                        <tr>
+                          <th scope="row">
+                            <label for="example22" class="must__write">대표자</label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" id="example22" value="최*영" readonly="">
+                            </div>
+                          </td>
+                          <th scope="row">
+                            <label for="examples11" class="">사업자등록번호(고유번호)</label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" id="examples11" value="12-12312-121" readonly="">
+                            </div>
+                          </td>
+                        </tr>
+  
+                        <tr>
+                          <th scope="row">
+                            <label for="examples12">조합원 수</label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" value="2" id="examples12" readonly="">
+                            </div>
+                          </td>
+                          <th scope="col">
+                            <label for="examples13" class="must__write">유선연락처</label>
+                          </th>
+                          <td>
+                            <div class="td__container">
+                              <input type="text" value="" id="examples13">
+                            </div>
+                          </td>
+                        </tr>
+  
+                        <tr>
+                          <th scope="row">
+                            <label for="examples14">소재지</label>
+                          </th>
+                          <td class="flex--box-c">
+                            <div class="td__container flex--grow-100">
+                              <input type="text" value="test" id="examples14" readonly="">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+
 
 
 

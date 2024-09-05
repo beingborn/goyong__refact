@@ -1,9 +1,7 @@
 /*
     메뉴별 권한 관리 및 체계 아코디언 CSS
 */ 
-.menu-list {
-    width: 280px;
-}
+.menu-list {width: 280px;}
 
 .menu-head {
     display: flex;
@@ -11,7 +9,6 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    // padding: 10px 0;
 }
 
 // .menu-list 
@@ -47,8 +44,6 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
 
 
 }
-
-
 
 
 // 노동 조합 체계

@@ -1,261 +1,477 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=, initial-scale=1.0">
-<title>주요 공시항목 설명</title>
-<!-- css 영역 -->
-<link rel="stylesheet" href="style/reset.css">
-<link rel="stylesheet" href="style/default.css">
-<!-- 파비콘 -->
-<link rel="shortcut icon" href="img/korea__favicon.ico">
-<!-- 로컬 스와이퍼 CSS -->
-<link rel="stylesheet" href="style/swiper-bundle.min.css">
-<!-- 로컬 jquery 스와이퍼 cdn -->
-<script src="js/jquery-3.7.1.js"></script>
-</head>
-<body class="full__body">
-<!-- 스킵 네비개이션 -->
-<div class="skip__nav">
-	<a href="#main__content">본문 바로가기</a>
-</div>
-<div class="union__management__wrap  wrap full__page__wrap" id="sub__wrap" style="position: relative;">
-       <!-- 헤더 -->
-       <header class="header">
-        <div class="inner">
-        <div class="header__btm">
-            <h1 class="logo">
-                <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
-                    <span class="blind">노동조합 회계공시시스템</span>
-                    <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
-                </a>
-            </h1>
-            <div class="mobile__logo">
-                <img src="img/mobile__logo.png" alt="모바일 버전 로고">
-            </div>
-            <div class="right__icon__set">
-           
-                <a href="login.html">
-                    <img src="img/icon20-1.png" alt="검색 아이콘">
-                    <span>로그인</span>
-                </a>
-
-                <!-- 전체메뉴 -->
-                <a href="#" class="hamburger">
-                    <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
-                    <span>전체메뉴</span>
-                </a>
-
-                <a href="sign__up.html" class="sign__up">
-                    <img src="img/icon20-2.png" alt="회원가입 아이콘">
-                    <span>회원가입</span>
-                </a>
-             
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>주요 공시항목 설명</title>
+        <!-- css 영역 -->
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <!-- 로컬 스와이퍼 CSS -->
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <!-- 로컬 jquery 스와이퍼 cdn -->
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+    <body class="full__body">
+        <!-- 스킵 네비개이션 -->
+        <div class="skip__nav">
+            <a href="#main__content">본문 바로가기</a>
         </div>
-
-        <div class="header__gnb">
-            <div>
-                <nav id="gnb1">
-                    <ul id="head_menu" class="top__menu">
-                        <li class="plus"> <a href="javascript:void(0);">시스템안내
-                            <!-- <span class="sr_only">닫기</span> -->
-                        </a>
-                            <div class="sub__menu">
-                                <ul>
-                                    <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>
-                                        
-                                        </div>
-                                    </li>
-                                    <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
-                                        <!-- dep3 오른쪽 영역 -->
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
-                                      
-                                        </div>
-                                    </li>
-                                    <li class="plus"> <a href="javascript:void(0);">공지사항</a>
-                                        <!-- dep3 오른쪽 영역 -->
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
-             
-                                        </div>
-                                    </li>
-                                    <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
-                                        <!-- dep3 오른쪽 영역 -->
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
-                                        </div>
-                                    </li>
-                               
-                                </ul>
-                            </div>
-                        </li>
-    
-                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
-                        </a>
-                            <div class="sub__menu">
-                                <ul>
-                                    <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
-                                            <ul>
-                          
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="javascript:void(0);">회계공시여부조회</a> </strong>
-                                            <ul>
-                    
-                                            </ul>
-                                        </div>
-                                    </li>
-                              
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
-                        </a>
-                            <div class="sub__menu">
-                                <ul>
-                                    <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
-                                            <ul>
-                          
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
-                                        <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
-                                            <ul>
-                
-                                            </ul>
-                                        </div>
-                                    </li>
-                              
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        </div>
-    </header>
-	<main class="content main_accn_desc">
-	<!-- visual bg -->
-	<div class="visual__bg">
-		<div class="inner">
-			<div class="visual__text">
-				<h2>주요 공시항목 설명</h2>
-				<p>주요 공시항목 설명입니다.</p>
-			</div>
-		</div>
-	</div>
-	<!-- breadcrumb -->
-	<div class="inner">
-		<nav class="breadcrumb" style="padding-top: 2.4rem;">
-		<ol class="path">
-			<li class="home"><a href="#" class="txt">홈</a></li>
-			<li><a href="#" class="txt">시스템안내</a></li>
-			<li><a href="#" class="txt">주요 공시항목 설명</a></li>
-		</ol>
-		</nav>
-
-      
-
-        <!-- 검색폼 시작 -->
-    
-	</div>
-
-               <!-- 탭 버튼 -->
-                <div class="public__register">
-                    <div class="tab__wrap">
-                        <div class="tab__btn">
-                            <button type="button">노동조합정보</button>
+        <div
+            class="wrap full__page__wrap main__accn__desc__wrap"
+            id="sub__wrap"
+            style="position: relative;">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="inner">
+                    <div class="header__btm">
+                        <h1 class="logo">
+                            <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                <span class="blind">노동조합 회계공시시스템</span>
+                                <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
+                            </a>
+                        </h1>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="모바일 버전 로고">
                         </div>
-                        <div class="tab__btn">
-                            <button type="button">회계공시</button>
+                        <div class="right__icon__set">
+
+                            <a href="login.html" class="login">
+                                <img src="img/icon20-1.png" alt="검색 아이콘">
+                                <span>로그인</span>
+                            </a>
+
+                            <!-- 전체메뉴 -->
+                            <a href="#" class="hamburger">
+                                <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
+                                <span>전체메뉴</span>
+                            </a>
+
+                            <a href="sign__up.html" class="sign__up">
+                                <img src="img/icon20-2.png" alt="회원가입 아이콘">
+                                <span>회원가입</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="header__gnb">
+                        <div>
+                            <nav id="gnb1">
+                                <ul id="head_menu" class="top__menu">
+                                    <li class="plus">
+                                        <a href="javascript:void(0);">시스템안내
+                                            <!-- <span class="sr_only">닫기</span> -->
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="accn__desc.html">회계공시시스템이란</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="main__accn__desc.html">주요회계공시항목설명</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">공지사항</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="notice.html">공지사항</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">자주묻는질문</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="faq.html">자주묻는질문</a>
+                                                        </strong>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="plus">
+                                        <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시열람</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="accn__open.html">회계공시열람</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시여부조회</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="javascript:void(0);">회계공시여부조회</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="plus">
+                                        <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시등록</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="public__register.html">회계공시등록</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="union__management.html">가맹노조산하조직관리</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
+            </header>
+            <main class="content main_accn_desc">
+                <!-- visual bg -->
+                <div class="visual__bg">
+                    <div class="inner">
+                        <div class="visual__text">
+                            <h2>주요 공시항목 설명</h2>
+                            <p>주요 공시항목 설명입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- breadcrumb -->
+                <div class="inner">
+                    <nav class="breadcrumb" style="padding-top: 2.4rem;">
+                        <ol class="path">
+                            <li class="home">
+                                <a href="#" class="txt">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">시스템안내</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">주요 공시항목 설명</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- 탭 버튼 -->
+                    <div class="public__register">
+                        <div class="tab__wrap">
+                            <div class="tab__btn">
+                                <button type="button">노동조합체계</button>
+                            </div>
+                            <div class="tab__btn">
+                                <button type="button">주요회계공시항목</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab__content">
 
+                        <div class="tab">
+                            <!-- 상단 배너 -->
+                            <div class="desc__banner">
+                                <h2 class="title">회계공시주체</h2>
+                                <p class="desc">총연합단체, 연합단체, 산업별·업종별·지역별 노동조합, 기업단위 노동조합 등 모든 노동조합과 산하조직이 공시할 수 있습니다.</p>
+                            </div>
+
+                            <div class="content__section">
+                                <div class="image__container">
+                                    <img src="img/union__system__image__01.png" alt="노동조합체계 조직도 이미지">
+                                </div>
+                            </div>
+
+                            <div class="table__vertical infoTable">
+                                <table>
+                                    <caption>노동조합체계 구분과 내용</caption>
+                                    <colgroup>
+                                        <col style="width: 11.72%;">
+                                        <col style="width: 15.63%;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">구분</th>
+                                            <th>내용</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">총연합단체</th>
+                                            <td>
+                                                산업별 연합단체 또는 전국 규모의 산업별 노동조합을 구성원으로 하여 조직한 노동조합
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">연합단체</th>
+                                            <td>
+                                                동종 산업별로 조직된 단위 노동조합 등을 구성단위로 하여 조직한 노동조합
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="3">단위<br>노동<br>조합</th>
+                                            <th>산업별, 업종별
+                                                <br>노동조합</th>
+                                            <td>동종 산업(업종)에 종사하는 근로자들이 직종과 기업을 초월하여 조직한 노동조합
+                                                <p class="exTxt">(예 : △△산업노동조합, ○○노동조합)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>지역별<br>노동조합</th>
+                                            <td>일정지역 내의 근로자들이 동일산업 또는 직종 단위로 조직한 노동조합
+                                                <p class="exTxt">(예 : △△ 지역일반 노동조합)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>기업단위 노동조합</th>
+                                            <td>일반적인 단위노동조합 형태로 특정 기업(사업 또는 사업장)에 소속된 근로자가 직업(종)의 구별없이 개별 기업단위로 조직한 노동조합</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">지부, 지회, 분회(산하조직)</th>
+                                            <td>단위노동조합의 내부조직<p class="exTxt">(예 : 전국 △△노동조합 A기업 지회, 전국 ○○의료산업노동조합 B기업 지회 등)</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="tab">
+                            <!-- 상단 배너 -->
+                            <div class="desc__banner">
+                                <h2 class="title">회계공시항목</h2>
+                                <p class="desc">노동조합의 자산 및 부채, 수입 및 지출의 주요 항목이 공시됩니다.</p>
+                            </div>
+
+                            <div class="content__section">
+                                <h2 class="data__title">자산 및 부채</h2>
+
+                                <div class="image__container">
+                                    <img src="img/asset__organization.png" alt="노동조합체계 조직도 이미지">
+                                </div>
+
+                                <div class="table__vertical infoTable">
+                                    <table>
+                                        <caption>회계공시항목 구분(자산, 부채)과 내용</caption>
+                                        <colgroup>
+                                            <col style="width: 11.72%;">
+                                            <col style="width: 15.63%;">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">구분</th>
+                                                <th>주요항목내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th rowspan="3">자산</th>
+                                                <th>현금 및 예금</th>
+                                                <td>현금 및 현금성 자산(보통예금)과 정기예금
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>토지 및 건물</th>
+                                                <td>노동조합이 소유하고 있는 토지, 건물 등</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기타자산</th>
+                                                <td>정기적금, 펀드상품, 저축성 보험 등 기타 금융자산과 조합비 미수금, 미수이자 등</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">부채</th>
+                                                <td>미지급금, 임대보증금, 퇴직급여충당부채 등 과거의 거래나 사건의 결과로 회계연도 종료일 현재 부담해야 할 의무</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 2번째 표 -->
+                            <div class="content__section">
+                                <h2 class="data__title">수입</h2>
+
+                                <div class="image__container">
+                                    <img src="img/import__organization.png" alt="수입 조직도 이미지">
+                                </div>
+
+                                <div class="table__vertical infoTable">
+                                    <table>
+                                        <caption>회계공시항목 구분(수익)과 내용</caption>
+                                        <colgroup>
+                                            <col style="width: 11.72%">
+                                            <col style="width: 15.63%;">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr><th colspan="2">구분</th><th>주요항목내용</th></tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr><th rowspan="9">수입</th><th>전년도 이월금</th><td>직전 회계연도 말 현금 및 예금의 잔액</td></tr>
+                                                <tr><th>조합비</th><td>규약에 따라 조합원이 단위노동조합 내지 산하조직(지부,지회 등)에 납부하여 발생하는 수입</td></tr>
+                                                <tr><th>상급단체 교부금</th><td>상급단체로부터 받은 교부금</td></tr>
+                                                <tr><th>하부조직 부과금</th><td>가맹노조‧산하조직으로부터 받은 부과금(가맹비, 의무금)</td></tr>
+                                                <tr><th>후원금</th><td>조합원이 아닌 개인이나 단체로부터 받은 수입</td></tr>
+                                                <tr><th>타회계 전입금</th><td>일반회계, 특별회계 등 회계 간 전입으로 발생한 수입</td></tr>
+                                                <tr><th>보조금수입</th><td>국가, 지자체, 공공기관 등 보조사업자로부터 받은 수입</td></tr>
+                                                <tr><th>수익사업수입</th><td>임대사업, 영리시설 운영사업 등 법인세 남부의무가 있는 수익사업으로부터 발생한 수입</td></tr>
+                                                <tr><th>기타</th><td>조합비, 상급단체 교부금, 하부조직 부과금, 후원금, 타회계 전입금, 보조금, 수익사업 수입에 해당하지 않는 수입</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 3번째 표 -->
+
+                            <div class="content__section">
+                                <h2 class="data__title">지출</h2>
+
+                                <div class="image__container">
+                                    <img src="img/expend__organization.png" alt="지출 조직도 이미지">
+                                </div>
+
+                                <div class="table__vertical infoTable">
+                                    <table>
+                                        <caption>회계공시항목 구분(사무비용, 사업비용)과 내용</caption>
+                                        <colgroup>
+                                            <col style="width: 11.72%">
+                                            <col style="width: 15.63%;">
+                                            <col>
+                                            <!-- <col> -->
+                                        </colgroup>
+                                        <thead>
+                                            <tr><th colspan="2">구분</th><th>주요항목내용</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            <th rowspan="3">일반<br>관리비용</th><th>인건비</th><td>임직원 급여, 수당, 퇴직금 등 인력 운영 과정에서 발생하는 비용</td></tr>
+                                            <tr><th>업무추진비</th><td>직급별 경비, 대외 행사 경비 등 사무국의 업무추진 과정에서 발생한 비용</td></tr>
+                                            <tr><th>기타운영비</th><td>인건비 및 업무추진비 이외 여비, 교통비, 인쇄비, 사무용품 구입비, 통신비, 인쇄비 등의 비용</td></tr>
+                                            <tr><th rowspan="6">사업<br>수행비용</th><th>총회 등 대회비</th><td>총회, 대의원회, 집행위원회 등 회의 개최에 소요되는 비용</td></tr>
+                                            <tr><th>조직사업비</th><td>신규 조합원의 가입, 지부·분회 등 산하조직 신설, 확대, 변경 등의 조직사업에 소요되는 비용</td></tr>
+                                            <tr><th>정책사업비</th><td>조합원의 근로조건 개선 및 노동 3권 보장을 위한 정책 의제 개발, 제도개선 연구 등 노동조합의 정책활동에 소요되는 비용</td></tr>
+                                            <tr><th>교육·홍보사업비</th><td>신규 조합원 및 간부 교육 등 교육사업과 영상·홍보물 게시, 유인물 부착 등 홍보사업에 소요되는 비용</td></tr>
+                                            <tr><th>교섭·쟁의사업비</th><td>근로조건 개선 등을 위한 교섭, 쟁의, 집회 등에 소요되는 비용 및 쟁의과정에서 발생하는 각종 부대비용 및 지원금 등</td></tr>
+                                            <tr><th>기타사업비</th><td>사업비 중 총회 등 대회비, 조직사업비, 정책사업비, 교육홍보사업비, 교섭·쟁의사업비에 해당하지 않는 비용</td></tr>
+                                            <tr><th colspan="2">상급단체 부과금</th><td>상급단체에 납부하는 부과금</td></tr>
+                                            <tr><th colspan="2">하부조직 교부금</th><td>가맹노조‧산하조직에 배분하는 교부금</td></tr>
+                                            <tr><th colspan="2">타회계 전출금</th><td>일반회계와 특별회계 등 회계 간 전출로 인한 금액</td></tr>
+                                            <tr><th colspan="2">기타</th><td>일반관리비용, 사업수행비용, 상급단체 부과금, 하부조직 부과금, 타회계 전출금에 해당하지 않는 지출</td></tr>
+                                            <tr><th colspan="2">차년도 이월금</th><td>수입총계에서 당기지출을 차감한 금액</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 검색폼 시작 -->
+
+                </div>
 
                 <script>
-                                // 상단 탭 기능 전환
-            $(document).ready(function () {
-                let subTabBtn = $(".tab__wrap .tab__btn button");
-                let subTabContent = $(".tab__content .tab");
+                    // 상단 탭 기능 전환
+                    $(document).ready(function () {
+                        let subTabBtn = $(".tab__wrap .tab__btn button");
+                        let subTabContent = $(".tab__content .tab");
 
-                subTabBtn.click(function () {
-                    let tabIndex = $(this)
-                        .parent()
-                        .index();
+                        subTabBtn.click(function () {
+                            let tabIndex = $(this)
+                                .parent()
+                                .index();
 
-                    subTabBtn.removeClass("active");
-                    $(this).addClass("active");
-                    subTabContent
-                        .hide()
-                        .eq(tabIndex)
-                        .show();
-                })
+                            subTabBtn.removeClass("active");
+                            $(this).addClass("active");
+                            subTabContent
+                                .hide()
+                                .eq(tabIndex)
+                                .show();
+                        })
 
-                subTabContent
-                    .hide()
-                    .eq(0)
-                    .show();
-                subTabBtn
-                    .eq(0)
-                    .addClass('active')
+                        subTabContent
+                            .hide()
+                            .eq(0)
+                            .show();
+                        subTabBtn
+                            .eq(0)
+                            .addClass('active')
 
-               
-              
-
-            })
+                    })
                 </script>
-        
 
-            <div class="tab__content">
-                <div class="flex--box tab example__img" style="justify-content: center; text-align: center; margin-top: 8rem; margin-bottom: 25rem;">
-                    <img src="img/주요공시항목설명(임시).jpg" alt="회계공시 시스템이란" >
+            </main>
+            <footer>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.png" alt="하단 로고">
+                        </div>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="하단 모바일 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">
+                                    30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)
+                                </p>
+                                <p class="copyright">
+                                    Copyright(c)Ministry of Employment and Labor. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-                <div class=" tab example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem; padding: 0;">
-                    <img src="img/주요공시항목설명(임시)탭2.jpg" alt="회계공시 시스템이란" >
-                </div>
-
-
-            </div>
-
-
-	</main>
-	<footer>
-	<div class="footer__bottom" style="background-color: #F0F0F0;">
-		<div class="inner">
-			<div class="footer__logo">
-				<img src="img/slogan_H48.png" alt="하단 로고">
-			</div>
-			<div class="mobile__logo">
-				<img src="img/mobile__logo.png" alt="하단 모바일 로고">
-			</div>
-			<div class="footer__flex">
-				<div class="footer__info">
-					<p class="location">
-						 30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)
-					</p>
-					<p class="copyright">
-						 Copyright(c)Ministry of Employment and Labor. All rights reserved.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
-	<div class="gnb__bg">
-	</div>
-</div>
-<script src="js/default.js"></script>
-</body>
+            </footer>
+            <div class="gnb__bg"></div>
+        </div>
+        <script src="js/default.js"></script>
+    </body>
 </html>
