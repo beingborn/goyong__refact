@@ -967,10 +967,6 @@ table caption {
   font-weight: 500;
 }
 
-.table__template__horizontal .table__strong th {
-  background-color: #EAF5F0;
-}
-
 .table__template__horizontal .default__table tr {
   line-height: 5.8rem;
 }
@@ -2992,7 +2988,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .form__table th {
   width: 19.53%;
-  min-width: 18rem;
+  min-width: 25rem;
 }
 
 .form__table td {
@@ -3092,10 +3088,12 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 */
 #public__register__form .form__table th {
   width: 15.38%;
+  min-width: 15rem;
+  max-width: 15rem;
 }
 
 #public__register__form .td__calender__wrap {
-  max-width: 44.3rem;
+  max-width: 49rem;
 }
 
 #public__register__form .td__calender {

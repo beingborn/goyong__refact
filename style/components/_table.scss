@@ -87,7 +87,8 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__template__horizontal tr {display: flex;} 
 .table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9FDFB; font-weight: 500;} 
 // 제목 영역이 더 진한 테이블 제목 스타일
-.table__template__horizontal .table__strong th {background-color: #EAF5F0;}
+
+// .table__template__horizontal .table__strong th {background-color: #EAF5F0;}
 
 
 .table__template__horizontal .default__table tr {line-height: 5.8rem;} 

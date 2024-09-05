@@ -17,7 +17,9 @@
 .form__table .col2__th span { line-height: 150%; text-align: left; }
 .form__table .preview { min-width: auto; }
 .form__table tr { line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
-.form__table th { width: 19.53%; min-width: 18rem; } // 해당 min-width 수치는 임시
+
+.form__table th { width: 19.53%; min-width: 25rem; } // 해당 min-width 수치는 임시
+
 .form__table td { flex-grow: 1; line-height: 100%; }
 .form__table td input[type="text"], .form__table td input[type="password"] { border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
 .form__table td input[type="submit"] { border: 1px solid #ddd; line-height: 4rem; }
