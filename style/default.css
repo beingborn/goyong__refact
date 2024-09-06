@@ -4487,7 +4487,7 @@ select {
   width: 58.4rem;
   height: 27.9rem;
   margin-left: 5rem;
-  background-image: url("/img/accn__desc__img_02.png");
+  background-image: url("../img/accn__desc__img_02.png");
 }
 
 .accn__desc__wrap .content__section:nth-child(2) .text__container {
