@@ -785,6 +785,10 @@ button {
   background: url(../img/calendar-days-regular--mo.svg) no-repeat center;
 }
 
+table thead th {
+  font-weight: 700;
+}
+
 table caption {
   position: absolute;
   top: 0;
