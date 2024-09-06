@@ -3,9 +3,47 @@
 */
 
 
+// 테이블 공통 스타일
+table th {font-weight: 700; background-color: #EAF5F0;}
+// table thead th {font-weight: 700;}
+table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
+
+// 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
+
+.table__vertical table thead tr th {border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
+.table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
+.table__vertical thead .min__h__box {padding: 0}
+.table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;}  // 제목에 있는 th들은 단어들을 기준으로 줄바꿈.
+.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
+.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
+.table__vertical tbody th {vertical-align: middle;} 
+.table__vertical tbody td {vertical-align: middle; }  
+.table__vertical tbody td:nth-last-child(1) {border-right:0;} 
+
+
+// 가로 테이블 공통 스타일
+.table__horizontal { height: 5.8rem; border-top: 0.2rem solid #333; }
+.table__horizontal table { height: 100%; }
+.table__horizontal tbody th { text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
+.table__horizontal td { padding: 0 1rem; }
+.table__horizontal td select { width: 100%; height: 4rem; border: 0.1rem solid #ccc; font-size: 1.5rem; padding: 0.8rem; }
+.table__horizontal td input[type="text"] { border: 0.1rem solid #ccc; height: 4rem; font-size: 1.5rem; }
+
+// thead를 가지고 있지 않은 가로 테이블 
+// .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
+.table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
+.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
+.table__horizontal__ex td {width: auto; flex-grow: 1;} 
+.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
+.table__horizontal__ex .td__container select {width: 100%;}
+.table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem; flex-grow: 0;}
+.table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
+.table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
+.table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
+.table__horizontal__ex .input-3--flex input {flex: 1;}
 
 // 사용자 공통 테이블 타이틀
-.table__title__wrap {margin-bottom: 3.6rem; margin-top: 8rem;}
+.table__title__wrap {margin-bottom: 3.6rem; margin-top: 6.4rem;}
 .table__title {font-size: 2.5rem; font-weight: 700;}
 
 
@@ -20,33 +58,13 @@
 .calender__body .calender__icon {position: absolute; top: 50%; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; right: 1rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; }
 
 
+// row와 col 제목이 함께 있는 테이블 전용 스타일
+// .table__vertical .cross__table > tbody th {background-color : #EAF5F0}
 
 
-table thead th {font-weight: 700;}
-table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
-
-
-
-// thead를 가지고 있지 않은 가로 테이블 
-.table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
-.table__horizontal__ex tr {
-  line-height: 5.8rem; height: 5.8rem;
-  border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.table__horizontal__ex th {width: 19.53%; background-color: #EAF5F0; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
-.table__horizontal__ex td {width: auto; flex-grow: 1;} 
-.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
-.table__horizontal__ex .td__container select {width: 100%;}
-
-.table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem; flex-grow: 0;}
-.table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
-
-
-.table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
-.table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
-.table__horizontal__ex .input-3--flex input {flex: 1;}
 
 .table__template__radio tr {display: flex; border-bottom: 0.1rem solid #ddd;} 
-.table__template__radio th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 500;} 
+.table__template__radio th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 700;} 
 // .table__template__radio td {border-bottom: 1px solid #ddd;}
 
 .table__template__radio .radio__wrap input[type="radio"] {appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc;} 
@@ -59,38 +77,24 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 }
 
 
-  
+// 체크 박스
 .radio__table th {width: 12.5%; line-height: 5.8rem;}
 .radio__table td {width: calc(100% - 12.5%);}
 .radio__table tr {line-height: 5.8rem;}
-
-
-
 .radio__table .flex {display: flex; align-items: center;}
-
 .radio__table .flex label:not(:last-child) {margin-right: 2rem;}
 
 
 .table__horizontal__wrap th {background-color: #EAF5F0; vertical-align: middle;}
 .table__horizontal__wrap tr {border-bottom: 0.1rem solid #ddd;}
-
-// .table__horizontal__wrap td input[type="text"],.table__horizontal__wrap td select {margin: 0.9rem 1rem;}
 .table__horizontal__wrap .note__td {line-height: 15rem;}
 .table__horizontal__wrap .note__td-txt-area {height: 100%;}
 .table__horizontal__wrap input[type="text"] {height: 4rem;}
 .table__horizontal__wrap select {height: 4rem;}
-
-
 .table--margin {margin: 0.9rem 1rem}
-
-
-
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
-.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #EAF5F0; font-weight: 500;} 
-// 제목 영역이 더 진한 테이블 제목 스타일
-
-// .table__template__horizontal .table__strong th {background-color: #EAF5F0;}
+.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left;} 
 
 
 .table__template__horizontal .default__table tr {line-height: 5.8rem;} 
@@ -98,7 +102,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__template__horizontal .default__table th {width: auto;} 
 .table__template__horizontal .default__table td {width: auto;}
 
-
+// 모달 테이블 스타일
 .modal__error__table table tr th:nth-child(1) {width: 15.38%;}
 .modal__result .modal__error__table tr {min-height: 5.8rem;}
 .modal__error__table table tbody th, .modal__error__table table tbody td {vertical-align: middle;}
@@ -107,58 +111,33 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .modal__result .modal__error__table tbody tr td {line-height: 150%;}
 
 
-// ac__manage__ment__wrap 
 .ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {background-color: transparent;}
-
-
-
 // manageuser__ 메인 테이블
-
 .manage__user__table {border-top: 0.2rem solid #000;} 
 .manage__user__table tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .manage__user__table .height--auto {height: auto; }
 .manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
 .manage__user__table td {width: auto;} 
 .manage__user__table td input[type="text"] {border: 0.1rem solid #ddd;}
-
-
 .table__information .first__td {width: 20.31%;}
 .table__information .second__td {width: 21.88%}
 
-// row와 col 제목이 함께 있는 테이블 전용 스타일
-.table__vertical .cross__table > tbody th {font-weight: 700; background-color : #EAF5F0}
 
 
-// 상단 thead 제목이 있는 테이블의 스타일입니다.
-// 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
-.table__vertical table thead tr th {background-color: #EAF5F0; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
-.table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
-.table__vertical thead .min__h__box {padding: 0}
-.table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 
 
 
-.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
-.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
-.table__vertical tbody th {background-color: #f8f8f8; vertical-align: middle;} 
-.table__vertical tbody td {
-  vertical-align: middle; }  
-.table__vertical tbody td:nth-last-child(1) {border-right: 0;} 
 
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
 // 기존 관리자 색상
 
-
- .table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
-
 // .table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
 .border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
 
-
 // 표 칸 형식
 // 관리자 메뉴 권한 관리 표 영역입니다.
-.auth__table thead tr th {font-weight: 500; height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
+.auth__table thead tr th {height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
 .auth__table tr {border-bottom: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
 .auth__table tbody tr td > a {display: block;width: 100%; height: 100%;}
 .auth__table tbody tr td > a:hover {color: $second-color;}
@@ -176,16 +155,14 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .checkbox__container-margin label:not(:last-child) {padding-right: 1rem;}
 
 
-
-
 // 관리자 페이지의 표 경우, 가로 값이 더 커질 시 table을 감싸는 부모에 스크롤을 줍니다.
 .manage__wrap .table__vertical {overflow-x: auto;}
-// .manage__wrap .table__vertical table {min-width: 96rem;}
 .manage__wrap .table__vertical colgroup col {min-width: 5rem;}
 
-
-// read__info__table은 등록 페이지가 아니므로 border을 없앱니다.
+// 읽기 전용 input(테두리 없애기) 
 .read__info__table input[type="text"] {border: 0;}
+.table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
+
 
 
 // 조회결과 테이블 공통
@@ -194,7 +171,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 // td의 min-height 적용 이슈로 다음과 같이 적용
 .min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
-
 .text--r {justify-content: flex-end;}
 .text--l {justify-content: flex-start;}
 .text--c {justify-content: center;}

@@ -18,9 +18,6 @@ table {width: 100%; font-size: 1.6rem;}
 
 
 // 폰트
-
-
-
 @font-face {
 	font-family: 'Pretendard GOV';
 	font-weight: 800;
@@ -34,8 +31,6 @@ table {width: 100%; font-size: 1.6rem;}
 	font-display: swap;
 	src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
 }
-
-
 
 @font-face {
 	font-family: 'Pretendard GOV';
@@ -51,14 +46,6 @@ table {width: 100%; font-size: 1.6rem;}
 	src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
 }
 
-// @font-face {
-// 	font-family: 'Pretendard GOV';
-// 	font-weight: 600;
-// 	font-display: swap;
-// 	src: local('Pretendard GOV SemiBold'), url(./woff2/PretendardGOV-SemiBold.woff2) format('woff2'), url(./woff/PretendardGOV-SemiBold.woff) format('woff');
-// }
-
-
 
 body {
   font-size: 1.6rem;
@@ -68,12 +55,9 @@ body {
       "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     overflow-x: hidden;
-  }
-.inner {
-  max-width: 128rem;
-  width: 128rem;
-  margin: 0px auto;
 }
+
+.inner { max-width: 128rem; width: 128rem; margin: 0px auto; }
 
 .mobile__logo {display: none; min-height: 3rem;}  
 .header__btm .right__icon__set .hamburger {display: none;}
@@ -110,11 +94,7 @@ input[type="radio"]{
     vertical-align: middle;
   // 기본 디자인 코드
 
-    //appearance: none;
-    // margin-right: 0.7rem;
-    // border: 0.1rem solid #ddd;
-    // background-color: #fff;
-    // input[type="radio"]:checked {border: 0.6rem solid #000;}
+    
 }
 
 

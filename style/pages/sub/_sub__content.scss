@@ -3,11 +3,8 @@
 */
 
 
-// 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap을 이용합니다.  
-// page 1 - 회계공시 열람
-
+// 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap id , 서브 페이지 이미지 지정 
 #sub__wrap .content .visual__bg { width: 100%; height: 25rem; position: relative; }
-// background: url(../img/bg__sub1-1.png) no-repeat center;
 #sub__wrap .accn_desc .visual__bg {background: url(../img/top_visual_desc.jpg) no-repeat center;  background-size: cover; }
 #sub__wrap .accn_open .visual__bg {background: url(../img/top_visual_public_open.jpg) no-repeat center;  background-size: cover;}
 #sub__wrap .main_accn_desc .visual__bg {background: url(../img/top_visual_desc.jpg) no-repeat center;  background-size: cover;}
@@ -22,53 +19,42 @@
 #sub__wrap .faq .visual__bg {background: url(../img/top_visual_faq.jpg) no-repeat center;  background-size: cover;}
 #sub__wrap .file_change .visual__bg {background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
 
-
-#sub__wrap .content .visual__bg .visual__text { 
-    position: absolute;
-    bottom: 7.2rem;
-    color: #fff;
-    // top: 50%; transform: translateY(-50%); 
-
- }
+// 서브 페이지 이미지 텍스트 위치 
+#sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
 #sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
 #sub__wrap .content .visual__bg .visual__text p { font-size: 2.2rem; }
 
+// 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
 .mobile__tab { display: none; }
 .mobile__tab__content { display: none;}
-
-
-// 회계 공시 열람의 탭 페이지만 padding-top 통일
-.sub1_1 .tab__content {padding-top: 8rem;}
-
-
-// 회계공시등록 페이지
+// .sub1_1 .tab__content {padding-top: 8rem;}
 .sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
+.sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(3) .pc__info {margin-top: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
+
+
 
 .data__title {text-align: left; position: relative; font-size: 2.1rem; color: #333; font-weight: 700;}
 
-.tab__content table tbody th { font-weight: 700; color: #000;}
 
 
-// 임시 코드
+// 회계 공시 등록 > 회계공시 탭 페이지 스타일 임시 코드
 .border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; text-align: right;}
 .border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
 
-// thead가 없는 가로형 표 스타일
-.table__horizontal { height: 5.8rem; border-top: 0.2rem solid #333; }
-.table__horizontal table { height: 100%; }
-.table__horizontal tbody th { font-weight: 500; background: #EAF5F0; text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
-.table__horizontal td { padding: 0 1rem; }
-.table__horizontal td select { width: 100%; height: 4rem; border: 0.1rem solid #ccc; font-size: 1.5rem; padding: 0.8rem; }
-.table__horizontal td input[type="text"] { border: 0.1rem solid #ccc; height: 4rem; font-size: 1.5rem; }
-
-// 해당 태그들에 연한 색상을 적용합니다.
-// .table__horizontal .table__light th {background: #F9FDFB;}
 
 
 
-.input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-.tab .dis__info:not(:first-child) { padding-top: 5.6rem; padding-bottom: 5.6rem; }
-.tab .table__vertical { border-top: 0.2rem solid #333; width: 100%; }
+
+
+.input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%;}
+
+// .tab .dis__info:not(:first-child) { padding-top: 5.6rem; padding-bottom: 5.6rem; }
+// .tab .table__vertical { border-top: 0.2rem solid #333; width: 100%;}
+
+
 .align__cols { width: 15.38%; }
 .tab__4 .table__horizontal table tbody th {border-bottom: 0;}
 .tab__4 .table__horizontal td {border-bottom: 0;}
@@ -96,7 +82,6 @@
 .search__form__user .upload__wrap .btn__file__select {font-weight: 400; min-height: 4.8rem;}
 .search__form__user .upload__wrap .btn__upload {font-weight: 400; min-height: 4.8rem;}
 
-
 // 검색 폼이 두 줄인. 회계공시 열람 페이지에만 적용
 .search__form__user .search .first__input__box {padding-bottom: 2.4rem;}
 .search__form__user .search input {font-size: 1.7rem;}
@@ -110,6 +95,8 @@
 
 .form__container {display: flex; flex-wrap: wrap; gap: 2.4rem;}
 
+
+// 가맹 노조 크기 작은 버튼 크기
 .btn__control__u {color: #fff; font-size: 1.7rem; border-radius: 0.7rem; padding: 0 1.6rem; height: 4.8rem;}
 
 .accn__open__wrap .search__form__user .search .input__box > input {margin: 0 2.4rem;}
@@ -120,20 +107,14 @@
 .accn__result table {font-size: 1.6rem;}
 .accn__result table thead th:not(:first-child){border-right: 0;}
 .accn__result table tbody td:not(:first-child){border-right: 0;}
-
 .accn__open__page .pagination {margin-bottom: 18rem; margin-top: 6.4rem;} // 페이지 네이션 간격 조정 
 
 
 // 홈 > 시스템안내 > 자주묻는 질문
-
-
 .faq__wrap .search__form__user .input__box > input {margin: 0 2.4rem;}
-
 .qna__container {display: inline-flex; justify-content: center; align-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; color: #fff;}
 .qna__container.question {background-color: #16C273;}
 .qna__container.answer {background-color: #000000;}
-
-
 
 // 자주 묻는 질문 테이블
 .foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: center;}
@@ -143,7 +124,6 @@
 .foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
 .foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
 .foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
-
 .faq__page__wrap .pagination {margin-top: 7.6rem; margin-bottom: 4rem;}
 
 
@@ -161,7 +141,9 @@
 .file__wrap .list {flex-grow: 1; max-width: 84rem;}
 .file__wrap .list > span {font-weight: 500;}
 .file__wrap .download {margin-left: auto; padding-right: 3.6rem;}
-  
+
+
+// 이전글, 다음글 영역
 .prev__next {font-size: 1.6rem; border-bottom: 0.1rem solid #ddd;}
 .prev__next > li {overflow: hidden; position: relative; padding: 1.8rem 0 1.8rem 3rem;  max-height: 5.8rem; display: flex; align-items: center; border-top: 0.1rem solid #ddd;}
 .prev__title {font-weight: 700;}
