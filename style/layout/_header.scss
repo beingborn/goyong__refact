@@ -308,27 +308,46 @@ color: #1d1d1d;
 
 #gnb2 {display: none; position: fixed; left: 0; top: 0; z-index: 1200; width: 100%; height: 100vh; background: #fff; font-size: 1.7rem; }
 #gnb2.active {display: block;}
-#gnb2.active > ul {width: 100%; height: 100%; overflow: visible; position: relative;}
+
+// 최상단 ul
+#gnb2.active > ul {
+    width: 100%; height: 100%; overflow: visible;
+    // position: relative;
+}
 #gnb2.active > ul > li {display: block;}
-#gnb2 > ul > li > a {display: block; width: 14rem; margin-bottom: 0; padding: 2rem 2.4rem; line-height: 2.4rem; font-size: 1.7rem;}
+#gnb2 > ul > li > a {display: flex; justify-content: center; width: 14rem; margin-bottom: 0; padding: 2rem 2.4rem; line-height: 2.4rem; font-size: 1.7rem; font-weight: 700;}
 #gnb2 > ul::before {      
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 14rem;
-    height: calc(100% - 13rem);
-    background-color: #edf1f5;
+    // content: "";
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // z-index: -1;
+    // width: 14rem;
+    // height: calc(100% - 13rem);
+    // background-color: #edf1f5;
 }
 
-#gnb2 > ul .sub__menu {visibility: hidden; overflow: hidden; position: absolute; left: 14rem; top: 0; border: 1px solid blue;}
-#gnb2 > ul > li.active .sub__menu {visibility: visible;}
+#gnb2 > ul .sub__menu {overflow: hidden; position: absolute; left: 14rem; top: 0;  display: flex; flex-direction: column;}
+#gnb2 > ul .sub__menu > .sub__ul { border : 1px dashed pink;  padding-top: 1.6rem; padding-bottom: 1.6rem;}
+#gnb2 > ul .sub__menu > .sub__ul .plus__title {display: flex; align-items: center; justify-content: flex-start; height: 6.4rem; font-weight: 700;  border-bottom: 0.1rem solid #ddd; }
+#gnb2 > ul .sub__menu > .sub__ul .plus > a {display: flex; align-items: center; justify-content: flex-start; height: 5.6rem;}
 
-#gnb2 > .gnb__top2 {padding: 0 2.4rem; padding-bottom: 2.4rem; border: 1px solid pink;}
+
+// #gnb2 > .gnb__top2 {padding: 0 2.4rem; padding-bottom: 2.4rem; border: 1px solid pink;}
 #gnb2 .gnb__close {position: fixed; top: 2rem; right: 2.4rem;}
-#gnb2 .login__info {padding-top: 6.8rem;}
+// #gnb2 .login__info {padding-top: 6.8rem;}
 
 .login__info .id__info {font-weight: 700; font-size: 1.7rem; display: inline-flex; align-items: center;}
 .login__info .id__info::before {content: '';  display: inline-block;  margin-right: 0.8rem; width: 2rem; height: 2rem; background: url(../../img/login__info.svg) no-repeat center; background-size: 2rem auto;}
 // #gnb2 > .gnb__top2 >  
+
+#gnb2 .gnb__head .login__info {padding-top: 6.8rem;}
+#gnb2 .gnb__head {padding: 0 2.4rem 2rem 2.4rem; border: 1px solid gree}
+#gnb2 .gnb__body {border: 2px dashed blue;}
+
+#gnb2 .gnb__body .m-gnb__menu {display: flex;}
+#gnb2 .gnb__body .m-gnb__menu .menu__wrap {width: 14rem; border: 1px solid salmon; display: flex; justify-content: center;}
+
+
+
+

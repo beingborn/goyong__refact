@@ -169,6 +169,13 @@ var pieOption1 = {
   tooltip: {
     trigger: "item",
   },
+
+  color : [
+    'rgba(119,140,206,1)', 'rgba(164,213,148,1)', 'rgba(250,210,128,1)',
+    'rgba(242,146,148,1)', 'rgba(242,160,105,1)', 'rgba(50,204,226,1)',
+    'rgba(168,249,231,1)', 'rgba(142,204,50,1)', 'rgba(143,140,170,1)'
+  ],
+
   legend: {
     orient: "vertical",
     left: "left",
@@ -180,9 +187,9 @@ var pieOption1 = {
       data: [
         { value: 1048, name: "현금 및 예금" },
         { value: 735, name: "토지" },
-        { value: 580, name: "건물" },
-        { value: 484, name: "기타자산" },
-        { value: 300, name: "부재재" },
+        // { value: 580, name: "건물" },
+        // { value: 484, name: "기타자산" },
+        // { value: 300, name: "부재재" },
       ],
     },
   ],
@@ -199,6 +206,13 @@ var pieOption2 = {
   tooltip: {
     trigger: "item",
   },
+
+  color : [
+    'rgba(119,140,206,1)', 'rgba(164,213,148,1)', 'rgba(250,210,128,1)',
+    'rgba(242,146,148,1)', 'rgba(242,160,105,1)', 'rgba(50,204,226,1)',
+    'rgba(168,249,231,1)', 'rgba(142,204,50,1)', 'rgba(143,140,170,1)'
+  ],
+
   legend: {
     orient: "vertical",
     left: "left",
@@ -208,11 +222,9 @@ var pieOption2 = {
       type: "pie",
       radius: "50%",
       data: [
-        { value: 1048, name: "현금 및 예금" },
-        { value: 735, name: "토지" },
-        { value: 580, name: "건물" },
-        { value: 484, name: "기타자산" },
-        { value: 300, name: "부재재" },
+        { value: 1048, name: "전년도이월금" },
+        { value: 735, name: "조합비" },
+        { value: 580, name: "기타" },
       ],
     },
   ],
@@ -226,6 +238,13 @@ var pieOption3 = {
     text: "Pie Chart 3",
     left: "center",
   },
+
+  color : [
+    'rgba(119,140,206,1)', 'rgba(164,213,148,1)', 'rgba(250,210,128,1)',
+    'rgba(242,146,148,1)', 'rgba(242,160,105,1)', 'rgba(50,204,226,1)',
+    'rgba(168,249,231,1)', 'rgba(142,204,50,1)', 'rgba(143,140,170,1)'
+  ],
+  
   tooltip: {
     trigger: "item",
   },
@@ -238,11 +257,12 @@ var pieOption3 = {
       type: "pie",
       radius: "50%",
       data: [
-        { value: 1048, name: "현금 및 예금" },
-        { value: 735, name: "토지" },
-        { value: 580, name: "건물" },
-        { value: 484, name: "기타자산" },
-        { value: 300, name: "부재재" },
+        { value: 1048, name: "인건비" },
+        { value: 735, name: "업무추진비" },
+        { value: 580, name: "기타운영비" },
+        { value: 484, name: "사업수행비용" },
+        { value: 300, name: "상급단체부과금" },
+        { value: 100, name: "차년도이월금" },
       ],
     },
   ],
@@ -259,6 +279,13 @@ var pieOption4 = {
   tooltip: {
     trigger: "item",
   },
+
+  color : [
+    'rgba(119,140,206,1)', 'rgba(164,213,148,1)', 'rgba(250,210,128,1)',
+    'rgba(242,146,148,1)', 'rgba(242,160,105,1)', 'rgba(50,204,226,1)',
+    'rgba(168,249,231,1)', 'rgba(142,204,50,1)', 'rgba(143,140,170,1)'
+  ],
+
   legend: {
     orient: "vertical",
     left: "left",
