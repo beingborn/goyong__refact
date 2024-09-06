@@ -1196,6 +1196,7 @@ table caption {
 
 .read__info__table input[type=text] {
   border: 0;
+  font-weight: 700;
 }
 
 .table__vertical:not(.infoTable) tbody tr:hover {
@@ -4285,6 +4286,10 @@ select {
 
 .notice__page .pagination {
   margin-bottom: 20rem;
+}
+
+.notice__wrap .search__form__user .input__box > input {
+  margin: 0 2.4rem;
 }
 
 .notice__detail__wrap table {
