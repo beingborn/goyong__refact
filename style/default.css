@@ -750,6 +750,10 @@ table th {
   background-color: #EAF5F0;
 }
 
+table td {
+  font-weight: 700;
+}
+
 table caption {
   position: absolute;
   top: 0;
@@ -3163,9 +3167,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding: 0 8px;
 }
 
-/*
-    회계공시등록페이지 CSS
-*/
+/* 회계공시등록페이지 CSS */
 #public__register__form .form__table th {
   width: 15.38%;
   min-width: 15rem;
@@ -3205,8 +3207,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 
 .public__register__wrap .form__table th {
-  padding-left: 2rem;
-  padding-right: 1rem;
+  padding: 0 1.5rem;
 }
 
 .public__register .tab__wrap .tab__btn {
@@ -4043,6 +4044,7 @@ select {
   width: 100%;
   border-radius: 0;
   text-align: right;
+  font-weight: 700;
 }
 
 .border__input__wrap .table__vertical tbody tr:nth-child(1) input {
