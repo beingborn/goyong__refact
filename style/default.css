@@ -4202,6 +4202,10 @@ select {
   margin-right: 1.2rem;
 }
 
+.accn__open__wrap .data__number {
+  margin-bottom: 6.4rem;
+}
+
 .accn__result table {
   font-size: 1.6rem;
 }

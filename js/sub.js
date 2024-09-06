@@ -177,9 +177,11 @@ var pieOption1 = {
   ],
 
   legend: {
-    orient: "horizontal",
-    // left: "left",
-    bottom: 'bottom',
+    // orient: "horizontal",
+    left: "left",
+    orient: "vertical",
+
+    // bottom: 'bottom',
   },
   series: [
     {
