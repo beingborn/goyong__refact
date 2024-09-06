@@ -95,7 +95,7 @@
 
 
 
-    $('[dat').click(function() {  // 모달 열기 이벤트 핸들러
+    $('[data-target]').click(function() {  // 모달 열기 이벤트 핸들러
       const targetModal = $(this).data('target');
       setModalWidth(targetModal)
 
