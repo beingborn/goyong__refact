@@ -64,9 +64,12 @@ input[type="file"]::file-selector-button {
 
 .form__head {background-color: #EAF5F0;}
 
+
+
 .form-title {
     // width: 15.38%; /* 전체 너비의 15.38% */
     // min-width: 15.38%; /* 최소 너비를 15.38%로 */
+    
     text-align: center; /* 제목을 왼쪽 정렬 */
     height: 100%;
     display: inline-flex;
@@ -85,7 +88,7 @@ input[type="file"]::file-selector-button {
 .form-content > select {width: 100%; min-height: 4rem; background-color: #fff;}
 .form-content > input[type="text"] {width: 100%; min-height: 4rem; background-color: #fff;}
 
-.form__head {height: 5.8rem; }
+.form__head {height: 5.8rem; font-weight: 700;}
 .form__head .form-title:nth-of-type(1) {width: 23.44%; max-width: 30rem;}
 .form__row {border-bottom: 0.1rem solid #ddd;}
 .form__row > .form-wrap {height: 5.8rem;}
