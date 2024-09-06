@@ -2620,6 +2620,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .manage__default__style .manage__report__modal .table__horizontal__wrap th {
   text-align: left;
   padding-left: 1.5rem;
+  background-color: #F9F9FA;
 }
 
 .manage__default__style .modal__check button {
