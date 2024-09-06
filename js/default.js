@@ -55,8 +55,10 @@
     const gnbTop__Menu = $('#gnb1 > .top__menu > li.plus > a');
     const gnbSub__Menu = $('#gnb1 .sub__menu > ul > li > a');
 
+    let gnbOpenMenu;
+
     gnbTop__Menu.click(function() {
-        const gnbOpenMenu = $(this).parent(); 
+        gnbOpenMenu = $(this).parent(); 
         const isItOpen = gnbOpenMenu.hasClass('active');
      
         if (isItOpen) {
@@ -69,23 +71,25 @@
             // 현재 클릭된 상위 메뉴에 'active' 클래스 추가
             gnbOpenMenu.addClass('active');
             $('.gnb__bg').show()
-
         }
-
+        
         const firstSub__MenuItem = gnbOpenMenu.find('.sub__menu ul li:first-child a');
         if (firstSub__MenuItem.length > 0) {
             gnbOpenMenu.siblings().find('.sub__menu ul li').removeClass('active');
             firstSub__MenuItem.parent().addClass('active');
         }
         });
-
         gnbSub__Menu.click(function() {
         const gnbOpenSub__Menu = $(this).parent();
-        // 모든 서브메뉴에서 'active' 클래스 제거
         gnbSub__Menu.parent().removeClass('active');
-        // 현재 클릭된 서브메뉴에 'active' 클래스 추가
         gnbOpenSub__Menu.addClass('active');
         });
+
+
+        $('.gnb__bg').click(function(){
+          gnbOpenMenu.removeClass('active');
+          $(this).hide();
+        })
     });
 
 
