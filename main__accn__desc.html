@@ -202,10 +202,14 @@
                     <div class="public__register">
                         <div class="tab__wrap">
                             <div class="tab__btn">
-                                <button type="button">노동조합체계</button>
+                                <button type="button">
+                                    <span>노동조합체계</span>
+                                </button>
                             </div>
                             <div class="tab__btn">
-                                <button type="button">주요회계공시항목</button>
+                                <button type="button">
+                                    <span>주요회계공시항목</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -424,26 +428,13 @@
                         let subTabContent = $(".tab__content .tab");
 
                         subTabBtn.click(function () {
-                            let tabIndex = $(this)
-                                .parent()
-                                .index();
-
+                            let tabIndex = $(this).parent().index();
                             subTabBtn.removeClass("active");
                             $(this).addClass("active");
-                            subTabContent
-                                .hide()
-                                .eq(tabIndex)
-                                .show();
-                        })
+                            subTabContent.hide().eq(tabIndex).show();})
 
-                        subTabContent
-                            .hide()
-                            .eq(0)
-                            .show();
-                        subTabBtn
-                            .eq(0)
-                            .addClass('active')
-
+                        subTabContent.hide().eq(0).show();
+                        subTabBtn.eq(0).addClass('active')
                     })
                 </script>
 

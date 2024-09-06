@@ -65,11 +65,20 @@ button {cursor: pointer;}
         border-bottom: 0.1rem solid #d8d8d8;
       }
   
-      .active {
-        color: #21A366;
-        border-bottom: 0.4rem solid #21A366;
-      }
+      // .active { color: #21A366; border-bottom: 0.4rem solid #21A366;}
     }
+
+    .main__accn__desc__wrap .tab__wrap .tab__btn.active button > span {position: relative; border: 1px solid blue;}
+    .main__accn__desc__wrap .tab__wrap .tab__btn.active button > span::after {content: ''; height: 0.4rem; width: 100%; position: absolute; bottom: 0; background-color: #21A366; left: 0; padding: 0 2rem;}
+
+
+
+
+    // .main__accn__desc__wrap .tab__wrap .tab__btn .active button > span {position: relative; border: 1px solid blue;} 
+    // .main__accn__desc__wrap .tab__wrap .tab__btn.active button > span::after {content: ''; height: 0.4rem; width: calc(100% + 2rem); position: absolute; bottom: -1.2rem; background-color: #21A366; left: 50%; transform: translateX(-50%);}
+    //.main__accn__desc__wrap .tab__wrap .tab__btn .active {color: #21A366;}
+    .tab__wrap .tab__btn .active {color: #21A366; border-bottom: 0.4rem solid #21A366;}
+    // .sub1__1__wrap .tab__wrap .tab__btn .active {color: #21A366; border-bottom: 0.4rem solid #21A366;}
 
  
 

@@ -654,7 +654,24 @@ button {
   color: #767676;
   border-bottom: 0.1rem solid #d8d8d8;
 }
-.tab__btn .active {
+
+.main__accn__desc__wrap .tab__wrap .tab__btn.active button > span {
+  position: relative;
+  border: 1px solid blue;
+}
+
+.main__accn__desc__wrap .tab__wrap .tab__btn.active button > span::after {
+  content: "";
+  height: 0.4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #21A366;
+  left: 0;
+  padding: 0 2rem;
+}
+
+.tab__wrap .tab__btn .active {
   color: #21A366;
   border-bottom: 0.4rem solid #21A366;
 }
@@ -3216,10 +3233,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .public__register .tab__wrap .tab__btn {
   width: 50%;
 }
-.public__register .tab__wrap .tab__btn.active {
-  color: #003675;
-  border-bottom: 0.4rem solid #003675;
-}
 
 .public__table__wrap {
   border-top: 2px solid #000;
@@ -4569,7 +4582,7 @@ select {
 }
 
 .desc__banner {
-  background-color: #14BDB3;
+  background-color: #82C252;
   color: #fff;
   display: flex;
   align-items: center;

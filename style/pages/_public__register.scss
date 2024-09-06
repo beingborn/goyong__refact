@@ -15,12 +15,12 @@
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 
-.public__register {
-    .tab__wrap .tab__btn {width: 50%;}
-    .tab__wrap .tab__btn.active {
-        color: #003675;
-        border-bottom: 0.4rem solid #003675;
-    }
+.public__register { .tab__wrap .tab__btn {width: 50%;}
+
+// .tab__wrap .tab__btn.active {
+//         color: #003675;
+//         border-bottom: 0.4rem solid #003675;
+//     }
 } 
 
 .public__table__wrap {border-top: 2px solid #000;}
