@@ -1,10 +1,5 @@
 
 
-
-  $(document).ready(function(){
-    console.log("불러졌음")
-  })
-
   /**
    * 스크롤 이벤트 감지해서 헤더 고정 
    * or 숨기기

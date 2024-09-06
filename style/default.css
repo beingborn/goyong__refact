@@ -1304,6 +1304,7 @@ input[type=file]::file-selector-button {
   font-size: 1.6rem;
   color: #8E8E8E;
   padding-left: 1rem;
+  font-weight: 400;
 }
 
 .search__form {
@@ -3206,6 +3207,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .public__register__wrap .form__table th {
   padding: 0 1.5rem;
+}
+
+.public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {
+  flex-wrap: nowrap;
 }
 
 .public__register .tab__wrap .tab__btn {
