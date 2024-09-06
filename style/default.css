@@ -3804,9 +3804,6 @@ select {
 .modal__result {
   border-top: 0.2rem solid #000;
 }
-.modal__result table tbody tr td {
-  text-align: center;
-}
 .modal__result table tbody tr td:nth-last-child(1) {
   border-right: 0;
 }
