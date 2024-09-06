@@ -4502,7 +4502,7 @@ select {
 .accn__desc__wrap .content__section:nth-child(2) .circle__image__container {
   width: 41.2rem;
   height: 11rem;
-  background-image: url("/img/accn__desc__img__circle__02.png");
+  background-image: url("../img/accn__desc__img__circle__02.png");
   position: absolute;
   left: 2.7rem;
   top: 22rem;
@@ -4519,7 +4519,7 @@ select {
   width: 100%;
   height: 26.2rem;
   margin: 5rem 0;
-  background-image: url("/img/accn__desc__img__circle__03.png");
+  background-image: url("../img/accn__desc__img__circle__03.png");
 }
 
 .accn__desc__wrap .expected__section .title {
