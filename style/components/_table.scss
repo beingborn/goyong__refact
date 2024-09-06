@@ -32,7 +32,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex tr {
   line-height: 5.8rem; height: 5.8rem;
   border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.table__horizontal__ex th {width: 19.53%; background-color: #F9FDFB; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
+.table__horizontal__ex th {width: 19.53%; background-color: #EAF5F0; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1;} 
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
@@ -87,7 +87,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 .table__template__horizontal table {width: 100%; font-size: 1.5rem;} 
 .table__template__horizontal tr {display: flex;} 
-.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9FDFB; font-weight: 500;} 
+.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #EAF5F0; font-weight: 500;} 
 // 제목 영역이 더 진한 테이블 제목 스타일
 
 // .table__template__horizontal .table__strong th {background-color: #EAF5F0;}
@@ -126,12 +126,12 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__information .second__td {width: 21.88%}
 
 // row와 col 제목이 함께 있는 테이블 전용 스타일
-.table__vertical .cross__table > tbody th {font-weight: 700; background: #F9FDFB;}
+.table__vertical .cross__table > tbody th {font-weight: 700; background-color : #EAF5F0}
 
 
 // 상단 thead 제목이 있는 테이블의 스타일입니다.
 // 제목에 있는 th들은 단어들을 기준으로 줄바꿈합니다.
-.table__vertical table thead tr th {background-color: #F9FDFB; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
+.table__vertical table thead tr th {background-color: #EAF5F0; border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
 .table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;} 

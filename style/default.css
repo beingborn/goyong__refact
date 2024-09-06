@@ -811,7 +811,7 @@ table caption {
 
 .table__horizontal__ex th {
   width: 19.53%;
-  background-color: #F9FDFB;
+  background-color: #EAF5F0;
   text-align: left;
   padding-left: 3rem;
   z-index: -1;
@@ -964,7 +964,7 @@ table caption {
   display: flex;
   align-items: center;
   justify-content: left;
-  background-color: #F9FDFB;
+  background-color: #EAF5F0;
   font-weight: 500;
 }
 
@@ -1057,11 +1057,11 @@ table caption {
 
 .table__vertical .cross__table > tbody th {
   font-weight: 700;
-  background: #F9FDFB;
+  background-color: #EAF5F0;
 }
 
 .table__vertical table thead tr th {
-  background-color: #F9FDFB;
+  background-color: #EAF5F0;
   border-right: 0.1rem solid #ddd;
   text-align: center;
   vertical-align: middle;
@@ -1907,17 +1907,13 @@ input[type=checkbox] {
   transition: all 0.3s;
 }
 
-#gnb1 > ul > li.active {
-  background: #21A366;
-}
-
 #gnb1 > ul > li.active > a {
-  color: #fff;
+  color: #21A366;
 }
 
 #gnb1 > ul > li.plus.active > a::after {
   transform: rotate(360deg);
-  background: url(../img/arrow__top-white.svg);
+  background: url(../img/arrow__top-green.svg);
 }
 
 .gnb__bg {
@@ -1938,7 +1934,6 @@ input[type=checkbox] {
   top: 0;
   width: 26rem;
   height: 100%;
-  background: #E4F2EC;
 }
 
 .header__gnb {
@@ -1964,6 +1959,7 @@ input[type=checkbox] {
 #gnb1 .sub__menu > ul > li.active > a {
   background: #fff;
   color: #21A366;
+  text-decoration: underline;
 }
 
 /* #gnb1 {position: relative;} */
@@ -2009,7 +2005,6 @@ input[type=checkbox] {
   font-weight: 700;
   color: #1d1d1d;
   font-size: 1.9rem;
-  background: #E4F2EC;
 }
 
 #gnb1 .sub__menu > ul > li .dep3 {
@@ -2730,7 +2725,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin-bottom: 4rem;
 }
 .top__visual .main__hero .main__text .main__medium {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 400;
   line-height: 110%;
 }
 .top__visual .main__hero .quick__menu {
@@ -2830,7 +2826,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 }
 
 .count__group .count:hover {
-  background-color: #21A366;
+  background-color: #14BDB3;
 }
 .count__group .count:hover .subc {
   color: #fff;
@@ -5010,6 +5006,7 @@ select {
 */
 .swiper__container {
   width: 100%;
+  max-width: 109.6rem;
   padding-left: 9.2rem;
   padding-right: 9.2rem;
 }

@@ -5,8 +5,8 @@
 
 .swiper__container {
     // 스와이퍼 컨테이너의 %가 inner 안의 들어가 있지 않아서 직접 분기별로 width를 지정해주어야한다.
-    // width: 109.6rem;
     width: 100%;
+    max-width: 109.6rem;
     padding-left: 9.2rem;
     padding-right: 9.2rem;
 }

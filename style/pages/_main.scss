@@ -37,7 +37,8 @@
             }
 
             .main__medium {
-                font-size: 3rem;
+                font-size: 2rem;
+                font-weight: 400 ;
                 line-height: 110%;
             }
         }
@@ -146,7 +147,7 @@
 }
 
 .count__group .count {
-    &:hover {background-color: #21A366;
+    &:hover {background-color: #14BDB3;
         .subc {color: #fff;}
         // .subc::before {}
     }
