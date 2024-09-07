@@ -62,7 +62,7 @@ body {
 // .mobile__logo {display: none; min-height: 3rem;}  
 .header__btm .right__icon__set .hamburger {display: none;}
 
-label {font-size: 1.5rem;}
+// label {font-size: 1.5rem;}
   // input 
   input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
   input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
@@ -88,18 +88,7 @@ input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; b
 .page__title {font-size: 4rem;}
 
 
-input[type="radio"]{
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 50%;
-    margin: 0;
-    vertical-align: middle;
-  // 기본 디자인 코드
-
-    
-}
-
-
+input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
 br.onlyMo {display: none;}
 textarea {border: 0.1rem solid #ddd; width: 100%;}
 .blind {
