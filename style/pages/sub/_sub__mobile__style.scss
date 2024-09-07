@@ -1,10 +1,7 @@
-/*
-    서브 모바일 스타일 CSS
-*/
+/* 서브 모바일 스타일 CSS */
 
 
-// 모바일 탭
-
+// 모바일용 탭 버튼
 .mobile__tab {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -165,16 +162,7 @@
   }
 }
 
-.data--open {
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-}
-.data__toggle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  width: 100%;
-}
+
 
 
 .last--open {
@@ -227,38 +215,20 @@
   }
 }
 
-.data--open.on .arrow__top {
-  display: block;
-} // 열렸을때
-.data--open.on .arrow__bottom {
-  display: none;
-}
+
+.data--open {cursor: pointer;width: 100%;position: relative;}
+.data__toggle {font-size: 2.5rem;font-weight: 700;width: 100%;}
+.data--open.on .arrow__top { display: block;} // 열렸을때
+.data--open.on .arrow__bottom { display: none;}
 
 //공통 table 스타일
-
 .t__title__wrap {padding-bottom: 1.3rem; border-bottom: 0.1rem solid #ccc;}
 .mo__column .t__title {font-size: 2rem;}
 .t__last__data {margin-bottom: 5rem;}
 
-
-
 // 노동 조합 정보
-
-.list__btn__group { text-align: right;
-  button {
-    color: #fff;
-    border: 0;
-    font-size: 2rem;
-    height: 5.6rem;
-    // line-height: 5.6rem;
-    padding: 0 2rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    border-radius: 0.7rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-}
+.list__btn__group { text-align: right;}
+.list__btn__group button {color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem;  margin-top: 4rem; margin-bottom: 2rem; border-radius: 0.7rem; font-weight: 600;}
 
 .mo__open__wrap .mobile__market__input {width: 100%;}
 .mo__open__wrap .mobile__market__input__2 {width: calc(50% - 1em);}
@@ -266,13 +236,8 @@
 
 // 회계공시열람 첫번째 td 넓이
 .tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {min-width: 42rem;}
-
-
 .tab__content table tbody .cols2 {line-height: 130%; width: 19.53%; height: 100%;}
 .tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
 
 // 탭 4 시계열 차트
-
-.tab__4__table {
-  margin-bottom: 2.8rem;
-}
+.tab__4__table {margin-bottom: 2.8rem;}

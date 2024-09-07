@@ -2,9 +2,6 @@
     기타 컴포넌트 CSS
 */
 
-
-
-
 // 메뉴 계층
 .tree{font-size:1.5rem;color:#000; width: 29rem;}
 .tree_tit {font-size: 2rem;}
@@ -20,8 +17,6 @@
 .tree li.tree_last_node{margin-bottom:0.4rem;background:url(../img/bg_tree_branch_last.svg) no-repeat 0.9rem -1rem;}
 .depth__1__tree a {font-size: 1.6rem; line-height: 4rem; font-weight: 600;}
 .depth__2__tree a {font-size: 1.5rem; line-height: 3.6rem; font-weight: 500;}
-
-
 
 // 파일 아이콘
 .file__icon {
@@ -41,3 +36,13 @@
 .breadcrumb .path > li > a {padding-bottom: 0.1rem; position: relative;}
 .breadcrumb .path > li > a::after {content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 0.1rem; background-color: #000;}
 .breadcrumb .path > li + li::before {content: ""; display: inline-block;vertical-align: middle;width: 2rem;height: 2rem;background: url(../img/arrow__right-bk.svg) no-repeat center; margin: 0 0.4rem;}
+
+// 페이지 네이션 코드
+.pagination {display: flex; align-items: center; justify-content: center;} 
+.pagination .page-navi {line-height: 4rem; font-size: 1.6rem;} 
+.pagination .page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;} 
+.pagination .page-navi.prev::before {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;} 
+.pagination .page-navi.next {display: inline-flex; align-items: center; margin-left: 2rem;} 
+.pagination .page-navi.next::after {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../img/more__arrow__right__black.png) no-repeat center;} 
+.pagination .page-link {display: inline-block; width: 4rem; line-height: 4rem; text-align: center; font-size: 1.6rem; border-radius: 0.7rem;} 
+.pagination .page-link.active {background-color: #0c3975; color: #fff; font-weight: 700;}

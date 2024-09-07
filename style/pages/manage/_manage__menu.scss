@@ -228,30 +228,9 @@
     width: 100%;
 }
 
-/*
-    ac__management
-    관리자>통계및보고서관리>회계관리현황
-*/
+/* ac__management 관리자>통계및보고서관리>회계관리현황 */
 
-    // margin-bottom: 5.6rem;
-    select {
-        display: inline-block;
-        // width: 100%;
-        height: 100%;
-        height: 4rem;
-        padding: 0.8rem 1rem 0.8rem 1.6rem;
-        -webkit-appearance: none;  /* 크롬 화살표 없애기 */
-        -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
-        appearance: none;  /* 화살표 없애기 */
-        position: relative;
-        font-size: 1.6rem;
-        border: 0.1rem solid #ccc;
-    }
-    .select__renew {
-        background: url(../img/select__renew__mo.svg) no-repeat;
-        background-position: right 10px center;
-        background-color: #fff;
-    }
+
     .search__work__group input {
         padding: 0.8rem 1rem;
         font-size: 1.6rem;
@@ -285,117 +264,8 @@
 .check__result .table__vertical table tbody tr th:nth-child(1){border-left: 0; background-color: transparent;}
 .check__result .table__vertical table tbody td:nth-last-child(1) {border-right: 0;}
 
-.check__result .pagination { 
-    // margin-top: 2rem;
-    // margin-bottom: 12rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .page-navi {line-height: 4rem; font-size: 1.6rem;}
-    .page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;
-        &::before {
-            content: '';
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;
-        }
-    }
-    .page-navi.next {
-        display: inline-flex;
-        align-items: center;
-         margin-left: 2rem;
-        &::after {
-            content: '';
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            background: url(../img/more__arrow__right__black.png) no-repeat center;
-        }
-    }
-
-    .page-link {
-        display: inline-block;
-        width: 4rem;
-        line-height: 4rem;
-        text-align: center;
-        font-size: 1.6rem;
-        border-radius: 0.7rem;
-    }
-    
-    .active {
-        background-color: #0c3975;
-        color: #fff;
-        font-weight: 600;
-    }
-}
-
-.pagination { 
-
-    // margin-top: 2rem;
-    // margin-bottom: 12rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .page-navi {line-height: 4rem; font-size: 1.6rem;}
-    .page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;
-        &::before {
-            content: '';
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;
-        }
-    }
-    .page-navi.next {
-        display: inline-flex;
-        align-items: center;
-         margin-left: 2rem;
-        &::after {
-            content: '';
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            background: url(../img/more__arrow__right__black.png) no-repeat center;
-        }
-    }
-
-    .page-link {
-        display: inline-block;
-        width: 4rem;
-        line-height: 4rem;
-        text-align: center;
-        font-size: 1.6rem;
-        border-radius: 0.7rem;
-    }
-    
-    .active {
-        background-color: #0c3975;
-        color: #fff;
-        font-weight: 600;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 .note__th {border-bottom: 0.1rem solid #ddd;}
 .no__border__note .note__th {border-bottom: 0;}
-
-
-
-
-
-
-
 
 // 회계공시 조합 관리 
 .check__year__result {
@@ -454,19 +324,7 @@
 .report__content .content {width: 100%;}
 
 
-// .check__result .report__col {
-//     col {
-//         &:nth-child(1) {width: 3.5%;}
-//         &:nth-child(2) {width: 7.5%;}
-//         &:nth-child(3) {width: 4.7%;}
-//         &:nth-child(11){width: auto;}
-//         @for $i from 4 through 10 {&:nth-child(#{$i}) {width: 6.6%;}}
-//         @for $j from 12 through 15 {&:nth-child(#{$j}) {width: 7.5%;}}
-//     }
-// }
-
 /** 리포트 조회 리스트 */
-
 .report__check__table {
     .result__th { width: 12.5%; }
     .input__th { width: 40.6%;}

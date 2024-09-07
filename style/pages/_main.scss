@@ -3,10 +3,7 @@
 */
 
 
-.top__visual {
-    width: 100%;
-    color: #fff;
-    font-size: 1rem;
+.top__visual {width: 100%; color: #fff; font-size: 1rem;
 
     .main__hero {
         width: 100%;
@@ -77,96 +74,24 @@
     }
 }
 
-.manual {
-    position: relative;
+.manual {position: relative;}
+.manual .tip {position: absolute; top: -6rem;}
 
-    .tip {
-        position: absolute;
-        top: -6rem;
-    }
-}
-
-.count__group {
-    position: relative;
-    z-index: 2;
-    top: -8.6rem;
-
-    .inner {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .count {
-        width: 40.5rem;
-        // height: 18rem;
-        padding: 3.3rem 0;
-        max-height: 18rem;
-        background-color: #fff;
-        box-shadow: 0px 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
-        border-radius: 3.2rem;
-  
-
-        > a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-        }
-
-        .subc {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #000;
-            text-align: center;
-            line-height: 120%;
-            
-            &::before{content: ''; width: 9rem; height: 9rem; display: block; margin: 0px auto; margin-bottom: 1.8rem; background-color: #fff; border-radius: 50%;}
-        }
-        
-        .subc.open::before {
-            background-image: url(../img/icons__open.png);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .subc.write::before {
-            background-image: url(../img/icons__write.png);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .subc.manual::before {
-            background-image: url(../img/icons__manual.png);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-    }
-}
-
-.count__group .count {
-    &:hover {background-color: #14BDB3;
-        .subc {color: #fff;}
-        // .subc::before {}
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-.main__graph {margin-bottom: 5rem; position: relative; top: -5rem ;}
+// 상단 카운트 그룹 
+.count__group .count:hover { &:hover {background-color: #14BDB3; .subc {color: #fff;}}}
+.count__group { position: relative; z-index: 2; top: -8.6rem;}
+.count__group    .inner { display: flex; justify-content: space-between;}
+.count__group .count {width: 40.5rem; padding: 3.3rem 0; max-height: 18rem; background-color: #fff; box-shadow: 0rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1); border-radius: 3.2rem;}
+.count__group .count > a {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;}
+.count__group .count .subc {font-size: 3rem; font-weight: 700; text-align: center; line-height: 120%;} 
+.count__group .count .subc::before {content: ''; width: 9rem; height: 9rem; display: block; margin: 0px auto; margin-bottom: 1.8rem; background-color: #fff; border-radius: 50%;} 
+.count__group .count    .subc.open::before {background-image: url(../img/icons__open.png);background-repeat: no-repeat;background-position: center;}
+.count__group .count     .subc.write::before {background-image: url(../img/icons__write.png);background-repeat: no-repeat;background-position: center;}
+.count__group .count .subc.manual::before {background-image: url(../img/icons__manual.png);background-repeat: no-repeat;background-position: center;}
 
 
 // 메인 차트 영역
+.main__graph {margin-bottom: 5rem; position: relative; top: -5rem ;}
 .main__echart .chartBox {background: #FFF; height: 40rem; border-top: 1px solid #E5E5E5; border-radius: 2.4rem; padding: 3rem 3.5rem 0 3.5rem; box-shadow: 0rem 0rem 2rem 0 rgba(0, 0, 0, 0.1);}
 .main__echart > div {display: flex; justify-content: space-between; align-items: center; gap: 4rem;}
 .main__echart .chartBox .title {margin-bottom: 3.2rem;}
@@ -174,12 +99,16 @@
 .main__echart .table__vertical {width: 44%; font-size: 1.5rem;}
 .main__echart .table__vertical table {table-layout: fixed;}
 .main__echart .table__vertical table tbody td {padding: 0 1rem;}
-
-
-
+.main__echart .table th {height: 6.5rem;}
 .main__echart .data .unit {color: #767676; font-size: 1.3rem; margin-left: 0.4rem;}
 .main__echart .data > h2 {font-size: 1.7rem; color: #767676;}
 .main__echart .chart1, .chart2 { width: 320px;}
+.main__echart .table tbody td { height: 6.5rem; text-overflow: ellipsis; overflow: hidden; }// white-space: nowrap; min-width: 5rem;
+.main__echart .table tbody td :nth-child(1) {min-width: 10rem;}
+.main__echart .table tbody td :nth-child(2) {min-width: 8rem;}
+.main__echart .table colgroup col:nth-child(1){width: 30%;}
+.main__echart .table colgroup col:nth-child(2){width: 25%;}
+.main__echart__wrap {display: flex; justify-content: space-between; gap: 3.2rem;}
 .chartBox .container { display: flex; justify-content: center; align-items: center;}
 .chartBox .title {font-size: 2.5rem;}
 .data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
@@ -188,44 +117,11 @@
 .chartData__wrap {display: flex; padding-top: 3rem;}
 .chartData__wrap .data {text-align: center; width: 50%;}
 
-
-
-
-
-.table>#tableList {
-    min-height: 40rem;
-    max-height: 40rem;
-}
-
-.main__echart .table tbody td { height: 6.5rem; text-overflow: ellipsis; overflow: hidden; }// white-space: nowrap; min-width: 5rem;
-.main__echart .table tbody td :nth-child(1) {min-width: 10rem;}
-.main__echart .table tbody td :nth-child(2) {min-width: 8rem;}
-.main__echart .table colgroup col:nth-child(1){width: 30%;}
-.main__echart .table colgroup col:nth-child(2){width: 25%;}
-.main__echart__wrap {display: flex; justify-content: space-between; gap: 3.2rem;}
-
-
-
-// #tableList td {
-//     white-space: nowrap;    /* Prevents text from wrapping to the next line */
-//     overflow: hidden;       /* Hides any overflow content */
-//     text-overflow: ellipsis; /* Adds an ellipsis (...) at the end of the text when it overflows */
-//     min-width: 50px;        /* Optional: sets a minimum width for each column */
-// }
-
-// /* Optional: Specify different min-width for specific columns */
-// #tableList td:nth-child(1) {
-//     min-width: 100px; /* Adjust the value based on how much space you want to allocate */
-// }
-
-// #tableList td:nth-child(2) {
-//     min-width: 80px;  /* Adjust as needed */
-// }
+.table>#tableList {min-height: 40rem;max-height: 40rem;}
 
 
 
 
 
-.main__echart .table th {
-    height: 6.5rem;
-}
+
+

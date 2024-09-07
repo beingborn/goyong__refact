@@ -9,13 +9,11 @@
     background-color: #fff;
     border-bottom: 0.15rem solid #ededed;
     transition: all 0.5s;
-
-    .header__btm .logo {
-        width: 360px;
-
-        img {max-width: 100%;}
-    }
 }
+.header .header__btm .logo { width: 36rem;}
+.header img {max-width: 100%;}
+    
+
 
 .header__fixed {
     position: fixed;

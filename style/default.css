@@ -63,11 +63,6 @@ body {
   margin: 0px auto;
 }
 
-.mobile__logo {
-  display: none;
-  min-height: 3rem;
-}
-
 .header__btm .right__icon__set .hamburger {
   display: none;
 }
@@ -82,6 +77,8 @@ input[type=datetime-local], input[type=month], input[type=range], input[type=tim
 input[type=week], input[type=file], input[type=submit], input[type=button],
 input[type=reset], textarea, select, button {
   font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
 }
 
 input[type=text], select, input[type=password] {
@@ -147,7 +144,9 @@ textarea {
 }
 
 .select__renew {
-  background: url(../img/select__renew.png) no-repeat 93% 50%;
+  background-image: url(../img/select__renew.png);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
 }
 
 .select--no--style {
@@ -546,26 +545,20 @@ textarea {
 /* 
   버튼 CSS
 */
-/*
-  색상 코드 앞 문자를 넣으시면서 색상을 확인하시면 됩니다.  
+button {
+  cursor: pointer;
+}
 
-
-  $theme-btn-blue-00 : #246BEB;
-  $theme-btn-blue-01 : #003675;
-  $theme-btn-bk-00 : #000000;
-  $theme-btn-red-00 : #B9131E;
-
-*/
 .bg--blue-00 {
-  background-color: #246BEB;
+  background-color: #246beb;
 }
 
 .bg--blue-01 {
-  background-color: #1D56BC;
+  background-color: #1d56bc;
 }
 
 .bg--blue-02 {
-  background-color: #218BEE;
+  background-color: #218bee;
 }
 
 .bg--navy-00 {
@@ -577,27 +570,27 @@ textarea {
 }
 
 .bg--gray-00 {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 .bg--red-00 {
-  background-color: #B9131E;
+  background-color: #b9131e;
 }
 
 .bg--green-00 {
-  background-color: #008A1E;
+  background-color: #008a1e;
 }
 
 .bg--green-01 {
-  background-color: #00BA63;
+  background-color: #00ba63;
 }
 
 .bg--green-02 {
-  background-color: #21A366;
+  background-color: #21a366;
 }
 
 .bg--mint-00 {
-  background-color: #14BDB3;
+  background-color: #14bdb3;
 }
 
 .bg--transparent-00 {
@@ -612,10 +605,6 @@ textarea {
   padding: 0 2rem;
   border-radius: 0.7rem;
   font-weight: 400;
-  cursor: pointer;
-}
-
-button {
   cursor: pointer;
 }
 
@@ -640,13 +629,14 @@ button {
 }
 
 .tab__btn {
-  width: 25%;
+  flex: 1;
   height: 4.5rem;
   text-align: center;
 }
-.tab__btn button {
-  cursor: pointer;
+
+.tab__btn > button {
   width: 100%;
+  cursor: pointer;
   background: transparent;
   font-size: 2rem;
   font-weight: 700;
@@ -655,25 +645,20 @@ button {
   border-bottom: 0.1rem solid #d8d8d8;
 }
 
-.main__accn__desc__wrap .tab__wrap .tab__btn.active button > span {
-  position: relative;
-  border: 1px solid blue;
+.tab__wrap .tab__btn button.active {
+  color: #21a366;
+  border-bottom: 0.4rem solid #21a366;
 }
 
-.main__accn__desc__wrap .tab__wrap .tab__btn.active button > span::after {
-  content: "";
-  height: 0.4rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: #21A366;
-  left: 0;
+.tab__border {
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid #ddd;
+}
+
+.tab__btn__auto .tab__btn > button {
+  width: auto;
   padding: 0 2rem;
-}
-
-.tab__wrap .tab__btn .active {
-  color: #21A366;
-  border-bottom: 0.4rem solid #21A366;
+  border-bottom: 0;
 }
 
 .close__btn__wrap {
@@ -743,7 +728,8 @@ button {
   box-sizing: border-box;
 }
 
-.btn__add, .btn__remove {
+.btn__add,
+.btn__remove {
   height: 4rem;
   color: white;
   width: 5rem;
@@ -1248,6 +1234,7 @@ form {
   border-top: 0.1rem solid #ddd;
   border-bottom: 0.1rem solid #ddd;
 }
+
 .search__box input, .search__box select {
   border: 0.1rem solid #ddd;
   height: 4rem;
@@ -1288,6 +1275,7 @@ form {
 .select {
   width: 80%;
 }
+
 .select select {
   min-width: 10rem;
   margin-left: 1rem;
@@ -1295,10 +1283,10 @@ form {
 
 .search__form .form-content select {
   position: relative;
-  background-color: #fff; /* 배경색을 명확하게 설정 */
-  background-image: url(/img/select__renew.png); /* 배경 이미지를 따로 설정 */
-  background-position: center right 1rem; /* 이미지 위치 설정 */
-  background-repeat: no-repeat; /* 이미지 반복 안 함 */
+  background-color: #fff;
+  background-image: url(/img/select__renew.png);
+  background-position: center right 1rem;
+  background-repeat: no-repeat;
 }
 
 .select__form-arrow {
@@ -1341,31 +1329,11 @@ input[type=file]::file-selector-button {
 }
 
 .form-title {
-  text-align: center; /* 제목을 왼쪽 정렬 */
+  text-align: center;
   height: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
-
-.form-content {
-  flex-grow: 1;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.form-content > select {
-  width: 100%;
-  min-height: 4rem;
-  background-color: #fff;
-}
-
-.form-content > input[type=text] {
-  width: 100%;
-  min-height: 4rem;
-  background-color: #fff;
 }
 
 .form__head {
@@ -1400,6 +1368,26 @@ input[type=file]::file-selector-button {
 .form__body .form__row input {
   height: 4rem;
   border-radius: 0.5rem;
+}
+
+.form-content {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-content > select {
+  width: 100%;
+  min-height: 4rem;
+  background-color: #fff;
+}
+
+.form-content > input[type=text] {
+  width: 100%;
+  min-height: 4rem;
+  background-color: #fff;
 }
 
 .preview {
@@ -1445,9 +1433,7 @@ input[type=file]::file-selector-button {
   background-size: cover;
 }
 
-/*
-    메뉴별 권한 관리 및 체계 아코디언 CSS
-*/
+/* 메뉴별 권한 관리 및 체계 아코디언 CSS */
 .menu-list {
   width: 280px;
 }
@@ -1764,6 +1750,60 @@ input[type=checkbox] {
   margin: 0 0.4rem;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-navi {
+  line-height: 4rem;
+  font-size: 1.6rem;
+}
+
+.pagination .page-navi.prev {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.pagination .page-navi.prev::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;
+}
+
+.pagination .page-navi.next {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.pagination .page-navi.next::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: url(../img/more__arrow__right__black.png) no-repeat center;
+}
+
+.pagination .page-link {
+  display: inline-block;
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 0.7rem;
+}
+
+.pagination .page-link.active {
+  background-color: #0c3975;
+  color: #fff;
+  font-weight: 700;
+}
+
 /*
     헤더 CSS
 */
@@ -1775,10 +1815,12 @@ input[type=checkbox] {
   border-bottom: 0.15rem solid #ededed;
   transition: all 0.5s;
 }
+
 .header .header__btm .logo {
-  width: 360px;
+  width: 36rem;
 }
-.header .header__btm .logo img {
+
+.header img {
   max-width: 100%;
 }
 
@@ -2805,9 +2847,17 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .manual {
   position: relative;
 }
+
 .manual .tip {
   position: absolute;
   top: -6rem;
+}
+
+.count__group .count:hover:hover {
+  background-color: #14BDB3;
+}
+.count__group .count:hover:hover .subc {
+  color: #fff;
 }
 
 .count__group {
@@ -2815,18 +2865,21 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   z-index: 2;
   top: -8.6rem;
 }
+
 .count__group .inner {
   display: flex;
   justify-content: space-between;
 }
+
 .count__group .count {
   width: 40.5rem;
   padding: 3.3rem 0;
   max-height: 18rem;
   background-color: #fff;
-  box-shadow: 0px 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
   border-radius: 3.2rem;
 }
+
 .count__group .count > a {
   display: flex;
   flex-direction: column;
@@ -2836,13 +2889,14 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   height: 100%;
   text-align: center;
 }
+
 .count__group .count .subc {
   font-size: 3rem;
   font-weight: 700;
-  color: #000;
   text-align: center;
   line-height: 120%;
 }
+
 .count__group .count .subc::before {
   content: "";
   width: 9rem;
@@ -2853,27 +2907,23 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background-color: #fff;
   border-radius: 50%;
 }
+
 .count__group .count .subc.open::before {
   background-image: url(../img/icons__open.png);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .count__group .count .subc.write::before {
   background-image: url(../img/icons__write.png);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .count__group .count .subc.manual::before {
   background-image: url(../img/icons__manual.png);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.count__group .count:hover {
-  background-color: #14BDB3;
-}
-.count__group .count:hover .subc {
-  color: #fff;
 }
 
 .main__graph {
@@ -2920,6 +2970,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding: 0 1rem;
 }
 
+.main__echart .table th {
+  height: 6.5rem;
+}
+
 .main__echart .data .unit {
   color: #767676;
   font-size: 1.3rem;
@@ -2933,6 +2987,34 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .main__echart .chart1, .chart2 {
   width: 320px;
+}
+
+.main__echart .table tbody td {
+  height: 6.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main__echart .table tbody td :nth-child(1) {
+  min-width: 10rem;
+}
+
+.main__echart .table tbody td :nth-child(2) {
+  min-width: 8rem;
+}
+
+.main__echart .table colgroup col:nth-child(1) {
+  width: 30%;
+}
+
+.main__echart .table colgroup col:nth-child(2) {
+  width: 25%;
+}
+
+.main__echart__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
 }
 
 .chartBox .container {
@@ -2968,38 +3050,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .table > #tableList {
   min-height: 40rem;
   max-height: 40rem;
-}
-
-.main__echart .table tbody td {
-  height: 6.5rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.main__echart .table tbody td :nth-child(1) {
-  min-width: 10rem;
-}
-
-.main__echart .table tbody td :nth-child(2) {
-  min-width: 8rem;
-}
-
-.main__echart .table colgroup col:nth-child(1) {
-  width: 30%;
-}
-
-.main__echart .table colgroup col:nth-child(2) {
-  width: 25%;
-}
-
-.main__echart__wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 3.2rem;
-}
-
-.main__echart .table th {
-  height: 6.5rem;
 }
 
 /*
@@ -3181,163 +3231,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
           appearance: none;
   width: 22%;
   padding: 0 8px;
-}
-
-/* 회계공시등록페이지 CSS */
-#public__register__form .form__table th {
-  width: 15.38%;
-  min-width: 15rem;
-  max-width: 15rem;
-}
-
-#public__register__form .td__calender__wrap {
-  max-width: 49rem;
-}
-
-#public__register__form .td__calender {
-  width: auto;
-}
-
-#public__register__form .form__table .td__date > select {
-  border: 1px solid blue;
-  width: calc(25% - 1rem);
-  max-width: 10rem;
-}
-
-#public__register__form .td__select__25 .td__container select {
-  flex: 1 1 calc(25% - 1rem);
-  min-width: 9.3rem;
-}
-
-#public__register__form .td__select__25 {
-  max-width: 49rem;
-}
-
-#public__register__form .td__select__25 > .td__container {
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.public__register__wrap .data__title {
-  margin-bottom: 1.6rem;
-}
-
-.public__register__wrap .form__table th {
-  padding: 0 1.5rem;
-}
-
-.public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {
-  flex-wrap: nowrap;
-}
-
-.public__register .tab__wrap .tab__btn {
-  width: 50%;
-}
-
-.public__table__wrap {
-  border-top: 2px solid #000;
-}
-
-.public__table tr {
-  line-height: 5.8rem;
-  width: 100%;
-  border-bottom: 0.1rem solid #ddd;
-}
-.public__table th {
-  width: 12.5%;
-}
-.public__table td {
-  width: 87.5%;
-  line-height: 100%;
-}
-.public__table td select {
-  height: 4rem;
-  border: 1px solid #ddd;
-}
-.public__table td input[type=text] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-  width: 100%;
-  padding: 0 8px;
-}
-.public__table td input[type=submit] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-}
-.public__table .col2__th {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.public__table .col2__th span {
-  line-height: 150%;
-  text-align: left;
-}
-.public__table .td--width--harf {
-  width: 50%;
-  border: 1px solid red;
-}
-.public__table .harf__td {
-  width: 37.5%;
-}
-.public__table .td--flex {
-  padding: 0 1rem;
-}
-
-.public__table .with__long__select .select__renew {
-  background: url(../img/select__renew.png) no-repeat 98% 50%;
-}
-
-.select__wrap__3 select {
-  width: calc(33.33% - 0.4rem);
-}
-
-.p-td__calender {
-  position: relative;
-}
-.p-td__calender .calender__icon {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  background: url(../img/calendar-days-regular.svg) no-repeat center;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1.2rem;
-}
-
-.p-td__date {
-  width: calc(100% - 3.6rem);
-}
-
-.p-select--no--style {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: calc(25% - 0.8rem);
-  padding: 0 0.8rem;
-}
-
-.public__table .flex {
-  display: flex;
-  align-items: center;
-}
-.public__table .flex label:nth-of-type(1) {
-  margin-right: 2rem;
-}
-.public__table input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  margin: 0;
-  margin-right: 0.7rem;
-  border: 1px solid #ccc;
-}
-.public__table input[type=radio]:checked {
-  border: 0.6rem solid #000;
 }
 
 /*
@@ -3620,29 +3513,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 100%;
 }
 
-/*
-    ac__management
-    관리자>통계및보고서관리>회계관리현황
-*/
-select {
-  display: inline-block;
-  height: 100%;
-  height: 4rem;
-  padding: 0.8rem 1rem 0.8rem 1.6rem;
-  -webkit-appearance: none; /* 크롬 화살표 없애기 */
-  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
-  appearance: none; /* 화살표 없애기 */
-  position: relative;
-  font-size: 1.6rem;
-  border: 0.1rem solid #ccc;
-}
-
-.select__renew {
-  background: url(../img/select__renew__mo.svg) no-repeat;
-  background-position: right 10px center;
-  background-color: #fff;
-}
-
+/* ac__management 관리자>통계및보고서관리>회계관리현황 */
 .search__work__group input {
   padding: 0.8rem 1rem;
   font-size: 1.6rem;
@@ -3671,100 +3542,6 @@ select {
 
 .check__result .table__vertical table tbody td:nth-last-child(1) {
   border-right: 0;
-}
-
-.check__result .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.check__result .pagination .page-navi {
-  line-height: 4rem;
-  font-size: 1.6rem;
-}
-.check__result .pagination .page-navi.prev {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 2rem;
-}
-.check__result .pagination .page-navi.prev::before {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;
-}
-.check__result .pagination .page-navi.next {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 2rem;
-}
-.check__result .pagination .page-navi.next::after {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  background: url(../img/more__arrow__right__black.png) no-repeat center;
-}
-.check__result .pagination .page-link {
-  display: inline-block;
-  width: 4rem;
-  line-height: 4rem;
-  text-align: center;
-  font-size: 1.6rem;
-  border-radius: 0.7rem;
-}
-.check__result .pagination .active {
-  background-color: #0c3975;
-  color: #fff;
-  font-weight: 600;
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pagination .page-navi {
-  line-height: 4rem;
-  font-size: 1.6rem;
-}
-.pagination .page-navi.prev {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 2rem;
-}
-.pagination .page-navi.prev::before {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;
-}
-.pagination .page-navi.next {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 2rem;
-}
-.pagination .page-navi.next::after {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  background: url(../img/more__arrow__right__black.png) no-repeat center;
-}
-.pagination .page-link {
-  display: inline-block;
-  width: 4rem;
-  line-height: 4rem;
-  text-align: center;
-  font-size: 1.6rem;
-  border-radius: 0.7rem;
-}
-.pagination .active {
-  background-color: #0c3975;
-  color: #fff;
-  font-weight: 600;
 }
 
 .note__th {
@@ -4602,9 +4379,52 @@ select {
   font-weight: 400;
 }
 
-/*
-    서브 모바일 스타일 CSS
-*/
+#public__register__form .form__table th {
+  width: 15.38%;
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+#public__register__form .td__calender__wrap {
+  max-width: 49rem;
+}
+
+#public__register__form .td__calender {
+  width: auto;
+}
+
+#public__register__form .form__table .td__date > select {
+  width: calc(25% - 1rem);
+  max-width: 10rem;
+}
+
+#public__register__form .td__select__25 .td__container select {
+  flex: 1 1 calc(25% - 1rem);
+  min-width: 9.3rem;
+}
+
+#public__register__form .td__select__25 {
+  max-width: 49rem;
+}
+
+#public__register__form .td__select__25 > .td__container {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.public__register__wrap .data__title {
+  margin-bottom: 1.6rem;
+}
+
+.public__register__wrap .form__table th {
+  padding: 0 1.5rem;
+}
+
+.public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {
+  flex-wrap: nowrap;
+}
+
+/* 서브 모바일 스타일 CSS */
 .mobile__tab {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -4732,18 +4552,6 @@ select {
   margin-top: 0;
 }
 
-.data--open {
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-}
-
-.data__toggle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  width: 100%;
-}
-
 .last--open::after {
   content: "";
   display: block;
@@ -4788,6 +4596,18 @@ select {
   background: url(../img/arrow__bottom.png) no-repeat center;
 }
 
+.data--open {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+
+.data__toggle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 100%;
+}
+
 .data--open.on .arrow__top {
   display: block;
 }
@@ -4812,6 +4632,7 @@ select {
 .list__btn__group {
   text-align: right;
 }
+
 .list__btn__group button {
   color: #fff;
   border: 0;
@@ -4822,7 +4643,6 @@ select {
   margin-bottom: 2rem;
   border-radius: 0.7rem;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .mo__open__wrap .mobile__market__input {
@@ -5544,12 +5364,6 @@ select {
     width: 100%;
     margin-bottom: 1.6rem;
   }
-  .wrap .footer__bottom .footer__logo {
-    display: none;
-  }
-  .wrap .footer__bottom .mobile__logo {
-    padding-top: 4rem;
-  }
   .wrap .sns__info {
     padding-top: 3.2rem;
   }
@@ -5610,15 +5424,6 @@ select {
   .wrap .banner__wrap {
     display: flex;
   }
-  .wrap .logo {
-    display: none;
-  }
-  .wrap .mobile__logo {
-    display: block;
-    width: 196px;
-    display: flex;
-    align-items: center;
-  }
   .wrap .banner__btn {
     width: calc(100% - 1.6rem);
   }
@@ -5668,9 +5473,6 @@ select {
   }
   .wrap .count__group .count .subc {
     font-size: 2rem;
-  }
-  .wrap .swiper__container {
-    width: 80%;
   }
   .wrap .banner__swiper .swiper-slide-active {
     visibility: visible;
@@ -5744,12 +5546,6 @@ select {
     display: block;
     width: 100%;
     margin-bottom: 1.6rem;
-  }
-  .wrap .footer__bottom .footer__logo {
-    display: none;
-  }
-  .wrap .footer__bottom .mobile__logo {
-    padding-top: 4rem;
   }
   .wrap .sns__info {
     padding-top: 3.2rem;
@@ -5848,18 +5644,6 @@ select {
   }
   .wrap .banner__wrap {
     display: flex;
-  }
-  .wrap .logo {
-    display: none;
-  }
-  .wrap .mobile__logo {
-    display: block;
-    position: relative;
-  }
-  .wrap .mobile__logo img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .wrap .header__btm {
     margin: 0.8rem 0;
@@ -6054,6 +5838,13 @@ select {
 }
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+  .footer__bottom .footer__logo {
+    padding-top: 3.2rem;
+  }
+  .footer__bottom .footer__flex {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
   .header__btm .right__icon__set .talk {
     display: none;
   }
@@ -6079,12 +5870,6 @@ select {
 }
 /* 모바일 최소 사이즈*/
 @media all and (max-width: 420px) {
-  .mobile__logo {
-    width: 196px;
-  }
-  .mobile__logo img {
-    width: 100%;
-  }
   .header__btm .right__icon__set a {
     padding: 1rem 0.8rem;
   }

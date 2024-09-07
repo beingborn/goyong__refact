@@ -59,7 +59,7 @@ body {
 
 .inner { max-width: 128rem; width: 128rem; margin: 0px auto; }
 
-.mobile__logo {display: none; min-height: 3rem;}  
+// .mobile__logo {display: none; min-height: 3rem;}  
 .header__btm .right__icon__set .hamburger {display: none;}
 
 label {font-size: 1.5rem;}
@@ -72,6 +72,9 @@ label {font-size: 1.5rem;}
     font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    font-size: 1.6rem;
+    background-color: #fff;
   }
 input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
 
@@ -82,7 +85,6 @@ input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; b
 .chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
 
 // 페이지 제목
-
 .page__title {font-size: 4rem;}
 
 
@@ -116,7 +118,12 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 
 // 셀렉터 관련 클래스
 .select__box select {height: 4rem; min-width: 10rem;}
-.select__renew {background: url(../img/select__renew.png) no-repeat 93% 50%;}
+.select__renew {
+  background-image: url(../img/select__renew.png);
+  background-repeat: no-repeat;
+  //background-position: 93% 50%;
+  background-position: right 1rem center;
+}
 .select--no--style {
 display: inline-block;
   width: 100%;
