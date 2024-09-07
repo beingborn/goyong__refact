@@ -27,12 +27,22 @@
 // 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
 .mobile__tab { display: none; }
 .mobile__tab__content { display: none;}
-// .sub1_1 .tab__content {padding-top: 8rem;}
+
 .sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
+// 탭별 버튼 마진
 .sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(1) .button__container,
+.sub1__1__wrap .tab:nth-of-type(2) .button__container,
+.sub1__1__wrap .tab:nth-of-type(4) .button__container
+{margin-top: 6.4rem; margin-bottom: 25rem;}
+
+
 .sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(3) .pc__info {margin-top: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
+.sub1__1__wrap .tab:nth-of-type(3) .button__container {margin-bottom: 25rem;}
 
 
 
