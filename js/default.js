@@ -89,15 +89,17 @@
 
 
 
+  // 모달 열기 이벤트 핸들러
+  //   $('[data-target]').click(function() {
+  //     const targetModal = $(this).data('target');
+  //     setModalWidth(targetModal)
 
-    $('[data-target]').click(function() {  // 모달 열기 이벤트 핸들러
-      const targetModal = $(this).data('target');
-      setModalWidth(targetModal)
+  //     $(targetModal).show();
+  //     $('.modal__bg').show();
 
-      $(targetModal).show();
-      $('.modal__bg').show();
+  // });
 
-  });
+
 
   // 모달 닫기 이벤트 핸들러
   $('.modal__close button').click(function() {
