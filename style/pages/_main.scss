@@ -109,9 +109,14 @@
 .main__echart .table colgroup col:nth-child(1){width: 30%;}
 .main__echart .table colgroup col:nth-child(2){width: 25%;}
 .main__echart__wrap {display: flex; justify-content: space-between; gap: 3.2rem;}
+.main__echart .table__unit {padding-bottom: 1.2rem; font-size: 1.7rem;}
+
 .chartBox .container { display: flex; justify-content: center; align-items: center;}
 .chartBox .title {font-size: 2.5rem;}
 .data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
+
+
+
 
 #tableList tbody tr.on {background-color:   #DDEAF6!important;}
 .chartData__wrap {display: flex; padding-top: 3rem;}

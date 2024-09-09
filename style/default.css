@@ -3003,6 +3003,11 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   gap: 3.2rem;
 }
 
+.main__echart .table__unit {
+  padding-bottom: 1.2rem;
+  font-size: 1.7rem;
+}
+
 .chartBox .container {
   display: flex;
   justify-content: center;
