@@ -19,7 +19,6 @@
 .form__table tr { line-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
 
 .form__table th { width: 19.53%; min-width: 25rem; } // 해당 min-width 수치는 임시
-
 .form__table td { flex-grow: 1; line-height: 100%; }
 .form__table td input[type="text"], .form__table td input[type="password"] { border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
 .form__table td input[type="submit"] { border: 1px solid #ddd; line-height: 4rem; }
@@ -29,7 +28,7 @@
 
 // 필수 입력
 .must__type { position: relative; text-align: left; }
-.must__type::after { content: ' *'; color: #FE5555; position: absolute; top: -0.2rem; right: -1rem; font-weight: bold; }
+.must__type::after { content: ' *'; color: #FE5555; position: absolute; right: -1rem; font-weight: 700; }
 
 // 회원가입 페이지 
 // .sign__up__table__wrap .select__renew { background: url(../img/select__renew.png) no-repeat 98% 50%; }

@@ -3175,9 +3175,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   content: " *";
   color: #FE5555;
   position: absolute;
-  top: -0.2rem;
   right: -1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .sign__up__table .radio__wrap .flex {
