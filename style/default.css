@@ -63,7 +63,7 @@ body {
   margin: 0px auto;
 }
 
-.header__btm .right__icon__set .hamburger {
+.hamburger {
   display: none;
 }
 
@@ -1889,25 +1889,26 @@ input[type=checkbox] {
   margin-bottom: 1.6rem;
   padding-top: 2rem;
 }
-.header__btm .right__icon__set {
+
+.right__icon__set {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.header__btm .right__icon__set a {
+.right__icon__set a {
   font-weight: bold;
   font-size: 1.7rem;
   padding: 1rem 1.2rem;
   display: inline-flex;
   align-items: center;
 }
-.header__btm .right__icon__set a img {
+.right__icon__set a img {
   margin-right: 0.8rem;
 }
-.header__btm .right__icon__set a span {
+.right__icon__set a span {
   white-space: nowrap;
 }
-.header__btm .right__icon__set .talk__count {
+.right__icon__set .talk__count {
   display: inline-block;
   width: 2.6rem;
   height: 2rem;
@@ -5525,19 +5526,8 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   .wrap .cs__center .content .visitor__graph img {
     width: 90%;
   }
-  .wrap footer .footer__top .btn__flex {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-  }
   .wrap footer .footer__top {
     height: auto;
-  }
-  .wrap footer .footer__top .btn__flex .top__btn:nth-child(1) {
-    border-top: 1px solid #d8d8d8;
-  }
-  .wrap footer .footer__top .btn__flex .top__btn {
-    width: 100%;
-    border-bottom: 1px solid #d8d8d8;
   }
   .wrap footer .footer__top .btn__flex {
     flex-direction: column;
@@ -5555,12 +5545,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     display: block;
     width: 100%;
     margin-bottom: 1.6rem;
-  }
-  .wrap .sns__info {
-    padding-top: 3.2rem;
-  }
-  .wrap .sns__info .icon__wrap {
-    padding: 3.2rem 0;
   }
 }
 /* pc 전환시까지 변환 유지 되어야 하는 영역 */
@@ -5657,16 +5641,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   .wrap .header__btm {
     margin: 0.8rem 0;
     padding-top: 0;
-  }
-  .wrap .header__btm .right__icon__set a {
-    flex-direction: column;
-    font-size: 1.3rem;
-  }
-  .wrap .header__btm .right__icon__set a span {
-    padding-top: 0.8rem;
-  }
-  .wrap .header__btm .right__icon__set a img {
-    margin: 0;
   }
   .wrap .top__visual .main__hero .main__text {
     position: static;
@@ -5854,26 +5828,18 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
   }
-  .header__btm .right__icon__set .talk {
+  .right__icon__set a:not(.hamburger) {
     display: none;
   }
-  .header__btm .right__icon__set .sign__up {
-    display: none;
-  }
-  .header__btm .right__icon__set .login {
-    display: none;
-  }
-  .header__btm .right__icon__set .hamburger {
+  .right__icon__set a.hamburger {
     display: inline-flex;
-  }
-  .header__btm .right__icon__set a {
     flex-direction: column;
     font-size: 1.3rem;
   }
-  .header__btm .right__icon__set a span {
+  .right__icon__set a span {
     padding-top: 0.8rem;
   }
-  .header__btm .right__icon__set a img {
+  .right__icon__set a img {
     margin: 0;
   }
 }

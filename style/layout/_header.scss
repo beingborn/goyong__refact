@@ -94,18 +94,8 @@
 }
 
 // 하단 헤더 영역
-.header__btm {
-    position: relative;
-    align-items: center;
-    display: flex;
-    margin-bottom: 1.6rem;
-    padding-top: 2rem;
-
-    .right__icon__set {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-
+.header__btm {position: relative;align-items: center;display: flex;margin-bottom: 1.6rem;padding-top: 2rem;}
+.right__icon__set {display: flex;align-items: center;margin-left: auto;
         a {
             img {
                 margin-right: 0.8rem;
@@ -136,7 +126,6 @@
             margin-left: 0.8rem;
         }
     }
-}
 
 .base__gnb {
     height: 6.4rem;
