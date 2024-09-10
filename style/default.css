@@ -5842,6 +5842,18 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   .right__icon__set a img {
     margin: 0;
   }
+  .page__title {
+    display: none;
+  }
+  .foldStyle__table .qna__title {
+    background: transparent;
+  }
+  .foldStyle__table .arrow__box {
+    display: none;
+  }
+  .foldStyle__table td {
+    border-right: 0.1rem solid #ddd;
+  }
 }
 /* 모바일 최소 사이즈*/
 @media all and (max-width: 420px) {
