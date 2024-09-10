@@ -34,13 +34,14 @@
   .top__visual .main__hero .quick__menu {position: static; justify-content: center; padding-top: 10rem; padding-bottom: 4rem;}
   .wrap .main__swiper .main__btn__group {bottom: -2rem;}
   .wrap .swiper__container {width: 85.625%;}
+
+
   .wrap .footer__top .inner {padding: 0;}
   .wrap .footer__bottom .footer__flex {flex-direction: column;}
   .wrap .footer__global .g__flex {flex-direction: column;}
   .wrap .footer__global .global__link {margin-top: 1.6rem;} 
   .wrap .footer__global .global__link a {display: block; width: 100%; margin-bottom: 1.6rem;} 
-  .wrap .sns__info {padding-top: 3.2rem;} 
-  .wrap .sns__info .icon__wrap {padding: 3.2rem 0;} 
+
   .wrap .banner__btn {width: calc(100% - 4rem);}
   .content .tab__wrap {width: 100%; padding: 0 2rem; padding-top: 8rem;}
 
@@ -154,7 +155,6 @@
   }
 
   .wrap {
-    .top__banner .banner__wrap { line-height: 150%; padding: 0.8rem 0;} 
     .banner__text a {margin-left: 0;}
     .inner {width: 100%;padding: 0 1.6rem;} 
     .header__top {display: none;}
@@ -253,7 +253,8 @@
   // 자주묻는 질문
   .foldStyle__table .qna__title {background: transparent;}
   .foldStyle__table .arrow__box {display: none;} 
-  .foldStyle__table td{border-right: 0.1rem solid #ddd;}
+  .foldStyle__table tr:nth-child(odd) td:nth-of-type(1){border-right: 0.1rem solid #ddd;}
+  .foldStyle__table .qna__function__group {margin-right: 0;}
 }
 
 

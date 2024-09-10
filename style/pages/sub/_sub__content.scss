@@ -122,7 +122,9 @@
 .qna__container.answer {background-color: #000000;}
 
 // 자주 묻는 질문 테이블
-.foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: center;}
+.foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
+.foldStyle__table tbody tr:nth-child(odd) td {display: flex; align-items: center;}
+.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%;}
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
 .foldStyle__table .qna__title {min-width: 12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
 .foldStyle__table .answer__toggle {font-size: 1.6rem; font-weight: 700;}
