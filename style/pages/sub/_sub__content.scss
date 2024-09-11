@@ -3,6 +3,8 @@
 */
 
 
+label.mo_only {display: none;}
+
 // 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap id , 서브 페이지 이미지 지정 
 #sub__wrap .content .visual__bg { width: 100%; height: 25rem; position: relative; }
 #sub__wrap .accn_desc .visual__bg {background: url(../img/top_visual_desc.jpg) no-repeat center;  background-size: cover; }
@@ -19,6 +21,17 @@
 #sub__wrap .faq .visual__bg {background: url(../img/top_visual_faq.jpg) no-repeat center;  background-size: cover;}
 #sub__wrap .file_change .visual__bg {background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
 
+// 서브 페이지별 버튼 마진
+.function__group.margin-1 {margin-top: 4rem;} 
+.function__group.margin-2 {margin-top: 6.4rem;} 
+.pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
+.pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
+
+
+.notice__detail  .function__group.margin-1 {margin-bottom: 10rem;}
+.public__register__wrap .function__group.margin-2 {margin-bottom: 25rem;}
+
+
 // 서브 페이지 이미지 텍스트 위치 
 #sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
 #sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
@@ -31,18 +44,14 @@
 .sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
 // 탭별 버튼 마진
 .sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(1) .button__container,
-.sub1__1__wrap .tab:nth-of-type(2) .button__container,
-.sub1__1__wrap .tab:nth-of-type(4) .button__container
-{margin-top: 6.4rem; margin-bottom: 25rem;}
-
-
 .sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(3) .pc__info {margin-top: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(3) .button__container {margin-bottom: 25rem;}
+.sub1__1__wrap .function__group.margin-2 {margin-bottom: 25rem;}
+
+
 
 
 
@@ -83,7 +92,7 @@
 .search__form__user .search {padding: 4rem;}
 
 // 파일 찾기 폼
-.search__form__user .preview {background-color: #fff; height: 4.8rem;}
+.search__form__user .preview {background-color: #fff; height: 4.8rem; flex-grow: 1;}
 .search__form__user .upload__wrap .btn__file__select {font-weight: 400; min-height: 4.8rem;}
 .search__form__user .upload__wrap .btn__upload {font-weight: 400; min-height: 4.8rem;}
 
@@ -92,9 +101,9 @@
 .search__form__user .search input {font-size: 1.7rem;}
 .search__form__user .search .select__box {min-width: 18rem; height: 4.8rem;}
 .search__form__user .search .input__box {height: 4.8rem; display: flex; flex: 1;}
-
 .search__form__user .search .input__box > input {height: 100%; flex: 1; background: #fff;}
 .search__form__user .search .select__box > select {width: 100%; height: 100%;}
+.search__form__user label.mo_only {font-weight: 700; font-size: 1.7rem; padding-bottom: 1rem; margin-right: auto;}
 
 
 
@@ -112,7 +121,8 @@
 .accn__result table {font-size: 1.6rem;}
 .accn__result table thead th:not(:first-child){border-right: 0;}
 .accn__result table tbody td:not(:first-child){border-right: 0;}
-.accn__open__page .pagination {margin-bottom: 18rem; margin-top: 6.4rem;} // 페이지 네이션 간격 조정 
+
+// .accn__open__page .pagination {margin-bottom: 18rem; margin-top: 6.4rem;} 
 
 
 // 홈 > 시스템안내 > 자주묻는 질문
@@ -126,12 +136,13 @@
 .foldStyle__table tbody tr:nth-child(odd) td {display: flex; align-items: center;}
 .foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%;}
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
-.foldStyle__table .qna__title {min-width: 12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
-.foldStyle__table .answer__toggle {font-size: 1.6rem; font-weight: 700;}
+.foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
+.foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
 .foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
 .foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
 .foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
-.faq__page__wrap .pagination {margin-top: 7.6rem; margin-bottom: 4rem;}
+
+// .faq__page__wrap .pagination {margin-top: 7.6rem; margin-bottom: 4rem;}
 
 
 
@@ -139,6 +150,9 @@
 // 홈 > 시스템 안내 > 공지사항
 .notice__page .pagination {margin-bottom: 20rem;}
 .notice__wrap .search__form__user .input__box > input {margin: 0 2.4rem;}
+
+
+
 
 
 // 홈 > 시스템 안내 > 공지사항 상세
@@ -173,12 +187,26 @@
 // 홈 > 회계공시등록 > 가맹노조(산하조직)관리
 .union__management__wrap .pagination{margin-bottom: 6.4rem;}
 .union__management__wrap .table__horizontal__ex {margin-bottom: 25rem;}
-.union__management__wrap .search .input__box , .union__management__wrap .search .preview {max-width: 48rem; min-width: 48rem;}
+// .union__management__wrap .search .input__box , .union__management__wrap .search .preview {max-width: 48rem; min-width: 48rem;}
 .union__management__wrap .search .input__box {margin-right: 2.4rem;}
 .union__management__wrap .btn__file__select {min-width: 9.1rem;}
 .union__management__wrap .upload__wrap {flex-grow: 1;}
+.union__management__wrap .upload__wrap .content__wrap {width: 100%;}
+
+.union__management__wrap .function__group {position: absolute; top: 0; right: 0;}
 .union__function__group .btn__control__u {padding: 0 1.2rem; font-size: 1.5rem; height: 4rem;}
 .union__table__title__wrap {margin-bottom: 3.6rem;}
+
+
+
+
+
+
+
+
+
+
+
 
 // 홈 > 회계공시 시스템이란
 .accn__desc__wrap .desc__inner {padding: 0 9rem;}
@@ -247,5 +275,4 @@
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 // #public__register__form .form__table .td__date {display: flex; justify-content: space-between;}
-
 

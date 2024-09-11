@@ -46,3 +46,5 @@
 .pagination .page-navi.next::after {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../img/more__arrow__right__black.png) no-repeat center;} 
 .pagination .page-link {display: inline-block; width: 4rem; line-height: 4rem; text-align: center; font-size: 1.6rem; border-radius: 0.7rem;} 
 .pagination .page-link.active {background-color: #0c3975; color: #fff; font-weight: 700;}
+.pagination.m-page{display: none; flex-direction: column;}
+.pagination.m-page .page-navis {display: flex; align-items: center; margin-bottom: 2.4rem;}

@@ -5,6 +5,8 @@
 /* 큰 화면에서 중앙 정렬이 안맞는 오류가 있었음*/
 @media all and (min-width: 1441px) {
   .banner__swiper .swiper-button-next, .swiper-button-prev {margin-top: calc(0px - (64px / 2));}
+  .union__management__wrap .search .input__box, .union__management__wrap .search .preview {min-width: 48rem;}
+  .preview {min-width: 50rem;}
 }
 
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -61,7 +63,6 @@
 @media all and (min-width: 480px) and (max-width: 767px) {
   .wrap {
     // 공통 영역
-    .inner { width: 100%; padding: 0 1.6rem; } 
     .swiper__container { width: 100%; padding: 0 9.2rem; } 
     .count__group .count { width: 32%; }
     .top__banner { height: auto; }
@@ -125,6 +126,9 @@
   .banner__box .banner__text p { font-size: 2rem; }
   .banner__btn .swiper-button-next, .banner__btn .swiper-button-prev { width: 4rem; height: 4rem; }
   .main__swiper .swiper-slide-active .item .item__wrap .total .total__wrap:nth-child(1)::after { display: none; }
+
+  // 상단 검색폼
+  .search__form__user .search .select__box {min-width: auto;}
 }
 
 
@@ -159,11 +163,8 @@
     .inner {width: 100%;padding: 0 1.6rem;} 
     .header__top {display: none;}
     .header__gnb #gnb1{display: none;}
-    // .header__gnb #gnb2 {display: block;}
-    .banner__wrap {display: flex;}
-    .header__btm {margin: 0.8rem 0; padding-top: 0;}
 
-    
+    .banner__wrap {display: flex;}
     .top__visual .main__hero .main__text { position: static; padding-top: 6.3rem; text-align: center; }
     .top__visual .main__hero .main__text .main__bold { font-size: 3.2rem; padding-bottom: 3.2rem; margin-bottom: 0; }
     .top__visual .main__hero .quick__menu { position: static; padding-top: 10rem; padding-bottom: 4rem; justify-content: center; }
@@ -178,13 +179,11 @@
     .count__group .count > a { flex-direction: row; justify-content: start; padding-left: 5.6rem; }
     .count__group .count .subc { font-size: 2.4rem; display: flex; align-items: center; 
     }
-    .count__group .count .subc::before { margin-bottom: 0; margin-right: 1.6rem; 
-        // 임시 코드
-        width: 6rem;
-        height: 6rem;
-        border-radius: 50%;
-    }
+    .count__group .count .subc::before { margin-bottom: 0; margin-right: 1.6rem; width: 6rem;height: 6rem;border-radius: 50%;}
     .section__top .section__title { font-size: 3.2rem; }
+
+
+    
     
 
     
@@ -203,14 +202,15 @@
     footer .footer__top .btn__flex .top__btn { width: 100%; border-bottom: 1px solid #d8d8d8; }
     footer .footer__top .btn__flex { flex-direction: column; }
     footer .footer__bottom .footer__flex { flex-direction: column; }
-    .footer__bottom { padding-top: 4rem; }
     .footer__global .g__flex { flex-direction: column; }
     .footer__global .global__link { margin-top: 1.6rem; }
     .footer__global .global__link a { display: block; width: 100%; margin-bottom: 1.6rem; }
-    .footer__bottom .footer__logo { display: none; }
     .sns__info { padding-top: 3.2rem; }
     .sns__info .icon__wrap { padding: 3.2rem 0; }
   }
+
+
+
 }
 
 /* 모바일 최소 사이즈 ~ 태블릿 세로 */
@@ -241,20 +241,93 @@
 
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+
+  .inner { width: 100%; padding: 0 1.6rem; } 
+  .btn__control {width: 100%;}
+  .header__btm {padding: 0;}
+
+  // 웹용 테이블, 모바일용 테이블
+  .w__table {display: none;}
+  .m__table {display: block;}
+
+
   .footer__bottom .footer__logo {padding-top: 3.2rem;}  
   .footer__bottom .footer__flex {padding-top: 3.2rem; padding-bottom: 3.2rem;}
- 
+
+  // 상단 아이콘 셋
   .right__icon__set a:not(.hamburger) { display: none; }
   .right__icon__set a.hamburger { display: inline-flex; flex-direction: column; font-size: 1.3rem;}
   .right__icon__set a span { padding-top: 0.8rem; } 
   .right__icon__set a img { margin: 0; }
   
-  .page__title {display: none;}
+  // 공통 페이지 네이션
+  .pagination.w-page{display: none;}
+  .pagination.m-page{display: flex;}
+  label.mo_only {display: block;}
+  .breadcrumb {margin-bottom: 6.4rem;}
+  .union__management__wrap .user__form__wrapper {margin-top: 3.6rem;} 
+  .union__management__wrap .search .input__box {margin: 0;}
+
+  .page__title__wrap {display: none;}
+  .table__title__wrap {margin-bottom: 3.6rem; margin-top: 3.6rem;}
   // 자주묻는 질문
   .foldStyle__table .qna__title {background: transparent;}
   .foldStyle__table .arrow__box {display: none;} 
   .foldStyle__table tr:nth-child(odd) td:nth-of-type(1){border-right: 0.1rem solid #ddd;}
-  .foldStyle__table .qna__function__group {margin-right: 0;}
+  .foldStyle__table .qna__function__group {margin-right: 0; width: 4rem; justify-content: center;} 
+  .foldStyle__table .qna__title {width: 4rem; min-width: auto;}
+  .foldStyle__table td {font-size: 1.9rem;}
+  .foldStyle__table td {min-height: 8rem;}
+  .foldStyle__table .answer__toggle {font-size: 1.9rem;}
+  // .faq__page__wrap .pagination {margin-top: 3.6rem; margin-bottom: 6rem;}
+  .qna__container.question {background-color: #000;}
+  .qna__container.answer {background-color: #9C9C9C;}
+  .qna__container{width: 2rem; height: 2rem;}
+
+  // 상단 검색폼
+  // .search__form__user {margin-top: 6.4rem;}
+  .search__form__user .search label.mo_only:nth-of-type(2){margin-top: 2.4rem;}
+  .search__form__user .search {padding: 2rem;}
+  .search__form__user .search__list {flex-direction: column; justify-content: start;}
+  .search__form__user .search__list .input__box {flex-direction: column; width: 100%;}
+  .search__form__user .search .select__box {min-width: auto; width: 100%;}
+  .search__form__user .btn__con {margin-top: 2.4rem;}
+  .search__form__user .btn__con > button {flex: 1;}
+
+  // 회계공시 열람
+  .accn__open__wrap .search__form__user .search > div label {margin-right: auto;}
+  .accn__open__wrap .search__form__user .search > div label:not(.mo_only) {padding-bottom: 1rem;}
+  .accn__open__wrap .search__form__user .search .input__box > input {margin: 0;}
+  .accn__open__wrap .mo_only {padding-top: 2.4rem}
+  .accn__open__wrap .data__number {margin-bottom: 3.6rem;}
+
+
+  // .search__form__user .search .first__input__box {padding-bottom: ;}
+  .notice__wrap .search__form__user .input__box > input {margin: 0;}
+  .faq__wrap .search__form__user .input__box > input {margin: 0;}
+
+  // 공지사항 상세
+  .notice__detail .table__horizontal__ex tr {display: block;}
+  .notice__detail .table__horizontal__ex tr th {min-width: 10rem; max-width: 10rem; min-height: 5.8rem; vertical-align: middle;}
+  .notice__detail .table__horizontal__ex tr td {width: calc(100% - 11rem); min-height: 5.8rem;}
+  .notice__detail .table__horizontal__ex tr:nth-child(2){position: relative;}
+  .notice__detail .table__horizontal__ex tr:nth-child(2)::after{content: ''; height: 0.1rem; background: #ddd; display: inline-block; position: absolute; width: 100%; left: 0;} 
+  .board__detail {padding: 3.6rem 0;}
+
+  .notice__detail .file__wrap {flex-direction: column;}
+  .notice__detail .file__header {margin-right: auto; padding-left: 0; border-right: 0;}
+  .notice__detail .file__wrap .list {margin-right: auto; padding-left: 0;}
+  .file__wrap {width: 100%; padding: 0 1rem;}
+  .file__wrap .download {margin-right: auto; margin-left: 0; padding-top: 1rem; padding-bottom: 1rem;}
+  .prev__next .prev span, .prev__next .next span {min-width: auto; margin-right: 2rem;}
+  .prev__next > li {padding-left: 1rem;}
+
+  // 가맹노조 (산하조직) 관리
+  .union__management__wrap .function__group {width: 100%; display: flex; justify-content: space-between; gap: 1rem;}
+  .union__management__wrap .function__group button {flex: 1;}
+  .union__management__wrap .function__group button:nth-child(1) {display: none;}
+
+
 }
 
 
@@ -266,5 +339,6 @@
   .top__visual .main__hero .quick__menu .quick__wrap { width: 9rem; height: 9rem; }
   .manual .tip { object-fit: contain; width: 12rem; height: auto; }
   .banner__text { font-size: 1.5rem; }
-  .footer__bottom { padding-top: 4rem; }
+  .footer__bottom { padding-top: 4rem;}
+  .btn__control__u {white-space: nowrap;}
 }

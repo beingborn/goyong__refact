@@ -5,7 +5,7 @@
 
 // 테이블 공통 스타일
 table th {font-weight: 700; background-color: #EAF5F0;}
-table td {font-weight: 700;}
+// table td {font-weight: 700;}
 // table thead th {font-weight: 700;}
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
 
@@ -32,9 +32,10 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 // thead를 가지고 있지 않은 가로 테이블 
 // .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
-.table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem;} 
-.table__horizontal__ex td {width: auto; flex-grow: 1;} 
+// .table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
+.table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
+.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; z-index: -1; min-width: 18rem; display: inline-flex; align-items: center;} 
+.table__horizontal__ex td {width: auto; flex-grow: 1; display: inline-flex; align-items: center;} 
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
 .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem; flex-grow: 0;}
@@ -164,6 +165,23 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .read__info__table input[type="text"] {border: 0; font-weight: 700;}
 .table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
 
+// 모바일용 테이블
+.m__table {display: none;}
+.table__horizontal__mo table {font-size: 1.9rem;}
+.table__horizontal__mo table th {background: transparent;}
+.table__horizontal__mo tr {border-bottom: 0.1rem solid #ddd;}
+.table__horizontal__mo td {display: block;}
+ .attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: cover; }
+.table__horizontal__mo .title {margin-top: 1rem; margin-bottom: 2rem;}
+.table__horizontal__mo .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
+
+.notice__wrap .table__horizontal__mo td {padding-bottom: 1rem;}
+
+// 회계공시 열람 페이지 (모바일용 테이블 스타일)
+.accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem;}
+.accn__open__wrap .table__horizontal__mo .sub__title {min-width: 12rem;}
+.accn__open__wrap .table__horizontal__mo td:not(:last-child) {padding-bottom: 1rem;}
+.accn__open__wrap .table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
 
 
 

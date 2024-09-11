@@ -91,7 +91,8 @@
     // 공통 상단 테이블 제목
     .table__title.flex__title {flex-direction: column; align-items: baseline;}
     .table__title.flex__title > h2 {font-size: 3.2rem;}
-    .table__title {margin-top: 3.6rem;}
+
+    // .table__title {margin-top: 3.6rem;}
     .table__title .must__help__message {margin: 0;}
 
     // 회원가입 페이지 
@@ -117,7 +118,7 @@
     .sign__up__table__wrap .select__renew{background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;}
     .sign__up__table__wrap .td__date .select__renew {background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;}
 
-    .btn__full__wrap .function__group .btn__control {width: 100%;}
+    .btn__half__wrap .function__group {display: flex;}
     .btn__half__wrap .function__group .btn__control {width: 50%;}
     .radio__wrap label {font-size: 1.9rem;}
 
@@ -148,7 +149,9 @@
         .main__accn__desc__wrap .data__title {display: none;}
 }
 
-
+@media all and (max-width: 767px) {
+    .btn__half__wrap .function__group .btn__control:nth-of-type(1) {margin-bottom: 1rem;}
+}
 
 
 // .sign__up__table__wrap .calender__icon {position: absolute; right: 2.4rem; width: 2.4rem; height: 2.4rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center;}

@@ -208,7 +208,8 @@
                                 <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
                                 <input type="hidden" id="yearSel" name="yearSel" value="">
 
-                                <div class="flex--box-c">
+                                <div class="flex--box-c search__list">
+                                    <label for="label" class="mo_only">검색항목</label>
                                     <div class="select__box">
                                         <select class="select--no--style select__renew" id="year" name="year">
                                             <option value="">전체</option>
@@ -217,6 +218,7 @@
                                         </select>
                                     </div>
 
+                                    <label for="label" class="mo_only">검색어</label>
                                     <div class="input__box">
                                         <label for="searchText" class="blind">질문조회</label>
                                         <input
@@ -226,23 +228,26 @@
                                             class="ml4"
                                             placeholder="내용을 입력하세요."
                                             value="">
-                                        <button
+
+                                         <div class="flex--box-c btn__con">
+                                            <button
                                             type="button"
                                             id=""
                                             class="btn__control__u bg--mint-00 mg--24-r"
                                             onclick="fn_search();">초기화</button>
-                                        <button
+                                            <button
                                             type="button"
                                             id=""
                                             class="btn__control__u bg--blue-02 mg--24-r "
                                             onclick="fn_search();">조회</button>
-                                        <button
+                                            <button
                                             type="button"
                                             id=""
                                             class="btn__control__u bg--green-02"
                                             onclick="fn_search();">자료다운로드</button>
-                                    </div>
+                                         </div>   
 
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -465,19 +470,16 @@
 
                         <!-- 테이블 페이지 이동 버튼 -->
                         <div class="faq__page__wrap">
-                            <div class="pagination w-page">
+                            <div class="pagination w-page pagination__margin">
                                 <a class="page-navi prev" href="#">이전</a>
                                 <div class="page-links">
                                     <a class="page-link active" href="#">1</a>
                                     <span class="page-link link-dot">
                                         ···
                                     </span>
+                                    <a class="page-link" href="#">5</a>
                                     <a class="page-link" href="#">6</a>
                                     <a class="page-link" href="#">7</a>
-                                    <a class="page-link" href="#">8</a>
-                                    <a class="page-link" href="#">9</a>
-                                    <a class="page-link" href="#">10</a>
-                                    <a class="page-link" href="#">11</a>
                                     <span class="page-link link-dot">
                                         ···
                                     </span>
@@ -485,7 +487,32 @@
                                 </div>
                                 <a class="page-navi next" href="#">다음</a>
                             </div>
+
+                            <!-- paging : 모바일 -->
+                            <div class="pagination m-page">
+                                <div class="page-navis">
+                                    <a class="page-navi prev" href="#">이전</a>
+                                    <a class="page-navi next" href="#">다음</a>
+                                </div>
+                                <div class="page-links">
+                                    <a class="page-link" href="#">1</a>
+                                    <span class="page-link link-dot">...</span>
+                                    <a class="page-link" href="#">7</a>
+                                    <a class="page-link active" href="#">8</a>
+                                    <a class="page-link" href="#">9</a>
+                                    <span class="page-link link-dot">...</span>
+                                    <a class="page-link" href="#">120</a>
+                                </div>
+                            </div>
+
+
                         </div>
+
+
+
+
+
+
 
                         <script>
 

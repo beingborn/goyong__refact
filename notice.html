@@ -176,18 +176,35 @@
 					<input type="hidden" id="lbrUniId" name="lbrUniId" value="">
 					<input type="hidden" id="yearSel" name="yearSel" value="">
 	
-					<div class="flex--box-c">
+					<div class="flex--box-c search__list">
+                        <label for="label" class="mo_only">검색항목</label>
 						<div class="select__box"> 
 							<select class="select--no--style select__renew" id="year" name="year">
 							<option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
 						</div>
 
+                        <label for="label" class="mo_only">검색어</label>
                         <div class="input__box">
                             <label for="searchText" class="blind">질문조회</label>
                             <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value=""> 
-                            <button type="button" id="" class="btn__control__u bg--mint-00 mg--24-r" onclick="fn_search();">초기화</button>
-                            <button type="button" id="" class="btn__control__u bg--blue-02 mg--24-r " onclick="fn_search();">조회</button>
-                            <button type="button" id="" class="btn__control__u bg--green-02" onclick="fn_search();">자료다운로드</button>
+                            <div class="flex--box-c btn__con">
+                                <button
+                                type="button"
+                                id=""
+                                class="btn__control__u bg--mint-00 mg--24-r"
+                                onclick="fn_search();">초기화</button>
+                                <button
+                                type="button"
+                                id=""
+                                class="btn__control__u bg--blue-02 mg--24-r "
+                                onclick="fn_search();">조회</button>
+                                <button
+                                type="button"
+                                id=""
+                                class="btn__control__u bg--green-02"
+                                onclick="fn_search();">다운로드</button>
+                             </div>
+                        
                         </div>
 
 					</div>
@@ -201,8 +218,9 @@
 
 
          <!-- 게시글 -->
-         <div class="accn__result check__result">
-			<div class="tab__detail table__vertical" style="margin-bottom: 6.4rem;">
+         <!-- accn__result -->
+         <div class="check__result">
+			<div class="tab__detail table__vertical w__table">
 			  <table class="border-top-large"> <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더 추가 -->
 				<caption>
                     공지사항
@@ -214,11 +232,10 @@
 				</colgroup>
 				<thead>
 				  <tr>
+
 					<th scope="col"><div class="min__h__box text--c">번호</div></th>
 					<th><div class="min__h__box text--c">내용</div></th>
 					<th class="ex"><div class="min__h__box text--c">파일첨부</div></th>
-				
-				
 				  </tr>
 				</thead>
 				<tbody>
@@ -259,23 +276,99 @@
 			  </table>
 			</div>
 
+            <div class="m__table">
+                <div class="table__horizontal__mo">
+                    <table class="border-top-large">
+                        <caption>모바일용 공지사항 테이블</caption>
+                        <colgroup>
+                            <col width="19.44%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+								<td class="txt--l title">
+                                    <a href="" >
+                                        2024년 노동조합 회계공시 수정기간 안내
+									</a>
+								</td>
+								<td>
+                                    <span class="sub__title">첨부</span>
+                                    <span class="attachment__mo"></span>
+                                </td>
+								<td>
+                                    <span class="sub__title">등록일</span>
+                                    <span class="date">2024.09.11</span>
+                                </td>
+							</tr>
+                            <tr>
+								<td class="txt--l title">
+                                    <a href="" >
+									[공고]2024년 지역일자리사업 자치단체 추가공모
+									</a>
+								</td>
+								<td>
+                                    <span class="sub__title">첨부</span>
+                                    <span class="attachment__mo"></span>
+                                </td>
+								<td>
+                                    <span class="sub__title">등록일</span>
+                                    <span class="date">2024.09.11</span>
+                                </td>
+							</tr>
+                            <tr>
+								<td class="txt--l title">
+                                    <a href="" >
+									[공고]2024년 지역일자리사업 자치단체 추가공모
+									</a>
+								</td>
+								<td>
+                                    <span class="sub__title">첨부</span>
+                                    <span class="attachment__mo"></span>
+                                </td>
+								<td>
+                                    <span class="sub__title">등록일</span>
+                                    <span class="date">2024.09.11</span>
+                                </td>
+							</tr>
+                            <tr>
+								<td class="txt--l title">
+                                    <a href="">
+									[공고]2024년 지역일자리사업 자치단체 추가공모
+									</a>
+								</td>
+								<td>
+                                    <span class="sub__title">첨부</span>
+                                    <span class="attachment__mo"></span>
+                                </td>
+								<td>
+                                    <span class="sub__title">등록일</span>
+                                    <span class="date">2024.09.11</span>
+                                </td>
+							</tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+            </div>
+
            
 
 			<!-- 테이블 페이지 이동 버튼 -->
             <div class="notice__page">
-                <div class="pagination w-page">
+                <div class="pagination w-page pagination__margin">
                     <a class="page-navi prev" href="#">이전</a>
                     <div class="page-links">
                         <a class="page-link active" href="#">1</a>
                         <span class="page-link link-dot">
                             ···
                         </span>
+                        <a class="page-link" href="#">5</a>
                         <a class="page-link" href="#">6</a>
                         <a class="page-link" href="#">7</a>
-                        <a class="page-link" href="#">8</a>
-                        <a class="page-link" href="#">9</a>
-                        <a class="page-link" href="#">10</a>
-                        <a class="page-link" href="#">11</a>
                         <span class="page-link link-dot">
                             ···
                         </span>
@@ -284,6 +377,25 @@
                     <a class="page-navi next" href="#">다음</a>
                 </div>
             </div>
+
+              <!-- paging : 모바일 -->
+              <div class="pagination m-page pagination__margin__mo">
+                <div class="page-navis">
+                    <a class="page-navi prev" href="#">이전</a>
+                    <a class="page-navi next" href="#">다음</a>
+                </div>
+                <div class="page-links">
+                    <a class="page-link" href="#">1</a>
+                    <span class="page-link link-dot">...</span>
+                    <a class="page-link" href="#">7</a>
+                    <a class="page-link active" href="#">8</a>
+                    <a class="page-link" href="#">9</a>
+                    <span class="page-link link-dot">...</span>
+                    <a class="page-link" href="#">120</a>
+                </div>
+            </div>
+
+
 
 		  </div>
 
@@ -294,16 +406,6 @@
 
 
 	</div>
-
-
-
-
-    <!-- <div class="example__img" style="text-align: center; margin-top: 8rem; margin-bottom: 25rem;">
-        <a href="notice__detail.html">
-        <img src="img/공지사항(임시).jpg" alt="회계공시 시스템이란" >
-
-        </a>
-    </div> -->
 
 	</main>
 	<footer>

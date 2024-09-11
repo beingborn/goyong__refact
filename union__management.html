@@ -164,19 +164,24 @@
 
              
         <!-- 테이블 제목 -->
-        <div class="page__title__wrap sysguide">
+        <div class="relative" style="min-height: 4.8rem;">
+          <div class="page__title__wrap sysguide">
             <div class="page__title flex__title">
                 <h2>가맹노조(산하조직)관리</h2>
-                <div class="union__function__group">
-                    <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
-                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
-                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
-                    <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">저장</button>
-                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
-                    <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
-                </div>
             </div>
+          </div>
+
+          <div class="function__group">
+            <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
+            <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
+            <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
+            <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">저장</button>
+            <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
+            <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
         </div>
+
+        </div>
+
             <!-- 검색 폼 시작 -->
             <div class="user__form__wrapper">
                 <form class="search__form__user" action="POST">
@@ -185,27 +190,24 @@
                         <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
                         <input type="hidden" id="yearSel" name="yearSel" value="">
         
-                        <div class="flex--box-c">
+                        <div class="flex--box-c search__list">
+                          <label for="label" class="mo_only">검색항목</label>
                             <div class="input__box">
                                 <label for="searchTexte" class="blind">노동조합명 조회</label>
                                 <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합 또는 산하조직 명을 입력하세요." value=""> 
-
+                                <button type="button" class="mo_only">조회</button>
                             </div>
                             
                             <div class="upload__wrap">
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="flex--box-end">
-                                        <div class="flex--box-c">
-                
-                                        
-                
+                                        <div class="flex--box-c content__wrap">
+                                          <label for="label" class="mo_only">파일업로드</label>
                                             <div class="preview flex--box-c pd--10-m mg--24-r">
                                                 <div>
-                                                    <p></p>
+                                                    <p>선택된 파일없음</p>
                                                 </div>
                                             </div>
-                
-                
                                             <label class="mg--24-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
                                             <div>
                                                 <button class="btn__upload bg--blue-00">업로드</button>
@@ -287,7 +289,7 @@
 
                 <!-- 가맹노조 -->
                 <div class="union__page">
-                    <div class="pagination w-page">
+                    <div class="pagination w-page pagination__margin">
                         <a class="page-navi prev" href="#">이전</a>
                         <div class="page-links">
                             <a class="page-link active" href="#">1</a>

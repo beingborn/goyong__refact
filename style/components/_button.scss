@@ -22,7 +22,7 @@ button {cursor: pointer; background: inherit;}
 
 // 관리자 페이지 상단 버튼입니다. 
 .btn__control { color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem; border-radius: 0.7rem; font-weight: 400; cursor: pointer;}
-.function__group {margin-top: 4rem; margin-bottom: 2rem;display: flex;justify-content: end;}
+.function__group {text-align: right;}
 .function__group .btn__control:not(:last-child) {margin-right: 1rem;}
 
 // 서브 페이지 상단 탭 버튼 스타일
@@ -100,3 +100,5 @@ button {cursor: pointer; background: inherit;}
 .input__find {
   padding: 0.8rem 2.6rem;
 }
+
+.btn__file {width: 2rem; height: 2rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: contain;}
