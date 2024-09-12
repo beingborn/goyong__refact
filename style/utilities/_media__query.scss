@@ -245,6 +245,7 @@
   .inner { width: 100%; padding: 0 1.6rem; } 
   .btn__control {width: 100%;}
   .header__btm {padding: 0;}
+  .tab__wrap {padding: 0;}
 
   // 웹용 테이블, 모바일용 테이블
   .w__table {display: none;}
@@ -270,6 +271,7 @@
 
   .page__title__wrap {display: none;}
   .table__title__wrap {margin-bottom: 3.6rem; margin-top: 3.6rem;}
+  .table__title__wrap .data__number {margin-top: 3.6rem;}
   // 자주묻는 질문
   .foldStyle__table .qna__title {background: transparent;}
   .foldStyle__table .arrow__box {display: none;} 
@@ -299,7 +301,6 @@
   .accn__open__wrap .search__form__user .search > div label:not(.mo_only) {padding-bottom: 1rem;}
   .accn__open__wrap .search__form__user .search .input__box > input {margin: 0;}
   .accn__open__wrap .mo_only {padding-top: 2.4rem}
-  .accn__open__wrap .data__number {margin-bottom: 3.6rem;}
 
 
   // .search__form__user .search .first__input__box {padding-bottom: ;}
@@ -332,6 +333,9 @@
   .union__management__wrap .search__list .input__box input {width: calc(100% - 1rem); margin-right: 1rem;}
   .union__management__wrap .upload__flex {flex-wrap: wrap;}
   .union__management__wrap .upload__wrap {width: 100%;}
+  .union__management__wrap .form__table th {min-width: 15rem;}
+  .union__table__title__wrap {margin-top: 3.6rem;}
+  .union__management__wrap .table__horizontal__ex {margin-bottom: 6rem;}
 }
 
 

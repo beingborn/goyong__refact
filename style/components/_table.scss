@@ -45,7 +45,8 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .input-3--flex input {flex: 1;}
 
 // 사용자 공통 테이블 타이틀
-.table__title__wrap {margin-bottom: 3.6rem; margin-top: 6.4rem;}
+.table__title__wrap {margin-bottom: 6.4rem; margin-top: 6.4rem;}
+.table__title__wrap .data__number {margin-top: 6.4rem;}
 .table__title {font-size: 2.5rem; font-weight: 700;}
 
 
@@ -171,17 +172,16 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__mo table th {background: transparent;}
 .table__horizontal__mo tr {border-bottom: 0.1rem solid #ddd;}
 .table__horizontal__mo td {display: block;}
+.table__horizontal__mo tr td:not(:first-child):not(:last-child){padding-bottom: 1rem;}
+.table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
+.table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
  .attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: cover; }
-.table__horizontal__mo .title {margin-top: 1rem; margin-bottom: 2rem;}
-.table__horizontal__mo .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
 
-.notice__wrap .table__horizontal__mo td {padding-bottom: 1rem;}
-
-// 회계공시 열람 페이지 (모바일용 테이블 스타일)
+.table__horizontal__mo:not(.widthAutoTable) .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
+.table__horizontal__mo .sub__title {font-weight: 700;}
 .accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem;}
 .accn__open__wrap .table__horizontal__mo .sub__title {min-width: 12rem;}
-.accn__open__wrap .table__horizontal__mo td:not(:last-child) {padding-bottom: 1rem;}
-.accn__open__wrap .table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
+.union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
 
 
 

@@ -116,7 +116,6 @@ button.mo_only {display: none;}
 
 .accn__open__wrap .search__form__user .search .input__box > input {margin: 0 2.4rem;}
 .accn__open__wrap .search__form__user .search > div label {font-size: 1.7rem; font-weight: 700; margin-right: 1.2rem;}
-.accn__open__wrap .data__number {margin-bottom: 6.4rem;}
 
 // 홈 > 회계공시열람
 .accn__result table {font-size: 1.6rem;}
@@ -184,7 +183,6 @@ button.mo_only {display: none;}
 // 공지사항 목록 버튼
 .notice__list {margin-top: 10rem; margin-bottom: 10rem;}
 
-
 // 홈 > 회계공시등록 > 가맹노조(산하조직)관리
 .union__management__wrap .pagination{margin-bottom: 6.4rem;}
 .union__management__wrap .table__horizontal__ex {margin-bottom: 25rem;}
@@ -193,17 +191,9 @@ button.mo_only {display: none;}
 .union__management__wrap .btn__file__select {min-width: 9.1rem;}
 .union__management__wrap .upload__wrap {flex-grow: 1;}
 .union__management__wrap .function__group {position: absolute; top: 0; right: 0;}
+.union__management__wrap .table__horizontal__mo tr td:first-child {padding-bottom: 1rem;}
 .union__function__group .btn__control__u {padding: 0 1.2rem; font-size: 1.5rem; height: 4rem;}
 .union__table__title__wrap {margin-bottom: 3.6rem;}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -232,6 +222,7 @@ button.mo_only {display: none;}
     right: 0;
 }
 // 주요 공시항목 설명 2번 섹션
+.accn__desc__wrap .image__container {background-size: cover; border: 1px solid red;}
 .accn__desc__wrap .content__section:nth-child(2){margin-top: 10rem; display: flex; position: relative;}
 .accn__desc__wrap .content__section:nth-child(2) .image__container{width: 58.4rem; height: 27.9rem; margin-left: 5rem; background-image: url('../img/accn__desc__img_02.png');}
 .accn__desc__wrap .content__section:nth-child(2) .text__container {padding-top: 4rem; max-width: 47rem;}
