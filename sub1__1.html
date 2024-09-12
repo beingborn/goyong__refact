@@ -200,17 +200,349 @@
             <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <!-- 모바일컨테이너 -->
-        <div class="mo__open__wrap">
+        <!-- pc탭 -->
+        <!-- PC 노동조합정보 -->
+        <div class="tab__content" id="work__infomation">
           <div class="inner">
-            <div class="mobile__con motab-1">
-              <!-- 노동 조합 정보 모바일 -->
-              <div class="market">
-                <h2 class="data__title">노동조합정보</h2>
-                <div class="mo__tab__detail">
-                  <table class="market__info" id="UnionInformationMobile">
-                    <caption>공시정보(회계연도,회계기간)출력폼</caption>
+            <div class="tab__1 tab">
+              <div class="table__wrapper pc__info">
+                <div class="" style="margin-bottom: 6.4rem;">
+                  <h2 class="table__title">기본사항</h2>
+                </div>
+                <div class="tab__detail table__horizontal__ex read__info__table">
+                  <table class="border-top-large">
+                    <caption>
+                      공시정보 검색 폼
+                    </caption>
+                    <tbody>
+                      <tr style="position: relative" class="r2">
+                        <th scope="row" class="long__th cols2">
+                          <label for="examples9" class="must__write">
+                            노동조합명칭
+                            <br>
+                            (또는 산하조직)
+                          </label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text" id="examples9" value="전국항운노동조합연맹" readonly>
+                          </div>
+                        </td>
+                        <th scope="row" style="white-space: nowrap;">
+                          <label for="examples10">
+                            노동조합 약어명
+                          </label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text"id="examples10" value="" readonly >
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="r2">
+                        <th scope="row">
+                          <label for="example22" class="must__write">대표자</label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text" id="example22" value="최*영" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">
+                          <label for="examples11" class="">설립연월일</label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text" id="examples11" value="1980-109-10" readonly>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="r2">
+                        <th scope="row">
+                          <label for="examples12">조직형태</label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text"  style="width: 100%" value="" id="examples12" readonly>
+                          </div>
+                        </td>
+                        <th scope="col">
+                          <label for="examples13">조합원 수</label>
+                        </th>
+                        <td>
+                          <div class="td__container">
+                            <input type="text" value="" style="width: 100%" id="examples13">
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">
+                          <label for="examples14">상급단체의 명칭</label>
+                        </th>
+                        <td class="flex--box-c">
+                          <div class="input-3--flex td__container">
+                            <input type="text" value="" id="examples14" readonly>
+                            <input type="text" value="">
+                            <input type="text" value="" >
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="function__group margin-2">
+                  <button type="button" class="btn__control bg--blue-00">목록</button>
+                </div>
+              </div>
+            </div>
+            <!-- PC버전 회계공시열람 -->
+            <div class="tab__2 tab">
+              <!-- 상단 영역  -->
+              <div class="pc__info">
+                <h2 class="data__title flex--box-s">공시정보 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
+                <div class="tab__detail table__horizontal__ex">
+                  <table class="border-top-large">
+                    <caption>
+                      공시정보 검색 폼
+                    </caption>
+                    <tbody>
+                      <tr style="position: relative" class="wide__first">
+                        <th scope="row" style="white-space: nowrap;">
+                          <label for="name">
+                            <span>회계연도</span>
+                          </label>
+                        </th>
+                        <td>
+                          <div class="td__container"> 
+                            <select name="searchField" id="select" class="select--no--style select__renew" >
+                              <option value="" selected="">전체</option>
+                              <option value="2022">2024</option>
+                              <option value="2022">2023</option>
+                              <option value="2022">2022</option>
+                            </select>
+                          </div>
+                        </td>
+                        <th scope="row" style="white-space: nowrap;">
+                        
+                          <label for="examples1033">
+                            <span>회계기간</span>
+                          </label>
+                        </th>
+                        <td>
+                          <div class="td__container flex--box-c">
+                              <input type="text">
+                              ~
+                              <input type="text">
+                          </div>   
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- 자산 및 부채 현황 -->
+              <div class="pc__info">
+                <h2 class="data__title flex--box-s">자산 및 부채 현황 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
+                <div class="tab__detail table__vertical">
+                  <table class="cross__table border-top-large">
+                    <caption>
+                      자산 및 부채현황 {구분, 자산}
+                    </caption>
                     <colgroup>
+                      <col class="align__cols">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col"><div class="min__h__box text--c">구분</div></th>
+                        <th scope="col"><div class="min__h__box text--c">자산</div></th>
+                        <th scope="col"><div class="min__h__box text--c">현금및예금</div></th>
+                        <th scope="col"><div class="min__h__box text--c">토지</div></th>
+                        <th scope="col"><div class="min__h__box text--c">건물</div></th>
+                        <th scope="col"><div class="min__h__box text--c">기타자산</div></th>
+                        <th scope="col"><div class="min__h__box text--c">부채</div></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- 수입현황 -->
+              <div class="pc__info earn__sit">
+                <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
+                <div class="tab__detail table__vertical">
+                  <table class="cross__table border-top-large">
+                    <caption>
+                      수입현황 {구분, 자산}
+                    </caption>
+                    <colgroup>
+                      <col class="align__cols">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2"><div class="min__h__box text--c">구분</div></th>
+                        <th rowspan="2"><div class="min__h__box text--c">수입총계</div></th>
+                        <th rowspan="2"><div class="min__h__box text--c">전년도 이월금</div></th>
+                        <th colspan="8"><div class="min__h__box text--c">당기수입</div></th>
+                      </tr>
+                      <tr>
+                        <th><div class="min__h__box text--c">조합비</div>
+                        </th>
+                        <th><div class="min__h__box text--c">상급단체 교부금</div>
+                        <th><div class="min__h__box text--c">하부조직 부과금</div>
+                        <th><div class="min__h__box text--c">후원금</div>
+                        <th><div class="min__h__box text--c">타회계 전임금</div>
+                        <th><div class="min__h__box text--c">보조금 수입</div>
+                        <th><div class="min__h__box text--c">수익사업 수입</div>
+                        <th><div class="min__h__box text--c">기타</div></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- 지출 현황 -->
+              <div class="pc__info expend__sit">
+                <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
+                <div class="tab__detail table__vertical">
+                  <table class="min--width cross__table border-top-large">
+                    <caption>
+                      지출현황
+                    </caption>
+                    <colgroup>
+                      <col class="align__cols" >
+                      <col>
+                      <col>
+                      <col>
                       <col>
                       <col>
                       <col>
@@ -224,59 +556,153 @@
                       <col>
                       <col>
                     </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="3"><div class="min__h__box text--c">구분</div></th>
+                        <th rowspan="3"><div class="min__h__box text--c">지출총계</div></th>
+                        <th colspan="13"><div class="min__h__box text--c">당기지출</div></th>
+                        <th rowspan="3"><div class="min__h__box text--c">차년도<br>이월금</div></th>
+                      </tr>
+                      <tr>
+                        <th colspan="3"><div class="min__h__box text--c">일반관리비용</div></th>
+                        <th colspan="6"><div class="min__h__box text--c">사업수행비용</div></th>
+                        <th rowspan="2"><div class="min__h__box text--c">상급단체<br>부과금</div></th>
+                        <th rowspan="2"><div class="min__h__box text--c">하부조직<br>교부금</div></th>
+                        <th rowspan="2"><div class="min__h__box text--c">타회계<br>전출금</div></th>
+                        <th rowspan="2" class="border-right"><div class="min__h__box text--c">기타</div></th>
+                      </tr>
+                      <tr>
+                        <th><div class="min__h__box text--c">인건비</div></th>
+                        <th><div class="min__h__box text--c">업무추진비</div></th>
+                        <th><div class="min__h__box text--c">기타운영비</div></th>
+                        <th><div class="min__h__box text--c">총회 등 <br>대회비</div></th>
+                        <th><div class="min__h__box text--c">조직사업비</div></th>
+                        <th><div class="min__h__box text--c">정책사업비</div></th>
+                        <th><div class="min__h__box text--c">교육·홍보<br>사업비</div></th>
+                        <th><div class="min__h__box text--c">교섭·쟁의<br>사업비</div></th>
+                        <th class="border-right"><div class="min__h__box text--c">기타사업비</div></th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
-                        <th scope="col">
-                          <label for="examples" class="must__write">노동자명칭(또는 산하조직)</label>
-                        </th>
-                        <td>
-                          <input class="mobile__market__input" type="text" id="examples">
-                        </td>
-
-                        <th scope="col">
-                          <label for="examples2" class="must__write" style="white-space: nowrap;">노동조합 약어명</label>
-                        </th>
-                        <td class="input--flex">
-                          <input class="mobile__market__input" type="text" id="examples2">
-                        </td>
-
-                        <th scope="col">
-                          <label for="examples3" class="must__write">대표자</label>
-                        </th>
-                        <td class="input--flex">
-                          <input class="mobile__market__input" type="text" id="examples3">
-                        </td>
-
-                        <th scope="col">
-                          <label for="examples4" class="must__write">조직형태</label>
-                        </th>
-                        <td class="input--flex">
-                          <input class="mobile__market__input__2" type="text" id="examples4">
-                          <input class="mobile__market__input__2" type="text">
-                        </td>
-
-                        <th scope="col">
-                          <label for="examples5" class="must__write">조합원 수</label>
-                        </th>
-                        <td class="input--flex">
-                          <input class="mobile__market__input" type="text" id="examples5">
-                        </td>
-
-                        <th scope="col">
-                          <label for="examples6" class="must__write">상급단체의 명칭</label>
-                        </th>
-                        <td class="input--flex">
-                          <input class="mobile__market__input__3" type="text" id="examples6">
-                          <input class="mobile__market__input__3" type="text">
-                          <input class="mobile__market__input__3" type="text">
-                        </td>
+                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">25</div></td>
+                        <td><div class="min__h__box text--r">725</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>                        
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">25</div></td>
+                        <td><div class="min__h__box text--r">725</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>              
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">25</div></td>
+                        <td><div class="min__h__box text--r">725</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>              
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">25</div></td>
+                        <td><div class="min__h__box text--r">725</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>              
+                      </tr>
+                      <tr>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <td><div class="min__h__box text--r">2,725</div></td>
+                        <td><div class="min__h__box text--r">25</div></td>
+                        <td><div class="min__h__box text--r">725</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>              
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-            </div>
-            <!-- 모바일 탭 index2 -->
+              <div
+                class="pc__info table__horizontal table__last"
+                style="margin-bottom: 20px"
+              >
+                <table>
+                  <caption>
+                    공시정보(회계연도, 회계기간)출력폼
+                  </caption>
+                  <colgroup>
+                    <col class="align__cols">
+                    <col class="algin__last" style="width: 85%;" >
+                  </colgroup>
+                  <tbody>
+                    <tr class="border--btm">
+                      <th scope="col">
+                        <label for="examples17">주석</label>
+                      </th>
+                      <td class="input--flex">
+                        <input type="text" value="" id="examples17">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- 탭 2 모바일 컨텐츠 -->
             <div class="mobile__con motab-2">
               <!-- 공시 정보 -->
               <div class="market">
@@ -1133,553 +1559,12 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- pc탭 -->
-        <!-- PC 노동조합정보 -->
-        <!-- style="margin-bottom: 60px" -->
-        <div class="tab__content" id="work__infomation"
->
-          <div class="inner">
-            <div class="tab__1 tab">
-              <div class="table__wrapper pc__info">
-                <div class="" style="margin-bottom: 6.4rem;">
-                  <h2 class="table__title">기본사항</h2>
-                </div>
-
-                <div class="tab__detail table__horizontal__ex read__info__table">
-                  <table class="border-top-large">
-                    <caption>
-                      공시정보 검색 폼
-                    </caption>
-                    <tbody>
-                      <tr style="position: relative" class="r2">
-                        <th scope="row" class="long__th cols2">
-                          <label for="examples9" class="must__write">
-                            노동조합명칭
-                            <br>
-                            (또는 산하조직)
-                          </label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text" id="examples9" value="전국항운노동조합연맹" readonly>
-                          </div>
-                        </td>
-                        <th scope="row" style="white-space: nowrap;">
-                          <label for="examples10">
-                            노동조합 약어명
-                          </label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text"id="examples10" value="" readonly >
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr class="r2">
-                        <th scope="row">
-                          <label for="example22" class="must__write">대표자</label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text" id="example22" value="최*영" readonly>
-                          </div>
-                        </td>
-                        <th scope="row">
-                          <label for="examples11" class="">설립연월일</label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text" id="examples11" value="1980-109-10" readonly>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr class="r2">
-                        <th scope="row">
-                          <label for="examples12">조직형태</label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text"  style="width: 100%" value="" id="examples12" readonly>
-                          </div>
-                        </td>
-                        <th scope="col">
-                          <label for="examples13">조합원 수</label>
-                        </th>
-                        <td>
-                          <div class="td__container">
-                            <input type="text" value="" style="width: 100%" id="examples13">
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th scope="row">
-                          <label for="examples14">상급단체의 명칭</label>
-                        </th>
-                        <td class="flex--box-c">
-                          <div class="input-3--flex td__container">
-                            <input type="text" value="" id="examples14" readonly>
-                            <input type="text" value="">
-                            <input type="text" value="" >
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="function__group margin-2">
-                  <button type="button" class="btn__control bg--blue-00">목록</button>
-                </div>
-              </div>
+            <div class="function__group margin-2">
+              <button type="button" class="btn__control bg--blue-00">목록</button>
             </div>
-            <!-- PC버전 회계공시열람 -->
-            <div class="tab__2 tab">
-
-
-
-              <!-- 상단 영역  -->
-              <div class="pc__info">
-                <h2 class="data__title flex--box-s">공시정보 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
-                <div class="tab__detail table__horizontal__ex">
-                  <table class="border-top-large">
-                    <caption>
-                      공시정보 검색 폼
-                    </caption>
-                    <tbody>
-                      <tr style="position: relative" class="wide__first">
-                        <th scope="row" style="white-space: nowrap;">
-                          <label for="name">
-                            <span>회계연도</span>
-                          </label>
-                        </th>
-                        <td>
-                          <div class="td__container"> 
-                            <select name="searchField" id="select" class="select--no--style select__renew" >
-                              <option value="" selected="">전체</option>
-                              <option value="2022">2024</option>
-                              <option value="2022">2023</option>
-                              <option value="2022">2022</option>
-                            </select>
-                          </div>
-                        </td>
-                        <th scope="row" style="white-space: nowrap;">
-                        
-                          <label for="examples1033">
-                            <span>회계기간</span>
-                          </label>
-                        </th>
-                        <td>
-                          <div class="td__container flex--box-c">
-                              <input type="text">
-                              ~
-                              <input type="text">
-
-
-                              <!-- 임시 코드 -->
-                              <!-- <div class="calender__body"><input type="text" class="datePicker" id="testPicker_h" maxlength="10"><label for="testPicker" class="calender__icon mg--10-l"></label></div>
-                               ~
-                              <div class="calender__body"><input type="text" class="datePicker" id="testPicker_h" maxlength="10"><label for="testPicker" class="calender__icon mg--10-l"></label></div> -->
-                          </div>
-
-                          
-                        
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-              </div>
-              <!-- 자산 및 부채 현황 -->
-              <div class="pc__info">
-                <h2 class="data__title flex--box-s">자산 및 부채 현황 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
-                <div class="tab__detail table__vertical">
-                  <table class="cross__table border-top-large">
-                    <caption>
-                      자산 및 부채현황 {구분, 자산}
-                    </caption>
-                    <colgroup>
-                      <col class="align__cols">
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col"><div class="min__h__box text--c">구분</div></th>
-                        <th scope="col"><div class="min__h__box text--c">자산</div></th>
-                        <th scope="col"><div class="min__h__box text--c">현금및예금</div></th>
-                        <th scope="col"><div class="min__h__box text--c">토지</div></th>
-                        <th scope="col"><div class="min__h__box text--c">건물</div></th>
-                        <th scope="col"><div class="min__h__box text--c">기타자산</div></th>
-                        <th scope="col"><div class="min__h__box text--c">부채</div></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- 수입현황 -->
-              <div class="pc__info earn__sit">
-                <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
-                <div class="tab__detail table__vertical">
-                  <table class="cross__table border-top-large">
-                    <caption>
-                      수입현황 {구분, 자산}
-                    </caption>
-                    <colgroup>
-                      <col class="align__cols">
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col" rowspan="2"><div class="min__h__box text--c">구분</div></th>
-                        <th rowspan="2"><div class="min__h__box text--c">수입총계</div></th>
-                        <th rowspan="2"><div class="min__h__box text--c">전년도 이월금</div></th>
-                        <th colspan="8"><div class="min__h__box text--c">당기수입</div></th>
-                      </tr>
-                      <tr>
-                        <th><div class="min__h__box text--c">조합비</div>
-                        </th>
-                        <th><div class="min__h__box text--c">상급단체 교부금</div>
-                        <th><div class="min__h__box text--c">하부조직 부과금</div>
-                        <th><div class="min__h__box text--c">후원금</div>
-                        <th><div class="min__h__box text--c">타회계 전임금</div>
-                        <th><div class="min__h__box text--c">보조금 수입</div>
-                        <th><div class="min__h__box text--c">수익사업 수입</div>
-                        <th><div class="min__h__box text--c">기타</div></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- 지출 현황 -->
-              <div class="pc__info expend__sit">
-                <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
-                <div class="tab__detail table__vertical">
-                  <table class="min--width cross__table border-top-large">
-                    <caption>
-                      지출현황
-                    </caption>
-                    <colgroup>
-                      <col class="align__cols" >
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <thead>
-
-
-                      <tr>
-                        <th scope="col" rowspan="3"><div class="min__h__box text--c">구분</div></th>
-                        <th rowspan="3"><div class="min__h__box text--c">지출총계</div></th>
-                        <th colspan="13"><div class="min__h__box text--c">당기지출</div></th>
-                        <th rowspan="3"><div class="min__h__box text--c">차년도<br>이월금</div></th>
-                      </tr>
-                      <tr>
-                        <th colspan="3"><div class="min__h__box text--c">일반관리비용</div></th>
-                        <th colspan="6"><div class="min__h__box text--c">사업수행비용</div></th>
-                        <th rowspan="2"><div class="min__h__box text--c">상급단체<br>부과금</div></th>
-                        <th rowspan="2"><div class="min__h__box text--c">하부조직<br>교부금</div></th>
-                        <th rowspan="2"><div class="min__h__box text--c">타회계<br>전출금</div></th>
-                        <th rowspan="2" class="border-right"><div class="min__h__box text--c">기타</div></th>
-                      </tr>
-                      <tr>
-                        <th><div class="min__h__box text--c">인건비</div></th>
-                        <th><div class="min__h__box text--c">업무추진비</div></th>
-                        <th><div class="min__h__box text--c">기타운영비</div></th>
-                        <th><div class="min__h__box text--c">총회 등 <br>대회비</div></th>
-                        <th><div class="min__h__box text--c">조직사업비</div></th>
-                        <th><div class="min__h__box text--c">정책사업비</div></th>
-                        <th><div class="min__h__box text--c">교육·홍보<br>사업비</div></th>
-                        <th><div class="min__h__box text--c">교섭·쟁의<br>사업비</div></th>
-                        <th class="border-right"><div class="min__h__box text--c">기타사업비</div></th>
-                      </tr>
-
-
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">25</div></td>
-                        <td><div class="min__h__box text--r">725</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">25</div></td>
-                        <td><div class="min__h__box text--r">725</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>              
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">25</div></td>
-                        <td><div class="min__h__box text--r">725</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>              
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">25</div></td>
-                        <td><div class="min__h__box text--r">725</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>              
-                      </tr>
-                      <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
-                        <td><div class="min__h__box text--r">2,725</div></td>
-                        <td><div class="min__h__box text--r">25</div></td>
-                        <td><div class="min__h__box text--r">725</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>
-                        <td><div class="min__h__box text--r">0</div></td>              
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div
-                class="pc__info table__horizontal table__last"
-                style="margin-bottom: 20px"
-              >
-                <table>
-                  <caption>
-                    공시정보(회계연도, 회계기간)출력폼
-                  </caption>
-                  <colgroup>
-                    <col class="align__cols">
-                    <col class="algin__last" style="width: 85%;" >
-                  </colgroup>
-                  <tbody>
-                    <tr class="border--btm">
-                      <th scope="col">
-                        <label for="examples17">주석</label>
-                      </th>
-                      <td class="input--flex">
-                        <input type="text" value="" id="examples17">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="function__group margin-2">
-                <button type="button" class="btn__control bg--blue-00">목록</button>
-              </div>
-
             </div>
             <!-- 탭 3 항목별 차트 -->
             <div class="tab__3 tab">
-
               <div class="pc__info">
 
               <div class="tab__detail table__horizontal__ex">

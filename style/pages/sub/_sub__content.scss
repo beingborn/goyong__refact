@@ -39,7 +39,8 @@ button.mo_only {display: none;}
 #sub__wrap .content .visual__bg .visual__text p { font-size: 2.2rem; }
 
 // 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
-.mobile__tab { display: none; }
+.mobile__con {display: none;}
+.mobile__tab {display: none; }
 .mobile__tab__content { display: none;}
 
 .sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
@@ -202,12 +203,13 @@ button.mo_only {display: none;}
 
 
 // 설명 1번 섹션
-.accn__desc__wrap .content__section:first-child {margin-top: 12rem; display: flex; position: relative; }
+.accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
 .content__section:first-child .image__container {
-    width: 33.7rem;
-    height: 52.7rem;
+    min-width: 33.7rem;
+    min-height: 52.7rem;
     margin-right: 5rem;
     background-image: url('../img/accn__desc__img_01.png');
+    background-size: cover;
 }
 .content__section .text__container .title {font-size: 3.6rem; font-weight: 700;}
 .content__section .text__container .desc {font-size: 1.8rem; color: #555555; max-width: 65rem;}
@@ -222,16 +224,17 @@ button.mo_only {display: none;}
     right: 0;
 }
 // 주요 공시항목 설명 2번 섹션
-.accn__desc__wrap .image__container {background-size: cover; border: 1px solid red;}
-.accn__desc__wrap .content__section:nth-child(2){margin-top: 10rem; display: flex; position: relative;}
-.accn__desc__wrap .content__section:nth-child(2) .image__container{width: 58.4rem; height: 27.9rem; margin-left: 5rem; background-image: url('../img/accn__desc__img_02.png');}
+.accn__desc__wrap  .section {margin-top: 10rem;}
+.accn__desc__wrap .content__section:nth-child(2){display: flex; position: relative;}
+.accn__desc__wrap .content__section:nth-child(2) .image__container{min-width: 58.4rem; min-height: 27.9rem; max-width: 58.4rem; max-height: 27.9rem; margin-left: 5rem; background-image: url('../img/accn__desc__img_02.png'); background-size: cover;}
 .accn__desc__wrap .content__section:nth-child(2) .text__container {padding-top: 4rem; max-width: 47rem;}
 .accn__desc__wrap .content__section:nth-child(2) .text__container .desc {margin-top: 3rem;}
-.accn__desc__wrap .content__section:nth-child(2) .circle__image__container {width: 41.2rem; height: 11rem; background-image: url('../img/accn__desc__img__circle__02.png'); position: absolute; left: 2.7rem; top: 22rem; bottom: -2rem;} 
+.accn__desc__wrap .content__section:nth-child(2) .circle__image__container {width: 41.2rem; height: 11rem; background-image: url('../img/accn__desc__img__circle__02.png'); position: absolute; left: 2.7rem; top: 22rem; bottom: -2rem; background-size: cover;} 
+.accn__desc__wrap .content__section:nth-child(3) .image__container {background-position: center center;}
 
 // 주요 공시항목 설명 3번 섹션
-.accn__desc__wrap .expected__section {text-align: center; margin-top: 15rem; margin-bottom: 35rem;}
-.accn__desc__wrap .expected__section .image__container {width: 100%; height: 26.2rem; margin: 5rem 0; background-image: url('../img/accn__desc__img__circle__03.png');}
+.accn__desc__wrap .expected__section {text-align: center; margin-bottom: 35rem;}
+.accn__desc__wrap .expected__section .image__container {width: 100%; height: 26.2rem; margin: 5rem 0; background-image: url('../img/accn__desc__img__circle__03.png'); background-position: center center;}
 .accn__desc__wrap .expected__section .title {font-size: 4.8rem; font-weight: 700;}
 
 

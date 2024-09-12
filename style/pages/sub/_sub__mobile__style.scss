@@ -5,20 +5,16 @@
 .mobile__tab {
   margin-top: 4rem;
   margin-bottom: 4rem;
-
   .swiper {
     border: 0.1rem dashed green;
-
     .swiper-slide {
       max-width: 13rem;
       text-align: center;
-
       .btn--active {
         color: $second-color;
         border-bottom: 0.2rem solid $second-color;
         font-weight: 700;
       }
-
       button {
         width: 100%;
         height: 100%;
@@ -34,21 +30,18 @@
       }
     }
   }
-
   .swiper-button-next {
     border-radius: 50%;
     background: url(../img/mo__tab__next.png) no-repeat center;
     background-size: 100% auto;
     box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);
   }
-
   .swiper-button-prev {
     border-radius: 50%;
     background: url(../img/mo__tab__prev.png) no-repeat center;
     background-size: 100% auto;
     box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);
   }
-
   .swiper-button-next,
   .swiper-button-prev {
     position: absolute;
@@ -56,30 +49,18 @@
     height: 2.4rem;
     margin-top: 0;
     margin-top: calc(0px - (2.4rem / 2));
-
     &::after {
       display: none;
     }
   }
 }
-
-// 첫번째 모바일 탭만 마진탑 5em
-.mobile__tab .first__mo {
-  margin-top: 5rem;
-}
-
 // 전체 테이블 기본 스타일
-.mo__open__wrap {
   .mobile__con {
     margin: 4rem 0;
     .market {
       margin-bottom: 4rem;
     }
-  }
-
   table {
-    font-size: 1.6rem;
-    width: 100%;
     text-align: left;
 
     tr {
@@ -112,20 +93,18 @@
       }
     }
   }
+}
 
   .data__title {
     font-size: 2.5rem;
   }
-}
+
 
 // 아코디언 테이블 스타일
-.mo__open__wrap {
   .mo__column {
-
     tr {
       flex-wrap: nowrap;
       margin-top: 1.6rem;
-
       td {
         &:nth-child(2) {
           text-align: right;
@@ -160,10 +139,6 @@
       margin-top: 0;
     }
   }
-}
-
-
-
 
 .last--open {
   &::after{
@@ -230,9 +205,9 @@
 .list__btn__group { text-align: right;}
 .list__btn__group button {color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem;  margin-top: 4rem; margin-bottom: 2rem; border-radius: 0.7rem; font-weight: 600;}
 
-.mo__open__wrap .mobile__market__input {width: 100%;}
-.mo__open__wrap .mobile__market__input__2 {width: calc(50% - 1em);}
-.mo__open__wrap .mobile__market__input__3 {width: calc(33.33% - 1em);}
+.mobile__market__input {width: 100%;}
+.mobile__market__input__2 {width: calc(50% - 1em);}
+.mobile__market__input__3 {width: calc(33.33% - 1em);}
 
 // 회계공시열람 첫번째 td 넓이
 .tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {min-width: 42rem;}

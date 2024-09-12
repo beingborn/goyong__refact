@@ -58,10 +58,8 @@ body {
 }
 
 .inner { max-width: 128rem; width: 128rem; margin: 0px auto; }
-.hamburger {display: none;}
+.right__icon__set .hamburger {display: none;}
 
-// label {font-size: 1.5rem;}
-  // input 
   input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
   input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
   input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
@@ -301,6 +299,9 @@ display: inline-block;
     width: 100%;
     height: 100%;
   }
+
+  .m__image {display: none;}
+  .m__image img {width: 100%; object-fit: cover;}
 
 
   // 에러 메세지 관련

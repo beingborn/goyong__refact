@@ -12,12 +12,12 @@
 /* 노트북 소형~ 중형 1080px ~ 1440px */
 @media all and (min-width: 1080px) and (max-width: 1440px) {  
   // 공통
-  .wrap .inner {width: 102.4rem;}
-  .wrap .cs__center .content .item { width: 48rem;}
+  // .wrap .inner {width: 102.4rem;}
+  // .wrap .cs__center .content .item { width: 48rem;}
   .wrap .count__group .count {width: 32%;}
-  .wrap .banner__btn {width: 102.4rem; }  
+  // .wrap .banner__btn {width: 102.4rem; }  
   .banner__btn .swiper-button-next, .banner__btn .swiper-button-prev { width: 4rem; height: 4rem; }
-  .content .tab__wrap { width: 102.4rem;}
+  // .content .tab__wrap { width: 102.4rem;}
 
   // 메인 데이터 차트
   .main__echart .table colgroup col:nth-child(1){width: 25%;}
@@ -29,7 +29,6 @@
 
 /* 태블릿 큰 사이즈 768px ~ 1079px */
 @media all and (min-width: 768px) and (max-width: 1079px) {
-  .wrap .inner {width: 100%; padding: 0 2rem;}
   .top__visual .main__hero .main__text {position: static; padding-top: 6.3rem; text-align: center;}
   .count__group .count {width: 32%; height: auto; padding: 2rem 0;}
   .count__group .count .subc {font-size: 2.8rem;}
@@ -52,11 +51,9 @@
   .main__echart .table__vertical {width: 100%;}
   .main__echart .table colgroup col:nth-child(1){width: 20%;}
   .main__echart .table colgroup col:nth-child(2){width: 20%;}
-  .main__echart__wrap {width: 100%;}
-  .main__echart .main__echart__wrap .chart1 , .main__echart .main__echart__wrap .chart2 {width: 50%;} 
+  .main__echart__wrap {width: 100%; justify-content: space-around;}
   .main__echart .chartBox .echart {display: flex; justify-content: center;}
   .main__echart .table__vertical table tbody td, .main__echart .table__vertical table thead th  {font-size: 1.6rem;}
-
 }
 
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */
@@ -236,31 +233,43 @@
 
       // 배너 스와이퍼
       .banner__swiper {margin: 5rem 0;}
-
 }
+
+
+@media all and (max-width: 1440px){
+  .wrap .inner {width: 100%; padding: 0 2rem;}
+}
+
+@media all and (max-width: 1080px){
+  // 회계공시시스템이란
+  .accn__desc__wrap .w__image {display: none;}
+  .accn__desc__wrap .m__image {display: block;}
+  .accn__desc__wrap .section:not(:nth-of-type(1)) {margin-top: 6.4rem;}
+  .accn__desc__wrap .content__section:first-child {margin-top: 0;}
+  .accn__desc__wrap .desc__inner {padding: 0;}
+  .accn__desc__wrap .content__section {flex-direction: column;}
+  .accn__desc__wrap .content__section .text__container {padding-top: 3.6rem;}
+  .accn__desc__wrap .content__section:nth-child(2) .text__container {padding-top: 3.6rem;}
+  .accn__desc__wrap .expected__section {margin-bottom: 10rem;}
+}
+
 
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
-
   .inner { width: 100%; padding: 0 1.6rem; } 
   .btn__control {width: 100%;}
   .header__btm {padding: 0;}
   .tab__wrap {padding: 0;}
-
   // 웹용 테이블, 모바일용 테이블
   .w__table {display: none;}
   .m__table {display: block;}
-
-
   .footer__bottom .footer__logo {padding-top: 3.2rem;}  
   .footer__bottom .footer__flex {padding-top: 3.2rem; padding-bottom: 3.2rem;}
-
   // 상단 아이콘 셋
   .right__icon__set a:not(.hamburger) { display: none; }
   .right__icon__set a.hamburger { display: inline-flex; flex-direction: column; font-size: 1.3rem;}
   .right__icon__set a span { padding-top: 0.8rem; } 
   .right__icon__set a img { margin: 0; }
-  
   // 공통 페이지 네이션
   .pagination.w-page{display: none;}
   .pagination.m-page{display: flex;}
@@ -336,6 +345,8 @@
   .union__management__wrap .form__table th {min-width: 15rem;}
   .union__table__title__wrap {margin-top: 3.6rem;}
   .union__management__wrap .table__horizontal__ex {margin-bottom: 6rem;}
+
+
 }
 
 

@@ -55,7 +55,7 @@
         z-index: 3;
 
         .item {
-            width: 61rem;
+            width: calc(50% - 3rem);
         }
 
         .visitor__graph .graph__img {
