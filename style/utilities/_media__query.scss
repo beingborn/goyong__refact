@@ -264,9 +264,9 @@
   .pagination.w-page{display: none;}
   .pagination.m-page{display: flex;}
   label.mo_only {display: block;}
+  button.mo_only {display: block;}
   .breadcrumb {margin-bottom: 6.4rem;}
-  .union__management__wrap .user__form__wrapper {margin-top: 3.6rem;} 
-  .union__management__wrap .search .input__box {margin: 0;}
+
 
   .page__title__wrap {display: none;}
   .table__title__wrap {margin-bottom: 3.6rem; margin-top: 3.6rem;}
@@ -323,11 +323,15 @@
   .prev__next > li {padding-left: 1rem;}
 
   // 가맹노조 (산하조직) 관리
+  .union__management__wrap .user__form__wrapper {margin-top: 3.6rem;} 
+  .union__management__wrap .search .input__box {margin: 0;}
   .union__management__wrap .function__group {width: 100%; display: flex; justify-content: space-between; gap: 1rem;}
   .union__management__wrap .function__group button {flex: 1;}
-  .union__management__wrap .function__group button:nth-child(1) {display: none;}
-
-
+  .union__management__wrap .function__group button:nth-child(1){display: none;}
+  .union__management__wrap .search__list .input__box {flex-direction: row;}
+  .union__management__wrap .search__list .input__box input {width: calc(100% - 1rem); margin-right: 1rem;}
+  .union__management__wrap .upload__flex {flex-wrap: wrap;}
+  .union__management__wrap .upload__wrap {width: 100%;}
 }
 
 
