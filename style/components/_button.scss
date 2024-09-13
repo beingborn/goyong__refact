@@ -26,7 +26,7 @@ button {cursor: pointer; background: inherit;}
 .function__group .btn__control:not(:last-child) {margin-right: 1rem;}
 
 // 서브 페이지 상단 탭 버튼 스타일
-.tab__wrap {width: 100%;max-width: 128rem;margin: 0px auto;display: flex;align-items: center;padding-top: 8rem;}
+.tab__wrap {width: 100%;max-width: 128rem;margin: 0px auto;display: flex;align-items: center; margin-top: 8rem;}
 .tab__btn {flex: 1; height: 4.5rem; text-align: center;}
 .tab__btn > button {width: 100%; cursor: pointer; background: transparent; font-size: 2rem;  font-weight: 700;  line-height: 4.5rem;color: #767676; border-bottom: 0.1rem solid #d8d8d8; white-space: nowrap;}
 // tab버튼 활성화 스타일

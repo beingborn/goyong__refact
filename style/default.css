@@ -633,7 +633,7 @@ button {
   margin: 0px auto;
   display: flex;
   align-items: center;
-  padding-top: 8rem;
+  margin-top: 8rem;
 }
 
 .tab__btn {
@@ -867,7 +867,6 @@ table caption {
   text-align: left;
   padding-left: 3rem;
   z-index: -1;
-  min-width: 18rem;
   display: inline-flex;
   align-items: center;
 }
@@ -4582,23 +4581,11 @@ button.mo_only {
 }
 
 /* 서브 모바일 스타일 CSS */
-.mobile__tab {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-.mobile__tab .swiper {
-  border: 0.1rem dashed green;
-}
-.mobile__tab .swiper .swiper-slide {
+.mobile__tab .swiper-slide {
   max-width: 13rem;
   text-align: center;
 }
-.mobile__tab .swiper .swiper-slide .btn--active {
-  color: #003675;
-  border-bottom: 0.2rem solid #003675;
-  font-weight: 700;
-}
-.mobile__tab .swiper .swiper-slide button {
+.mobile__tab .swiper-slide button {
   width: 100%;
   height: 100%;
   color: #555555;
@@ -4607,8 +4594,7 @@ button.mo_only {
   padding: 2rem 1.6rem;
   white-space: nowrap;
   border-bottom: 0.2rem solid #ddd;
-  font-weight: 500;
-  cursor: pointer;
+  font-weight: 700;
 }
 .mobile__tab .swiper-button-next {
   border-radius: 50%;
@@ -4633,6 +4619,11 @@ button.mo_only {
 .mobile__tab .swiper-button-next::after,
 .mobile__tab .swiper-button-prev::after {
   display: none;
+}
+
+.mobile__tab .swiper-slide button.active {
+  border-bottom: 0.4rem solid #21A366;
+  color: #21A366;
 }
 
 .mobile__con {
@@ -4811,11 +4802,6 @@ button.mo_only {
 
 .tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {
   min-width: 42rem;
-}
-
-.tab__content table tbody .cols2 {
-  line-height: 130%;
-  width: 19.53%;
 }
 
 .tab__content table tbody .cols2 .must__write {
@@ -5802,6 +5788,9 @@ button.mo_only {
   .preview {
     min-width: 50rem;
   }
+  .table__horizontal__ex th {
+    min-width: 18rem;
+  }
 }
 /* 노트북 소형~ 중형 1080px ~ 1440px */
 @media all and (min-width: 1080px) and (max-width: 1440px) {
@@ -6301,6 +6290,10 @@ button.mo_only {
   }
 }
 @media all and (max-width: 1080px) {
+  .table__horizontal__ex th {
+    min-width: 15rem;
+    max-width: 15rem;
+  }
   .accn__desc__wrap .w__image {
     display: none;
   }
@@ -6348,6 +6341,12 @@ button.mo_only {
     display: none;
   }
   .m__table {
+    display: block;
+  }
+  .w__cont {
+    display: none;
+  }
+  .m__cont {
     display: block;
   }
   .footer__bottom .footer__logo {
@@ -6671,9 +6670,6 @@ button.mo_only {
 }
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (max-width: 479px) {
-  .sub1__1__wrap .content .tab__content {
-    padding-top: 4rem;
-  }
   #sub__wrap .content .visual__bg {
     height: 16.6rem;
   }

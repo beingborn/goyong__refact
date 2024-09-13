@@ -7,6 +7,7 @@
   .banner__swiper .swiper-button-next, .swiper-button-prev {margin-top: calc(0px - (64px / 2));}
   .union__management__wrap .search .input__box, .union__management__wrap .search .preview {min-width: 48rem;}
   .preview {min-width: 50rem;}
+  .table__horizontal__ex th {min-width: 18rem;}
 }
 
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -241,6 +242,9 @@
 }
 
 @media all and (max-width: 1080px){
+
+  .table__horizontal__ex th {min-width: 15rem; max-width: 15rem;}
+
   // 회계공시시스템이란
   .accn__desc__wrap .w__image {display: none;}
   .accn__desc__wrap .m__image {display: block;}
@@ -263,6 +267,9 @@
   // 웹용 테이블, 모바일용 테이블
   .w__table {display: none;}
   .m__table {display: block;}
+  .w__cont {display: none;}
+  .m__cont {display: block;}
+
   .footer__bottom .footer__logo {padding-top: 3.2rem;}  
   .footer__bottom .footer__flex {padding-top: 3.2rem; padding-bottom: 3.2rem;}
   // 상단 아이콘 셋

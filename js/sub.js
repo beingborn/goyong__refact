@@ -30,11 +30,15 @@ $(document).ready(function () {
   });
 
   /* mobile Tab */
+  moTabBtn.eq(0).addClass('active');
   moTabBtn.click(function(){
-    var idx = $(this).index()
+    var idx = $(this).parent().index()
+    $(".tab__content .tab").hide();
     $(".tab__content .tab").eq(idx).fadeIn();
     moTabBtn.removeClass("active")
     $(this).addClass("active")
+
+    chartResize();
   })
 
 

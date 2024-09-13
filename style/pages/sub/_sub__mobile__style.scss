@@ -3,18 +3,9 @@
 
 // 모바일용 탭 버튼
 .mobile__tab {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  .swiper {
-    border: 0.1rem dashed green;
     .swiper-slide {
       max-width: 13rem;
       text-align: center;
-      .btn--active {
-        color: $second-color;
-        border-bottom: 0.2rem solid $second-color;
-        font-weight: 700;
-      }
       button {
         width: 100%;
         height: 100%;
@@ -24,12 +15,10 @@
         padding: 2rem 1.6rem;
         white-space: nowrap;
         border-bottom: 0.2rem solid #ddd;
-        font-weight: 500;
-        // white-space: nowrap;
-        cursor: pointer;
+        font-weight: 700;
       }
-    }
-  }
+}
+  
   .swiper-button-next {
     border-radius: 50%;
     background: url(../img/mo__tab__next.png) no-repeat center;
@@ -54,6 +43,11 @@
     }
   }
 }
+
+.mobile__tab .swiper-slide button.active {border-bottom: 0.4rem solid #21A366; color: #21A366;}
+
+
+
 // 전체 테이블 기본 스타일
   .mobile__con {
     margin: 4rem 0;
@@ -211,7 +205,6 @@
 
 // 회계공시열람 첫번째 td 넓이
 .tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {min-width: 42rem;}
-.tab__content table tbody .cols2 {line-height: 130%; width: 19.53%;}
 .tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
 
 // 탭 4 시계열 차트
