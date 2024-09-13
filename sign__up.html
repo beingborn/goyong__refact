@@ -290,19 +290,11 @@
                                     </div>
                                 </td>
                             </tr>
-
-
                             <tr>
                                 <th scope="row">
-                                    <label for="category23233"> 상급단체의 명칭</label>
-                                   
+                                    <label for="category23233"> 상급단체의 명칭</label>  
                                 </th>
                                 <td colspan="5">
-                                    <!-- 
-                                     버튼 유무에 따라 자동으로 나머지가 정렬되게 제작 
-                                     클래스 제어 상관없이 버튼 생성 삭제만으로 두 타입 제어 가능.
-                                     select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
-                                      -->
                                     <div class="flex--box">
                                         <!-- <button type="button" class="btn__select width--20 mg--10-r mg--10-l">선택입력</button> -->
                                         <div class="td__container flex--grow-100">
@@ -321,30 +313,23 @@
                                             <select name="category" id="category2323ee" class="select--no--style select__renew">
                                                 <option value="전체">단위노동조합 선택</option>
                                             </select>
-                
                                             <!-- <input type="text" id="1" placeholder="1번 인풋"> -->
                                             <!-- <input type="text" id="2" placeholder="2번 인풋"> -->
                                             <!-- <input type="text" id="3" placeholder="3번 인풋"> -->
-                
                                             <!-- 상위 클래스가 input의 넓이를 자동으로 맞춰줍니다. html 태그만 생성 삭제 하시면 됩니다. -->
-                
                                             <select name="category" id="categoraa" class="select--no--style select__renew"> <option value="전체">지부 선택</option> </select>
-                                                <select name="category" id="categorbb" class="select--no--style select__renew"> <option value="전체">지회 선택</option> </select>
-                                                <select name="category" id="categorcc" class="select--no--style select__renew"> <option value="전체">분회 선택</option> </select>
-                                            
+                                            <select name="category" id="categorbb" class="select--no--style select__renew"> <option value="전체">지회 선택</option> </select>
+                                            <select name="category" id="categorcc" class="select--no--style select__renew"> <option value="전체">분회 선택</option> </select>
                                         </div>
                                     </div>
                                 </td>
                             </tr>     
-
-                                                    
                             <tr>
                                 <th scope="row">
                                     <label for="category23233"> 상급단체의 명칭</label>
-                                   
                                 </th>
                                 <td colspan="5">
-                                    <div class="flex--box">
+                                    <div class="flex--box organization">
                                         <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>                                        
                                         <div class="td__container flex--grow-100">
                                             <select name="category" id="category23233" class="select--no--style select__renew">
@@ -355,9 +340,7 @@
                                                 <option value="98">기타</option>
                                                 <option value="99">총연합단체미가입</option>
                                                 <option value="00">직접입력</option>
-                                            </select>
-
-                                            
+                                            </select>          
                                             <input type="text" id="1" placeholder="1번 인풋">
                                             <input type="text" id="2" placeholder="2번 인풋">
                                             <input type="text" id="3" placeholder="3번 인풋">
@@ -390,18 +373,16 @@
                                 <th>
                                     <label for="name4">설립연월일</label>
                                 </th>
+                                <!-- style="align-items: center; width: 33.33%;" -->
                                 <td class="td__calender__wrap">
-                                    <div class="td__container" style="align-items: center; width: 33.33%;">
+                                    <div class="td__container" >
                                         <div class="calender__body">
                                             <input type="text" id="testPicker" maxlength="10">
                                             <label for="testPicker" class="calender__icon mg--10-l"></label>
                                         </div>
                                     </div>
                                 </td>
-
                                 <script>
-                            
-                     
                         $(document).ready(function() {   
                         // init();
             
@@ -443,8 +424,6 @@
         })
 
                                 </script>
-
-
                             </tr>
                             <tr>
                                 <th>
@@ -676,32 +655,25 @@
                                                 <span>첨부파일</span>
                                             </div>
                                         </div>
-                
                                         <div class="form__body">
-
                                             <div class="form__row flex--box-c">
                                                 <div class="td__container" style="border-right: 1px solid #ddd;">
-                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;"/>
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text width--100" style="padding: 0;"/>
                                                 </div>
-                
-                
-
                                                 <div class="td__container file__select__container flex--grow-100" id="pwLength">
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>
                                                         <label class="btn__file__select--mo bg--transparent-00" for="profile_pics2"></label>
-
                                                     </div>
                                                     <label class="btn__file__select bg--transparent-00" for="profile_pics2">파일선택</label>
                                                     <input type="file" class="file__post" id="profile_pics2" name="profile_pics2" style="opacity: 0; width: 0px;">
                                                     <button type="button" class="btn__add bg--green-01" style="margin-left: auto;">+</button>
                                                 </div>
-
                                             </div>
                                             <!-- 두번째 줄 -->
                                             <div class="form__row flex--box-c">
                                                 <div class="td__container" style="border-right: 1px solid #ddd;">
-                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;" />
+                                                    <input type="text" name="rule_name[]" placeholder="" class="input__text width--100" style="padding: 0;" />
                                                 </div>
                                                 <div class="td__container file__select__container flex--grow-100" id="pwLength">
                                                     <div class="preview flex--box-c">

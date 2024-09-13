@@ -172,7 +172,6 @@
                             <h2>가맹노조(산하조직)관리</h2>
                         </div>
                     </div>
-
                     <div class="function__group">
                         <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
                         <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
@@ -181,9 +180,7 @@
                         <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
                         <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
                     </div>
-
                 </div>
-
                 <!-- 검색 폼 시작 -->
                 <div class="user__form__wrapper">
                     <form class="search__form__user" action="POST">
@@ -422,10 +419,12 @@
                         <table class="border-top-large">
                             <caption>가맹노조(산하조직)정보 테이블</caption>
                             <tbody>
-                                <tr style="position: relative">
+                                <tr>
                                     <th scope="row">
-                                        <label for="examples9" class="must__write">
-                                            노동조합명칭(산하조직) 명칭
+                                        <label for="examples9">
+                                            <span class="must__type">
+                                                노동조합명칭(산하조직) 명칭
+                                            </span>
                                         </label>
                                     </th>
                                     <td>
@@ -433,7 +432,7 @@
                                             <input type="text" id="examples9" value="전국항운노동조합연맹" readonly="">
                                         </div>
                                     </td>
-                                    <th scope="row" style="white-space: nowrap;">
+                                    <th scope="row">
                                         <label for="examples10">
                                             노동조합 산하조직 형태
                                         </label>
@@ -447,7 +446,9 @@
 
                                 <tr>
                                     <th scope="row">
-                                        <label for="example22" class="must__write">대표자</label>
+                                        <label for="example22">
+                                            <span class="must__type">대표자</span>
+                                        </label>
                                     </th>
                                     <td>
                                         <div class="td__container">
@@ -455,7 +456,7 @@
                                         </div>
                                     </td>
                                     <th scope="row">
-                                        <label for="examples11" class="">사업자등록번호(고유번호)</label>
+                                        <label for="examples11">사업자등록번호(고유번호)</label>
                                     </th>
                                     <td>
                                         <div class="td__container">
@@ -474,7 +475,11 @@
                                         </div>
                                     </td>
                                     <th scope="col">
-                                        <label for="examples13" class="must__write">유선연락처</label>
+                                        <label for="examples13">
+                                            <span class="must__type">
+                                                유선연락처
+                                            </span>
+                                        </label>
                                     </th>
                                     <td>
                                         <div class="td__container">
@@ -498,7 +503,7 @@
                     </div>
                     <!-- 가맹노조 산하조직 모바일 테이블 -->
                     <div class="table__horizontal__ex m__table">
-                        <div class="form__table">
+                        <div>
                             <table class="border-top-large">
                                 <caption>가맹노조 산하조직 모바일 테이블</caption>
                                 <tr>

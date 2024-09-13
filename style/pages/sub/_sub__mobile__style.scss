@@ -49,8 +49,7 @@
 
 
 // 전체 테이블 기본 스타일
-  .mobile__con {
-    margin: 4rem 0;
+  .mobile__con { margin: 4rem 0;
     .market {
       margin-bottom: 4rem;
     }
@@ -59,7 +58,8 @@
 
     tr {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      // flex-wrap: wrap;
       margin-top: 2rem;
 
       th:nth-of-type(2) {
@@ -80,14 +80,15 @@
           padding: 0.8rem;
         }
         input {
-          width: calc(50% - 1.4rem);
-          border: 0.1rem solid #ccc;
-          height: 4rem;
+          text-align: right;
         }
       }
     }
   }
 }
+
+  .mobile__con table th {background: transparent;}
+
 
   .data__title {
     font-size: 2.5rem;
@@ -96,6 +97,8 @@
 
 // 아코디언 테이블 스타일
   .mo__column {
+    font-size: 1.7rem;
+
     tr {
       flex-wrap: nowrap;
       margin-top: 1.6rem;
@@ -110,23 +113,8 @@
     .sub__element {
       font-weight: 700;
       font-size: 1.8rem;
-      padding-left: 0.8rem;
       color: #333;
       margin-top: 2.4rem;
-
-      &.depth2 {
-        padding-left: 1.6rem;
-      }
-    }
-
-    // 계층 구조 2 (하부내역)
-    .sub__item-depth2 {
-      padding-left: 1.2rem;
-    }
-
-    // 계층 구조 3 (하부내역)
-    .sub__item-depth3 {
-      padding-left: 1.6rem;
     }
 
     td {
@@ -134,35 +122,19 @@
     }
   }
 
-.last--open {
-  &::after{
-    content: '';
-    display: block;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    height: 0.1rem;
-    background-color: #ddd;
-    position: absolute;
-    bottom: 0;
-  }
+// 하위 항목 표시
+.child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../../../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
+.mo__column .sub__element td {display: flex; align-items: center;}
+.mo__column .sub__element td > span {display: flex; align-items: center;}
+.mo__column .sub__element td::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}
 
-}
+// .mo__column .sub__element td::after {position: absolute; top: 50%; width: 20px; height: 1px; background-color: red;}
+
 
 .data--open {
   position: relative;
-  padding: 1.6rem 0;
-
-  &::before{
-    content: '';
-    display: inline-block;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    height: 0.1rem;
-    background-color: #ddd;
-    position: absolute;
-    top: 0;
-  }
-
+  padding: 2rem 0.8rem;
+  font-size: 1.7rem;
   .arrow__wrap {
     position: absolute;
     top: 50%;
@@ -173,7 +145,7 @@
       display: none;
       width: 1.6rem;
       height: 1.6rem;
-      background: url(../img/arrow__top.png) no-repeat center;
+      background: url(../img/arrow__top-green.svg) no-repeat center;
     }
     .arrow__bottom {
       display: block;
@@ -185,15 +157,18 @@
 }
 
 
-.data--open {cursor: pointer;width: 100%;position: relative;}
-.data__toggle {font-size: 2.5rem;font-weight: 700;width: 100%;}
-.data--open.on .arrow__top { display: block;} // 열렸을때
+.data--open.first {border-top: 0.1rem solid #ddd;}
+.data--open {cursor: pointer;width: 100%;position: relative; border-bottom: 0.1rem solid #ddd;}
+.data__toggle {font-size: 1.7rem;font-weight: 700;width: 100%;}
+.data--open.on {border-bottom: 0.3rem solid #21A366; color: #21A366;}
+.data--open.on .arrow__top { display: block;}
 .data--open.on .arrow__bottom { display: none;}
 
 //공통 table 스타일
-.t__title__wrap {padding-bottom: 1.3rem; border-bottom: 0.1rem solid #ccc;}
-.mo__column .t__title {font-size: 2rem;}
-.t__last__data {margin-bottom: 5rem;}
+.mo__slide {padding: 0 1rem;}
+.t__title__wrap {padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd;}
+// .mo__column .t__title {font-size: 2rem;}
+.t__last__data {margin-bottom: 3rem;}
 
 // 노동 조합 정보
 .list__btn__group { text-align: right;}
@@ -204,7 +179,6 @@
 .mobile__market__input__3 {width: calc(33.33% - 1em);}
 
 // 회계공시열람 첫번째 td 넓이
-.tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {min-width: 42rem;}
 .tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
 
 // 탭 4 시계열 차트

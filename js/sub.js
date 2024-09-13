@@ -1,15 +1,22 @@
-/**
- * 서브 탭 변환
- * 
- */
+         
+/** 모바일 슬라이드 토글 */
+let dataOpen = $(".data--open");
+$(document).ready(function () {
+  dataOpen.click(function () {
+    var currentSlide = $(this).next(".mo__slide");
+    $(this).next(".mo__slide").stop().slideToggle();
+    $(this).toggleClass("on").siblings().removeClass("on");
+    dataOpen.not($(this)).removeClass('on');
+    $(".mo__slide").not(currentSlide).slideUp();
+  });
+  $(".mo__slide").slideUp();
+});
 
+
+/* 서브 탭 변환 */
 $(document).ready(function () {
   let moTabBtn = $(".mobile__tab .swiper-slide button");
   let moTabContent = $(".mo__open__wrap .mobile__con");
-
-  let activeTabIndex = 0; // PC 및 모바일 공통의 활성화된 탭 인덱스
-  let isMobileView = window.innerWidth < 767; // 초기 화면 크기 판단
-
 
   // 화면 크기 변경 시 초기화 함수 재실행
   $(window).resize(function () {
@@ -42,28 +49,12 @@ $(document).ready(function () {
   })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
 // Pie Chart 1
 var pieChart1 = echarts.init(document.getElementById("pieChart1"));
-
 window.onresize = function () {
   // console.log('차트 리사이징')
   chartResize()
 };
-
 function chartResize(){
   pieChart1.resize();
   pieChart2.resize();
@@ -76,9 +67,6 @@ function chartResize(){
   barChart5.resize();
   barChart6.resize();
 }
-
-
-
 var pieOption1 = {
   chart__title: {
     text: "Pie Chart 1",
@@ -103,9 +91,6 @@ var pieOption1 = {
       data: [
         { value: 1048, name: "현금 및 예금" },
         { value: 735, name: "토지" },
-        // { value: 580, name: "건물" },
-        // { value: 484, name: "기타자산" },
-        // { value: 300, name: "부재재" },
       ],
     },
   ],
@@ -122,9 +107,6 @@ var pieOption2 = {
   tooltip: {
     trigger: "item",
   },
-
-
-
   legend: {
     orient: "vertical",
     left: "left",
@@ -300,13 +282,6 @@ var barOption2 = {
 };
 barChart2.setOption(barOption2);
 
-
-
-
-
-// 시계열 차트에서 나오는 부분
-
-
 var barChart3 = echarts.init(document.getElementById("barChart3"));
 var barOption3 = {
   chart__title: {
@@ -360,9 +335,6 @@ var barOption3 = {
   ],
 };
 barChart3.setOption(barOption3);
-
-
-
 
 // Bar Chart 4
 var barChart4 = echarts.init(document.getElementById("barChart4"));
@@ -537,96 +509,12 @@ var barOption6 = {
   ],
 };
 barChart6.setOption(barOption6);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
 
 
-         
-/** 모바일 슬라이드 토글 */
- 
- 
 
-let dataOpen = $(".data--open");
 
-$(document).ready(function () {
-  dataOpen.click(function () {
-    var currentSlide = $(this).next(".mo__slide");
 
-    $(this).next(".mo__slide").stop().slideToggle();
-    $(this).toggleClass("on").siblings().removeClass("on");
-
-    $(".mo__slide").not(currentSlide).slideUp();
-    // 클릭하지 않은 ('.mo__slide')는 모두 slideUp() 시키기
-  });
-
-  // 기본은 모두 숨김
-  $(".mo__slide").hide();
-});
-
-var swiper = new Swiper(".moTabSwiper", {
-  slidesPerView: "auto",
-
-  // spaceBetween: 4,
-  freeMode: true,
-  navigation: {
-    nextEl: ".moTabSwiper .swiper-button-next",
-    prevEl: ".moTabSwiper.swiper-button-prev",
-  },
-});
 
 
 

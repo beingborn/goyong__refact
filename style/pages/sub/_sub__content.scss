@@ -45,10 +45,16 @@ button.mo_only {display: none;}
 
 .sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
 // 탭별 버튼 마진
-.sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(3) .pc__info {margin-top: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
+// .sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
+// .sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
+// .sub1__1__wrap .tab:nth-of-type(3) .pc__info {margin-top: 6.4rem;}
+// .sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
+
+.sub1__1__wrap .tab .pc__info {margin-top: 6.4rem;}
+
+
+
+
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .function__group.margin-2 {margin-bottom: 25rem;}
@@ -257,13 +263,10 @@ button.mo_only {display: none;}
 .desc__banner .desc {font-size: 1.5rem; font-weight: 400;}
 
 // 홈 > 회계공시등록 > 회계공시등록
+
 #public__register__form .form__table th {width: 15.38%; min-width: 15rem; max-width: 15rem;}
 #public__register__form .td__calender__wrap {max-width: 49rem;}
 #public__register__form .td__calender {width: auto;}
-#public__register__form .form__table .td__date > select {width: calc(25% - 1rem); max-width: 10rem;}
-#public__register__form .td__select__25 .td__container select {flex: 1 1 calc(25% - 1rem); min-width: 9.3rem;}
-#public__register__form .td__select__25 {max-width: 49rem;}
-#public__register__form .td__select__25 > .td__container {flex-wrap: nowrap; align-items: center; }
 .public__register__wrap .data__title {margin-bottom: 1.6rem;}
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}

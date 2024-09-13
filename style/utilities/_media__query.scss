@@ -7,7 +7,10 @@
   .banner__swiper .swiper-button-next, .swiper-button-prev {margin-top: calc(0px - (64px / 2));}
   .union__management__wrap .search .input__box, .union__management__wrap .search .preview {min-width: 48rem;}
   .preview {min-width: 50rem;}
+
+  // PC 가로 테이블
   .table__horizontal__ex th {min-width: 18rem;}
+  .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem;}
 }
 
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -239,6 +242,7 @@
 
 @media all and (max-width: 1440px){
   .wrap .inner {width: 100%; padding: 0 2rem;}
+  .preview {flex-grow: 1;}
 }
 
 @media all and (max-width: 1080px){
@@ -264,6 +268,7 @@
   .btn__control {width: 100%;}
   .header__btm {padding: 0;}
   .tab__wrap {padding: 0;}
+  .calender__body {width: 100%;}
   // 웹용 테이블, 모바일용 테이블
   .w__table {display: none;}
   .m__table {display: block;}
@@ -353,6 +358,8 @@
   .union__table__title__wrap {margin-top: 3.6rem;}
   .union__management__wrap .table__horizontal__ex {margin-bottom: 6rem;}
 
+  // 회계공시 열람 상세
+  .sub1__1__wrap .tab .pc__info {margin-top: 3.6rem;}
 
 }
 

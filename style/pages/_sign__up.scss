@@ -39,9 +39,9 @@
 .sign__up__table__wrap .td__date .select__renew { background: url(../img/select__renew.png) no-repeat 92% 50%; }
 
 // 달력 공통
-.td__calender { position: relative; width: 33.33%; }
-// .calender__icon { width: 3rem; height: 3rem; background: url(../img/calendar-days-regular.svg) no-repeat center;}
-.td__date select { min-width: 12rem;}
-.s-select--no--style { appearance: none; width: 22%; padding: 0 8px; }
+.td__calender {position: relative; width: 33.33%;}
 
+.s-select--no--style { appearance: none; padding: 0 8px; }
 
+// .td__date select { max-width: 12rem;}
+// min-width: 100px;

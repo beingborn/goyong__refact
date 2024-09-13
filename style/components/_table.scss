@@ -29,16 +29,15 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal td input[type="text"] { border: 0.1rem solid #ccc; height: 4rem;}
 
 // thead를 가지고 있지 않은 가로 테이블 
-// .table__horizontal__ex tr:first-child {border-top: 0.2rem solid #000;} 
-// .table__horizontal__ex tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
-.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; z-index: -1; display: inline-flex; align-items: center;} 
+.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center;} 
 // .table__horizontal__ex td {width: auto; flex-grow: 1; display: inline-flex; align-items: center;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1; display: block;} 
-
+.table__horizontal__ex .half__row td {width: 50%;}
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
-.table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem; flex-grow: 0;}
+.table__horizontal__ex .td__container .content {width: 100%;}
+
 // .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
@@ -52,7 +51,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 // manage__labor 다중 셀렉터 및 인풋 조정 영역
 .td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;}
-.td__container select {flex: 1 1 calc(33.33% - 1rem); min-width: 100px;} // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
+.td__container select {flex: 1 1 calc(33.33% - 1rem); } // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
 .td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
 
 
@@ -184,7 +183,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
 
 
-
 // 조회결과 테이블 공통
 
 // td의 min-height 적용 이슈로 다음과 같이 적용
@@ -193,3 +191,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .text--l {justify-content: flex-start;}
 .text--c {justify-content: center;}
 
+.td__date {display: flex; align-items: center; gap: 1rem;}
+.td__radio {display: flex; align-items: center; gap: 1rem;}
+.td__date select {flex: 1;}

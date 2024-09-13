@@ -355,6 +355,10 @@ textarea {
   justify-content: start;
 }
 
+.flex--column {
+  flex-direction: column;
+}
+
 .flex--vertical {
   display: flex;
   flex-direction: column;
@@ -866,6 +870,7 @@ table caption {
   width: 19.53%;
   text-align: left;
   padding-left: 3rem;
+  padding-right: 1rem;
   z-index: -1;
   display: inline-flex;
   align-items: center;
@@ -875,6 +880,10 @@ table caption {
   width: auto;
   flex-grow: 1;
   display: block;
+}
+
+.table__horizontal__ex .half__row td {
+  width: 50%;
 }
 
 .table__horizontal__ex input[type=text] {
@@ -888,9 +897,8 @@ table caption {
   width: 100%;
 }
 
-.table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {
-  min-width: 42rem;
-  flex-grow: 0;
+.table__horizontal__ex .td__container .content {
+  width: 100%;
 }
 
 .table__horizontal__ex .find--width td {
@@ -930,7 +938,6 @@ table caption {
 
 .td__container select {
   flex: 1 1 calc(33.33% - 1rem);
-  min-width: 100px;
 }
 
 .td__container input[type=text] {
@@ -1289,6 +1296,22 @@ table caption {
 
 .text--c {
   justify-content: center;
+}
+
+.td__date {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.td__radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.td__date select {
+  flex: 1;
 }
 
 /* 
@@ -2256,48 +2279,6 @@ input[type=checkbox] {
   display: block;
 }
 
-#gnb2 > ul > li > a {
-  display: flex;
-  justify-content: center;
-  width: 14rem;
-  margin-bottom: 0;
-  padding: 2rem 2.4rem;
-  line-height: 2.4rem;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-#gnb2 > ul .sub__menu {
-  overflow: hidden;
-  position: absolute;
-  left: 14rem;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-#gnb2 > ul .sub__menu > .sub__ul {
-  border: 1px dashed pink;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-}
-
-#gnb2 > ul .sub__menu > .sub__ul .plus__title {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 6.4rem;
-  font-weight: 700;
-  border-bottom: 0.1rem solid #ddd;
-}
-
-#gnb2 > ul .sub__menu > .sub__ul .plus > a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 5.6rem;
-}
-
 #gnb2 .gnb__close {
   position: fixed;
   top: 2rem;
@@ -2317,7 +2298,7 @@ input[type=checkbox] {
   margin-right: 0.8rem;
   width: 2rem;
   height: 2rem;
-  background: url(../../img/login__info.svg) no-repeat center;
+  background: url(img/login__info.svg) no-repeat center;
   background-size: 2rem auto;
 }
 
@@ -2327,22 +2308,66 @@ input[type=checkbox] {
 
 #gnb2 .gnb__head {
   padding: 0 2.4rem 2rem 2.4rem;
-  border: 1px solid gree;
+  height: 12.8rem;
 }
 
 #gnb2 .gnb__body {
-  border: 2px dashed blue;
+  height: calc(100% - 12.8rem);
+  overflow: hidden;
+  border-top: 0.1rem solid #ddd;
 }
 
-#gnb2 .gnb__body .m-gnb__menu {
+#gnb2 .gnb__in {
+  height: 100%;
+}
+
+.m-gnb__menu {
   display: flex;
+  height: 100%;
 }
 
-#gnb2 .gnb__body .m-gnb__menu .menu__wrap {
+.m-gnb__menu .menu__wrap {
   width: 14rem;
-  border: 1px solid salmon;
   display: flex;
-  justify-content: center;
+}
+
+.m-gnb__menu .menu__wrap > ul {
+  background-color: #EDF1F5;
+}
+
+.m-gnb__menu .menu__wrap li > a {
+  padding: 2.6rem 2.4rem;
+  font-size: 1.7rem;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+}
+
+.gnb__body .submenu__wrap {
+  width: calc(100% - 14rem);
+}
+
+.gnb__body .submenu__wrap li a {
+  display: block;
+}
+
+.gnb__body .submenu__wrap > ul {
+  padding: 1.6rem 2.4rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.gnb__body .submenu__wrap > ul .title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+  border-bottom: 0.1rem solid #ddd;
+  width: 100%;
+}
+
+.gnb__body .submenu__wrap > ul li:not(.title) {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
 }
 
 /*
@@ -3307,15 +3332,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 33.33%;
 }
 
-.td__date select {
-  min-width: 12rem;
-}
-
 .s-select--no--style {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 22%;
   padding: 0 8px;
 }
 
@@ -3929,20 +3949,7 @@ button.mo_only {
   align-items: baseline;
 }
 
-.sub1__1__wrap .tab:nth-of-type(1) .pc__info {
-  margin-top: 6.4rem;
-}
-
-.sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {
-  margin-top: 6.4rem;
-  margin-bottom: 6.4rem;
-}
-
-.sub1__1__wrap .tab:nth-of-type(3) .pc__info {
-  margin-top: 6.4rem;
-}
-
-.sub1__1__wrap .tab:nth-of-type(4) .pc__info {
+.sub1__1__wrap .tab .pc__info {
   margin-top: 6.4rem;
 }
 
@@ -4549,25 +4556,6 @@ button.mo_only {
   width: auto;
 }
 
-#public__register__form .form__table .td__date > select {
-  width: calc(25% - 1rem);
-  max-width: 10rem;
-}
-
-#public__register__form .td__select__25 .td__container select {
-  flex: 1 1 calc(25% - 1rem);
-  min-width: 9.3rem;
-}
-
-#public__register__form .td__select__25 {
-  max-width: 49rem;
-}
-
-#public__register__form .td__select__25 > .td__container {
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
 .public__register__wrap .data__title {
   margin-bottom: 1.6rem;
 }
@@ -4637,7 +4625,7 @@ button.mo_only {
 }
 .mobile__con table tr {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   margin-top: 2rem;
 }
 .mobile__con table tr th:nth-of-type(2) {
@@ -4659,15 +4647,20 @@ button.mo_only {
 }
 .mobile__con table tr th input,
 .mobile__con table tr td input {
-  width: calc(50% - 1.4rem);
-  border: 0.1rem solid #ccc;
-  height: 4rem;
+  text-align: right;
+}
+
+.mobile__con table th {
+  background: transparent;
 }
 
 .data__title {
   font-size: 2.5rem;
 }
 
+.mo__column {
+  font-size: 1.7rem;
+}
 .mo__column tr {
   flex-wrap: nowrap;
   margin-top: 1.6rem;
@@ -4678,47 +4671,43 @@ button.mo_only {
 .mo__column .sub__element {
   font-weight: 700;
   font-size: 1.8rem;
-  padding-left: 0.8rem;
   color: #333;
   margin-top: 2.4rem;
-}
-.mo__column .sub__element.depth2 {
-  padding-left: 1.6rem;
-}
-.mo__column .sub__item-depth2 {
-  padding-left: 1.2rem;
-}
-.mo__column .sub__item-depth3 {
-  padding-left: 1.6rem;
 }
 .mo__column td {
   margin-top: 0;
 }
 
-.last--open::after {
+.child__arrow {
+  display: inline-block;
+  width: 1.6rem;
+  height: 2.2rem;
+  background: url(../../../img/arrow__right-bk.svg) no-repeat center;
+  background-size: cover;
+}
+
+.mo__column .sub__element td {
+  display: flex;
+  align-items: center;
+}
+
+.mo__column .sub__element td > span {
+  display: flex;
+  align-items: center;
+}
+
+.mo__column .sub__element td::after {
   content: "";
-  display: block;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  height: 0.1rem;
+  height: 1px;
   background-color: #ddd;
-  position: absolute;
-  bottom: 0;
+  flex: 1;
+  margin-left: 1rem;
 }
 
 .data--open {
   position: relative;
-  padding: 1.6rem 0;
-}
-.data--open::before {
-  content: "";
-  display: inline-block;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  height: 0.1rem;
-  background-color: #ddd;
-  position: absolute;
-  top: 0;
+  padding: 2rem 0.8rem;
+  font-size: 1.7rem;
 }
 .data--open .arrow__wrap {
   position: absolute;
@@ -4730,7 +4719,7 @@ button.mo_only {
   display: none;
   width: 1.6rem;
   height: 1.6rem;
-  background: url(../img/arrow__top.png) no-repeat center;
+  background: url(../img/arrow__top-green.svg) no-repeat center;
 }
 .data--open .arrow__wrap .arrow__bottom {
   display: block;
@@ -4739,16 +4728,26 @@ button.mo_only {
   background: url(../img/arrow__bottom.png) no-repeat center;
 }
 
+.data--open.first {
+  border-top: 0.1rem solid #ddd;
+}
+
 .data--open {
   cursor: pointer;
   width: 100%;
   position: relative;
+  border-bottom: 0.1rem solid #ddd;
 }
 
 .data__toggle {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   width: 100%;
+}
+
+.data--open.on {
+  border-bottom: 0.3rem solid #21A366;
+  color: #21A366;
 }
 
 .data--open.on .arrow__top {
@@ -4759,17 +4758,17 @@ button.mo_only {
   display: none;
 }
 
-.t__title__wrap {
-  padding-bottom: 1.3rem;
-  border-bottom: 0.1rem solid #ccc;
+.mo__slide {
+  padding: 0 1rem;
 }
 
-.mo__column .t__title {
-  font-size: 2rem;
+.t__title__wrap {
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #ddd;
 }
 
 .t__last__data {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .list__btn__group {
@@ -4798,10 +4797,6 @@ button.mo_only {
 
 .mobile__market__input__3 {
   width: calc(33.33% - 1em);
-}
-
-.tab__content .tab__2 .table__horizontal__ex table tbody td:nth-of-type(1) {
-  min-width: 42rem;
 }
 
 .tab__content table tbody .cols2 .must__write {
@@ -5571,6 +5566,7 @@ button.mo_only {
 @media all and (min-width: 360px) and (max-width: 767px) {
   .form__head .form-title:nth-of-type(1) {
     min-width: 10rem;
+    max-width: 10rem;
   }
   .upload__manager .form__row .td__container:nth-of-type(1) {
     max-width: 10rem;
@@ -5739,6 +5735,18 @@ button.mo_only {
   .sign__up__table__wrap .form__table tr:nth-child(8) .td__container {
     flex-direction: column;
   }
+  .sign__up__table__wrap .form__table tr:nth-child(9) .td__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .organization {
+    flex-direction: column;
+  }
+  .organization .btn__select {
+    width: 100%;
+    height: 4.8rem;
+    margin-bottom: 1rem;
+  }
   .sign__up__table__wrap .td__calender {
     width: 100%;
     position: relative;
@@ -5790,6 +5798,9 @@ button.mo_only {
   }
   .table__horizontal__ex th {
     min-width: 18rem;
+  }
+  .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {
+    min-width: 42rem;
   }
 }
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -6288,6 +6299,9 @@ button.mo_only {
     width: 100%;
     padding: 0 2rem;
   }
+  .preview {
+    flex-grow: 1;
+  }
 }
 @media all and (max-width: 1080px) {
   .table__horizontal__ex th {
@@ -6336,6 +6350,9 @@ button.mo_only {
   }
   .tab__wrap {
     padding: 0;
+  }
+  .calender__body {
+    width: 100%;
   }
   .w__table {
     display: none;
@@ -6571,6 +6588,9 @@ button.mo_only {
   .union__management__wrap .table__horizontal__ex {
     margin-bottom: 6rem;
   }
+  .sub1__1__wrap .tab .pc__info {
+    margin-top: 3.6rem;
+  }
 }
 /* 모바일 최소 사이즈*/
 @media all and (max-width: 420px) {
@@ -6645,15 +6665,9 @@ button.mo_only {
     font-size: 1.3rem;
     line-height: 3rem;
   }
-  .motab-1 {
-    display: none;
-  }
 }
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */
 @media all and (min-width: 480px) and (max-width: 766px) {
-  .tab__content table {
-    font-size: 1.4rem;
-  }
   .mo__open__wrap .motab-1 .market .market__info tr th {
     margin-top: 2rem;
   }

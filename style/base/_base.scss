@@ -219,7 +219,7 @@ display: inline-block;
   // flex grow 적용 시 flex된 아이템 기준 나머지 넓이 차지.
   .flex--grow-100 {flex-grow: 1;}
   .flex--start {display: flex; align-items: center; justify-content: start;}
-
+  .flex--column {flex-direction: column;}
   .flex--vertical {display: flex; flex-direction: column;}
 
 

@@ -48,20 +48,10 @@
     line-height: 3rem;
   }
 
-  .motab-1 {
-    display: none;
-  }
 }
 
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */
 @media all and (min-width: 480px) and (max-width: 766px) {
-
-  // .content .tab__content {padding-top: 4rem;}
-  // 기존 PC용 탭을 안보이게 합니다.
-  .tab__content table {
-    font-size: 1.4rem;
-  }
-
   .mo__open__wrap .motab-1 .market .market__info tr th {
     margin-top: 2rem;
   }
