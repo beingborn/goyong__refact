@@ -87,6 +87,22 @@
         })
     });
 
+  // 모바일 GNB 이벤트
+  $('#gnb2 .menu__wrap a').eq(0).addClass('active')
+  $('#gnb2 .menu__wrap a').click(function(){
+    $('#gnb2 .menu__wrap a').removeClass('active')
+    $(this).addClass('active')
+  })
+
+  // 모바일 GNB 스크롤 이벤트
+    $('#gnb2 .menu__wrap a').on('click', function(event) {
+      event.preventDefault(); 
+      var targetId = $(this).data('target');
+      var targetElement = $('#' + targetId);
+      var offsetY = targetElement.position().top;
+      $('.submenu__wrap').css('transform', 'translateY(-' + offsetY + 'px)');
+    });
+
 
   // 모달 닫기 이벤트 핸들러
   $('.modal__close button').click(function() {
@@ -96,6 +112,12 @@
   /** 메뉴 클릭 시 gnb2 메뉴 토글 */
   $('.hamburger').on('click', function(){
     $('#gnb2').addClass('active');
+    $('body').css('overflow','hidden')
+  })
+
+  $('.gnb__close').click(function(){
+    $('#gnb2').removeClass('active')
+    $('body').css('overflow','')
   })
 
   // 메뉴 권한 애니메이션 높이 제어
