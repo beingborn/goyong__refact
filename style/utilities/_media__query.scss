@@ -16,8 +16,6 @@
 /* 노트북 소형~ 중형 1080px ~ 1440px */
 @media all and (min-width: 1080px) and (max-width: 1440px) {  
   // 공통
-  // .wrap .inner {width: 102.4rem;}
-  // .wrap .cs__center .content .item { width: 48rem;}
   .wrap .count__group .count {width: 32%;}
   // .wrap .banner__btn {width: 102.4rem; }  
   .banner__btn .swiper-button-next, .banner__btn .swiper-button-prev { width: 4rem; height: 4rem; }
@@ -372,6 +370,5 @@
   .top__visual .main__hero .quick__menu .quick__wrap { width: 9rem; height: 9rem; }
   .manual .tip { object-fit: contain; width: 12rem; height: auto; }
   .banner__text { font-size: 1.5rem; }
-  .footer__bottom { padding-top: 4rem;}
   .btn__control__u {white-space: nowrap;}
 }

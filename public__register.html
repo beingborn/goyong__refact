@@ -200,7 +200,6 @@
               </li>
             </ol>
           </nav>
-
           <!-- 탭 버튼 -->
           <div class="tab__wrap tab__border tab__btn__auto">
             <div class="tab__btn">
@@ -210,14 +209,11 @@
               <button type="button">회계공시</button>
             </div>
           </div>
-
-          <!-- 임시로 패딩탑 0 -->
           <div class="tab__content" style="padding-top: 0">
             <div class="tab">
-              <!-- 상단 제목 -->
-
-              <div class="flex--box-c table__title__wrap info__tip__box">
-                <h2 class="table__title">기본사항</h2>
+              <!-- 도움말 상단 제목 -->
+              <div class="info__tip__box flex--box-c data__header">
+                  <h2 class="data__title">기본사항</h2>
                 <button type="button" class="info__tip mg--10-l"></button>
                 <div class="tooltip__layer">
                   <div class="tooltip__top flex--box-s">
@@ -241,7 +237,6 @@
                   </div>
                 </div>
               </div>
-
               <form action="POST" id="public__register__form">
                 <div class="table__horizontal__ex">
                   <div class="form__table border-top-large">
@@ -308,8 +303,7 @@
                         </th>
                         <td>
                           <div class="flex--box">
-                            <!-- <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>
-                                                        -->
+                            <!-- <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>-->
                             <div class="td__container flex--grow-100">
                               <select
                                 name="category"
@@ -351,36 +345,23 @@
                               >
                                 <option value="전체">전체</option>
                               </select>
-                              <select
-                                name="category"
-                                id="category2323"
-                                class="select--no--style select__renew"
-                              >
+                              <select name="category" id="category2323" class="select--no--style select__renew">
                                 <option value="전체">전체</option>
                               </select>
-                              <select
-                                name="category"
-                                id="category2323"
-                                class="select--no--style select__renew"
-                              >
+                              <select name="category" id="category2323" class="select--no--style select__renew">
                                 <option value="전체">전체</option>
                               </select>
                             </div>
                           </div>
                         </td>
                       </tr>
-
                       <tr>
                         <th scope="row">
                           <label for="category23233"> 상급단체의 명칭</label>
                         </th>
                         <td colspan="5">
                           <div class="flex--box">
-                            <button
-                              type="button"
-                              class="btn__select width--20 mg--10-l"
-                            >
-                              선택입력
+                            <button type="button" class="btn__select width--20 mg--10-l">선택입력
                             </button>
                             <div class="td__container flex--grow-100">
                               <select
@@ -948,15 +929,10 @@
                 inputs.css({ opacity: 0, width: 0 });
                 function displayFileNames(event) {
                   let currentInput = $(event.target);
-
                   let index = inputs.index(currentInput);
-
                   let previewBox = $(preview[index]);
-
                   previewBox.empty(); // preview 내 모든 자식 요소 제거
-
                   const currentFile = currentInput[0].files; // jQuery 객체에서 DOM 요소로 접근
-
                   if (currentFile.length === 0) {
                     const para =
                       $("<span>").text("아무파일도 입력되지 않았어요");
@@ -964,7 +940,6 @@
                   } else {
                     const fileList = $("<div>");
                     previewBox.append(fileList);
-
                     for (const file of currentFile) {
                       const listItem = $("<p>")
                         .text(file.name)
@@ -973,7 +948,6 @@
                     }
                   }
                 }
-
                 inputs.on("change", displayFileNames);
               </script>
 
@@ -986,15 +960,35 @@
                 </button>
               </div>
             </div>
-
             <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
             <div class="tab border__input__wrap">
               <!-- 상단 공시정보 -->
-              <div class="dis__info" style="margin-top: 6.4rem">
-                  <h2 class="data__title info__tip__box flex--box-c">
-                    공시정보
-                    <button type="button" class="info__tip mg--10-l"></button>
-                  </h2> 
+              <div class="dis__info">
+                <div class="info__tip__box flex--box-c data__header">
+                    <h2 class="data__title ">공시정보</h2>
+                  <button type="button" class="info__tip mg--10-l"></button>
+                  <div class="tooltip__layer">
+                    <div class="tooltip__top flex--box-s">
+                      <p class="tooltip__title">기본사항</p>
+                      <button type="button" class="info__close__btn"></button>
+                    </div>
+                    <div class="tooltip__content">
+                      <p>
+                        <strong>가</strong>회계연도 종료일이 12월 31일이 아닌
+                        경우에는 회계연도 종료일이 속한 연도를 입력합니다. 그렇지
+                        않을경우에는
+                      </p>
+                      <p>
+                        <strong>나</strong>회계연도 종료일이 12월 31일이 아닌
+                        경우에는 회계연도 종료일이 속한 연도를 입력합니다.
+                      </p>
+                      <p>
+                        <strong>다</strong>회계연도 종료일이 12월 31일이 아닌
+                        경우에는 회계연도 종료일이 속한 연도를 입력합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <div class="tab__detail table__horizontal__ex w__cont">
                   <table class="border-top-large">
                     <caption>
@@ -1075,8 +1069,8 @@
               <div class="w__cont">
               <!-- 자산 및 부채 현황 -->
               <div class="dis__info">
-                <div class="flex--box-c table__title__wrap info__tip__box">
-                  <h2 class="table__title">자산 및 부채현황</h2>
+                <div class="flex--box-c data__header info__tip__box">
+                  <h2 class="data__title">자산 및 부채현황</h2>
                   <button type="button" class="info__tip mg--10-l"></button>
                   <div class="tooltip__layer">
                     <div class="tooltip__top flex--box-s">
@@ -1322,8 +1316,8 @@
               </div>
               <!-- 수입현황 -->
               <div class="dis__info earn__sit">
-                <div class="flex--box-c table__title__wrap info__tip__box">
-                  <h2 class="table__title">수입현황</h2>
+                <div class="flex--box-c data__header info__tip__box">
+                  <h2 class="data__title">수입현황</h2>
                   <button type="button" class="info__tip mg--10-l"></button>
                   <div class="tooltip__layer">
                     <div class="tooltip__top flex--box-s">
@@ -1695,8 +1689,8 @@
               </div>
               <!-- 지출 현황 -->
               <div class="dis__info expend__sit">
-                <div class="flex--box-c table__title__wrap info__tip__box">
-                  <h2 class="table__title">지출 현황</h2>
+                <div class="flex--box-c data__header info__tip__box">
+                  <h2 class="data__title">지출 현황</h2>
                   <button type="button" class="info__tip mg--10-l"></button>
                   <div class="tooltip__layer">
                     <div class="tooltip__top flex--box-s">
@@ -3251,15 +3245,6 @@
           .prop("checked", true);
       });
 
-      // 도움말 버튼 클릭 시 창 팝업
-      $(".info__tip").on("click", function () {
-        let tooltipLayer = $(this).next(".tooltip__layer");
-        tooltipLayer.toggleClass("active");
-      });
-
-      $(".tooltip__layer .info__close__btn").on("click", function () {
-        $(this).closest(".tooltip__layer").removeClass("active");
-      });
     </script>
   </body>
 </html>

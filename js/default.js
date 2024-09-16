@@ -180,3 +180,13 @@ $(document).ready(function() {
   }
   $('.modal__bg').hide();
 });
+
+// 도움말 버튼 클릭 시 창 팝업
+$(".info__tip").on("click", function () {
+$(this).toggleClass('active');
+$(this).next(".tooltip__layer").toggleClass("active");
+});
+$(".tooltip__layer .info__close__btn").on("click", function () {
+$(this).closest(".tooltip__layer").removeClass("active");
+$(this).closest(".tooltip__layer").prev('.info__tip').removeClass('active')
+});

@@ -43,7 +43,7 @@ button.mo_only {display: none;}
 .mobile__tab {display: none; }
 .mobile__tab__content { display: none;}
 
-.sub1__1__wrap .tab__content .data__title { margin-bottom: 1.6rem;  align-items: baseline;}
+.sub1__1__wrap .tab__content .data__header {margin-bottom: 3.6rem;}
 // 탭별 버튼 마진
 // .sub1__1__wrap .tab:nth-of-type(1) .pc__info {margin-top: 6.4rem;}
 // .sub1__1__wrap .tab:nth-of-type(2) .pc__info:not(:last-child) {margin-top: 6.4rem; margin-bottom: 6.4rem;}
@@ -51,22 +51,10 @@ button.mo_only {display: none;}
 // .sub1__1__wrap .tab:nth-of-type(4) .pc__info {margin-top: 6.4rem;}
 
 .sub1__1__wrap .tab .pc__info {margin-top: 6.4rem;}
-
-
-
-
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .function__group.margin-2 {margin-bottom: 25rem;}
-
-
-
-
-
-.data__title {text-align: left; position: relative; font-size: 2.1rem; color: #333; font-weight: 700;}
-
-
-
+.data__title {text-align: left; position: relative; font-size: 2.5rem; color: #333; font-weight: 700;}
 // 회계 공시 등록 > 회계공시 탭 페이지 스타일 임시 코드
 .border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; text-align: right; font-weight: 700;}
 .border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
@@ -263,12 +251,9 @@ button.mo_only {display: none;}
 .desc__banner .desc {font-size: 1.5rem; font-weight: 400;}
 
 // 홈 > 회계공시등록 > 회계공시등록
-
 #public__register__form .form__table th {width: 15.38%; min-width: 15rem; max-width: 15rem;}
 #public__register__form .td__calender__wrap {max-width: 49rem;}
 #public__register__form .td__calender {width: auto;}
-.public__register__wrap .data__title {margin-bottom: 1.6rem;}
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
-// #public__register__form .form__table .td__date {display: flex; justify-content: space-between;}
-
+.public__register__wrap .data__header {margin-top: 6.4rem; margin-bottom: 3.6rem;}
