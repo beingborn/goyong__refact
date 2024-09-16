@@ -158,12 +158,9 @@
 			<li><a href="#" class="txt">회계공시열람</a></li>
 		</ol>
 		</nav>
-
         <div class="page__title__wrap sysguide">
             <div class="page__title flex__title"><h2>회계공시열람</h2></div>
         </div>
-
-
         <!-- 검색폼 시작 -->
         <div class="user__form__wrapper">
             <form class="search__form__user" action="POST">
@@ -171,7 +168,6 @@
 					<input type="hidden" id="pageNo" name="pageNo" value=""/>
 					<input type="hidden" id="lbrUniId" name="lbrUniId" value="">
 					<input type="hidden" id="yearSel" name="yearSel" value="">
-	
 					<div class="flex--box-c first__input__box search__list">
 						<label for="year">회계연도</label>
 						<div class="select__box">
@@ -179,20 +175,15 @@
 							<option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
 						</div>
 					</div>
-				
-					
 					<!-- 
-					
 					1. 현재 상황 flex 박스로 감싸짐
 					2. 전체 셀렉트 항목은 min-width로 지정되어있음
 					3. 남은 input__box는 flex의 나머지 넓이를 차지하고 있음
 					4. 그 input__box에서 input은 button의 크기를 제외하고 나머지를 모두 차지해야함
 					-->
-
 					<div class="flex--box-c search__list">
 						<label for="select" class="blind">검색조건 선택</label>
 						<label for="year">검색항목</label>
-
 						<div class="select__box">
 							<select class="select--no--style select__renew" id="select" name="searchField">
 								<option value="">전체</option><option value="40">대한민국노동조합총연맹</option><option value="20">전국민주노동조합총연맹</option><option value="99">총연합단체미가입</option><option value="10">한국노동조합총연맹</option><option value="98">기타</option>
@@ -207,9 +198,7 @@
 								</div>
 							</div>
 					</div>
-			
 				</div>
-         
             </form> 
         </div>
 		<!-- 결과값 -->
@@ -240,8 +229,6 @@
 					<th><div class="min__h__box text--c">연합단체</div></th>
 					<th><div class="min__h__box text--c">단위노동조합</div></th>
 					<th><div class="min__h__box text--c">기간</div></th>
-				
-				
 				  </tr>
 				</thead>
 				<tbody>
@@ -379,7 +366,6 @@
                     </table>
                 </div>
 		  </div>
-
 		  	<!-- 테이블 페이지 이동 버튼 -->
 			<div class="accn__open__page">
 				<div class="pagination w-page pagination__margin">

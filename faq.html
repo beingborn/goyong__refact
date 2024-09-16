@@ -199,7 +199,6 @@
                             <h2>자주묻는질문</h2>
                         </div>
                     </div>
-
                     <!-- 검색 폼 시작 -->
                     <div class="user__form__wrapper">
                         <form class="search__form__user" action="POST">
@@ -207,7 +206,6 @@
                                 <input type="hidden" id="pageNo" name="pageNo" value=""/>
                                 <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
                                 <input type="hidden" id="yearSel" name="yearSel" value="">
-
                                 <div class="flex--box-c search__list">
                                     <label for="label" class="mo_only">검색항목</label>
                                     <div class="select__box">
@@ -217,7 +215,6 @@
                                             <option value="2022">2022</option>
                                         </select>
                                     </div>
-
                                     <label for="label" class="mo_only">검색어</label>
                                     <div class="input__box">
                                         <label for="searchText" class="blind">질문조회</label>
@@ -228,7 +225,6 @@
                                             class="ml4"
                                             placeholder="내용을 입력하세요."
                                             value="">
-
                                          <div class="flex--box-c btn__con">
                                             <button
                                             type="button"
@@ -246,13 +242,11 @@
                                             class="btn__control__u bg--green-02"
                                             onclick="fn_search();">자료다운로드</button>
                                          </div>   
-
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                     <!-- 조회 결과 -->
                     <div class="table__title__wrap">
                         <p class="data__number">총 게시글<span>652</span>건</p>
@@ -268,25 +262,20 @@
                                         <div class="qna__container question">
                                             <span>Q</span></div>
                                     </th>
-
                                     <td class="text__container">
                                         <div class="td__container">
                                             <button type="button" title="내용 자세히 보기" class="answer__toggle">노동조합 회계공시 시스템에 회계를 공시하는 것은 법적 의무사항인지?</button>
                                         </div>
                                     </td>
-
                                     <td class="qna__function__group flex--box-c">
                                         <button type="button">
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
                                         </button>
-
                                         <div class="arrow__box">
                                             <img src="img/qna__bg__top__arrow.svg" alt="">
                                         </div>
                                     </td>
-
                                 </tr>
-
                                 <tr class="answer__tr">
                                     <th class="qna__title">
                                         <div class="qna__container answer">
@@ -308,13 +297,11 @@
                                         <div class="qna__container question">
                                             <span>Q</span></div>
                                     </th>
-
                                     <td class="text__container">
                                         <div class="td__container">
                                             <button type="button" title="내용 자세히 보기" class="answer__toggle">회계를 공시하는 것은 법적 의무사항인지?</button>
                                         </div>
                                     </td>
-
                                     <td class="qna__function__group flex--box-c">
                                         <button type="button">
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
@@ -325,17 +312,13 @@
                                             <img src="img/qna__bg__top__arrow.svg" alt="">
                                         </div>
                                     </td>
-
                                 </tr>
-
                                 <tr class="answer__tr">
-
                                     <th class="qna__title">
                                         <div class="qna__container answer">
                                             <span>A</span>
                                         </div>
                                     </th>
-
                                     <td class="text__container">
                                         <div class="td__container preBox">
                                             <p>
@@ -343,7 +326,6 @@
                                             </p>
                                         </div>
                                     </td>
-
                                 </tr>
                                 <!-- 3번 질문 -->
                                 <tr>
@@ -366,9 +348,7 @@
                                             <img src="img/qna__bg__top__arrow.svg" alt="">
                                         </div>
                                     </td>
-
                                 </tr>
-
                                 <tr class="answer__tr">
                                     <th class="qna__title">
                                         <div class="qna__container answer">
@@ -407,7 +387,6 @@
                                     </td>
 
                                 </tr>
-
                                 <tr class="answer__tr">
                                     <th class="qna__title">
                                         <div class="qna__container answer">
@@ -429,7 +408,6 @@
                                         <div class="qna__container question">
                                             <span>Q</span></div>
                                     </th>
-
                                     <td class="text__container">
                                         <div class="td__container">
                                             <button type="button" title="내용 자세히 보기" class="answer__toggle">의무사항은 무슨 의미인지?</button>
@@ -444,9 +422,7 @@
                                             <img src="img/qna__bg__top__arrow.svg" alt="">
                                         </div>
                                     </td>
-
                                 </tr>
-
                                 <tr class="answer__tr">
                                     <th class="qna__title">
                                         <div class="qna__container answer">
@@ -462,11 +438,8 @@
                                         </div>
                                     </td>
                                 </tr>
-
                             </tbody>
-
                         </table>
-
                         <!-- 테이블 페이지 이동 버튼 -->
                         <div class="faq__page__wrap">
                             <div class="pagination w-page pagination__margin">
@@ -486,7 +459,6 @@
                                 </div>
                                 <a class="page-navi next" href="#">다음</a>
                             </div>
-
                             <!-- paging : 모바일 -->
                             <div class="pagination m-page">
                                 <div class="page-navis">
@@ -503,24 +475,13 @@
                                     <a class="page-link" href="#">120</a>
                                 </div>
                             </div>
-
-
                         </div>
-
-
-
-
-
-
-
                         <script>
-
                             // 클릭 시 답변 슬라이드 다운
                             $(document).ready(function () {
                                 $('.foldStyle__table tr:even').click(function () {
                                     let $answerTr = $(this).next('.answer__tr');
                                     $answerTr.toggle();
-
                                     // 이미지 경로 변경: answer__tr이 보이면 down arrow, 안 보이면 top arrow
                                     if ($answerTr.is(':visible')) {
                                         $(this)
@@ -532,19 +493,11 @@
                                             .attr('src', 'img/qna__bg__top__arrow.svg');
                                     }
                                 });
-
                                 $('.answer__tr').hide();
                             });
                         </script>
-
                     </div>
-
                 </div>
-
-                <!-- <div class="example__img" style="text-align: center; margin-top: 8rem;
-                margin-bottom: 12.8rem;"><img src="img/자주묻는질문(임시).jpg" alt="회계공시 시스템이란" ></div>
-                -->
-
             </main>
             <footer>
                 <div class="footer__bottom" style="background-color: #F0F0F0;">

@@ -4,28 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>노동조합 회계공시시스템</title>
-    
     <!-- css 영역 -->
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/reset.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-  
     <!-- 로컬 스와이퍼 CSS -->
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <!-- 로컬 jquery 스와이퍼 cdn -->
     <script src="js/jquery-3.7.1.js"></script>
-
-
 </head>
-
-
 <body>
     <!-- 스킵 네비개이션 -->
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
-
     <div class="wrap login__wrap" id="wrap">
         <!-- 헤더 -->
         <header class="header">
@@ -38,26 +31,21 @@
                     </a>
                 </h1>
                 <div class="right__icon__set">
-               
                     <a href="login.html" class="login">
                         <img src="img/icon20-1.png" alt="검색 아이콘">
                         <span>로그인</span>
                     </a>
-
                     <!-- 전체메뉴 -->
                     <a href="#" class="hamburger">
                         <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
                         <span>전체메뉴</span>
                     </a>
-
                     <a href="sign__up.html" class="sign__up">
                         <img src="img/icon20-2.png" alt="회원가입 아이콘">
                         <span>회원가입</span>
                     </a>
-                 
                 </div>
             </div>
-
             <div class="header__gnb">
                 <div>
                     <nav id="gnb1">
@@ -89,11 +77,9 @@
                                             <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
                                             </div>
                                         </li>
-                                   
                                     </ul>
                                 </div>
                             </li>
-        
                             <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
                             </a>
                                 <div class="sub__menu">
@@ -154,8 +140,6 @@
                     </ol>
                 </nav>
              </div>
-    
-    <!-- breadcrumb -->
         <!-- 로그인 영역 -->
         <form id="frm_id" name="frm_id" action="" method="post">
             <input type="hidden" name="username">
@@ -179,18 +163,13 @@
                                 <button type="button" class="btn icon__pw-visible">
                                     <img src="img/icon__see.svg" alt="비밀번호 보이기" class="show__icon">
                                 </button>
-
                         </div>
                         <div class="error-message"></div>
-
                         <div class="save__info">
                             <input type="checkbox" id="saveID">
                             <label for="saveID">아이디 저장</label>
                         </div>
-                        <button class="bg--blue-00" type="button" onclick="
-                        // id_login();
-                        id__check();
-                        ">로그인</button>
+                        <button class="bg--blue-00" type="button" onclick="id__check();">로그인</button>
                         <p class="txt--c login__help">
                             <a href="sign__up.html">회원가입</a>
                             <a href="password__change.html">비밀번호 변경</a>
@@ -251,27 +230,21 @@
             // form.submit(); // 모든 검사를 통과하면 폼 제출    
             }   
 
-    // 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 바꿈 나중 회원가입 페이지등 많을 것을 대비해 
-
+        // 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 바꿈 나중 회원가입 페이지등 많을 것을 대비해 
         $(document).ready(function(){                      
             $('.secret__Check').each(function(){
                 const pwInput = $(this).find('.password__input')
                 const showButton = $(this).find('.icon__pw-visible')
                 const showIcon = $(this).find('.show__icon')
-
                 showButton.on('click', function() {
                 const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
                 pwInput.attr('type', type);
-
                 const iconSrc = type === 'password' ? 'img/icon__see-visible.svg' : 'img/icon__see.svg';
                 showIcon.attr('src', iconSrc);
             });
             })   
         })
-
         </script>
-
-          
             <!-- 푸터  -->
             <footer>
                 <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -279,27 +252,17 @@
                         <div class="footer__logo">
                             <img src="img/slogan_H48.png" alt="하단 로고">
                         </div>
-                 
                         <div class="footer__flex">
                             <div class="footer__info">
                                 <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
                                 <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
                             </div>
-
                         </div>
-                
-                        
                     </div>
-                    
                 </div>
             </footer>
         <div class="gnb__bg"></div>
-
     </div>
-
-  
-
     <script src="js/default.js"></script>
-    
 </body>
 </html>

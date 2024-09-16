@@ -33,40 +33,32 @@
                             <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
                         </a>
                     </h1>
-
                     <div class="right__icon__set">
-
                         <a href="login.html" class="login">
                             <img src="img/icon20-1.png" alt="검색 아이콘">
                             <span>로그인</span>
                         </a>
-
                         <!-- 전체메뉴 -->
                         <a href="#" class="hamburger">
                             <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
                             <span>전체메뉴</span>
                         </a>
-
                         <a href="sign__up.html" class="sign__up">
                             <img src="img/icon20-2.png" alt="회원가입 아이콘">
                             <span>회원가입</span>
                         </a>
-
                     </div>
                 </div>
-
                 <div class="header__gnb">
                     <div>
                         <nav id="gnb1">
                             <ul id="head_menu" class="top__menu">
                                 <li class="plus"> <a href="javascript:void(0);">시스템안내
-                                        <!-- <span class="sr_only">닫기</span> -->
                                     </a>
                                     <div class="sub__menu">
                                         <ul>
                                             <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
                                                 <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>
-
                                                 </div>
                                             </li>
                                             <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
@@ -90,7 +82,6 @@
                                         </ul>
                                     </div>
                                 </li>
-
                                 <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
                                     </a>
                                     <div class="sub__menu">
@@ -113,7 +104,6 @@
                                         </ul>
                                     </div>
                                 </li>
-
                                 <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
                                     </a>
                                     <div class="sub__menu">
@@ -161,9 +151,6 @@
                         <li><a href="#" class="txt">가맹노조(산하조직)관리</a></li>
                     </ol>
                 </nav>
-
-
-
                 <!-- 테이블 제목 -->
                 <div class="relative" style="min-height: 4.8rem;">
                     <div class="page__title__wrap sysguide">
@@ -597,40 +584,25 @@
                             
                         </div>
                     </div>
-
-
-
-
-
-
                     <script>
                         let inputs = $(".file__post");
                         let preview = $(".preview");
-
                         inputs.css({
                             "opacity": 0,
                             "width": 0
                         });
-
                         function displayFileNames(event) {
-
                             let currentInput = $(event.target);
-
                             let index = inputs.index(currentInput)
-
                             let previewBox = $(preview[index])
-
                             previewBox.empty(); // preview 내 모든 자식 요소 제거
-
                             const currentFile = currentInput[0].files; // jQuery 객체에서 DOM 요소로 접근
-
                             if (currentFile.length === 0) {
                                 const para = $("<span>").text("아무파일도 입력되지 않았어요");
                                 previewBox.append(para);
                             } else {
                                 const fileList = $("<div>");
                                 previewBox.append(fileList);
-
                                 for (const file of currentFile) {
                                     const listItem = $("<p>")
                                         .text(file.name)
@@ -639,21 +611,11 @@
                                 }
                             }
                         }
-
                         inputs.on('change', displayFileNames);
                     </script>
-
-
-
-
-
-
                 </div>
-
-
-
         </main>
-        <footer>
+         <footer>
             <div class="footer__bottom" style="background-color: #F0F0F0;">
                 <div class="inner">
                     <div class="footer__logo">
@@ -673,8 +635,7 @@
                 </div>
             </div>
         </footer>
-        <div class="gnb__bg">
-        </div>
+        <div class="gnb__bg"></div>
     </div>
     <script src="js/default.js"></script>
 </body>
