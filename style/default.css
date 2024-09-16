@@ -4281,6 +4281,11 @@ button.mo_only {
   color: #555555;
 }
 
+.notice__detail__wrap .table__horizontal__ex .td__container {
+  height: 100%;
+  align-items: center;
+}
+
 .board__detail {
   padding: 6.4rem 0;
 }
@@ -6529,9 +6534,6 @@ button.mo_only {
   .faq__wrap .search__form__user .input__box > input {
     margin: 0;
   }
-  .notice__detail .table__horizontal__ex tr {
-    display: block;
-  }
   .notice__detail .table__horizontal__ex tr th {
     min-width: 10rem;
     max-width: 10rem;
@@ -6544,6 +6546,13 @@ button.mo_only {
   }
   .notice__detail .table__horizontal__ex tr:nth-child(2) {
     position: relative;
+    flex-wrap: wrap;
+  }
+  .notice__detail .table__horizontal__ex tr:nth-child(2) th:first-of-type {
+    border-bottom: 0.1rem solid #ddd;
+  }
+  .notice__detail .table__horizontal__ex tr:nth-child(2) td:first-of-type {
+    border-bottom: 0.1rem solid #ddd;
   }
   .notice__detail .table__horizontal__ex tr:nth-child(2)::after {
     content: "";
