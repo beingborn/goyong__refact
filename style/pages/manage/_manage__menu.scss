@@ -5,16 +5,12 @@
 
 // 관리자 메뉴 공통 영역
 .union__member { font-size: 1.9rem!important; color: #0c3975;}
-
 // 체계 영역만 height 값 설정
 .system-list {max-height: 120rem; overflow-y: auto;}
-
-
 // 관리자 조회 모달 기본 스타일
 .data__modal .data__group__title, .data__error__modal .data__group__title { margin-top: 4rem;
     h2 {font-size: 3rem; font-weight: 700;}
 }
-
 .data__modal__wrap {
     // position: relative;
     .data__modal, .data__error__modal {
@@ -66,18 +62,8 @@
 .menu__find-modal .modal__position {padding: 4.8rem 0;}
 .menu__find-modal .table thead {position: relative;}
 // .menu__find-modal .table {overflow-x: auto;}
-
-
-
-
 .data__modal .modal__table , .data__error__modal .modal__table {padding-top: 5.8rem;}
-
-
-
 .function__group .btn__control.bg--gray-00 { color: #000;}
-
-
-
 // 페이지 두 개 구분될 시 가로 정렬 및 넓이 지정 manage__accounting, manage__labor, manage__menu만 해당
 .sub {position: relative;}
 .content--flex { display: flex;}
@@ -154,9 +140,6 @@
 .system__infomation .table__horizontal td {border-bottom: 0;}
 .content .system__infomation .table__horizontal .main__table tbody tr .note__th label {left: 3rem;}
 .system__infomation .table__note {border-bottom: 0.1rem solid #ddd;}
-
-
-
 // 회계공시 조회
 .search__accounting .main__th {width: 16rem;}
 .search__accounting .search__td {width: 28rem;}
@@ -175,11 +158,6 @@
     height: 16px; /* 원하는 높이 설정 */
     border-right: 0.15rem solid #e4e4e4 ; /* 원하는 색상 설정 */
 }
-
-
-
-
-
 // 상위메뉴 검색
 .table__horizontal .main__table .menu__find {
     display: flex;

@@ -99,7 +99,7 @@
      .form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; } 
      .form__table.border-top-large{border-top: 0;}
      .form__table .td__container {padding: 0;}
-     .form__table td input[type="text"], .form__table td input[type="password"] {padding: 0.8rem 0.8rem; max-height: 5.6rem;} 
+     .form__table td input[type="text"], .form__table td input[type="password"] {padding: 0.8rem 0.8rem; min-height: 5.6rem;} 
      .form__table td select {min-height: 5.6rem; font-size: 1.7rem; color: #555555;}
  
      // 파일 업로드
@@ -142,8 +142,6 @@
      .sign__up__table__wrap .td__calender {width: 100%; position: relative;}
      .sign__up__table__wrap .form__table .col2__th {min-height: auto;}
      .s-select--no--style {padding: 0 1.6rem;}
- 
- 
      .sign__up__table__wrap .td__date {display: flex; width: 100%; gap: 1rem; align-items: center;}
      .sign__up__table__wrap .td__date select {min-width: auto;}
      .sign__up__table__wrap .select__renew{background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;}
@@ -152,7 +150,6 @@
      .btn__half__wrap .function__group {display: flex;}
      .btn__half__wrap .function__group .btn__control {width: 50%;}
      .radio__wrap label {font-size: 1.9rem;}
- 
 }
 
 

@@ -37,6 +37,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
 .table__horizontal__ex .td__container .content {width: 100%;}
+.table__horizontal__ex .td__vertical--c {display: flex; align-items: center;}
 
 // .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 

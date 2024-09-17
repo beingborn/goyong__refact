@@ -843,6 +843,11 @@ table caption {
   width: 100%;
 }
 
+.table__horizontal__ex .td__vertical--c {
+  display: flex;
+  align-items: center;
+}
+
 .table__horizontal__ex .find--width td {
   width: 84.62%;
 }
@@ -2622,305 +2627,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.5rem;
 }
 
-.manage__wrap .manage__default__style button, .manage__wrap .manage__default__style .preview, .manage__default__style input {
-  border-radius: 0;
-}
-
-.manage__default__style input {
-  height: 4rem;
-  font-size: 1.5rem;
-}
-
-.manage__default__style .btn__file__select {
-  border-radius: 0;
-}
-
-.manage__default__style .system-list .depth-1 {
-  padding: 1.5rem 1rem;
-}
-
-.manage__default__style label {
-  line-height: 150%;
-}
-
-.manage__default__style .menu-head.depth-3, .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.manage__default__style input[type=radio] {
-  width: 2rem;
-  height: 2rem;
-  transition: all 0.3s ease-in-out;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 0.1rem solid #666;
-  border-radius: 50%;
-}
-
-.manage__default__style input[type=radio]:checked {
-  background: #333;
-  position: relative;
-  border: 0.3rem solid #efefef;
-  box-shadow: 0 0 0 0.1rem #333;
-}
-
-.manage__default__style .data__modal__wrap .data__modal .modal__close button {
-  border-radius: 0;
-  height: 4rem;
-  min-width: 8.6rem;
-  font-size: 1.5rem;
-  color: #fff;
-  display: inline-block;
-  border-radius: 0;
-  padding: 0;
-  line-height: 4rem;
-  font-weight: 400;
-  background-color: #004a98;
-}
-
-.manage__default__style .pagination > a.active, .pagination > a:hover {
-  background: #004a98;
-  color: #fff;
-  border-radius: 0;
-}
-
-.manage__default__style .check__result .pagination {
-  padding-top: 4rem;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.manage__default__style .pagination > a {
-  display: inline-block;
-  width: 3.5rem;
-  text-align: center;
-  line-height: 3.5rem;
-  height: 3.5rem;
-  background: #f8f8f8;
-  border-radius: 3px;
-  color: #707070;
-  vertical-align: top;
-}
-
-.manage__default__style .pagination > a:not(:first-child), .manage__default__style .pagination > a:not(:last-child) {
-  margin-right: 0.3rem;
-}
-
-.manage__default__style .pagination > a.step {
-  background: none;
-}
-
-.manage__default__style .pagination > a.step.first:after, .manage__default__style .pagination > a.step.last:after {
-  margin-left: -2px;
-}
-
-.manage__default__style .pagination > a.step.next:after, .manage__default__style .pagination > a.step.last:after, .manage__default__style .pagination > a.step.last:before {
-  transform: rotate(45deg);
-}
-
-.manage__default__style .pagination > a.step:after, .pagination > a.step.first:before, .pagination > a.step.last:before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid #BFBFBF;
-  border-right: 2px solid #BFBFBF;
-  border-radius: 1px;
-  transform: rotate(-135deg);
-  margin-bottom: 4px;
-}
-
-.manage__wrap .manage__default__style .visual__bg {
-  height: 16rem;
-  background: url(../img/manage__bg_sub1_2.png) no-repeat center;
-  background-size: cover;
-}
-
-.manage__wrap .manage__default__style .visual__bg .visual__text h2 {
-  margin-bottom: 1.5rem;
-}
-
-.bg--manage--blue--00 {
-  background: #004A98;
-}
-
-.bg--manage--gray--00 {
-  background: #555555;
-}
-
-.bg--manage--black--00 {
-  background: #191919;
-}
-
-.bg--manage--red--00 {
-  background-color: #B9131E;
-}
-
-.bg--manage--green--00 {
-  background-color: #008A1E;
-}
-
-.manage__default__style .function__group .btn__control {
-  height: 4rem;
-  min-width: 8.6rem;
-  font-size: 1.5rem;
-  color: #fff;
-  display: inline-block;
-  border-radius: 0;
-  font-weight: 400;
-}
-
-.manage__default__style .search__form {
-  background: #e5edf4;
-}
-
-.manage__default__style .search__form .manage__select {
-  position: relative;
-}
-
-.manage__default__style .search__form .manage__select > select {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  height: 4rem;
-  font-size: 1.5rem;
-}
-
-.manage__default__style .search__form .manage__select::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-bottom: 2px solid #1f1f1f;
-  border-right: 2px solid #1f1f1f;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -8px;
-  z-index: 55;
-}
-
-.manage__default__style .manage__report__modal .modal__inner {
-  padding: 0 4rem;
-  position: relative;
-}
-
-.manage__default__style .manage__report__modal .table__horizontal__wrap td {
-  min-height: 3.5rem;
-}
-
-.manage__default__style .manage__report__modal .table__horizontal__wrap input, .manage__default__style .manage__report__modal .table__horizontal__wrap select {
-  min-height: 3.5rem;
-  height: 3.5rem;
-  border-radius: 0;
-}
-
-.manage__default__style .td__container {
-  padding: 0.5rem;
-}
-
-.manage__default__style .manage__report__modal .table__horizontal__wrap th {
-  text-align: left;
-  padding-left: 1.5rem;
-  background-color: #F9F9FA;
-}
-
-.manage__default__style .modal__check button {
-  background-color: #004A98;
-  height: 4rem;
-  min-width: 8.6rem;
-  font-size: 1.5rem;
-  color: #fff;
-  display: inline-block;
-  border-radius: 0;
-  font-weight: 400;
-}
-
-.manage__default__style .modal__check {
-  right: 4rem;
-}
-
-.manage__default__style .modal__check button.bg--manage--black--00 {
-  background: #191919;
-}
-
-.manage__default__style .search__form select {
-  border-radius: 0;
-  background-image: none;
-}
-
-.manage__default__style .table__vertical {
-  border-radius: 0;
-  background-image: none;
-}
-
-.manage__default__style .table__vertical tbody td {
-  white-space: nowrap;
-  padding: 0 0.4rem;
-  overflow: hidden;
-}
-
-.manage__default__style .table__vertical tbody td, .manage__default__style .table__vertical tbody th {
-  color: #191919;
-  min-height: 3.5rem;
-  height: 3.5rem;
-}
-
-.manage__default__style .table__template__horizontal tbody td {
-  color: #191919;
-  min-height: 3.5rem;
-}
-
-.manage__default__style .lnb__title h2 {
-  font-size: 2rem;
-  color: #333;
-  font-weight: 500;
-  position: relative;
-  padding-left: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-.manage__default__style .lnb__title span {
-  font-size: 1.4rem;
-  color: #505050;
-}
-
-.manage__default__style .lnb__title h2::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  border: 0.2rem solid #e10011;
-  opacity: 0.3;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.manage__default__style .table__vertical table thead tr th {
-  line-height: 150%;
-  background-color: #f1f1f1;
-  padding: 1.45rem 0.4rem;
-}
-
-.manage__default__style .table__template__horizontal th {
-  background-color: #f8f8f8;
-}
-
-.manage__default__style .table__template__horizontal th {
-  padding-left: 1rem;
-}
-
-.manage__default__style .modal__result tr {
-  line-height: 150%;
-}
-
 /*
     메인 페이지 스타일 CSS
 */
@@ -3203,182 +2909,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .table > #tableList {
   min-height: 40rem;
   max-height: 40rem;
-}
-
-/*
-    회원가입 페이지 CSS
-*/
-.td--flex {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  flex-wrap: nowrap;
-}
-
-.td--flex .td--width {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.must__help__message span, .must__help__message p {
-  font-size: 1.5rem;
-}
-
-.btn__check__dup {
-  font-size: 1.6rem;
-  padding: 0.8rem 1.2rem;
-  border: 0.1rem solid #000;
-  max-height: 5.6rem;
-  min-height: 4rem;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.must__help__message {
-  margin-top: 2.4rem;
-}
-
-.file-upload-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.custom-file-label {
-  background-color: #004A98;
-  color: white;
-  width: 10rem;
-  height: 4rem;
-  line-height: 4rem;
-  cursor: pointer;
-  text-align: center;
-  margin-right: 10px;
-}
-
-.form__table .with__submit input[type=text] {
-  width: 90%;
-}
-
-.form__table .with__submit .btn__check__dup {
-  width: calc(10% - 1rem);
-  color: #fff;
-}
-
-.form__table .col2__th {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 5.8rem;
-}
-
-.form__table .col2__th span {
-  line-height: 150%;
-  text-align: left;
-}
-
-.form__table .preview {
-  min-width: auto;
-}
-
-.form__table tr {
-  min-height: 5.8rem;
-  width: 100%;
-  border-bottom: 0.1rem solid #ddd;
-}
-
-.form__table th {
-  width: 19.53%;
-  min-width: 25rem;
-}
-
-.form__table td {
-  flex-grow: 1;
-  line-height: 100%;
-  display: block;
-}
-
-.form__table td input[type=text], .form__table td input[type=password] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-  width: 100%;
-  padding: 0 8px;
-  font-size: 1.6rem;
-}
-
-.form__table td input[type=submit] {
-  border: 1px solid #ddd;
-  line-height: 4rem;
-}
-
-.form__table td select {
-  height: 4rem;
-  border: 1px solid #ddd;
-}
-
-.form__table .secret__Check .icon__pw-visible {
-  right: 1.8rem;
-  transform: translateY(-50%);
-}
-
-.form__table .error-message {
-  padding-left: 2rem;
-  padding-bottom: 1rem;
-}
-
-.must__type {
-  position: relative;
-  text-align: left;
-}
-
-.must__type::after {
-  content: " *";
-  color: #FE5555;
-  position: absolute;
-  right: -1rem;
-  font-weight: 700;
-}
-
-.sign__up__table .radio__wrap .flex {
-  display: flex;
-  align-items: center;
-}
-
-.sign__up__table .radio__wrap .flex label:nth-of-type(1) {
-  margin-right: 2rem;
-}
-
-.sign__up__table .radio__wrap input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  margin-right: 0.7rem;
-  border: 1px solid #ccc;
-}
-
-.sign__up__table .radio__wrap input[type=radio]:checked {
-  border: 0.6rem solid #000;
-}
-
-.sign__up__table__wrap .td__date .select__renew {
-  background: url(../img/select__renew.png) no-repeat 92% 50%;
-}
-
-.td__calender {
-  position: relative;
-  width: 33.33%;
-}
-
-.s-select--no--style {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 0 8px;
 }
 
 /*
@@ -4588,17 +4118,17 @@ button.mo_only {
   font-weight: 400;
 }
 
-#public__register__form .form__table th {
+.public__register__wrap .form__table th {
   width: 15.38%;
   min-width: 15rem;
   max-width: 15rem;
 }
 
-#public__register__form .td__calender__wrap {
+.public__register__wrap .td__calender__wrap {
   max-width: 49rem;
 }
 
-#public__register__form .td__calender {
+.public__register__wrap .td__calender {
   width: auto;
 }
 
@@ -4613,6 +4143,184 @@ button.mo_only {
 .public__register__wrap .data__header {
   margin-top: 6.4rem;
   margin-bottom: 3.6rem;
+}
+
+.td--flex {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  flex-wrap: nowrap;
+}
+
+.td--flex .td--width {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.must__help__message span, .must__help__message p {
+  font-size: 1.5rem;
+}
+
+.btn__check__dup {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #000;
+  max-height: 5.6rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.must__help__message {
+  margin-top: 2.4rem;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.custom-file-label {
+  background-color: #004A98;
+  color: white;
+  width: 10rem;
+  height: 4rem;
+  line-height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.form__table .with__submit input[type=text] {
+  width: 90%;
+}
+
+.form__table .with__submit .btn__check__dup {
+  width: calc(10% - 1rem);
+  color: #fff;
+}
+
+.form__table .col2__th {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 5.8rem;
+}
+
+.form__table .col2__th span {
+  line-height: 150%;
+  text-align: left;
+}
+
+.form__table .preview {
+  min-width: auto;
+}
+
+.form__table tr {
+  min-height: 5.8rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.form__table th {
+  width: 19.53%;
+  min-width: 25rem;
+}
+
+.form__table td {
+  flex-grow: 1;
+  line-height: 100%;
+  display: block;
+}
+
+.form__table td input[type=text], .form__table td input[type=password] {
+  border: 1px solid #ddd;
+  line-height: 4rem;
+  width: 100%;
+  padding: 0 8px;
+  font-size: 1.6rem;
+}
+
+.form__table td input[type=submit] {
+  border: 1px solid #ddd;
+  line-height: 4rem;
+}
+
+.form__table td select {
+  height: 4rem;
+  border: 1px solid #ddd;
+}
+
+.form__table .secret__Check .icon__pw-visible {
+  right: 1.8rem;
+  transform: translateY(-50%);
+}
+
+.form__table .error-message {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.must__type {
+  position: relative;
+  text-align: left;
+}
+
+.must__type::after {
+  content: " *";
+  color: #FE5555;
+  position: absolute;
+  right: -1rem;
+  font-weight: 700;
+}
+
+.sign__up__table .radio__wrap .flex {
+  display: flex;
+  align-items: center;
+}
+
+.sign__up__table .radio__wrap .flex label:nth-of-type(1) {
+  margin-right: 2rem;
+}
+
+.sign__up__table .radio__wrap input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  border: 1px solid #ccc;
+}
+
+.sign__up__table .radio__wrap input[type=radio]:checked {
+  border: 0.6rem solid #000;
+}
+
+.sign__up__table__wrap .td__date .select__renew {
+  background: url(../img/select__renew.png) no-repeat 92% 50%;
+}
+
+.sign__up__wrap .form__table th {
+  min-width: 25rem;
+  max-width: 25rem;
+}
+
+.td__calender {
+  position: relative;
+  width: 33.33%;
+}
+
+.s-select--no--style {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0 8px;
 }
 
 /* 서브 모바일 스타일 CSS */
@@ -5002,9 +4710,7 @@ button.mo_only {
     width: 100%;
   }
 }
-/*
-    스와이퍼 CSS
-*/
+/* 스와이퍼 CSS */
 .swiper__container {
   width: 100%;
   max-width: 109.6rem;
@@ -5693,7 +5399,7 @@ button.mo_only {
   }
   .form__table td input[type=text], .form__table td input[type=password] {
     padding: 0.8rem 0.8rem;
-    max-height: 5.6rem;
+    min-height: 5.6rem;
   }
   .form__table td select {
     min-height: 5.6rem;
@@ -5844,6 +5550,9 @@ button.mo_only {
   }
   .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {
     min-width: 42rem;
+  }
+  .sign__up__wrap .form__table .td__date select {
+    width: 12rem;
   }
 }
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -6637,6 +6346,29 @@ button.mo_only {
   }
   .sub1__1__wrap .tab .pc__info {
     margin-top: 3.6rem;
+  }
+  .sub1__1__wrap .function__group.margin-2 {
+    margin-bottom: 6.4rem;
+  }
+  .function__group.margin-2 {
+    margin-top: 3.6rem;
+  }
+  .public__register__wrap .form__table tr {
+    flex-direction: column;
+  }
+  .public__register__wrap .form__table td {
+    margin-bottom: 1.6rem;
+  }
+  .public__register__wrap .form__table tr th {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+  }
+  .su__operior .td__container {
+    flex-direction: column;
+  }
+  .table__horizontal__ex .half__row td {
+    width: 100%;
   }
 }
 /* 모바일 최소 사이즈*/
