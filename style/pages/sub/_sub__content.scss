@@ -152,7 +152,6 @@ button.mo_only {display: none;}
 
 // 홈 > 시스템 안내 > 공지사항 상세
 .notice__detail__wrap table {font-size: 1.6rem;}
-.notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {border-bottom: 0;}
 .notice__detail__wrap .content__desc {min-height: 45rem; font-size: 1.7rem; color: #555555;}
 .notice__detail__wrap .table__horizontal__ex .td__container {height: 100%; align-items: center;}
 .board__detail {padding: 6.4rem 0;}
@@ -254,7 +253,7 @@ button.mo_only {display: none;}
 
 // 홈 > 회계공시등록 > 회계공시등록
 .public__register__wrap  .form__table th {width: 15.38%; min-width: 15rem; max-width: 15rem;}
-.public__register__wrap  .td__calender__wrap, .public__register__wrap  .td__year__wrap {max-width: 49rem;}
+.public__register__wrap  .td__calender__wrap, .public__register__wrap  .td__year__wrap {max-width: 49rem; width: calc(50% - 30rem);}
 .public__register__wrap  .td__calender {width: auto;}
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}

@@ -57,6 +57,7 @@
     no-repeat center; position: absolute; left: 50%; top: 3.2rem; transform: translateX(-50%);}
   .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 999; left: 7rem; top: 5rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}
   .info__tip__box .tooltip__layer.active {display: block;}
+  .mobile__con .info__tip__box .tooltip__layer {top: 6.4rem;}
   .info__tip__box .tooltip__title {font-weight: 700; padding-bottom: 2rem;}
   .info__tip__box .tooltip__content strong {padding-right: 0.4rem;}
   .info__tip__box .tooltip__content p:not(:last-child) { padding-bottom: 2rem;}

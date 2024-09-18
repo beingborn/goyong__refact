@@ -1918,6 +1918,10 @@ input[type=checkbox] {
   display: block;
 }
 
+.mobile__con .info__tip__box .tooltip__layer {
+  top: 6.4rem;
+}
+
 .info__tip__box .tooltip__title {
   font-weight: 700;
   padding-bottom: 2rem;
@@ -3810,10 +3814,6 @@ button.mo_only {
   font-size: 1.6rem;
 }
 
-.notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {
-  border-bottom: 0;
-}
-
 .notice__detail__wrap .content__desc {
   min-height: 45rem;
   font-size: 1.7rem;
@@ -4135,6 +4135,7 @@ button.mo_only {
 
 .public__register__wrap .td__calender__wrap, .public__register__wrap .td__year__wrap {
   max-width: 49rem;
+  width: calc(50% - 30rem);
 }
 
 .public__register__wrap .td__calender {
@@ -4607,11 +4608,13 @@ button.mo_only {
 .data__toggle {
   font-size: 1.7rem;
   font-weight: 700;
-  width: 100%;
 }
 
 .data--open.on {
   border-bottom: 0.3rem solid #21A366;
+}
+
+.dta--open.on > span {
   color: #21A366;
 }
 
@@ -6253,6 +6256,9 @@ button.mo_only {
     width: 100%;
     left: 0;
   }
+  .notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {
+    border-bottom: 0;
+  }
   .board__detail {
     padding: 3.6rem 0;
   }
@@ -6376,6 +6382,7 @@ button.mo_only {
   }
   .public__register__wrap .es__date td {
     padding-bottom: 3.6rem;
+    width: auto;
   }
   .su__operior .td__container {
     flex-direction: column;

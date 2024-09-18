@@ -339,6 +339,7 @@
   .notice__detail .table__horizontal__ex tr:nth-child(2) th:first-of-type {border-bottom: 0.1rem solid #ddd;}
   .notice__detail .table__horizontal__ex tr:nth-child(2) td:first-of-type {border-bottom: 0.1rem solid #ddd;}
   .notice__detail .table__horizontal__ex tr:nth-child(2)::after{content: ''; height: 0.1rem; background: #ddd; display: inline-block; position: absolute; width: 100%; left: 0;} 
+  .notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {border-bottom: 0;}
   .board__detail {padding: 3.6rem 0;}
 
   .notice__detail .file__wrap {flex-direction: column;}
@@ -383,7 +384,7 @@
   .public__register__wrap .form__table tr th {width:100%;max-width: none; padding-left: 0;}
   .public__register__wrap .su__operior {padding-top: 3.6rem; padding-bottom: 3.6rem;}
   .public__register__wrap .consent__chk td:nth-of-type(2) {padding-top: 3.6rem; padding-bottom: 3.6rem;}
-  .public__register__wrap .es__date td {padding-bottom: 3.6rem;}
+  .public__register__wrap .es__date td {padding-bottom: 3.6rem; width: auto;}
   // 상급단체의 명칭 세로 정렬 
   .su__operior .td__container {flex-direction: column; width: 100%;}
   .table__horizontal__ex .half__row td {width: 100%;}
