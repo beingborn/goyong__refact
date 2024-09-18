@@ -57,7 +57,7 @@ input[type="file"]::file-selector-button {
 .form__row > .form-wrap {height: 5.8rem;}
 .form__row .td__container:nth-of-type(1){width: 23.44%; max-width: 30rem;}
 .form__head > .form-title-file {display: flex; align-items: center; justify-content: center;}
-.form__body .form__row input {height: 4rem; border-radius: 0.5rem;}
+.form__body .form__row input {height: 4rem; border-radius: 0.5rem; width: 100%;}
 
 .form-content {flex-grow: 1; padding: 10px; display: flex; align-items: center; gap: 10px;}
 .form-content > select {width: 100%; min-height: 4rem; background-color: #fff;}

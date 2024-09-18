@@ -253,7 +253,7 @@ button.mo_only {display: none;}
 
 // 홈 > 회계공시등록 > 회계공시등록
 .public__register__wrap  .form__table th {width: 15.38%; min-width: 15rem; max-width: 15rem;}
-.public__register__wrap  .td__calender__wrap {max-width: 49rem;}
+.public__register__wrap  .td__calender__wrap, .public__register__wrap  .td__year__wrap {max-width: 49rem;}
 .public__register__wrap  .td__calender {width: auto;}
 .public__register__wrap .form__table th {padding: 0 1.5rem;}
 .public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
@@ -275,9 +275,9 @@ button.mo_only {display: none;}
 .form__table .col2__th { flex-direction: column; align-items: flex-start; justify-content: center; min-height: 5.8rem; }
 .form__table .col2__th span { line-height: 150%; text-align: left; }
 .form__table .preview { min-width: auto; }
-.form__table tr { min-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
+.form__table tr {min-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
 
-.form__table th { width: 19.53%; min-width: 25rem; } // 해당 min-width 수치는 임시
+.form__table th {min-width: 25rem; } // 해당 min-width 수치는 임시
 .form__table td { flex-grow: 1; line-height: 100%; display: block;}
 .form__table td input[type="text"], .form__table td input[type="password"] { border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
 .form__table td input[type="submit"] { border: 1px solid #ddd; line-height: 4rem; }

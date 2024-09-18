@@ -171,21 +171,15 @@
 					<div class="flex--box-c first__input__box search__list">
 						<label for="year">회계연도</label>
 						<div class="select__box">
-							<select class="select--no--style select__renew" id="year" name="year">
+							<select class="select__renew" id="year" name="year">
 							<option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
 						</div>
 					</div>
-					<!-- 
-					1. 현재 상황 flex 박스로 감싸짐
-					2. 전체 셀렉트 항목은 min-width로 지정되어있음
-					3. 남은 input__box는 flex의 나머지 넓이를 차지하고 있음
-					4. 그 input__box에서 input은 button의 크기를 제외하고 나머지를 모두 차지해야함
-					-->
-					<div class="flex--box-c search__list">
+					<div class="search__list flex--box-c">
 						<label for="select" class="blind">검색조건 선택</label>
 						<label for="year">검색항목</label>
 						<div class="select__box">
-							<select class="select--no--style select__renew" id="select" name="searchField">
+							<select class="select__renew" id="select" name="searchField">
 								<option value="">전체</option><option value="40">대한민국노동조합총연맹</option><option value="20">전국민주노동조합총연맹</option><option value="99">총연합단체미가입</option><option value="10">한국노동조합총연맹</option><option value="98">기타</option>
 							</select>
 						</div> 
@@ -204,7 +198,7 @@
 		<!-- 결과값 -->
 		<div class="table__title__wrap" >
 			<h2 class="table__title">총 게시글</h2>
-			<p class="data__number">전체<span>652</span>건</p>
+			<p class="data__number">전체 <span>652</span>건</p>
 		</div>
 		<!-- 조회결과 데이터 표  -->
 		<div class="accn__result check__result">

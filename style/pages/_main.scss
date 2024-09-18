@@ -80,10 +80,10 @@
 // 상단 카운트 그룹 
 .count__group .count:hover { &:hover {background-color: #14BDB3; .subc {color: #fff;}}}
 .count__group { position: relative; z-index: 2; top: -8.6rem;}
-.count__group    .inner { display: flex; justify-content: space-between;}
+.count__group .inner { display: flex; justify-content: space-between;}
 .count__group .count {width: 40.5rem; padding: 3.3rem 0; max-height: 18rem; background-color: #fff; box-shadow: 0rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1); border-radius: 3.2rem;}
 .count__group .count > a {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;}
-.count__group .count .subc {font-size: 3rem; font-weight: 700; text-align: center; line-height: 120%;} 
+.count__group .count .subc {font-size: 3rem; font-weight: 700; text-align: center; line-height: 120%; word-break: keep-all;} 
 .count__group .count .subc::before {content: ''; width: 9rem; height: 9rem; display: block; margin: 0px auto; margin-bottom: 1.8rem; background-color: #fff; border-radius: 50%;} 
 .count__group .count    .subc.open::before {background-image: url(../img/icons__open.png);background-repeat: no-repeat;background-position: center;}
 .count__group .count     .subc.write::before {background-image: url(../img/icons__write.png);background-repeat: no-repeat;background-position: center;}

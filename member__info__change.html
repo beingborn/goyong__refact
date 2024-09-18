@@ -23,7 +23,7 @@
         <a href="#main__content">본문 바로가기</a>
     </div>
 
-    <div class="wrap btn__half__wrap member_info_change" id="sub__wrap">
+    <div class="wrap member_info_change" id="sub__wrap">
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
@@ -269,10 +269,10 @@
                                 </th>
                                 <td>
                                     <div class="td__container">
-                                        <select name="s-1-1" id="s1-1" class="select--no--style select__renew">
+                                        <select name="s-1-1" id="s1-1" class=" select__renew">
                                             <option value="선택">선택</option>
                                         </select>
-                                        <select name="s-2-1" id="s2-1" class="select--no--style select__renew">
+                                        <select name="s-2-1" id="s2-1" class=" select__renew">
                                             <option value="선택">선택</option>
                                         </select>
                                     </div>
@@ -295,21 +295,15 @@
 
 
 
-                            <tr>
+                            <tr class="su__operior">
                                 <th scope="row">
                                     <label for="category23233"> 상급단체의 명칭</label>
                                    
                                 </th>
                                 <td colspan="5">
-                                    <!-- 
-                                     버튼 유무에 따라 자동으로 나머지가 정렬되게 제작 
-                                     클래스 제어 상관없이 버튼 생성 삭제만으로 두 타입 제어 가능.
-                                     select 대신 input 태그를 넣어도 자동으로 넓이 맞출 수 있도록 제작
-                                      -->
                                     <div class="flex--box">
-                                        <!-- <button type="button" class="btn__select width--20 mg--10-r mg--10-l">선택입력</button> -->
                                         <div class="td__container flex--grow-100">
-                                            <select name="category" id="category23233" class="select--no--style select__renew">
+                                            <select name="category" id="category23233" class=" select__renew">
                                                 <option value="">총연합단체 선택</option>
                                                 <option value="10">한국노동조합총연맹</option>
                                                 <option value="20">전국민주노동조합총연맹</option>
@@ -318,39 +312,29 @@
                                                 <option value="99">총연합단체미가입</option>
                                                 <option value="00">직접입력</option>
                                             </select>
-                                            <select name="category" id="category2323dd" class="select--no--style select__renew">
+                                            <select name="category" id="category2323dd" class=" select__renew">
                                                    <option value="전체">연합단체 선택</option>
                                             </select>
-                                            <select name="category" id="category2323ee" class="select--no--style select__renew">
-                                                <option value="전체">단위노동조합 선택</option>
+                                            <select name="category" id="category2323ee" class=" select__renew">
+                                            <option value="전체">단위노동조합 선택</option>
                                             </select>
-                
-                                            <!-- <input type="text" id="1" placeholder="1번 인풋"> -->
-                                            <!-- <input type="text" id="2" placeholder="2번 인풋"> -->
-                                            <!-- <input type="text" id="3" placeholder="3번 인풋"> -->
-                
-                                            <!-- 상위 클래스가 input의 넓이를 자동으로 맞춰줍니다. html 태그만 생성 삭제 하시면 됩니다. -->
-                
-                                            <select name="category" id="categoraa" class="select--no--style select__renew"> <option value="전체">지부 선택</option> </select>
-                                                <select name="category" id="categorbb" class="select--no--style select__renew"> <option value="전체">지회 선택</option> </select>
-                                                <select name="category" id="categorcc" class="select--no--style select__renew"> <option value="전체">분회 선택</option> </select>
-                                            
+                                            <select name="category" id="categoraa" class=" select__renew"> <option value="전체">지부 선택</option></select>
+                                            <select name="category" id="categorbb" class=" select__renew"> <option value="전체">지회 선택</option></select>
+                                            <select name="category" id="categorcc" class=" select__renew"> <option value="전체">분회 선택</option></select>
                                         </div>
                                     </div>
                                 </td>
-                            </tr>     
-
-                                                    
-                            <tr>
+                            </tr>             
+                            <tr class="su__operior">
                                 <th scope="row">
                                     <label for="category23233"> 상급단체의 명칭</label>
                                    
                                 </th>
                                 <td colspan="5">
-                                    <div class="flex--box">
+                                    <div class="organization flex--box">
                                         <button type="button" class="btn__select width--20 mg--10-l">선택입력</button>                                        
                                         <div class="td__container flex--grow-100">
-                                            <select name="category" id="category23233" class="select--no--style select__renew">
+                                            <select name="category" id="category23233" class=" select__renew">
                                                 <option value="">총연합단체 선택</option>
                                                 <option value="10">한국노동조합총연맹</option>
                                                 <option value="20">전국민주노동조합총연맹</option>
@@ -391,18 +375,13 @@
                                     </label>
                                 </th>
                                 <td class="td__calender__wrap">
-                                        <div class="td__container" style="align-items: center; width: 33.33%;">
+                                        <div class="td__container">
                                             <div class="calender__body">
                                                 <input type="text" id="testPicker" maxlength="10">
                                                 <label for="testPicker" class="calender__icon mg--10-l"></label>
                                             </div>
                                         </div>
                                 </td>
-
-                              
-
-
-
                                 <script>
                             
                      
@@ -459,7 +438,7 @@
                                 <td>
                                     <div class="td__container">
                                         <div class="td__date">
-                                            <select name="d-4-1" id="d-4-1" class="s-select--no--style select__renew">
+                                            <select name="d-4-1" id="d-4-1" class="s- select__renew">
                                                 <option value="월 선택">월</option>
                                                 <option value="1">1 월</option>
                                                 <option value="2">2 월</option>
@@ -474,11 +453,11 @@
                                                 <option value="11">11 월</option>
                                                 <option value="12">12 월</option>
                                             </select>
-                                            <select name="d-4-2" id="d-4-2" class="s-select--no--style  select__renew">
+                                            <select name="d-4-2" id="d-4-2" class="s-  select__renew">
                                                 <option value="&nbsp;">일</option>
                                             </select>
                                             <span>~</span>
-                                            <select name="d-4-3" id="d-4-3" class="s-select--no--style  select__renew">
+                                            <select name="d-4-3" id="d-4-3" class="s-  select__renew">
                                                 <option value="&nbsp;">월</option>
                                                 <option value="1">1 월</option>
                                                 <option value="2">2 월</option>
@@ -493,7 +472,7 @@
                                                 <option value="11">11 월</option>
                                                 <option value="12">12 월</option>
                                             </select>
-                                            <select name="d-4-4" id="d-4-4" class="s-select--no--style  select__renew">
+                                            <select name="d-4-4" id="d-4-4" class="s-  select__renew">
                                                 <option value="&nbsp;">일</option>
                                             </select>
                                         </div>
@@ -771,7 +750,7 @@
 
                                 </div>
                             </div>
-                            <div class="function__group margin-1">
+                            <div class="function__group btn__half__wrap margin-1">
                                 <button type="button" class="btn__control bg--black-00">취소</button>
                                 <button type="button" class="btn__control bg--blue-00">저장</button>
                             </div>

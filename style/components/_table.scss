@@ -95,11 +95,8 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__wrap input[type="text"] {height: 4rem;}
 .table__horizontal__wrap select {height: 4rem;}
 .table--margin {margin: 0.9rem 1rem}
-
 .table__template__horizontal tr {display: flex;} 
 .table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left;} 
-
-
 .table__template__horizontal .default__table tr {line-height: 5.8rem;} 
 .table__template__horizontal .default__table th, .table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
 .table__template__horizontal .default__table th {width: auto;} 

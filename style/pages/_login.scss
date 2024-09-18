@@ -71,9 +71,9 @@
         .upload__manager .form__row .td__container:nth-of-type(1) {max-width: 10rem; min-width: 10rem;}
         .upload__manager .form__row .td__container input {width: 8rem;}
         .upload__manager .file__select__container > .preview {position: relative; margin-right: 1rem;}
-        .upload__manager .btn__file__select {display: none;}
-        .upload__manager .btn__file__select--mo {display: block; right: 0;}    
-
+        .upload__manager .btn__file__select, .support__data .btn__file__select {display: none;}
+        .upload__manager .btn__file__select--mo, .support__data .btn__file__select--mo {display: block; right: 0;}    
+        .support__data .file__select__container > .preview {position: relative;}
 
         .file__change__wrap .td__container {flex-wrap: nowrap;}
         .file__change__wrap .preview {white-space: nowrap;}
@@ -138,7 +138,7 @@
      .sign__up__table__wrap .form__table tr:nth-child(8) .td__container {flex-direction: column;}
      .sign__up__table__wrap .form__table tr:nth-child(9) .td__container {flex-direction: column; width: 100%;}
      .organization {flex-direction: column;}
-     .organization .btn__select {width: 100%; height: 4.8rem; margin-bottom: 1rem;}
+     .organization .btn__select {width: 100%; height: 4.8rem; margin-bottom: 1rem; margin-left: 0;}
      .sign__up__table__wrap .td__calender {width: 100%; position: relative;}
      .sign__up__table__wrap .form__table .col2__th {min-height: auto;}
      .s-select--no--style {padding: 0 1.6rem;}
@@ -146,9 +146,13 @@
      .sign__up__table__wrap .td__date select {min-width: auto;}
      .sign__up__table__wrap .select__renew{background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;}
      .sign__up__table__wrap .td__date .select__renew {background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;}
+
+    
+
+
  
-     .btn__half__wrap .function__group {display: flex;}
-     .btn__half__wrap .function__group .btn__control {width: 50%;}
+     .btn__half__wrap.function__group {display: flex;}
+     .btn__half__wrap.function__group .btn__control {width: 50%;}
      .radio__wrap label {font-size: 1.9rem;}
 }
 

@@ -12,7 +12,7 @@
   .table__horizontal__ex th {min-width: 18rem;}
   .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem;}
 
-  .sign__up__wrap .form__table .td__date select {width: 12rem;}
+  .form__table .td__date select {width: 12rem;}
 }
 
 /* 노트북 소형~ 중형 1080px ~ 1440px */
@@ -136,8 +136,8 @@
 // 모바일 세로 이상 ~ 노트북 중형까지
 @media all and (min-width: 360px) and (max-width: 1080px){
   .upload__manager .preview {min-width: auto; flex-grow: 1;}
-  .upload__manager .file__select__container {gap: 0;}
-  .upload__manager .btn__file__select, .upload__manager .btn__file__select--mo {margin: 0 1rem;}
+  .upload__manager .file__select__container, .support__data .file__select__container {gap: 0;}
+  .upload__manager .btn__file__select, .upload__manager .btn__file__select--mo, .support__data .btn__file__select--mo {margin: 0 1rem;}
 }
 
 
@@ -368,10 +368,14 @@
   .public__register__wrap .form__table tr {flex-direction: column;}
   .public__register__wrap .form__table td {margin-bottom: 1.6rem;}
   .public__register__wrap .form__table tr th {width:100%;max-width: none; padding-left: 0;}
-
+  .public__register__wrap .su__operior {padding-top: 3.6rem; padding-bottom: 3.6rem;}
+  .public__register__wrap .consent__chk td:nth-of-type(2) {padding-top: 3.6rem; padding-bottom: 3.6rem;}
+  .public__register__wrap .es__date td {padding-bottom: 3.6rem;}
   // 상급단체의 명칭 세로 정렬 
-  .su__operior .td__container {flex-direction: column;}
+  .su__operior .td__container {flex-direction: column; width: 100%;}
   .table__horizontal__ex .half__row td {width: 100%;}
+
+  // 하반기 근거 자료
 
 }
 
