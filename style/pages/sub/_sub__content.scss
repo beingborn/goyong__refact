@@ -128,8 +128,8 @@ button.mo_only {display: none;}
 
 // 자주 묻는 질문 테이블
 .foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
-.foldStyle__table tbody tr:nth-child(odd) td {display: flex; align-items: center;}
-.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%;}
+.foldStyle__table tbody tr td {display: flex; align-items: center;}
+.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%; }
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
 .foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
 .foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
@@ -152,6 +152,7 @@ button.mo_only {display: none;}
 
 // 홈 > 시스템 안내 > 공지사항 상세
 .notice__detail__wrap table {font-size: 1.6rem;}
+.notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {border-bottom: 0;}
 .notice__detail__wrap .content__desc {min-height: 45rem; font-size: 1.7rem; color: #555555;}
 .notice__detail__wrap .table__horizontal__ex .td__container {height: 100%; align-items: center;}
 .board__detail {padding: 6.4rem 0;}

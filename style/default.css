@@ -3754,7 +3754,7 @@ button.mo_only {
   align-items: stretch;
 }
 
-.foldStyle__table tbody tr:nth-child(odd) td {
+.foldStyle__table tbody tr td {
   display: flex;
   align-items: center;
 }
@@ -3808,6 +3808,10 @@ button.mo_only {
 
 .notice__detail__wrap table {
   font-size: 1.6rem;
+}
+
+.notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {
+  border-bottom: 0;
 }
 
 .notice__detail__wrap .content__desc {
@@ -6157,7 +6161,7 @@ button.mo_only {
   }
   .foldStyle__table .qna__title {
     width: 4rem;
-    min-width: auto;
+    min-width: 4rem;
   }
   .foldStyle__table td {
     font-size: 1.9rem;
@@ -6379,6 +6383,9 @@ button.mo_only {
   }
   .table__horizontal__ex .half__row td {
     width: 100%;
+  }
+  .notice__detail .function__group.margin-1 {
+    margin-bottom: 6.4rem;
   }
 }
 /* 모바일 최소 사이즈*/

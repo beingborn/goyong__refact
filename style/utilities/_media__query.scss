@@ -192,11 +192,6 @@
     .count__group .count .subc::before { margin-bottom: 0; margin-right: 1.6rem; width: 6rem;height: 6rem;border-radius: 50%;}
     .section__top .section__title { font-size: 3.2rem; }
 
-
-    
-    
-
-    
     .cs__center { height: auto; }
     .cs__center .content { flex-direction: column; padding: 5rem 0; gap: 8rem; }
     .cs__center .content .item { width: 100%; }
@@ -307,7 +302,7 @@
   .foldStyle__table .arrow__box {display: none;} 
   .foldStyle__table tr:nth-child(odd) td:nth-of-type(1){border-right: 0.1rem solid #ddd;}
   .foldStyle__table .qna__function__group {margin-right: 0; width: 4rem; justify-content: center;} 
-  .foldStyle__table .qna__title {width: 4rem; min-width: auto;}
+  .foldStyle__table .qna__title {width: 4rem; min-width: 4rem;}
   .foldStyle__table td {font-size: 1.9rem;}
   .foldStyle__table td {min-height: 8rem;}
   .foldStyle__table .answer__toggle {font-size: 1.9rem;}
@@ -393,8 +388,8 @@
   .su__operior .td__container {flex-direction: column; width: 100%;}
   .table__horizontal__ex .half__row td {width: 100%;}
 
-  // 하반기 근거 자료
-
+  // 공지사항 상세
+  .notice__detail .function__group.margin-1 {margin-bottom: 6.4rem;}
 }
 
 
