@@ -3952,6 +3952,18 @@ button.mo_only {
   padding: 0 9rem;
 }
 
+.accn__desc__wrap .num__label {
+  margin-right: 0.8rem;
+  background-color: #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #fff;
+  border-radius: 50%;
+}
+
 .accn__desc__wrap .content__section:first-child {
   display: flex;
   position: relative;
@@ -6101,6 +6113,12 @@ button.mo_only {
   }
   .m__cont {
     display: block;
+  }
+  .accn__desc__wrap .section .text__container p {
+    text-align: left;
+  }
+  .accn__desc__wrap .expected__section .text__container p:nth-of-type(1) {
+    margin-bottom: 2.4rem;
   }
   .footer__bottom .footer__logo {
     padding-top: 3.2rem;

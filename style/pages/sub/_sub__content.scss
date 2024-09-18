@@ -195,7 +195,8 @@ button.mo_only {display: none;}
 
 // 홈 > 회계공시 시스템이란
 .accn__desc__wrap .desc__inner {padding: 0 9rem;}
-
+.accn__desc__wrap .num__label {margin-right : 0.8rem;background-color: #000; display: inline-flex; justify-content : center; align-items: center ;width: 1.4rem; height: 1.4rem; color: #fff; border-radius: 50%;}
+ 
 
 // 설명 1번 섹션
 .accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
