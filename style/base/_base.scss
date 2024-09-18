@@ -1,5 +1,23 @@
 /*  기본 공통 CSS  */
 
+/* 
+  색상 값 변수 관리
+*/
+$main-color: #246BEB;
+$second-color: #003675;
+$text-color: #1d1d1d;
+$table-border-color-dd: #ddd;
+$theme-btn-blue-00 : #246BEB;
+$theme-btn-blue-01 : #1D56BC;
+// $theme-btn-blue-01 : #003675;
+$theme-btn-bk-00 : #000000;
+$theme-btn-red-00 : #B9131E;
+$theme-krds-skyblue-00 : #DEEBF7;
+$theme-krds-skyblue-01 : #EDF1F5;
+$theme-krds-navy-00 : #003675;
+// 버튼 컬러 
+
+
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(
@@ -82,6 +100,11 @@ select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-heigh
 
 // 페이지 제목
 .page__title {font-size: 4rem;}
+
+// 타이틀 영역 전체 적용
+.lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 500;} 
+.flex__title { display: flex; align-items: center; justify-content: space-between;}
+.flex__title span {font-size: 1.6rem;}
 
 
 input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
@@ -250,7 +273,7 @@ height: 100%;
 
 
   // 메인 버튼
-  .btn--active { background-color: $second-color; color: #fff;}
+  .btn--active { background-color: #003675; color: #fff;}
   .btn--disabled { background-color: #fff; color: #1d1d1d;}
 
 

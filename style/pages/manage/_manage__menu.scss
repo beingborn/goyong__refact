@@ -109,10 +109,7 @@
       }
 }
 
-// 타이틀 영역 전체 적용
-.lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 500;} // 관리자 페이지 제목
-.flex__title { display: flex; align-items: center; justify-content: space-between;} // 관리자 페이지 예시 (건수 등 결과 값이 있을 시 넣는 클래스)
-.flex__title span {font-size: 1.6rem;}
+
 
 .function__group.y__flex {
     align-items: center;  

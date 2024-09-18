@@ -29,6 +29,10 @@
   .main__echart .table tbody td:nth-child(n+3) {white-space: nowrap;}
   .main__echart .table tbody td {padding: 0 0.4rem;}
   .main__echart > div {gap: 2rem;}
+
+  // 회계공시 열람 상세 
+  .tab__4__chart__wrapper { width: calc(50% - 2rem); }
+  .tab__4 .echart { width: 100%; }
 }
 
 /* 태블릿 큰 사이즈 768px ~ 1079px */
@@ -130,6 +134,11 @@
 
   // 상단 검색폼
   .search__form__user .search .select__box {min-width: auto;}
+
+  // 회계공시 열람 상세
+  .tab__4__chart__wrapper { width: calc(50% - 2rem); }
+  .tab__4 .echart { width: 100%; }
+  .first__col, .third__col { width: 12.38%; }
 }
 
 
@@ -137,7 +146,7 @@
 @media all and (min-width: 360px) and (max-width: 1080px){
   .upload__manager .preview {min-width: auto; flex-grow: 1;}
   .upload__manager .file__select__container, .support__data .file__select__container {gap: 0;}
-  .upload__manager .btn__file__select, .upload__manager .btn__file__select--mo, .support__data .btn__file__select--mo {margin: 0 1rem;}
+  .btn__file__select--mo {margin: 0 1rem;}
 }
 
 
@@ -363,6 +372,15 @@
   .sub1__1__wrap .tab .pc__info {margin-top: 3.6rem;}
   .sub1__1__wrap .function__group.margin-2 {margin-bottom: 6.4rem;}
   .function__group.margin-2 {margin-top: 3.6rem;}
+  .echart { width: 100%; }
+  .chart__wrapper { width: 100%; }
+  .chart-block { display: block; }
+  .tab__4__chart__wrapper { width: 100%; }
+  .tab__4 .chart { width: 100%; }
+  .tab__4__table { display: none; }
+  .mo__tab__table { display: block;}
+
+
 
   // 회계공시 등록 페이지
   .public__register__wrap .form__table tr {flex-direction: column;}

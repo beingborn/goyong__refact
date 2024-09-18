@@ -1,8 +1,8 @@
 @charset "UTF-8";
+/*  기본 공통 CSS  */
 /* 
   색상 값 변수 관리
 */
-/*  기본 공통 CSS  */
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
@@ -109,6 +109,22 @@ select {
 
 .page__title {
   font-size: 4rem;
+}
+
+.lnb__title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+
+.flex__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex__title span {
+  font-size: 1.6rem;
 }
 
 input[type=radio] {
@@ -3053,22 +3069,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   font-size: 1.5rem;
 }
 
-.lnb__title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.6rem;
-  font-weight: 500;
-}
-
-.flex__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex__title span {
-  font-size: 1.6rem;
-}
-
 .function__group.y__flex {
   align-items: center;
 }
@@ -4150,6 +4150,97 @@ button.mo_only {
   margin-bottom: 3.6rem;
 }
 
+.chart-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chart__wrapper {
+  width: calc(50% - 20px);
+}
+
+.mo__tab__table {
+  display: none;
+  margin-bottom: 5rem;
+}
+
+.tab__content .mo__tab__table table {
+  font-size: 1.5rem;
+}
+
+.tab__content .mo__tab__table table tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab__content .mo__tab__table table tbody th {
+  font-size: 1.6rem;
+  text-align: left;
+  border: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.tab__content .mo__tab__table table tbody td {
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.mo__4__input, .mo__4__select {
+  height: 4rem;
+  line-height: 4rem;
+  border: 1px solid #CDCCCD;
+  width: calc(50% - 1rem);
+}
+
+.mo__4__group__wrap {
+  margin-bottom: 2rem;
+}
+
+.mo__4__group {
+  height: 4rem;
+  line-height: 4rem;
+  border: 1px solid #CDCCCD;
+}
+
+.tab .echart {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: #F8F8F8;
+}
+
+.chart__title {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+}
+
+.chart__title h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.chart__title span {
+  font-size: 1.7rem;
+}
+
+.tab__4__table {
+  margin-bottom: 6.4rem;
+}
+
+.tab__4__table .input--flex input, .tab__4__table .input--flex select {
+  width: calc(50% - 1rem);
+}
+
+.tab__4__chart__wrapper {
+  width: calc(50% - 2rem);
+  margin-bottom: 6.4rem;
+}
+
 .td--flex {
   display: flex;
   align-items: center;
@@ -4358,6 +4449,7 @@ button.mo_only {
 .mobile__tab .swiper-button-next,
 .mobile__tab .swiper-button-prev {
   position: absolute;
+  z-index: 66;
   width: 2.4rem;
   height: 2.4rem;
   margin-top: 0;
@@ -4365,7 +4457,21 @@ button.mo_only {
 }
 .mobile__tab .swiper-button-next::after,
 .mobile__tab .swiper-button-prev::after {
-  display: none;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mobile__tab .swiper-button-next::after {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  padding: 0.8rem 1.6rem 0.8rem 3.2rem;
+}
+.mobile__tab .swiper-button-prev::after {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  padding: 0.8rem 3.2rem 0.8rem 1.6rem;
 }
 
 .mobile__tab .swiper-slide button.active {
@@ -4564,153 +4670,6 @@ button.mo_only {
   margin-bottom: 2.8rem;
 }
 
-.chart-block {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.chart__wrapper {
-  width: calc(50% - 20px);
-}
-
-.mo__tab__table {
-  display: none;
-  margin-bottom: 5rem;
-}
-
-.tab__content .mo__tab__table table {
-  font-size: 1.5rem;
-}
-
-.tab__content .mo__tab__table table tr {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tab__content .mo__tab__table table tbody th {
-  font-size: 1.6rem;
-  text-align: left;
-  border: 0;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.tab__content .mo__tab__table table tbody td {
-  font-size: 1.6rem;
-  width: 100%;
-}
-
-.mo__4__input, .mo__4__select {
-  height: 4rem;
-  line-height: 4rem;
-  border: 1px solid #CDCCCD;
-  width: calc(50% - 1rem);
-}
-
-.mo__4__group__wrap {
-  margin-bottom: 2rem;
-}
-
-.mo__4__group {
-  height: 4rem;
-  line-height: 4rem;
-  border: 1px solid #CDCCCD;
-}
-
-.tab .echart {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  background-color: #F8F8F8;
-}
-
-.chart__title {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #000;
-  padding-bottom: 12px;
-}
-
-.chart__title h2 {
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-.chart__title span {
-  font-size: 1.7rem;
-}
-
-.tab__4__table {
-  margin-bottom: 6.4rem;
-}
-
-.tab__4__table .input--flex input, .tab__4__table .input--flex select {
-  width: calc(50% - 1rem);
-}
-
-.tab__4__chart__wrapper {
-  width: calc(50% - 2rem);
-  margin-bottom: 6.4rem;
-}
-
-@media all and (min-width: 480px) and (max-width: 766px) {
-  .echart {
-    width: 100%;
-  }
-  .chart__wrapper {
-    width: 100%;
-  }
-  .chart-block {
-    display: block;
-  }
-  .tab__4__chart__wrapper {
-    width: 100%;
-  }
-  .tab__4 .chart {
-    width: 100%;
-  }
-  .tab__4__table {
-    display: none;
-  }
-  .mo__tab__table {
-    display: block;
-  }
-}
-@media all and (max-width: 479px) {
-  .echart {
-    width: 100%;
-  }
-  .chart__wrapper {
-    width: 100%;
-  }
-  .chart-block {
-    display: block;
-  }
-  .tab__4__chart__wrapper {
-    width: 100%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1079px) {
-  .tab__4__chart__wrapper {
-    width: calc(50% - 2rem);
-  }
-  .tab__4 .echart {
-    width: 100%;
-  }
-  .first__col, .third__col {
-    width: 12.38%;
-  }
-}
-@media all and (min-width: 1080px) and (max-width: 1440px) {
-  .tab__4__chart__wrapper {
-    width: calc(50% - 2rem);
-  }
-  .tab__4 .echart {
-    width: 100%;
-  }
-}
 /* 스와이퍼 CSS */
 .swiper__container {
   width: 100%;
@@ -5312,7 +5271,6 @@ button.mo_only {
     display: block;
   }
 }
-/* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (min-width: 360px) and (max-width: 767px) {
   .form__head .form-title:nth-of-type(1) {
     min-width: 10rem;
@@ -5325,19 +5283,18 @@ button.mo_only {
   .upload__manager .form__row .td__container input {
     width: 8rem;
   }
-  .upload__manager .file__select__container > .preview {
-    position: relative;
+  .upload__manager .file__select__container > .preview, .union__management__wrap .file__select__container > .preview {
     margin-right: 1rem;
   }
-  .upload__manager .btn__file__select, .support__data .btn__file__select {
+  .file__select__container > .preview {
+    position: relative;
+  }
+  .btn__file__select {
     display: none;
   }
-  .upload__manager .btn__file__select--mo, .support__data .btn__file__select--mo {
+  .btn__file__select--mo {
     display: block;
     right: 0;
-  }
-  .support__data .file__select__container > .preview {
-    position: relative;
   }
   .file__change__wrap .td__container {
     flex-wrap: nowrap;
@@ -5583,6 +5540,12 @@ button.mo_only {
   }
   .main__echart > div {
     gap: 2rem;
+  }
+  .tab__4__chart__wrapper {
+    width: calc(50% - 2rem);
+  }
+  .tab__4 .echart {
+    width: 100%;
   }
 }
 /* 태블릿 큰 사이즈 768px ~ 1079px */
@@ -5834,6 +5797,15 @@ button.mo_only {
   .search__form__user .search .select__box {
     min-width: auto;
   }
+  .tab__4__chart__wrapper {
+    width: calc(50% - 2rem);
+  }
+  .tab__4 .echart {
+    width: 100%;
+  }
+  .first__col, .third__col {
+    width: 12.38%;
+  }
 }
 @media all and (min-width: 360px) and (max-width: 1080px) {
   .upload__manager .preview {
@@ -5843,7 +5815,7 @@ button.mo_only {
   .upload__manager .file__select__container, .support__data .file__select__container {
     gap: 0;
   }
-  .upload__manager .btn__file__select, .upload__manager .btn__file__select--mo, .support__data .btn__file__select--mo {
+  .btn__file__select--mo {
     margin: 0 1rem;
   }
 }
@@ -6357,6 +6329,27 @@ button.mo_only {
   }
   .function__group.margin-2 {
     margin-top: 3.6rem;
+  }
+  .echart {
+    width: 100%;
+  }
+  .chart__wrapper {
+    width: 100%;
+  }
+  .chart-block {
+    display: block;
+  }
+  .tab__4__chart__wrapper {
+    width: 100%;
+  }
+  .tab__4 .chart {
+    width: 100%;
+  }
+  .tab__4__table {
+    display: none;
+  }
+  .mo__tab__table {
+    display: block;
   }
   .public__register__wrap .form__table tr {
     flex-direction: column;
