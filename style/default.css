@@ -78,7 +78,7 @@ input[type=reset], textarea, select, button {
 }
 
 input[type=text], select, input[type=password] {
-  border: 0.1rem solid #ccc;
+  border: 0.1rem solid #717171;
   border-radius: 0.5rem;
   padding: 1.2rem;
 }
@@ -623,6 +623,10 @@ button {
   white-space: nowrap;
 }
 
+.sub1__1__wrap .tab__wrap .tab__btn button.active::after {
+  bottom: 0;
+}
+
 .tab__wrap .tab__btn button.active {
   color: #21a366;
   position: relative;
@@ -829,7 +833,6 @@ table caption {
 }
 
 .table__horizontal td input[type=text] {
-  border: 0.1rem solid #ccc;
   height: 4rem;
 }
 
@@ -862,7 +865,6 @@ table caption {
 }
 
 .table__horizontal__ex input[type=text] {
-  border: 0.1rem solid #ddd;
   height: 4rem;
   width: 100%;
   font-size: 1.6rem;
@@ -1115,10 +1117,6 @@ table caption {
 
 .manage__user__table td {
   width: auto;
-}
-
-.manage__user__table td input[type=text] {
-  border: 0.1rem solid #ddd;
 }
 
 .table__information .first__td {
@@ -1502,7 +1500,7 @@ input[type=file]::file-selector-button {
   right: 1.6rem;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/file__select--mo.svg) no-repeat center;
+  background: url(../img/file__select--mo.svg) no-repeat center;
   background-size: cover;
 }
 
@@ -1801,6 +1799,7 @@ input[type=checkbox] {
 .breadcrumb .path > li > a {
   padding-bottom: 0.1rem;
   position: relative;
+  font-weight: 700;
 }
 
 .breadcrumb .path > li > a::after {
@@ -4376,7 +4375,6 @@ button.mo_only {
 }
 
 .form__table td input[type=text], .form__table td input[type=password] {
-  border: 1px solid #ddd;
   line-height: 4rem;
   width: 100%;
   padding: 0 8px;
@@ -4384,13 +4382,13 @@ button.mo_only {
 }
 
 .form__table td input[type=submit] {
-  border: 1px solid #ddd;
+  border: 1px solid #717171;
   line-height: 4rem;
 }
 
 .form__table td select {
   height: 4rem;
-  border: 1px solid #ddd;
+  border: 1px solid #717171;
 }
 
 .form__table .secret__Check .icon__pw-visible {

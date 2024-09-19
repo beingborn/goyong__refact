@@ -192,3 +192,9 @@ e.stopPropagation();
 $(this).closest(".tooltip__layer").removeClass("active");
 $(this).closest(".tooltip__layer").prev('.info__tip').removeClass('active')
 });
+
+
+// 업로드 임시 이벤트 제거
+$('.btn__upload').click(function(e){
+  e.preventDefault()
+})

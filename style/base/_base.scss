@@ -86,11 +86,10 @@ body {
     font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-
     font-size: 1.6rem;
     background-color: #fff;
   }
-input[type="text"], select, input[type="password"] {border: 0.1rem solid #ccc; border-radius: 0.5rem; padding: 1.2rem;}
+input[type="text"], select, input[type="password"] {border: 0.1rem solid #717171; border-radius: 0.5rem; padding: 1.2rem;}
 select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-height: 4rem;}
 
 // 수신 동의 및 여부 확인

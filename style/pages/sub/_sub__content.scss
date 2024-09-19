@@ -303,9 +303,9 @@ button.mo_only {display: none;}
 
 .form__table th {min-width: 25rem; } // 해당 min-width 수치는 임시
 .form__table td { flex-grow: 1; line-height: 100%; display: block;}
-.form__table td input[type="text"], .form__table td input[type="password"] { border: 1px solid #ddd; line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
-.form__table td input[type="submit"] { border: 1px solid #ddd; line-height: 4rem; }
-.form__table td select { height: 4rem; border: 1px solid #ddd; }
+.form__table td input[type="text"], .form__table td input[type="password"] {line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
+.form__table td input[type="submit"] { border: 1px solid #717171; line-height: 4rem; }
+.form__table td select { height: 4rem; border: 1px solid #717171; }
 .form__table .secret__Check .icon__pw-visible { right: 1.8rem; transform: translateY(-50%); }
 .form__table .error-message { padding-left: 2rem; padding-bottom: 1rem;}
 

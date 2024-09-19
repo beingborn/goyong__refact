@@ -26,7 +26,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal tbody th { text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
 .table__horizontal td { padding: 0 1rem; }
 .table__horizontal td select { width: 100%; height: 4rem; border: 0.1rem solid #ccc; padding: 0.8rem; }
-.table__horizontal td input[type="text"] { border: 0.1rem solid #ccc; height: 4rem;}
+.table__horizontal td input[type="text"] {height: 4rem;}
 
 // thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
@@ -34,7 +34,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // .table__horizontal__ex td {width: auto; flex-grow: 1; display: inline-flex; align-items: center;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1; display: block;} 
 .table__horizontal__ex .half__row td {width: 50%;}
-.table__horizontal__ex input[type="text"] {border: 0.1rem solid #ddd; height: 4rem;  width: 100%; font-size: 1.6rem;}
+.table__horizontal__ex input[type="text"] {height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
 .table__horizontal__ex .td__container .content {width: 100%;}
 .table__horizontal__ex .td__vertical--c {display: flex; align-items: center;}
@@ -118,7 +118,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .manage__user__table .height--auto {height: auto; }
 .manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
 .manage__user__table td {width: auto;} 
-.manage__user__table td input[type="text"] {border: 0.1rem solid #ddd;}
 .table__information .first__td {width: 20.31%;}
 .table__information .second__td {width: 21.88%}
 
