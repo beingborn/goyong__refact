@@ -3698,6 +3698,7 @@ button.mo_only {
 .search__form__user .search .select__box > select {
   width: 100%;
   height: 100%;
+  flex: 1;
 }
 
 .search__form__user label.mo_only {
@@ -4660,7 +4661,7 @@ button.mo_only {
   border-bottom: 0.3rem solid #21A366;
 }
 
-.dta--open.on > span {
+.data--open.on .data__toggle {
   color: #21A366;
 }
 
@@ -6153,6 +6154,9 @@ button.mo_only {
   }
   .m__cont {
     display: block;
+  }
+  input[type=text], select {
+    min-height: 4.8rem;
   }
   .accn__desc__wrap .section .text__container p {
     text-align: left;

@@ -169,7 +169,7 @@
 .data--open {cursor: pointer;width: 100%;position: relative; border-bottom: 0.1rem solid #ddd;}
 .data__toggle {font-size: 1.7rem;font-weight: 700;}
 .data--open.on {border-bottom: 0.3rem solid #21A366;}
-.dta--open.on > span {color: #21A366;}
+.data--open.on .data__toggle {color: #21A366;}
 .data--open.on .arrow__top { display: block;}
 .data--open.on .arrow__bottom { display: none;}
 

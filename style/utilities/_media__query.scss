@@ -282,6 +282,8 @@
   .w__cont {display: none;}
   .m__cont {display: block;}
 
+  input[type="text"], select {min-height: 4.8rem;}
+
   // 회계공시 시스템이란
   .accn__desc__wrap .section .text__container p {text-align: left;}
   .accn__desc__wrap .expected__section .text__container p:nth-of-type(1) {margin-bottom: 2.4rem;}
