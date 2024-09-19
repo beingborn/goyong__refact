@@ -5813,6 +5813,9 @@ button.mo_only {
   .main__swiper .swiper-slide-active .item .item__wrap .total .total__wrap:nth-child(1)::after {
     display: none;
   }
+  .accn__desc__wrap .breadcrumb {
+    margin-bottom: 6.4rem;
+  }
   .search__form__user .search .select__box {
     min-width: auto;
   }
