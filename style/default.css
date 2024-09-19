@@ -3681,6 +3681,18 @@ button.mo_only {
 .search__form__user .search .select__box {
   min-width: 18rem;
   height: 4.8rem;
+  display: flex;
+}
+
+.search__form__user .search .select__box.select__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__form__user .search .select__box.select__container input[type=text], .search__form__user .search .select__box select {
+  width: calc(50% - 1rem);
 }
 
 .search__form__user .search .input__box {
@@ -3706,6 +3718,12 @@ button.mo_only {
   font-size: 1.7rem;
   padding-bottom: 1rem;
   margin-right: auto;
+}
+
+.search__form__user .search__container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .form__container {
