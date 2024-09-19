@@ -619,11 +619,10 @@ button {
   font-weight: 700;
   line-height: 4.5rem;
   color: #767676;
-  border-bottom: 0.1rem solid #d8d8d8;
   white-space: nowrap;
 }
 
-.sub1__1__wrap .tab__wrap .tab__btn button.active::after {
+.sub1__1__wrap .tab__wrap .tab__btn button.active::after, .main__accn__desc__wrap .tab__btn button.active::after {
   bottom: 0;
 }
 
@@ -635,7 +634,7 @@ button {
 .tab__wrap .tab__btn button.active::after {
   content: "";
   position: absolute;
-  bottom: -0.2rem; /* 기존 border보다 위로 이동 */
+  bottom: -0.2rem;
   left: 0;
   width: 100%;
   height: 0.4rem; /* 원하는 두께로 설정 */
@@ -643,7 +642,6 @@ button {
 }
 
 .tab__border {
-  padding-bottom: 0.2rem;
   border-bottom: 0.2rem solid #ddd;
 }
 
@@ -1246,6 +1244,7 @@ table caption {
 
 .accn__open__wrap .table__horizontal__mo .title {
   font-size: 1.9rem;
+  font-weight: 700;
 }
 
 .accn__open__wrap .table__horizontal__mo .sub__title {
@@ -1464,7 +1463,7 @@ input[type=file]::file-selector-button {
 
 .preview {
   height: 4rem;
-  border: 0.1rem solid #ddd;
+  border: 0.1rem solid #717171;
   border-radius: 0.5rem;
 }
 
@@ -2465,7 +2464,7 @@ input[type=checkbox] {
   background: url(../img/cs__center.jpg) no-repeat center;
   -webkit-backdrop-filter: blur(1.5rem);
           backdrop-filter: blur(1.5rem);
-  background-size: 105%;
+  background-size: cover;
   display: flex;
 }
 .cs__center .content__top {
@@ -3754,7 +3753,7 @@ button.mo_only {
   margin-right: 1.2rem;
 }
 
-.accn__open__wrap table {
+.accn__open__wrap .w__table {
   table-layout: fixed;
 }
 
@@ -4005,6 +4004,7 @@ button.mo_only {
   height: 1.4rem;
   color: #fff;
   border-radius: 50%;
+  font-size: 1.2rem;
 }
 
 .accn__desc__wrap .content__section:first-child {
@@ -5430,6 +5430,9 @@ button.mo_only {
   .form__table .td__container {
     padding: 0;
   }
+  .form__table .consent__chk .td__container {
+    gap: 0;
+  }
   .form__table td input[type=text], .form__table td input[type=password] {
     padding: 0.8rem 0.8rem;
     min-height: 5.6rem;
@@ -6185,6 +6188,19 @@ button.mo_only {
   .accn__desc__wrap .num__label.m__cont {
     display: inline-flex;
   }
+  .content__section .text__container .title {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+  .accn__desc__wrap .expected__section .title {
+    font-size: 3.6rem;
+  }
+  .content__section:first-child .text__container .desc:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+  .content__section:first-child .text__container .desc:nth-of-type(2) {
+    margin-bottom: 0;
+  }
   .footer__bottom .footer__logo {
     padding-top: 3.2rem;
   }
@@ -6199,6 +6215,7 @@ button.mo_only {
     display: inline-flex;
     flex-direction: column;
     font-size: 1.3rem;
+    padding: 1rem 0;
   }
   .right__icon__set a span {
     padding-top: 0.8rem;

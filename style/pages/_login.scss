@@ -91,6 +91,7 @@
      .form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; } 
      .form__table.border-top-large{border-top: 0;}
      .form__table .td__container {padding: 0;}
+     .form__table .consent__chk .td__container {gap: 0;} // 수신동의 gap 제거
      .form__table td input[type="text"], .form__table td input[type="password"] {padding: 0.8rem 0.8rem; min-height: 5.6rem;} 
      .form__table td select {min-height: 5.6rem; font-size: 1.7rem; color: #555555;}
  
