@@ -2334,6 +2334,7 @@ input[type=checkbox] {
 
 #gnb2 .gnb__body {
   border-top: 0.1rem solid #ddd;
+  height: calc(100% - 12.8rem);
 }
 
 #gnb2 .gnb__in {
@@ -2346,7 +2347,7 @@ input[type=checkbox] {
   right: 2.4rem;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/gnb__close.svg) no-repeat center;
+  background: url(../img/gnb__close.svg) no-repeat center;
   background-size: cover;
 }
 
