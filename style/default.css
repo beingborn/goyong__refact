@@ -631,7 +631,7 @@ button {
 .tab__wrap .tab__btn button.active::after {
   content: "";
   position: absolute;
-  bottom: 0; /* 기존 border보다 위로 이동 */
+  bottom: -0.2rem; /* 기존 border보다 위로 이동 */
   left: 0;
   width: 100%;
   height: 0.4rem; /* 원하는 두께로 설정 */
@@ -1971,7 +1971,6 @@ input[type=checkbox] {
   z-index: 1000;
   background-color: #fff;
   border-bottom: 0.15rem solid #ededed;
-  transition: all 0.5s;
 }
 
 .header .header__btm .logo {
