@@ -2348,7 +2348,7 @@ input[type=checkbox] {
 
 #gnb2 .gnb__body {
   border-top: 0.1rem solid #ddd;
-  height: calc(100% - 12.8rem);
+  height: 100%;
 }
 
 #gnb2 .gnb__in {
