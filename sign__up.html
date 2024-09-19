@@ -777,6 +777,9 @@
                 
                             <script>
 
+
+
+
                                 $(document).ready(function () {
                                 let fileIndex = 3;
 
@@ -805,34 +808,35 @@
                                 $(this).closest('.form__row').remove();
                                 });  
 
-                                                        
-                                                    let inputs = $(".file__post");
-                                                    let preview = $(".preview");
-                                                    inputs.css({"opacity": 0,"width": 0});
-                                                    function displayFileNames(event){
-                                                    let currentInput = $(event.target);
-                                                    let index = inputs.index(currentInput)
-                                                    let previewBox = $(preview[index])
-                                                    previewBox.empty();  // preview 내 모든 자식 요소 제거
-                                                    const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
-                                            
-                                                    if (currentFile.length === 0) {
-                                                        const para = $("<span>").text("아무파일도 입력되지 않았어요");
-                                                        previewBox.append(para);
-                                                        } else {
-                                                        const fileList = $("<div>");
-                                                        previewBox.append(fileList);
-                        
-                                                        for (const file of currentFile) {
-                                                        const listItem = $("<p>").text(file.name).addClass('upload__file__name');
-                                                        fileList.append(listItem);
-                                                        }
-                                                    }
-                                                    }
-                                                    
-                        
-                                                    inputs.on('change', displayFileNames);
+                                $(document).ready(function () {
+                                let preview = $(".preview");
 
+                                // 파일명 표시 함수
+                                function displayFileNames(event) {
+                                    let currentInput = $(event.target);
+                                    let previewBox = currentInput.siblings('.preview'); // 같은 부모 내에 있는 .preview 선택
+                                    previewBox.empty();  // preview 내 모든 자식 요소 제거
+                                    const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
+
+                                    if (currentFile.length === 0) {
+                                    const para = $("<span>").text("아무 파일도 입력되지 않았어요");
+                                    previewBox.append(para);
+                                    } else {
+                                    const fileList = $("<div>");
+                                    previewBox.append(fileList);
+
+                                    for (const file of currentFile) {
+                                        const listItem = $("<p>").text(file.name).addClass('upload__file__name');
+                                        fileList.append(listItem);
+                                    }
+                                    }
+                                }
+
+                                // 이벤트 위임으로 .form__body에 파일 선택 시 이벤트 바인딩
+                                $('.form__body').on('change', '.file__post', displayFileNames);
+                                });
+                      
+ 
 
                             </script>
 
