@@ -223,7 +223,7 @@
                                             id="searchText"
                                             name="searchText"
                                             class="ml4"
-                                            placeholder="내용을 입력하세요."
+                                            placeholder="검색어를 입력하세요."
                                             value="">
                                          <div class="flex--box-c btn__con">
                                             <button
@@ -240,7 +240,7 @@
                                             type="button"
                                             id=""
                                             class="btn__control__u bg--green-02"
-                                            onclick="fn_search();">자료다운로드</button>
+                                            onclick="fn_search();">자료 다운로드</button>
                                          </div>   
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
                                         </button>
                                         <div class="arrow__box">
-                                            <img src="img/qna__bg__top__arrow.svg" alt="">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
                                         </div>
                                     </td>
                                 </tr>
@@ -309,7 +309,7 @@
                                         <!-- <button type="button"> <img src="/pap/common/images/sub/iconFile.png"
                                         alt="파일첨부 아이콘" onclick="fn_fileDown(20240000000188)"> </button> -->
                                         <div class="arrow__box">
-                                            <img src="img/qna__bg__top__arrow.svg" alt="">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
                                         </div>
                                     </td>
                                 </tr>
@@ -345,7 +345,7 @@
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
                                         </button>
                                         <div class="arrow__box">
-                                            <img src="img/qna__bg__top__arrow.svg" alt="">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
                                         </div>
                                     </td>
                                 </tr>
@@ -382,7 +382,7 @@
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
                                         </button>
                                         <div class="arrow__box">
-                                            <img src="img/qna__bg__top__arrow.svg" alt="">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
                                         </div>
                                     </td>
 
@@ -419,7 +419,7 @@
                                             <img src="img/download__icon.svg" alt="다운로드 아이콘">
                                         </button>
                                         <div class="arrow__box">
-                                            <img src="img/qna__bg__top__arrow.svg" alt="">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
                                         </div>
                                     </td>
                                 </tr>
@@ -484,13 +484,9 @@
                                     $answerTr.toggle();
                                     // 이미지 경로 변경: answer__tr이 보이면 down arrow, 안 보이면 top arrow
                                     if ($answerTr.is(':visible')) {
-                                        $(this)
-                                            .find('.arrow__box > img')
-                                            .attr('src', 'img/qna__bg__down__arrow.svg');
+                                        $(this).find('.arrow__box > img').attr('src', 'img/qna__bg__top__arrow.svg');
                                     } else {
-                                        $(this)
-                                            .find('.arrow__box > img')
-                                            .attr('src', 'img/qna__bg__top__arrow.svg');
+                                        $(this).find('.arrow__box > img').attr('src', 'img/qna__bg__down__arrow.svg');
                                     }
                                 });
                                 $('.answer__tr').hide();

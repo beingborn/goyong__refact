@@ -16,7 +16,7 @@
     backdrop-filter: blur(1.5rem);
     background-size: 105%;
     display: flex;
-    align-items: center;
+
 
     .content__top {
         display: flex;
@@ -51,6 +51,7 @@
         justify-content: space-between;
         position:relative;
         z-index: 3;
+        padding-top: 3.7rem;
 
         .item {
             width: calc(50% - 3rem);

@@ -104,6 +104,7 @@ button.mo_only {display: none;}
 
 
 .form__container {display: flex; flex-wrap: wrap; gap: 2.4rem;}
+.accn__desc__wrap .num__label.m__cont { display: none ;}
 
 
 // 가맹 노조 크기 작은 버튼 크기
@@ -131,7 +132,7 @@ button.mo_only {display: none;}
 .foldStyle__table tbody tr td {display: flex; align-items: center;}
 .foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%; }
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
-.foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center;}
+.foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center; background-color: transparent;}
 .foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
 .foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
 .foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
@@ -156,7 +157,7 @@ button.mo_only {display: none;}
 .notice__detail__wrap .table__horizontal__ex .td__container {height: 100%; align-items: center;}
 .board__detail {padding: 6.4rem 0;}
 .notice__detail__wrap .file__wrap {min-height: 5.8rem; background-color: #EAF5F0; display: flex; align-items: center;}
-.file__wrap .file__header {min-width: 25rem; padding-left: 3rem; font-weight: 700; line-height: 5.8rem; border-right: 0.1rem solid #ddd;}
+.file__wrap .file__header {min-width: 25rem; padding-left: 3rem; font-weight: 700; line-height: 5.8rem;}
 .file__wrap .list {flex-grow: 1; max-width: 84rem;}
 .file__wrap .list > span {font-weight: 500;}
 .file__wrap .download {margin-left: auto; padding-right: 3.6rem;}
@@ -168,11 +169,11 @@ button.mo_only {display: none;}
 .prev__title {font-weight: 700;}
 .prev__next .prev span, .prev__next .next span {min-width: 22rem; display: inline-flex; align-items: center;}
 .prev__next .prev span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
-     background: url(../../img/arrow__top-bk.svg) no-repeat center;
+     background: url(../img/arrow__top-bk.svg) no-repeat center;
      background-size: 2.4rem auto;
 }
 .prev__next .next span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
-    background: url(../../img/arrow__bottom-bk.svg) no-repeat center;
+    background: url(../img/arrow__bottom-bk.svg) no-repeat center;
     background-size: 2.4rem auto;
 }
 

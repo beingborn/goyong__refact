@@ -283,7 +283,7 @@
   // 회계공시 시스템이란
   .accn__desc__wrap .section .text__container p {text-align: left;}
   .accn__desc__wrap .expected__section .text__container p:nth-of-type(1) {margin-bottom: 2.4rem;}
-
+  .accn__desc__wrap .num__label.m__cont {display: inline-flex;}
   .footer__bottom .footer__logo {padding-top: 3.2rem;}  
   .footer__bottom .footer__flex {padding-top: 3.2rem; padding-bottom: 3.2rem;}
   // 상단 아이콘 셋
@@ -345,6 +345,7 @@
   .notice__detail .table__horizontal__ex tr:nth-child(2) td:first-of-type {border-bottom: 0.1rem solid #ddd;}
   .notice__detail .table__horizontal__ex tr:nth-child(2)::after{content: ''; height: 0.1rem; background: #ddd; display: inline-block; position: absolute; width: 100%; left: 0;} 
   .notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {border-bottom: 0;}
+  .file__wrap .file__header {border-right: 0.1rem solid #ddd;}
   .board__detail {padding: 3.6rem 0;}
 
   .notice__detail .file__wrap {flex-direction: column;}

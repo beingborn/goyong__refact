@@ -510,6 +510,10 @@ textarea {
      object-fit: cover;
 }
 
+.m__cont {
+  display: none;
+}
+
 .error-message {
   color: #E71825;
 }
@@ -2455,7 +2459,6 @@ input[type=checkbox] {
           backdrop-filter: blur(1.5rem);
   background-size: 105%;
   display: flex;
-  align-items: center;
 }
 .cs__center .content__top {
   display: flex;
@@ -2484,6 +2487,7 @@ input[type=checkbox] {
   justify-content: space-between;
   position: relative;
   z-index: 3;
+  padding-top: 3.7rem;
 }
 .cs__center .content .item {
   width: calc(50% - 3rem);
@@ -3697,6 +3701,10 @@ button.mo_only {
   gap: 2.4rem;
 }
 
+.accn__desc__wrap .num__label.m__cont {
+  display: none;
+}
+
 .btn__control__u {
   color: #fff;
   font-size: 1.7rem;
@@ -3777,6 +3785,7 @@ button.mo_only {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 .foldStyle__table .answer__toggle {
@@ -3839,7 +3848,6 @@ button.mo_only {
   padding-left: 3rem;
   font-weight: 700;
   line-height: 5.8rem;
-  border-right: 0.1rem solid #ddd;
 }
 
 .file__wrap .list {
@@ -3887,7 +3895,7 @@ button.mo_only {
   display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/arrow__top-bk.svg) no-repeat center;
+  background: url(../img/arrow__top-bk.svg) no-repeat center;
   background-size: 2.4rem auto;
 }
 
@@ -3897,7 +3905,7 @@ button.mo_only {
   display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/arrow__bottom-bk.svg) no-repeat center;
+  background: url(../img/arrow__bottom-bk.svg) no-repeat center;
   background-size: 2.4rem auto;
 }
 
@@ -6122,6 +6130,9 @@ button.mo_only {
   .accn__desc__wrap .expected__section .text__container p:nth-of-type(1) {
     margin-bottom: 2.4rem;
   }
+  .accn__desc__wrap .num__label.m__cont {
+    display: inline-flex;
+  }
   .footer__bottom .footer__logo {
     padding-top: 3.2rem;
   }
@@ -6278,6 +6289,9 @@ button.mo_only {
   }
   .notice__detail__wrap .table__horizontal__ex tr:nth-child(1) {
     border-bottom: 0;
+  }
+  .file__wrap .file__header {
+    border-right: 0.1rem solid #ddd;
   }
   .board__detail {
     padding: 3.6rem 0;
