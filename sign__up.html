@@ -731,20 +731,14 @@
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>
                                                         <label class="btn__file__select--mo bg--transparent-00" for="profile_pics3"></label>
-
                                                     </div>
                                                     <label class="btn__file__select bg--transparent-00" for="profile_pics3">파일선택</label>
                                                     <input type="file" class="file__post" id="profile_pics3" name="profile_pics3" style="opacity: 0; width: 0px;">
-                                                    <button type="button" class="btn__add bg--green-01" style="margin-left: auto;">-</button>
+                                                    <button type="button" class="btn__remove bg--green-01" style="margin-left: auto;">-</button>
                                                 </div>
-                                                
-
                                             </div>
-
                                         </div>
                                     </form>
-
-                                    
                             <!-- template (임시) -->
                                 <!-- 기존 HTML 코드 위에 추가 -->
                                 <template id="row-template">
@@ -767,28 +761,79 @@
 
                                 </div>
                             </div>
+                            <script>
 
+                                // 임시로 radio 체크
+                                $(document).ready(function(){
+                                    $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
+                        
+                                })
+                        
+
+
+                        
+                            </script>
+                        
                 
                             <script>
-                                                           
+
                                 $(document).ready(function () {
-                                    // + 버튼 클릭 시 추가하는 기능
-                                    $('.form__body').on('click', '.btn__add', function () {
-                                        const template = document.getElementById('row-template'); // 템플릿 요소 참조
-                                        const newRow = template.content.cloneNode(true); // 템플릿 복제 (true는 깊은 복사)
-                                        
-                                        // 삭제 이벤트를 직접 바인딩
-                                        const deleteButton = newRow.querySelector('.btn__remove');
-                                        deleteButton.addEventListener('click', deleteItem);
-                                        
-                                        $('.form__body').append(newRow); // 새로운 행 추가
+                                let fileIndex = 3;
+
+                                $('.form__body').on('click', '.btn__add', function () {
+                                    const template = document.getElementById('row-template'); // 템플릿 요소 참조
+                                    const newRow = template.content.cloneNode(true); // 템플릿 복제 (true는 깊은 복사)
+
+                                    // 고유 ID 생성
+                                    fileIndex++;
+                                    const newFileInput = newRow.querySelector('.file__post');
+                                    newFileInput.id = `profile_pics${fileIndex}`;
+                                    newRow.querySelector('.btn__file__select').setAttribute('for', `profile_pics${fileIndex}`);
+                                    newRow.querySelector('.btn__file__select--mo').setAttribute('for', `profile_pics${fileIndex}`);
+                                    $('.form__body').append(newRow); // 새로운 행 추가
+                                    
+
+                                    $('.form__body').on('click', '.btn__remove', function () {
+                                    $(this).closest('.form__row').remove(); 
                                     });
-    
-                                    // 삭제 기능을 하는 함수
-                                    function deleteItem(event) {
-                                        $(event.target).closest('.form__row').remove(); // 가까운 행 삭제
-                                    }
+                                    });
                                 });
+
+                                
+        
+                                $('.btn__remove').click(function() {
+                                $(this).closest('.form__row').remove();
+                                });  
+
+                                                        
+                                                    let inputs = $(".file__post");
+                                                    let preview = $(".preview");
+                                                    inputs.css({"opacity": 0,"width": 0});
+                                                    function displayFileNames(event){
+                                                    let currentInput = $(event.target);
+                                                    let index = inputs.index(currentInput)
+                                                    let previewBox = $(preview[index])
+                                                    previewBox.empty();  // preview 내 모든 자식 요소 제거
+                                                    const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
+                                            
+                                                    if (currentFile.length === 0) {
+                                                        const para = $("<span>").text("아무파일도 입력되지 않았어요");
+                                                        previewBox.append(para);
+                                                        } else {
+                                                        const fileList = $("<div>");
+                                                        previewBox.append(fileList);
+                        
+                                                        for (const file of currentFile) {
+                                                        const listItem = $("<p>").text(file.name).addClass('upload__file__name');
+                                                        fileList.append(listItem);
+                                                        }
+                                                    }
+                                                    }
+                                                    
+                        
+                                                    inputs.on('change', displayFileNames);
+
+
                             </script>
 
 
@@ -834,61 +879,6 @@
     <!-- js 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
-    <script>
-
-        // 임시로 radio 체크
-        $(document).ready(function(){
-            $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
-
-        })
-
-
-        // 가까운 row 삭제
-        $('.form__body').on('click', '.btn__remove', function() {
-            $(this).closest('.form__row').remove();
-        });  
-                            // change 발생한 input을 특정
-                            // 임시 코드 : 파일 업로드 표시
-                            
-                            
-                            let inputs = $(".file__post");
-                                    let preview = $(".preview");
-                                    
-                                    inputs.css({
-                                    "opacity": 0,
-                                    "width": 0
-                                    });
-                                    function displayFileNames(event){
-
-                          
-
-                                let currentInput = $(event.target);
-
-                                let index = inputs.index(currentInput)
-
-                                let previewBox = $(preview[index])
-
-                                previewBox.empty();  // preview 내 모든 자식 요소 제거
-
-                                const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
-                            
-                                if (currentFile.length === 0) {
-                                const para = $("<span>").text("아무파일도 입력되지 않았어요");
-                                previewBox.append(para);
-                                } else {
-                                const fileList = $("<div>");
-                                previewBox.append(fileList);
-
-                                for (const file of currentFile) {
-                                const listItem = $("<p>").text(file.name).addClass('upload__file__name');
-                                fileList.append(listItem);
-                                }
-                            }
-                            }
-
-                            inputs.on('change', displayFileNames);
-
-    </script>
 
 
 </body>

@@ -5,7 +5,7 @@
             body {position: relative; }
             .wrap {display: flex; flex-direction: column; }
             #login__body {overflow: auto; font-size: 1.5rem; padding-top: 12.8rem; padding-bottom: 8rem;} // flex: 1 0 auto; 
-            #login__body input[type="text"], #login__body input[type="password"] {height: 5.8rem;}
+            #login__body input[type="text"], #login__body input[type="password"] {height: 5.8rem; border: 0.1rem solid #717171;}
             #login__body input::placeholder {font-size: 1.9rem;}
             #login__body {display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff;} 
             #login__body .login__block {width: 100%; max-width: 480px; margin-bottom: 8rem;}

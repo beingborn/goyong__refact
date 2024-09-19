@@ -86,6 +86,7 @@ button.mo_only {display: none;}
 .data__number > span {color: #1D56BC;}
 .page__title__wrap {margin-top: 8rem; margin-bottom: 6.4rem;}
 .search__form__user {background-color: $theme-krds-skyblue-01; border-radius: 1.2rem;}
+.search__form__user select,.search__form__user input {border: 0.1rem solid #717171;}
 .search__form__user .search {padding: 4rem;}
 
 // 파일 찾기 폼
@@ -305,8 +306,8 @@ button.mo_only {display: none;}
 .form__table th {min-width: 25rem; } // 해당 min-width 수치는 임시
 .form__table td { flex-grow: 1; line-height: 100%; display: block;}
 .form__table td input[type="text"], .form__table td input[type="password"] {line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem; }
-.form__table td input[type="submit"] { border: 1px solid #717171; line-height: 4rem; }
-.form__table td select { height: 4rem; border: 1px solid #717171; }
+.form__table td input[type="submit"] {line-height: 4rem; }
+.form__table td select { height: 4rem; }
 .form__table .secret__Check .icon__pw-visible { right: 1.8rem; transform: translateY(-50%); }
 .form__table .error-message { padding-left: 2rem; padding-bottom: 1rem;}
 

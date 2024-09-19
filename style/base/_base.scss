@@ -89,9 +89,9 @@ body {
     font-size: 1.6rem;
     background-color: #fff;
   }
-input[type="text"], select, input[type="password"] {border: 0.1rem solid #717171; border-radius: 0.5rem; padding: 1.2rem;}
+input[type="text"], select, input[type="password"] {border: 0.1rem solid #CBCCCD; border-radius: 0.5rem; padding: 1.2rem;}
 select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-height: 4rem;}
-
+.file__post {display: none;}
 
 
 // 수신 동의 및 여부 확인

@@ -148,7 +148,7 @@
 // 모바일 세로 이상 ~ 노트북 중형까지
 @media all and (min-width: 360px) and (max-width: 1080px){
   .upload__manager .preview {min-width: auto; flex-grow: 1;}
-  .upload__manager .file__select__container, .support__data .file__select__container {gap: 0;}
+  // .upload__manager .file__select__container, .support__data .file__select__container {gap: 0;}
   .btn__file__select--mo {margin: 0 1rem;}
 }
 
@@ -276,6 +276,8 @@
   .header__btm {padding: 0;}
   .tab__wrap {padding: 0;}
   .calender__body {width: 100%;}
+  .preview {height: 4.8rem;}
+  .btn__add, .btn__remove {height: 4.8rem;}
   // 웹용 테이블, 모바일용 테이블
   .w__table {display: none;}
   .m__table {display: block;}

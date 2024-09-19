@@ -78,7 +78,7 @@ input[type=reset], textarea, select, button {
 }
 
 input[type=text], select, input[type=password] {
-  border: 0.1rem solid #717171;
+  border: 0.1rem solid #CBCCCD;
   border-radius: 0.5rem;
   padding: 1.2rem;
 }
@@ -89,6 +89,10 @@ select {
   -moz-appearance: none;
   padding: 0.8rem 1rem;
   min-height: 4rem;
+}
+
+.file__post {
+  display: none;
 }
 
 .chk__area label {
@@ -1463,7 +1467,7 @@ input[type=file]::file-selector-button {
 
 .preview {
   height: 4rem;
-  border: 0.1rem solid #717171;
+  border: 0.1rem solid #CBCCCD;
   border-radius: 0.5rem;
 }
 
@@ -3649,6 +3653,10 @@ button.mo_only {
   border-radius: 1.2rem;
 }
 
+.search__form__user select, .search__form__user input {
+  border: 0.1rem solid #717171;
+}
+
 .search__form__user .search {
   padding: 4rem;
 }
@@ -4401,13 +4409,11 @@ button.mo_only {
 }
 
 .form__table td input[type=submit] {
-  border: 1px solid #717171;
   line-height: 4rem;
 }
 
 .form__table td select {
   height: 4rem;
-  border: 1px solid #717171;
 }
 
 .form__table .secret__Check .icon__pw-visible {
@@ -5198,6 +5204,7 @@ button.mo_only {
 }
 .login__page #login__body input[type=text], .login__page #login__body input[type=password] {
   height: 5.8rem;
+  border: 0.1rem solid #717171;
 }
 .login__page #login__body input::-moz-placeholder {
   font-size: 1.9rem;
@@ -5893,9 +5900,6 @@ button.mo_only {
     min-width: auto;
     flex-grow: 1;
   }
-  .upload__manager .file__select__container, .support__data .file__select__container {
-    gap: 0;
-  }
   .btn__file__select--mo {
     margin: 0 1rem;
   }
@@ -6163,6 +6167,12 @@ button.mo_only {
   }
   .calender__body {
     width: 100%;
+  }
+  .preview {
+    height: 4.8rem;
+  }
+  .btn__add, .btn__remove {
+    height: 4.8rem;
   }
   .w__table {
     display: none;
