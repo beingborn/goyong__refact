@@ -2344,20 +2344,22 @@ input[type=checkbox] {
 
 #gnb2 .gnb__head {
   padding: 0 2.4rem 2rem 2.4rem;
-  height: 12.8rem;
+  min-height: 12.8rem;
 }
 
 #gnb2 .gnb__body {
   border-top: 0.1rem solid #ddd;
-  height: 100%;
+  flex: 1;
 }
 
 #gnb2 .gnb__in {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #gnb2 .gnb__close {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 2.4rem;
   width: 2.4rem;
@@ -2372,12 +2374,12 @@ input[type=checkbox] {
 
 #gnb2 .logout {
   font-weight: 700;
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
+  left: 2.4rem;
   width: 100%;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 .login__info .id__info {
@@ -6512,11 +6514,6 @@ button.mo_only {
 @media all and (max-width: 420px) {
   .header__btm .right__icon__set a {
     padding: 1rem 0.8rem;
-  }
-  .top__visual .main__hero .main__text .main__bold {
-    margin-bottom: 0;
-    font-size: 2.4rem;
-    white-space: nowrap;
   }
   .top__visual .main__hero .main__text .main__medium {
     font-size: 1.5rem;
