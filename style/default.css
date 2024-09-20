@@ -2374,12 +2374,12 @@ input[type=checkbox] {
 
 #gnb2 .logout {
   font-weight: 700;
-  position: fixed;
+  position: absolute;
   bottom: 2rem;
-  left: 2.4rem;
   width: 100%;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .login__info .id__info {
