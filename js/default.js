@@ -131,7 +131,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   let tablePagination = $('.pagination .page-link') 
   tablePagination.click(function (e) {
-  e.preventDefault(); // 링크 기본 동작 방지
+  e.preventDefault();
 
   $(this).addClass("active");
   tablePagination.not($(this)).removeClass('active')

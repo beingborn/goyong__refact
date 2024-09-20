@@ -14,13 +14,14 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
     .depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
     .depth-3{padding: 2.4rem 2rem 2.4rem 1rem;}
     .depth-3 .sub-ul {padding-left: 1.6rem;}
-    .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;}
-
-    
+    .depth-3 .sub-ul > li {height: 4.8rem; display: flex; justify-content: space-between; align-items: center;} 
     .depth-3 .sub-ul > li > span {position: relative;}
     .depth-3 .sub-ul > li > span::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; background-color: #000; border-radius: 50%; margin-right: 0.8rem;} 
-
 }
+
+
+
+
 
 
 /* 메뉴별 권한 관리 기존 depth 3 까지 코드 */
@@ -29,7 +30,6 @@ input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
     .depth-1 .tit {font-size: 2.1rem; font-weight: 700;}
     .depth-2 {border-bottom: 0.1rem solid #ddd; border-top: 0.1rem solid #ddd;font-size: 1.8rem; font-weight: 600; padding: 2.4rem 2rem 2.4rem 1rem; display: flex; justify-content: space-between; align-items: center;}
     .depth-3 .sub-ul {padding: 2rem 0;}
-
     .depth-3 .sub-ul > li > a {position: relative ; width: 100%; height: 100%; display: flex; align-items: center; padding-left: 2.5rem; padding-top: 1.5rem; padding-bottom: 1.5rem;}
     .depth-3 .sub-ul > li > a::before {content: ''; display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%; background-color: #000; margin-right: 0.8rem; }
 }
