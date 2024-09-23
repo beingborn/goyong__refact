@@ -4427,6 +4427,10 @@ button.mo_only {
   transform: translateY(-50%);
 }
 
+.form__table .secret__Check input {
+  height: 4rem;
+}
+
 .form__table .error-message {
   padding-left: 2rem;
   padding-bottom: 1rem;

@@ -630,8 +630,6 @@
                                         </label>
                                     </span>
                                 </th>
-                           
-                                
                                 <td>
                                     <div class="td__container file__select__container" id="pwLength">
                                         <div class="preview flex--box-c">
@@ -640,15 +638,9 @@
                                         <label class="btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
                                         <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
                                         <input type="file" class="file__post" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
-                                </div>
-                                </td>
-                              
+                                    </div>
+                                </td>       
                             </tr>
-    
-    
-    
-    
-     
                         </table>
                     </div>
                 </div>
@@ -671,9 +663,6 @@
                         });
                         })   
                         })
-
-
-
 
             </script>
 
@@ -762,31 +751,11 @@
                                 </div>
                             </div>
                             <script>
-
-                                // 임시로 radio 체크
-                                $(document).ready(function(){
-                                    $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
-                        
-                                })
-                        
-
-
-                        
-                            </script>
-                        
-                
-                            <script>
-
-
-
-
                                 $(document).ready(function () {
                                 let fileIndex = 3;
-
                                 $('.form__body').on('click', '.btn__add', function () {
                                     const template = document.getElementById('row-template'); // 템플릿 요소 참조
                                     const newRow = template.content.cloneNode(true); // 템플릿 복제 (true는 깊은 복사)
-
                                     // 고유 ID 생성
                                     fileIndex++;
                                     const newFileInput = newRow.querySelector('.file__post');
@@ -794,16 +763,12 @@
                                     newRow.querySelector('.btn__file__select').setAttribute('for', `profile_pics${fileIndex}`);
                                     newRow.querySelector('.btn__file__select--mo').setAttribute('for', `profile_pics${fileIndex}`);
                                     $('.form__body').append(newRow); // 새로운 행 추가
-                                    
-
                                     $('.form__body').on('click', '.btn__remove', function () {
                                     $(this).closest('.form__row').remove(); 
                                     });
                                     });
                                 });
 
-                                
-        
                                 $('.btn__remove').click(function() {
                                 $(this).closest('.form__row').remove();
                                 });  
@@ -833,7 +798,7 @@
                                 }
 
                                 // 이벤트 위임으로 .form__body에 파일 선택 시 이벤트 바인딩
-                                $('.form__body').on('change', '.file__post', displayFileNames);
+                                $('.form__table').on('change', 'file__post', displayFileNames);
                                 });
                       
  
