@@ -58,12 +58,12 @@
      
         if (isItOpen) {
             gnbOpenMenu.removeClass('active');
+
             $('.gnb__bg').hide()
 
         } else {
-            // 모든 상위 메뉴에서 'active' 클래스 제거
             gnbTop__Menu.parent().removeClass('active');
-            // 현재 클릭된 상위 메뉴에 'active' 클래스 추가
+			      gnbSub__Menu.parent().removeClass('active');
             gnbOpenMenu.addClass('active');
             $('.gnb__bg').show()
         }

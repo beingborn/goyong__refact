@@ -5,6 +5,7 @@
 
 // 테이블 공통 스타일
 table th {font-weight: 700; background-color: #EAF5F0;}
+table td {font-weight: 700;}
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
 
 // 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.

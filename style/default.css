@@ -754,6 +754,10 @@ table th {
   background-color: #EAF5F0;
 }
 
+table td {
+  font-weight: 700;
+}
+
 table caption {
   position: absolute;
   top: 0;
