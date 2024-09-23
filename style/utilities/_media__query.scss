@@ -248,7 +248,7 @@
 
 
 @media all and (max-width: 1440px){
-  .wrap .inner {width: 100%; padding: 0 2rem;}
+  .inner {width: 100%; padding: 0 2rem;}
   .preview {flex-grow: 1;}
 }
 
@@ -284,6 +284,7 @@
   .w__cont {display: none;}
   .m__cont {display: block;}
   .code__title {margin-top: 3.6rem;}
+  .btn__down {background-color: #246BEB; color: #fff; border: 0;}
 
   input[type="text"], select {min-height: 4.8rem;}
 

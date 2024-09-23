@@ -262,7 +262,7 @@
             <div class="tab__btn">
               <button type="button">노동조합정보</button>
             </div>
-            <div class="tab__btn">
+            <div class="tab__btn" id="public__btn">
               <button type="button">회계공시</button>
             </div>
           </div>
@@ -560,7 +560,7 @@
                         </th>
                         <td class="td__vertical--c">                            
                             <div class="td__container">
-                              <div class="mg--10-r">
+                              <div>
                                 <input
                                   type="radio"
                                   name="rdo_22-1"
@@ -856,12 +856,15 @@
               </div>
 
               <script>
-
+                // 회계공시 탭 이동
+                function fn_next() {
+                  $("#public__btn button").click();
+                }
               </script>
 
               <div class="function__group btn__half__wrap margin-2">
                 <button type="button" class="btn__control bg--black-00">저장</button>
-                <button type="button" class="btn__control bg--blue-00">다음</button>
+                <button onclick="fn_next()" type="button" class="btn__control bg--blue-00">다음</button>
               </div>
             </div>
             <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
@@ -3158,7 +3161,7 @@
               </div>
 
               <div class="function__group margin-2">
-                <button type="button" class="btn__control bg--green-02">
+                <button onclick="location.href='union__management.html'" type="button" class="btn__control bg--green-02">
                   가맹노조(산하조직)관리
                 </button>
               </div>

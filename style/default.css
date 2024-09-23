@@ -716,6 +716,20 @@ button {
   border-radius: 0.5rem;
 }
 
+.btn__down {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #000;
+  max-height: 4rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
 .btn__input {
   font-size: 1.6rem;
   padding: 0.8rem 1.2rem;
@@ -3708,8 +3722,9 @@ button.mo_only {
   align-items: center;
 }
 
-.search__form__user .search .select__box.select__container input[type=text], .search__form__user .search .select__box select {
+.search__form__user .search .select__box.select__container input[type=text], .sub1__1__wrap .search__form__user .search .select__box > select {
   width: calc(50% - 1rem);
+  flex: auto;
 }
 
 .search__form__user .search .input__box {
@@ -4677,7 +4692,7 @@ button.mo_only {
   display: block;
   width: 1.6rem;
   height: 1.6rem;
-  background: url(../img/arrow__bottom.png) no-repeat center;
+  background: url(../img/acordian__arrow__down.png) no-repeat center;
 }
 
 .data--open.first {
@@ -6124,7 +6139,7 @@ button.mo_only {
   }
 }
 @media all and (max-width: 1440px) {
-  .wrap .inner {
+  .inner {
     width: 100%;
     padding: 0 2rem;
   }
@@ -6203,6 +6218,11 @@ button.mo_only {
   }
   .code__title {
     margin-top: 3.6rem;
+  }
+  .btn__down {
+    background-color: #246BEB;
+    color: #fff;
+    border: 0;
   }
   input[type=text], select {
     min-height: 4.8rem;

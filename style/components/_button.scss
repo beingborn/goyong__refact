@@ -85,6 +85,21 @@ button {cursor: pointer; background: inherit;}
   height: 4rem;
   border-radius: 0.5rem;
 }
+
+.btn__down {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #000;
+  max-height: 4rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
 .btn__input {
   font-size: 1.6rem;
   padding: 0.8rem 1.2rem;
