@@ -286,20 +286,7 @@
             // form.submit(); // 모든 검사를 통과하면 폼 제출    
             }   
 
-        // 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 바꿈 나중 회원가입 페이지등 많을 것을 대비해 
-        $(document).ready(function(){                      
-            $('.secret__Check').each(function(){
-                const pwInput = $(this).find('.password__input')
-                const showButton = $(this).find('.icon__pw-visible')
-                const showIcon = $(this).find('.show__icon')
-                showButton.on('click', function() {
-                const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
-                pwInput.attr('type', type);
-                const iconSrc = type === 'password' ? 'img/icon__see.svg' : 'img/icon__see-visible.svg';
-                showIcon.attr('src', iconSrc);
-            });
-            })   
-        })
+
         </script>
             <!-- 푸터  -->
             <footer>

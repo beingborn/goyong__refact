@@ -266,7 +266,7 @@ button.mo_only {display: none;}
 .public__register__wrap .data__header {margin-top: 6.4rem; margin-bottom: 3.6rem;}
 
 //데이터 차트 CSS
-.chart-block { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.chart-block { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;}
 .chart__wrapper { width: calc(50% - 20px);}
 .mo__tab__table { display: none; margin-bottom: 5rem; }
 // 모바일 탭 테이블

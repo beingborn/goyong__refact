@@ -172,7 +172,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__mo tr td:not(:first-child):not(:last-child){padding-bottom: 1rem;}
 .table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
 .table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
- .attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: cover; }
+.attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../img/file__select--mo.svg) no-repeat center; background-size: cover; }
 
 .table__horizontal__mo:not(.widthAutoTable) .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
 .table__horizontal__mo .sub__title {font-weight: 700;}

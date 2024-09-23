@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="style/jquery-ui.min.css">
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-
-
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
@@ -34,28 +32,22 @@
                     <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
                 </a>
             </h1>
-
             <div class="right__icon__set">
-           
                 <a href="login.html" class="login">
                     <img src="img/icon20-1.png" alt="검색 아이콘">
                     <span>로그인</span>
                 </a>
-
                 <!-- 전체메뉴 -->
                 <a href="#" class="hamburger">
                     <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
                     <span>전체메뉴</span>
                 </a>
-
                 <a href="sign__up.html" class="sign__up">
                     <img src="img/icon20-2.png" alt="회원가입 아이콘">
                     <span>회원가입</span>
                 </a>
-             
             </div>
         </div>
-
         <div class="header__gnb">
             <div>
                 <nav id="gnb1">
@@ -245,11 +237,6 @@
                                         <button type="button" class="btn__check__dup bg--transparent-00" style="background: none;">중복체크</button>
                                     </div>
                                 </td>
-                        
-
-
-
-
                             </tr>
                             <tr>
                                 <th>
@@ -658,47 +645,14 @@
                     </div>
                 </div>
             </form>
-
-
-            <script>
-                        $(document).ready(function(){                      
-                        $('.secret__Check').each(function(){
-                        const pwInput = $(this).find('.password__input')
-                        const showButton = $(this).find('.icon__pw-visible')
-                        const showIcon = $(this).find('.show__icon')
-
-                        showButton.on('click', function() {
-                        const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
-                        pwInput.attr('type', type);
-
-                        const iconSrc = type === 'password' ? 'img/icon__see-visible.svg' : 'img/icon__see.svg';
-                        showIcon.attr('src', iconSrc);
-                        });
-                        })   
-                        })
-
-
-
-
-            </script>
-
-
-        
             <div class="must__help__message">
                 <p>
                     <span style="color: #FE5555;">*</span> 노동조합 또는 산하조직 대표자 명의의 회원가입 신청 공문을 스캔하여 파일로 첨부합니다.
                 </p>
                 <p>(공문에"노동조합 회계공시시스템 회원가입을 신청한다"는 의사를 명시하고 대표자 직인 날인, 파일은 1개만 첨부가능)</p>
             </div>
-
-
-
-         
-
-
-
                              <!-- 노동조합규약 -->
-                             <div class="lnb__title flex__title" style="margin-top: 2.6rem;">
+                             <div class="code__title lnb__title flex__title">
                                 <h2>노동조합 규약</h2>
                             </div>
                              <div class="union__code border-top-large" >
@@ -744,19 +698,14 @@
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>
                                                         <label class="btn__file__select--mo bg--transparent-00" for="profile_pics3"></label>
-
                                                     </div>
                                                     <label class="btn__file__select bg--transparent-00" for="profile_pics3">파일선택</label>
                                                     <input type="file" class="file__post" id="profile_pics3" name="profile_pics3" style="opacity: 0; width: 0px;">
-                                                    <button type="button" class="btn__add bg--black-00" style="margin-left: auto;">-</button>
+                                                    <button type="button" class="btn__remove bg--black-00" style="margin-left: auto;">-</button>
                                                 </div>
-                                                
-
                                             </div>
-
                                         </div>
                                     </form>
-
                                 <!-- template (임시) -->
                                 <!-- 기존 HTML 코드 위에 추가 -->
                                 <template id="row-template">
@@ -778,29 +727,54 @@
                             <!-- template  -->
 
                             <script>
-                                                           
-                            $(document).ready(function () {
-                                // + 버튼 클릭 시 추가하는 기능
-                                $('.form__body').on('click', '.btn__add', function () {
-                                    const template = document.getElementById('row-template'); // 템플릿 요소 참조
-                                    const newRow = template.content.cloneNode(true); // 템플릿 복제 (true는 깊은 복사)
-                                    
-                                    // 삭제 이벤트를 직접 바인딩
-                                    const deleteButton = newRow.querySelector('.btn__remove');
-                                    deleteButton.addEventListener('click', deleteItem);
-                                    
-                                    $('.form__body').append(newRow); // 새로운 행 추가
+                                $(document).ready(function () {
+                                  $(".form__body").on("click", ".btn__add", function () {
+                                    const template = document.getElementById("row-template");
+                                    const newRow = template.content.cloneNode(true);
+                                    const fileIndex = `file_${Date.now()}`;
+                                    const newFileInput = newRow.querySelector(".file__post");
+                                    newFileInput.id = `profile_pics${fileIndex}`;
+                                    newRow
+                                      .querySelector(".btn__file__select")
+                                      .setAttribute("for", `profile_pics${fileIndex}`);
+                                    newRow
+                                      .querySelector(".btn__file__select--mo")
+                                      .setAttribute("for", `profile_pics${fileIndex}`);
+                                    $(".form__body").append(newRow); // 새로운 행 추가
+                          
+                                    $(".form__body").on("click", ".btn__remove", function () {
+                                      $(this).closest(".form__row").remove();
+                                    });
+                                  });
                                 });
-
-                                // 삭제 기능을 하는 함수
-                                function deleteItem(event) {
-                                    $(event.target).closest('.form__row').remove(); // 가까운 행 삭제
-                                }
-                            });
-                            </script>
-
-
-
+                          
+                                $(document).ready(function () {
+                                  let preview = $(".preview");
+                                  // 파일명 표시 함수
+                                  function displayFileNames(event) {
+                                    let currentInput = $(event.target);
+                                    let previewBox = currentInput.siblings(".preview");
+                                    previewBox.empty();
+                                    const currentFile = currentInput[0].files;
+                                    if (currentFile.length === 0) {
+                                      const para =
+                                        $("<span>").text("아무 파일도 입력되지 않았어요");
+                                      previewBox.append(para);
+                                    } else {
+                                      const fileList = $("<div>");
+                                      previewBox.append(fileList);
+                                      for (const file of currentFile) {
+                                        const listItem = $("<p>")
+                                          .text(file.name)
+                                          .addClass("upload__file__name");
+                                        fileList.append(listItem);
+                                      }
+                                    }
+                                  }
+                                
+                                  $(document).on('change', '.file__post', displayFileNames)
+                                });
+                              </script>
                                 </div>
                             </div>
                             <div class="function__group btn__half__wrap margin-1">
@@ -809,7 +783,6 @@
                             </div>
         </div>
        </main>
-            <!-- 푸터  -->
           <!-- 푸터  -->
           <footer>
             <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -817,80 +790,19 @@
                     <div class="footer__logo">
                         <img src="img/slogan_H48.svg" alt="하단 로고">
                     </div>
- 
                     <div class="footer__flex">
                         <div class="footer__info">
                             <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
                             <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
                         </div>
-
                     </div>
-            
-                    
                 </div>
-                
             </div>
         </footer>
     <div class="gnb__bg"></div>
-        </div>
-
-    
-
+    </div>
     <!-- js 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>
-    <script>
-
-        // 임시로 radio 체크
-        $(document).ready(function(){
-            $('.radio__wrap input[type="radio"]').eq(0).first().prop('checked', true)
-
-        })
-
-      
-                            // change 발생한 input을 특정
-                            // 임시 코드 : 파일 업로드 표시
-                            
-                            
-                            let inputs = $(".file__post");
-                                    let preview = $(".preview");
-                                    
-                                    inputs.css({
-                                    "opacity": 0,
-                                    "width": 0
-                                    });
-                                    function displayFileNames(event){
-
-                          
-
-                                let currentInput = $(event.target);
-
-                                let index = inputs.index(currentInput)
-
-                                let previewBox = $(preview[index])
-
-                                previewBox.empty();  // preview 내 모든 자식 요소 제거
-
-                                const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
-                            
-                                if (currentFile.length === 0) {
-                                const para = $("<span>").text("아무파일도 입력되지 않았어요");
-                                previewBox.append(para);
-                                } else {
-                                const fileList = $("<div>");
-                                previewBox.append(fileList);
-
-                                for (const file of currentFile) {
-                                const listItem = $("<p>").text(file.name).addClass('upload__file__name');
-                                fileList.append(listItem);
-                                }
-                            }
-                            }
-
-                            inputs.on('change', displayFileNames);
-
-    </script>
-
-
 </body>
 </html>

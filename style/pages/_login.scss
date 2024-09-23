@@ -26,7 +26,7 @@
             .helper__box .helper__tit {display: flex; position: relative; color: $theme-krds-navy-00; font-weight: 700;}
             .helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../img/icon__helper__info.svg);background-size: contain;}
             .helper__box .helper__desc__wrap .info-list {list-style: disc;}
-            .helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 1.6rem;}
+            .helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 0.4rem;}
             .helper__box .helper__desc__wrap {margin-top: 1.6rem; margin-left: 4.8rem; color: #555555;}
             // 비밀번호 표시 / 숨기기
             #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}

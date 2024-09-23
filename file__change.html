@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +62,6 @@
 				<nav id="gnb1">
 					<ul id="head_menu" class="top__menu">
 						<li class="plus"> <a href="javascript:void(0);">시스템안내
-							<!-- <span class="sr_only">닫기</span> -->
 						</a>
 							<div class="sub__menu">
 								<ul>
@@ -294,11 +293,6 @@
                         <!-- 자바스크립트 input 파일 커스텀 -->
 
 						<script>
-
-                            // change 발생한 input을 특정
-                            // 임시 코드 : 파일 업로드 표시
-                            
-                            
                                     let inputs = $(".file__post");
                                     let preview = $(".preview");
                                     
@@ -307,19 +301,14 @@
                                     "width": 0
                                     });
                                     function displayFileNames(event){
-
-                          
-
                                 let currentInput = $(event.target);
 
                                 let index = inputs.index(currentInput)
 
                                 let previewBox = $(preview[index])
 
-                                previewBox.empty();  // preview 내 모든 자식 요소 제거
-
-                                const currentFile = currentInput[0].files;  // jQuery 객체에서 DOM 요소로 접근
-                            
+                                previewBox.empty(); 
+                                const currentFile = currentInput[0].files; 
                                 if (currentFile.length === 0) {
                                 const para = $("<span>").text("아무파일도 입력되지 않았어요");
                                 previewBox.append(para);
@@ -333,92 +322,12 @@
                                 }
                             }
                             }
-
-                            inputs.on('change', displayFileNames);
-
-
-
-
-                          
+                            inputs.on('change', displayFileNames);   
                             </script>
-
             <div class="function__group margin-1">
                 <button type="button" class="btn__control bg--blue-00" onclick="formCheck()">저장</button>
             </div>
         </form>
-
-        <script>
-            
-        $(document).ready(function(){                      
-            $('.secret__Check').each(function(){
-                const pwInput = $(this).find('.password__input')
-                const showButton = $(this).find('.icon__pw-visible')
-                const showIcon = $(this).find('.show__icon')
-
-                showButton.on('click', function() {
-                const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
-                pwInput.attr('type', type);
-
-                const iconSrc = type === 'password' ? 'img/icon__see-visible.svg' : 'img/icon__see.svg';
-                showIcon.attr('src', iconSrc);
-            });
-            })   
-        })
-
-
-        // 해당 페이지 체크 요소
-        // 변경 비밀번호에 8자 이상 입력인지 확인하기
-        // 비밀번호 확인 value는 현재 입력된 비밀번호의 value와 같은 지 확인
-        // 변경 비밀번호와 같은 지 확인하기.
-
-
-        function formCheck(){
-
-            let form = document.password_check_frm;
-            form.PwValue = $('#pwcheck').val();
-            form.PwCheckValue = $('#pwcheck2').val();
-
-
-            if (form.PwValue.length < 8){
-
-                $('#pwLength').css('padding-bottom', 0)
-                $('#pwLength').parent().append(
-                    $('<p>').prop({
-                        className: 'error-message',
-                        innerHTML: '비밀번호는 8자 이상만 입력 가능합니다.',
-                    })
-                )
-                return;
-            }
-
-            if(form.PwValue !== form.PwCheckValue){
-                $('#checkPwValue').css('padding-bottom', 0)
-                $('#checkPwValue').parent().append(
-                    $('<p>').prop({
-                        className: 'error-message',
-                        innerHTML: '변경할 비밀번호와 비밀번호 확인은 같아야 합니다. 변경할 비밀번호를 확인해주세요.',
-                    })
-                )
-                return;
-            }
-
-
-            // 모든 검사를 통과하면 폼 제출
-            // form.submit(); 
-
-        }
-
-
-
-
-        </script>
-
-
-
-
-
-
-
 	</div>
 	</main>
 	<footer>
