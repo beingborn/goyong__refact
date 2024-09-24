@@ -95,13 +95,43 @@ $("#gnb2 .menu__wrap a").click(function () {
 });
 
 // 모바일 GNB 스크롤 이벤트
-$("#gnb2 .menu__wrap a").on("click", function (event) {
-  event.preventDefault();
-  var targetId = $(this).data("target");
-  var targetElement = $("#" + targetId);
-  var offsetY = targetElement.position().top;
-  $(".submenu__wrap").css("transform", "translateY(-" + offsetY + "px)");
+// $("#gnb2 .menu__wrap a").on("click", function (event) {
+//   event.preventDefault();
+//   var targetId = $(this).data("target");
+//   var targetElement = $("#" + targetId);
+//   var offsetY = targetElement.position().top;
+//   $(".submenu__wrap").css("transform", "translateY(-" + offsetY + "px)");
+// });
+
+
+
+$(document).ready(function() {
+  
+  let lastChildHeight = $('.gnb__body .submenu__wrap > ul:last-child').height();
+  console.log(lastChildHeight)
+
+
+
+  // 메뉴 항목 클릭 이벤트
+  $('.menu__wrap a').click(function(event) {
+      event.preventDefault(); // 기본 링크 동작 방지
+      var target = $(this).data('target');
+      
+
+
+
+
+      // 해당 ID를 가진 요소의 위치 계산
+      var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();
+      
+      // submenuWrap 안에서 부드럽게 스크롤 이동
+      submenuWrap.animate({
+          scrollTop: targetOffset
+      }, 500); // 500ms 동안 부드럽게 스크롤
+  });
 });
+
+
 
 // 모달 닫기 이벤트 핸들러
 $(".modal__close button").click(function () {
