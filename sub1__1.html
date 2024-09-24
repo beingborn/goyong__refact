@@ -1881,14 +1881,13 @@
                 <div class="search">
                   <div class="flex--box-c search__list">
                     <label for="label" class="mo_only"><span>노동조합(산하조직)명</span></label>
-                      <div class="select__box"> 
-                        <select class="select--no--style select__renew" id="year" name="year">
-                        <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
+                      <div class="input__box"> 
+                        <input type="text" placeholder="도레이첨단소재노동조합">
                       </div>
                         <label for="label" class="mo_only">회계기간</label>
                         <div class="input__box">
                             <label for="searchText" class="blind">회계기간</label>
-                            <select name="select" id="select">
+                            <select class="select__renew" name="select" id="select">
                               <option value="2023">2023</option>
                               <option value="2023">2022</option>
                               <option value="2023">2021</option>
@@ -2004,16 +2003,16 @@
               <form class="search__form__user" action="POST">
                 <div class="search">
                   <div class="flex--box-c search__list">
-                    <label for="label" class="mo_only"><span class="must__type">회계연도</span></label>
+                    <label for="label" class="mo_only"><span class="">회계연도</span></label>
                       <div class="select__box select__container">
-                        <input type="text"> 
+                        <input type="text" value="2023"> 
                         ~
-                        <select class="select__renew" id="year" name="year"><option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
+                        <select class="select__renew" id="year" name="year"><option value="2023">2023</option><option value="2022">2022</option><option value="2022">2021</option></select>
                       </div>
-                        <label for="label" class="mo_only">회계기간</label>
+                        <label for="label" class="mo_only">노동조합(산하조직)명</label>
                         <div class="input__box">
-                            <label for="searchText" class="blind">회계기간</label>
-                            <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value="">       
+                            <label for="searchText" class="blind">노동조합(산하조직)명</label>
+                            <input type="text" id="searchText" name="searchText" class="ml4" placeholder="도레이첨단소재노동조합" value="">       
                         </div>
                 </div>
                 </div>

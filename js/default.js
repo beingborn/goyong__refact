@@ -198,7 +198,6 @@ $(".btn__upload").click(function (e) {
   e.preventDefault();
 });
 
-
         // 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 바꿈 나중 회원가입 페이지등 많을 것을 대비해 
         $(document).ready(function(){                      
           $('.secret__Check').each(function(){

@@ -75,14 +75,10 @@ var pieOption1 = {
   tooltip: {
     trigger: "item",
   },
-
-
   legend: {
-    // orient: "horizontal",
-    left: "left",
-    orient: "vertical",
-
-    // bottom: 'bottom',
+    orient: "horizontal",
+    bottom: 'bottom',
+    padding: [0,0,20,0],
   },
   series: [
     {
@@ -108,8 +104,9 @@ var pieOption2 = {
     trigger: "item",
   },
   legend: {
-    orient: "vertical",
-    left: "left",
+    orient: "horizontal",
+    bottom: 'bottom',
+    padding: [0,0,20,0],
   },
   series: [
     {
@@ -137,8 +134,9 @@ var pieOption3 = {
     trigger: "item",
   },
   legend: {
-    orient: "vertical",
-    left: "left",
+    orient: "horizontal",
+    bottom: 'bottom',
+    padding: [0,40,20,40],
   },
   series: [
     {
@@ -167,12 +165,10 @@ var pieOption4 = {
   tooltip: {
     trigger: "item",
   },
-
-
-
   legend: {
-    orient: "vertical",
-    left: "left",
+    orient: "horizontal",
+    bottom: 'bottom',
+    padding: [0,0,20,0],
   },
   series: [
     {

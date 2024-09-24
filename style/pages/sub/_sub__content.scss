@@ -54,6 +54,7 @@ button.mo_only {display: none;}
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
 .sub1__1__wrap .function__group.margin-2 {margin-bottom: 25rem;}
+.sub1__1__wrap .tab__1 .m__table th {padding-left: 2.4rem; padding-right: 2.4rem;}
 .data__title {text-align: left; position: relative; font-size: 2.5rem; color: #333; font-weight: 700;}
 .data__title.flex--box-s {align-items: baseline;}
 // 회계 공시 등록 > 회계공시 탭 페이지 스타일 임시 코드
@@ -327,7 +328,9 @@ button.mo_only {display: none;}
 .sign__up__table .radio__wrap input[type="radio"] { appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc; }
 .sign__up__table .radio__wrap input[type="radio"]:checked { border: 0.6rem solid #000;}
 .sign__up__table__wrap .td__date .select__renew { background: url(../img/select__renew.png) no-repeat 92% 50%;}
-.sign__up__wrap .form__table th {min-width: 25rem; max-width: 25rem;}
+.sign__up__table__wrap .form__table th {min-width: 25rem; max-width: 25rem;}
+
+
 
 // 달력 공통
 .td__calender {position: relative; width: 33.33%;}

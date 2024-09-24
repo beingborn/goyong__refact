@@ -1936,7 +1936,7 @@ input[type=checkbox] {
   background: url(../img/info__tip__arrow__top.svg) no-repeat center;
   position: absolute;
   left: 50%;
-  top: 3.2rem;
+  top: 3.25rem;
   transform: translateX(-50%);
 }
 
@@ -1970,13 +1970,13 @@ input[type=checkbox] {
 }
 
 .info__tip__box .tooltip__content p:not(:last-child) {
-  padding-bottom: 2rem;
+  padding-bottom: 1.6rem;
 }
 
 .info__tip__box .tooltip__layer .info__close__btn {
   width: 1.6rem;
   height: 1.6rem;
-  background: url(../../img/info__tip__close.svg) no-repeat center;
+  background: url(../img/info__tip__close.svg) no-repeat center;
 }
 
 /* 모바일 화면 일 시 width 100%*/
@@ -1984,6 +1984,9 @@ input[type=checkbox] {
   .info__tip__box .tooltip__layer {
     left: 0;
     width: 100%;
+  }
+  .info__tip__box .tooltip__content p {
+    display: flex;
   }
 }
 /*
@@ -3582,6 +3585,11 @@ button.mo_only {
   margin-bottom: 25rem;
 }
 
+.sub1__1__wrap .tab__1 .m__table th {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
 .data__title {
   text-align: left;
   position: relative;
@@ -4497,7 +4505,7 @@ button.mo_only {
   background: url(../img/select__renew.png) no-repeat 92% 50%;
 }
 
-.sign__up__wrap .form__table th {
+.sign__up__table__wrap .form__table th {
   min-width: 25rem;
   max-width: 25rem;
 }
@@ -5491,7 +5499,6 @@ button.mo_only {
   }
   .form__table .btn__file__select--mo {
     display: block;
-    right: 1.6rem;
   }
   .info__change__form {
     margin-top: 6.4rem;
@@ -5561,6 +5568,12 @@ button.mo_only {
     flex-direction: column;
     width: 100%;
   }
+  .sign__up__table__wrap .form__table tr:last-child {
+    margin-bottom: 1.2rem;
+  }
+  .must__help__message {
+    margin-top: 0;
+  }
   .organization {
     flex-direction: column;
   }
@@ -5588,9 +5601,6 @@ button.mo_only {
   }
   .sign__up__table__wrap .td__date select {
     min-width: auto;
-  }
-  .sign__up__table__wrap .select__renew {
-    background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;
   }
   .sign__up__table__wrap .td__date .select__renew {
     background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;
@@ -6637,7 +6647,6 @@ button.mo_only {
     font-size: 3.2rem;
   }
   #sub__wrap .content .visual__bg .visual__text p {
-    white-space: nowrap;
     font-size: 1.7rem;
   }
   #sub__wrap .content .visual__bg .visual__text {
