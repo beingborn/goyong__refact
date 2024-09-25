@@ -2087,8 +2087,7 @@ input[type=checkbox] {
   position: relative;
   align-items: center;
   display: flex;
-  padding-bottom: 1.6rem;
-  padding-top: 2rem;
+  height: 8rem;
 }
 
 .right__icon__set {
@@ -3622,6 +3621,7 @@ button.mo_only {
 
 .align__cols {
   width: 15.38%;
+  min-width: 20rem;
 }
 
 .tab__4 .table__horizontal table tbody th {
@@ -6221,7 +6221,7 @@ button.mo_only {
     width: 100%;
   }
   .header__btm {
-    padding: 0;
+    height: 6.4rem;
   }
   .tab__wrap {
     padding: 0;
