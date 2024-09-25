@@ -423,7 +423,7 @@
                           <label for="category23233"> 상급단체의 명칭</label>
                         </th>
                         <td colspan="5">
-                          <div class="organization flex--box">
+                          <div class="organization flex--center-im">
                             <button type="button" class="btn__select width--20 mg--10-l">선택입력
                             </button>
                             <div class="td__container flex--grow-100">
@@ -565,28 +565,21 @@
                         <th>
                           <label for="rdo_22-1">수신동의 여부 </label>
                         </th>
-                        <td class="td__vertical--c">                            
-                            <div class="td__container">
-                              <div>
-                                <input
-                                  type="radio"
-                                  name="rdo_22-1"
-                                  id="rdo_22-2"
-                                />
+                        <td class="td__vertical--c chk__area radio__wrap">
+                          <div class="td__container">
+                            <div class="flex--box">
+                              <div class="mg--10-r">
+                                <input type="radio" name="rdo_22-1" id="rdo_22-2">
                                 <label for="rdo_22-2">동의</label>
                               </div>
                               <div>
-                                <input
-                                  type="radio"
-                                  name="rdo_22-1"
-                                  id="rdo_22-3"
-                                />
+                                <input type="radio" name="rdo_22-1" id="rdo_22-3">
                                 <label for="rdo_22-3">거부</label>
                               </div>
                             </div>
+                          </div>
                         </td>
                       </tr>
-
                       <tr>
                         <th>
                           <label for="peg"> 소재지 </label>
@@ -3317,12 +3310,6 @@
 
         subTabContent.hide().eq(0).show();
         subTabBtn.eq(0).addClass("active");
-
-        // 임시로 radio 체크 표시
-        $('.radio__wrap input[type="radio"]')
-          .eq(0)
-          .first()
-          .prop("checked", true);
       });
 
     </script>

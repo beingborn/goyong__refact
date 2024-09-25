@@ -53,8 +53,13 @@
   .info__tip__box {position:relative;} // 전체 래퍼
   .info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../img/info__tip.svg) no-repeat center;} // 도움말 버튼
   .info__tip.active {position: relative;} 
-  .info__tip.active::after {content: ''; z-index: 1001; display: inline-block; width: 2.2rem; height: 1.2rem; background: url(../img/info__tip__arrow__top.svg) 
-    no-repeat center; position: absolute; left: 50%; top: 3.25rem; transform: translateX(-50%);}
+  .info__tip.active::after {content: ''; z-index: 1001; display: inline-block; width: 2.2rem; height: 2.2rem; 
+    background-color: #fff;
+    box-shadow: -0.1rem 0.1rem #C6C6C6;
+    transform:  translateX(-50%) rotate(135deg);
+    position: absolute; left: 50%; top: 3.4rem;
+    //  transform: translateX(-50%);
+    }
   .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 999; left: 7rem; top: 5rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}
   .info__tip__box .tooltip__layer.active {display: block;}
   .mobile__con .info__tip__box .tooltip__layer {top: 6.4rem;}

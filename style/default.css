@@ -342,6 +342,11 @@ textarea {
   align-items: center;
 }
 
+.flex--center-im {
+  display: flex !important;
+  align-items: center;
+}
+
 .flex--box-cs {
   display: flex;
   align-items: center;
@@ -1928,12 +1933,13 @@ input[type=checkbox] {
   z-index: 1001;
   display: inline-block;
   width: 2.2rem;
-  height: 1.2rem;
-  background: url(../img/info__tip__arrow__top.svg) no-repeat center;
+  height: 2.2rem;
+  background-color: #fff;
+  box-shadow: -0.1rem 0.1rem #C6C6C6;
+  transform: translateX(-50%) rotate(135deg);
   position: absolute;
   left: 50%;
-  top: 3.25rem;
-  transform: translateX(-50%);
+  top: 3.4rem;
 }
 
 .info__tip__box .tooltip__layer {
@@ -5493,6 +5499,7 @@ button.mo_only {
   }
   .form__table td select {
     min-height: 5.6rem;
+    max-height: 5.6rem;
     font-size: 1.7rem;
     color: #555555;
   }

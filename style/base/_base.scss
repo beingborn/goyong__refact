@@ -231,6 +231,7 @@ height: 100%;
   /* flex 레이아웃 제어 */
   .flex--box {display: flex;}
   .flex--box-c {display: flex; align-items: center;}
+  .flex--center-im {display: flex!important; align-items: center;}
   .flex--box-cs {display: flex; align-items: center; justify-content: space-between;} 
   .flex--box-end {display: flex; justify-content: end;}
   .flex--space {justify-content: space-between;}

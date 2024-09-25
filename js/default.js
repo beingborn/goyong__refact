@@ -94,68 +94,53 @@ $("#gnb2 .menu__wrap a").click(function () {
   $(this).addClass("active");
 });
 
-// 모바일 GNB 스크롤 이벤트
-// $("#gnb2 .menu__wrap a").on("click", function (event) {
-//   event.preventDefault();
-//   var targetId = $(this).data("target");
-//   var targetElement = $("#" + targetId);
-//   var offsetY = targetElement.position().top;
-//   $(".submenu__wrap").css("transform", "translateY(-" + offsetY + "px)");
-// });
 
 
+// radio 체크 표시
+$('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
 
+let submenuWrap = $('#gnb2 .submenu__wrap');
+let submenuUl = $('.submenu__wrap .submenu');
 
-function submenuOffsetUpdate(){
-  $('.submenu__wrap .submenu').each(function() {
-    var $node = $(this);
-    var offsetTop = $node.offset().top; 
-    $node.attr('data-offset-top', offsetTop);
-  });  
-
-  mobileGnbUpdate();
-}
-
-function submenu__init(){
-  submenuOffsetUpdate()
-}
-
-
-// 스크롤 이벤트 - submenu__wrap에서 스크롤 시 active 클래스 변경
-function mobileGnbUpdate() {
-  var scrollTop = $(this).scrollTop();   // 스크롤 위치 확인
-  $($('.submenu__wrap .submenu').get().reverse()).each(function(index){
-      var $node = $(this);
-      let nodeTop = $node.scrollTop();
-      var offsetTop = parseInt($node.attr('data-offset-top'))
-      // 스크롤 위치가 현재 ul의 위치에 있을 경우
-      if (scrollTop >= offsetTop) {
-          // 기존 active 클래스 제거
-          $("#gnb2 .menu__wrap a").removeClass("active");
-          // 해당 인덱스의 메뉴에 active 클래스 추가
-          $("#gnb2 .menu__wrap a").eq(index).addClass("active");
-          return false; 
-      }
-  });
-};
-
-// 초기화하기
-submenu__init();
-
-$('#gnb2 .submenu__wrap').scroll(mobileGnbUpdate);
+// 메뉴 항목 클릭 이벤트
+$('.menu__wrap a').click(function(event) {
+event.preventDefault();
+var target = $(this).data('target');
+// 해당 ID를 가진 요소의 위치 계산
+// 상단 부분 + 스크롤 된 값 
+var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop(); 
+// submenuWrap 안에서 부드럽게 스크롤 이동
+submenuWrap.animate({ scrollTop: targetOffset }, 500);
+});
 
 $(document).ready(function() {
-  let submenuWrap = $('#gnb2 .submenu__wrap')
-  // 메뉴 항목 클릭 이벤트
-  $('.menu__wrap a').click(function(event) {
-      event.preventDefault(); // 기본 링크 동작 방지
-      var target = $(this).data('target');
-      // 해당 ID를 가진 요소의 위치 계산
-      var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop(); 
-      // submenuWrap 안에서 부드럽게 스크롤 이동
-      submenuWrap.animate({ scrollTop: targetOffset}, 500); // 500ms 동안 부드럽게 스크롤
+  // 스크롤 이벤트 핸들러
+  submenuWrap.scroll(function() {
+    let submenuOffsets = [];
+    $('.submenu__wrap .submenu').each(function(index) {
+        var offsetTop = $(this).position().top + submenuWrap.scrollTop(); // submenu의 위치
+        submenuOffsets.push(offsetTop); // 배열에 위치 값 저장
+    });
+
+      // 각 submenu의 위치와 비교하여 active 클래스 추가
+      submenuOffsets.forEach(function(offset, index) {
+          if (submenuWrap.scrollTop() > offset) {
+              // 기존 active 클래스 제거
+              $("#gnb2 .menu__wrap a").removeClass("active");
+              // 해당 인덱스의 메뉴에 active 클래스 추가
+              $("#gnb2 .menu__wrap a").eq(index).addClass("active");
+          }
+      });
   });
+
 });
+
+
+
+
+
+
+
 
 // 모바일 GNB 스크롤 값 바인딩
   let lastChild = document.querySelector('.gnb__body .submenu__wrap > ul:last-child');
