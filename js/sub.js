@@ -18,11 +18,6 @@ $(document).ready(function () {
   let moTabBtn = $(".mobile__tab .swiper-slide button");
   let moTabContent = $(".mo__open__wrap .mobile__con");
 
-  // 화면 크기 변경 시 초기화 함수 재실행
-  $(window).resize(function () {
-    handleResize();
-  });
-
   /* Open Tab */
   $('.tab__content .tab').hide().eq(0).show();
   $('.tab__btn button').eq(0).addClass('active');

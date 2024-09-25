@@ -519,6 +519,7 @@ textarea {
 
 .m__image img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1940,12 +1941,13 @@ input[type=checkbox] {
   position: absolute;
   left: 50%;
   top: 3.4rem;
+  z-index: 801;
 }
 
 .info__tip__box .tooltip__layer {
   display: none;
   position: absolute;
-  z-index: 999;
+  z-index: 800;
   left: 7rem;
   top: 5rem;
   background: #fff;
@@ -2455,8 +2457,6 @@ input[type=checkbox] {
   height: 100%;
   overflow-y: scroll;
   position: relative;
-  scroll-behavior: smooth;
-  transition: all 0.5s;
 }
 
 .gnb__body .submenu__wrap li a {
@@ -6188,6 +6188,8 @@ button.mo_only {
   }
   .accn__desc__wrap .m__image {
     display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .accn__desc__wrap .section:not(:nth-of-type(1)) {
     margin-top: 6.4rem;
@@ -6255,6 +6257,9 @@ button.mo_only {
     color: #fff;
     border: 0;
   }
+  .login__page #login__body {
+    padding-top: 0;
+  }
   input[type=text], select {
     min-height: 4.8rem;
   }
@@ -6297,7 +6302,7 @@ button.mo_only {
     padding: 1rem 0;
   }
   .right__icon__set a span {
-    padding-top: 0.8rem;
+    padding-top: 0.2rem;
   }
   .right__icon__set a img {
     margin: 0;

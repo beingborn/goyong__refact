@@ -738,11 +738,12 @@
                                       .querySelector(".btn__file__select--mo")
                                       .setAttribute("for", `profile_pics${fileIndex}`);
                                     $(".form__body").append(newRow); // 새로운 행 추가
-                          
-                                    $(".form__body").on("click", ".btn__remove", function () {
+
+                                  });
+                                                            
+                                  $(".form__body").on("click", ".btn__remove", function () {
                                       $(this).closest(".form__row").remove();
                                     });
-                                  });
                                 });
                           
                                 $(document).ready(function () {

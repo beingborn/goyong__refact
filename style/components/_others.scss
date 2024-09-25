@@ -58,9 +58,10 @@
     box-shadow: -0.1rem 0.1rem #C6C6C6;
     transform:  translateX(-50%) rotate(135deg);
     position: absolute; left: 50%; top: 3.4rem;
+    z-index: 801;
     //  transform: translateX(-50%);
     }
-  .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 999; left: 7rem; top: 5rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}
+  .info__tip__box .tooltip__layer {display: none; position: absolute; z-index: 800; left: 7rem; top: 5rem; background: #fff; border: 0.1rem solid #C6C6C6; border-radius: 1.2rem; padding: 2.4rem;}
   .info__tip__box .tooltip__layer.active {display: block;}
   .mobile__con .info__tip__box .tooltip__layer {top: 6.4rem;}
   .info__tip__box .tooltip__title {font-weight: 700; padding-bottom: 2rem;}

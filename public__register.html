@@ -2174,27 +2174,6 @@
                   </table>
                 </div>
               </div>
-              <div class="tab__detail table__horizontal table__last" style="margin-bottom: 20px">
-                <table class="table__light">
-                  <caption>
-                    공시정보(회계연도, 회계기간)출력폼
-                  </caption>
-                  <colgroup>
-                    <col class="align__cols" />
-                    <col class="algin__last" style="width: 85%" />
-                  </colgroup>
-                  <tbody>
-                    <tr class="border--btm border-top-large">
-                      <th scope="col">
-                        <label for="examples17">주석</label>
-                      </th>
-                      <td class="input--flex">
-                        <input type="text" value="" id="examples17" />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               </div>
               <div class="mobile__con motab-2 m__table"> 
                 <!-- 모바일 자산 및 부채 현황  -->
@@ -3254,6 +3233,24 @@
                 </div>
               </div>
 
+              <div class="tab__detail table__horizontal__ex table__last" style="margin-bottom: 20px">
+                <table>
+                  <caption>
+                    주석
+                  </caption>
+                  <tbody>
+                    <tr class="border--btm border-top-large">
+                      <th scope="col" style="max-width: 20rem;">
+                        <label for="examples17">주석</label>
+                      </th>
+                      <td class="td__container">
+                        <input type="text" value="" id="examples17">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
               <div class="function__group margin-2">
                 <button onclick="location.href='union__management.html'" type="button" class="btn__control bg--green-02">
                   가맹노조(산하조직)관리
@@ -3329,11 +3326,10 @@
             .querySelector(".btn__file__select--mo")
             .setAttribute("for", `profile_pics${fileIndex}`);
           $(".form__body").append(newRow); // 새로운 행 추가
-
-          $(".form__body").on("click", ".btn__remove", function () {
+        });
+        $(".form__body").on("click", ".btn__remove", function () {
             $(this).closest(".form__row").remove();
           });
-        });
       });
 
       $(document).ready(function () {

@@ -87,12 +87,6 @@ $(document).ready(function () {
   });
 });
 
-// 모바일 GNB 이벤트
-$("#gnb2 .menu__wrap a").eq(0).addClass("active");
-$("#gnb2 .menu__wrap a").click(function () {
-  $("#gnb2 .menu__wrap a").removeClass("active");
-  $(this).addClass("active");
-});
 
 
 
@@ -102,26 +96,27 @@ $('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
 let submenuWrap = $('#gnb2 .submenu__wrap');
 let submenuUl = $('.submenu__wrap .submenu');
 
-// 메뉴 항목 클릭 이벤트
-$('.menu__wrap a').click(function(event) {
-event.preventDefault();
-var target = $(this).data('target');
-// 해당 ID를 가진 요소의 위치 계산
-// 상단 부분 + 스크롤 된 값 
-var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop(); 
-// submenuWrap 안에서 부드럽게 스크롤 이동
-submenuWrap.animate({ scrollTop: targetOffset }, 500);
-});
+
+
+// 스크롤 시 
+// ul들 요소 위치를 계산하고 
+// 상단 스크롤 값이 각각의 offset보다 커질 시 active 클래스를 적용 시킨다.
+// submenu의 scrollTop값이 해당 위치에 탑 값에 도달 했을 때. acitve 시킨다. 
+// 올라올 때도 마찬가지
 
 $(document).ready(function() {
+  let isScrolling = false;
   // 스크롤 이벤트 핸들러
   submenuWrap.scroll(function() {
+    if (isScrolling) return;
+    console.log(isScrolling)
+
     let submenuOffsets = [];
     $('.submenu__wrap .submenu').each(function(index) {
         var offsetTop = $(this).position().top + submenuWrap.scrollTop(); // submenu의 위치
+        var offsetBottom = $(this).outerHeight() + offsetTop;
         submenuOffsets.push(offsetTop); // 배열에 위치 값 저장
     });
-
       // 각 submenu의 위치와 비교하여 active 클래스 추가
       submenuOffsets.forEach(function(offset, index) {
           if (submenuWrap.scrollTop() > offset) {
@@ -131,11 +126,43 @@ $(document).ready(function() {
               $("#gnb2 .menu__wrap a").eq(index).addClass("active");
           }
       });
+
+
   });
+
+  
+// 모바일 GNB 이벤트
+$("#gnb2 .menu__wrap a").eq(0).addClass("active");
+$("#gnb2 .menu__wrap a").click(function (event) {
+  isScrolling = true;
+  event.preventDefault();
+  var target = $(this).data('target');
+  var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
+  // submenuWrap 안에서 부드럽게 스크롤 이동
+  submenuWrap.animate({ scrollTop: targetOffset });
+  $("#gnb2 .menu__wrap a").removeClass("active");
+  $(this).addClass("active");
+  setTimeout(function(){
+  isScrolling = false;
+  }, 500);
+});
+
 
 });
 
 
+
+
+
+// // 메뉴 항목 클릭 이벤트
+// $('.menu__wrap a').click(function(event) {
+
+// isScrolling = true;
+
+
+
+// // isScrolling = false;
+// });
 
 
 
