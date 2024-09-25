@@ -17,6 +17,12 @@
   .sub1__1__wrap .tab__1 .table__horizontal__ex th {min-width: 25rem;}
 }
 
+@media all and (max-width: 1440px){
+  .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 22rem;}
+
+}
+
+
 /* 노트북 소형~ 중형 1080px ~ 1440px */
 @media all and (min-width: 1080px) and (max-width: 1440px) {  
   // 공통
@@ -253,6 +259,7 @@
 }
 
 @media all and (max-width: 1080px){
+
 
   .table__horizontal__ex th {min-width: 15rem; max-width: 15rem;}
 

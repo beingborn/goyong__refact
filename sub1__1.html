@@ -209,7 +209,6 @@
             </div>
           </div>
         </div>
-
         <div class="inner">
           <nav class="breadcrumb" style="padding-top: 2.4rem;">
             <ol class="path">
@@ -271,8 +270,8 @@
                       공시정보 검색 폼
                     </caption>
                     <tbody>
-                      <tr style="position: relative" class="r2">
-                        <th scope="row" class="long__th cols2">
+                      <tr>
+                        <th scope="row">
                           <label for="examples9" class="must__write">
                             노동조합명칭
                             <br>
@@ -471,11 +470,8 @@
             </div>
             <!-- PC버전 회계공시열람 -->
             <div class="tab__2 tab">
-              <!-- 상단 영역  -->
               <div class="pc__info">
-                <div class="data__header">
-                  <h2 class="data__title flex--box-s">공시정보 <span class="w__cont" style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
-                </div>
+                <div class="data__header"><h2 class="data__title flex--box-s">공시정보 <span class="w__cont" style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2></div>
                 <div class="table__horizontal__ex w__table">
                   <table class="border-top-large">
                     <caption>
@@ -483,11 +479,7 @@
                     </caption>
                     <tbody>
                       <tr class="wide__first">
-                        <th scope="row">
-                          <label for="name">
-                            <span class="must__type">회계연도</span>
-                          </label>
-                        </th>
+                        <th scope="row"><label for="name"><span class="must__type">회계연도</span></label></th>
                         <td>
                           <div class="td__container"> 
                             <select name="searchField" id="select" class="select--no--style select__renew" >
@@ -498,7 +490,7 @@
                             </select>
                           </div>
                         </td>
-                        <th scope="row" >
+                        <th scope="row">
                           <label for="examples1033">
                             <span class="must__type">회계기간</span>
                           </label>
@@ -527,7 +519,11 @@
                           <label for="label" class="mo_only"><span class="must__type">회계기간</span></label>
                           <div class="input__box">
                               <label for="searchText" class="blind">회계기간</label>
-                              <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value="">       
+                              <div class="flex--box flexTwo">
+                              <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value="">
+                                ~       
+                              <input type="text" id="searchText" name="searchText" class="ml4" placeholder="내용을 입력하세요." value="">
+                              </div>       
                           </div>
                   </div>
                   </div>
@@ -891,7 +887,7 @@
                     <col class="algin__last" style="width: 85%;" >
                   </colgroup>
                   <tbody>
-                    <tr class="border--btm">
+                    <tr class="border--btm border-top-large">
                       <th scope="col">
                         <label for="examples17">주석</label>
                       </th>
@@ -1842,27 +1838,12 @@
               <div class="pc__info">
               <div class="table__horizontal__ex w__cont">
                 <table class="border-top-large">
-                  <caption>
-                    공시정보 검색 폼
-                  </caption>
+                  <caption>공시정보 검색 폼</caption>
                   <tbody>
-                    <tr >
-                      <th scope="row">
-                        <label for="name">
-                          노동조합(산하조직명)
-                        </label>
-                      </th>
-                      <td>
-                        <div class="td__container">
-                          <input type="text" id="name" value="도레미첨단소재노동조합" readonly>
-                        </div>
-                      </td>
-                      <th scope="row">
-                        <label for="examples1033">
-                          <span class="">회계연도</span>
-  
-                        </label>
-                      </th>
+                    <tr>
+                      <th scope="row"><label for="name">노동조합(산하조직명)</label></th>
+                      <td><div class="td__container"><input type="text" id="name" value="도레미첨단소재노동조합" readonly></div></td>
+                      <th scope="row"><label for="examples1033"><span class="">회계연도</span></label></th>
                       <td>
                         <div class="td__container">
                           <select name="searchField" id="examples1033" class="select--no--style select__renew">
@@ -2004,7 +1985,7 @@
                 <div class="search">
                   <div class="flex--box-c search__list">
                     <label for="label" class="mo_only"><span class="">회계연도</span></label>
-                      <div class="select__box select__container">
+                      <div class="select__box flexTwo">
                         <input type="text" value="2023"> 
                         ~
                         <select class="select__renew" id="year" name="year"><option value="2023">2023</option><option value="2022">2022</option><option value="2022">2021</option></select>

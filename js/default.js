@@ -105,31 +105,67 @@ $("#gnb2 .menu__wrap a").click(function () {
 
 
 
+
+function submenuOffsetUpdate(){
+  $('.submenu__wrap .submenu').each(function() {
+    var $node = $(this);
+    var offsetTop = $node.offset().top; 
+    $node.attr('data-offset-top', offsetTop);
+  });  
+
+  mobileGnbUpdate();
+}
+
+function submenu__init(){
+  submenuOffsetUpdate()
+}
+
+
+// 스크롤 이벤트 - submenu__wrap에서 스크롤 시 active 클래스 변경
+function mobileGnbUpdate() {
+  var scrollTop = $(this).scrollTop();   // 스크롤 위치 확인
+  $($('.submenu__wrap .submenu').get().reverse()).each(function(index){
+      var $node = $(this);
+      let nodeTop = $node.scrollTop();
+      var offsetTop = parseInt($node.attr('data-offset-top'))
+      // 스크롤 위치가 현재 ul의 위치에 있을 경우
+      if (scrollTop >= offsetTop) {
+          // 기존 active 클래스 제거
+          $("#gnb2 .menu__wrap a").removeClass("active");
+          // 해당 인덱스의 메뉴에 active 클래스 추가
+          $("#gnb2 .menu__wrap a").eq(index).addClass("active");
+          return false; 
+      }
+  });
+};
+
+// 초기화하기
+submenu__init();
+
+$('#gnb2 .submenu__wrap').scroll(mobileGnbUpdate);
+
 $(document).ready(function() {
-  
-  let lastChildHeight = $('.gnb__body .submenu__wrap > ul:last-child').height();
-  console.log(lastChildHeight)
-
-
-
+  let submenuWrap = $('#gnb2 .submenu__wrap')
   // 메뉴 항목 클릭 이벤트
   $('.menu__wrap a').click(function(event) {
       event.preventDefault(); // 기본 링크 동작 방지
       var target = $(this).data('target');
-      
-
-
-
-
       // 해당 ID를 가진 요소의 위치 계산
-      var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();
-      
+      var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop(); 
       // submenuWrap 안에서 부드럽게 스크롤 이동
-      submenuWrap.animate({
-          scrollTop: targetOffset
-      }, 500); // 500ms 동안 부드럽게 스크롤
+      submenuWrap.animate({ scrollTop: targetOffset}, 500); // 500ms 동안 부드럽게 스크롤
   });
 });
+
+// 모바일 GNB 스크롤 값 바인딩
+  let lastChild = document.querySelector('.gnb__body .submenu__wrap > ul:last-child');
+  let wholeHeight = document.querySelector('#gnb2 .submenu__wrap').scrollHeight;
+  let lastChildHeight = document.querySelector('.gnb__body .submenu__wrap > ul:last-child').scrollHeight;
+  let difference = wholeHeight - lastChildHeight;
+  if (lastChild) {
+      lastChild.style.paddingBottom = difference + 'px';  
+  }
+
 
 
 

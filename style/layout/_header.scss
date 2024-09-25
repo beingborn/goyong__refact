@@ -292,8 +292,8 @@ color: #1d1d1d;
 
 // 모바일 gnb2
 
-#gnb2 {display: none; position: fixed; left: 0; top: 0; z-index: 1200; width: 100%; height: 100%; overflow: hidden; background: #fff; font-size: 1.7rem; }
-#gnb2.active {display: block; overflow: hidden; overflow-y: scroll;}
+#gnb2 {visibility: hidden; position: fixed; left: 0; top: 0; z-index: 1200; width: 100%; height: 100%; overflow: hidden; background: #fff; font-size: 1.7rem; }
+#gnb2.active {visibility: visible; overflow-y: scroll;}
 
 // 최상단 ul
 #gnb2.active > ul { width: 100%; height: 100%; overflow: visible;}

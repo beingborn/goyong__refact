@@ -876,6 +876,7 @@ table caption {
   z-index: -1;
   display: inline-flex;
   align-items: center;
+  min-width: 25rem;
 }
 
 .table__horizontal__ex td {
@@ -1350,11 +1351,6 @@ form {
 
 .padding--10 {
   padding-left: 1rem;
-}
-
-.flex--box {
-  display: flex;
-  align-items: center;
 }
 
 .search__select__wrap {
@@ -2335,7 +2331,7 @@ input[type=checkbox] {
 }
 
 #gnb2 {
-  display: none;
+  visibility: hidden;
   position: fixed;
   left: 0;
   top: 0;
@@ -2348,8 +2344,7 @@ input[type=checkbox] {
 }
 
 #gnb2.active {
-  display: block;
-  overflow: hidden;
+  visibility: visible;
   overflow-y: scroll;
 }
 
@@ -3729,6 +3724,17 @@ button.mo_only {
   align-items: center;
 }
 
+.search__form__user .flexTwo {
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__form__user .flexTwo input[type=text], .search__form__user .flexTwo .select__box > select {
+  width: calc(50% - 1rem);
+  flex: auto;
+}
+
 .search__form__user .search .select__box.select__container input[type=text], .sub1__1__wrap .search__form__user .search .select__box > select {
   width: calc(50% - 1rem);
   flex: auto;
@@ -3865,6 +3871,10 @@ button.mo_only {
 .foldStyle__table .answer__toggle {
   font-weight: 700;
   text-align: left;
+}
+
+.foldStyle__table .preBox {
+  white-space: pre-wrap;
 }
 
 .foldStyle__table .qna__function__group {
@@ -5639,6 +5649,11 @@ button.mo_only {
   }
   .sub1__1__wrap .tab__1 .table__horizontal__ex th {
     min-width: 25rem;
+  }
+}
+@media all and (max-width: 1440px) {
+  .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {
+    min-width: 22rem;
   }
 }
 /* 노트북 소형~ 중형 1080px ~ 1440px */
