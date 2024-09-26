@@ -2064,7 +2064,7 @@
       // 탭 버튼 클릭 시 chart 리사이징 + 차트 바인딩  
       $(document).ready(function(){
       $(".tab__wrap .tab__btn button").click(function(){chartResize();})
-      $(".mo__open__wrap .mobile__con").click(function(){chartResize();})
+      $(".mobile__tab .swiper-slide button").click(function(){chartResize();})
 
       // 자산 및 부채 현황 
       var pieChart1 = echarts.init(document.getElementById("pieChart1"));
