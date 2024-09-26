@@ -95,9 +95,30 @@ select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-heigh
 
 
 // 수신 동의 및 여부 확인
+// .chk__area label {color: #000;}
+// .chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: #D8D8D8; border: 0.1rem solid #C6C6C6;}
+// .chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
+
 .chk__area label {color: #000;}
-.chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: #D8D8D8; border: 0.1rem solid #C6C6C6;}
-.chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
+// .chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: transparent; border: 0.1rem solid #000;}
+// .chk__area input[type="radio"]:not(:checked) + label {color: #000;}
+
+
+/* 라디오 버튼이 체크되지 않았을 때 */
+.chk__area input[type="radio"].clicked:not(:checked) {
+  appearance: none;
+  background-color: #D8D8D8;
+  border: 0.1rem solid #C6C6C6;
+}
+
+/* 라디오 버튼이 체크되지 않은 상태일 때 레이블 스타일 */
+.chk__area input[type="radio"].clicked:not(:checked) + label {
+  color: #D8D8D8;
+}
+
+
+
+
 
 // 페이지 제목
 .page__title {font-size: 4rem;}

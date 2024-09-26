@@ -216,20 +216,17 @@
 			<li><a href="file__change.html" class="txt">첨부파일 변경</a></li>
 		</ol>
 		</nav>
-
         <form action="POST" class="info__change__form" id="file_check_frm" name="file_check_frm">
             <input type="hidden" name="username">
             <input type="hidden" name="password">
             <input type="hidden" name="fileType" value="file">
-
-            <div class="table__horizontal__ex">
+            <div class="table__horizontal__ex" id="main__content">
                 <div class="form__table border-top-large">
                     <table>
                         <caption>사용자용 회원가입 폼입니다.</caption>
                         <tbody><tr>
-                            <th>
-                                <span class="must__type">
-                                    <label for="id">
+                            <th><span class="must__type">
+                                <label for="id">
                                         아이디
                                     </label>
                                 </span>
@@ -249,7 +246,6 @@
                                 </span>
                             </th>
                             <td>
-                                
                                 <div class="td__container secret__Check"> <!-- 현재 relative 대상 -->              
                                         <input class="password__input" id="pw" type="password" placeholder="비밀번호를 입력하세요." maxlength="20">
                                         <button type="button" class="btn icon__pw-visible">
@@ -267,8 +263,6 @@
                                     </label>
                                 </span>
                             </th>
-
-							<!-- 모바일로 변경 시 파일 선택을 모바일용 아이콘으로 변경 (스타일 적용이 많아서 display= none 처리해야할듯함)-->
                             <td>
                                 <div class="td__container file__select__container" id="pwLength">
 										<div class="preview flex--box-c">
@@ -284,42 +278,6 @@
                 </table>
                 </div>
             </div>
-
-
-                        <!-- 자바스크립트 input 파일 커스텀 -->
-
-						<script>
-                                    let inputs = $(".file__post");
-                                    let preview = $(".preview");
-                                    
-                                    inputs.css({
-                                    "opacity": 0,
-                                    "width": 0
-                                    });
-                                    function displayFileNames(event){
-                                let currentInput = $(event.target);
-
-                                let index = inputs.index(currentInput)
-
-                                let previewBox = $(preview[index])
-
-                                previewBox.empty(); 
-                                const currentFile = currentInput[0].files; 
-                                if (currentFile.length === 0) {
-                                const para = $("<span>").text("아무파일도 입력되지 않았어요");
-                                previewBox.append(para);
-                                } else {
-                                const fileList = $("<div>");
-                                previewBox.append(fileList);
-
-                                for (const file of currentFile) {
-                                const listItem = $("<p>").text(file.name).addClass('upload__file__name');
-                                fileList.append(listItem);
-                                }
-                            }
-                            }
-                            inputs.on('change', displayFileNames);   
-                            </script>
             <div class="function__group margin-1">
                 <button type="button" class="btn__control bg--blue-00" onclick="formCheck()">저장</button>
             </div>
@@ -332,7 +290,6 @@
 			<div class="footer__logo">
 				<img src="img/slogan_H48.svg" alt="하단 로고">
 			</div>
-
 			<div class="footer__flex">
 				<div class="footer__info">
 					<p class="location">

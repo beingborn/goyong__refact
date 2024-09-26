@@ -259,13 +259,8 @@
           </nav>
           </div>
       </header>
-
       <!-- 컨텐츠 -->
-
-      <main
-        class="content main__content report__content sign_up"
-        style="padding-bottom: 40px"
-      >
+      <main class="content main__content report__content sign_up" style="padding-bottom: 40px">
         <div class="visual__bg">
           <div class="inner">
             <div class="visual__text">
@@ -284,20 +279,15 @@
               <li><a href="sign__up.html" class="txt">회원가입</a></li>
             </ol>
           </nav>
-
           <div class="flex__title table__title__wrap">
             <h2 class="table__title">회원 정보 입력</h2>
             <div class="must__help__message">
-              <span
-                ><span style="color: #fe5555">*</span> 필수
-                입력항목입니다.</span
-              >
+              <span><span style="color: #fe5555">*</span> 필수 입력항목입니다.</span>
             </div>
           </div>
-
           <!-- 회원 가입 테이블 -->
           <form action="POST" id="sign__up--form">
-            <div class="sign__up__table__wrap table__horizontal__ex">
+            <div class="sign__up__table__wrap table__horizontal__ex" id="main__content">
               <div class="form__table border-top-large">
                 <table>
                   <caption>
@@ -306,7 +296,7 @@
                   <tr>
                     <th>
                       <span class="must__type">
-                        <label for="id"> 아이디 </label>
+                        <label for="id">아이디</label>
                       </span>
                     </th>
                     <td>
@@ -318,13 +308,7 @@
                           class="width--100"
                           placeholder="아이디를 입력하세요."
                         />
-                        <button
-                          type="button"
-                          class="btn__check__dup bg--transparent-00"
-                          style="background: none"
-                        >
-                          중복체크
-                        </button>
+                        <button type="button" class="btn__check__dup bg--transparent-00" style="background: none">중복체크</button>
                       </div>
                     </td>
                   </tr>
@@ -354,7 +338,6 @@
                       </div>
                     </td>
                   </tr>
-
                   <tr>
                     <th>
                       <span class="must__type">
@@ -555,7 +538,6 @@
                       </div>
                     </td>
                   </tr>
-
                   <tr>
                     <th>
                       <span class="must__type">
@@ -713,11 +695,11 @@
                       <div class="td__container">
                         <div class="flex--box">
                           <div class="mg--10-r">
-                            <input type="radio" name="rdo_22-1" id="rdo_22-2" />
+                            <input type="radio" name="agreeCheck" id="agree" />
                             <label for="rdo_22-2">동의</label>
                           </div>
                           <div>
-                            <input type="radio" name="rdo_22-1" id="rdo_22-3" />
+                            <input type="radio" name="agreeCheck" id="reject" />
                             <label for="rdo_22-3">거부</label>
                           </div>
                         </div>
@@ -971,7 +953,6 @@
       </footer>
       <div class="gnb__bg"></div>
     </div>
-
     <!-- js 파일 -->
     <script src="js/default.js"></script>
     <script src="js/manage__accounting.js"></script>

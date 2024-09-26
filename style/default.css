@@ -99,7 +99,8 @@ select {
   color: #000;
 }
 
-.chk__area input[type=radio]:not(:checked) {
+/* 라디오 버튼이 체크되지 않았을 때 */
+.chk__area input[type=radio].clicked:not(:checked) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -107,7 +108,8 @@ select {
   border: 0.1rem solid #C6C6C6;
 }
 
-.chk__area input[type=radio]:not(:checked) + label {
+/* 라디오 버튼이 체크되지 않은 상태일 때 레이블 스타일 */
+.chk__area input[type=radio].clicked:not(:checked) + label {
   color: #D8D8D8;
 }
 

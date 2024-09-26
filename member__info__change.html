@@ -20,7 +20,6 @@
     <div class="skip__nav">
         <a href="#main__content">본문 바로가기</a>
     </div>
-
     <div class="wrap member_info_change" id="sub__wrap">
         <!-- 헤더 -->
         <header class="header">
@@ -192,10 +191,7 @@
             </nav>
             </div>
         </header>
-
-          <!-- 컨텐츠 -->
-
-
+        <!-- 컨텐츠 -->
        <main class="content main__content report__content member_info_change" style="padding-bottom: 40px;">
         <div class="visual__bg">
             <div class="inner">
@@ -220,7 +216,7 @@
                 </div>
             <!-- 회원 가입 테이블 -->
             <form action="POST" id="sign__up--form">
-                <div class="sign__up__table__wrap table__horizontal__ex">
+                <div class="sign__up__table__wrap table__horizontal__ex" id="main__content">
                     <div class="form__table border-top-large">
                         <table class="table__strong">
                             <caption>사용자용 회원가입 폼입니다.</caption>
@@ -330,9 +326,6 @@
                                     </div>
                                 </td>
                             </tr>
-
-
-
                             <tr class="su__operior">
                                 <th scope="row">
                                     <label for="category23233"> 
@@ -381,8 +374,6 @@
                                                 <option value="99">총연합단체미가입</option>
                                                 <option value="00">직접입력</option>
                                             </select>
-
-                                            
                                             <input type="text" id="1" placeholder="1번 인풋">
                                             <input type="text" id="2" placeholder="2번 인풋">
                                             <input type="text" id="3" placeholder="3번 인풋">
@@ -421,51 +412,45 @@
                                         </div>
                                 </td>
                                 <script>
-                            
-                     
+                        // 달력 함수
                         $(document).ready(function() {   
                         // init();
-            
     		            /*Date Picker*/
     		            var dateFormat = "yymmdd",
     	                from = $( '#testPicker' ).datepicker({
     	                dateFormat : "yymmdd",
-                        //     	          defaultDate: "+1w",
+                        // defaultDate: "+1w",
     	                changeMonth: true,
     	                changeYear : true,
     	                yearRange : 'c-80y:c',
     	                numberOfMonths: 1
     	                });
-    	 
                         function getDate( element ) {
-                                var date;
-                                try {
-                                    date = $.datepicker.parseDate( dateFormat, element.value );
-                                } catch( error ) {
-                                    date = null;
-                                }
-                                return date;
-                            }
+                        var date;
+                        try {
+                        date = $.datepicker.parseDate( dateFormat, element.value );
+                        } catch(error) {
+                        date = null;
+                        }
+                        return date;
+                        }
     	    
-    	    
-    		$.datepicker.setDefaults({
-    			closeText : "닫기",
-    			currentText : "오늘",
-    			prevText : "이전 달",
-    			nextText : "다음 달",
-    			monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    			monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    			dayNames : ['일','월','화','수','목','금','토'],
-    			dayNamesShort : ['일','월','화','수','목','금','토'],
-    			dayNamesMin : ['일','월','화','수','목','금','토'],
-    			weekHeader : "주",
-    			yearSuffix : "년",
-    		});
-        })
-
+    	
+                        $.datepicker.setDefaults({
+                                closeText : "닫기",
+                                currentText : "오늘",
+                                prevText : "이전 달",
+                                nextText : "다음 달",
+                                monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                dayNames : ['일','월','화','수','목','금','토'],
+                                dayNamesShort : ['일','월','화','수','목','금','토'],
+                                dayNamesMin : ['일','월','화','수','목','금','토'],
+                                weekHeader : "주",
+                                yearSuffix : "년",
+                            });
+                        })
                                 </script>
-
-
                             </tr>
                             <tr>
                                 <th>
@@ -619,9 +604,7 @@
                                             파일첨부
                                         </label>
                                     </span>
-                                </th>
-                           
-                                
+                                </th>  
                                 <td>
                                     <div class="td__container file__select__container" id="pwLength">
                                         <div class="preview flex--box-c">
@@ -632,21 +615,13 @@
                                         <input type="file" class="file__post" id="profile_pic" name="profile_pic" style="opacity: 0; width: 0px;">
                                 </div>
                                 </td>
-                              
                             </tr>
-    
-    
-    
-    
-    
                         </table>
                     </div>
                 </div>
             </form>
             <div class="must__help__message">
-                <p>
-                    <span style="color: #FE5555;">*</span> 노동조합 또는 산하조직 대표자 명의의 회원가입 신청 공문을 스캔하여 파일로 첨부합니다.
-                </p>
+                <p><span style="color: #FE5555;">*</span> 노동조합 또는 산하조직 대표자 명의의 회원가입 신청 공문을 스캔하여 파일로 첨부합니다.</p>
                 <p>(공문에"노동조합 회계공시시스템 회원가입을 신청한다"는 의사를 명시하고 대표자 직인 날인, 파일은 1개만 첨부가능)</p>
             </div>
                              <!-- 노동조합규약 -->
@@ -664,34 +639,26 @@
                                                 <span>첨부파일</span>
                                             </div>
                                         </div>
-                
                                         <div class="form__body">
-
                                             <div class="form__row flex--box-c">
                                                 <div class="td__container" style="border-right: 1px solid #ddd;">
                                                     <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;"/>
-                                                </div>
-                
-                
-
+                                                </div>                     
                                                 <div class="td__container file__select__container flex--grow-100" id="pwLength">
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>
                                                         <label class="btn__file__select--mo bg--transparent-00" for="profile_pics2"></label>
-
                                                     </div>
                                                     <label class="btn__file__select bg--transparent-00" for="profile_pics2">파일선택</label>
                                                     <input type="file" class="file__post" id="profile_pics2" name="profile_pics2" style="opacity: 0; width: 0px;">
                                                     <button type="button" class="btn__add bg--black-00" style="margin-left: auto;">+</button>
                                                 </div>
-
                                             </div>
                                             <!-- 두번째 줄 -->
                                             <div class="form__row flex--box-c">
                                                 <div class="td__container" style="border-right: 1px solid #ddd;">
                                                     <input type="text" name="rule_name[]" placeholder="" class="input__text" style="padding: 0;" />
                                                 </div>
-            
                                                 <div class="td__container file__select__container flex--grow-100" id="pwLength">
                                                     <div class="preview flex--box-c">
                                                         <p class="upload__file__name">선택된 파일없음</p>

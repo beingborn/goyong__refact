@@ -63,7 +63,37 @@ $(document).ready(function () {
 
 
 // radio 체크 표시
-$('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
+// $('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
+
+const radioAgree = $('input[name=agreeCheck]')
+
+// 라디오 버튼 클릭 시 clicked 클래스 추가
+radioAgree.click(function() {
+  radioAgree.addClass('clicked');
+  radioReject.addClass('clicked');
+});
+
+
+// radioReject.click(function() {
+//   radioReject.addClass('clicked');
+//   radioAgree.addClass('clicked');
+// });
+
+
+// radioAgree.click(function() {
+//   if ($(this).prop("checked")) { // 활성화 된 경우에
+//     radioAgree.removeAttr('disabled');  // Reject 활성화
+//     radioReject.attr('disabled', true);   // Agree 비활성화
+//   }
+// });
+
+// radioReject.click(function() {
+//   if ($(this).prop("checked")) {
+//     radioReject.removeAttr('disabled');  // Agree 활성화
+//     radioAgree.attr('disabled', true); // Reject 비활성화
+//   }
+// });
+
 
 
 // 모바일 GNB 토글 및 슬라이드 애니메이션
@@ -251,3 +281,18 @@ $(document).ready(function () {
       
     $(document).on('change', '.file__post', displayFileNames)
     });
+
+
+             
+/** 모바일 슬라이드 토글 */
+let dataOpen = $(".data--open");
+$(document).ready(function () {
+  dataOpen.click(function () {
+    var currentSlide = $(this).next(".mo__slide");
+    $(this).next(".mo__slide").stop().slideToggle();
+    $(this).toggleClass("on").siblings().removeClass("on");
+    dataOpen.not($(this)).removeClass('on');
+    $(".mo__slide").not(currentSlide).slideUp();
+  });
+  $(".mo__slide").slideUp();
+});

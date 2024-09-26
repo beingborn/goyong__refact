@@ -1,16 +1,4 @@
-         
-/** 모바일 슬라이드 토글 */
-let dataOpen = $(".data--open");
-$(document).ready(function () {
-  dataOpen.click(function () {
-    var currentSlide = $(this).next(".mo__slide");
-    $(this).next(".mo__slide").stop().slideToggle();
-    $(this).toggleClass("on").siblings().removeClass("on");
-    dataOpen.not($(this)).removeClass('on');
-    $(".mo__slide").not(currentSlide).slideUp();
-  });
-  $(".mo__slide").slideUp();
-});
+
 
 
 /* 서브 탭 변환 */
