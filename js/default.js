@@ -65,7 +65,7 @@ $(document).ready(function () {
 // radio 체크 표시
 // $('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
 
-const radioAgree = $('input[name=agreeCheck]')
+const radioAgree = $('input[type="radio"]')
 
 // 라디오 버튼 클릭 시 clicked 클래스 추가
 radioAgree.click(function() {
@@ -73,7 +73,7 @@ radioAgree.click(function() {
   radioReject.addClass('clicked');
 });
 
-
+ 
 // radioReject.click(function() {
 //   radioReject.addClass('clicked');
 //   radioAgree.addClass('clicked');
