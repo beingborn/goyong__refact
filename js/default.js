@@ -61,38 +61,36 @@ $(document).ready(function () {
   });
 });
 
-
-// radio 체크 표시
-// $('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
-
+// 라디오 버튼 클릭 시 clicked 클래스 추가 (클릭 시 notchecked 스타일 변경)
 const radioAgree = $('input[type="radio"]')
-
-// 라디오 버튼 클릭 시 clicked 클래스 추가
 radioAgree.click(function() {
   radioAgree.addClass('clicked');
-  radioReject.addClass('clicked');
 });
 
  
-// radioReject.click(function() {
-//   radioReject.addClass('clicked');
-//   radioAgree.addClass('clicked');
-// });
+  /* 웹 탭 변환 Open Tab web */
+  $('.tab__content .tab').hide().eq(0).show();
+  $('.tab__btn button').eq(0).addClass('active');
+  $(".tab__wrap .tab__btn button").click(function () {
+    var idx = $(this).parent().index();
+    $(".tab__content .tab").hide();
+    $(".tab__content .tab").eq(idx).fadeIn();
+    $(".tab__btn button").removeClass("active");
+    $(this).addClass("active");
 
 
-// radioAgree.click(function() {
-//   if ($(this).prop("checked")) { // 활성화 된 경우에
-//     radioAgree.removeAttr('disabled');  // Reject 활성화
-//     radioReject.attr('disabled', true);   // Agree 비활성화
-//   }
-// });
+  });
 
-// radioReject.click(function() {
-//   if ($(this).prop("checked")) {
-//     radioReject.removeAttr('disabled');  // Agree 활성화
-//     radioAgree.attr('disabled', true); // Reject 비활성화
-//   }
-// });
+  /* 모바일 탭 변환 mobile Tab */
+  $(".mobile__tab .swiper-slide button").eq(0).addClass('active');
+  $(".mobile__tab .swiper-slide button").click(function(){
+    var idx = $(this).parent().index()
+    $(".tab__content .tab").hide();
+    $(".tab__content .tab").eq(idx).fadeIn();
+    $(".mobile__tab .swiper-slide button").removeClass("active")
+    $(this).addClass("active")
+  })
+
 
 
 
@@ -283,7 +281,6 @@ $(document).ready(function () {
     });
 
 
-             
 /** 모바일 슬라이드 토글 */
 let dataOpen = $(".data--open");
 $(document).ready(function () {

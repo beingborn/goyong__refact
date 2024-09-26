@@ -167,27 +167,21 @@
 }
 
 // 상단 depth1 버튼 클릭 시 애니메이션
-// #gnb1 > ul > li.active {background: #21A366;}
 #gnb1 > ul > li.active > a {color: #21A366;}
-// #gnb1 > ul > li.plus.active > a::after {transform: rotate(360deg); background: url(../img/arrow__top-white.svg);}
 #gnb1 > ul > li.plus.active > a::after {transform: rotate(360deg); background: url(../img/arrow__top-green.svg);}
-
-
 .gnb__bg {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); display: none; z-index: 999;}
 #gnb1 .sub__menu > ul:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 26rem;
-    height: 100%;
-    // background: #E4F2EC;
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+width: 26rem;
+height: 100%;
 }
 .header__gnb {position: relative;}
 .header__gnb::after {content: ''; display: inline-block; width: 100vw; height: 0.1rem; background-color: #ddd; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
 #gnb1 .sub__menu > ul > li {display: flex;}
 #gnb1 .sub__menu > ul > li.active > a {background: #fff; color: #21A366; text-decoration: underline;}
-/* #gnb1 {position: relative;} */
 #gnb1 .sub__menu {
     left: 50%;
     transform: translateX(-50%);
@@ -202,7 +196,6 @@
     z-index: 10;
     max-width: 100%;
     text-align: left;
-    /* border: 1px dashed blueviolet; */
 }
 
 #gnb1 .sub__menu::before {
@@ -230,7 +223,6 @@
     font-weight: 700;
     color: #1d1d1d;
     font-size: 1.9rem;
-    // background: #E4F2EC;
 }
 
 #gnb1 .sub__menu > ul > li .dep3 {
@@ -265,10 +257,7 @@ background-size: cover;
 vertical-align: middle;
 }
 
-
-
 #gnb1 .sub__menu > ul > li.active > .dep3 {display: block;}
-
 #gnb1 .sub__menu > ul {
 display: flex;
 position: relative;
@@ -316,7 +305,6 @@ color: #1d1d1d;
 .gnb__body .submenu__wrap {width: calc(100% - 14rem); flex: 1; height: 100%; overflow-y: scroll; position: relative;}
 .gnb__body .submenu__wrap li a {display: block;}
 .gnb__body .submenu__wrap > ul {padding: 1.6rem 2.4rem; border-bottom: 0.1rem solid #ddd;}
-// .gnb__body .submenu__wrap > ul:last-child {padding-bottom: 10rem;}
 .gnb__body .submenu__wrap > ul .title {font-size: 1.7rem; font-weight: 700; padding-top: 2.6rem; padding-bottom: 2.6rem; border-bottom: 0.1rem solid #ddd; width: 100%;}
 .gnb__body .submenu__wrap > ul li:not(.title) {padding-top: 1.8rem; padding-bottom: 1.8rem;}
 

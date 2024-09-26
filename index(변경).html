@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>노동조합 회계공시시스템</title>
-    
-    <!-- css 영역 -->
+
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/reset.css">
-    <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-
-    <!-- 로컬 스와이퍼 CSS -->
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
-    <!-- 로컬 jquery 스와이퍼 cdn -->
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/echarts.min.js"></script>
 </head>
@@ -370,215 +365,6 @@
                     </div>
                 </div>
             </div>
-       
-
-            <script>
-                
-
-                $(document).ready(function() {
-
-   
-//처음에 첫번째 데이터 선택
-
-//테이블 tr 선택 차트출력
-$("#tableList tbody").on("click", "tr", function(e) {
-    var trNum = $(e.target).closest('tr').prevAll().length;
-    cnt = trNum;
-    //튤팁제거(선택시 튤팁이 생기므로)
-    $(".tooltip").remove();
-
-    var d = parseInt(($(this).find("td:eq(2)").text()).replace(",", "")); //자산-자본
-    var e = parseInt(($(this).find("td:eq(3)").text()).replace(",", "")); //부채
-    var f = parseInt(($(this).find("td:eq(4)").text()).replace(",", "")); //수익
-    var g = parseInt(($(this).find("td:eq(5)").text()).replace(",", "")); //지출
-
-    //파이그래프
-    $('.chart1 .dataEx .asset').html(d) // 자산 데이터 바인딩
-    $('.chart1 .dataEx .income').html(e) // 부채 데이터 바인딩
-
-    // 막대그래프
-    $('.chart2 .dataEx .revenue').html(f) // 자산 데이터 바인딩
-    $('.chart2 .dataEx .expend').html(g) // 부채 데이터 바인딩
-
-
-    // 파이 차트 옵션
-
-    var pieChartOption = {
-        tooltip: {
-            trigger: 'item',
-        },
-
-        // legend: {
-        //     orient: "vertical",
-        //     left: "left",
-        // },
-        series: [{
-            name: '항목',
-            type: 'pie',
-            // 큰 원의 반지름이 94, 작은 원의 반지름이 40인 도넛 그래프 해당 값을 통해 도넛 그래프를 만들 수 있다.
-            radius: ['40', '94'], 
-            label: {
-            show: true,
-            textStyle: {
-            color: '#767676',
-            lineHeight: 24,
-            align: 'center'
-            },
-            position: 'center',
-            // align: 'center',  // 리치 텍스트의 중앙 정렬
-            fontSize: 18,
-            formatter: function(params){
-            return `자산\n {value|${e}}`    
-        },
-
-            rich: {
-            value: {
-            fontSize: 18,
-            fontWeight:'bold',
-            align: 'center',  // 리치 텍스트의 중앙 정렬
-            padding: [0,4,0,0]
-            }
-            }
-            // formatter: function(d) {
-            // 	if(d.value == 0) return '';
-            // 	return gfnAddCommas(d.value);
-            // }
-            },
-            emphasis: {
-            //     label : {
-            //         show: true,
-            //         fontSize: 18,
-            //         fontWeight: 'bold',
-            //         formatter: `customized {a}\n {b}: {c}`
-            //     }
-        
-            //     // formatter: `customized {a}\n {b}: {c}` 
-            itemStyle: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-            },
-            data: [{
-            value: d,
-            name: '자산',
-            itemStyle: {
-            color: '#A4D594'
-            }
-            },
-            {
-            value: e,
-            name: '부채',
-            itemStyle: {
-            color: '#FAD280'
-            }
-            }
-            ]
-        }]
-    };
-
-
-    var pieChart = echarts.init(document.querySelector("#pieChart"));
-    pieChart.setOption(pieChartOption);
-
-
-
-    // 바 차트 옵션
-    var barChartOption = {
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
-        },
-        grid: {
-            top: '3%',
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: false,
-        },
-        xAxis: [{
-            type: 'category',
-            data: ['수입', '지출'],
-            axisLine: { show: false }, // 축 선 숨기기
-            axisTick: { show: false }, // 축 눈금선 숨기기
-            splitLine: { show: false }, // 축 분할선 숨기기
-            axisLabel: { show: true } // 축 레이블은 보이도록 설정
-        }],
-        yAxis: [{
-            type: 'value',
-            axisLine: { show: false }, // 축 선 숨기기
-            axisTick: { show: false }, // 축 눈금선 숨기기
-            splitLine: { show: false }, // 축 분할선 숨기기
-            axisLabel: { show: true } // 축 레이블은 보이도록 설정
-        }],
-        series: [{
-            type: 'bar',
-            label: {
-                show: false,
-                fontSize: 18,
-                // formatter: function(d) {
-                // 	return gfnAddCommas(d.value);
-                // }
-            },
-            barWidth : '80px',
-            barGap: '80%',
-            barCategoryHap: '100%',
-
-            emphasis: {
-                focus: 'series'
-            },
-            data: [
-                {
-                    value: f,
-                    itemStyle: {
-                       color: '#A4D594'
-                    }
-
-                },
-                {
-                    value: g,
-                    itemStyle: {
-                        
-                        color: '#778CCE',
-
-                    }
-                }
-            ]
-        }]
-    };
-
-    var barChart = echarts.init(document.querySelector("#barChart"));
-    barChart.setOption(barChartOption);
-    $("#tableList tbody tr").removeClass('on');
-    $(this).addClass('on');
-});
-
-
-fn_tblClick();
-setInterval(function() {
-    fn_tblClickInterval();
-}, 10000);
-
-$("#popup .float").on("click", function(event) {
-    setCookie("mainPopup", "Y", 1);
-    $("#popup").fadeOut(400);
-});
-});
-
-function fn_tblClick(){
-$("#tableList tbody tr:first").click();
-}
-
-function fn_tblClickInterval() { 
-cnt += 1; // 카운트 늘어나고
-if (cnt == 5) { // 끝나면 초기화
-    cnt = 0;
-}
-$("#tableList tbody tr:eq(" + cnt + ")").click(); // 클릭 시 이벤트 전달해서 데이터 바인딩
-}
-            </script>
         </section>
          <!-- 고객센터  -->
         <div class="foot__container">
@@ -615,7 +401,7 @@ $("#tableList tbody tr:eq(" + cnt + ")").click(); // 클릭 시 이벤트 전달
                 </div>
                 <div class="black__bg"></div>
              </section>
-              <!-- 배너 스와이퍼 -->
+        <!-- 배너 스와이퍼 -->
          <section class="banner__swiper">
             <h2 style="display: none;">banner__swiper</h2>
             <div class="inner">
@@ -702,7 +488,206 @@ $("#tableList tbody tr:eq(" + cnt + ")").click(); // 클릭 시 이벤트 전달
     </div>
     <!-- 스와이퍼 js cdn -->
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main_swiper.js"></script>
     <script src="js/default.js"></script>
+    <script>
+
+    $(document).ready(function() {
+    //테이블 tr 선택 차트출력
+    $("#tableList tbody").on("click", "tr", function(e) {
+    var trNum = $(e.target).closest('tr').prevAll().length;
+    cnt = trNum;
+    //튤팁제거(선택시 튤팁이 생기므로)
+    $(".tooltip").remove();
+    var d = parseInt(($(this).find("td:eq(2)").text()).replace(",", "")); //자산-자본
+    var e = parseInt(($(this).find("td:eq(3)").text()).replace(",", "")); //부채
+    var f = parseInt(($(this).find("td:eq(4)").text()).replace(",", "")); //수익
+    var g = parseInt(($(this).find("td:eq(5)").text()).replace(",", "")); //지출
+    //파이그래프
+    $('.chart1 .dataEx .asset').html(d) // 자산 데이터 바인딩
+    $('.chart1 .dataEx .income').html(e) // 부채 데이터 바인딩
+    // 막대그래프
+    $('.chart2 .dataEx .revenue').html(f) // 자산 데이터 바인딩
+    $('.chart2 .dataEx .expend').html(g) // 부채 데이터 바인딩
+    // 파이 차트 옵션
+    var pieChartOption = {
+        tooltip: {
+            trigger: 'item',
+        },
+        series: [{
+            name: '항목',
+            type: 'pie',
+            radius: ['40', '94'], 
+            label: {
+            show: true,
+            textStyle: {
+            color: '#767676',
+            lineHeight: 24,
+            align: 'center'
+            },
+            position: 'center',
+            fontSize: 18,
+            formatter: function(params){
+            return `자산\n {value|${e}}`    
+        },
+
+            rich: {
+            value: {
+            fontSize: 18,
+            fontWeight:'bold',
+            align: 'center',
+            padding: [0,4,0,0]
+            }
+            }
+            },
+            emphasis: {
+            itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+            },
+            data: [{
+            value: d,
+            name: '자산',
+            itemStyle: {
+            color: '#A4D594'
+            }
+            },
+            {
+            value: e,
+            name: '부채',
+            itemStyle: {
+            color: '#FAD280'
+            }
+            }
+            ]
+        }]
+    };
+
+    var pieChart = echarts.init(document.querySelector("#pieChart"));
+    pieChart.setOption(pieChartOption);
+    // 바 차트 옵션
+    var barChartOption = {
+        tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+        type: 'shadow'
+        }
+        },
+        grid: {
+            top: '3%',
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: false,
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['수입', '지출'],
+            axisLine: { show: false }, // 축 선 숨기기
+            axisTick: { show: false }, // 축 눈금선 숨기기
+            splitLine: { show: false }, // 축 분할선 숨기기
+            axisLabel: { show: true } // 축 레이블은 보이도록 설정
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: { show: false }, // 축 선 숨기기
+            axisTick: { show: false }, // 축 눈금선 숨기기
+            splitLine: { show: false }, // 축 분할선 숨기기
+            axisLabel: { show: true } // 축 레이블은 보이도록 설정
+        }],
+        series: [{
+            type: 'bar',
+            label: {
+                show: false,
+                fontSize: 18,
+                // formatter: function(d) {
+                // 	return gfnAddCommas(d.value);
+                // }
+            },
+            barWidth : '80px',
+            barGap: '80%',
+            barCategoryHap: '100%',
+
+            emphasis: {
+                focus: 'series'
+            },
+            data: [
+                {
+                    value: f,
+                    itemStyle: {
+                       color: '#A4D594'
+                    }
+
+                },
+                {
+                    value: g,
+                    itemStyle: {
+                        
+                        color: '#778CCE',
+
+                    }
+                }
+            ]
+        }]
+    };
+
+    var barChart = echarts.init(document.querySelector("#barChart"));
+    barChart.setOption(barChartOption);
+    $("#tableList tbody tr").removeClass('on');
+    $(this).addClass('on');
+    });
+
+
+    fn_tblClick();
+    setInterval(function() {
+        fn_tblClickInterval();
+    }, 10000);
+
+    $("#popup .float").on("click", function(event) {
+        setCookie("mainPopup", "Y", 1);
+        $("#popup").fadeOut(400);
+    });
+    });
+
+    function fn_tblClick(){
+    $("#tableList tbody tr:first").click();
+    }
+
+    function fn_tblClickInterval() { 
+    cnt += 1; // 카운트 늘어나고
+    if (cnt == 5) { // 끝나면 초기화
+        cnt = 0;
+    }
+    $("#tableList tbody tr:eq(" + cnt + ")").click(); // 클릭 시 이벤트 전달해서 데이터 바인딩
+    }
+
+
+    // 하단 배너 스와이퍼
+    let swiper = new Swiper(".bannerSwiper", {
+    slidesPerView : 1,
+    loop: true,
+    loopAdditionalSlides : 1,
+    navigation: {
+        nextEl: ".banner__btn .swiper-button-next",
+        prevEl: ".banner__btn .swiper-button-prev",
+        },
+    breakpoints: {
+        767: {
+        slidesPerView : 3,
+        spaceBetween: 20,
+        },
+        1080: {
+        slidesPerView : 3,
+        spaceBetween: 20,
+        },
+        1440: {
+        slidesPerView : 3,
+        spaceBetween: 32,
+        }
+        }
+        });
+    </script>
+
 </body>
 </html>

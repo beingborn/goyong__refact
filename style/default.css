@@ -95,8 +95,17 @@ select {
   display: none;
 }
 
-.chk__area label {
-  color: #000;
+input[type=checkbox] {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+input[type=radio] {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  margin: 0;
+  vertical-align: middle;
 }
 
 /* 라디오 버튼이 체크되지 않았을 때 */
@@ -111,10 +120,6 @@ input[type=radio].clicked:not(:checked) {
 /* 라디오 버튼이 체크되지 않은 상태일 때 레이블 스타일 */
 input[type=radio].clicked:not(:checked) + label {
   color: #D8D8D8;
-}
-
-.page__title {
-  font-size: 4rem;
 }
 
 .lnb__title h2 {
@@ -137,12 +142,8 @@ input[type=radio].clicked:not(:checked) + label {
   font-size: 1.6rem;
 }
 
-input[type=radio] {
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  margin: 0;
-  vertical-align: middle;
+.page__title {
+  font-size: 4rem;
 }
 
 br.onlyMo {
@@ -216,7 +217,7 @@ textarea {
 }
 
 /* 
-  상태 변경 클래스 네이밍 규칙
+  상태 변경 유틸리티 클래스 네이밍 규칙
 
   (a)--(b)-(c)
 
@@ -534,9 +535,6 @@ textarea {
   color: #E71825;
 }
 
-/*
-  특정 html만 100vh에 맞추기 (임시)
-*/
 /* 
   버튼 CSS
 */
@@ -1533,183 +1531,6 @@ input[type=file]::file-selector-button {
   background-size: cover;
 }
 
-/* 메뉴별 권한 관리 및 체계 아코디언 CSS */
-.menu-list {
-  width: 280px;
-}
-
-.menu-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-}
-
-input[type=checkbox] {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-.menu-check .depth-1 {
-  padding: 2.5rem 1rem;
-  border-bottom: 0.1rem solid #ddd;
-}
-.menu-check .depth-1 .tit {
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-.menu-check .depth-2 {
-  border-bottom: 0.1rem solid #ddd;
-  border-top: 0.1rem solid #ddd;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 2.4rem 2rem 2.4rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-check .depth-3 {
-  padding: 2.4rem 2rem 2.4rem 1rem;
-}
-.menu-check .depth-3 .sub-ul {
-  padding-left: 1.6rem;
-}
-.menu-check .depth-3 .sub-ul > li {
-  height: 4.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-check .depth-3 .sub-ul > li > span {
-  position: relative;
-}
-.menu-check .depth-3 .sub-ul > li > span::before {
-  content: "";
-  display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
-  background-color: #000;
-  border-radius: 50%;
-  margin-right: 0.8rem;
-}
-
-/* 메뉴별 권한 관리 기존 depth 3 까지 코드 */
-.menu-wrap .depth-1 {
-  padding: 2.5rem 1rem;
-  border-bottom: 0.1rem solid #ddd;
-}
-.menu-wrap .depth-1 .tit {
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-.menu-wrap .depth-2 {
-  border-bottom: 0.1rem solid #ddd;
-  border-top: 0.1rem solid #ddd;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 2.4rem 2rem 2.4rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-wrap .depth-3 .sub-ul {
-  padding: 2rem 0;
-}
-.menu-wrap .depth-3 .sub-ul > li > a {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 2.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-.menu-wrap .depth-3 .sub-ul > li > a::before {
-  content: "";
-  display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background-color: #000;
-  margin-right: 0.8rem;
-}
-
-.system-list .depth-1 {
-  padding: 2.5rem 1rem;
-  border-bottom: 0.1rem solid #ddd;
-}
-
-.system-list .depth-1 .tit {
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-
-.system-list .depth-0 {
-  border-bottom: 0.1rem solid #ddd;
-  border-top: 0.1rem solid #ddd;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 2.4rem 2rem 2.4rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.system-list {
-  max-height: 1200px;
-  overflow-y: auto;
-}
-
-.system-list .menu-head.depth-3, .menu-head.depth-4, .menu-head.depth-5, .menu-head.depth-6 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.system-list .menu-head.depth-2 {
-  padding: 1.5rem 1.6rem;
-}
-
-.system-list .menu-head.depth-3 {
-  padding-left: 20px;
-}
-
-.system-list .menu-head.depth-4 {
-  padding-left: 24px;
-}
-
-.system-list .menu-head.depth-5 {
-  padding-left: 28px;
-}
-
-.system-list .menu-head.depth-6 {
-  padding-left: 32px;
-}
-
-.system-list .list-span {
-  font-size: 1.2rem;
-  color: rgb(67, 55, 179);
-  font-weight: 700;
-}
-
-/* 초기 상태 안보이게 지정 */
-.menu-body {
-  display: block;
-}
-
-.menu-btn {
-  width: 2rem;
-  height: 2rem;
-  background: url(../img/arrow__bottom-bk.svg) no-repeat center;
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
-}
-
 /*
     기타 컴포넌트 CSS
 */
@@ -2238,7 +2059,6 @@ input[type=checkbox] {
   text-decoration: underline;
 }
 
-/* #gnb1 {position: relative;} */
 #gnb1 .sub__menu {
   left: 50%;
   transform: translateX(-50%);
@@ -2253,7 +2073,6 @@ input[type=checkbox] {
   z-index: 10;
   max-width: 100%;
   text-align: left;
-  /* border: 1px dashed blueviolet; */
 }
 
 #gnb1 .sub__menu::before {
@@ -2514,9 +2333,7 @@ input[type=checkbox] {
   padding-bottom: 1.8rem;
 }
 
-/*
-    푸터 CSS
-*/
+/* 푸터 CSS */
 .cs__center {
   position: relative;
   z-index: 0;
@@ -3459,9 +3276,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   margin: 0 1rem;
 }
 
-/*
-    서브 페이지 CSS
-*/
+/* 서브 페이지 CSS */
 label.mo_only {
   display: none;
 }
@@ -6640,19 +6455,7 @@ button.mo_only {
     white-space: nowrap;
   }
 }
-/*
-   서브 미디어 쿼리 CSS
-*/
-/* 노트북 소형~ 중형 1080px ~ 1440px */
-@media all and (min-width: 1080px) and (max-width: 1440px) {
-  .table__horizontal table tbody th th {
-    font-size: 1.3rem;
-  }
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.3rem;
-  }
-}
+/* 서브 미디어 쿼리 CSS */
 @media all and (min-width: 767px) and (max-width: 880px) {
   .table__vertical .align__cols {
     width: 12.38%;
@@ -6660,25 +6463,10 @@ button.mo_only {
   .long__th {
     width: 20%;
   }
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.2rem;
-  }
   .table__vertical table tr th:nth-child(1) {
     word-break: keep-all;
     white-space: nowrap;
     padding: 0 0.8rem;
-  }
-}
-/* pc 전환시까지 변환 유지 되어야 하는 영역 */
-@media all and (min-width: 767px) and (max-width: 1079px) {
-  .table__horizontal table tbody th th {
-    font-size: 1.3rem;
-  }
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.3rem;
-    line-height: 3rem;
   }
 }
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */

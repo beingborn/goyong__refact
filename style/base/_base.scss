@@ -75,7 +75,7 @@ body {
     overflow-x: hidden;
 }
 
-.inner { max-width: 128rem; width: 128rem; margin: 0px auto; }
+.inner { max-width: 128rem; width: 128rem; margin: 0px auto;}
 .right__icon__set .hamburger {display: none;}
 
   input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
@@ -94,16 +94,8 @@ select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-heigh
 .file__post {display: none;}
 
 
-// 수신 동의 및 여부 확인
-// .chk__area label {color: #000;}
-// .chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: #D8D8D8; border: 0.1rem solid #C6C6C6;}
-// .chk__area input[type="radio"]:not(:checked) + label {color: #D8D8D8;}
-
-.chk__area label {color: #000;}
-// .chk__area input[type="radio"]:not(:checked) { appearance: none; background-color: transparent; border: 0.1rem solid #000;}
-// .chk__area input[type="radio"]:not(:checked) + label {color: #000;}
-
-
+input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
+input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
 /* 라디오 버튼이 체크되지 않았을 때 */
 input[type="radio"].clicked:not(:checked) {
   appearance: none;
@@ -120,8 +112,6 @@ input[type="radio"].clicked:not(:checked) + label {
 
 
 
-// 페이지 제목
-.page__title {font-size: 4rem;}
 
 // 타이틀 영역 전체 적용
 .lnb__title h2{ font-size: 2.5rem; margin-bottom: 1.6rem; font-weight: 700;} 
@@ -129,8 +119,10 @@ input[type="radio"].clicked:not(:checked) + label {
 .flex__title { display: flex; align-items: center; justify-content: space-between;}
 .flex__title span {font-size: 1.6rem;}
 
+// 페이지 제목
+.page__title {font-size: 4rem;}
 
-input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
+
 br.onlyMo {display: none;}
 textarea {border: 0.1rem solid #ddd; width: 100%;}
 .blind {
@@ -187,7 +179,7 @@ height: 100%;
  
 
   /* 
-    상태 변경 클래스 네이밍 규칙
+    상태 변경 유틸리티 클래스 네이밍 규칙
 
     (a)--(b)-(c)
     
@@ -208,12 +200,9 @@ height: 100%;
   .txt--r {text-align: right; padding-right: 1rem;}
   .txt--l-p {text-align: left; padding-left: 1rem;}
   .txt--l-r {text-align: left; padding-left: 1rem;}
-
-  
   .txt--c-i { text-align: center!important; }
   .txt--l-i {text-align: left!important;}
   .txt--r-i {text-align: right!important;}
-
 
   /* 
     패딩 제어 i가 뒤에 붙을 시 important로 최우선순위 적용
@@ -265,8 +254,6 @@ height: 100%;
   .flex--column {flex-direction: column;}
   .flex--vertical {display: flex; flex-direction: column;}
 
-
-
   // 넓이 제어
   .width--10 {width: 10%;}
   .width--15 {width: 15%;}
@@ -275,12 +262,10 @@ height: 100%;
   .width--80 {width: 80%;}
   .width--100 {width: 100%;}
 
-
   // 높이 제어
   .min--h-4 {min-height: 4rem;}
   .height--100 {height: 100%;}
   .tb--height-find {height: 5.8rem;}
-
 
   // 디스플레이 제어
   .display--none {display: none;}
@@ -288,7 +273,6 @@ height: 100%;
   // 컬러 제어
   .bg--f9f9 {background-color: #F9F9FA;}
   .table--fixed {table-layout: fixed;}
-
 
   // 보더 제어
   .border--btm {border-bottom: 0.1rem solid #ddd;}
@@ -300,14 +284,10 @@ height: 100%;
   .btn--active { background-color: #003675; color: #fff;}
   .btn--disabled { background-color: #fff; color: #1d1d1d;}
 
-
-
   // 필수 입력 표시
 
   .must__write { position: relative;}
   .must__write::after {content: " *"; color: #fe5555; font-weight: bold; position: absolute; right: -1rem; }
-
-
 
   // overflow 관련
 
@@ -324,7 +304,6 @@ height: 100%;
 
 
   // 공통 모달 관련
-
   .modal__bg {
     position: absolute;
     top: 0;
@@ -351,17 +330,5 @@ height: 100%;
   .error-message {color: #E71825;}
 
 
-  // 페이지 레이아웃 관련
-
-  // 비밀번호 변경 페이지 및 첨부파일 변경페이지
-  /*
-    특정 html만 100vh에 맞추기 (임시)
-  */
-
-  // .full__body {min-height: 100vh;}
-  // .full__page__wrap {display: flex; flex-direction: column; height: 100%;}
-  // .full__page__wrap .full__page__body {overflow: auto; flex: 1 0 auto;}
-  // .full__page__wrap .header {flex: 0 0 auto;}
-  // .full__page__wrap footer {flex: 0 0 auto; margin-top: auto;}
 
 

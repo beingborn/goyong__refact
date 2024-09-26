@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>회계공시등록 > 가맹노조(산하조직) 관리</title>
-    <!-- css 영역 -->
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/default.css">
-    <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/korea__favicon.ico">
-    <!-- 로컬 스와이퍼 CSS -->
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
-    <!-- 로컬 jquery 스와이퍼 cdn -->
     <script src="js/jquery-3.7.1.js"></script>
+    
 </head>
 <body class="full__body">
     <!-- 스킵 네비개이션 -->
@@ -235,7 +231,6 @@
                             <input type="hidden" id="pageNo" name="pageNo" value="" />
                             <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
                             <input type="hidden" id="yearSel" name="yearSel" value="">
-
                             <div class="flex--box-c search__list">
                                 <label for="label" class="mo_only">검색항목</label>
                                 <div class="input__box">
@@ -243,7 +238,6 @@
                                     <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합 또는 산하조직 명을 입력하세요." value="">
                                     <button type="button" class="mo_only bg--blue-00 btn__control__u">조회</button>
                                 </div>
-
                                 <div class="upload__wrap">
                                     <form method="post" enctype="multipart/form-data">
                                         <div class="preview__flex">
@@ -251,7 +245,7 @@
                                                 <label for="label" class="mo_only width--100" style="margin-top: 2.4rem;">파일업로드</label>
                                                 <div class="preview flex--box-c pd--10-m mg--24-r">
                                                     <div><p>선택된 파일없음</p></div>
-                                                    <label class="btn__file__select--mo bg--transparent-00" for="profile_pics2"></label>
+                                                    <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
                                                 </div>
                                                 <label class="mg--24-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
                                                 <div>
@@ -553,7 +547,7 @@
                                 <caption>가맹노조 산하조직 모바일 테이블</caption>
                                 <tr>
                                     <th>
-                                        <span>
+                                        <span class="must__type">
                                             <label for="id">
                                                 노동조합명칭
                                                 <br>
@@ -563,7 +557,7 @@
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="전국항운노동조합연맹" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>
@@ -579,7 +573,7 @@
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="전국민주노동조합총연맹" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>
@@ -593,27 +587,27 @@
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="최*영" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span class="must__type">
+                                        <span>
                                             <label for="id">
-                                                설립연월일
+                                                사업자등록번호(고유번호)
                                             </label>
                                         </span>
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="12-123-12312" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span class="must__type">
+                                        <span>
                                             <label for="id">
                                                 조합원수
                                             </label>
@@ -621,7 +615,7 @@
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="650" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>
@@ -635,7 +629,21 @@
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="" id="example22222" class="width--100">
+                                            <input type="text" value="010-0000-0000" id="example22222" class="width--100">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>
+                                            <label for="id">
+                                                소재지
+                                            </label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input type="text" value="test" id="example22222" class="width--100">
                                         </div>
                                     </td>
                                 </tr>

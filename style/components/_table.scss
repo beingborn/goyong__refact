@@ -61,12 +61,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .calender__body {position: relative;}
 .calender__body .calender__icon {position: absolute; top: 50%; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; right: 1rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; }
 
-
-// row와 col 제목이 함께 있는 테이블 전용 스타일
-// .table__vertical .cross__table > tbody th {background-color : #EAF5F0}
-
-
-
 .table__template__radio tr {display: flex; border-bottom: 0.1rem solid #ddd;} 
 .table__template__radio th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 700;} 
 // .table__template__radio td {border-bottom: 1px solid #ddd;}
@@ -122,11 +116,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__information .first__td {width: 20.31%;}
 .table__information .second__td {width: 21.88%}
 
-
-
-
-
-
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
@@ -146,8 +135,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // thead를 포함하고 있는 가로형 테이블 (manage user)
 .table__horizontal__wrap.with__thead thead tr th {line-height: 5.8rem;}
 .table__information input[type="text"]{border: 0; width: 100%;}
-
-
 
 // checkbox__container == report
 // manage__report 조회 모달 체크 박스 
@@ -173,7 +160,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
 .table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
 .attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../img/file__select--mo.svg) no-repeat center; background-size: cover; }
-
 .table__horizontal__mo:not(.widthAutoTable) .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
 .table__horizontal__mo .sub__title {font-weight: 700;}
 .accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem; font-weight: 700 ;}
@@ -182,7 +168,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 
 
 // 조회결과 테이블 공통
-
 // td의 min-height 적용 이슈로 다음과 같이 적용
 .min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
 .text--r {justify-content: flex-end;}

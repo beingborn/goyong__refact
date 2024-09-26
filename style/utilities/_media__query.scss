@@ -27,9 +27,7 @@
 @media all and (min-width: 1080px) and (max-width: 1440px) {  
   // 공통
   .wrap .count__group .count {width: 32%;}
-  // .wrap .banner__btn {width: 102.4rem; }  
   .banner__btn .swiper-button-next, .banner__btn .swiper-button-prev { width: 4rem; height: 4rem; }
-  // .content .tab__wrap { width: 102.4rem;}
 
   // 메인 데이터 차트
   .main__echart .table colgroup col:nth-child(1){width: 25%;}
@@ -154,7 +152,6 @@
 // 모바일 세로 이상 ~ 노트북 중형까지
 @media all and (min-width: 360px) and (max-width: 1080px){
   .upload__manager .preview {min-width: auto; flex-grow: 1;}
-  // .upload__manager .file__select__container, .support__data .file__select__container {gap: 0;}
   .btn__file__select--mo {margin: 0 1rem;}
 }
 
@@ -222,9 +219,6 @@
     .sns__info { padding-top: 3.2rem; }
     .sns__info .icon__wrap { padding: 3.2rem 0; }
   }
-
-
-
 }
 
 /* 모바일 최소 사이즈 ~ 태블릿 세로 */
@@ -401,8 +395,6 @@
   .tab__4 .chart { width: 100%; }
   .tab__4__table { display: none; }
   .mo__tab__table { display: block;}
-
-
 
   // 회계공시 등록 페이지
   .public__register__wrap .form__table tr {flex-direction: column;}

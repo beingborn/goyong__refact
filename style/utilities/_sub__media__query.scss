@@ -1,53 +1,20 @@
-/*
-   서브 미디어 쿼리 CSS
-*/ 
-
-// pc 비활성화
-
-/* 노트북 소형~ 중형 1080px ~ 1440px */
-@media all and (min-width: 1080px) and (max-width: 1440px) {
-  .table__horizontal table tbody th th {font-size: 1.3rem;}
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.3rem;
-  }
-}
+/* 서브 미디어 쿼리 CSS */ 
 
 @media all and (min-width: 767px) and (max-width: 880px) {
   .table__vertical .align__cols {
     width: 12.38%;
   }
-
   .long__th  {
     width: 20%;
   }
-
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.2rem;
-  }
-
   .table__vertical table tr th:nth-child(1) {
     word-break: keep-all;
     white-space: nowrap;
     padding: 0 0.8rem;
   }
-
 }
 
-/* pc 전환시까지 변환 유지 되어야 하는 영역 */
-@media all and (min-width: 767px) and (max-width: 1079px) {
-  .table__horizontal table tbody th th {
-    font-size: 1.3rem;
-  }
 
-  .table__vertical table tbody td,
-  .table__vertical table thead th {
-    font-size: 1.3rem;
-    line-height: 3rem;
-  }
-
-}
 
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */
 @media all and (min-width: 480px) and (max-width: 766px) {
@@ -69,11 +36,9 @@
 
 /* 모바일 세로 (해상도 ~ 479px) 까지 */
 @media all and (max-width: 479px) {
-  // .sub1__1__wrap .content .tab__content {padding-top: 4rem;}
   #sub__wrap .content .visual__bg {height: 16.6rem;}
   #sub__wrap .content .visual__bg .visual__text h2 {font-size: 3.2rem;}
   #sub__wrap .content .visual__bg .visual__text p {font-size: 1.7rem;}
-  // white-space: nowrap; 
   #sub__wrap .content .visual__bg .visual__text {text-align: center;  left: 50%; transform: translateX(-50%); bottom: 3.8rem;
     h2 {
       margin-bottom: 2rem;
