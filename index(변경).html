@@ -418,53 +418,39 @@ $("#tableList tbody").on("click", "tr", function(e) {
         //     orient: "vertical",
         //     left: "left",
         // },
-  
-        
         series: [{
-            
             name: '항목',
             type: 'pie',
-
             // 큰 원의 반지름이 94, 작은 원의 반지름이 40인 도넛 그래프 해당 값을 통해 도넛 그래프를 만들 수 있다.
             radius: ['40', '94'], 
-            
-            
             label: {
-                show: true,
-                textStyle: {
-                    color: '#767676',
-                    lineHeight: 24,
-                    align: 'center'
-                },
-                position: 'center',
-                // align: 'center',  // 리치 텍스트의 중앙 정렬
-                fontSize: 18,
-                formatter: function(params){
-                return `자산\n {value|${e}}`    
-                },
-
-            
-                
-                rich: {
-                    value: {
-                    
-                        fontSize: 18,
-                        fontWeight:'bold',
-                        align: 'center',  // 리치 텍스트의 중앙 정렬
-                        padding: [0,4,0,0]
-                    }
-                }
-                
-
-                // formatter: function(d) {
-                // 	if(d.value == 0) return '';
-                // 	return gfnAddCommas(d.value);
-                // }
+            show: true,
+            textStyle: {
+            color: '#767676',
+            lineHeight: 24,
+            align: 'center'
             },
+            position: 'center',
+            // align: 'center',  // 리치 텍스트의 중앙 정렬
+            fontSize: 18,
+            formatter: function(params){
+            return `자산\n {value|${e}}`    
+        },
 
-
+            rich: {
+            value: {
+            fontSize: 18,
+            fontWeight:'bold',
+            align: 'center',  // 리치 텍스트의 중앙 정렬
+            padding: [0,4,0,0]
+            }
+            }
+            // formatter: function(d) {
+            // 	if(d.value == 0) return '';
+            // 	return gfnAddCommas(d.value);
+            // }
+            },
             emphasis: {
-
             //     label : {
             //         show: true,
             //         fontSize: 18,
@@ -473,26 +459,26 @@ $("#tableList tbody").on("click", "tr", function(e) {
             //     }
         
             //     // formatter: `customized {a}\n {b}: {c}` 
-                itemStyle: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
+            itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
             },
             data: [{
-                    value: d,
-                    name: '자산',
-                    itemStyle: {
-                        color: '#A4D594'
-                    }
-                },
-                {
-                    value: e,
-                    name: '부채',
-                    itemStyle: {
-                        color: '#FAD280'
-                    }
-                }
+            value: d,
+            name: '자산',
+            itemStyle: {
+            color: '#A4D594'
+            }
+            },
+            {
+            value: e,
+            name: '부채',
+            itemStyle: {
+            color: '#FAD280'
+            }
+            }
             ]
         }]
     };
@@ -571,16 +557,12 @@ $("#tableList tbody").on("click", "tr", function(e) {
 
     var barChart = echarts.init(document.querySelector("#barChart"));
     barChart.setOption(barChartOption);
-
-
-
     $("#tableList tbody tr").removeClass('on');
     $(this).addClass('on');
 });
 
 
 fn_tblClick();
-
 setInterval(function() {
     fn_tblClickInterval();
 }, 10000);
@@ -591,8 +573,7 @@ $("#popup .float").on("click", function(event) {
 });
 });
 
-function fn_tblClick() {
-    console.log("실행됌")
+function fn_tblClick(){
 $("#tableList tbody tr:first").click();
 }
 

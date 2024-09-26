@@ -109,8 +109,6 @@ $(document).ready(function() {
   // 스크롤 이벤트 핸들러
   submenuWrap.scroll(function() {
     if (isScrolling) return;
-    console.log(isScrolling)
-
     let submenuOffsets = [];
     $('.submenu__wrap .submenu').each(function(index) {
         var offsetTop = $(this).position().top + submenuWrap.scrollTop(); // submenu의 위치
@@ -147,25 +145,6 @@ $("#gnb2 .menu__wrap a").click(function (event) {
 });
 });
 
-
-
-
-
-// // 메뉴 항목 클릭 이벤트
-// $('.menu__wrap a').click(function(event) {
-
-// isScrolling = true;
-
-
-
-// // isScrolling = false;
-// });
-
-
-
-
-
-
 // 모바일 GNB 스크롤 값 바인딩
   let lastChild = document.querySelector('.gnb__body .submenu__wrap > ul:last-child');
   let wholeHeight = document.querySelector('#gnb2 .submenu__wrap').scrollHeight;
@@ -174,9 +153,6 @@ $("#gnb2 .menu__wrap a").click(function (event) {
   if (lastChild) {
       lastChild.style.paddingBottom = difference + 'px';  
   }
-
-
-
 
 // 모달 닫기 이벤트 핸들러
 $(".modal__close button").click(function () {
@@ -244,7 +220,6 @@ $(document).ready(function () {
   });
   $(".modal__hide").click(function () {
     const targetModal = $(this).closest(".modal");
-    console.log(targetModal);
     targetModal.hide();
     $(".modal__bg").hide();
   });
