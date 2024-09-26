@@ -17,20 +17,20 @@ $(document).ready(function () {
 
     if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
       // 스크롤을 내릴 때 헤더를 숨김 (단 스크롤이 헤더 높이보다 높을 때만)
-
-      $(".header")
-        .css("transform", "translateY(-100%)")
-        .removeClass("header__fixed");
+      $('.header > .inner').css("transform", "translateY(-100%)")
+      $(".header").removeClass("header__fixed");
     } else if (scrollTop < lastScrollTop || scrollTop <= headerHeight) {
-      // 스크롤을 올릴 때 헤더를 고정
-      $(".header").css("transform", "translateY(0)").addClass("header__fixed");
+      // .css("transform", "translateY(0)")
+      $(".header").addClass("header__fixed");       // 스크롤을 올릴 때 헤더를 고정
+      $('.header > .inner').css("transform", "translateY(0)")
     }
 
     if (scrollTop <= headerHeight) {
       // 단 스크롤 높이 값이 headerHeight값보다 작아진다면 relative로 다시 전환하기
-      $(".header")
-        .css("transform", "translateY(0%)")
-        .removeClass("header__fixed");
+      // .css("transform", "translateY(0%)")
+      $(".header").removeClass("header__fixed");
+      $('.header > .inner').css("transform", "translateY(0)")
+
     }
 
     lastScrollTop = scrollTop;
@@ -220,6 +220,7 @@ $(document).ready(function () {
   });
   $(".modal__hide").click(function () {
     const targetModal = $(this).closest(".modal");
+
     targetModal.hide();
     $(".modal__bg").hide();
   });

@@ -2018,7 +2018,6 @@ input[type=checkbox] {
   left: 0;
   top: 0;
   width: 100%;
-  transform: translateY(0);
 }
 
 .top__banner {
