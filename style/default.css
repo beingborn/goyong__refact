@@ -2018,6 +2018,7 @@ input[type=checkbox] {
   left: 0;
   top: 0;
   width: 100%;
+  transition: transform ease 0.4s 0.01s;
 }
 
 .top__banner {
@@ -4700,7 +4701,7 @@ button.mo_only {
   display: inline-block;
   width: 1.6rem;
   height: 2.2rem;
-  background: url(../../../img/arrow__right-bk.svg) no-repeat center;
+  background: url(../img/arrow__right-bk.svg) no-repeat center;
   background-size: cover;
 }
 
@@ -6595,7 +6596,6 @@ button.mo_only {
     padding-bottom: 3.6rem;
   }
   .public__register__wrap .consent__chk td:nth-of-type(2) {
-    padding-top: 3.6rem;
     padding-bottom: 3.6rem;
   }
   .public__register__wrap .es__date td {

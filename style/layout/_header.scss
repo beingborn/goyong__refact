@@ -13,13 +13,12 @@
 .header img {max-width: 100%;}
     
 
-
 .header__fixed {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-
+    transition: transform ease 0.4s 0.01s;
 }
 
 .top__banner {

@@ -131,7 +131,7 @@
   }
 
 // 하위 항목 표시
-.child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../../../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
+.child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
 .mo__column .sub__element td {display: flex; align-items: center;}
 .mo__column .sub__element td > span {display: flex; align-items: center;}
 .mo__column .sub__element td::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}

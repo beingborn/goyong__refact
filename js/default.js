@@ -1,13 +1,4 @@
-/**
- * 스크롤 이벤트 감지해서 헤더 고정
- * or 숨기기
- *
- * 1. 윈도우 스크롤 값 저장
- * 2. 스크롤 값이 초기값 보다 커진다 => 스크롤을 내린다 true , headerHeight 보다 더 커졌을 때 header fixed
- * 3. 그 반대도 똑같이 진행
- * 4. 단 스크롤 높이 값이 헤더 높이 보다 작아진다면 다시 position relative 로 전환
- */
-
+/* 스크롤 이벤트 감지해서 헤더 고정 or 숨기기 */
 $(document).ready(function () {
   let lastScrollTop = 0;
 
@@ -16,36 +7,20 @@ $(document).ready(function () {
     let headerHeight = $(".header").outerHeight();
 
     if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
-      // 스크롤을 내릴 때 헤더를 숨김 (단 스크롤이 헤더 높이보다 높을 때만)
-      $('.header > .inner').css("transform", "translateY(-100%)")
-      $(".header").removeClass("header__fixed");
+      $(".header").removeClass("header__fixed"); 
     } else if (scrollTop < lastScrollTop || scrollTop <= headerHeight) {
-      // .css("transform", "translateY(0)")
-      $(".header").addClass("header__fixed");       // 스크롤을 올릴 때 헤더를 고정
-      $('.header > .inner').css("transform", "translateY(0)")
+      $(".header").addClass("header__fixed");  // 스크롤을 올릴 때 헤더를 고정
     }
-
     if (scrollTop <= headerHeight) {
-      // 단 스크롤 높이 값이 headerHeight값보다 작아진다면 relative로 다시 전환하기
-      // .css("transform", "translateY(0%)")
+      // 단 스크롤 높이 값이 headerHeight값보다 작아진다면 relative로 다시 전환하기 (최상단 애니메이션 막기)
       $(".header").removeClass("header__fixed");
-      $('.header > .inner').css("transform", "translateY(0)")
-
     }
-
     lastScrollTop = scrollTop;
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 스크롤이 0일 때 음수로 가지 않게 함
   });
 });
 
-/**
- * 헤더 영역 토글 함수
- *
- *
- * 1. active 값에 따라 펼치기
- *
- */
-
+/** 헤더 영역 토글 함수 active 값에 따라 펼치기 */
 $(document).ready(function () {
   const gnbTop__Menu = $("#gnb1 > .top__menu > li.plus > a");
   const gnbSub__Menu = $("#gnb1 .sub__menu > ul > li > a");
@@ -58,7 +33,6 @@ $(document).ready(function () {
 
     if (isItOpen) {
       gnbOpenMenu.removeClass("active");
-
       $(".gnb__bg").hide();
     } else {
       gnbTop__Menu.parent().removeClass("active");
@@ -88,21 +62,13 @@ $(document).ready(function () {
 });
 
 
-
-
 // radio 체크 표시
 $('.radio__wrap input[type="radio"]').eq(0).first().prop("checked", true);
 
+
+// 모바일 GNB 토글 및 슬라이드 애니메이션
 let submenuWrap = $('#gnb2 .submenu__wrap');
 let submenuUl = $('.submenu__wrap .submenu');
-
-
-
-// 스크롤 시 
-// ul들 요소 위치를 계산하고 
-// 상단 스크롤 값이 각각의 offset보다 커질 시 active 클래스를 적용 시킨다.
-// submenu의 scrollTop값이 해당 위치에 탑 값에 도달 했을 때. acitve 시킨다. 
-// 올라올 때도 마찬가지
 
 $(document).ready(function() {
   let isScrolling = false;
@@ -124,25 +90,22 @@ $(document).ready(function() {
               $("#gnb2 .menu__wrap a").eq(index).addClass("active");
           }
       });
-
-
   });
 
-  
 // 모바일 GNB 이벤트
 $("#gnb2 .menu__wrap a").eq(0).addClass("active");
-$("#gnb2 .menu__wrap a").click(function (event) {
-  isScrolling = true;
-  event.preventDefault();
-  var target = $(this).data('target');
-  var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
+  $("#gnb2 .menu__wrap a").click(function (event) {
+    isScrolling = true;
+    event.preventDefault();
+    var target = $(this).data('target');
+    var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
 
-  // submenuWrap 안에서 부드럽게 스크롤 이동
-  submenuWrap.animate({ scrollTop: targetOffset });
-  $("#gnb2 .menu__wrap a").removeClass("active");
-  $(this).addClass("active");
-  setTimeout(function(){isScrolling = false;}, 500);
-});
+    // submenuWrap 안에서 부드럽게 스크롤 이동
+    submenuWrap.animate({ scrollTop: targetOffset });
+    $("#gnb2 .menu__wrap a").removeClass("active");
+    $(this).addClass("active");
+    setTimeout(function(){isScrolling = false;}, 500);
+  });
 });
 
 // 모바일 GNB 스크롤 값 바인딩
@@ -189,27 +152,10 @@ $(document).ready(function () {
   tablePagination.eq(0).addClass("active");
 });
 
-/**
- *  table 버튼 클릭 시
- *  active class를 토글하여
- *  강조 색상을 지정 (css에 따로 지정)
- *  모든 테이블 페이지 네이션에 적용
- */
-
-$(document).ready(function () {
-  let tablePagination = $(".pagination .page-link");
-  tablePagination.click(function (e) {
-    e.preventDefault(); // 링크 기본 동작 방지
-    $(this).addClass("active");
-    tablePagination.not($(this)).removeClass("active");
-  });
-  tablePagination.eq(0).addClass("active");
-});
-
+// 모달 open
 $(document).ready(function () {
   setModalWidth();
   $("[data-target]").click(function () {
-    // 모달 열기 이벤트 핸들러
     const targetModal = $(this).data("target");
     setModalWidth(targetModal);
     $(targetModal).show();
@@ -249,66 +195,59 @@ $(".btn__upload").click(function (e) {
   e.preventDefault();
 });
 
-        // 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 바꿈 나중 회원가입 페이지등 많을 것을 대비해 
-        $(document).ready(function(){                      
-          $('.secret__Check').each(function(){
-              const pwInput = $(this).find('.password__input')
-              const showButton = $(this).find('.icon__pw-visible')
-              const showIcon = $(this).find('.show__icon')
-              showButton.on('click', function() {
-              const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
-              pwInput.attr('type', type);
-              const iconSrc = type === 'password' ? 'img/icon__see.svg' : 'img/icon__see-visible.svg';
-              showIcon.attr('src', iconSrc);
-          });
-          })   
-      })
+// 비밀번호 숨기기 보이기 코드, 버튼 클릭 시. text 박스로 변경
+$(document).ready(function(){                      
+$('.secret__Check').each(function(){
+      const pwInput = $(this).find('.password__input')
+      const showButton = $(this).find('.icon__pw-visible')
+      const showIcon = $(this).find('.show__icon')
+      showButton.on('click', function() {
+      const type = pwInput.attr('type') === 'password' ? 'text' : 'password';
+      pwInput.attr('type', type);
+      const iconSrc = type === 'password' ? 'img/icon__see.svg' : 'img/icon__see-visible.svg';
+      showIcon.attr('src', iconSrc);
+    });
+  })   
+})
 
+// 노동조합 규약명 추가 및 삭제 함수
+$(document).ready(function () {
+  $(".form__body").on("click", ".btn__add", function () {
+    const template = document.getElementById("row-template");
+    const newRow = template.content.cloneNode(true);
+    const fileIndex = `file_${Date.now()}`;
+    const newFileInput = newRow.querySelector(".file__post");
+    newFileInput.id = `profile_pics${fileIndex}`;
+    newRow.querySelector(".btn__file__select").setAttribute("for", `profile_pics${fileIndex}`);
+    newRow.querySelector(".btn__file__select--mo").setAttribute("for", `profile_pics${fileIndex}`);
+    $(".form__body").append(newRow); // 새로운 행 추가
+    });
 
-      $(document).ready(function () {
-        $(".form__body").on("click", ".btn__add", function () {
-          const template = document.getElementById("row-template");
-          const newRow = template.content.cloneNode(true);
-          const fileIndex = `file_${Date.now()}`;
-          const newFileInput = newRow.querySelector(".file__post");
-          newFileInput.id = `profile_pics${fileIndex}`;
-          newRow
-            .querySelector(".btn__file__select")
-            .setAttribute("for", `profile_pics${fileIndex}`);
-          newRow
-            .querySelector(".btn__file__select--mo")
-            .setAttribute("for", `profile_pics${fileIndex}`);
-          $(".form__body").append(newRow); // 새로운 행 추가
-        });
+    $(".form__body").on("click", ".btn__remove", function () {
+    $(this).closest(".form__row").remove();
+    });
+    });
 
-        $(".form__body").on("click", ".btn__remove", function () {
-            $(this).closest(".form__row").remove();
-          });
-      });
-
-      $(document).ready(function () {
-        let preview = $(".preview");
-        // 파일명 표시 함수
-        function displayFileNames(event) {
-          let currentInput = $(event.target);
-          let previewBox = currentInput.siblings(".preview");
-          previewBox.empty();
-          const currentFile = currentInput[0].files;
-          if (currentFile.length === 0) {
-            const para =
-              $("<span>").text("아무 파일도 입력되지 않았어요");
-            previewBox.append(para);
-          } else {
-            const fileList = $("<div>");
-            previewBox.append(fileList);
-            for (const file of currentFile) {
-              const listItem = $("<p>")
-                .text(file.name)
-                .addClass("upload__file__name");
-              fileList.append(listItem);
-            }
-          }
-        }
+  // 파일명 함수
+  $(document).ready(function () {
+    let preview = $(".preview");
+    function displayFileNames(event) {
+    let currentInput = $(event.target);
+    let previewBox = currentInput.siblings(".preview");
+    previewBox.empty();
+    const currentFile = currentInput[0].files;
+    if (currentFile.length === 0) {
+    const para = $("<span>").text("아무 파일도 입력되지 않았어요");
+    previewBox.append(para);
+    } else {
+    const fileList = $("<div>");
+    previewBox.append(fileList);
+    for (const file of currentFile) {
+    const listItem = $("<p>").text(file.name).addClass("upload__file__name");
+    fileList.append(listItem);
+    }
+    }
+    }
       
-        $(document).on('change', '.file__post', displayFileNames)
-      });
+    $(document).on('change', '.file__post', displayFileNames)
+    });

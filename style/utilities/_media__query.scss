@@ -259,8 +259,6 @@
 }
 
 @media all and (max-width: 1080px){
-
-
   .table__horizontal__ex th {min-width: 15rem; max-width: 15rem;}
 
   // 회계공시시스템이란
@@ -411,7 +409,7 @@
   .public__register__wrap .form__table td {margin-bottom: 1.6rem;}
   .public__register__wrap .form__table tr th {width:100%;max-width: none; padding-left: 0;}
   .public__register__wrap .su__operior {padding-top: 3.6rem; padding-bottom: 3.6rem;}
-  .public__register__wrap .consent__chk td:nth-of-type(2) {padding-top: 3.6rem; padding-bottom: 3.6rem;}
+  .public__register__wrap .consent__chk td:nth-of-type(2) {padding-bottom: 3.6rem;}
   .public__register__wrap .es__date td {padding-bottom: 3.6rem; width: auto;}
   // 상급단체의 명칭 세로 정렬 
   .su__operior .td__container {flex-direction: column; width: 100%;}
