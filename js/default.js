@@ -138,16 +138,13 @@ $("#gnb2 .menu__wrap a").click(function (event) {
   event.preventDefault();
   var target = $(this).data('target');
   var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
+
   // submenuWrap 안에서 부드럽게 스크롤 이동
   submenuWrap.animate({ scrollTop: targetOffset });
   $("#gnb2 .menu__wrap a").removeClass("active");
   $(this).addClass("active");
-  setTimeout(function(){
-  isScrolling = false;
-  }, 500);
+  setTimeout(function(){isScrolling = false;}, 500);
 });
-
-
 });
 
 
@@ -290,3 +287,52 @@ $(".btn__upload").click(function (e) {
           });
           })   
       })
+
+
+      $(document).ready(function () {
+        $(".form__body").on("click", ".btn__add", function () {
+          const template = document.getElementById("row-template");
+          const newRow = template.content.cloneNode(true);
+          const fileIndex = `file_${Date.now()}`;
+          const newFileInput = newRow.querySelector(".file__post");
+          newFileInput.id = `profile_pics${fileIndex}`;
+          newRow
+            .querySelector(".btn__file__select")
+            .setAttribute("for", `profile_pics${fileIndex}`);
+          newRow
+            .querySelector(".btn__file__select--mo")
+            .setAttribute("for", `profile_pics${fileIndex}`);
+          $(".form__body").append(newRow); // 새로운 행 추가
+        });
+
+        $(".form__body").on("click", ".btn__remove", function () {
+            $(this).closest(".form__row").remove();
+          });
+      });
+
+      $(document).ready(function () {
+        let preview = $(".preview");
+        // 파일명 표시 함수
+        function displayFileNames(event) {
+          let currentInput = $(event.target);
+          let previewBox = currentInput.siblings(".preview");
+          previewBox.empty();
+          const currentFile = currentInput[0].files;
+          if (currentFile.length === 0) {
+            const para =
+              $("<span>").text("아무 파일도 입력되지 않았어요");
+            previewBox.append(para);
+          } else {
+            const fileList = $("<div>");
+            previewBox.append(fileList);
+            for (const file of currentFile) {
+              const listItem = $("<p>")
+                .text(file.name)
+                .addClass("upload__file__name");
+              fileList.append(listItem);
+            }
+          }
+        }
+      
+        $(document).on('change', '.file__post', displayFileNames)
+      });
