@@ -286,7 +286,7 @@ let dataOpen = $(".data--open");
 $(document).ready(function () {
   dataOpen.click(function () {
     var currentSlide = $(this).next(".mo__slide");
-    $(this).next(".mo__slide").stop().slideToggle();
+    $(this).next(".mo__slide").slideToggle();
     $(this).toggleClass("on").siblings().removeClass("on");
     dataOpen.not($(this)).removeClass('on');
     $(".mo__slide").not(currentSlide).slideUp();

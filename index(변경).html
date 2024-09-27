@@ -47,11 +47,11 @@
 						<!-- <ul id="cnt" class="clear">
 							<li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
                         <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
-                        <span class="user__name">
-							<img src="img/icon__user.svg" alt="유저 아이콘">
-						    사용자님
-						</span>
-                        <a href="#" class="logout">
+                        <a href="#" class="user__name">
+                            <img src="img/icon__user.svg" alt="유저 아이콘">
+                            <span>사용자님</span>
+                        </a>
+                            <a href="#" class="logout">
                             <img src="img/login__icon.svg" alt="로그아웃 아이콘">
                             <span>로그아웃</span>
                         </a>
@@ -477,7 +477,7 @@
                         <div class="footer__flex">
                             <div class="footer__info">
                                 <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
-                                <p class="copyright">@ The Government of the Republic of Korea. All rights reserved</p>
+                                <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
@@ -490,7 +490,6 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/default.js"></script>
     <script>
-
     $(document).ready(function() {
     //테이블 tr 선택 차트출력
     $("#tableList tbody").on("click", "tr", function(e) {

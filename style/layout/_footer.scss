@@ -1,6 +1,8 @@
 /* 푸터 CSS */
 
 
+footer .inner {height: 20rem;}
+ 
 .cs__center {
     position: relative;
     z-index: 0;
@@ -157,7 +159,7 @@ footer {
 
     &:nth-child(1) {
         margin-bottom: 0.4rem;
-        line-height: 1.5;
+        // line-height: 1.5;
     }
 
     &:nth-child(2){margin-bottom: 0.4rem;}

@@ -39,7 +39,10 @@
   #sub__wrap .content .visual__bg {height: 16.6rem;}
   #sub__wrap .content .visual__bg .visual__text h2 {font-size: 3.2rem;}
   #sub__wrap .content .visual__bg .visual__text p {font-size: 1.7rem;}
-  #sub__wrap .content .visual__bg .visual__text {text-align: center;  left: 50%; transform: translateX(-50%); bottom: 3.8rem;
+  #sub__wrap .content .visual__bg .visual__text {
+    width: calc(100% - 2rem);
+    text-align: center;  left: 50%; top: 50%; transform: translate(-50%, -50%); bottom: auto;
+
     h2 {
       margin-bottom: 2rem;
     }
