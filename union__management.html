@@ -216,12 +216,12 @@
                         </div>
                     </div>
                     <div class="function__group">
-                        <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
-                        <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
-                        <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
-                        <button type="button" id="" class="btn__control__u bg--blue-02" onclick="fn_search();">저장</button>
-                        <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
-                        <button type="button" id="" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
+                        <button type="button" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
+                        <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
+                        <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
+                        <button type="button" class="btn__control__u bg--blue-02" onclick="fn_search();">저장</button>
+                        <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">삭제</button>
+                        <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">전체삭제</button>
                     </div>
                 </div>
                 <!-- 검색 폼 시작 -->
@@ -239,22 +239,20 @@
                                     <button type="button" class="mo_only bg--blue-00 btn__control__u">조회</button>
                                 </div>
                                 <div class="upload__wrap">
-                                    <form method="post" enctype="multipart/form-data">
-                                        <div class="preview__flex">
-                                            <div class="file__select__container flex--box-c upload__flex">
-                                                <label for="label" class="mo_only width--100" style="margin-top: 2.4rem;">파일업로드</label>
-                                                <div class="preview flex--box-c pd--10-m mg--24-r">
-                                                    <div><p>선택된 파일없음</p></div>
-                                                    <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
-                                                </div>
-                                                <label class="mg--24-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
-                                                <div>
-                                                    <button class="btn__upload bg--blue-00">업로드</button>
-                                                </div>
-                                                <input type="file" id="profile_pic" name="profile_pic" class="file__post" style="opacity: 0; width: 0px;">
+                                    <div class="preview__flex">
+                                        <div class="file__select__container flex--box-c upload__flex">
+                                            <label for="label" class="mo_only width--100" style="margin-top: 2.4rem;">파일업로드</label>
+                                            <div class="preview flex--box-c pd--10-m mg--24-r">
+                                                <div><p>선택된 파일없음</p></div>
+                                                <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
                                             </div>
+                                            <label class="mg--24-r btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+                                            <div>
+                                                <button class="btn__upload bg--blue-00">업로드</button>
+                                            </div>
+                                            <input type="file" id="profile_pic" name="profile_pic" class="file__post" style="opacity: 0; width: 0px;">
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -270,9 +268,7 @@
                     <div class="accn__result check__result" id="main__content">
                         <div class="tab__detail table__vertical w__table" style="margin-bottom: 6.4rem;">
                             <table class="border-top-large">
-                                <caption>
-                                    자산 및 부채현황 {구분, 자산}
-                                </caption>
+                                <caption>가맹노조(산하조직)관리 조회결과</caption>
                                 <colgroup>
                                     <col>
                                     <col>
@@ -283,88 +279,38 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col">
-                                            <div class="min__h__box text--c">번호</div>
-                                        </th>
-                                        <th>
-                                            <div class="min__h__box text--c">노동조합(산하조직)명</div>
-                                        </th>
-                                        <th class="ex">
-                                            <div class="min__h__box text--c">총연합단체</div>
-                                        </th>
-                                        <th>
-                                            <div class="min__h__box text--c">연합단체</div>
-                                        </th>
-                                        <th>
-                                            <div class="min__h__box text--c">단위노동조합</div>
-                                        </th>
-                                        <th>
-                                            <div class="min__h__box text--c">기간</div>
-                                        </th>
-
-
+                                        <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                                        <th><div class="min__h__box text--c">노동조합(산하조직)명</div></th>
+                                        <th><div class="min__h__box text--c">총연합단체</div></th>
+                                        <th><div class="min__h__box text--c">연합단체</div></th>
+                                        <th><div class="min__h__box text--c">단위노동조합</div></th>
+                                        <th><div class="min__h__box text--c">기간</div></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">
-                                            <div class="min__h__box text--c">1</div>
-                                        </th>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">한국노총</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">섬유노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">2021-12-12</div>
-                                        </td>
+                                        <td><div class="min__h__box text--c">1</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">한국노총</div></td>
+                                        <td><div class="min__h__box text--c">섬유노동조합</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">2021-12-12</div></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">
-                                            <div class="min__h__box text--c">1</div>
-                                        </th>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">한국노총</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">섬유노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">2021-12-12</div>
-                                        </td>
+                                        <td><div class="min__h__box text--c">1</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">한국노총</div></td>
+                                        <td><div class="min__h__box text--c">섬유노동조합</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">2021-12-12</div></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">
-                                            <div class="min__h__box text--c">1</div>
-                                        </th>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">한국노총</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">섬유노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">도레이노동조합</div>
-                                        </td>
-                                        <td>
-                                            <div class="min__h__box text--c">2021-12-12</div>
-                                        </td>
+                                        <td><div class="min__h__box text--c">1</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">한국노총</div></td>
+                                        <td><div class="min__h__box text--c">섬유노동조합</div></td>
+                                        <td><div class="min__h__box text--c">도레이노동조합</div></td>
+                                        <td><div class="min__h__box text--c">2021-12-12</div></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -373,37 +319,15 @@
                         <div class="m__table">
                             <div class="table__horizontal__mo widthAutoTable">
                                 <table class="border-top-large">
-                                    <caption>가맹노조 산하조직 결과 테이블</caption>
-                                    <colgroup>
-                                        <col>
-                                        <col>
-                                    </colgroup>
+                                    <caption>가맹노조 산하조직 결과 모바일 테이블</caption>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <span class="sub__title">노동조합(산하조직)명칭</span>
-                                                <span>전국 공무원 노동조합</span>
-                                            </td>
-                                            <td>
-                                                <span class="sub__title">노동조합(산하조직)형태</span>
-                                                <span>민주노총</span>
-                                            </td>
-                                            <td>
-                                                <span class="sub__title">대표자</span>
-                                                <span>김*윤</span>
-                                            </td>
-                                            <td>
-                                                <span class="sub__title">사업자등록번호(고유번호)</span>
-                                                <span>12-123-12312</span>
-                                            </td>
-                                            <td>
-                                              <span class="sub__title">조합원수</span>
-                                              <span>650</span>
-                                            </td>
-                                            <td>
-                                              <span class="sub__title">유선연락처</span>
-                                              <span>010-1121-1212</span>
-                                            </td>
+                                            <td><span class="sub__title">노동조합(산하조직)명칭</span><span>전국 공무원 노동조합</span></td>
+                                            <td><span class="sub__title">노동조합(산하조직)형태</span><span>민주노총</span></td>
+                                            <td><span class="sub__title">대표자</span><span>김*윤</span></td>
+                                            <td><span class="sub__title">사업자등록번호(고유번호)</span><span>12-123-12312</span></td>
+                                            <td><span class="sub__title">조합원수</span><span>650</span></td>
+                                            <td><span class="sub__title">유선연락처</span><span>010-1121-1212</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -459,59 +383,25 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">
-                                        <label for="examples9">
-                                            <span class="must__type">
-                                                노동조합명칭(산하조직) 명칭
-                                            </span>
-                                        </label>
+                                        <label for="examples9" class="must__type">노동조합명칭(산하조직) 명칭</label>
                                     </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" id="examples9" value="전국항운노동조합연맹" readonly="">
-                                        </div>
-                                    </td>
-                                    <th scope="row">
-                                        <label for="examples10">
-                                            노동조합 산하조직 형태
-                                        </label>
-                                    </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" id="examples10" value="" readonly="">
-                                        </div>
-                                    </td>
+                                    <td><div class="td__container"><input type="text" id="examples9" value="전국항운노동조합연맹" readonly=""></div></td>
+                                    <th scope="row"><label for="examples10">노동조합 산하조직 형태</label></th>
+                                    <td><div class="td__container"><input type="text" id="examples10" value="" readonly=""></div></td>
                                 </tr>
-
                                 <tr>
                                     <th scope="row">
-                                        <label for="example22">
-                                            <span class="must__type">대표자</span>
-                                        </label>
+                                        <label for="example22" class="must__type">대표자</label>
                                     </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" id="example22" value="최*영" readonly="">
-                                        </div>
-                                    </td>
-                                    <th scope="row">
-                                        <label for="examples11">사업자등록번호(고유번호)</label>
-                                    </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" id="examples11" value="12-12312-121" readonly="">
-                                        </div>
-                                    </td>
+                                    <td><div class="td__container"><input type="text" id="example22" value="최*영" readonly=""></div></td>
+                                    <th scope="row"><label for="examples11">사업자등록번호(고유번호)</label></th>
+                                    <td><div class="td__container"><input type="text" id="examples11" value="12-12312-121" readonly=""></div></td>
                                 </tr>
-
                                 <tr>
                                     <th scope="row">
                                         <label for="examples12">조합원 수</label>
                                     </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" value="2" id="examples12" readonly="">
-                                        </div>
-                                    </td>
+                                    <td><div class="td__container"><input type="text" value="2" id="examples12" readonly=""></div></td>
                                     <th scope="col">
                                         <label for="examples13">
                                             <span class="must__type">
@@ -519,22 +409,13 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" value="" id="examples13">
-                                        </div>
-                                    </td>
+                                    <td><div class="td__container"><input type="text" value="" id="examples13"></div></td>
                                 </tr>
-
                                 <tr>
                                     <th scope="row">
                                         <label for="examples14">소재지</label>
                                     </th>
-                                    <td class="flex--box-c">
-                                        <div class="td__container flex--grow-100">
-                                            <input type="text" value="test" id="examples14" readonly="">
-                                        </div>
-                                    </td>
+                                    <td colspan="3" class="flex--box-c"><div class="td__container"><input type="text" value="test" id="examples14" readonly=""></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -546,113 +427,75 @@
                                 <caption>가맹노조 산하조직 모바일 테이블</caption>
                                 <tr>
                                     <th>
-                                        <span class="must__type">
-                                            <label for="id">
-                                                노동조합명칭
-                                                <br>
-                                                (산하조직)명칭
-                                            </label>
-                                        </span>
+                                        <label for="id" class="must__type">노동조합명칭<br>(산하조직)명칭</label>
                                     </th>
                                     <td>
-                                        <div class="td__container">
-                                            <input type="text" value="전국항운노동조합연맹" id="example22222" class="width--100">
-                                        </div>
+                                        <div class="td__container"><input type="text" value="전국항운노동조합연맹" id="example22222"></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
                                         <span>
-                                            <label for="id">
-                                                노동조합
-                                                <br>
-                                                (산하조직)형태
-                                            </label>
+                                            <label for="id" class="must__type">노동조합<br>(산하조직)형태</label>
                                         </span>
                                     </th>
                                     <td>
+                                        <div class="td__container"><input type="text" value="전국민주노동조합총연맹" id="example22222"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="id" class="must__type">대표자</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container"><input type="text" value="최*영" id="example22222"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="id">사업자등록번호(고유번호)</label>
+                                    </th>
+                                    <td>
                                         <div class="td__container">
-                                            <input type="text" value="전국민주노동조합총연맹" id="example22222" class="width--100">
+                                            <input type="text" value="12-123-12312" id="example22222">
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span class="must__type">
-                                            <label for="id">
-                                                대표자
-                                            </label>
-                                        </span>
+                                        <label for="id">조합원수</label>
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="최*영" id="example22222" class="width--100">
+                                            <input type="text" value="650" id="example22222">
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span>
-                                            <label for="id">
-                                                사업자등록번호(고유번호)
-                                            </label>
-                                        </span>
+                                        <label for="id" class="must__type">유선연락처</label>
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="12-123-12312" id="example22222" class="width--100">
+                                            <input type="text" value="010-0000-0000" id="example22222">
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span>
-                                            <label for="id">
-                                                조합원수
-                                            </label>
-                                        </span>
+                                        <label for="id">소재지</label>
                                     </th>
                                     <td>
                                         <div class="td__container">
-                                            <input type="text" value="650" id="example22222" class="width--100">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span class="must__type">
-                                            <label for="id">
-                                                유선연락처
-                                            </label>
-                                        </span>
-                                    </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" value="010-0000-0000" id="example22222" class="width--100">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span>
-                                            <label for="id">
-                                                소재지
-                                            </label>
-                                        </span>
-                                    </th>
-                                    <td>
-                                        <div class="td__container">
-                                            <input type="text" value="test" id="example22222" class="width--100">
+                                            <input type="text" value="test" id="example22222">
                                         </div>
                                     </td>
                                 </tr>
                             </table>
-                            
                         </div>
                     </div>
-
                 </div>
-                
+                </div>
         </main>
          <footer>
             <div class="footer__bottom" style="background-color: #F0F0F0;">
@@ -660,7 +503,6 @@
                     <div class="footer__logo">
                         <img src="img/slogan_H48.svg" alt="하단 로고">
                     </div>
-
                     <div class="footer__flex">
                         <div class="footer__info">
                             <p class="location">
