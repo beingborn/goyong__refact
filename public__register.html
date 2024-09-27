@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>사용자 > 회계공시등록 > 회계공시등록</title>
+    <title>회계공시등록</title>
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/default.css" />
     <link rel="shortcut icon" href="img/korea__favicon.ico" />
@@ -552,103 +552,6 @@
                           </div>
                         </td>
                       </tr>
-
-                      <script>
-                        $(document).ready(function () {
-                          // init();
-
-                          /*Date Picker*/
-                          var dateFormat = "yymmdd";
-
-
-                          function getDate(element) {
-                            var date;
-                            try {
-                              date = $.datepicker.parseDate(
-                                dateFormat,
-                                element.value
-                              );
-                            } catch (error) {
-                              date = null;
-                            }
-                            return date;
-                          }
-
-                          $.datepicker.setDefaults({
-                            closeText: "닫기",
-                            currentText: "오늘",
-                            prevText: "이전 달",
-                            nextText: "다음 달",
-                            monthNames: [
-                              "1월",
-                              "2월",
-                              "3월",
-                              "4월",
-                              "5월",
-                              "6월",
-                              "7월",
-                              "8월",
-                              "9월",
-                              "10월",
-                              "11월",
-                              "12월",
-                            ],
-                            monthNamesShort: [
-                              "1월",
-                              "2월",
-                              "3월",
-                              "4월",
-                              "5월",
-                              "6월",
-                              "7월",
-                              "8월",
-                              "9월",
-                              "10월",
-                              "11월",
-                              "12월",
-                            ],
-                            dayNames: [
-                              "일",
-                              "월",
-                              "화",
-                              "수",
-                              "목",
-                              "금",
-                              "토",
-                            ],
-                            dayNamesShort: [
-                              "일",
-                              "월",
-                              "화",
-                              "수",
-                              "목",
-                              "금",
-                              "토",
-                            ],
-                            dayNamesMin: [
-                              "일",
-                              "월",
-                              "화",
-                              "수",
-                              "목",
-                              "금",
-                              "토",
-                            ],
-                            weekHeader: "주",
-                            yearSuffix: "년",
-                          });
-
-                          $(".datePicker").each(function () {
-                            $(this).datepicker({
-                              dateFormat: dateFormat,
-                              changeMonth: true,
-                              changeYear: true,
-                              yearRange: "c-80y:c",
-                              numberOfMonths: 1,
-                            });
-                          });
-                        });
-                      </script>
                     </table>
                   </div>
                 </div>
@@ -874,16 +777,8 @@
                             </div>
                             ~
                             <div class="calender__body">
-                              <input
-                                type="text"
-                                class="datePicker"
-                                id="testPicker_h"
-                                maxlength="10"
-                              />
-                              <label
-                                for="testPicker"
-                                class="calender__icon mg--10-l"
-                              ></label>
+                              <input type="text" class="datePicker" id="testPicker_h" maxlength="10"/>
+                              <label for="testPicker" class="calender__icon mg--10-l"></label>
                             </div>
                           </div>
                         </td>
@@ -892,7 +787,7 @@
                   </table>
                 </div>
 
-                        <!-- 모바일용 상단 테이블 -->
+              <!-- 모바일용 상단 테이블 -->
              <div class="user__form__wrapper m__table">
               <form class="search__form__user" action="POST">
                 <div class="search">
@@ -907,12 +802,12 @@
                             <label for="searchText" class="blind">회계기간</label>
                             <div class="flex--box-c" style="gap: 1rem;">
                             <div class="calender__body">
-                              <input class="width--100" type="text" id="testPicker" maxlength="10" class="hasDatepicker">
+                              <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
                               <label for="testPicker" class="calender__icon mg--10-l"></label>
                             </div>
                             ~
                             <div class="calender__body">
-                              <input class="width--100" type="text" id="testPicker" maxlength="10" class="hasDatepicker">
+                              <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
                               <label for="testPicker" class="calender__icon mg--10-l"></label>
                             </div>
                             </div>
@@ -3250,5 +3145,99 @@
     </div>
     <!-- JS 파일 -->
     <script src="js/default.js"></script>
+    <script>
+      $(document).ready(function () {
+        // init();
+
+        /*Date Picker*/
+        var dateFormat = "yymmdd";
+        function getDate(element) {
+          var date;
+          try {
+            date = $.datepicker.parseDate(
+              dateFormat,
+              element.value
+            );
+          } catch (error) {
+            date = null;
+          }
+          return date;
+        }
+
+        $.datepicker.setDefaults({
+          closeText: "닫기",
+          currentText: "오늘",
+          prevText: "이전 달",
+          nextText: "다음 달",
+          monthNames: [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
+          ],
+          monthNamesShort: [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
+          ],
+          dayNames: [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토",
+          ],
+          dayNamesShort: [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토",
+          ],
+          dayNamesMin: [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토",
+          ],
+          weekHeader: "주",
+          yearSuffix: "년",
+        });
+
+        $(".datePicker").each(function () {
+          $(this).datepicker({
+            dateFormat: dateFormat,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "c-80y:c",
+            numberOfMonths: 1,
+          });
+        });
+      });
+    </script>
   </body>
 </html>

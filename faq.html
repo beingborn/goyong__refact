@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=, initial-scale=1.0">
-<title>회계공시시스템이란</title>
+<title>자주묻는질문</title>
 
 <link rel="stylesheet" href="style/reset.css">
 <link rel="stylesheet" href="style/default.css">
@@ -13,7 +11,7 @@
 <link rel="stylesheet" href="style/swiper-bundle.min.css">
 <script src="js/jquery-3.7.1.js"></script>
 </head>
-    <body class="full__body">
+    <body>
         <!-- 스킵 네비개이션 -->
         <div class="skip__nav">
             <a href="#main__content">본문 바로가기</a>
@@ -71,18 +69,14 @@
                                             </div>
                                         </li>
                                         <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
-                                            <!-- dep3 오른쪽 영역 -->
                                             <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
-                                          
                                             </div>
                                         </li>
                                         <li class="plus"> <a href="javascript:void(0);">공지사항</a>
-                                            <!-- dep3 오른쪽 영역 -->
                                             <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
                                             </div>
                                         </li>
                                         <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
-                                            <!-- dep3 오른쪽 영역 -->
                                             <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
                                             </div>
                                         </li>
@@ -232,8 +226,8 @@
                                     <div class="select__box">
                                         <select class="select--no--style select__renew" id="year" name="year">
                                             <option value="">전체</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2022">2022</option>
+                                            <option value="title">제목</option>
+                                            <option value="desc">내용</option>
                                         </select>
                                     </div>
                                     <label for="label" class="mo_only">검색어</label>
@@ -246,7 +240,7 @@
                                             class="ml4"
                                             placeholder="검색어를 입력하세요."
                                             value="">
-                                         <div class="flex--box-c btn__con">
+                                        <div class="flex--box-c btn__con">
                                             <button
                                             type="button"
                                             id=""
@@ -262,7 +256,7 @@
                                             id=""
                                             class="btn__control__u bg--green-02"
                                             onclick="fn_search();">자료 다운로드</button>
-                                         </div>   
+                                        </div>   
                                     </div>
                                 </div>
                             </div>
@@ -461,36 +455,39 @@
                         <!-- 테이블 페이지 이동 버튼 -->
                         <div class="faq__page__wrap">
                             <div class="pagination w-page pagination__margin">
-                                <a class="page-navi prev" href="#">이전</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
                                 <div class="page-links">
-                                    <a class="page-link active" href="#">1</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
                                     <span class="page-link link-dot">
                                         ···
                                     </span>
-                                    <a class="page-link" href="#">5</a>
-                                    <a class="page-link" href="#">6</a>
-                                    <a class="page-link" href="#">7</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">6</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">8</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">10</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">11</a>
                                     <span class="page-link link-dot">
                                         ···
                                     </span>
-                                    <a class="page-link" href="#">120</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
                                 </div>
-                                <a class="page-navi next" href="#">다음</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
                             </div>
                             <!-- paging : 모바일 -->
                             <div class="pagination m-page pagination__margin__mo">
                                 <div class="page-navis">
-                                    <a class="page-navi prev" href="#">이전</a>
-                                    <a class="page-navi next" href="#">다음</a>
+                                    <a onclick="fnSelectInfs(1); return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                                    <a onclick="fnSelectInfs(1); return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
                                 </div>
                                 <div class="page-links">
-                                    <a class="page-link" href="#">1</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">1</a>
                                     <span class="page-link link-dot">...</span>
-                                    <a class="page-link" href="#">7</a>
-                                    <a class="page-link active" href="#">8</a>
-                                    <a class="page-link" href="#">9</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">8</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
                                     <span class="page-link link-dot">...</span>
-                                    <a class="page-link" href="#">120</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
                                 </div>
                             </div>
                         </div>
