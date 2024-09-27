@@ -6,8 +6,8 @@
 * {
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -3362,6 +3362,22 @@ button.mo_only {
   background-size: cover;
 }
 
+#sub__wrap .content .visual__bg .visual__text {
+  position: absolute;
+  bottom: 7.2rem;
+  color: #fff;
+}
+
+#sub__wrap .content .visual__bg .visual__text h2 {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+  white-space: nowrap;
+}
+
+#sub__wrap .content .visual__bg .visual__text p {
+  font-size: 2.2rem;
+}
+
 .function__group.margin-1 {
   margin-top: 4rem;
 }
@@ -3386,22 +3402,6 @@ button.mo_only {
 
 .public__register__wrap .function__group.margin-2 {
   margin-bottom: 25rem;
-}
-
-#sub__wrap .content .visual__bg .visual__text {
-  position: absolute;
-  bottom: 7.2rem;
-  color: #fff;
-}
-
-#sub__wrap .content .visual__bg .visual__text h2 {
-  font-size: 4rem;
-  margin-bottom: 1.2rem;
-  white-space: nowrap;
-}
-
-#sub__wrap .content .visual__bg .visual__text p {
-  font-size: 2.2rem;
 }
 
 .mobile__con {
@@ -4038,7 +4038,7 @@ button.mo_only {
   max-width: 100%;
 }
 
-.main__accn__desc__wrap .table__vertical th {
+.main__accn__desc__wrap .table__vertical thead th {
   height: 5.8rem;
 }
 

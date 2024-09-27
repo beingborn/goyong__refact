@@ -19,20 +19,20 @@ button.mo_only {display: none;}
 #sub__wrap .faq .visual__bg {background: url(../img/top_visual_faq.jpg) no-repeat center;  background-size: cover;}
 #sub__wrap .file_change .visual__bg {background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
 
-// 서브 페이지별 버튼 마진
-.function__group.margin-1 {margin-top: 4rem;} 
-.function__group.margin-2 {margin-top: 6.4rem;} 
-.pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
-.pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
-
-.notice__detail  .function__group.margin-1 {margin-bottom: 10rem;}
-.public__register__wrap .function__group.margin-2 {margin-bottom: 25rem;}
-
 
 // 서브 페이지 이미지 텍스트 위치 
 #sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
 #sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
 #sub__wrap .content .visual__bg .visual__text p { font-size: 2.2rem; }
+
+// 서브 페이지별 버튼 마진
+.function__group.margin-1 {margin-top: 4rem;} 
+.function__group.margin-2 {margin-top: 6.4rem;} 
+.pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
+.pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
+.notice__detail  .function__group.margin-1 {margin-bottom: 10rem;}
+.public__register__wrap .function__group.margin-2 {margin-bottom: 25rem;}
+
 
 // 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
 .mobile__con {display: none;}
@@ -128,7 +128,7 @@ button.mo_only {display: none;}
 // 자주 묻는 질문 테이블
 .foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
 .foldStyle__table tbody tr td {display: flex; align-items: center;}
-.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%; }
+.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%;}
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
 .foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center; background-color: transparent;}
 .foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
@@ -210,7 +210,7 @@ button.mo_only {display: none;}
     right: 0;
 }
 // 주요 공시항목 설명 2번 섹션
-.accn__desc__wrap  .section {margin-top: 10rem;}
+.accn__desc__wrap .section {margin-top: 10rem;}
 .accn__desc__wrap .content__section:nth-child(2){display: flex; position: relative;}
 .accn__desc__wrap .content__section:nth-child(2) .image__container{min-width: 58.4rem; min-height: 27.9rem; max-width: 58.4rem; max-height: 27.9rem; margin-left: 5rem; background-image: url('../img/accn__desc__img_02.png'); background-size: cover;}
 .accn__desc__wrap .content__section:nth-child(2) .text__container {padding-top: 4rem; max-width: 47rem;}
@@ -228,7 +228,7 @@ button.mo_only {display: none;}
 .main__accn__desc__wrap .desc__banner{margin: 6.4rem 0; }
 .main__accn__desc__wrap .image__container {text-align: center; margin: 6.4rem 0;}
 .main__accn__desc__wrap .image__container img {max-width: 100%;}
-.main__accn__desc__wrap .table__vertical th {height: 5.8rem;}
+.main__accn__desc__wrap .table__vertical thead th {height: 5.8rem;}
 .main__accn__desc__wrap .table__vertical tbody th {height: 5.8rem; background: transparent;}
 .main__accn__desc__wrap .tab .table__vertical {border-top: 0.2rem solid #00A463;}
 .main__accn__desc__wrap .table__vertical tbody td {padding: 0.8rem 1rem; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;}
