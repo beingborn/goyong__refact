@@ -45,6 +45,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
 
+
 // 사용자 공통 테이블 타이틀
 .table__title__wrap {margin-bottom: 6.4rem; margin-top: 6.4rem;}
 .table__title__wrap .data__number {margin-top: 6.4rem;}
@@ -167,13 +168,16 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
 
 
-// 조회결과 테이블 공통
+// 테이블 헬퍼 클래스
 // td의 min-height 적용 이슈로 다음과 같이 적용
 .min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
 .text--r {justify-content: flex-end;}
 .text--l {justify-content: flex-start;}
 .text--c {justify-content: center;}
 
+
 .td__date {display: flex; align-items: center; gap: 1rem;}
 .td__radio {display: flex; align-items: center; gap: 1rem;}
 .td__date select {flex: 1;}
+
+

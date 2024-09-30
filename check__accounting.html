@@ -69,18 +69,14 @@
                                                 </div>
                                             </li>
                                             <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
-                                                <!-- dep3 오른쪽 영역 -->
                                                 <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
-                                              
                                                 </div>
                                             </li>
                                             <li class="plus"> <a href="javascript:void(0);">공지사항</a>
-                                                <!-- dep3 오른쪽 영역 -->
                                                 <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
                                                 </div>
                                             </li>
                                             <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
-                                                <!-- dep3 오른쪽 영역 -->
                                                 <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
                                                 </div>
                                             </li>
@@ -213,6 +209,72 @@
                             <h2 class="page__title">회계공시여부조회</h2>
                         </div>
                     </div>
+                    <!-- 버튼 그룹 -->
+                    <div class="function__group">
+                        <button type="button" class="btn__control bg--gray-00">초기화</button>
+                        <button type="button" class="btn__control bg--blue-00">조회</button>
+                        <button type="button" class="openPopup btn__control bg--blue-00">출력</button>
+                    </div>
+                    <!-- ./ 버튼 그룹 -->
+                    <!-- 도움말 상단 제목 -->
+                    <div class="info__tip__box flex--box-c">
+                        <h2 class="data__title">회계공시여부 정보</h2>
+                        <button type="button" class="info__tip mg--10-l"></button>
+                        <!-- 툴팁 내부 내용 -->
+                        <div class="tooltip__layer">
+                            <div class="tooltip__top flex--box-s">
+                                <p class="tooltip__title">회계공시여부 정보란?</p>
+                                <button type="button" class="info__close__btn"></button>
+                            </div>
+                            <div class="tooltip__content">
+                                <p>
+                                    <strong>가</strong>
+                                    회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.(예시: 회계연도가 10월1일에 시작하고 9월 30일에 종료하는 노조가
+                                    ‘21.10.1~’22.9.30 회계를 공표하려는 경우 회계연도에 2022년을 입력합니다.)
+                                </p>
+                                <p>
+                                    <strong>나</strong>노동조합(또는 산하조직) 명칭은  「노동조합 및 노동관계조정법」 제 11조 제1호에 따른 명칭 또는 노동조합의 규약에서 정하고 있는 산하조직 명칭을 입력합니다. 
+                                </p>
+                                <p>
+                                    <strong>다</strong>상급단체의 명칭은  「노동조합 및 노동관계조정법」 제 11조 제5호에 따른 명칭을 입력합니다. 
+                                </p>
+                                <p>
+                                    <strong>라</strong>조합원 수는 작성일 직전연도 12월 31일 기준 조합원 수를 입력합니다. 
+                                </p>
+                                <p>
+                                    <strong>마</strong>설립연월일은 노동조합현황 정기통보서 상 노동조합 설립일을 입력합니다. 
+                                </p>
+                                <p>
+                                    <strong>바</strong>소재지는 노동조합현황정기통보서 상 주된 사무소의 소재지를 입력합니다. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- ./ 툴팁 내부 내용 -->
+                    </div>
+                    <!-- ./ 도움말 상단 제목 -->
+                    <!-- 가로 테이블 예시 -->
+                    <div class="table__horizontal__ex" id="main__content">
+                        <table class="border-top-large">
+                            <caption>회계공시여부 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th><label for="">노동조합(산하조직)명</label></th>
+                                    <td><div class="td__container"><input type="text" value="건천산업노동조합"></div></td>
+                                    <th><label for="">회계연도</label></th>
+                                    <td><div class="td__container"><input type="text" value="2022"></div></td>
+                                    <th><label for="">대표자</label></th>
+                                    <td><div class="td__container"><input type="text" value="육*영"></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">총연합단체</label></th>
+                                    <td><div class="td__container"><input type="text" value=""></div></td>
+                                    <th><label for="">연합단체유무</label></th>
+                                    <td><div class="td__container"><input type="text" value=""></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ./ 가로 테이블 예시 -->
                 </div>
             </main>
             <!-- 푸터 -->

@@ -293,3 +293,11 @@ $(document).ready(function () {
   });
   $(".mo__slide").slideUp();
 });
+
+/* Modal */
+var $this;
+$(".openPopup").on("click", function(event) {
+  $this = $(this);
+  $("#popup").fadeIn(400).attr("tabindex", 0).show().focus();; 
+  // $("body").append('<div class="bgPopup"></div>');
+});
