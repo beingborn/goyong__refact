@@ -6,8 +6,8 @@
 * {
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -1626,6 +1626,7 @@ input[type=file]::file-selector-button {
   font-size: 1.5rem;
   font-weight: 700;
   padding-left: 2.4rem;
+  padding-top: 2.4rem;
 }
 
 .breadcrumb .path .home > a {
@@ -3343,6 +3344,11 @@ button.mo_only {
 }
 
 #sub__wrap .sub1_1 .visual__bg {
+  background: url(../img/top_visual_public_open.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#sub__wrap .check__accounting .visual__bg {
   background: url(../img/top_visual_public_open.jpg) no-repeat center;
   background-size: cover;
 }
