@@ -4499,10 +4499,6 @@ button.mo_only {
   align-items: center;
 }
 
-.printResult .printResult__inner {
-  padding: 4.8rem;
-}
-
 .printResult__desc {
   font-size: 2.1rem;
   padding-top: 2.4rem;
@@ -4513,6 +4509,48 @@ button.mo_only {
   background-color: #f8f8f8;
 }
 
+.printPage {
+  width: 21cm;
+  min-height: 29.7cm;
+  position: relative;
+}
+
+.printResult__inner {
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.printPage th {
+  font-size: 1.4rem;
+  padding: 0 0.4rem;
+}
+
+.printPage td {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  .printPage {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+}
 /* 서브 모바일 스타일 CSS */
 .mobile__tab .swiper-slide {
   max-width: 13rem;
