@@ -291,6 +291,14 @@ textarea {
   padding-right: 2.4rem;
 }
 
+.mt--64 {
+  margin-top: 6.4rem;
+}
+
+.lg--64-mt {
+  margin-top: 6.4rem;
+}
+
 .pd--10-m {
   padding: 0 1rem;
 }
@@ -320,6 +328,10 @@ textarea {
 
 .mg--10-b {
   margin-bottom: 1rem;
+}
+
+.mg--16-b {
+  margin-bottom: 1.6rem;
 }
 
 .mg--20-b {
@@ -536,6 +548,21 @@ textarea {
 
 .error-message {
   color: #E71825;
+}
+
+.main__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.main__title__md {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.main__title__lg {
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 /* 
@@ -1283,13 +1310,22 @@ table caption {
   font-weight: 700;
 }
 
-.accn__open__wrap .table__horizontal__mo .sub__title {
+.mo__strongTitle {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.table__horizontal__mo.miw120 .sub__title {
   min-width: 12rem;
 }
 
 .union__management__wrap .table__horizontal__mo .sub__title {
   display: inline-block;
   width: 50%;
+}
+
+.table--fixed {
+  table-layout: fixed;
 }
 
 .min__h__box {
@@ -1820,6 +1856,64 @@ input[type=file]::file-selector-button {
     display: flex;
   }
 }
+#popup {
+  display: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 1002;
+}
+
+#popup .popup__body {
+  padding: 2rem;
+}
+
+.bgPopup {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.desc__box {
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  background: #F8F8F8;
+  border: 0.1rem solid #E4E4E4;
+}
+
+.desc__boxTit {
+  display: flex;
+  align-items: center;
+}
+
+.desc__boxTit::before {
+  content: "";
+  margin-right: 0.4rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/icon__helper__info__tr.svg);
+  background-size: contain;
+}
+
+.desc__box__txt {
+  margin-left: 2.4rem;
+}
+
+.desc__list {
+  border-top: 0.1rem dashed #C6C6C6;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+}
+
 /*
     헤더 CSS
 */
@@ -3551,6 +3645,10 @@ button.mo_only {
   padding: 4rem;
 }
 
+.search__form__user.lv .search .input__box > input {
+  margin: 0 2.4rem;
+}
+
 .search__form__user .preview {
   background-color: #fff;
   height: 4.8rem;
@@ -4393,6 +4491,24 @@ button.mo_only {
      -moz-appearance: none;
           appearance: none;
   padding: 0 8px;
+}
+
+#print__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.printResult .printResult__inner {
+  padding: 4.8rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.8rem;
+}
+
+.printResult__desc {
+  font-size: 2.1rem;
+  padding-top: 6.4rem;
+  padding-bottom: 12.8rem;
 }
 
 /* 서브 모바일 스타일 CSS */
@@ -6270,6 +6386,9 @@ button.mo_only {
     padding-top: 2.4rem;
   }
   .notice__wrap .search__form__user .input__box > input {
+    margin: 0;
+  }
+  .search__form__user.lv .search .input__box > input {
     margin: 0;
   }
   .faq__wrap .search__form__user .input__box > input {

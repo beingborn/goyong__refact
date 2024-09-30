@@ -79,6 +79,7 @@ button.mo_only {display: none;}
 .search__form__user {background-color: $theme-krds-skyblue-01; border-radius: 1.2rem;}
 .search__form__user select,.search__form__user input {border: 0.1rem solid #717171;}
 .search__form__user .search {padding: 4rem;}
+.search__form__user.lv .search .input__box > input {margin: 0 2.4rem;}
 
 // 파일 찾기 폼
 .search__form__user .preview {background-color: #fff; height: 4.8rem; flex-grow: 1;}
@@ -312,6 +313,11 @@ button.mo_only {display: none;}
 
 // 달력 공통
 .td__calender {position: relative; width: 33.33%;}
-.s-select--no--style { appearance: none; padding: 0 8px; }
+.s-select--no--style { appearance: none; padding: 0 8px;}
+
+// 프린트 페이지 전용
+#print__body {display: flex; justify-content: center; align-items: center;}
+.printResult .printResult__inner {padding: 4.8rem; border: 0.1rem solid #ddd; border-radius: 0.8rem;}
+.printResult__desc {font-size: 2.1rem; padding-top: 6.4rem; padding-bottom: 12.8rem;}
 
 

@@ -211,7 +211,9 @@ height: 100%;
   .pd--10-b {padding-bottom: 1rem;}
 
   .pd--24-r {padding-right: 2.4rem;}
-
+  
+  .mt--64 {margin-top: 6.4rem;}
+  .lg--64-mt {margin-top: 6.4rem;}
   .pd--10-m {padding: 0 1rem;}
 
   /* 
@@ -225,9 +227,12 @@ height: 100%;
   .mg--24-r {margin-right: 2rem;}
   
   .mg--10-b {margin-bottom: 1rem;}
+  .mg--16-b {margin-bottom: 1.6rem;}
+
   .mg--20-b {margin-bottom: 2rem;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
+
 
 
   
@@ -325,6 +330,10 @@ height: 100%;
 
   // 에러 메세지 관련
   .error-message {color: #E71825;}
+
+  .main__title {font-size: 2.5rem; font-weight: 700;}
+  .main__title__md {font-size: 2.1rem; font-weight: 700;}
+  .main__title__lg{font-size: 4rem; font-weight: 700;}
 
 
 

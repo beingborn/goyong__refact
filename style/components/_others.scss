@@ -70,3 +70,16 @@
   .info__tip__box .tooltip__layer .info__close__btn {width: 1.6rem ;height: 1.6rem; background: url(../img/info__tip__close.svg)no-repeat center;}
   /* 모바일 화면 일 시 width 100%*/
   @media (max-width: 767px) { .info__tip__box .tooltip__layer { left: 0; width: 100%;} .info__tip__box .tooltip__content p{display: flex;} }
+
+  
+// Modal Style 
+#popup {display: none; -webkit-box-shadow:0px 0px 15px rgba(0,0,0,0.3);-moz-box-shadow:0px 0px 15px rgba(0,0,0,0.3);box-shadow:0px 0px 15px rgba(0,0,0,0.3);position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:#fff;z-index:1002;}
+#popup .popup__body {padding: 2rem;}
+.bgPopup {content:"";width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;top:0;left:0;z-index:1001;}
+
+// 설명 박스
+.desc__box {padding: 1.6rem; border-radius: 0.8rem; background: #F8F8F8; border: 0.1rem solid #E4E4E4;}
+.desc__boxTit {display: flex; align-items: center;}
+.desc__boxTit::before {content: ''; margin-right: 0.4rem; display: inline-block; width: 2rem; height: 2rem; background: url(../img/icon__helper__info__tr.svg); background-size: contain;}
+.desc__box__txt {margin-left: 2.4rem;}
+.desc__list {border-top: 0.1rem dashed #C6C6C6; margin-top: 1.6rem; padding-top: 1.6rem;}

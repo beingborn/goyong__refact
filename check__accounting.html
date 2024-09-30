@@ -203,19 +203,236 @@
                             <li><a href="check__accounting.html" class="txt">회계공시여부조회</a></li>
                         </ol>
                     </nav>
-                    <!-- 테이블 제목 및 버튼 -->
                     <div class="relative">
+                        <!-- 페이지 제목 -->
                         <div class="page__title__wrap">
                             <h2 class="page__title">회계공시여부조회</h2>
                         </div>
+                        <!-- /. 페이지 제목 -->
+                        <!-- 조회 방법 설명 -->
+                        <div class="desc__box">
+                                <p><strong class="desc__boxTit">참고</strong></p>
+                                <div class="desc__box__txt">
+                                    <p>조합비 세액공제 적용을 위해 공시해야 하는 대상인 <strong>총연합단체, 연합단체, ’22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)</strong>의 공시여부를 조회할 수 있습니다.</p>
+                                    <p>조회 결과 <strong>모두 '공시완료'</strong>인 경우 ’23.10월 이후에 납부한 조합비에 세액공제 혜택을 부여합니다.</p>
+                                    <p>* 노동조합(산하조직)에 '23.1월 ~ 9월에 납부한 조합비는 종전과 같이 회계공시와 관계없이 세액공제 혜택을 부여합니다.</p>
+                                </div>
+                                <div class="desc__box__txt desc__list">
+                                    <p>&lt;검색 방법&gt;</p>
+                                    <p>❶ <strong>'22.12.31. 기준 조합원 수 1,000인 이상</strong> 단위노동조합(산하조직)에 소속된 조합원은 <strong>해당 단위노동조합(산하조직)</strong>을 검색</p>
+                                    <p style="margin-top: 1rem;">* (예시1) A총연맹 - B연맹 - C노동조합(1,500명) : C노동조합의 조합원은 C노동조합을 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, C가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                    <p>* (예시2) A총연맹 - B연맹 - D노동조합(2,000명) - E지부(1,200명) : E지부의 조합원은 E지부를 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, D, E가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+
+                                    <p style="margin-top: 1.6rem;">❷ <strong>'22.12.31. 기준 조합원 수 1,000인 미만</strong> 단위노동조합(산하조직)에 소속된 조합원은 해당 단위노동조합(산하조직)이 소속된 <strong>상급단체*</strong>를 검색</p>
+                                    <p style="margin-top: 1rem;">* 단위노동조합의 상급단체: 해당 단위노동조합이 소속된 총연합단체, 연합단체</p>
+                                    <p style="margin-left: 1.2rem;">산하조직의 상급단체: 해당 산하조직이 소속된 총연합단체, 연합단체, '22.12.31. 기준 조합원수 1,000인 이상 단위노동조합 및 산하조직</p>
+                                    <p style="margin-top: 1rem;">* (예시3) A총연맹 - B연맹 - F노동조합(500명) : F노동조합의 조합원은 B연맹을 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                    <p>* (예시4) A총연맹 - B연맹 - D노동조합(2,000명) - E지부(1,200명) - G지회(500명) : G지회의 조합원은 E지부를 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, D, E가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                </div>
+                        </div>
+                        <!-- ./ 조회 방법 설명 -->
                     </div>
-                    <!-- 버튼 그룹 -->
-                    <div class="function__group">
-                        <button type="button" class="btn__control bg--gray-00">초기화</button>
-                        <button type="button" class="btn__control bg--blue-00">조회</button>
-                        <button type="button" class="openPopup btn__control bg--blue-00">출력</button>
+                    <!-- 상단 검색 영역 -->
+                    <div class="user__form__wrapper">
+                        <form class="search__form__user lv mt--64" action="POST">
+                            <div class="search">
+                                <input type="hidden" id="pageNo" name="pageNo" value="">
+                                <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
+                                <input type="hidden" id="yearSel" name="yearSel" value="">
+                                <div class="flex--box-c search__list">
+                                    <label for="label" class="mo_only">검색항목</label>
+                                    <div class="select__box">
+                                        <select class="select--no--style select__renew" id="year" name="year">
+                                            <option value="">전체</option>
+                                            <option value="">2022</option>
+                                        </select>
+                                    </div>
+                                    <label for="label" class="mo_only">검색어</label>
+                                    <div class="input__box">
+                                        <label for="searchText" class="blind">질문조회</label>
+                                        <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합,산하조직,대표자명,총연맹명,연맹명을 입력하세요." value="">
+                                        <div class="flex--box-c btn__con">
+                                            <button type="button" id="" class="btn__control__u bg--mint-00 mg--24-r" onclick="fn_search();">초기화</button>
+                                            <button type="button" id="" class="btn__control__u bg--blue-02 mg--24-r " onclick="fn_search();">조회</button>
+                                            <button type="button" id="" class="openPrint btn__control__u bg--black-00" onclick="printOpen();">출력</button>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <!-- ./ 버튼 그룹 -->
+                    <!-- ./ 상단 검색 영역 -->
+                    <!-- 조회 결과 텍스트 -->
+                    <div class="table__title__wrap">
+                        <h2 class="table__title">조회결과</h2>
+                        <p class="data__number">전체 <span>652</span>건</p>
+                    </div>
+                    <!-- ./ 조회 결과 -->
+                    <!-- 웹 조회 결과 표 -->
+                    <div class="table__vertical w__table">
+                        <table class="border-top-large">
+                            <caption>회계공시여부조회결과</caption>
+                            <colgroup>
+                                <col style="width: 6%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                                    <th><div class="min__h__box text--c">회계연도</div></th>
+                                    <th><div class="min__h__box text--c">노동조합(산하조직)명</div></th>
+                                    <th><div class="min__h__box text--c">대표자</div></th>
+                                    <th><div class="min__h__box text--c">총연합단체</div></th>
+                                    <th><div class="min__h__box text--c">연합단체</div></th>
+                                    <th><div class="min__h__box text--c">단위노동조합</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="min__h__box text--c">1</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원도지역버스노동조합</div></td>
+                                    <td><div class="min__h__box text--c">김*만</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">전국자동차노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원도지역버스노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">2</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도교육청노동조합</div></td>
+                                    <td><div class="min__h__box text--c">최*덕</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">교육청노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도교육청노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">3</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도청공무원노동조합</div></td>
+                                    <td><div class="min__h__box text--c">이*범</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">공무원노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도청공무원노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">4</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">건강보험심사평가원노동조합</div></td>
+                                    <td><div class="min__h__box text--c">김*형</div></td>
+                                    <td><div class="min__h__box text--l">전국민주노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">전국정보경제서비스노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">건강보험심사평가원노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">5</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">건설산업노동조합</div></td>
+                                    <td><div class="min__h__box text--c">육*수</div></td>
+                                    <td><div class="min__h__box text--l">-</div></td>
+                                    <td><div class="min__h__box text--l">전국건설노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">건설산업노동조합</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ./ 웹 조회결과 표 -->
+                    <!-- 모바일 조회결과 표 -->
+                    <div class="m__table accn__result">
+                        <div class="table__horizontal__mo miw120">
+                            <table class="border-top-large table--fixed">
+                                <caption>모바일용 조회결과 열람 테이블</caption>
+                                <tbody>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원도지역버스노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>김*만</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국자동차노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원도지역버스노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원특별자치도교육청노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>최*덕</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>교육청노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원특별자치도교육청노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원특별자치도청공무원노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>이*범</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>공무원노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원특별자치도청공무원노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">건강보험심사평가원노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>김*형</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>전국민주노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국정보경제서비스노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>건강보험심사평가원노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">건설산업노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>육*수</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>-</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국건설노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>건설산업노동조합</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 웹 페이지 네이션 -->
+                    <div class="pagination w-page pagination__margin">
+                        <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                        <div class="page-links">
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">6</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">8</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">10</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">11</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                        </div>
+                        <a onclick="fnSelectInfs(1);return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                    </div>
+                    <!-- 모바일 페이지 네이션 -->
+                    <div class="pagination m-page pagination__margin__mo">
+                        <div class="page-navis">
+                            <a onclick="fnSelectInfs(1); return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                            <a onclick="fnSelectInfs(1); return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                        </div>
+                        <div class="page-links">
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">1</a>
+                            <span class="page-link link-dot">...</span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">8</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                            <span class="page-link link-dot">...</span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                        </div>
+                    </div>
                     <!-- 도움말 상단 제목 -->
                     <div class="info__tip__box flex--box-c">
                         <h2 class="data__title">회계공시여부 정보</h2>
@@ -228,24 +445,30 @@
                             </div>
                             <div class="tooltip__content">
                                 <p>
-                                    <strong>가</strong>
-                                    회계연도 종료일이 12월 31일이 아닌 경우에는 회계연도 종료일이 속한 연도를 입력합니다.(예시: 회계연도가 10월1일에 시작하고 9월 30일에 종료하는 노조가
-                                    ‘21.10.1~’22.9.30 회계를 공표하려는 경우 회계연도에 2022년을 입력합니다.)
+                                    <strong>가</strong>공시완료 : (총)연합단체, '22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)에 해당하여 공시를 완료한 경우
                                 </p>
                                 <p>
-                                    <strong>나</strong>노동조합(또는 산하조직) 명칭은  「노동조합 및 노동관계조정법」 제 11조 제1호에 따른 명칭 또는 노동조합의 규약에서 정하고 있는 산하조직 명칭을 입력합니다. 
+                                    <strong>나</strong>미공시 : (총)연합단체 또는 전년도 말일 기준 조합원수 1,000인 이상 단위노동조합(산하조직)에 해당하지만 공시하지 않은 경우 
                                 </p>
                                 <p>
-                                    <strong>다</strong>상급단체의 명칭은  「노동조합 및 노동관계조정법」 제 11조 제5호에 따른 명칭을 입력합니다. 
+                                    <strong>다</strong>총연합단체 : 산업별 연합단체 또는 전국 규모의 산업별 노동조합을 구성원으로 하여 조직한 노동조합 
                                 </p>
                                 <p>
-                                    <strong>라</strong>조합원 수는 작성일 직전연도 12월 31일 기준 조합원 수를 입력합니다. 
+                                    <strong>라</strong>연합단체 : 구성단위가 자연인(사람)이 아닌 노동조합(단체)인 경우로 동종 산업별로 조직된 단위 노동조합을 구성원으로 하여 조직한 노동조합 
                                 </p>
+                                <div>
+                                    <p>
+                                        <strong>마</strong>단위노동조합
+                                    </p>
+                                    <div class="list pd--20-l">
+                                        <p>1) 산업별/업종별 노동조합 : 동종 산업(업종)에 종사하는 근로자들이 직종과 기업을 초월하여 조직한 노동조합</p>
+                                        <p>2) 지역별 노동조합 : 일정지역 내의 근로자들이 동일산업 또는 직종 단위로 조직한 노동조합</p>
+                                        <p>3) 기업단위 노동조합 : 일반적인 단위노동조합 형태로 특정 기업(사업 또는 사업장)에 소속된 근로자가 직업(종)의 구별없이 개별 기업단위로 조직한 노동조합</p>
+                                        <p style="padding-bottom: 1.6rem;">※ 수익사업회계는 임대사업, 영리시설 운영사업 등 법인세 납세의무가 있는 사업의 회계를 말합니다.</p>
+                                    </div>
+                                    </div>
                                 <p>
-                                    <strong>마</strong>설립연월일은 노동조합현황 정기통보서 상 노동조합 설립일을 입력합니다. 
-                                </p>
-                                <p>
-                                    <strong>바</strong>소재지는 노동조합현황정기통보서 상 주된 사무소의 소재지를 입력합니다. 
+                                    <strong>바</strong>지부, 지회, 분회(산하조직) : 단위노동조합의 내부조직 
                                 </p>
                             </div>
                         </div>
@@ -275,6 +498,7 @@
                         </table>
                     </div>
                     <!-- ./ 가로 테이블 예시 -->
+                    <!-- 보고서 출력 정보  -->
                 </div>
             </main>
             <!-- 푸터 -->

@@ -299,5 +299,18 @@ var $this;
 $(".openPopup").on("click", function(event) {
   $this = $(this);
   $("#popup").fadeIn(400).attr("tabindex", 0).show().focus();; 
-  // $("body").append('<div class="bgPopup"></div>');
+  $("body").append('<div class="bgPopup"></div>');
 });
+
+$("#popup .close").on("click", function(event) { 
+  $("#popup").fadeOut(400); 
+  $(".bgPopup").fadeOut(400);
+  // $this.siblings("input, a, button").focus();
+});
+
+/* 출력물 조회 */
+var $printThis
+$(".openPrint").on('click', function(){
+  $printThis = $(this);
+  window.open('print.html', '_blank')
+})
