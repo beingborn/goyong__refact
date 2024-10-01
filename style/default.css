@@ -291,10 +291,6 @@ textarea {
   padding-right: 2.4rem;
 }
 
-.mt--64 {
-  margin-top: 6.4rem;
-}
-
 .lg--64-mt {
   margin-top: 6.4rem;
 }
@@ -324,6 +320,14 @@ textarea {
 
 .mg--24-r {
   margin-right: 2rem;
+}
+
+.mt--64 {
+  margin-top: 6.4rem;
+}
+
+.mt--24 {
+  margin-top: 2.4rem;
 }
 
 .mg--10-b {
@@ -4195,6 +4199,32 @@ button.mo_only {
   font-weight: 400;
 }
 
+.table__horizotal__sh th {
+  width: 15.38%;
+  width: 18rem !important;
+  padding: 0 1.5rem;
+}
+
+@media all and (max-width: 767px) {
+  .table__horizotal__sh .border-top-large {
+    border: 0;
+  }
+  .mo__columnTable tr {
+    display: block;
+  }
+  .mo__columnTable th {
+    padding: 0;
+    background: transparent;
+    margin-bottom: 1.2rem;
+  }
+  .mo__columnTable th:not(:first-child) {
+    margin-top: 1.6rem;
+  }
+  .mo__columnTable .td__container {
+    gap: 0;
+    padding: 0;
+  }
+}
 .public__register__wrap .form__table th {
   width: 15.38%;
   min-width: 15rem;
@@ -4491,12 +4521,6 @@ button.mo_only {
      -moz-appearance: none;
           appearance: none;
   padding: 0 8px;
-}
-
-#print__body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .printResult__desc {
