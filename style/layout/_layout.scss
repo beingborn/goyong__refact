@@ -1,18 +1,21 @@
-/*
-    헤더 CSS
-*/
+/****************************************************
+	파일명	: layout.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 레이아웃 관련 스타일
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
 
-.header {
-    position: relative;
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff;
-    border-bottom: 0.15rem solid #ededed;
-}
+
+/* 헤더 CSS */
+.header { position: relative; width: 100%; z-index: 1000; background-color: #fff; border-bottom: 0.15rem solid #ededed;}
 .header .header__btm .logo { width: 36rem; max-height: 3rem;}
 .header img {max-width: 100%;}
-    
-
 .header__fixed {
     position: fixed;
     left: 0;
@@ -20,139 +23,57 @@
     width: 100%;
     transition: transform ease 0.4s 0.01s;
 }
-
-.top__banner {
-    height: 3.2rem;
-    background-color: #EDF1F5;
-
-    .banner__wrap {
-        flex-wrap: nowrap;
-        line-height: 3.2rem;
-
-        .korea {
-            margin-right: 0.8rem;
-            display: inline-block;
-            width: 2.8rem;
-            height: 2rem;
-            background: url(../img/태극기_medium.png) no-repeat center;
-            position: relative;
-            top: 0.4rem;
-        }
-    }
-}
-
-.banner__text {
-    display: inline-block;
-    font-size: 1.6rem;
-}
-
+.banner__text {display: inline-block; font-size: 1.6rem;}
 .banner__text a {
-    color: $second-color;
+    color: #000;
     font-weight: 500;
     margin-left: 1.6rem;
     margin-right: 0.4rem;
     display: inline-flex;
     align-items: center;
-
-    &::after {
+}
+.banner__text a::after{
         content: '';
         width: 1.6rem;
         height: 1.6rem;
         display: inline-block;
         background: url(../img/icon__arrow__down.svg) no-repeat center;
-    }
 }
-
-.header__top {
-    display: flex;
-    height: 4rem;
-    justify-content: end;
-    align-items: center;
-
-    a:not(:last-child) {
-        border-right: 0.2rem solid #D8D8D8;
-    }
-
-    a {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 1.2rem;
-        padding-right: 1.2rem;
-        font-size: 1.6rem;
-
-        &::after {
-            content: '';
-            width: 1rem;
-            height: 1rem;
-            display: inline-block;
-            background: url(../img/icon__arrow__down.svg) no-repeat center;
-            margin-left: 0.4rem;
-        }
-    }
-}
+.header__top { display: flex; height: 4rem; justify-content: end; align-items: center;}
+.header__top a:not(:last-child) {border-right: 0.2rem solid #D8D8D8;}
+.header__top a {display: inline-flex; align-items: center; margin-right: 1.2rem; padding-right: 1.2rem; font-size: 1.6rem;}
+.header__top a::after { content: ""; width: 1rem; height: 1rem; display: inline-block; background: url(../img/icon__arrow__down.svg) no-repeat center;margin-left: 0.4rem;}
 
 // 하단 헤더 영역
 .header__btm {position: relative;align-items: center;display: flex; height: 8rem;}
-.right__icon__set {display: flex;align-items: center;margin-left: auto;
-        a {
-            img {
-                margin-right: 0.8rem;
-            }
 
-            font-weight: bold;
-            font-size: 1.7rem;
-            padding: 1rem 1.2rem;
-            display: inline-flex;
-            align-items: center;
+// 상단 오른쪽 아이콘 셋
+.right__icon__set {display: flex;align-items: center;margin-left: auto;}
+.right__icon__set a {font-weight: 700; font-size: 1.7rem; padding: 1rem 1.2rem; display: inline-flex; align-items: center;} 
+.right__icon__set a img {margin-right: 0.8rem;}
+.right__icon__set span {white-space: nowrap;}
+.right__icon__set .hamburger {display: none;}
 
-            span {
-                white-space: nowrap;
-            }
-        }
-
-        .talk__count {
-            display: inline-block;
-            width: 2.6rem;
-            height: 2rem;
-            line-height: 2rem;
-            text-align: center;
-            background-color: $main-color;
-            color: #fff;
-            border-radius: 2rem;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-left: 0.8rem;
-        }
-    }
-
-.base__gnb {
-    height: 6.4rem;
-
-    a {
-        line-height: 6.4rem;
-        margin-right: 1.6rem;
-        font-weight: bold;
-        font-size: 1.9rem;
-        color: #555555;
-        display: inline-flex;
-        align-items: center;
-
-        &::after {
-            content: '';
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            background: url(../img/icon__arrow__20.png) no-repeat center;
-            margin-left: 0.8rem;
-        }
-    }
+.base__gnb {height: 6.4rem;}
+.base__gnb a {
+    line-height: 6.4rem;
+    margin-right: 1.6rem;
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: #555555;
+    display: inline-flex;
+    align-items: center;
+}
+.base__gnb a::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    background: url(../img/icon__arrow__20.png) no-repeat center;
+    margin-left: 0.8rem;
 }
 
-.border {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    border: 0.1rem solid #D8D8D8;
-}
+.border {width: 100vw; margin-left: calc(-50vw + 50%); border: 0.1rem solid #D8D8D8;}
 
 
 #gnb1 > ul {display: flex;}
@@ -165,7 +86,6 @@
     background-size: 2rem auto;
     transition: all .3s;
 }
-
 // 상단 depth1 버튼 클릭 시 애니메이션
 #gnb1 > ul > li.active > a {color: #21A366;}
 #gnb1 > ul > li.plus.active > a::after {transform: rotate(360deg); background: url(../img/arrow__top-green.svg);}
@@ -285,7 +205,7 @@ color: #1d1d1d;
 #gnb2 {visibility: hidden; position: fixed; left: 0; top: 0; z-index: 1200; width: 100%; height: 100%; overflow: hidden; background: #fff; font-size: 1.7rem; }
 #gnb2.active {visibility: visible; overflow-y: scroll;}
 
-// 최상단 ul
+// 모바일 최상단 ul
 #gnb2.active > ul { width: 100%; height: 100%; overflow: visible;}
 #gnb2.active > ul > li {display: block;}
 #gnb2 .gnb__head .login__info {padding-top: 6.8rem;}
@@ -308,3 +228,30 @@ color: #1d1d1d;
 .gnb__body .submenu__wrap > ul .title {font-size: 1.7rem; font-weight: 700; padding-top: 2.6rem; padding-bottom: 2.6rem; border-bottom: 0.1rem solid #ddd; width: 100%;}
 .gnb__body .submenu__wrap > ul li:not(.title) {padding-top: 1.8rem; padding-bottom: 1.8rem;}
 
+
+/* 푸터 CSS */
+footer .inner {height: 20rem;}
+footer {position: relative;overflow: hidden;}
+footer .footer__top {border: 0.1rem solid #D8D8D8;height: 5.6rem;}
+footer .footer__top .btn__flex {display: flex;justify-content: space-between;}
+footer .footer__top .btn__flex .top__btn {width: 25%;}
+footer .footer__top .btn__flex .top__btn a {
+    font-size: 1.7rem;
+    padding: 0 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 5.6rem;
+    border-left: 0.1rem solid #D8D8D8;
+    box-sizing: border-box;
+}
+footer .footer__top .btn__flex .top__btn a::after {content: "";display: inline-block;width: 1.6rem;height: 1.6rem;background: url(../img/plus__icon.png) no-repeat center;}
+footer .footer__top .btn__flex .top__btn .last__btn {border-right: 0.1rem solid #D8D8D8;}
+.footer__bottom .footer__logo {padding-top: 4rem;}
+.footer__bottom .footer__flex {display: flex;align-items: flex-start;padding-top: 4rem;padding-bottom: 4rem;justify-content: space-between;}
+.footer__info p {font-size: 1.7rem;}
+.footer__info p:nth-child(1) {margin-bottom: 0.4rem;}
+.footer__info p:nth-child(2) {margin-bottom: 0.4rem;}
+
+.inner { max-width: 128rem; width: 128rem; margin: 0px auto;}

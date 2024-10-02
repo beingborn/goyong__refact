@@ -56,7 +56,6 @@ button.mo_only {display: none;}
 // .tab .dis__info:not(:first-child) { padding-top: 5.6rem; padding-bottom: 5.6rem; }
 // .tab .table__vertical { border-top: 0.2rem solid #333; width: 100%;}
 
-
 .align__cols { width: 15.38%; min-width: 20rem;}
 .tab__4 .table__horizontal table tbody th {border-bottom: 0;}
 .tab__4 .table__horizontal td {border-bottom: 0;}
@@ -76,7 +75,7 @@ button.mo_only {display: none;}
 .data__number {font-size: 2.1rem; font-weight: 700;}
 .data__number > span {color: #1D56BC;}
 .page__title__wrap {margin-top: 8rem; margin-bottom: 6.4rem;}
-.search__form__user {background-color: $theme-krds-skyblue-01; border-radius: 1.2rem;}
+.search__form__user {background-color: #EDF1F5; border-radius: 1.2rem;}
 .search__form__user select,.search__form__user input {border: 0.1rem solid #717171;}
 .search__form__user .search {padding: 4rem;}
 .search__form__user.lv .search .input__box > input {margin: 0 2.4rem;}
@@ -161,8 +160,8 @@ button.mo_only {display: none;}
 .prev__title {font-weight: 700;}
 .prev__next .prev span, .prev__next .next span {min-width: 22rem; display: inline-flex; align-items: center;}
 .prev__next .prev span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
-     background: url(../img/arrow__top-bk.svg) no-repeat center;
-     background-size: 2.4rem auto;
+background: url(../img/arrow__top-bk.svg) no-repeat center;
+background-size: 2.4rem auto;
 }
 .prev__next .next span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
     background: url(../img/arrow__bottom-bk.svg) no-repeat center;
@@ -187,7 +186,7 @@ button.mo_only {display: none;}
 // 홈 > 회계공시 시스템이란
 .accn__desc__wrap .desc__inner {padding: 0 9rem;}
 .accn__desc__wrap .num__label {margin-right : 0.8rem;background-color: #000; display: inline-flex; justify-content : center; align-items: center ;width: 1.4rem; height: 1.4rem; color: #fff; border-radius: 50%; font-size: 1.2rem;}
- 
+
 
 // 설명 1번 섹션
 .accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
@@ -244,18 +243,17 @@ button.mo_only {display: none;}
 .desc__banner .desc {font-size: 1.5rem; font-weight: 400;}
 
 // 가로형 테이블 모듈 2
-.table__horizotal__sh th {width: 15.38%; width: 18rem!important; padding: 0 1.5rem;}
+.table__horizotal__sh th {width: 15.38%; min-width: 15rem!important; max-width: 15rem; padding: 0 1.5rem; word-break: keep-all;}
 
 // 모바일 변환형 테이블
 @media all and (max-width: 767px) {
     .table__horizotal__sh .border-top-large {border: 0;}
     .mo__columnTable tr {display: block;}
     .mo__columnTable th {padding: 0; background: transparent; margin-bottom: 1.2rem;}
-    .mo__columnTable th:not(:first-child){margin-top: 1.6rem;}
+    .mo__columnTable th{margin-top: 1.6rem;}
+    .mo__columnTable tr:nth-child(1) th:first-child {margin-top: -1.6rem;} // 첫번째 행의 첫번째 제목 마진 값 초기화
     .mo__columnTable .td__container {gap: 0; padding: 0;}
 }
-
-
 
 
 // 홈 > 회계공시등록 > 회계공시등록
@@ -315,7 +313,7 @@ button.mo_only {display: none;}
 
 // 필수 입력
 .must__type { position: relative; text-align: left; }
-.must__type::after { content: ' *'; color: #FE5555; position: absolute; right: -1rem; font-weight: 700; }
+.must__type::after { content: ' *'; color: #FE5555;  font-weight: 700; }
 
 // 회원가입 페이지 
 // .sign__up__table__wrap .select__renew { background: url(../img/select__renew.png) no-repeat 98% 50%; }
@@ -330,19 +328,26 @@ button.mo_only {display: none;}
 .td__calender {position: relative; width: 33.33%;}
 .s-select--no--style { appearance: none; padding: 0 8px;}
 
+.check__result .table__vertical table thead tr th:nth-child(1) {border-left: 0;}
+.check__result .table__vertical table thead tr th:nth-last-child(1) {border-right: 0;}
+.check__result .table__vertical table tbody tr th:nth-child(1){border-left: 0; background-color: transparent;}
+.check__result .table__vertical table tbody td:nth-last-child(1) {border-right: 0;}
+.note__th {border-bottom: 0.1rem solid #ddd;}
+.no__border__note .note__th {border-bottom: 0;}
+
 // 프린트 페이지 전용
-// #print__body {display: flex; justify-content: center; align-items: center;}
-// .printResult .printResult__inner {padding: 4.8rem; }
 .printResult__desc {font-size: 2.1rem; padding-top: 2.4rem; padding-bottom: 6.4rem;}
 .grayTable th {background-color: #f8f8f8;}
 .printPage {width: 21cm; min-height: 29.7cm; position: relative;}
-.printResult__inner {padding-top: 4rem; padding-left: 2rem; padding-right: 2rem;  height: 100%; position: absolute; left: 0; top: 0;} 
+.printPage .main__title__lg {font-size: 3.2rem;}
+.printResult__inner {padding-top: 6rem; padding-left: 2rem; padding-right: 2rem;  height: 100%; position: absolute; left: 0; top: 0;} 
 // .print__date {position: absolute; bottom: 4rem; left: 50%; transform: translateX(-50%);}
-.printPage th {font-size: 1.4rem; padding: 0 0.4rem;}
-.printPage td {font-weight: 400; font-size: 1.4rem;}
+.printPage th {font-size: 1.1rem; padding: 0 0.4rem;}
+.printPage td {font-weight: 400; font-size: 1.1rem;}
 @page {size: A4; margin: 0;}
 @media print {
     .printPage {
+        print-color-adjust: exact;
         margin: 0;
         border: initial;
         border-radius: initial;
@@ -354,5 +359,77 @@ button.mo_only {display: none;}
     }
 }
 //.grayTable th {background-color: #f1f1f1;}
+
+/* 서브 모바일 스타일 CSS */
+.mobile__tab .swiper-slide { max-width: 13rem; text-align: center;}
+.mobile__tab .swiper-slide button {width: 100%;height: 100%;color: #555555;background: transparent;font-size: 1.9rem;padding: 2rem 1.6rem;white-space: nowrap;border-bottom: 0.2rem solid #ddd;font-weight: 700;}
+.mobile__tab .swiper-button-next {border-radius: 50%;background: url(../img/mo__tab__next.png) no-repeat center;background-size: 100% auto;box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);}
+.mobile__tab .swiper-button-prev {border-radius: 50%;background: url(../img/mo__tab__prev.png) no-repeat center;background-size: 100% auto;box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);}
+.mobile__tab .swiper-button-next,
+.mobile__tab .swiper-button-prev {position: absolute;z-index: 66;width: 2.4rem;height: 2.4rem;margin-top: 0;margin-top: calc(0px - 1.2rem);}
+.mobile__tab .swiper-button-next::after,
+.mobile__tab .swiper-button-prev::after {font-size: 0;width: 100%;height: 100%;z-index: 21;position: absolute;left: 0;top: 0;}
+.mobile__tab .swiper-button-next::after {background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));padding: 0.8rem 1.6rem 0.8rem 3.2rem;}
+.mobile__tab .swiper-button-prev::after {background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));padding: 0.8rem 3.2rem 0.8rem 1.6rem;}
+.mobile__tab .swiper-slide button.active {color: #21A366;position: relative;}
+.mobile__tab .swiper-slide button.active::after {content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 0.4rem;background-color: #21a366;}
+
+.mobile__tab .swiper-slide button.active {color: #21A366; position: relative;}
+.mobile__tab .swiper-slide button.active::after {content: ''; position: absolute;bottom: 0;left: 0;width: 100%;height: 0.4rem;background-color: #21a366;}
+
+.mobile__con {margin: 4rem 0;}
+.mobile__con .market {margin-bottom: 4rem;}
+.mobile__con table {text-align: left;}
+.mobile__con table tr {display: flex;align-items: center;margin-top: 2rem;}
+.mobile__con table tr th:nth-of-type(2) {margin-top: 2rem;}
+.mobile__con table tr td {margin-top: 1rem;}
+.mobile__con table tr th,
+.mobile__con table tr td {width: 100%;}
+.mobile__con table tr th select,
+.mobile__con table tr td select {width: 100%;height: 4rem;border: 0.1rem solid #ccc;padding: 0.8rem;}
+.mobile__con table tr th input,
+.mobile__con table tr td input {text-align: right;}
+
+.mobile__con table th {background: transparent;}
+.mobile__con table th {background: transparent;}
+
+// 아코디언 테이블 스타일
+.mo__column {font-size: 1.7rem;}
+.mo__column tr {flex-wrap: nowrap;margin-top: 1.6rem;}
+.mo__column tr td:nth-child(2) {text-align: right;}
+.mo__column .sub__element {font-weight: 700;font-size: 1.8rem;color: #333;margin-top: 2.4rem;}
+.mo__column td {margin-top: 0;}
+
+// 하위 항목 표시
+.child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
+.mo__column .sub__element td {display: flex; align-items: center;}
+.mo__column .sub__element td > span {display: flex; align-items: center;}
+.mo__column .sub__element td::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}
+
+// 모듈 : 아코디언 서브 데이터 토글
+.data--open {position: relative;padding: 2rem 0.8rem;font-size: 1.7rem;}
+.data--open .arrow__wrap {position: absolute;top: 50%;transform: translateY(-50%);right: 1rem;}
+.data--open .arrow__wrap .arrow__top {display: none;width: 1.6rem;height: 1.6rem;background: url(../img/arrow__top-green.svg) no-repeat center;}
+.data--open .arrow__wrap .arrow__bottom {display: block;width: 1.6rem;height: 1.6rem;background: url(../img/acordian__arrow__down.png) no-repeat center;}
+.data--open.first {border-top: 0.1rem solid #ddd;}
+.data--open {cursor: pointer;width: 100%;position: relative; border-bottom: 0.1rem solid #ddd;}
+.data__toggle {font-size: 1.7rem;font-weight: 700;}
+.data--open.on {border-bottom: 0.3rem solid #21A366;}
+.data--open.on .data__toggle {color: #21A366;}
+.data--open.on .arrow__top { display: block;}
+.data--open.on .arrow__bottom { display: none;}
+.mo__slide {padding: 0 1rem;}
+.t__title__wrap {padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd;}
+.t__last__data {margin-bottom: 3rem;}
+
+// 노동 조합 정보
+.list__btn__group {text-align: right;}
+.list__btn__group button {color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem;  margin-top: 4rem; margin-bottom: 2rem; border-radius: 0.7rem; font-weight: 600;}
+.mobile__market__input {width: 100%;}
+.mobile__market__input__2 {width: calc(50% - 1em);}
+.mobile__market__input__3 {width: calc(33.33% - 1em);}
+
+.tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
+.tab__4__table {margin-bottom: 2.8rem;}
 
 

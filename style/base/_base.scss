@@ -1,113 +1,39 @@
-/*  기본 공통 CSS  */
-
-/* 
-  색상 값 변수 관리
-*/
-$main-color: #246BEB;
-$second-color: #003675;
-$text-color: #1d1d1d;
-$table-border-color-dd: #ddd;
-$theme-btn-blue-00 : #246BEB;
-$theme-btn-blue-01 : #1D56BC;
-// $theme-btn-blue-01 : #003675;
-$theme-btn-bk-00 : #000000;
-$theme-btn-red-00 : #B9131E;
-$theme-krds-skyblue-00 : #DEEBF7;
-$theme-krds-skyblue-01 : #EDF1F5;
-$theme-krds-navy-00 : #003675;
-// 버튼 컬러 
+/****************************************************
+	파일명	: base.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 공통 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
 
 
-* {
-    box-sizing: border-box;
-    text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(
-      0,
-      0,
-      0,
-      0
-    ) !important; 
-}
-
-  
 #wrap {position: relative; overflow: hidden;}
 #skip-nav {display: none;}
 html {font-size: 62.5%;}
 table {width: 100%; font-size: 1.6rem;}
-
-
-// 폰트
-@font-face {
-	font-family: 'Pretendard GOV';
-	font-weight: 800;
-	font-display: swap;
-	src: local('Pretendard GOV ExtraBold'), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../font/woff/PretendardGOV-ExtraBold.woff) format('woff');
+input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
+input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
+input[type="week"], input[type="file"], input[type="submit"], input[type="button"], 
+input[type="reset"], textarea, select, button {
+font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
+system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
+"Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+font-size: 1.6rem;
+background-color: #fff;
 }
-
-@font-face {
-	font-family: 'Pretendard GOV';
-	font-weight: 700;
-	font-display: swap;
-	src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard GOV';
-	font-weight: 500;
-	font-display: swap;
-	src: local('Pretendard GOV Medium'), url(../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../font/woff/PretendardGOV-Medium.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard GOV';
-	font-weight: 400;
-	font-display: swap;
-	src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
-}
-
-
-body {
-  font-size: 1.6rem;
-    color: #1d1d1d;
-    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system,
-      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    overflow-x: hidden;
-}
-
-.inner { max-width: 128rem; width: 128rem; margin: 0px auto;}
-.right__icon__set .hamburger {display: none;}
-
-  input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
-  input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
-  input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
-  input[type="week"], input[type="file"], input[type="submit"], input[type="button"], 
-  input[type="reset"], textarea, select, button {
-    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
-    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    font-size: 1.6rem;
-    background-color: #fff;
-  }
 input[type="text"], select, input[type="password"] {border: 0.1rem solid #CBCCCD; border-radius: 0.5rem; padding: 1.2rem;}
 select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-height: 4rem;}
 .file__post {display: none;}
-
-
 input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
 input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
-/* 라디오 버튼이 체크되지 않았을 때 */
-input[type="radio"].clicked:not(:checked) {
-  appearance: none;
-  background-color: #D8D8D8;
-  border: 0.1rem solid #C6C6C6;
-}
-
-/* 라디오 버튼이 체크되지 않은 상태일 때 레이블 스타일 */
-input[type="radio"].clicked:not(:checked) + label {
-  color: #D8D8D8;
-}
+input[type="radio"].clicked:not(:checked) {appearance: none;background-color: #D8D8D8;border: 0.1rem solid #C6C6C6;}
+input[type="radio"].clicked:not(:checked) + label {color: #D8D8D8;}
 
 
 // 타이틀 영역 전체 적용
@@ -116,7 +42,6 @@ input[type="radio"].clicked:not(:checked) + label {
 .flex__title { display: flex; align-items: center; justify-content: space-between;}
 .flex__title span {font-size: 1.6rem;}
 
-// 페이지 제목
 .page__title {font-size: 4rem;}
 
 
@@ -173,7 +98,7 @@ height: 100%;
     outline: 0.2rem dashed #0cc;
   }
   
- 
+
 
   /* 
     상태 변경 유틸리티 클래스 네이밍 규칙
@@ -233,9 +158,17 @@ height: 100%;
   .mg--20-b {margin-bottom: 2rem;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
+  .mg--64-All {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 
 
-  
+  /* 헬퍼 라지 Space */
+  .hp--lgSpace {margin-bottom: 25rem;}
+  @media all and (max-width: 767px) {.hp--lgSpace{margin-bottom: 6rem;}}
+
+  .hp--mdSpace {margin-top: 6.4rem;}
+  @media all and (max-width: 767px) {.hp--mdSpace{margin-top: 3.6rem;}}
+
+
   // 테이블 top에 굵은 border 적용
   .border-top-large {border-top: 0.2rem solid #000;}
 
@@ -263,6 +196,7 @@ height: 100%;
   .width--60 {width: 60%;}
   .width--80 {width: 80%;}
   .width--100 {width: 100%;}
+  .width__100 {width: 100%;}
 
   // 높이 제어
   .min--h-4 {min-height: 4rem;}
@@ -274,7 +208,6 @@ height: 100%;
 
   // 컬러 제어
   .bg--f9f9 {background-color: #F9F9FA;}
-  .table--fixed {table-layout: fixed;}
 
   // 보더 제어
   .border--btm {border-bottom: 0.1rem solid #ddd;}
@@ -286,13 +219,8 @@ height: 100%;
   .btn--active { background-color: #003675; color: #fff;}
   .btn--disabled { background-color: #fff; color: #1d1d1d;}
 
-  // 필수 입력 표시
-
-  .must__write { position: relative;}
-  .must__write::after {content: " *"; color: #fe5555; font-weight: bold; position: absolute; right: -1rem; }
 
   // overflow 관련
-
   .table--overflow-y {height: 30rem; overflow-x: auto;}
   .table--overflow-x {overflow-x: auto;}
 
@@ -331,9 +259,56 @@ height: 100%;
   // 에러 메세지 관련
   .error-message {color: #E71825;}
 
+  // el : 제목
   .main__title {font-size: 2.5rem; font-weight: 700;}
   .main__title__md {font-size: 2.1rem; font-weight: 700;}
   .main__title__lg{font-size: 4rem; font-weight: 700;}
+
+  // layout 
+  .ly__cont {padding-top: 6.4rem;}
+  .ly__cont2 {padding-top: 3.6rem;}
+
+
+  // 폰트
+  @font-face {
+    font-family: 'Pretendard GOV';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard GOV ExtraBold'), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../font/woff/PretendardGOV-ExtraBold.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'Pretendard GOV';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'Pretendard GOV';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard GOV Medium'), url(../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../font/woff/PretendardGOV-Medium.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'Pretendard GOV';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
+  }
+
+
+  body {
+    font-size: 1.6rem;
+      color: #1d1d1d;
+      font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system,
+        BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+        "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      overflow-x: hidden;
+  }
+
 
 
 

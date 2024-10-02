@@ -1,15 +1,14 @@
-/* 
-  테이블 CSS
-*/
-
+/*  테이블 CSS */
 
 // 테이블 공통 스타일
 table th {font-weight: 700; background-color: #EAF5F0;}
 table td {font-weight: 700;}
 table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1rem; height: 0.1rem; clip: rect(0, 0, 0, 0); margin: -0.1rem;}
 
-// 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
+// 프린트 페이지 출력 페이지에서만 사용
+.border-middleGray {border-top: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
 
+// 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
 .table__vertical table thead tr th {border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
@@ -20,16 +19,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__vertical tbody td {vertical-align: middle; }  
 .table__vertical tbody td:nth-last-child(1) {border-right:0;} 
 
-
 // 가로 테이블 공통 스타일
-.table__horizontal { height: 5.8rem; border-top: 0.2rem solid #333; }
-.table__horizontal table { height: 100%; }
-.table__horizontal tbody th { text-align: left; padding: 0 1.5rem; line-height: 4.5rem; }
-.table__horizontal td { padding: 0 1rem; }
-.table__horizontal td select { width: 100%; height: 4rem; border: 0.1rem solid #ccc; padding: 0.8rem; }
-.table__horizontal td input[type="text"] {height: 4rem;}
-
-// thead를 가지고 있지 않은 가로 테이블 
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
 .table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center; min-width: 25rem;} 
 // .table__horizontal__ex td {width: auto; flex-grow: 1; display: inline-flex; align-items: center;} 
@@ -46,10 +36,38 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .input-3--flex input {flex: 1;}
 
 
+// 모바일용 테이블
+.m__table {display: none;}
+.table__horizontal__mo table {font-size: 1.9rem;}
+.table__horizontal__mo table th {background: transparent;}
+.table__horizontal__mo tr {border-bottom: 0.1rem solid #ddd;}
+.table__horizontal__mo td {display: block;}
+.table__horizontal__mo tr td:not(:first-child):not(:last-child){padding-bottom: 1rem;}
+.table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
+.table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
+.attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../img/file__select--mo.svg) no-repeat center; background-size: cover; }
+.table__horizontal__mo:not(.widthAutoTable) .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
+.table__horizontal__mo .sub__title {font-weight: 700;}
+.accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem; font-weight: 700;}
+.mo__strongTitle {font-size: 1.9rem; font-weight: 700;}
+.table__horizontal__mo.miw120 .sub__title {min-width: 12rem;}
+.union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
+
 // 사용자 공통 테이블 타이틀
 .table__title__wrap {margin-bottom: 6.4rem; margin-top: 6.4rem;}
 .table__title__wrap .data__number {margin-top: 6.4rem;}
 .table__title {font-size: 2.5rem; font-weight: 700;}
+
+// 테이블 헬퍼 클래스
+// td의 min-height 적용 이슈로 다음과 같이 적용
+.table--fixed {table-layout: fixed;}
+.min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
+.text--r {justify-content: flex-end;}
+.text--l {justify-content: flex-start;}
+.text--c {justify-content: center;}
+.td__date {display: flex; align-items: center; gap: 1rem;}
+.td__radio {display: flex; align-items: center; gap: 1rem;}
+.td__date select {flex: 1;}
 
 
 // manage__labor 다중 셀렉터 및 인풋 조정 영역
@@ -70,11 +88,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__template__radio .radio__wrap input[type="radio"]:checked {border: 0.6rem solid #000;} 
 .table__template__radio .radio__wrap .flex {padding-left: 1rem;}
 
-.search__work .seach__work-table {
-    .main__th {width: 15.38%;}
-    .sub__th {width: 34.62%;}
-}
-
 
 // 체크 박스
 .radio__table th {width: 12.5%; line-height: 5.8rem;}
@@ -82,21 +95,8 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .radio__table tr {line-height: 5.8rem;}
 .radio__table .flex {display: flex; align-items: center;}
 .radio__table .flex label:not(:last-child) {margin-right: 2rem;}
-
-
-.table__horizontal__wrap th {background-color: #EAF5F0; vertical-align: middle;}
-.table__horizontal__wrap tr {border-bottom: 0.1rem solid #ddd;}
-.table__horizontal__wrap .note__td {line-height: 15rem;}
-.table__horizontal__wrap .note__td-txt-area {height: 100%;}
-.table__horizontal__wrap input[type="text"] {height: 4rem;}
-.table__horizontal__wrap select {height: 4rem;}
 .table--margin {margin: 0.9rem 1rem}
-.table__template__horizontal tr {display: flex;} 
-.table__template__horizontal th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left;} 
-.table__template__horizontal .default__table tr {line-height: 5.8rem;} 
-.table__template__horizontal .default__table th, .table__template__horizontal .default__table td {border-bottom: 1px solid #ddd;} 
-.table__template__horizontal .default__table th {width: auto;} 
-.table__template__horizontal .default__table td {width: auto;}
+
 
 // 모달 테이블 스타일
 .modal__error__table table tr th:nth-child(1) {width: 15.38%;}
@@ -120,22 +120,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .border-right {border-right: 0.1rem solid #ddd!important;}
 
 // 표 호버 배경색상 지정 영역입니다.
-// 기존 관리자 색상
-
-// .table__vertical tbody tr:hover {background-color: #D0DBE7!important;} 
-.border__input__wrap .table__vertical tbody tr:hover {background-color: transparent!important;}
-
-// 표 칸 형식
-// 관리자 메뉴 권한 관리 표 영역입니다.
-.auth__table thead tr th {height: 6rem; background-color: #f8f8f8; line-height: 6rem; text-align: center; vertical-align: middle;}
-.auth__table tr {border-bottom: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
-.auth__table tbody tr td > a {display: block;width: 100%; height: 100%;}
-.auth__table tbody tr td > a:hover {color: $second-color;}
-
-
-// thead를 포함하고 있는 가로형 테이블 (manage user)
-.table__horizontal__wrap.with__thead thead tr th {line-height: 5.8rem;}
-.table__information input[type="text"]{border: 0; width: 100%;}
 
 // checkbox__container == report
 // manage__report 조회 모달 체크 박스 
@@ -151,35 +135,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .read__info__table input[type="text"] {border: 0; font-weight: 700;}
 .table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
 
-// 모바일용 테이블
-.m__table {display: none;}
-.table__horizontal__mo table {font-size: 1.9rem;}
-.table__horizontal__mo table th {background: transparent;}
-.table__horizontal__mo tr {border-bottom: 0.1rem solid #ddd;}
-.table__horizontal__mo td {display: block;}
-.table__horizontal__mo tr td:not(:first-child):not(:last-child){padding-bottom: 1rem;}
-.table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
-.table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
-.attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../img/file__select--mo.svg) no-repeat center; background-size: cover; }
-.table__horizontal__mo:not(.widthAutoTable) .sub__title {width: 19.44%; min-width: 7rem; display: inline-block;}
-.table__horizontal__mo .sub__title {font-weight: 700;}
-.accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem; font-weight: 700;}
-.mo__strongTitle {font-size: 1.9rem; font-weight: 700;}
-
-.table__horizontal__mo.miw120 .sub__title {min-width: 12rem;}
-.union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
 
 
-// 테이블 헬퍼 클래스
-// td의 min-height 적용 이슈로 다음과 같이 적용
-.table--fixed {table-layout: fixed;}
-.min__h__box { display: flex; align-items: center; min-height: 6rem; padding: 0 1rem;}
-.text--r {justify-content: flex-end;}
-.text--l {justify-content: flex-start;}
-.text--c {justify-content: center;}
-
-
-.td__date {display: flex; align-items: center; gap: 1rem;}
-.td__radio {display: flex; align-items: center; gap: 1rem;}
-.td__date select {flex: 1;}
 

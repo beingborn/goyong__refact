@@ -238,7 +238,7 @@
                     </div>
                     <!-- 상단 검색 영역 -->
                     <div class="user__form__wrapper">
-                        <form class="search__form__user lv mt--64" action="POST">
+                        <form class="search__form__user lv hp--mdSpace" action="POST">
                             <div class="search">
                                 <input type="hidden" id="pageNo" name="pageNo" value="">
                                 <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
@@ -397,7 +397,7 @@
                         </div>
                     </div>
                     <!-- 웹 페이지 네이션 -->
-                    <div class="pagination w-page pagination__margin">
+                    <div class="pagination w-page mg--64-All">
                         <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
                         <div class="page-links">
                             <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
@@ -434,7 +434,7 @@
                         </div>
                     </div>
                     <!-- 도움말 상단 제목 -->
-                    <div class="info__tip__box flex--box-c">
+                    <div class="info__tip__box flex--box-c mg--16-b">
                         <h2 class="data__title">회계공시여부 정보</h2>
                         <button type="button" class="info__tip mg--10-l"></button>
                         <!-- 툴팁 내부 내용 -->
@@ -476,23 +476,53 @@
                     </div>
                     <!-- ./ 도움말 상단 제목 -->
                     <!-- 가로 테이블 예시 -->
-                    <div class="table__horizontal__ex table__horizotal__sh mo__columnTable mt--24 mg--56-b" id="main__content">
+                    <div class="table__horizontal__ex table__horizotal__sh mo__columnTable hp--lgSpace" id="main__content">
                         <table class="border-top-large">
                             <caption>회계공시여부 정보</caption>
                             <tbody>
                                 <tr>
-                                    <th><label for="">노동조합(산하조직)명</label></th>
-                                    <td><div class="td__container"><input type="text" value="건천산업노동조합"></div></td>
+                                    <th><label for="">노동조합<br class="pcOnly">(산하조직)명</label></th>
+                                    <td><div class="td__container"><input type="text" id="a" name="a" value="건설산업노동조합" readonly></div></td>
                                     <th><label for="">회계연도</label></th>
-                                    <td><div class="td__container"><input type="text" value="2022"></div></td>
+                                    <td><div class="td__container"><input type="text" id="b" name="b" value="2022" readonly></div></td>
                                     <th><label for="">대표자</label></th>
-                                    <td><div class="td__container"><input type="text" value="육*영"></div></td>
+                                    <td><div class="td__container"><input type="text" id="c" name="c" value="육*영" readonly></div></td>
                                 </tr>
                                 <tr>
                                     <th><label for="">총연합단체</label></th>
+                                    <td><div class="td__container"><input type="text" id="d" name="d" value="" readonly></div></td>
+                                    <th><label for="">총연합단체 공시여부</label></th>
                                     <td><div class="td__container"><input type="text" value=""></div></td>
-                                    <th><label for="">연합단체유무</label></th>
-                                    <td><div class="td__container"><input type="text" value=""></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">연합단체</label></th>
+                                    <td><div class="td__container"><input type="text" id="e" name="e" value="전국건설노동조합연맹" readonly></div></td>
+                                    <th><label for="">연합단체 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="f" name="f" value="공시완료" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">단위노동조합</label></th>
+                                    <td><div class="td__container"><input type="text" id="g" name="g" value="건설산업노동조합" readonly></div></td>
+                                    <th><label for="">단위노동조합 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="h" name="h" value="미공시" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지부</label></th>
+                                    <td><div class="td__container"><input type="text" id="i" name="i" value="" readonly></div></td>
+                                    <th><label for="">지부 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="j" name="j" value="" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지회</label></th>
+                                    <td><div class="td__container"><input type="text" id="k" name="k" value="" readonly></div></td>
+                                    <th><label for="">지회 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="l" name="l" value="" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">분회</label></th>
+                                    <td><div class="td__container"><input type="text" id="m" name="m" value="" readonly></div></td>
+                                    <th><label for="">분회 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="n" name="n" value="" readonly></div></td>
                                 </tr>
                             </tbody>
                         </table>
