@@ -314,3 +314,5 @@ $(".openPrint").on('click', function(){
   $printThis = $(this);
   window.open('print.html', '_blank')
 })
+
+
