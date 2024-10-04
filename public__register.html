@@ -571,404 +571,284 @@
                       <tbody>
                         <tr>
                           <th scope="row" class="txt--c border--r">공시사유구분</th>
-                          <td>
-                            <span style="line-height: 5.8rem" class="mg--10-l"
-                              >하반기 공시</span
-                            >
-                          </td>
+                          <td><div class="min__h__box">하반기 공시</div>  </td>
                         </tr>
                         <tr>
-                          <th scope="row" class="txt--c border--r"
-                            style="vertical-align: middle"
-                          >
-                            <span class="must__type">
-                              <label for="profile_pic"> 근거파일첨부 </label>
-                            </span>
-                          </th>
-
+                          <th scope="row" class="border--r"><label for="profile_pic" class="must__type"> 근거파일첨부 </label></th>
                           <td>
+                            <!-- 파일 첨부 커스텀 -->
                             <div class="td__container file__select__container" id="pwLength">
                               <div class="preview flex--box-c">
                                 <p class="upload__file__name">선택된 파일없음</p>
                                 <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
                               </div>
                               <label class="btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
-                              <input
-                                type="file"
-                                class="file__post"
-                                id="profile_pic"
-                                name="profile_pic"
-                                style="opacity: 0; width: 0px"
-                              />
+                              <input type="file" class="file__post" id="profile_pic" name="profile_pic"/>
                             </div>
+                            <!-- ./ 파일 첨부 커스텀 -->
                           </td>
                         </tr>
                       </tbody>
                   </table>
                 </div>
                 <!-- ./ 하반시 공시 등 근거자료 테이블 -->
-                <script>
-                  /** 
-                  함수명	: fn_next
-                  용도    : 버튼 클릭 시 회계공시 페이지 이동
-                  */
-                  
-                  function fn_next() {
-                    $("#public__btn button").click();
-                  }
-                </script>
-
+                <!-- 하단 버튼 그룹 -->
                 <div class="function__group btn__half__wrap margin-2">
                   <button type="button" class="btn__control bg--black-00">저장</button>
                   <button onclick="fn_next()" type="button" class="btn__control bg--blue-00">다음</button>
                 </div>
+                <!-- ./ 하단 버튼 그룹 -->
               </div>
               <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
               <div class="tab border__input__wrap">
-                <!-- 상단 공시정보 -->
-                <div class="dis__info">
-                  <div class="flex--box-c data__header">
-                      <h2 class="data__title ">공시정보</h2>
-                  </div>
-                  <div class="tab__detail table__horizontal__ex w__cont">
-                    <table class="border-top-large">
-                      <caption>
-                        공시정보 검색 폼
-                      </caption>
-                      <tbody>
-                        <tr style="position: relative" class="wide__first">
-                          <th scope="row">
-                            <label for="name" class="must__type">회계연도</label>
-                          </th>
-                          <td>
-                            <div class="td__container">
-                              <input type="text" value="2023" />
-                            </div>
-                          </td>
-                          <th scope="row">
-                            <label for="examples1033" class="must__type">회계기간</label>
-                          </th>
-                          <td>
-                            <div class="td__container flex--box-c">
-                              <div class="calender__body">
-                                <input
-                                  type="text"
-                                  class="datePicker"
-                                  id="testPicker_h"
-                                  maxlength="10"
-                                />
-                                <label
-                                  for="testPicker"
-                                  class="calender__icon mg--10-l"
-                                ></label>
+                <div>
+                    <div class="flex--box-c data__header">
+                        <h2 class="data__title ">공시정보</h2>
+                    </div>
+                    <!-- 회계공시 > 공시정보 테이블 -->
+                    <div class="table__horizontal__ex w__cont">
+                      <table class="border-top-large">
+                        <caption>공시정보 검색 폼</caption>
+                        <tbody>
+                          <tr class="wide__first">
+                            <th scope="row"><label for="name" class="must__type">회계연도</label></th>
+                            <td>
+                              <div class="td__container"><input type="text" value="2023" /></div>
+                            </td>
+                            <th scope="row"><label for="examples1033" class="must__type">회계기간</label></th>
+                            <td>
+                              <div class="td__container flex--box-c">
+                                <div class="calender__body">
+                                  <input type="text" class="datePicker" id="testPicker_h" maxlength="10"/>
+                                  <label for="testPicker" class="calender__icon mg--10-l"></label>
+                                </div>
+                                ~
+                                <div class="calender__body">
+                                  <input type="text" class="datePicker" id="testPicker_h" maxlength="10"/>
+                                  <label for="testPicker" class="calender__icon mg--10-l"></label>
+                                </div>
                               </div>
-                              ~
-                              <div class="calender__body">
-                                <input type="text" class="datePicker" id="testPicker_h" maxlength="10"/>
-                                <label for="testPicker" class="calender__icon mg--10-l"></label>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                <!-- 모바일용 상단 테이블 -->
-              <div class="user__form__wrapper m__table">
-                <form class="search__form__user" action="POST">
-                  <div class="search">
-                    <div class="flex--box-c search__list">
-                      <label for="label" class="mo_only must__type">회계연도</label>
-                        <div class="select__box"> 
-                          <select class="select--no--style select__renew" id="year" name="year">
-                          <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
-                        </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- ./ 회계공시 > 공시정보 테이블 -->
+                  <!-- 회계공시 모바일용 상단 테이블 -->
+                  <div class="user__form__wrapper m__table">
+                    <form class="search__form__user" action="POST">
+                      <div class="search">
+                        <div class="flex--box-c search__list">
+                          <label for="label" class="mo_only must__type">회계연도</label>
+                          <div class="select__box"> 
+                            <select class="select--no--style select__renew" id="year" name="year">
+                            <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
+                          </div>
                           <label for="label" class="mo_only">회계기간</label>
-                          <div class="input__box">
+                            <div class="input__box">
                               <label for="searchText" class="blind">회계기간</label>
-                              <div class="flex--box-c" style="gap: 1rem;">
-                              <div class="calender__body">
-                                <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
-                                <label for="testPicker" class="calender__icon mg--10-l"></label>
-                              </div>
-                              ~
-                              <div class="calender__body">
-                                <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
-                                <label for="testPicker" class="calender__icon mg--10-l"></label>
-                              </div>
-                              </div>
-                          </div>
-                  </div>
-                  </div>
-                </form>
-                </div>
-                </div>
-
-                <div class="w__cont">
-                <!-- 자산 및 부채 현황 -->
-                <div class="dis__info">
-                  <div class="flex--box-c data__header info__tip__box">
-                    <h2 class="data__title">자산 및 부채현황</h2>
-                    <button type="button" class="info__tip mg--10-l"></button>
-                    <div class="tooltip__layer">
-                      <div class="tooltip__top flex--box-s">
-                        <p class="tooltip__title">자산 및 부채현황</p>
-                        <button type="button" class="info__close__btn"></button>
-                      </div>
-                      <div class="tooltip__content">
-                        <div>
-                          <p>
-                            <strong>가</strong>
-                            자산부터 부채까지는 회계연도 종료일 현재 노동조합 또는 산하조직의 자산 및 부채가액을 일반회계, 특별회계, 보조금사업회계, 수익사업회계로 구분하여 입력합니다.
-                          </p>
-                          <div class="list pd--20-l">
-                            <p>&#8251; 일반회계는 조합비, 상급단체 교부금, 하부조직 부과금 등으로 운영하는 회계를 말합니다.</p>
-                            <p>&#8251; 특별회계는 정기예금 등 적립금 회계, 기금회계(예:쟁의기금), 일반적인 조합비 외의 특별 조합비 등 일반회계와 별도로 운영하는 회계를 말합니다.</p>
-                            <p>&#8251; 보조금사업회계는 국가 및 지방자치단체 또는 공공기관 등과 같은 보조사업자로부터 받은 보조금을 재원으로 하는 사업의 회계를 말합니다.</p>
-                            <p style="padding-bottom: 1.6rem;">&#8251; 수익사업회계는 임대사업, 영리시설 운영사업 등 법인세 납세의무가 있는 사업의 회계를 말합니다.</p>
-                          </div>
+                                <div class="flex--box-c" style="gap: 1rem;">
+                                  <div class="calender__body">
+                                    <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
+                                    <label for="testPicker" class="calender__icon mg--10-l"></label>
+                                  </div>
+                                  ~
+                                  <div class="calender__body">
+                                    <input type="text" class="datePicker width--100" id="testPicker_h" maxlength="10"/>
+                                    <label for="testPicker" class="calender__icon mg--10-l"></label>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
-                        <p>
-                          <strong>나</strong>
-                          자산이란 현금, 단기예금, 장기예금, 임차보증금, 토지, 건물 등 과거의 거래나 사건의 결과로 회계연도 종료일 현재 노동조합 또는 산하조직에 의해 지배되고 미래에 경제적 효익을 창출할 것으로 예상되는 자원을 말합니다.
-                        </p>
-                        <p>
-                          <strong>다</strong>
-                          현금 및 예금은 노동조합 또는 산하조직이 보유하고 있는 현금 및 현금성자산(보통예금, 당좌예금, 취득 시 만기가 3개월인 금융상품 등)과 금융기관 등에 예치하고 있는 정기예금의 가액을 입력합니다. 정기예금 등에서 발생한 미수이자는 현금 및 예금이 아닌 기타자산에 입력합니다.
-                        </p>
-                        <p>
-                          <strong>라</strong>
-                          기타자산은 노동조합 또는 산하조직이 가지고 있는 정기적금, 펀드상품, 저축성 보험상품 등 기타 금융자산과 조합비 미수금, 매출채권, 미수이자, 미수임대료, 선급금 등 현금 및 예금부터 건물까지에 해당하지 않는 자산을 입력합니다.
-                        </p>
-                        <p>
-                          <strong>마</strong>
-                          설립연월일은 노동조합현황 정기통보서 상 노동조합 설립일을 입력합니다.
-                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- ./ 회계공시 모바일용 상단 테이블 -->
+                </div>
+                <div class="w__cont">
+                  <div>
+                    <div class="flex--box-c data__header info__tip__box">
+                      <h2 class="data__title">자산 및 부채현황</h2>
+                      <button type="button" class="info__tip mg--10-l"></button>
+                      <div class="tooltip__layer">
+                        <div class="tooltip__top flex--box-s">
+                          <p class="tooltip__title">자산 및 부채현황</p>
+                          <button type="button" class="info__close__btn"></button>
+                        </div>
+                        <div class="tooltip__content">
+                          <div>
+                            <p>
+                              <strong>가</strong>
+                              자산부터 부채까지는 회계연도 종료일 현재 노동조합 또는 산하조직의 자산 및 부채가액을 일반회계, 특별회계, 보조금사업회계, 수익사업회계로 구분하여 입력합니다.
+                            </p>
+                            <div class="list pd--20-l">
+                              <p>&#8251; 일반회계는 조합비, 상급단체 교부금, 하부조직 부과금 등으로 운영하는 회계를 말합니다.</p>
+                              <p>&#8251; 특별회계는 정기예금 등 적립금 회계, 기금회계(예:쟁의기금), 일반적인 조합비 외의 특별 조합비 등 일반회계와 별도로 운영하는 회계를 말합니다.</p>
+                              <p>&#8251; 보조금사업회계는 국가 및 지방자치단체 또는 공공기관 등과 같은 보조사업자로부터 받은 보조금을 재원으로 하는 사업의 회계를 말합니다.</p>
+                              <p style="padding-bottom: 1.6rem;">&#8251; 수익사업회계는 임대사업, 영리시설 운영사업 등 법인세 납세의무가 있는 사업의 회계를 말합니다.</p>
+                            </div>
+                          </div>
+                          <p>
+                            <strong>나</strong>
+                            자산이란 현금, 단기예금, 장기예금, 임차보증금, 토지, 건물 등 과거의 거래나 사건의 결과로 회계연도 종료일 현재 노동조합 또는 산하조직에 의해 지배되고 미래에 경제적 효익을 창출할 것으로 예상되는 자원을 말합니다.
+                          </p>
+                          <p>
+                            <strong>다</strong>
+                            현금 및 예금은 노동조합 또는 산하조직이 보유하고 있는 현금 및 현금성자산(보통예금, 당좌예금, 취득 시 만기가 3개월인 금융상품 등)과 금융기관 등에 예치하고 있는 정기예금의 가액을 입력합니다. 정기예금 등에서 발생한 미수이자는 현금 및 예금이 아닌 기타자산에 입력합니다.
+                          </p>
+                          <p>
+                            <strong>라</strong>
+                            기타자산은 노동조합 또는 산하조직이 가지고 있는 정기적금, 펀드상품, 저축성 보험상품 등 기타 금융자산과 조합비 미수금, 매출채권, 미수이자, 미수임대료, 선급금 등 현금 및 예금부터 건물까지에 해당하지 않는 자산을 입력합니다.
+                          </p>
+                          <p>
+                            <strong>마</strong>
+                            설립연월일은 노동조합현황 정기통보서 상 노동조합 설립일을 입력합니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
+                    <!-- 웹 자산 및 부채 현황 세로형 테이블 -->
+                    <div class="tab__detail table__vertical">
+                      <table class="cross__table border-top-large">
+                        <caption>자산 및 부채현황 {구분, 자산} 세로형 테이블</caption>
+                        <colgroup>
+                          <col class="align__cols"/>
+                          <col width="13.52%"/>
+                          <col width="13.52%"/>
+                          <col width="13.52%"/>
+                          <col width="13.52%"/>
+                          <col width="13.52%"/>
+                          <col width="13.52%"/>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col"><div class="min__h__box text--c">구분</div></th>
+                            <th scope="col"><div class="min__h__box text--c">자산</div></th>
+                            <th scope="col"><div class="min__h__box text--c">현금및예금</div></th>
+                            <th scope="col"><div class="min__h__box text--c">토지</div></th>
+                            <th scope="col"><div class="min__h__box text--c">건물</div></th>
+                            <th scope="col"><div class="min__h__box text--c">기타자산</div></th>
+                            <th scope="col"><div class="min__h__box text--c">부채</div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="22" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="23" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="24" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="25" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="26" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="27" readonly></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="28" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="29" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="30" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="31" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="32" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="33" readonly></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <div class="min__h__box text--l">ⓒ특별회계</div>
+                            </th>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="34" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="35" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="36" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="37" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="38" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="39" readonly></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <div class="min__h__box text--l">ⓓ보조금사업회계</div>
+                            </th>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="40" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="41" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="42" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="43" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="44" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="45" readonly></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <div class="min__h__box text--l">ⓔ수입사업회계</div>
+                            </th>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="46" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="47" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="48" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="49" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="50" readonly></div>
+                            </td>
+                            <td class="txt--l">
+                              <div class="td__container"><input type="text" value="51" readonly></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-
-                  <div class="tab__detail table__vertical">
-                    <table class="cross__table border-top-large">
-                      <caption>
-                        자산 및 부채현황 {구분, 자산}
-                      </caption>
-                      <colgroup>
-                        <col class="align__cols" />
-                        <col width="13.52%" />
-                        <col width="13.52%" />
-                        <col width="13.52%" />
-                        <col width="13.52%" />
-                        <col width="13.52%" />
-                        <col />
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th scope="col">
-                            <div class="min__h__box text--c">구분</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">자산</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">현금및예금</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">토지</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">건물</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">기타자산</div>
-                          </th>
-                          <th scope="col">
-                            <div class="min__h__box text--c">부채</div>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div>
-                          </th>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓑ일반회계</div>
-                          </th>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓒ특별회계</div>
-                          </th>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓓ보조금사업회계</div>
-                          </th>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓔ수입사업회계</div>
-                          </th>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                          <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
                 <!-- 수입현황 -->
-                <div class="dis__info earn__sit">
+                <div class="earn__sit">
                   <div class="flex--box-c data__header info__tip__box">
                     <h2 class="data__title">수입현황</h2>
                     <button type="button" class="info__tip mg--10-l"></button>
@@ -1008,354 +888,214 @@
                       </div>
                     </div>
                   </div>
+                  <!-- 웹 수입 현황 테이블 -->
                   <div class="tab__detail table__vertical">
                     <table class="cross__table border-top-large">
-                      <caption>
-                        수입현황 {구분, 자산}
-                      </caption>
+                      <caption>수입현황 {구분, 자산}</caption>
                       <colgroup>
-                        <col class="align__cols" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
+                        <col class="align__cols"/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
                       </colgroup>
                       <thead>
                         <tr>
-                          <th scope="col" rowspan="2">
-                            <div class="min__h__box text--c">구분</div>
-                          </th>
-                          <th rowspan="2">
-                            <div class="min__h__box text--c">수입총계</div>
-                          </th>
-                          <th rowspan="2">
-                            <div class="min__h__box text--c">전년도 이월금</div>
-                          </th>
-                          <th colspan="8">
-                            <div class="min__h__box text--c">당기수입</div>
-                          </th>
+                          <th scope="col" rowspan="2"><div class="min__h__box text--c">구분</div></th>
+                          <th rowspan="2"><div class="min__h__box text--c">수입총계</div></th>
+                          <th rowspan="2"><div class="min__h__box text--c">전년도 이월금</div></th>
+                          <th colspan="8"><div class="min__h__box text--c">당기수입</div></th>
                         </tr>
                         <tr>
-                          <th>
-                            <div class="min__h__box text--c">조합비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">상급단체 교부금</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">하부조직 부과금</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">후원금</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">타회계 전임금</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">보조금 수입</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">수익사업 수입</div>
-                          </th>
-
-                          <th>
-                            <div class="min__h__box text--c">기타</div>
-                          </th>
+                          <th><div class="min__h__box text--c">조합비</div></th>
+                          <th><div class="min__h__box text--c">상급단체 교부금</div></th>
+                          <th><div class="min__h__box text--c">하부조직 부과금</div></th>
+                          <th><div class="min__h__box text--c">후원금</div></th>
+                          <th><div class="min__h__box text--c">타회계 전임금</div></th>
+                          <th><div class="min__h__box text--c">보조금 수입</div></th>
+                          <th><div class="min__h__box text--c">수익사업 수입</div></th>
+                          <th><div class="min__h__box text--c">기타</div></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓑ일반회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓒ특별회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓓ보조금사업회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓔ수입사업회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                  <!-- ./ 웹 수입 현황 테이블 -->
                 </div>
                 <!-- 지출 현황 -->
-                <div class="dis__info expend__sit">
+                <div class="expend__sit">
                   <div class="flex--box-c data__header info__tip__box">
                     <h2 class="data__title">지출현황</h2>
                     <button type="button" class="info__tip mg--10-l"></button>
@@ -1410,6 +1150,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- 웹 지출 현황 테이블 -->
                   <div class="tab__detail table__vertical border-top-large">
                     <table class="min--width cross__table">
                       <caption>지출현황</caption>
@@ -1433,496 +1174,292 @@
                       </colgroup>
                       <thead>
                         <tr>
-                          <th scope="col" rowspan="3">
-                            <div class="min__h__box text--c">구분</div>
-                          </th>
-                          <th rowspan="3">
-                            <div class="min__h__box text--c">지출총계</div>
-                          </th>
-                          <th colspan="13">
-                            <div class="min__h__box text--c">당기지출</div>
-                          </th>
-                          <th rowspan="3">
-                            <div class="min__h__box text--c">
-                              차년도<br />이월금
-                            </div>
-                          </th>
+                          <th scope="col" rowspan="3"><div class="min__h__box text--c">구분</div></th>
+                          <th rowspan="3"><div class="min__h__box text--c">지출총계</div></th>
+                          <th colspan="13"><div class="min__h__box text--c">당기지출</div></th>
+                          <th rowspan="3"><div class="min__h__box text--c">차년도<br />이월금</div></th>
                         </tr>
                         <tr>
-                          <th colspan="3">
-                            <div class="min__h__box text--c">일반관리비용</div>
-                          </th>
-                          <th colspan="6">
-                            <div class="min__h__box text--c">사업수행비용</div>
-                          </th>
-                          <th rowspan="2">
-                            <div class="min__h__box text--c">
-                              상급단체<br/>부과금
-                            </div>
-                          </th>
-                          <th rowspan="2">
-                            <div class="min__h__box text--c">
-                              하부조직<br />교부금
-                            </div>
-                          </th>
-                          <th rowspan="2">
-                            <div class="min__h__box text--c">
-                              타회계<br />전출금
-                            </div>
-                          </th>
-                          <th rowspan="2" class="border-right">
-                            <div class="min__h__box text--c">기타</div>
-                          </th>
+                          <th colspan="3"><div class="min__h__box text--c">일반관리비용</div></th>
+                          <th colspan="6"><div class="min__h__box text--c">사업수행비용</div></th>
+                          <th rowspan="2"><div class="min__h__box text--c">상급단체<br/>부과금</div></th>
+                          <th rowspan="2"><div class="min__h__box text--c">하부조직<br />교부금</div></th>
+                          <th rowspan="2"><div class="min__h__box text--c">타회계<br />전출금</div></th>
+                          <th rowspan="2" class="border-right"><div class="min__h__box text--c">기타</div></th>
                         </tr>
                         <tr>
-                          <th>
-                            <div class="min__h__box text--c">인건비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">업무추진비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">기타운영비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">
-                              총회 등 <br />대회비
-                            </div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">조직사업비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">정책사업비</div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">
-                              교육·홍보<br />사업비
-                            </div>
-                          </th>
-                          <th>
-                            <div class="min__h__box text--c">
-                              교섭·쟁의<br />사업비
-                            </div>
-                          </th>
-                          <th class="border-right">
-                            <div class="min__h__box text--c">기타사업비</div>
-                          </th>
+                          <th><div class="min__h__box text--c">인건비</div></th>
+                          <th><div class="min__h__box text--c">업무추진비</div></th>
+                          <th><div class="min__h__box text--c">기타운영비</div></th>
+                          <th><div class="min__h__box text--c">총회 등 <br />대회비</div></th>
+                          <th><div class="min__h__box text--c">조직사업비</div></th>
+                          <th><div class="min__h__box text--c">정책사업비</div></th>
+                          <th><div class="min__h__box text--c">교육·홍보<br />사업비</div></th>
+                          <th><div class="min__h__box text--c">교섭·쟁의<br />사업비</div></th>
+                          <th class="border-right"><div class="min__h__box text--c">기타사업비</div></th>
                         </tr>
                       </thead>
                       <tbody>
+                        <!-- 총계 -->
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
+                        <!-- 일반 회계 -->
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓑ일반회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
+                        <!-- 특별 회계 -->
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓒ특별회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
+                        <!-- 보조금 사업 회계 -->
                         <tr>
-                          <th scope="row">
-                            <div class="min__h__box text--l">ⓓ보조금사업회계</div>
-                          </th>
+                          <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
+                        <!-- 수입사업회계 -->
                         <tr>
                           <th scope="row">
                             <div class="min__h__box text--l">ⓔ수입사업회계</div>
                           </th>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                           <td class="txt--l">
-                            <div class="td__container">
-                              <input type="text" value="22" readonly="readonly" />
-                            </div>
+                            <div class="td__container"><input type="text" value="22" readonly></div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                  <!-- ./ 웹 지출 현황 테이블 -->
                 </div>
+                <!-- ./ 지출 현황 -->
                 </div>
                 <div class="mobile__con motab-2 m__table"> 
                   <!-- 모바일 자산 및 부채 현황  -->
                   <div class="dis__info first__mo">
-                    <!-- 모바일 데이터 슬라이드 -->
+                    <!-- 모바일 자산 및 부채 현황 데이터 슬라이드 제목 -->
                     <div class="data--open info__tip__box first flex--box">
-                      <span class="data__toggle">자산 및 부채현황
-                      </span>
+                      <span class="data__toggle">자산 및 부채현황</span>
                       <button type="button" class="info__tip mg--10-l"></button>
                       <div class="tooltip__layer">
                         <div class="tooltip__top flex--box-s">
@@ -1965,25 +1502,21 @@
                         <span class="arrow__bottom"></span>
                       </div>
                     </div>
+                    <!-- ./ 모바일 자산 및 부채 현황 데이터 슬라이드 제목 -->
+                    <!-- 모바일 자산 및 부채 현황 데이터 슬라이드 내용 -->
                     <div class="mo__tab__detail mo__slide">
                       <table class="mo__column">
-                        <caption>
-                          자산 및 부채현황
-                        </caption>
+                        <caption>자산 및 부채현황 내용</caption>
                         <thead>
                           <tr class="t__title__wrap">
                             <th colspan="2" class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
                           </tr>
-                          <tr class="second__th" style="display: none;">
-                            <th>항목</th>
-                            <th>금액</th>
-                          </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>자산</td>
                             <td>
-                              <input type="text" value="1,469,246">
+                              <span>자산</span>
+                              <span><input type="text" value="1,469,246"></span>
                             </td>
                           </tr>
                           <tr>
@@ -2123,7 +1656,9 @@
                         </tbody>
                       </table>
                     </div>
+                    <!-- ./ 모바일 자산 및 부채 현황 데이터 슬라이드 내용 -->
                   </div>
+                  <!-- ./ 모바일 자산 및 부채 현황  -->
                   <!-- 모바일 수입 현황  -->
                   <div class="dis__info">
                     <div class="data--open info__tip__box second flex--box">
@@ -2976,7 +2511,7 @@
                   </div>
                   <!-- ./ 모바일 지출 현황  -->
                 </div>
-
+                <!-- 주석 테이블 -->
                 <div class="tab__detail table__horizontal__ex table__last" style="margin-bottom: 20px">
                   <table>
                     <caption>
@@ -2994,12 +2529,14 @@
                     </tbody>
                   </table>
                 </div>
-
+                <!-- ./ 주석 테이블 -->
+                <!-- 하단 버튼 그룹 -->
                 <div class="function__group margin-2">
                   <button onclick="location.href='union__management.html'" type="button" class="btn__control bg--green-02">
                     가맹노조(산하조직)관리
                   </button>
                 </div>
+                <!-- ./ 하단 버튼 그룹 -->
               </div>
             </div>
           </div>
@@ -3011,7 +2548,6 @@
               <div class="footer__logo">
                 <img src="img/slogan_H48.svg" alt="하단 로고" />
               </div>
-
               <div class="footer__flex">
                 <div class="footer__info">
                   <p class="location">
@@ -3030,9 +2566,18 @@
         <!-- ./ 푸터 -->
         <div class="gnb__bg"></div>
     </div>
-    <!-- JS 파일 -->
     <script src="js/default.js"></script>
     <script>
+      /** 
+      함수명	: fn_next
+      용도    : 버튼 클릭 시 회계공시 페이지 이동
+      */
+      
+      function fn_next() {
+        $("#public__btn button").click();
+      }
+
+
       /** 
         함수명	: 없음
         용도    : 달력 표시 및 옵션 설정
