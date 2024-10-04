@@ -4,22 +4,15 @@ label.mo_only {display: none;}
 button.mo_only {display: none;}
 
 // 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap id , 서브 페이지 이미지 지정 
-#sub__wrap .content .visual__bg { width: 100%; height: 25rem; position: relative; }
-#sub__wrap .accn_desc .visual__bg {background: url(../img/top_visual_desc.jpg) no-repeat center;  background-size: cover; }
-#sub__wrap .accn_open .visual__bg {background: url(../img/top_visual_public_open.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .main_accn_desc .visual__bg {background: url(../img/top_visual_desc.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .member_info_change .visual__bg{background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .notice_detail .visual__bg {background: url(../img/top_visual_notice.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .notice .visual__bg {background: url(../img/top_visual_notice.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .password_change .visual__bg{background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .public_register .visual__bg {background: url(../img/top_visual_public_open.jpg) no-repeat center;  background-size: cover;} 
-#sub__wrap .sign_up .visual__bg {background: url(../img/top_visual_sign_up.jpg)  no-repeat center;  background-size: cover;}
-#sub__wrap .sub1_1 .visual__bg{background: url(../img/top_visual_public_open.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .check__accounting .visual__bg{background: url(../img/top_visual_public_open.jpg) no-repeat center;  background-size: cover;}
+#sub__wrap .visual__bg { width: 100%; height: 25rem; position: relative; background-repeat: no-repeat; background-position: center; background-size: cover;}
+#sub__wrap .accn_desc .visual__bg, #sub__wrap .main_accn_desc .visual__bg { background-image: url(../img/top_visual_desc.jpg);}
+#sub__wrap .accn_open .visual__bg, #sub__wrap .public_register .visual__bg, #sub__wrap .sub1_1 .visual__bg, #sub__wrap .check__accounting .visual__bg {background-image: url(../img/top_visual_public_open.jpg);}
+#sub__wrap .member_info_change .visual__bg, #sub__wrap .password_change .visual__bg, #sub__wrap .file_change .visual__bg {background-image: url(../img/top_visual_security.jpg);}
+#sub__wrap .notice_detail .visual__bg, #sub__wrap .notice .visual__bg {background-image: url(../img/top_visual_notice.jpg);}
+#sub__wrap .sign_up .visual__bg {background-image: url(../img/top_visual_sign_up.jpg);}
+#sub__wrap .union_management .visual__bg {background-image: url(../img/top_visual_union.jpg);}
+#sub__wrap .faq .visual__bg {background-image: url(../img/top_visual_faq.jpg);}
 
-#sub__wrap .union_management .visual__bg {background: url(../img/top_visual_union.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .faq .visual__bg {background: url(../img/top_visual_faq.jpg) no-repeat center;  background-size: cover;}
-#sub__wrap .file_change .visual__bg {background: url(../img/top_visual_security.jpg) no-repeat center;  background-size: cover;}
 // 서브 페이지 이미지 텍스트 위치 
 #sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
 #sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
@@ -30,7 +23,7 @@ button.mo_only {display: none;}
 .function__group.margin-2 {margin-top: 6.4rem;} 
 .pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
 .pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
-.notice__detail  .function__group.margin-1 {margin-bottom: 10rem;}
+.notice__detail .function__group.margin-1 {margin-bottom: 10rem;}
 .public__register__wrap .function__group.margin-2 {margin-bottom: 25rem;}
 
 
@@ -397,14 +390,14 @@ background-size: 2.4rem auto;
 .mo__slide {padding: 0 1rem;}
 .mo__slide > table {font-size: 1.7rem;}
 .mo__slide > table th {background: transparent;}
-.mo__slide > table .sub__element {font-weight: 700;font-size: 1.8rem;color: #333;margin-top: 2.4rem;}
+.mo__slide > table .sub__element {font-weight: 700;font-size: 1.8rem; }
 .mo__slide > table tbody tr td:first-of-type {margin-top: 2rem;}
 .mo__slide > table tbody tr td:last-child {margin-bottom: 3rem;}
 .mo__slide > table .sub__element td {display: flex; align-items: center;}
 .mo__slide > table .sub__element span {display: flex; align-items: center;}
 .mo__slide > table .sub__element::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}
 .mo__slide > table .t__title {margin-top: 2rem; padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd; display: flex;}
-.mo__slide > table tr td {margin-top: 1rem; display: flex; align-items: center; justify-content: space-between;}
+.mo__slide > table tr td {margin-top: 2rem; display: flex; align-items: center; justify-content: space-between;}
 .mo__slide input {text-align: right;}
 .td--separated {padding-top: 2rem; padding-bottom: 3rem; border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; margin-bottom: 0!important;}
 
@@ -415,9 +408,6 @@ background-size: 2.4rem auto;
 // 노동 조합 정보
 .list__btn__group {text-align: right;}
 .list__btn__group button {color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem;  margin-top: 4rem; margin-bottom: 2rem; border-radius: 0.7rem; font-weight: 600;}
-.mobile__market__input {width: 100%;}
-.mobile__market__input__2 {width: calc(50% - 1em);}
-.mobile__market__input__3 {width: calc(33.33% - 1em);}
 
 .tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
 .tab__4__table {margin-bottom: 2.8rem;}

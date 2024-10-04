@@ -2979,7 +2979,9 @@ button.mo_only {
   margin-bottom: 3.6rem;
 }
 
-
+.sub1__1__wrap .tab .pc__info {
+  margin-top: 6.4rem;
+}
 
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {
   margin-bottom: 6.4rem;
@@ -4276,7 +4278,7 @@ button.mo_only {
 }
 
 .mo__slide > table tr td {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4316,18 +4318,6 @@ button.mo_only {
   margin-bottom: 2rem;
   border-radius: 0.7rem;
   font-weight: 600;
-}
-
-.mobile__market__input {
-  width: 100%;
-}
-
-.mobile__market__input__2 {
-  width: calc(50% - 1em);
-}
-
-.mobile__market__input__3 {
-  width: calc(33.33% - 1em);
 }
 
 .tab__content table tbody .cols2 .must__write {
@@ -5627,7 +5617,9 @@ button.mo_only {
   .union__management__wrap .table__horizontal__ex {
     margin-bottom: 6rem;
   }
-
+  .sub1__1__wrap .tab .pc__info {
+    margin-top: 3.6rem;
+  }
   .sub1__1__wrap .function__group.margin-2 {
     margin-bottom: 6.4rem;
   }
