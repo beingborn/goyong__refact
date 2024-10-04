@@ -15,6 +15,7 @@
     <div class="skip__nav">
       <a href="#main__content">본문 바로가기</a>
     </div>
+    <!-- ./ 스킵 네비게이션 -->
     <div id="sub__wrap" class="wrap sub1__1__wrap">
         <!-- 헤더 -->
         <header class="header">
@@ -181,9 +182,10 @@
               </div>
           </nav>
           </div>
-      </header>
+        </header>
       <!-- 콘텐츠 영역 -->
       <main class="content sub1_1">
+        <!-- visual bg -->
         <div class="visual__bg">
           <div class="inner">
             <div class="visual__text">
@@ -192,17 +194,19 @@
             </div>
           </div>
         </div>
+        <!-- ./ visual bg -->
         <div class="inner">
+          <!-- breadcrumb -->
           <nav class="breadcrumb">
             <ol class="path">
                 <li class="home"><a href="index(변경).html" class="txt">홈</a></li>
                 <li><a href="accn__open.html" class="txt">회계공시열람</a></li>
                 <li><a href="sub1__1.html" class="txt">회계공시열람 상세 </a></li>
             </ol>
-        </nav>
+          </nav>
+          <!-- ./ breadcrumb -->
         </div>
-     
-        <!-- PC 탭 -->
+        <!-- PC용 탭 버튼 -->
         <div class="tab__wrap w__cont tab__border">
           <div class="tab__btn">
             <button type="button">노동조합정보</button>
@@ -217,7 +221,8 @@
             <button type="button">시계열차트</button>
           </div>
         </div>
-        <!-- 모바일탭 -->
+        <!-- ./ PC용 탭 버튼 -->
+        <!-- 모바일용 탭 버튼 -->
         <div class="mobile__tab m__cont">
           <div class="swiper moTabSwiper">
             <div class="swiper-wrapper">
@@ -238,25 +243,24 @@
             <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <!-- PC 노동조합정보 -->
+        <!-- ./ 모바일용 탭 버튼 -->
         <div class="tab__content" id="work__infomation">
           <div class="inner">
+            <!-- 웹 탭 1번 콘텐츠 (노동조합정보) -->
             <div class="tab__1 tab">
-              <div class="table__wrapper pc__info" id="main__content">
+              <div class="table__wrapper ly__cont" id="main__content">
                 <!-- 테이블 타이틀 -->
                 <div class="table__title__wrap">
                   <h2 class="data__title">기본사항</h2>
                 </div>
-                <div class="tab__detail table__horizontal__ex read__info__table w__table">
+                <!-- ./ 테이블 타이틀 -->
+                <!-- 기본 사항 테이블 -->
+                <div class="table__horizontal__ex read__info__table w__table">
                   <table class="border-top-large">
-                    <caption>
-                      공시정보 검색 폼
-                    </caption>
+                    <caption>기본 사항 관련 표</caption>
                     <tbody>
                       <tr>
-                        <th scope="row">
-                          <label for="examples9" class="must__type">노동조합명칭<br>(또는 산하조직)</label>
-                        </th>
+                        <th scope="row"><label for="examples9" class="must__type">노동조합명칭<br>(또는 산하조직)</label></th>
                         <td>
                           <div class="td__container"><input type="text" id="examples9" name="" value="전국항운노동조합연맹" readonly></div>
                         </td>
@@ -314,15 +318,14 @@
                     </tbody>
                   </table>
                 </div>
+                <!-- ./ 기본 사항 테이블 -->
                 <!-- 모바일용 노동조합 테이블 -->
                 <div class="table__horizontal__ex m__table read__info__table">
                   <table class="border-top-large">
                     <caption>모바일용 노동조합 테이블</caption>
                     <tbody>
                         <tr>
-                            <th scope="row">
-                                <label for="examples9" class="must__type">노동조합명칭<br>(또는 산하조직)</label>
-                            </th>
+                            <th scope="row"><label for="examples9" class="must__type">노동조합명칭<br>(또는 산하조직)</label></th>
                             <td>
                                 <div class="td__container">
                                     <input type="text" id="examples9" name="" value="전국항운노동조합연맹" readonly="">
@@ -397,20 +400,23 @@
                       </tbody>
                   </table>
                 </div>
+                <!-- ./ 모바일용 노동조합 테이블 -->
+                <!-- 노동조합 하단 버튼 그룹 -->
                 <div class="function__group margin-2">
                   <button onclick="location.href='accn__open.html'" type="button" class="btn__control bg--blue-00">목록</button>
                 </div>
+                <!-- ./ 노동조합 하단 버튼 그룹 -->
               </div>
             </div>
-            <!-- PC버전 회계공시열람 -->
+            <!-- ./ 웹 탭 1번 콘텐츠 (노동조합정보) -->
+            <!-- 웹 탭 2번 콘텐츠 (회계공시열람) -->
             <div class="tab__2 tab">
-              <div class="pc__info">
+              <div class="ly__cont">
                 <div class="data__header"><h2 class="data__title flex--box-s">공시정보 <span class="w__cont" style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2></div>
+                <!-- 웹 상단 공시정보 검색 테이블 -->
                 <div class="table__horizontal__ex w__table">
                   <table class="border-top-large">
-                    <caption>
-                      공시정보 검색 폼
-                    </caption>
+                    <caption>공시정보 검색 폼</caption>
                     <tbody>
                       <tr class="wide__first">
                         <th scope="row"><label for="name" class="must__type">회계연도</label></th>
@@ -437,31 +443,31 @@
                     </tbody>
                   </table>
                 </div>
-             <!-- 모바일용 상단 테이블 -->
-             <div class="user__form__wrapper m__table">
-                <form class="search__form__user" action="POST">
-                  <div class="search">
-                    <div class="flex--box-c search__list">
-                      <label for="label" class="mo_only" class="must__type">회계연도</label>
-                        <div class="select__box"> 
-                          <select class="select--no--style select__renew" id="year" name="year">
-                          <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
-                        </div>
-                          <label for="label" class="mo_only" class="must__type">회계기간</label>
-                          <div class="input__box">
-                              <label for="searchText" class="blind">회계기간</label>
-                              <div class="flex--box flexTwo">
-                              <input type="text" id="searchText" name="searchText" class="ml4" value="">
-                                ~       
-                              <input type="text" id="searchText" name="searchText" class="ml4" value="">
-                              </div>       
+                <!-- ./ 웹 상단 공시정보 검색 테이블 -->
+              <!-- 모바일용 상단 테이블 -->
+              <div class="user__form__wrapper m__table">
+                  <form class="search__form__user" action="POST">
+                    <div class="search">
+                      <div class="flex--box-c search__list">
+                        <label for="label" class="mo_only" class="must__type">회계연도</label>
+                          <div class="select__box"> 
+                            <select class="select--no--style select__renew" id="year" name="year">
+                            <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
                           </div>
+                            <label for="label" class="mo_only" class="must__type">회계기간</label>
+                            <div class="input__box">
+                                <label for="searchText" class="blind">회계기간</label>
+                                <div class="flex--box flexTwo">
+                                <input type="text" id="searchText" name="searchText" class="ml4" value="">
+                                  ~       
+                                <input type="text" id="searchText" name="searchText" class="ml4" value="">
+                                </div>       
+                            </div>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
-              </div>
-            <!-- 탭 2 모바일 컨텐츠 -->
             <div class="mobile__con motab-2 m__table"> 
               <!-- 모바일 자산 및 부채 현황  -->
               <div class="dis__info first__mo">
@@ -473,155 +479,59 @@
                     <span class="arrow__bottom"></span>
                   </div>
                 </div>
-                <div class="mo__tab__detail mo__slide">
-                  <table class="mo__column">
-                    <caption>자산 및 부채현황</caption>
-                    <thead>
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
-                      </tr>
-                      <tr class="second__th" style="display: none;">
-                        <th>항목</th>
-                        <th>금액</th>
-                      </tr>
-                    </thead>
+                <div class="mo__slide">
+                  <table>
+                    <caption>자산 및 부채현황 모바일 표 데이터</caption>
                     <tbody>
+                      <!-- 총계 -->
                       <tr>
-                        <td>자산</td>
-                        <td>135.750원</td>
-                      </tr>
-                      <tr>
-                        <td>현금 및 예금</td>
-                        <td>1,496,004</td>
-                      </tr>
-                      <tr>
-                        <td>토지</td>
-                        <td>803,117</td>
-                      </tr>
-                      <tr>
-                        <td>건물</td>
-                        <td>16,887,358</td>
-                      </tr>
-                      <tr>
-                        <td>기타 자산</td>
-                        <td>15,340,799</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>부채</td>
-                        <td>4,535,449</td>
+                        <th class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
+                        <td><span class="sub__title">자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">현금 및 예금</span><span>135,750</span></td>
+                        <td><span class="sub__title">토지</span><span>135,750</span></td>
+                        <td><span class="sub__title">건물</span><span>135,750</span></td>
+                        <td><span class="sub__title">기타 자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">부채</span><span>135,750</span></td>
                       </tr>
                       <!-- 일반회계 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓑ일반회계</th>
-                      </tr>
                       <tr>
-                        <td>자산</td>
-                        <td>135.750원</td>
+                        <th class="t__title">ⓑ일반회계</th>
+                        <td><span class="sub__title">자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">현금 및 예금</span><span>135,750</span></td>
+                        <td><span class="sub__title">토지</span><span>135,750</span></td>
+                        <td><span class="sub__title">건물</span><span>135,750</span></td>
+                        <td><span class="sub__title">기타 자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">부채</span><span>135,750</span></td>
                       </tr>
+                      <!-- 특별회계 -->
                       <tr>
-                        <td>현금 및 예금</td>
-                        <td>1,496,004</td>
+                        <th class="t__title">ⓒ특별회계</th>
+                        <td><span class="sub__title">자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">현금 및 예금</span><span>135,750</span></td>
+                        <td><span class="sub__title">토지</span><span>135,750</span></td>
+                        <td><span class="sub__title">건물</span><span>135,750</span></td>
+                        <td><span class="sub__title">기타 자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">부채</span><span>135,750</span></td>
                       </tr>
+                      <!-- 보조금사업회계 -->
                       <tr>
-                        <td>토지</td>
-                        <td>803,117</td>
+                        <th class="t__title">ⓓ보조금사업회계</th>
+                        <td><span class="sub__title">자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">현금 및 예금</span><span>135,750</span></td>
+                        <td><span class="sub__title">토지</span><span>135,750</span></td>
+                        <td><span class="sub__title">건물</span><span>135,750</span></td>
+                        <td><span class="sub__title">기타 자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">부채</span><span>135,750</span></td>
                       </tr>
+                      <!-- 수익사업회계 -->
                       <tr>
-                        <td>건물</td>
-                        <td>16,887,358</td>
-                      </tr>
-                      <tr>
-                        <td>기타 자산</td>
-                        <td>15,340,799</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>부채</td>
-                        <td>4,535,449</td>
-                      </tr>
-                    </tbody>
-                    <!-- 특별회계 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓒ특별회계</th>
-                      </tr>
-                      <tr>
-                        <td>자산</td>
-                        <td>135.750원</td>
-                      </tr>
-                      <tr>
-                        <td>현금 및 예금</td>
-                        <td>1,496,004</td>
-                      </tr>
-                      <tr>
-                        <td>토지</td>
-                        <td>803,117</td>
-                      </tr>
-                      <tr>
-                        <td>건물</td>
-                        <td>16,887,358</td>
-                      </tr>
-                      <tr>
-                        <td>기타 자산</td>
-                        <td>15,340,799</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>부채</td>
-                        <td>4,535,449</td>
-                      </tr>
-                    <!-- 보조금사업회계 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓓ보조금사업회계</th>
-                      </tr>
-                      <tr>
-                        <td>자산</td>
-                        <td>135.750원</td>
-                      </tr>
-                      <tr>
-                        <td>현금 및 예금</td>
-                        <td>1,496,004</td>
-                      </tr>
-                      <tr>
-                        <td>토지</td>
-                        <td>803,117</td>
-                      </tr>
-                      <tr>
-                        <td>건물</td>
-                        <td>16,887,358</td>
-                      </tr>
-                      <tr>
-                        <td>기타 자산</td>
-                        <td>15,340,799</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>부채</td>
-                        <td>4,535,449</td>
-                      </tr>
-                    <!-- 수입사업회계 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓔ수입사업회계</th>
-                      </tr>
-                      <tr>
-                        <td>자산</td>
-                        <td>135.750원</td>
-                      </tr>
-                      <tr>
-                        <td>현금 및 예금</td>
-                        <td>1,496,004</td>
-                      </tr>
-                      <tr>
-                        <td>토지</td>
-                        <td>803,117</td>
-                      </tr>
-                      <tr>
-                        <td>건물</td>
-                        <td>16,887,358</td>
-                      </tr>
-                      <tr>
-                        <td>기타 자산</td>
-                        <td>15,340,799</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>부채</td>
-                        <td>4,535,449</td>
+                        <th class="t__title">ⓔ수익사업회계</th>
+                        <td><span class="sub__title">자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">현금 및 예금</span><span>135,750</span></td>
+                        <td><span class="sub__title">토지</span><span>135,750</span></td>
+                        <td><span class="sub__title">건물</span><span>135,750</span></td>
+                        <td><span class="sub__title">기타 자산</span><span>135,750</span></td>
+                        <td><span class="sub__title">부채</span><span>135,750</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -637,290 +547,91 @@
                   </div> 
                 </div>
                 <!-- 데이터 오픈 엔드 하단 내역 스타트 -->
-                <div class="mo__tab__detail mo__slide">
-                  <table class="mo__column">
-                    <caption>
-                      수입 현황 부채현황
-                    </caption>
-                    <thead>
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
-                      </tr>
-                      <tr class="second__th" style="display: none;">
-                        <th>항목</th>
-                        <th>금액</th>
-                      </tr>
-                    </thead>
-                    <tbody class="sub__tbody">
+                <div class="mo__slide">
+                  <table>
+                    <caption>수입 현황 부채현황</caption>
+                    <tbody>
+                      <!-- 총계 -->
                       <tr>
-                        <td>수입총계</td>
-                        <td>1350</td>
+                        <th class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
+                        <td><span class="sub__title">수입총계</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">전년도 이월금</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">조합비</span><span>1,469,246</td>
+                        <td><span class="sub__title">상급단체교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">후원급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계 전임금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">보조금 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">수익사업 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
+                      <!-- 일반회계 -->
                       <tr>
-                        <td>전년도 이월금</td>
-                        <td>13212</td>
+                        <th class="t__title">ⓑ일반회계</th>
+                        <td><span class="sub__title">수입총계</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">전년도 이월금</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">조합비</span><span>1,469,246</td>
+                        <td><span class="sub__title">상급단체교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">후원급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계 전임금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">보조금 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">수익사업 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                          <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
+                      <!-- 특별회계 -->
                       <tr>
-                        <td>조합비</td>
-                        <td>2322</td>
+                        <th class="t__title">ⓒ특별회계</th>
+                        <td><span class="sub__title">수입총계</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">전년도 이월금</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">조합비</span><span>1,469,246</td>
+                        <td><span class="sub__title">상급단체교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">후원급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계 전임금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">보조금 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">수익사업 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
+                      <!-- 보조금사업회계 -->
                       <tr>
-                        <td>상급단체교부급</td>
-                        <td>2322</td>
+                        <th class="t__title">ⓓ보조금사업회계</th>
+                        <td><span class="sub__title">수입총계</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">전년도 이월금</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">조합비</span><span>1,469,246</td>
+                        <td><span class="sub__title">상급단체교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">후원급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계 전임금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">보조금 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">수익사업 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
+                      <!-- 수익사업회계 -->
                       <tr>
-                        <td>하부조직교부급</td>
-                        <td>3232</td>
+                        <th class="t__title">ⓔ수익사업회계</th>
+                        <td><span class="sub__title">수입총계</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">전년도 이월금</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">조합비</span><span>1,469,246</td>
+                        <td><span class="sub__title">상급단체교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">후원급</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계 전임금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">보조금 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">수익사업 수입</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
-                      <tr>
-                        <td>후원급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>타회계 전임금</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>보조금 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>수익사업 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>기타</td>
-                        <td>3232</td>
-                      </tr>
-                    </tbody>
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓑ일반회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>수입총계</td>
-                        <td>1350</td>
-                      </tr>
-                      <tr>
-                        <td>전년도 이월금</td>
-                        <td>13212</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>조합비</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>상급단체교부급</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>후원급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>타회계 전임금</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>보조금 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>수익사업 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr class="t__last__data">
-                        <td>기타</td>
-                        <td>3232</td>
-                      </tr>
-                    </tbody>
-                    <!-- 3 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓒ특별회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>수입총계</td>
-                        <td>1350</td>
-                      </tr>
-                      <tr>
-                        <td>전년도 이월금</td>
-                        <td>13212</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>조합비</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>상급단체교부급</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>후원급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>타회계 전임금</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>보조금 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>수익사업 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <trt__last__data">
-                        <td>기타</td>
-                        <td>3232</td>
-                      </tr>
-                    </tbody>
-                    <!-- 4 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓓ보조금사업회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>수입총계</td>
-                        <td>1350</td>
-                      </tr>
-                      <tr>
-                        <td>전년도 이월금</td>
-                        <td>13212</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>조합비</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>상급단체교부급</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>후원급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>타회계 전임금</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>보조금 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>수익사업 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <trt__last__data">
-                        <td>기타</td>
-                        <td>3232</td>
-                      </trt__last__data>
-                    </tbody>
-                    <!-- 5 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓔ수입사업회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>수입총계</td>
-                        <td>1350</td>
-                      </tr>
-                      <tr>
-                        <td>전년도 이월금</td>
-                        <td>13212</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>조합비</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>상급단체교부급</td>
-                        <td>2322</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>후원급</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>타회계 전임금</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>보조금 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <tr>
-                        <td>수익사업 수입</td>
-                        <td>3232</td>
-                      </tr>
-                      <trt__last__data">
-                        <td>기타</td>
-                        <td>3232</td>
-                      </trt__last__data>
                     </tbody>
                   </table>
                 </div>
               </div>
-              <!-- 모바일 지출 현황  -->
               <div class="dis__info">
+                <!-- 모바일 지출 현황 데이터 슬라이드 제목 -->
                 <div class="data--open last--open">
                   <span class="data__toggle">지출현황</span>
                   <div class="arrow__wrap">
@@ -928,472 +639,123 @@
                     <span class="arrow__bottom"></span>
                   </div>
                 </div>
-                <!-- 데이터 오픈 엔드 하단 내역 스타트 -->
-                <div class="mo__tab__detail mo__slide">
-                  <table class="mo__column">
-                    <caption>
-                      지출현황
-                    </caption>
-                    <thead>
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
-                      </tr>
-                      <tr class="second__th" style="display: none;">
-                        <th>항목</th>
-                        <th>금액</th>
-                      </tr>
-                    </thead>
-                    <tbody class="sub__tbody">
+                <!-- ./ 모바일 지출 현황 데이터 슬라이드 제목 -->
+                <!-- 모바일 지출 현황 데이터 슬라이드 내용 -->
+                <div class="mo__slide">
+                  <table>
+                    <caption>지출현황</caption>
+                    <tbody>
                       <tr>
-                        <td>지출총계</td>
-                        <td>5,634,234</td>
-                      </tr>
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            일반관리비용
-                          </span>
-                        </td>
+                        <th class="t__title">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</th>
+                        <td><span class="sub__title">지출총계</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>일반관리비용</span></td>
+                        <td><span class="sub__title">(1)인권비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)업무추진비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)기타운영비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>사업수행비용</span></td>
+                        <td><span class="sub__title">(1)총회등대회비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)조직사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)정책사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(4)교육홍보사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(5)교섭쟁의사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(6)기타사업비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">상급단체부과금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계전출금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
                       <tr>
-                        <td>(1)인권비</td>
-                        <td>2,322</td>
+                        <th class="t__title">ⓑ일반회계</th>
+                        <td><span class="sub__title">지출총계</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>일반관리비용</span></td>
+                        <td><span class="sub__title">(1)인권비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)업무추진비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)기타운영비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>사업수행비용</span></td>
+                        <td><span class="sub__title">(1)총회등대회비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)조직사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)정책사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(4)교육홍보사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(5)교섭쟁의사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(6)기타사업비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">상급단체부과금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계전출금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
                       <tr>
-                        <td>(2)업무추진비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr class=" ">
-                        <td>(3)기타운영비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <!-- 사업수행비용 -->
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            사업수행비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)총회등대회비</td>
-                        <td>2,322</td>
+                        <th class="t__title">ⓒ특별회계</th>
+                        <td><span class="sub__title">지출총계</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>일반관리비용</span></td>
+                        <td><span class="sub__title">(1)인권비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)업무추진비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)기타운영비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>사업수행비용</span></td>
+                        <td><span class="sub__title">(1)총회등대회비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)조직사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)정책사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(4)교육홍보사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(5)교섭쟁의사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(6)기타사업비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">상급단체부과금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계전출금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
                       <tr>
-                        <td>(2)조직사업비</td>
-                        <td>2,322</td>
+                        <th class="t__title">ⓓ보조금사업회계</th>
+                        <td><span class="sub__title">지출총계</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>일반관리비용</span></td>
+                        <td><span class="sub__title">(1)인권비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)업무추진비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)기타운영비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>사업수행비용</span></td>
+                        <td><span class="sub__title">(1)총회등대회비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)조직사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)정책사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(4)교육홍보사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(5)교섭쟁의사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(6)기타사업비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">상급단체부과금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계전출금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
                       <tr>
-                        <td>(3)정책사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(4)교육홍보사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(5)교섭쟁의사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class=" t__last__data">
-                        <td>(6)기타사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>상급단체부과금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>타회계전출금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>기타</td>
-                        <td>4,321,323</td>
-                      </tr>
-                    </tbody>
-                    <!-- 2 -->
-                      <tr class="t__title__wrap">
-                        <th colspan="2" class="t__title">ⓑ일반회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>지출총계</td>
-                        <td>5,634,234</td>
-                      </tr>
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            일반관리비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)인권비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)업무추진비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr class=" ">
-                        <td>(3)기타운영비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <!-- 사업수행비용 -->
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            사업수행비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)총회등대회비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)조직사업비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(3)정책사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(4)교육홍보사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(5)교섭쟁의사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class=" t__last__data">
-                        <td>(6)기타사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>상급단체부과금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>타회계전출금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>기타</td>
-                        <td>4,321,323</td>
-                      </tr>
-                    </tbody>
-                    <!-- 3 -->
-                      <tr class="t__title__wrap">
-                        <th class="t__title" colspan="2">ⓒ특별회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>지출총계</td>
-                        <td>5,634,234</td>
-                      </tr>
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            일반관리비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)인권비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)업무추진비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr class=" ">
-                        <td>(3)기타운영비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <!-- 사업수행비용 -->
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            사업수행비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)총회등대회비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)조직사업비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(3)정책사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(4)교육홍보사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(5)교섭쟁의사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class=" t__last__data">
-                        <td>(6)기타사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>상급단체부과금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>타회계전출금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>기타</td>
-                        <td>4,321,323</td>
-                      </tr>
-                    </tbody>
-                    <!-- 4 -->
-                      <tr class="t__title__wrap">
-                        <th class="t__title" colspan="2">ⓓ보조금사업회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>지출총계</td>
-                        <td>5,634,234</td>
-                      </tr>
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            일반관리비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)인권비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)업무추진비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr class=" ">
-                        <td>(3)기타운영비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <!-- 사업수행비용 -->
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            사업수행비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)총회등대회비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)조직사업비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(3)정책사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(4)교육홍보사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(5)교섭쟁의사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class=" t__last__data">
-                        <td>(6)기타사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>상급단체부과금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>타회계전출금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>기타</td>
-                        <td>4,321,323</td>
-                      </tr>
-                    </tbody>
-                    <!-- 5 -->
-                      <tr class="t__title__wrap">
-                        <th class="t__title" colspan="2">ⓔ수입사업회계</th>
-                      </tr>
-                    <tbody class="sub__tbody">
-                      <tr>
-                        <td>지출총계</td>
-                        <td>5,634,234</td>
-                      </tr>
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            일반관리비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)인권비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)업무추진비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr class=" ">
-                        <td>(3)기타운영비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <!-- 사업수행비용 -->
-                      <tr class="sub__element">
-                        <td colspan="2">
-                          <span>
-                            당기지출
-                            <span class="child__arrow"></span>
-                            사업수행비용
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>(1)총회등대회비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(2)조직사업비</td>
-                        <td>2,322</td>
-                      </tr>
-                      <tr>
-                        <td>(3)정책사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(4)교육홍보사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr>
-                        <td>(5)교섭쟁의사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class=" t__last__data">
-                        <td>(6)기타사업비</td>
-                        <td>3,232</td>
-                      </tr>
-                      <tr class="sub__element depth1">
-                        <td colspan="2">
-                          <span>
-                          당기 수입 
-                            <span class="child__arrow"></span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>상급단체부과금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>하부조직교부금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>타회계전출금</td>
-                        <td>23,121,000</td>
-                      </tr>
-                      <tr>
-                        <td>기타</td>
-                        <td>4,321,323</td>
+                        <th class="t__title">ⓔ수익사업회계</th>
+                        <td><span class="sub__title">지출총계</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>일반관리비용</span></td>
+                        <td><span class="sub__title">(1)인권비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)업무추진비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)기타운영비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기지출<span class="child__arrow"></span>사업수행비용</span></td>
+                        <td><span class="sub__title">(1)총회등대회비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(2)조직사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(3)정책사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(4)교육홍보사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(5)교섭쟁의사업비</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">(6)기타사업비</span><span>1,469,246</span></td>
+                        <td class="sub__element"><span>당기수입<span class="child__arrow"></span></span></td>
+                        <td><span class="sub__title">상급단체부과금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">하부조직교부금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">타회계전출금</span><span>1,469,246</span></td>
+                        <td><span class="sub__title">기타</span><span>1,469,246</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-              <div class="w__table">
-              <!-- 자산 및 부채 현황 -->
-              <div class="pc__info">
+            <div class="w__table">
+              <div class="ly__cont">
                 <div class="data__header">
                   <h2 class="data__title flex--box-s">자산 및 부채 현황 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
                 </div>
+                <!-- 웹용 자산 및 부채현황 테이블 -->
                 <div class="tab__detail table__vertical">
                   <table class="cross__table border-top-large">
                     <caption>
@@ -1457,7 +819,7 @@
                         <td><div class="min__h__box text--r">2,725</div></td>
                       </tr>
                       <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
                         <td><div class="min__h__box text--r">2,725</div></td>
                         <td><div class="min__h__box text--r">2,725</div></td>
                         <td><div class="min__h__box text--r">2,725</div></td>
@@ -1468,12 +830,14 @@
                     </tbody>
                   </table>
                 </div>
+                <!-- ./ 웹용 자산 및 부채현황 테이블 -->
               </div>
               <!-- 수입현황 -->
-              <div class="pc__info earn__sit">
+              <div class="ly__cont earn__sit">
                 <div class="data__header">
                   <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
                 </div>
+                <!-- 웹용 수입현황 테이블 -->
                 <div class="tab__detail table__vertical">
                   <table class="cross__table border-top-large">
                     <caption>
@@ -1565,7 +929,7 @@
                         <td><div class="min__h__box text--r">2,725</div></td>
                       </tr>
                       <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
                         <td><div class="min__h__box text--r">2,725</div></td>
                         <td><div class="min__h__box text--r">2,725</div></td>
                         <td><div class="min__h__box text--r">2,725</div></td>
@@ -1580,12 +944,14 @@
                     </tbody>
                   </table>
                 </div>
+                <!-- ./ 웹용 수입현황 테이블 -->
               </div>
               <!-- 지출 현황 -->
-              <div class="pc__info expend__sit">
+              <div class="ly__cont expend__sit">
                 <div class="data__header">
                   <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
                 </div>
+                <!-- 웹용 지출현황 테이블 -->
                 <div class="tab__detail table__vertical">
                   <table class="min--width cross__table border-top-large">
                     <caption>
@@ -1710,7 +1076,7 @@
                         <td><div class="min__h__box text--r">0</div></td>              
                       </tr>
                       <tr>
-                        <th scope="row"><div class="min__h__box text--l">ⓔ수입사업회계</div></th>
+                        <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
                         <td><div class="min__h__box text--r">2,725</div></td>
                         <td><div class="min__h__box text--r">25</div></td>
                         <td><div class="min__h__box text--r">725</div></td>
@@ -1730,9 +1096,11 @@
                     </tbody>
                   </table>
                 </div>
+                <!-- ./ 웹용 지출현황 테이블 -->
               </div>
             </div>
-              <div class="pc__info table__horizontal__ex table__last" style="margin-bottom: 20px">
+              <!-- 주석 테이블 -->
+              <div class="ly__cont table__horizontal__ex table__last" style="margin-bottom: 20px">
                 <table>
                   <caption>주석</caption>
                   <tbody>
@@ -1747,16 +1115,20 @@
                   </tbody>
                 </table>
               </div>
+              <!-- ./ 주석 테이블 -->
+            <!-- 하단 버튼 그룹 -->
             <div class="function__group margin-2">
               <button onclick="location.href='accn__open.html'" type="button" class="btn__control bg--blue-00">목록</button>
             </div>
+            <!-- ./ 하단 버튼 그룹 -->
             </div>
-            <!-- 탭 3 항목별 차트 -->
+            <!-- ./ 웹 탭 2번 콘텐츠 (회계공시열람) -->
+            <!-- 웹 탭 3번 콘텐츠 (항목별 차트) -->
             <div class="tab__3 tab">
-              <div class="pc__info">
+              <div class="ly__cont">
               <div class="table__horizontal__ex w__cont">
                 <table class="border-top-large">
-                  <caption>공시정보 검색 폼</caption>
+                  <caption>노동조합명, 회계연도</caption>
                   <tbody>
                     <tr>
                       <th scope="row"><label for="name">노동조합(산하조직명)</label></th>
@@ -1774,8 +1146,8 @@
                   </tbody>
                 </table>
               </div>
-              <!-- 모바일용 상단 테이블 -->
-             <div class="user__form__wrapper m__table">
+            <!-- 탭 3모바일용 상단 테이블 -->
+            <div class="user__form__wrapper m__table">
               <form class="search__form__user" action="POST">
                 <div class="search">
                   <div class="flex--box-c search__list">
@@ -1792,10 +1164,11 @@
                               <option value="2023">2021</option>
                             </select>    
                         </div>
-                </div>
+                  </div>
                 </div>
               </form>
-              </div>
+            </div>
+            <!-- ./ 탭 3모바일용 상단 테이블 -->
               <div class="container" style="margin-top: 6.4rem;">
                 <div>
                   <div class="chart-block">
@@ -1804,7 +1177,6 @@
                         <h2>자산 및 부채현황</h2>
                         <span>(단위:천원)</span>
                       </div>
-                      <!-- 원형 차트 1 -->
                       <div id="pieChart1" class="echart"></div>
                     </div>
                     <div class="chart__wrapper">
@@ -1812,7 +1184,6 @@
                         <h2>수입 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
-                      <!-- 원형 차트 2 -->
                       <div id="pieChart2" class="echart"></div>
                     </div>
                   </div>
@@ -1822,7 +1193,6 @@
                         <h2>지출 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
-                      <!-- 원형 차트 3 -->
                       <div id="pieChart3" class="echart"></div>
                     </div>
                     <div class="chart__wrapper">
@@ -1839,39 +1209,35 @@
                         <h2>비교 현황</h2>
                         <span>(단위:천원)</span>
                       </div>
-                      <!-- 막대 차트 1 -->
                       <div id="barChart1" class="echart"></div>
                     </div>
                     <div class="chart__wrapper">
                       <div class="chart__title">
                         <span style="margin-left: auto;">(단위:천원)</span>
                       </div>
-                      <!-- 막대 차트 2 -->
                       <div id="barChart2" class="echart"></div>
                     </div>
                   </div>
                 </div>
-              </div>     
+              </div> 
+              <!-- 하단 버튼 그룹  -->
               <div class="function__group margin-2">
                 <button onclick="location.href='accn__open.html'" type="button" class="btn__control bg--blue-00">목록</button>
               </div>
+              <!-- ./ 하단 버튼 그룹  -->
             </div>
             </div>
-            <!-- 탭 4 시계열 차트 -->
+            <!-- ./ 웹 탭 3번 콘텐츠 (항목별 차트) -->
+            <!-- 웹 탭 4번 콘텐츠 (시계열 차트) -->
             <div class="tab__4 tab">
               <div class="container">
-                <div class="pc__info">
+                <div class="ly__cont">
               <div class="table__horizontal__ex tab__4__table w__cont">
                 <table class="border-top-large">
-                  <caption>
-                    시계열 차트
-                  </caption>
+                  <caption>시계열 차트</caption>
                   <tbody>
                     <tr >
-                      <th scope="row">
-                        <label for="name">
-                          노동조합(산하조직)명
-                        </label>
+                      <th scope="row"><label for="name">노동조합(산하조직)명</label>
                       </th>
                       <td>
                         <div class="td__container">
@@ -1895,29 +1261,28 @@
                   </tbody>
                 </table>
               </div>
-              <!-- 모바일용 상단 테이블 -->
-             <div class="user__form__wrapper m__table" style="margin-bottom: 3.6rem ;">
+            <!-- 시계열 차트 모바일용 상단 테이블 -->
+            <div class="user__form__wrapper m__table" style="margin-bottom: 3.6rem ;">
               <form class="search__form__user" action="POST">
                 <div class="search">
-                  <div class="flex--box-c search__list">
-                    <label for="label" class="mo_only">회계연도</label>
-                      <div class="select__box flexTwo">
-                        <input type="text" value="2023"> 
-                        ~
-                        <select class="select__renew" id="year" name="year"><option value="2023">2023</option><option value="2022">2022</option><option value="2022">2021</option></select>
-                      </div>
-                        <label for="label" class="mo_only">노동조합(산하조직)명</label>
-                        <div class="input__box">
-                            <label for="searchText" class="blind">노동조합(산하조직)명</label>
-                            <input type="text" id="searchText" name="searchText" class="ml4" placeholder="도레이첨단소재노동조합" value="">       
+                    <div class="flex--box-c search__list">
+                      <label for="label" class="mo_only">회계연도</label>
+                        <div class="select__box flexTwo">
+                          <input type="text" value="2023"> 
+                          ~
+                          <select class="select__renew" id="year" name="year"><option value="2023">2023</option><option value="2022">2022</option><option value="2022">2021</option></select>
                         </div>
-                </div>
-                </div>
-              </form>
+                          <label for="label" class="mo_only">노동조합(산하조직)명</label>
+                          <div class="input__box">
+                              <label for="searchText" class="blind">노동조합(산하조직)명</label>
+                              <input type="text" id="searchText" name="searchText" class="ml4" placeholder="도레이첨단소재노동조합" value="">       
+                          </div>
+                    </div>
+                  </div>
+                </form>
               </div>
-
+              <!-- ./ 시계열 차트 모바일용 상단 테이블 -->
                   <div class="chart-block">
-                    <!-- 탭 시 나오는 차트 1 -->
                     <div class="tab__4__chart__wrapper">
                       <div class="chart__title">
                         <h2>자산</h2>
@@ -1925,7 +1290,6 @@
                       </div>
                       <div id="barChart3" class="echart"></div>
                     </div>
-                    <!-- 차트  2 -->
                     <div class="tab__4__chart__wrapper">
                       <div class="chart__title">
                         <h2>부채</h2>
@@ -1933,7 +1297,6 @@
                       </div>
                       <div id="barChart4" class="echart"></div>
                     </div>
-                    <!-- 차트 3 -->
                     <div class="tab__4__chart__wrapper">
                       <div class="chart__title">
                         <h2>수입</h2>
@@ -1941,7 +1304,6 @@
                       </div>
                       <div id="barChart5" class="echart"></div>
                     </div>
-                    <!-- 차트 4 -->
                     <div class="tab__4__chart__wrapper" style="margin-bottom: 0;">
                       <div class="chart__title">
                         <h2>지출</h2>
@@ -1952,30 +1314,34 @@
                     </div>
                 </div>
               </div>
+              <!-- 하단 버튼 그룹 -->
               <div class="function__group margin-2">
                 <button onclick="location.href='accn__open.html'" type="button" class="btn__control bg--blue-00">목록</button>
               </div>
+              <!-- ./ 하단 버튼 그룹 -->
             </div>
+            <!-- ./ 웹 탭 4번 콘텐츠 (시계열 차트) -->
           </div>
         </div>
       </main>
-               <!-- 푸터  -->
-               <footer>
-                <div class="footer__bottom" style="background-color: #F0F0F0;">
-                    <div class="inner">
-                        <div class="footer__logo">
-                            <img src="img/slogan_H48.svg" alt="하단 로고">
-                        </div>
-                  
-                        <div class="footer__flex">
-                            <div class="footer__info">
-                                <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
-                                <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
-                            </div>    
-                        </div>                                     
-                    </div>                    
+      <!-- 메인 콘텐츠 영역 -->
+      <!-- 푸터  -->
+      <footer>
+        <div class="footer__bottom" style="background-color: #F0F0F0;">
+            <div class="inner">
+                <div class="footer__logo">
+                    <img src="img/slogan_H48.svg" alt="하단 로고">
                 </div>
-            </footer>
+          
+                <div class="footer__flex">
+                    <div class="footer__info">
+                        <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
+                        <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
+                    </div>    
+                </div>                                     
+            </div>                    
+        </div>
+      </footer>
         <div class="gnb__bg"></div>
     </div>
     <!-- 차트 데이터 로컬 js 파일 -->
@@ -1983,23 +1349,33 @@
     <script src="js/echarts.min.js"></script>
     <script src="js/default.js"></script>
     <script>
-      // 테이블 행 클릭 시 색상 변경 , (아닌 것들은 비활성화)
-         $('.table__vertical tbody tr').click(function(){
-            $(this).css('background-color' , '#DEEBF7');
-            $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
-        })
+      /** 
+        함수명	: 없음
+        용도    : 세로형 테이블 클릭 시 배경색 설정
+      */
+      $('.table__vertical tbody tr').click(function(){
+          $(this).css('background-color' , '#DEEBF7');
+          $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
+      })
 
-        // 모바일 탭 스와이퍼
-        let swiper = new Swiper(".moTabSwiper", {
-          slidesPerView : 'auto',
-          freeMode: true,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
+      /** 
+        함수명	: 없음
+        용도    : 모바일용 (탭) 슬라이더 불러오기
+      */
+      let swiper = new Swiper(".moTabSwiper", {
+        slidesPerView : 'auto',
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-      // 탭 버튼 클릭 시 chart 리사이징 + 차트 바인딩  
+
+      /** 
+        함수명	: 없음
+        용도    : 탭 버튼 클릭 시 차트 사이즈 재조정 및 불러오기
+      */
       $(document).ready(function(){
       $(".tab__wrap .tab__btn button").click(function(){chartResize();})
       $(".mobile__tab .swiper-slide button").click(function(){chartResize();})

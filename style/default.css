@@ -539,7 +539,7 @@ textarea {
 }
 
 .ly__cont {
-  padding-top: 6.4rem;
+  margin-top: 6.4rem;
 }
 
 .ly__cont2 {
@@ -2979,9 +2979,7 @@ button.mo_only {
   margin-bottom: 3.6rem;
 }
 
-.sub1__1__wrap .tab .pc__info {
-  margin-top: 6.4rem;
-}
+
 
 .sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {
   margin-bottom: 6.4rem;
@@ -3934,6 +3932,7 @@ button.mo_only {
   content: " *";
   color: #FE5555;
   font-weight: 700;
+  position: absolute;
 }
 
 .sign__up__table .radio__wrap .flex {
@@ -4064,7 +4063,7 @@ button.mo_only {
     page-break-after: always;
   }
 }
-/* 서브 모바일 스타일 CSS */
+/* 모바일 전용 탭 */
 .mobile__tab .swiper-slide {
   max-width: 13rem;
   text-align: center;
@@ -4158,105 +4157,11 @@ button.mo_only {
 }
 
 .mobile__con {
-  margin: 4rem 0;
+  margin: 3.6rem 0;
 }
 
-.mobile__con .market {
-  margin-bottom: 4rem;
-}
-
-.mobile__con table {
-  text-align: left;
-}
-
-.mobile__con table tr {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.mobile__con table tr th:nth-of-type(2) {
-  margin-top: 2rem;
-}
-
-.mobile__con table tr td {
-  margin-top: 1rem;
-}
-
-.mobile__con table tr th,
-.mobile__con table tr td {
-  width: 100%;
-}
-
-.mobile__con table tr th select,
-.mobile__con table tr td select {
-  width: 100%;
-  height: 4rem;
-  border: 0.1rem solid #ccc;
-  padding: 0.8rem;
-}
-
-.mobile__con table tr th input,
-.mobile__con table tr td input {
-  text-align: right;
-}
-
-.mobile__con table th {
-  background: transparent;
-}
-
-.mobile__con table th {
-  background: transparent;
-}
-
-.mo__column {
-  font-size: 1.7rem;
-}
-
-.mo__column tr {
-  flex-wrap: nowrap;
-  margin-top: 1.6rem;
-}
-
-.mo__column tr td:nth-child(2) {
-  text-align: right;
-}
-
-.mo__column .sub__element {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #333;
-  margin-top: 2.4rem;
-}
-
-.mo__column td {
-  margin-top: 0;
-}
-
-.child__arrow {
-  display: inline-block;
-  width: 1.6rem;
-  height: 2.2rem;
-  background: url(../img/arrow__right-bk.svg) no-repeat center;
-  background-size: cover;
-}
-
-.mo__column .sub__element td {
-  display: flex;
-  align-items: center;
-}
-
-.mo__column .sub__element td > span {
-  display: flex;
-  align-items: center;
-}
-
-.mo__column .sub__element td::after {
-  content: "";
-  height: 1px;
-  background-color: #ddd;
-  flex: 1;
-  margin-left: 1rem;
+.public__register__wrap .mo__slide td {
+  min-height: 5.8rem;
 }
 
 .data--open {
@@ -4322,13 +4227,79 @@ button.mo_only {
   padding: 0 1rem;
 }
 
-.t__title__wrap {
-  padding-bottom: 1rem;
-  border-bottom: 0.1rem solid #ddd;
+.mo__slide > table {
+  font-size: 1.7rem;
 }
 
-.t__last__data {
+.mo__slide > table th {
+  background: transparent;
+}
+
+.mo__slide > table .sub__element {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 2.4rem;
+}
+
+.mo__slide > table tbody tr td:first-of-type {
+  margin-top: 2rem;
+}
+
+.mo__slide > table tbody tr td:last-child {
   margin-bottom: 3rem;
+}
+
+.mo__slide > table .sub__element td {
+  display: flex;
+  align-items: center;
+}
+
+.mo__slide > table .sub__element span {
+  display: flex;
+  align-items: center;
+}
+
+.mo__slide > table .sub__element::after {
+  content: "";
+  height: 1px;
+  background-color: #ddd;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.mo__slide > table .t__title {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #ddd;
+  display: flex;
+}
+
+.mo__slide > table tr td {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mo__slide input {
+  text-align: right;
+}
+
+.td--separated {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  border-top: 0.1rem solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
+  margin-bottom: 0 !important;
+}
+
+.child__arrow {
+  display: inline-block;
+  width: 1.6rem;
+  height: 2.2rem;
+  background: url(../img/arrow__right-bk.svg) no-repeat center;
+  background-size: cover;
 }
 
 .list__btn__group {
@@ -5366,6 +5337,9 @@ button.mo_only {
   .btn__add, .btn__remove {
     height: 4.8rem;
   }
+  .ly__cont {
+    margin-top: 3.6rem;
+  }
   .w__table {
     display: none;
   }
@@ -5653,9 +5627,7 @@ button.mo_only {
   .union__management__wrap .table__horizontal__ex {
     margin-bottom: 6rem;
   }
-  .sub1__1__wrap .tab .pc__info {
-    margin-top: 3.6rem;
-  }
+
   .sub1__1__wrap .function__group.margin-2 {
     margin-bottom: 6.4rem;
   }
