@@ -1349,6 +1349,7 @@ table caption {
 
 .table__vertical tbody td {
   vertical-align: middle;
+  width: auto;
 }
 
 .table__vertical tbody td:nth-last-child(1) {

@@ -195,7 +195,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
 .table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
 .table__vertical tbody th {vertical-align: middle;} 
-.table__vertical tbody td {vertical-align: middle; }  
+.table__vertical tbody td {vertical-align: middle; width: auto;}  
 .table__vertical tbody td:nth-last-child(1) {border-right:0;} 
 
 // 가로 테이블 공통 스타일
