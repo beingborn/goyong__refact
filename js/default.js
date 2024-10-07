@@ -77,8 +77,6 @@ radioAgree.click(function() {
     $(".tab__content .tab").eq(idx).fadeIn();
     $(".tab__btn button").removeClass("active");
     $(this).addClass("active");
-
-
   });
 
   /* 모바일 탭 변환 mobile Tab */

@@ -3062,10 +3062,15 @@ button.mo_only {
   margin-bottom: 20rem;
 }
 
-.notice__wrap .search__form__user .input__box > input {
+.search__form__user.type1 .input__box > input {
   margin: 0 2.4rem;
 }
 
+@media all and (max-width: 768px) {
+  .search__form__user.type1 .input__box > input {
+    margin: 0;
+  }
+}
 .notice__detail__wrap table {
   font-size: 1.6rem;
 }
@@ -3770,20 +3775,35 @@ button.mo_only {
   padding-top: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
 }
 
 .printPage th {
   font-size: 1.1rem;
   padding: 0 0.4rem;
+  max-width: 13rem;
+  min-width: 13rem !important;
 }
 
-.printPage td {
+.printPage tr {
+  min-height: auto;
+}
+
+.printPage .td__container {
+  padding: 0.6rem;
+}
+
+.printPage td input[type=text] {
   font-weight: 400;
   font-size: 1.1rem;
+  padding: 0.6rem;
+  height: auto;
+  border-radius: 0;
 }
 
 @page {
