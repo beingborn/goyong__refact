@@ -5,7 +5,6 @@
   .banner__swiper .swiper-button-next, .swiper-button-prev {margin-top: calc(0px - (64px / 2));}
   .union__management__wrap .search .input__box, .union__management__wrap .search .preview {min-width: 48rem;}
   .preview {min-width: 50rem;}
-
   // PC 가로 테이블
   .table__horizontal__ex th {min-width: 18rem;}
   .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {min-width: 42rem;}
@@ -224,14 +223,10 @@
       // 푸터 영역
       .footer__info p:nth-child(1) {margin-bottom: 3.2rem;}
       .footer__info p:nth-child(2) {border-top: 0.1rem solid #ddd; padding-top: 1.6rem; color: #555555;}
-
       .main__graph { margin-bottom: 2.8rem; }
-
       //회계공시 제목
       .section__top { flex-direction: column; margin-top: 5.2rem;}
       .section__top .form__select { width: calc(100% - 3.2rem); margin-top: 2.4rem; }
-
-
       // 메인 데이터 차트
       .main__echart > div { flex-direction: column; gap: 5rem; }
       .main__echart .table__vertical { width: 100%; }
@@ -428,8 +423,6 @@
   .long__th  {width: 20%;}
   .table__vertical table tr th:nth-child(1) {word-break: keep-all; white-space: nowrap; padding: 0 0.8rem;}
 }
-
-
 
 /* 모바일 가로 & 테블릿 세로 480px ~ 767px */
 @media all and (min-width: 480px) and (max-width: 766px) {

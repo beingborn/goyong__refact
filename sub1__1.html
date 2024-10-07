@@ -451,7 +451,7 @@
                       <div class="flex--box-c search__list">
                         <label for="label" class="mo_only" class="must__type">회계연도</label>
                           <div class="select__box"> 
-                            <select class="select--no--style select__renew" id="year" name="year">
+                            <select class="select__renew" id="year" name="year">
                             <option value="">전체</option><option value="2023">2023</option><option value="2022">2022</option></select>
                           </div>
                             <label for="label" class="mo_only" class="must__type">회계기간</label>
@@ -838,11 +838,9 @@
                   <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
                 </div>
                 <!-- 웹용 수입현황 테이블 -->
-                <div class="tab__detail table__vertical">
+                <div class="table__vertical table--overflow-x">
                   <table class="cross__table border-top-large">
-                    <caption>
-                      수입현황 {구분, 자산}
-                    </caption>
+                    <caption>수입현황 {구분, 자산}</caption>
                     <colgroup>
                       <col class="align__cols">
                       <col>
@@ -952,11 +950,9 @@
                   <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
                 </div>
                 <!-- 웹용 지출현황 테이블 -->
-                <div class="tab__detail table__vertical">
-                  <table class="min--width cross__table border-top-large">
-                    <caption>
-                      지출현황
-                    </caption>
+                <div class="table__vertical table--overflow-x wordBreakNormal">
+                  <table class="min--width cross__table border-top-large table--fixed">
+                    <caption>지출현황</caption>
                     <colgroup>
                       <col class="align__cols" >
                       <col>
@@ -1251,7 +1247,7 @@
                         <div class="td__container flex--box-c">
                           <input type="text">
                           ~
-                          <select name="searchField" id="examples1033" class="select--no--style select__renew">
+                          <select name="searchField" id="examples1033" class="select__renew">
                             <option value="" selected="">전체</option>
                             <option value="2022">2022</option>
                           </select>
@@ -1370,7 +1366,6 @@
           prevEl: ".swiper-button-prev",
         },
       });
-
 
       /** 
         함수명	: 없음

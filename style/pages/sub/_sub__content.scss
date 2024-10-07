@@ -1,4 +1,16 @@
-/* 서브 페이지 CSS */
+/****************************************************
+	파일명	: sub__content.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 서브 페이지 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
+
 
 label.mo_only {display: none;}
 button.mo_only {display: none;}
@@ -50,19 +62,12 @@ button.mo_only {display: none;}
 // .tab .table__vertical { border-top: 0.2rem solid #333; width: 100%;}
 
 .align__cols { width: 15.38%; min-width: 20rem;}
-.tab__4 .table__horizontal table tbody th {border-bottom: 0;}
-.tab__4 .table__horizontal td {border-bottom: 0;}
-
 
 // 지출 현황
-.expend__sit .table__vertical table thead tr th { line-height: 150%; }
-.expend__sit .table__vertical table { table-layout: fixed; }
 .tab__content .tab .expend__sit { padding-bottom: 0; margin-bottom: 5.6rem; }
-.earn__sit .tab__detail { overflow-x: auto; }
-.earn__sit table { min-width: 84rem; }
-.expend__sit .tab__detail { overflow-x: auto; }
-.expend__sit table { min-width: 102.4rem; table-layout: fixed; }
-.table__last .input--flex input { width: 100%; }
+.earn__sit table {min-width: 84rem;}
+.expend__sit table {min-width: 102.4rem;}
+// .table__last .input--flex input { width: 100%; }
 
 // 서브 페이지 공통
 .data__number {font-size: 2.1rem; font-weight: 700;}
@@ -152,17 +157,10 @@ button.mo_only {display: none;}
 .prev__next > li {overflow: hidden; position: relative; padding: 1.8rem 0 1.8rem 3rem;  max-height: 5.8rem; display: flex; align-items: center; border-top: 0.1rem solid #ddd;}
 .prev__title {font-weight: 700;}
 .prev__next .prev span, .prev__next .next span {min-width: 22rem; display: inline-flex; align-items: center;}
-.prev__next .prev span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
-background: url(../img/arrow__top-bk.svg) no-repeat center;
-background-size: 2.4rem auto;
-}
-.prev__next .next span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; 
-    background: url(../img/arrow__bottom-bk.svg) no-repeat center;
-    background-size: 2.4rem auto;
+.prev__next .prev span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; background: url(../img/arrow__top-bk.svg) no-repeat center;background-size: 2.4rem auto;}
+.prev__next .next span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; background: url(../img/arrow__bottom-bk.svg) no-repeat center; background-size: 2.4rem auto;
 }
 
-// 공지사항 목록 버튼
-.notice__list {margin-top: 10rem; margin-bottom: 10rem;}
 
 // 홈 > 회계공시등록 > 가맹노조(산하조직)관리
 .union__management__wrap .pagination{margin-bottom: 6.4rem;}
@@ -183,13 +181,7 @@ background-size: 2.4rem auto;
 
 // 설명 1번 섹션
 .accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
-.content__section:first-child .image__container {
-    min-width: 33.7rem;
-    min-height: 52.7rem;
-    margin-right: 5rem;
-    background-image: url('../img/accn__desc__img_01.png');
-    background-size: cover;
-}
+.content__section:first-child .image__container {min-width: 33.7rem;min-height: 52.7rem;margin-right: 5rem; background-image: url('../img/accn__desc__img_01.png');background-size: cover;}
 .content__section .text__container .title {font-size: 3.6rem; font-weight: 700;}
 .content__section .text__container .desc {font-size: 1.8rem; color: #555555; max-width: 65rem;}
 .content__section:first-child .text__container {padding-top: 13rem;}

@@ -34,26 +34,26 @@
             }
         }
         
-        $.ajax({
-    		url: '/pap/main/getCntAjax.do',
-    		method: 'POST',
-    		data: {},
-    		success: function(data){
-    			var result = data.useHistory;
-    			var htmlStr1 = "<li>" + "<span>일일 <i></i></span>" + "<b>" + result.dayCnt + "</b>" + "</li>";
-    			var htmlStr2 = "<li>" + "<span>주간 <i></i></span>" + "<b>" + result.weekCnt + "</b>" + "</li>";
-    			var htmlStr3 = "<li>" + "<span>월간 <i></i></span>" + "<b>" + result.monthCnt + "</b>" + "</li>";
-    			var htmlStr4 = "<li>" + "<span>연간 <i></i></span>" + "<b>" + result.yearCnt + "</b>" + "</li>";
-    			$("#cnt").append(htmlStr1);
-    			$("#cnt").append(htmlStr2);
-    			$("#cnt").append(htmlStr3);
-    			$("#cnt").append(htmlStr4);
-    		},
-    		error: function(err){
-    			alert('error');
-    			console.log(err);
-    		}, complete : function(){}
-        });
+	$.ajax({
+	url: '/pap/main/getCntAjax.do',
+	method: 'POST',
+	data: {},
+	success: function(data){
+	var result = data.useHistory;
+	var htmlStr1 = "<li>" + "<span>일일 <i></i></span>" + "<b>" + result.dayCnt + "</b>" + "</li>";
+	var htmlStr2 = "<li>" + "<span>주간 <i></i></span>" + "<b>" + result.weekCnt + "</b>" + "</li>";
+	var htmlStr3 = "<li>" + "<span>월간 <i></i></span>" + "<b>" + result.monthCnt + "</b>" + "</li>";
+	var htmlStr4 = "<li>" + "<span>연간 <i></i></span>" + "<b>" + result.yearCnt + "</b>" + "</li>";
+	$("#cnt").append(htmlStr1);
+	$("#cnt").append(htmlStr2);
+	$("#cnt").append(htmlStr3);
+	$("#cnt").append(htmlStr4);
+	},
+	error: function(err){
+	alert('error');
+	console.log(err);
+	}, complete : function(){}
+	});
         
 
     </script>

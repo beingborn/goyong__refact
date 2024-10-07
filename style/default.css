@@ -115,20 +115,6 @@ textarea {
   width: 100%;
 }
 
-.blind {
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  top: -99999.9rem;
-  left: -99999.9rem;
-  width: 0.1rem;
-  height: 0.1rem;
-  line-height: 0;
-  font-size: 0;
-  text-indent: -99999.9rem;
-  z-index: 0;
-}
-
 .select__box select {
   min-width: 10rem;
 }
@@ -137,20 +123,6 @@ textarea {
   background-image: url(../img/select__renew.png);
   background-repeat: no-repeat;
   background-position: right 1rem center;
-}
-
-.select--no--style {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.select__wrap {
-  border-top: 0.1rem solid #ddd;
-}
-
-.last__select {
-  border-bottom: 0.1rem solid #ddd;
 }
 
 .skip__nav {
@@ -176,15 +148,26 @@ textarea {
   outline: 0.2rem dashed #0cc;
 }
 
+.blind {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: -99999.9rem;
+  left: -99999.9rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  line-height: 0;
+  font-size: 0;
+  text-indent: -99999.9rem;
+  z-index: 0;
+}
+
 /* 
   상태 변경 유틸리티 클래스 네이밍 규칙
-
   (a)--(b)-(c)
-
   a = 상태 변경 요소 혹은 스타일 속성
   b = 속성 수치
   c = 속성 값 
-
 */
 /* 
   텍스트 제어  
@@ -435,10 +418,6 @@ textarea {
   height: 100%;
 }
 
-.tb--height-find {
-  height: 5.8rem;
-}
-
 .display--none {
   display: none;
 }
@@ -472,6 +451,10 @@ textarea {
 
 .table--overflow-x {
   overflow-x: auto;
+}
+
+.wordBreakNormal th {
+  word-break: normal !important;
 }
 
 .txt--navy-00 {
@@ -861,151 +844,12 @@ table caption {
   background: url(../img/calendar-days-regular--mo.svg) no-repeat center;
 }
 
-.table__template__radio tr {
-  display: flex;
-  border-bottom: 0.1rem solid #ddd;
-}
-
-.table__template__radio th {
-  line-height: 100%;
-  padding-left: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  background-color: #F9F9FA;
-  font-weight: 700;
-}
-
-.table__template__radio .radio__wrap input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  margin-right: 0.7rem;
-  border: 1px solid #ccc;
-}
-
-.table__template__radio .radio__wrap input[type=radio]:checked {
-  border: 0.6rem solid #000;
-}
-
-.table__template__radio .radio__wrap .flex {
-  padding-left: 1rem;
-}
-
-.radio__table th {
-  width: 12.5%;
-  line-height: 5.8rem;
-}
-
-.radio__table td {
-  width: 87.5%;
-}
-
-.radio__table tr {
-  line-height: 5.8rem;
-}
-
-.radio__table .flex {
-  display: flex;
-  align-items: center;
-}
-
-.radio__table .flex label:not(:last-child) {
-  margin-right: 2rem;
-}
-
 .table--margin {
   margin: 0.9rem 1rem;
 }
 
-.modal__error__table table tr th:nth-child(1) {
-  width: 15.38%;
-}
-
-.modal__result .modal__error__table tr {
-  min-height: 5.8rem;
-}
-
-.modal__error__table table tbody th, .modal__error__table table tbody td {
-  vertical-align: middle;
-}
-
-.modal__error__table table tbody tr td {
-  text-align: left;
-  padding-left: 0.8rem;
-}
-
-.modal__error__table .error__desc {
-  padding: 8px 0;
-}
-
-.modal__result .modal__error__table tbody tr td {
-  line-height: 150%;
-}
-
-.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {
-  background-color: transparent;
-}
-
-.manage__user__table {
-  border-top: 0.2rem solid #000;
-}
-
-.manage__user__table tr {
-  line-height: 5.8rem;
-  height: 5.8rem;
-  border-bottom: 0.1rem solid #ddd;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.manage__user__table .height--auto {
-  height: auto;
-}
-
-.manage__user__table th {
-  width: 11.72%;
-  background-color: #f8f8f8;
-  text-align: left;
-  padding-left: rem;
-  z-index: -1;
-  height: 100%;
-}
-
-.manage__user__table td {
-  width: auto;
-}
-
-.table__information .first__td {
-  width: 20.31%;
-}
-
-.table__information .second__td {
-  width: 21.88%;
-}
-
 .border-right {
   border-right: 0.1rem solid #ddd !important;
-}
-
-.checkbox__container-margin label {
-  padding-left: 1rem;
-}
-
-.checkbox__container-margin label:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.manage__wrap .table__vertical {
-  overflow-x: auto;
-}
-
-.manage__wrap .table__vertical colgroup col {
-  min-width: 5rem;
 }
 
 .read__info__table input[type=text] {
@@ -2836,7 +2680,18 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background-position: right 1.6rem center;
 }
 
-/* 서브 페이지 CSS */
+/****************************************************
+	파일명	: sub__content.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 서브 페이지 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
 label.mo_only {
   display: none;
 }
@@ -2845,80 +2700,41 @@ button.mo_only {
   display: none;
 }
 
-#sub__wrap .content .visual__bg {
+#sub__wrap .visual__bg {
   width: 100%;
   height: 25rem;
   position: relative;
-}
-
-#sub__wrap .accn_desc .visual__bg {
-  background: url(../img/top_visual_desc.jpg) no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
-#sub__wrap .accn_open .visual__bg {
-  background: url(../img/top_visual_public_open.jpg) no-repeat center;
-  background-size: cover;
+#sub__wrap .accn_desc .visual__bg, #sub__wrap .main_accn_desc .visual__bg {
+  background-image: url(../img/top_visual_desc.jpg);
 }
 
-#sub__wrap .main_accn_desc .visual__bg {
-  background: url(../img/top_visual_desc.jpg) no-repeat center;
-  background-size: cover;
+#sub__wrap .accn_open .visual__bg, #sub__wrap .public_register .visual__bg, #sub__wrap .sub1_1 .visual__bg, #sub__wrap .check__accounting .visual__bg {
+  background-image: url(../img/top_visual_public_open.jpg);
 }
 
-#sub__wrap .member_info_change .visual__bg {
-  background: url(../img/top_visual_security.jpg) no-repeat center;
-  background-size: cover;
+#sub__wrap .member_info_change .visual__bg, #sub__wrap .password_change .visual__bg, #sub__wrap .file_change .visual__bg {
+  background-image: url(../img/top_visual_security.jpg);
 }
 
-#sub__wrap .notice_detail .visual__bg {
-  background: url(../img/top_visual_notice.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .notice .visual__bg {
-  background: url(../img/top_visual_notice.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .password_change .visual__bg {
-  background: url(../img/top_visual_security.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .public_register .visual__bg {
-  background: url(../img/top_visual_public_open.jpg) no-repeat center;
-  background-size: cover;
+#sub__wrap .notice_detail .visual__bg, #sub__wrap .notice .visual__bg {
+  background-image: url(../img/top_visual_notice.jpg);
 }
 
 #sub__wrap .sign_up .visual__bg {
-  background: url(../img/top_visual_sign_up.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .sub1_1 .visual__bg {
-  background: url(../img/top_visual_public_open.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .check__accounting .visual__bg {
-  background: url(../img/top_visual_public_open.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/top_visual_sign_up.jpg);
 }
 
 #sub__wrap .union_management .visual__bg {
-  background: url(../img/top_visual_union.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/top_visual_union.jpg);
 }
 
 #sub__wrap .faq .visual__bg {
-  background: url(../img/top_visual_faq.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#sub__wrap .file_change .visual__bg {
-  background: url(../img/top_visual_security.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/top_visual_faq.jpg);
 }
 
 #sub__wrap .content .visual__bg .visual__text {
@@ -3043,38 +2859,17 @@ button.mo_only {
   border-bottom: 0;
 }
 
-.expend__sit .table__vertical table thead tr th {
-  line-height: 150%;
-}
-
-.expend__sit .table__vertical table {
-  table-layout: fixed;
-}
-
 .tab__content .tab .expend__sit {
   padding-bottom: 0;
   margin-bottom: 5.6rem;
-}
-
-.earn__sit .tab__detail {
-  overflow-x: auto;
 }
 
 .earn__sit table {
   min-width: 84rem;
 }
 
-.expend__sit .tab__detail {
-  overflow-x: auto;
-}
-
 .expend__sit table {
   min-width: 102.4rem;
-  table-layout: fixed;
-}
-
-.table__last .input--flex input {
-  width: 100%;
 }
 
 .data__number {
@@ -4240,8 +4035,6 @@ button.mo_only {
 .mo__slide > table .sub__element {
   font-weight: 700;
   font-size: 1.8rem;
-  color: #333;
-  margin-top: 2.4rem;
 }
 
 .mo__slide > table tbody tr td:first-of-type {

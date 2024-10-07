@@ -22,19 +22,15 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // 가로 테이블 공통 스타일
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
 .table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center; min-width: 25rem;} 
-// .table__horizontal__ex td {width: auto; flex-grow: 1; display: inline-flex; align-items: center;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1; display: block;} 
 .table__horizontal__ex .half__row td {width: 50%;}
 .table__horizontal__ex input[type="text"] {height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
 .table__horizontal__ex .td__container .content {width: 100%;}
 .table__horizontal__ex .td__vertical--c {display: flex; align-items: center;}
-
-// .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
-
 
 // 모바일용 테이블
 .m__table {display: none;}
@@ -51,7 +47,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .accn__open__wrap .table__horizontal__mo .title {font-size: 1.9rem; font-weight: 700;}
 .mo__strongTitle {font-size: 1.9rem; font-weight: 700;}
 .table__horizontal__mo.miw120 .sub__title {min-width: 12rem;}
-.union__management__wrap .table__horizontal__mo .sub__title {display: inline-block;width: 50%;}
+.union__management__wrap .table__horizontal__mo .sub__title {display: inline-block; width: 50%;}
 
 // 사용자 공통 테이블 타이틀
 .table__title__wrap {margin-bottom: 6.4rem; margin-top: 6.4rem;}
@@ -70,7 +66,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .td__date select {flex: 1;}
 
 
-// manage__labor 다중 셀렉터 및 인풋 조정 영역
+// 공통 td 내부 여백 확보 클래스
 .td__container {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;}
 .td__container select {flex: 1 1 calc(33.33% - 1rem); } // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
 .td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
@@ -80,60 +76,11 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .calender__body {position: relative;}
 .calender__body .calender__icon {position: absolute; top: 50%; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; right: 1rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; }
 
-.table__template__radio tr {display: flex; border-bottom: 0.1rem solid #ddd;} 
-.table__template__radio th {line-height: 100%; padding-left: 3rem; display: flex; align-items: center; justify-content: left; background-color: #F9F9FA; font-weight: 700;} 
-// .table__template__radio td {border-bottom: 1px solid #ddd;}
-
-.table__template__radio .radio__wrap input[type="radio"] {appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc;} 
-.table__template__radio .radio__wrap input[type="radio"]:checked {border: 0.6rem solid #000;} 
-.table__template__radio .radio__wrap .flex {padding-left: 1rem;}
-
-
-// 체크 박스
-.radio__table th {width: 12.5%; line-height: 5.8rem;}
-.radio__table td {width: calc(100% - 12.5%);}
-.radio__table tr {line-height: 5.8rem;}
-.radio__table .flex {display: flex; align-items: center;}
-.radio__table .flex label:not(:last-child) {margin-right: 2rem;}
 .table--margin {margin: 0.9rem 1rem}
-
-
-// 모달 테이블 스타일
-.modal__error__table table tr th:nth-child(1) {width: 15.38%;}
-.modal__result .modal__error__table tr {min-height: 5.8rem;}
-.modal__error__table table tbody th, .modal__error__table table tbody td {vertical-align: middle;}
-.modal__error__table table tbody tr td {text-align: left; padding-left: 0.8rem;}
-.modal__error__table .error__desc {padding: 8px 0;}
-.modal__result .modal__error__table tbody tr td {line-height: 150%;}
-
-
-.ac__manage__ment__wrap .table__vertical table tbody tr th:nth-child(1) {background-color: transparent;}
-// manageuser__ 메인 테이블
-.manage__user__table {border-top: 0.2rem solid #000;} 
-.manage__user__table tr {line-height: 5.8rem; height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: center;} 
-.manage__user__table .height--auto {height: auto; }
-.manage__user__table th {width: 11.72%; background-color: #f8f8f8; text-align: left; padding-left: rem; z-index: -1; height: 100%;} 
-.manage__user__table td {width: auto;} 
-.table__information .first__td {width: 20.31%;}
-.table__information .second__td {width: 21.88%}
-
 .border-right {border-right: 0.1rem solid #ddd!important;}
-
-// 표 호버 배경색상 지정 영역입니다.
-
-// checkbox__container == report
-// manage__report 조회 모달 체크 박스 
-.checkbox__container-margin label {padding-left: 1rem;}
-.checkbox__container-margin label:not(:last-child) {padding-right: 1rem;}
-
-
-// 관리자 페이지의 표 경우, 가로 값이 더 커질 시 table을 감싸는 부모에 스크롤을 줍니다.
-.manage__wrap .table__vertical {overflow-x: auto;}
-.manage__wrap .table__vertical colgroup col {min-width: 5rem;}
-
 // 읽기 전용 input(테두리 없애기) 
 .read__info__table input[type="text"] {border: 0; font-weight: 700;}
-.table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} 
+.table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} // 표 호버 배경색상 지정 
 
 
 
