@@ -41,7 +41,6 @@ input[type="radio"].clicked:not(:checked) + label {color: #D8D8D8;}
 .code__title {margin-top: 6.4rem;}
 .flex__title { display: flex; align-items: center; justify-content: space-between;}
 .flex__title span {font-size: 1.6rem;}
-
 .page__title {font-size: 4rem;}
 
 
@@ -50,11 +49,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 
 // 셀렉터 관련 클래스
 .select__box select {min-width: 10rem;}
-.select__renew {
-  background-image: url(../img/select__renew.png);
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-}
+.select__renew {background-image: url(../img/select__renew.png); background-repeat: no-repeat; background-position: right 1rem center;}
 
 
 // skip navigation, blind  
@@ -114,10 +109,15 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mg--20-b {margin-bottom: 2rem;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
+  .mb--60 {margin-bottom: 6rem;}
   .mg--64-All {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 
 
   /* 헬퍼 라지 Space */
+
+  // 태블릿 이상에서만 margin-right를 24px 주는 헬퍼 클래스
+  @media all and (min-width: 767px){.tablet-mr-24 {margin-right: 2.4rem;}}
+
   .hp--lgSpace {margin-bottom: 25rem;}
   @media all and (max-width: 767px) {.hp--lgSpace{margin-bottom: 6rem;}}
 
@@ -167,6 +167,9 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   // 보더 제어
   .border--btm {border-bottom: 0.1rem solid #ddd;}
   .border--r {border-right: 0.1rem solid #ddd;}
+
+  // 줄바꿈 제어 
+  .txt__noWrap {white-space: nowrap;}
 
   // 메인 버튼
   .btn--active { background-color: #003675; color: #fff;}
