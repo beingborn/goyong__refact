@@ -145,6 +145,15 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .flex--column {flex-direction: column;}
   .flex--vertical {display: flex; flex-direction: column;}
 
+  // 고정값 제어
+  .lg--mw500 {max-width: 50rem;}
+  @media all and (max-width: 767px) {.lg--mw500{max-width: none;}}
+
+  .lg--miw500 {min-width: 50rem;}
+  @media all and (max-width: 767px) {.lg--miw500{min-width: none;}}
+
+
+
   // 넓이 제어
   .width--10 {width: 10%;}
   .width--15 {width: 15%;}
@@ -181,6 +190,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 
   // wordBreak 
   .wordBreakNormal th {word-break: normal!important;}
+  .wordBreakNowrap th {white-space: nowrap!important;}
 
 
   // 컬러 제어 

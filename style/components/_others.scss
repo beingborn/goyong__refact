@@ -145,8 +145,11 @@ button {cursor: pointer; background: inherit;}
 .bg--mint-00 {background-color: #14bdb3;}
 .bg--transparent-00 {background-color: none;}
 
-// 관리자 페이지 상단 버튼입니다. 
 .btn__control { color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem; border-radius: 0.7rem; font-weight: 400; cursor: pointer;}
+.btn__control.responsive {height: 4rem;} // 반응형 버튼 (알림톡 사용)
+@media all and (max-width: 767px){.btn__control.responsive {height: 4.8rem; width: auto; font-size: 1.6rem; padding: 0 1.2rem;}}
+
+
 .function__group {text-align: right;} // 버튼 wrapper
 .function__group .btn__control:not(:last-child) {margin-right: 1rem;}
 
@@ -201,7 +204,7 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 // 가로 테이블 공통 스타일
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
 .table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center; min-width: 25rem;} 
-.table__horizontal__ex td {width: auto; flex-grow: 1; display: block;} 
+.table__horizontal__ex td {width: auto; flex-grow: 1; flex-basis: 0; display: block;} 
 .table__horizontal__ex .half__row td {width: 50%;}
 .table__horizontal__ex input[type="text"] {height: 4rem;  width: 100%; font-size: 1.6rem;}
 .table__horizontal__ex .td__container select {width: 100%;}
