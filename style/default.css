@@ -396,7 +396,7 @@ textarea {
 }
 
 @media all and (max-width: 767px) {
-  .lg--mw500 {
+  .lg--mw200 {
     max-width: none;
   }
 }
@@ -3808,6 +3808,10 @@ button.mo_only {
   position: relative;
 }
 
+.printPage .desc__box__txt {
+  font-size: 13px;
+}
+
 .printPage .main__title__lg {
   font-size: 3.2rem;
 }
@@ -3826,9 +3830,9 @@ button.mo_only {
 
 .printPage th {
   font-size: 1.1rem;
-  padding: 0 0.4rem;
-  max-width: 13rem;
-  min-width: 13rem !important;
+  padding: 0 4px;
+  max-width: 110px;
+  min-width: 110px !important;
 }
 
 .printPage tr {
@@ -3836,15 +3840,15 @@ button.mo_only {
 }
 
 .printPage .td__container {
-  padding: 0.6rem;
+  padding: 4px;
 }
 
 .printPage td input[type=text] {
   font-weight: 400;
-  font-size: 1.1rem;
-  padding: 0.6rem;
-  height: auto;
+  font-size: 11px;
+  padding: 6px;
   border-radius: 0;
+  height: auto;
 }
 
 @page {
@@ -3863,6 +3867,11 @@ button.mo_only {
     box-shadow: initial;
     background: initial;
     page-break-after: always;
+  }
+  .printPage input {
+    height: 30px;
+    padding: 0;
+    box-sizing: border;
   }
 }
 /* 모바일 전용 탭 */
