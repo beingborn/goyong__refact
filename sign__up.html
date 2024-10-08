@@ -384,9 +384,9 @@
                     <td class="td__calender__wrap">
                       <div class="td__container">
                         <div class="calender__body">
-                          <input type="text" id="testPicker" maxlength="10" />
+                          <input type="text" id="datePicker" maxlength="10"/>
                           <label
-                            for="testPicker"
+                            for="datePicker"
                             class="calender__icon mg--10-l"
                           ></label>
                         </div>
@@ -690,7 +690,7 @@
       */
       $(document).ready(function () {
         var dateFormat = "yymmdd",
-          from = $("#testPicker").datepicker({
+          from = $(".datePicker").datepicker({
             dateFormat: "yymmdd",
             // defaultDate: "+1w",
             changeMonth: true,

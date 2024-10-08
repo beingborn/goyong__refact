@@ -235,11 +235,14 @@ button.mo_only {display: none;}
 // 모바일 변환형 테이블
 @media all and (max-width: 767px) {
     .table__horizotal__sh .border-top-large {border: 0;}
-    .mo__columnTable tr {display: block;}
+    .mo__columnTable tr {display: block; border-bottom: 0;}
     .mo__columnTable th {padding: 0; background: transparent; margin-bottom: 1.2rem;}
     .mo__columnTable th{margin-top: 1.6rem;}
     .mo__columnTable tr:nth-child(1) th:first-child {margin-top: -1.6rem;} // 첫번째 행의 첫번째 제목 마진 값 초기화
     .mo__columnTable .td__container {gap: 0; padding: 0;}
+
+    .mo__columnTable.mo__columnType2 .border-top-large {border: 0;}
+    .mo__columnTable.mo__columnType2 .td__container {gap: 1rem;}
 }
 
 
@@ -325,14 +328,14 @@ button.mo_only {display: none;}
 // 프린트 페이지 전용
 .printResult__desc {font-size: 2.1rem; padding-top: 2.4rem; padding-bottom: 6.4rem;}
 .grayTable th {background-color: #f8f8f8;}
-.printPage {width: 21cm; min-height: 29.7cm; position: relative;}
-.printPage .desc__box__txt {font-size: 13px;}
+.printPage {width: 21cm; min-height: 29.7cm; position: relative; }
+.printPage .desc__box__txt {font-size: 14px; margin-left: 0;}
 .printPage .main__title__lg {font-size: 3.2rem;}
-.printResult__inner {padding-top: 6rem; padding-left: 2rem; padding-right: 2rem; width: 100%;  height: 100%; position: absolute; left: 50%; transform: translateX(-50%); top: 0;} 
-.printPage th {font-size: 1.1rem; padding: 0 4px; max-width: 110px; min-width: 110px!important}
-.printPage tr {min-height: auto; }
-.printPage .td__container {padding: 4px;}
-.printPage td input[type="text"] {font-weight: 400; font-size: 11px;  padding: 6px; border-radius: 0; height: auto;}
+.printResult__inner {padding-top: 60px; padding-left: 40px; padding-right: 40px;} 
+.printPage th {font-size: 12px; padding: 0 4px; max-width: 110px; min-width: 110px!important}
+.printPage tr {min-height: auto;}
+.printPage td {font-size: 12px; font-weight: 400;}
+.printPage .min__h__box {border: 0.1rem solid #ddd; margin: 6px; min-height: 3.2rem;}
 
 @page {size: A4; margin: 0;}
 @media print {

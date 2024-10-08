@@ -3453,6 +3453,7 @@ button.mo_only {
   }
   .mo__columnTable tr {
     display: block;
+    border-bottom: 0;
   }
   .mo__columnTable th {
     padding: 0;
@@ -3468,6 +3469,12 @@ button.mo_only {
   .mo__columnTable .td__container {
     gap: 0;
     padding: 0;
+  }
+  .mo__columnTable.mo__columnType2 .border-top-large {
+    border: 0;
+  }
+  .mo__columnTable.mo__columnType2 .td__container {
+    gap: 1rem;
   }
 }
 .public__register__wrap .form__table th {
@@ -3809,7 +3816,8 @@ button.mo_only {
 }
 
 .printPage .desc__box__txt {
-  font-size: 13px;
+  font-size: 14px;
+  margin-left: 0;
 }
 
 .printPage .main__title__lg {
@@ -3817,19 +3825,13 @@ button.mo_only {
 }
 
 .printResult__inner {
-  padding-top: 6rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .printPage th {
-  font-size: 1.1rem;
+  font-size: 12px;
   padding: 0 4px;
   max-width: 110px;
   min-width: 110px !important;
@@ -3839,16 +3841,15 @@ button.mo_only {
   min-height: auto;
 }
 
-.printPage .td__container {
-  padding: 4px;
+.printPage td {
+  font-size: 12px;
+  font-weight: 400;
 }
 
-.printPage td input[type=text] {
-  font-weight: 400;
-  font-size: 11px;
-  padding: 6px;
-  border-radius: 0;
-  height: auto;
+.printPage .min__h__box {
+  border: 0.1rem solid #ddd;
+  margin: 6px;
+  min-height: 3.2rem;
 }
 
 @page {

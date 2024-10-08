@@ -22,7 +22,6 @@
                     </div>
                     <!-- 프린트 내용 -->
                     <div class="desc__box mg--40-b">
-                            <p><strong class="desc__boxTit">참고</strong></p>
                             <div class="desc__box__txt">
                                 <p>조합비 세액공제 적용을 위해 공시해야 하는 대상인 <strong>총연합단체, 연합단체, ’22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)</strong>의 공시여부를 조회할 수 있습니다.</p>
                                 <p>조회 결과 <strong>모두 '공시완료'</strong>인 경우 ’23.10월 이후에 납부한 조합비에 세액공제 혜택을 부여합니다.</p>
@@ -35,47 +34,52 @@
                         <div class="table__horizontal__ex grayTable infoTable">
                             <table class="border-top-large">
                                 <tbody>
+                                    <!-- 
+                                    프린트 출력물 내부 html 그냥 td여도 되나요?
+                                    value값이 아닌 경우에는 값이 늘어나도 다음과 같이 되는데 
+                                    아닐 경우에는 아래와 같이 됩니다.
+                                    -->
                                     <tr>
                                         <th><label for="">노동조합<br>(산하조직)명</label></th>
-                                        <td><div class="td__container"><input type="text" id="d" name="d" value="강원도지역버스노동조합" readonly></div></td>
+                                        <td><div class="min__h__box" >전국화학섬유식품산업노동조합LG화학LG에너지솔루션청주지회</div></td>
                                         <th><label for="">대표자</label></th>
-                                        <td><div class="td__container"><input type="text" id="t" name="t" value="김*만"></div></td>
+                                        <td><div class="min__h__box">김*만</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">총연합단체</label></th>
-                                        <td><div class="td__container"><input type="text" id="d" name="d" value="한국노동조합총연맹" readonly></div></td>
+                                        <td><div class="min__h__box" >전국화학섬유식품산업</div></td>
                                         <th><label for="">총연합단체 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="x" name="x" value="공시완료"></div></td>
+                                        <td><div class="min__h__box" >공시완료</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">연합단체</label></th>
-                                        <td><div class="td__container"><input type="text" id="e" name="e" value="전국자동차노동조합연맹" readonly></div></td>
+                                        <td><div class="min__h__box" >전국자동차노동조합연맹</div></td>
                                         <th><label for="">연합단체 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="f" name="f" value="공시완료" readonly></div></td>
+                                        <td><div class="min__h__box" >공시완료</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">단위노동조합</label></th>
-                                        <td><div class="td__container"><input type="text" id="g" name="g" value="강원도지역버스노동조합" readonly></div></td>
+                                        <td><div class="min__h__box" >강원도지역버스노동조합</div></td>
                                         <th><label for="">단위노동조합 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="h" name="h" value="공시완료" readonly></div></td>
+                                        <td><div class="min__h__box" >공시완료</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">지부</label></th>
-                                        <td><div class="td__container"><input type="text" id="i" name="i" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                         <th><label for="">지부 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="j" name="j" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">지회</label></th>
-                                        <td><div class="td__container"><input type="text" id="k" name="k" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                         <th><label for="">지회 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="l" name="l" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                     </tr>
                                     <tr>
                                         <th><label for="">분회</label></th>
-                                        <td><div class="td__container"><input type="text" id="m" name="m" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                         <th><label for="">분회 공시여부</label></th>
-                                        <td><div class="td__container"><input type="text" id="n" name="n" value="-" readonly></div></td>
+                                        <td><div class="min__h__box" >-</div></td>
                                     </tr>
                                 </tbody>
                             </table>
