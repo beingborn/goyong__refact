@@ -54,7 +54,13 @@ button.mo_only {display: none;}
 .data__title.flex--box-s {align-items: baseline;}
 // 회계 공시 등록 > 회계공시 탭 페이지 스타일 임시 코드
 .border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; text-align: right; font-weight: 700;}
-.border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
+// .border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
+
+.table__vertical.lineBg tr.style1 > td {background: #DEEBF7;}
+.table__vertical.inputBg tr.style1 > td input {background: #DEEBF7!important;}
+.table__vertical.inputBg tr td:first-of-type input {background: #DEEBF7;}
+.table__vertical.lineBg tr td:first-of-type {background: #DEEBF7;}
+
 
 .input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%;}
 

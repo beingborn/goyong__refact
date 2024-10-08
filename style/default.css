@@ -2841,8 +2841,20 @@ button.mo_only {
   font-weight: 700;
 }
 
-.border__input__wrap .table__vertical tbody tr:nth-child(1) input {
-  background-color: #DAE5FA;
+.table__vertical.lineBg tr.style1 > td {
+  background: #DEEBF7;
+}
+
+.table__vertical.inputBg tr.style1 > td input {
+  background: #DEEBF7 !important;
+}
+
+.table__vertical.inputBg tr td:first-of-type input {
+  background: #DEEBF7;
+}
+
+.table__vertical.lineBg tr td:first-of-type {
+  background: #DEEBF7;
 }
 
 .input--flex {
