@@ -391,6 +391,15 @@ textarea {
   flex-direction: column;
 }
 
+.lg--mw200 {
+  max-width: 20rem;
+}
+
+@media all and (max-width: 767px) {
+  .lg--mw500 {
+    max-width: none;
+  }
+}
 .lg--mw500 {
   max-width: 50rem;
 }

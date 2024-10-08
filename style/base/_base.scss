@@ -146,11 +146,17 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .flex--vertical {display: flex; flex-direction: column;}
 
   // 고정값 제어
+  .lg--mw200 {max-width: 20rem;}
+  @media all and (max-width: 767px) {.lg--mw500{max-width: none;}}
+
+
   .lg--mw500 {max-width: 50rem;}
   @media all and (max-width: 767px) {.lg--mw500{max-width: none;}}
 
   .lg--miw500 {min-width: 50rem;}
   @media all and (max-width: 767px) {.lg--miw500{min-width: none;}}
+
+
 
 
 
