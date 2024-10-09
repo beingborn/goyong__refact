@@ -1355,6 +1355,10 @@ table caption {
   border-right: 0.1rem solid #ddd;
 }
 
+.table__vertical .min__h__box {
+  padding: 0 0.6rem;
+}
+
 .table__vertical table thead tr th {
   border-right: 0.1rem solid #ddd;
   text-align: center;
@@ -2876,6 +2880,26 @@ button.mo_only {
 
 .miw__1024 {
   min-width: 102.4rem;
+}
+
+.miw__1400 {
+  min-width: 140rem;
+}
+
+.miw__1260 {
+  min-width: 126rem;
+}
+
+.miw__1600 {
+  min-width: 160rem;
+}
+
+.miw__1800 {
+  min-width: 180rem;
+}
+
+.miw__2600 {
+  min-width: 260rem;
 }
 
 .data__number {

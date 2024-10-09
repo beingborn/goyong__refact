@@ -440,6 +440,11 @@
             <!-- 웹 탭 2번 콘텐츠 (회계공시열람) -->
             <div class="tab__2 tab">
               <div class="ly__cont">
+                <!-- 상단 버튼 그룹 -->
+                <div class="function__group m__cont mg--16-b">
+                  <button type="button" class="btn__control responsive bg--blue-00">모바일 &larr;&rarr; PC 전환</button>
+                </div>
+                <!-- ./ 상단 버튼 그룹 -->
                 <div class="data__header"><h2 class="data__title flex--box-s">공시정보 <span class="w__cont" style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2></div>
                 <!-- 웹 상단 공시정보 검색 테이블 -->
                 <div class="table__horizontal__ex w__cont">
@@ -785,12 +790,12 @@
                 </div>
                 <!-- 웹용 자산 및 부채현황 테이블 -->
                 <div class="table__vertical table--overflow-x lineBg">
-                  <table class="cross__table border-top-large miw__1024 table--fixed">
+                  <table class="cross__table border-top-large miw__1260 table--fixed">
                     <caption>
                       자산 및 부채현황 {구분, 자산}
                     </caption>
                     <colgroup>
-                      <col class="align__cols">
+                      <col style="width: 20rem;">
                       <col>
                       <col>
                       <col>
@@ -812,7 +817,7 @@
                     <tbody>
                       <tr class="style1">
                         <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
-                        <td><div class="min__h__box text--r">2</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
                         <td><div class="min__h__box text--r">2</div></td>
                         <td><div class="min__h__box text--r"></div></td>
                         <td><div class="min__h__box text--r">0</div></td>
@@ -821,39 +826,39 @@
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
-                        <td><div class="min__h__box text--r">10,000,0</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
+                        <td><div class="min__h__box text--r">3,000,000</div></td>
                       </tr>
                     </tbody>
                   </table>
@@ -866,11 +871,11 @@
                   <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
                 </div>
                 <!-- 웹용 수입현황 테이블 -->
-                <div class="table__vertical table--overflow-x wordBreakNowrap lineBg">
-                  <table class="cross__table border-top-large miw__1024 table--fixed">
+                <div class="table__vertical table--overflow-x lineBg">
+                  <table class="cross__table border-top-large table--fixed miw__1260">
                     <caption>수입현황 {구분, 자산}</caption>
                     <colgroup>
-                      <col class="align__cols">
+                      <col style="width: 20rem;">
                       <col>
                       <col>
                       <col>
@@ -904,11 +909,11 @@
                     <tbody>
                       <tr class="style1">
                         <th scope="row"><div class="min__h__box text--l">ⓐ총계(=ⓑ+ⓒ+ⓓ+ⓔ)</div></th>
-                        <td><div class="min__h__box text--r">3,666,666</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
@@ -922,37 +927,37 @@
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
                         <td><div class="min__h__box text--r">2</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">22,000,000</div></td>
+                        <td><div class="min__h__box text--r">20,000</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">200,000</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
-                        <td><div class="min__h__box text--r">2</div></td>
+                        <td><div class="min__h__box text--r">23,000,000</div></td>
+                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">20,000,000</div></td>
+                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">20,000</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
                         <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
-                        <td><div class="min__h__box text--r">20</div></td>
+                        <td><div class="min__h__box text--r">2,000,000</div></td>
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
@@ -978,11 +983,11 @@
                   <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
                 </div>
                 <!-- 웹용 지출현황 테이블 -->
-                <div class="table__vertical table--overflow-x wordBreakNowrap lineBg">
-                  <table class="min--width cross__table border-top-large">
+                <div class="table__vertical table--overflow-x lineBg">
+                  <table class="cross__table border-top-large table--fixed miw__1600">
                     <caption>지출현황</caption>
                     <colgroup>
-                      <col class="align__cols" >
+                      <col style="width: 20rem;">
                       <col>
                       <col>
                       <col>
@@ -1047,75 +1052,75 @@
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓑ일반회계</div></th>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
                         <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>           
+                        <td><div class="min__h__box text--r">10,000,000</div></td>         
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓒ특별회계</div></th>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
                         <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>                             
+                        <td><div class="min__h__box text--r">10,000,000</div></td>                           
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓓ보조금사업회계</div></th>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
                         <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>                          
+                        <td><div class="min__h__box text--r">10,000,000</div></td>                         
                       </tr>
                       <tr>
                         <th scope="row"><div class="min__h__box text--l">ⓔ수익사업회계</div></th>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
+                        <td><div class="min__h__box text--r">0</div></td>
                         <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>
-                        <td><div class="min__h__box text--r">10,000,000</div></td>                      
+                        <td><div class="min__h__box text--r">10,000,000</div></td>                   
                       </tr>
                     </tbody>
                   </table>

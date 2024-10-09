@@ -191,12 +191,13 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .border-middleGray {border-top: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
 
 // 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
+.table__vertical .min__h__box {padding: 0 0.6rem;}
 .table__vertical table thead tr th {border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
 .table__vertical tr th:nth-child(1) {word-break: keep-all; white-space: nowrap;}  // 제목에 있는 th들은 단어들을 기준으로 줄바꿈.
 .table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
-.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;   }
+.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;}
 .table__vertical tbody th {vertical-align: middle;} 
 .table__vertical tbody td {vertical-align: middle; width: auto;}  
 .table__vertical tbody td:nth-last-child(1) {border-right:0;} 
