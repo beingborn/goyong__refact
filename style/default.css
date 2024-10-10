@@ -3048,6 +3048,13 @@ button.mo_only {
   display: none;
 }
 
+.table__vertical .input__data tr td input {
+  width: 100%;
+  border-radius: 0;
+  text-align: right;
+  font-weight: 700;
+}
+
 .accn__result table {
   font-size: 1.6rem;
 }
