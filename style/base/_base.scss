@@ -116,8 +116,10 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mb--56 {margin-bottom: 5.6rem;}
   .mg--64-All {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 
-  @media all and (max-width: 767px){.sm--mt-36 {margin-top: 3.6rem!important}}
+  @media all and (max-width: 767px){.sm--mt-36 {margin-top: 3.6rem!important}   .mg--64-All.sm--36-All{margin-top: 3.6rem; margin-bottom: 3.6rem;}}
   @media all and (max-width: 767px){.sm--mb-64 {margin-bottom: 6.4rem!important}}
+
+
   /* 헬퍼 라지 Space */
 
   // 태블릿 이상에서만 margin-right를 24px 주는 헬퍼 클래스
@@ -133,7 +135,6 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   // 테이블 top에 굵은 border 적용
   .border-top-large {border-top: 0.2rem solid #000;}
 
-  
   /* flex 레이아웃 제어 */
   .flex--box {display: flex;}
   .flex--box-c {display: flex; align-items: center;}
