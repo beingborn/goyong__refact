@@ -219,7 +219,7 @@
                         </div>
                         <!-- ./ 테이블 제목 -->
                         <!-- 상단 버튼 그룹 -->
-                        <div class="function__group">
+                        <div class="function__group type2">
                             <button type="button" class="btn__control__u bg--blue-02" onclick="fn_search();">조회</button>
                             <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">양식다운로드</button>
                             <button type="button" class="btn__control__u bg--blue-00" onclick="fn_search();">신규</button>
@@ -230,8 +230,8 @@
                         <!-- ./ 상단 버튼 그룹 -->
                     </div>
                     <!-- 검색 폼 시작 -->
-                    <div class="user__form__wrapper">
-                        <form class="search__form__user" action="POST">
+                    <div class="user__form__wrapper sm--mt-36">
+                        <form class="search__form__user type2" action="POST">
                             <div class="search">
                                 <input type="hidden" id="pageNo" name="pageNo" value="" />
                                 <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
@@ -273,7 +273,7 @@
                     <!-- 조회결과 데이터 표  -->
                     <div>
                         <div class="accn__result check__result" id="main__content">
-                            <div class="tab__detail table__vertical w__cont" style="margin-bottom: 6.4rem;">
+                            <div class="tab__detail table__vertical w__cont notBorderRight" style="margin-bottom: 6.4rem;">
                                 <table class="border-top-large">
                                     <caption>가맹노조(산하조직)관리 조회결과</caption>
                                     <colgroup>
@@ -329,7 +329,7 @@
                                         <caption>가맹노조 산하조직 결과 모바일 테이블</caption>
                                         <tbody>
                                             <tr>
-                                                <td><span class="sub__title">노동조합(산하조직)명칭</span><span>전국 공무원 노동조합</span></td>
+                                                <td class="pd--10-b"><span class="sub__title">노동조합(산하조직)명칭</span><span>전국 공무원 노동조합</span></td>
                                                 <td><span class="sub__title">노동조합(산하조직)형태</span><span>민주노총</span></td>
                                                 <td><span class="sub__title">대표자</span><span>김*윤</span></td>
                                                 <td><span class="sub__title">사업자등록번호(고유번호)</span><span>12-123-12312</span></td>
@@ -344,7 +344,7 @@
                         </div>
                         <div class="union__page">
                             <!-- 가맹노조 웹용 페이지 네이션 -->
-                            <div class="pagination w__cont pagination__margin">
+                            <div class="pagination w__cont pagination__margin mb--64">
                                 <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
                                 <div class="page-links">
                                     <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
@@ -383,7 +383,7 @@
 							<!-- 페이지 네이션 모바일 버전 -->
                         </div>
                         <!-- 하단 가로 테이블 제목 -->
-                        <div class="union__table__title__wrap">
+                        <div class="sm--mt-36 mb--36">
                             <div class="flex--box-c info__tip__box">
                                 <h2 class="table__title">가맹노조(산하조직) 정보</h2>
                                 <button type="button" class="info__tip mg--10-l"></button>
@@ -403,7 +403,7 @@
                         </div>
                         <!-- ./ 하단 가로 테이블 제목 -->
                         <!-- 웹용 하단 가맹 노조 정보 -->
-                        <div class="table__horizontal__ex w__cont">
+                        <div class="table__horizontal__ex mb--250  w__cont">
                             <table class="border-top-large">
                                 <caption>가맹노조(산하조직)정보 테이블</caption>
                                 <tbody>
@@ -448,7 +448,7 @@
                         </div>
                         <!-- ./ 웹용 하단 가맹 노조 정보 -->
                         <!-- 가맹노조 산하조직 모바일 테이블 -->
-                        <div class="table__horizontal__ex m__cont">
+                        <div class="table__horizontal__ex mb--60 m__cont">
                             <div>
                                 <table class="border-top-large">
                                     <caption>가맹노조 산하조직 모바일 테이블</caption>

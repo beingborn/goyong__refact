@@ -32,7 +32,6 @@ body {position: relative; }
 #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
 }
 
-// 공통 
 
 // 공통 input 숨기기 / 보기
 .secret__Check {position: relative;}
@@ -41,7 +40,7 @@ body {position: relative; }
 
 
 // 파일 업로드 공통
-.form__table .file__select__container .preview  {flex-grow: 1;}
+.form__table .file__select__container .preview {flex-grow: 1;}
 .form__table .file__select__container {padding-right: 0;}
 .form__table .btn__file__select--mo {display: none;}
 
@@ -50,8 +49,9 @@ body {position: relative; }
 
 
 @media all and (min-width: 480px) and (max-width: 1440px) {
-.sign__up__table__wrap .form__table tr:nth-child(4) br.onlyMo {display: block;}
+    br.onlyMo {display: block;}
 }
+
 
 @media all and (min-width: 360px) and (max-width: 767px) {
 // 노동조합 규약
@@ -59,31 +59,22 @@ body {position: relative; }
 .upload__manager .form__row .td__container:nth-of-type(1) {max-width: 10rem; min-width: 10rem;}
 .upload__manager .form__row .td__container input {width: 8rem;}
 .upload__manager .file__select__container > .preview , .union__management__wrap .file__select__container > .preview {margin-right: 1rem;}
-
 .file__select__container > .preview {position: relative;}
 .btn__file__select {display: none;}
 .btn__file__select--mo {display: block; right: 0;}    
-
 .file__change__wrap .td__container {flex-wrap: nowrap;}
 .file__change__wrap .preview {white-space: nowrap;}
 .file__change__wrap .btn__file__select {white-space: nowrap;}
 }
 
 @media all and (max-width: 767px) {
-.btn__half__wrap .function__group .btn__control:nth-of-type(1) {margin-bottom: 1rem;}
-.main__accn__desc__wrap .desc__banner {flex-direction: column; align-items: flex-start; max-height: none;}
-.main__accn__desc__wrap .desc__banner {margin-top: 3.6rem; margin-bottom: 3.6rem; padding: 1.4rem 2.4rem;}
-.main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {margin-bottom: 6rem;}
-.main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {margin-bottom: 6rem;}
-.main__accn__desc__wrap .data__title {display: none;}
-.main__accn__desc__wrap .table__vertical th {white-space: normal!important;}
 
 // form__table 공통
 br.pcOnly {display: none;}
 .btn__check__dup {min-width: 10rem; font-size: 1.9rem;}
 .form__table td input[type=text], .form__table td input[type=password]{font-size: 1.9rem;}
 .form__table tr {flex-direction: column; border-bottom: 0;}
-.form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; } 
+.form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; white-space: nowrap;} 
 .form__table.border-top-large{border-top: 0;}
 .form__table .td__container {padding: 0;}
 .form__table .consent__chk .td__container {gap: 0;} // 수신동의 gap 제거
@@ -93,13 +84,12 @@ br.pcOnly {display: none;}
 // 파일 업로드
 .form__table .file__select__container {position: relative; gap: 0;}
 .form__table .preview {height: 5.8rem;}
-
 .form__table .btn__file__select {display: none;}
 .form__table .btn__file__select--mo {display: block;}
 
 // 비밀번호 변경 , 파일 변경 페이지
 .info__change__form {margin-top : 6.4rem ;margin-bottom: 9.2rem;}
-.info__change__form .form__table tr{margin-bottom: 2.4rem;}
+.info__change__form .form__table tr {margin-bottom: 2.4rem;}
 .info__change__form .function__group {margin: 0;}
 .info__change__form .btn__control {width: 100%;}
 .info__change__form .error-message {padding-left: 0; padding-top: 1rem; padding-bottom: 0;}
@@ -107,7 +97,6 @@ br.pcOnly {display: none;}
 // 공통 상단 테이블 제목
 .table__title.flex__title {flex-direction: column; align-items: baseline;}
 .table__title.flex__title > h2 {font-size: 3.2rem;}
-
 .table__title .must__help__message {margin: 0;}
 
 // 회원가입 페이지, 회원정보 변경 페이지 간격 조정
@@ -130,13 +119,9 @@ br.pcOnly {display: none;}
 .organization .btn__select {width: 100%; height: 4.8rem; margin-bottom: 1rem; margin-left: 0;}
 .sign__up__table__wrap .td__calender {width: 100%; position: relative;}
 .sign__up__table__wrap .form__table .col2__th {min-height: auto;}
-.s-select--no--style {padding: 0 1.6rem;}
 .sign__up__table__wrap .td__date {display: flex; width: 100%; gap: 1rem; align-items: center;}
 .sign__up__table__wrap .td__date select {min-width: auto;}
-//.sign__up__table__wrap .select__renew{background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;}
 .sign__up__table__wrap .td__date .select__renew {background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;}
-
-
 .btn__half__wrap.function__group {display: flex;}
 .btn__half__wrap.function__group .btn__control {width: 50%;}
 .radio__wrap label {font-size: 1.9rem;}

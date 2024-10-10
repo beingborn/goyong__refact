@@ -35,27 +35,19 @@ button.mo_only {display: none;}
 .function__group.margin-2 {margin-top: 6.4rem;} 
 .pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
 .pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
-.notice__detail .function__group.margin-1 {margin-bottom: 10rem;}
-.public__register__wrap .function__group.margin-2 {margin-bottom: 25rem;}
-
 
 // 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
 .mobile__con {display: none;}
 .mobile__tab {display: none; }
 .mobile__tab__content { display: none;}
 
-.sub1__1__wrap .tab__content .data__header {margin-bottom: 3.6rem;}
-.sub1__1__wrap .tab .pc__info {margin-top: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(3) .chart__wrapper {margin-bottom: 6.4rem;}
-.sub1__1__wrap .tab:nth-of-type(4) .chart__wrapper {margin-bottom: 6.4rem;}
-.sub1__1__wrap .function__group.margin-2 {margin-bottom: 25rem;}
-.sub1__1__wrap .tab__1 .m__cont th {padding-left: 2.4rem; padding-right: 2.4rem;}
-.data__title {text-align: left; position: relative; font-size: 2.5rem; color: #333; font-weight: 700;}
-.data__title.flex--box-s {align-items: baseline;}
-// 회계 공시 등록 > 회계공시 탭 페이지 스타일 임시 코드
-.border__input__wrap .table__vertical tbody tr td input {width: 100%; border-radius: 0; text-align: right; font-weight: 700;}
-// .border__input__wrap .table__vertical tbody tr:nth-child(1) input {background-color: #DAE5FA;}
+@media all and (max-width: 768px){.sm--pd-24Th th {padding-left: 2.4rem; padding-right: 2.4rem!important}}
 
+.data__title {text-align: left; position: relative; font-size: 2.5rem; color: #333; font-weight: 700;}
+.data__title.flex--box-s {align-items: baseline;
+}
+
+// 세로형 테이블 액티브 스타일 적용 
 .table__vertical.lineBg tr.style1 > td {background: #DEEBF7;}
 .table__vertical.inputBg tr.style1 > td input {background: #DEEBF7!important;}
 .table__vertical.inputBg tr td:first-of-type input {background: #DEEBF7;}
@@ -63,14 +55,8 @@ button.mo_only {display: none;}
 
 
 .input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%;}
+.align__cols {width: 20rem;}
 
-// .tab .dis__info:not(:first-child) { padding-top: 5.6rem; padding-bottom: 5.6rem; }
-// .tab .table__vertical { border-top: 0.2rem solid #333; width: 100%;}
-
-.align__cols { width: 15.38%; min-width: 20rem;}
-
-// 지출 현황
-.tab__content .tab .expend__sit { padding-bottom: 0; margin-bottom: 5.6rem; }
 
 // min-width 지정
 .miw__1024 {min-width: 102.4rem} 
@@ -85,55 +71,44 @@ button.mo_only {display: none;}
 .data__number {font-size: 2.1rem; font-weight: 700;}
 .data__number > span {color: #1D56BC;}
 .page__title__wrap {margin-top: 8rem; margin-bottom: 6.4rem;}
+
+// 검색 폼이 두 줄인. 회계공시 열람 페이지에만 적용
 .search__form__user {background-color: #EDF1F5; border-radius: 1.2rem;}
 .search__form__user select,.search__form__user input {border: 0.1rem solid #717171;}
 .search__form__user .search {padding: 4rem;}
-.search__form__user.lv .search .input__box > input {margin: 0 2.4rem;}
-
-// 파일 찾기 폼
 .search__form__user .preview {background-color: #fff; height: 4.8rem; flex-grow: 1;}
 .search__form__user .upload__wrap .btn__file__select {font-weight: 400; min-height: 4.8rem;}
 .search__form__user .upload__wrap .btn__upload {font-weight: 400; min-height: 4.8rem;}
-
-// 검색 폼이 두 줄인. 회계공시 열람 페이지에만 적용
 .search__form__user .search .first__input__box {padding-bottom: 2.4rem;}
 .search__form__user .search input {font-size: 1.7rem;}
 .search__form__user .search .select__box {min-width: 18rem; height: 4.8rem; display: flex;}
-.search__form__user .search .select__box.select__container {display: flex; gap: 1rem; justify-content: space-between; align-items: center;} // 해당 클래스 삽입 시 widht 50%씩
-
+.search__form__user .search .select__box.select__container {display: flex; gap: 1rem; justify-content: space-between; align-items: center;} // 해당 클래스 삽입 시 width 50%씩
 .search__form__user .flexTwo {gap: 1rem; justify-content: space-between; align-items: center;}
 .search__form__user .flexTwo input[type="text"],.search__form__user .flexTwo .select__box > select {width: calc(50% - 1rem); flex:auto;}
-
 .search__form__user .search .select__box.select__container input[type="text"],.sub1__1__wrap .search__form__user .search .select__box > select {width: calc(50% - 1rem); flex: auto;}
 .search__form__user .search .input__box {height: 4.8rem; display: flex; flex: 1;}
-.search__form__user .search .input__box > input {height: 100%; flex: 1; background: #fff;}
+.search__form__user .search .input__box > input {height: 100%; flex: 1; background: #fff; margin: 0 2.4rem;}
 .search__form__user .search .select__box > select {width: 100%; height: 100%; flex: 1;}
 .search__form__user label.mo_only {font-weight: 700; font-size: 1.7rem; padding-bottom: 1rem; margin-right: auto;}
 .search__form__user .search__container {display: flex; gap: 1rem; align-items: center;}
 
 .form__container {display: flex; flex-wrap: wrap; gap: 2.4rem;}
-.accn__desc__wrap .num__label.m__cont { display: none ;}
-
 
 // 가맹 노조 크기 작은 버튼 크기
 .btn__control__u {color: #fff; font-size: 1.7rem; border-radius: 0.7rem; padding: 0 1.6rem; height: 4.8rem;}
-.accn__open__wrap .search__form__user .search .input__box > input {margin: 0 2.4rem;}
 .accn__open__wrap .search__form__user .search > div label {font-size: 1.7rem; font-weight: 700; margin-right: 1.2rem;}
+.accn__desc__wrap .num__label.m__cont{ display: none;}
 
-// 홈 > 회계공시열람
+
 .accn__result table {font-size: 1.6rem;}
-.accn__result table thead th:not(:first-child){border-right: 0;}
-.accn__result table tbody td:not(:first-child){border-right: 0;}
 
-// .accn__open__page .pagination {margin-bottom: 18rem; margin-top: 6.4rem;} 
-
+// 구분 선이 없는 테이블 
+.notBorderRight table thead th:not(:first-child), .notBorderRight table tbody td:not(:first-child){border-right: 0;}
 
 // 홈 > 시스템안내 > 자주묻는 질문
-.faq__wrap .search__form__user .input__box > input {margin: 0 2.4rem;}
 .qna__container {display: inline-flex; justify-content: center; align-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; color: #fff;}
 .qna__container.question {background-color: #16C273;}
 .qna__container.answer {background-color: #000000;}
-
 // 자주 묻는 질문 테이블
 .foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
 .foldStyle__table tbody tr td {display: flex; align-items: center;}
@@ -146,20 +121,16 @@ button.mo_only {display: none;}
 .foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
 .foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
 
+@media all and (max-width: 768px){.search__form__user .search .input__box > input {margin: 0;}}
 
-// 홈 > 시스템 안내 > 공지사항
-.notice__page .pagination {margin-bottom: 20rem;}
-// .notice__wrap .search__form__user .input__box > input {margin: 0 2.4rem;}
-
-.search__form__user.type1 .input__box > input {margin: 0 2.4rem;}
-@media all and (max-width: 768px){.search__form__user.type1 .input__box > input {margin: 0;}}
-
-// 홈 > 시스템 안내 > 공지사항 상세
+// 게시판 상세 내용 테이블
 .notice__detail__wrap table {font-size: 1.6rem;}
 .notice__detail__wrap .content__desc {min-height: 45rem; font-size: 1.7rem; color: #555555;}
 .notice__detail__wrap .table__horizontal__ex .td__container {height: 100%; align-items: center;}
 .board__detail {padding: 6.4rem 0;}
 .notice__detail__wrap .file__wrap {min-height: 5.8rem; background-color: #EAF5F0; display: flex; align-items: center;}
+
+// 첨부 파일
 .file__wrap .file__header {min-width: 25rem; padding-left: 3rem; font-weight: 700; line-height: 5.8rem;}
 .file__wrap .list {flex-grow: 1; max-width: 84rem;}
 .file__wrap .list > span {font-weight: 500;}
@@ -176,21 +147,16 @@ button.mo_only {display: none;}
 
 
 // 홈 > 회계공시등록 > 가맹노조(산하조직)관리
-.union__management__wrap .pagination {margin-bottom: 6.4rem;}
-.union__management__wrap .table__horizontal__ex {margin-bottom: 25rem;}
-.union__management__wrap .search .input__box {margin-right: 2.4rem;}
+
+.search__form__user.type2 .search .input__box {margin-right: 2.4rem;}
 .union__management__wrap .btn__file__select {min-width: 9.1rem;}
 .union__management__wrap .upload__wrap {flex-grow: 1;}
-.union__management__wrap .function__group {position: absolute; top: 0; right: 0; display: flex; gap: 1rem;}
-.union__management__wrap .table__horizontal__mo tr td:first-child {padding-bottom: 1rem;}
-.union__function__group .btn__control__u {padding: 0 1.2rem; font-size: 1.5rem; height: 4rem;}
-.union__table__title__wrap {margin-bottom: 3.6rem;}
 
-
+.function__group.type2 {position: absolute; top: 0; right: 0; display: flex; gap: 1rem;}
+.function__group.type2 .btn__control__u {padding: 0 1.2rem; font-size: 1.5rem; height: 4rem;}
 // 홈 > 회계공시 시스템이란
 .accn__desc__wrap .desc__inner {padding: 0 9rem;}
 .accn__desc__wrap .num__label {margin-right : 0.8rem;background-color: #000; display: inline-flex; justify-content : center; align-items: center ;width: 1.4rem; height: 1.4rem; color: #fff; border-radius: 50%; font-size: 1.2rem;}
-
 
 // 설명 1번 섹션
 .accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
@@ -221,7 +187,6 @@ button.mo_only {display: none;}
 .accn__desc__wrap .expected__section .image__container {width: 100%; height: 26.2rem; margin: 5rem 0; background-image: url('../img/accn__desc__img__circle__03.png'); background-position: center center;}
 .accn__desc__wrap .expected__section .title {font-size: 4.8rem; font-weight: 700;}
 
-
 // 홈 > 시스템안내 > 주요 공시항목 설명
 .main__accn__desc__wrap .desc__banner{margin: 6.4rem 0;}
 .main__accn__desc__wrap .image__container {text-align: center; margin: 6.4rem 0;}
@@ -230,7 +195,6 @@ button.mo_only {display: none;}
 .main__accn__desc__wrap .table__vertical tbody th {height: 5.8rem; background: transparent;}
 .main__accn__desc__wrap .tab .table__vertical {border-top: 0.2rem solid #00A463;}
 .main__accn__desc__wrap .table__vertical tbody td {padding: 0.8rem 1rem; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;}
-
 .main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {margin-bottom: 25rem;} //첫번째 탭 표에만 적용
 .main__accn__desc__wrap .tab:nth-of-type(2) .content__section:not(:last-child) {margin-bottom: 10rem}
 .main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {margin-bottom: 30rem}
@@ -240,43 +204,24 @@ button.mo_only {display: none;}
 .desc__banner .title {font-size: 1.7rem; font-weight: 700; margin-right: 1.6rem;}
 .desc__banner .desc {font-size: 1.5rem; font-weight: 400;}
 
-// 가로형 테이블 모듈 2
-.table__horizotal__sh th {width: 15.38%; min-width: 15rem!important; max-width: 15rem; padding: 0 1.5rem; word-break: keep-all;}
-
 // 모바일 변환형 테이블
 @media all and (max-width: 767px) {
-    .table__horizotal__sh .border-top-large {border: 0;}
-    .mo__columnTable tr {display: block; border-bottom: 0;}
-    .mo__columnTable th {padding: 0; background: transparent; margin-bottom: 1.2rem;}
-    .mo__columnTable th{margin-top: 1.6rem;}
-    .mo__columnTable tr:nth-child(1) th:first-child {margin-top: -1.6rem;} // 첫번째 행의 첫번째 제목 마진 값 초기화
-    .mo__columnTable .td__container {gap: 0; padding: 0;}
-
-    .mo__columnTable.mo__columnType2 .border-top-large {border: 0;}
-    .mo__columnTable.mo__columnType2 .td__container {gap: 1rem;}
+    .table__horizontal__ex.mo__columnTable .border-top-large {border: 0;}
+    .table__horizontal__ex.mo__columnTable tr {display: block; border-bottom: 0;}
+    .table__horizontal__ex.mo__columnTable th {padding: 0; background: transparent; margin-bottom: 1.2rem;}
+    .table__horizontal__ex.mo__columnTable th{margin-top: 1.6rem;}
+    .table__horizontal__ex.mo__columnTable tr:nth-child(1) th:first-child {margin-top: -1.6rem;} // 첫번째 행의 첫번째 제목 마진 값 초기화
+    .table__horizontal__ex.mo__columnTable .td__container {gap: 0; padding: 0;}
+    .table__horizontal__ex.mo__columnTable.mo__columnType2 .border-top-large {border: 0;}
+    .table__horizontal__ex.mo__columnTable.mo__columnType2 .td__container {gap: 1rem;}
 }
 
-
-// 홈 > 회계공시등록 > 회계공시등록
-.public__register__wrap  .form__table th {width: 15.38%; min-width: 15rem; max-width: 15rem;}
-.public__register__wrap  .td__calender__wrap, .public__register__wrap  .td__year__wrap {max-width: 49rem; width: calc(50% - 30rem);}
-.public__register__wrap  .td__calender {width: auto;}
-.public__register__wrap .form__table th {padding: 0 1.5rem;}
-.public__register__wrap .table__horizontal__ex .wide__first td:nth-of-type(2) .td__container {flex-wrap: nowrap;}
-.public__register__wrap .data__header {margin-top: 6.4rem; margin-bottom: 3.6rem;}
 
 //데이터 차트 CSS
 .chart-block { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;}
 .chart__wrapper { width: calc(50% - 20px);}
-.mo__tab__table { display: none; margin-bottom: 5rem; }
+
 // 모바일 탭 테이블
-.tab__content .mo__tab__table table { font-size: 1.5rem; }
-.tab__content .mo__tab__table table tr { display: flex; flex-wrap: wrap; }
-.tab__content .mo__tab__table table tbody th { font-size: 1.6rem; text-align: left; border: 0; width: 100%; margin-bottom: 1rem; }
-.tab__content .mo__tab__table table tbody td { font-size: 1.6rem; width: 100%; }
-.mo__4__input, .mo__4__select { height: 4rem; line-height: 4rem; border: 1px solid #CDCCCD; width: calc(50% - 1rem); }
-.mo__4__group__wrap { margin-bottom: 2rem; }
-.mo__4__group { height: 4rem; line-height: 4rem; border: 1px solid #CDCCCD; }
 .tab .echart {  width: 100%; height: 400px; position: relative; background-color: #F8F8F8;}
 
 // 차트 제목 
@@ -303,7 +248,6 @@ button.mo_only {display: none;}
 .form__table .col2__th span { line-height: 150%; text-align: left; }
 .form__table .preview { min-width: auto; }
 .form__table tr {min-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
-.form__table th {min-width: 25rem; } // 해당 min-width 수치는 임시
 .form__table td { flex-grow: 1; line-height: 100%; display: block;}
 .form__table td input[type="text"], .form__table td input[type="password"] {line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem;}
 .form__table td input[type="submit"] {line-height: 4rem; }
@@ -316,25 +260,9 @@ button.mo_only {display: none;}
 .must__type { position: relative; text-align: left; }
 .must__type::after { content: ' *'; color: #FE5555;  font-weight: 700; position: absolute;}
 
-// 회원가입 페이지 
-// .sign__up__table__wrap .select__renew { background: url(../img/select__renew.png) no-repeat 98% 50%; }
-.sign__up__table .radio__wrap .flex { display: flex; align-items: center; }
-.sign__up__table .radio__wrap .flex label:nth-of-type(1) { margin-right: 2rem; }
-.sign__up__table .radio__wrap input[type="radio"] { appearance: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; margin-right: 0.7rem; border: 1px solid #ccc; }
-.sign__up__table .radio__wrap input[type="radio"]:checked { border: 0.6rem solid #000;}
-.sign__up__table__wrap .td__date .select__renew { background: url(../img/select__renew.png) no-repeat 92% 50%;}
-.sign__up__table__wrap .form__table th {min-width: 25rem; max-width: 25rem;}
 
 // 달력 공통
 .td__calender {position: relative; width: 33.33%;}
-.s-select--no--style { appearance: none; padding: 0 8px;}
-
-.check__result .table__vertical table thead tr th:nth-child(1) {border-left: 0;}
-.check__result .table__vertical table thead tr th:nth-last-child(1) {border-right: 0;}
-.check__result .table__vertical table tbody tr th:nth-child(1){border-left: 0; background-color: transparent;}
-.check__result .table__vertical table tbody td:nth-last-child(1) {border-right: 0;}
-.note__th {border-bottom: 0.1rem solid #ddd;}
-.no__border__note .note__th {border-bottom: 0;}
 
 // 프린트 페이지 전용
 .printResult__desc {font-size: 2.1rem; padding-top: 2.4rem; padding-bottom: 6.4rem;}
@@ -361,10 +289,9 @@ button.mo_only {display: none;}
         background: initial;
         page-break-after: always;
     }
-
-    .printPage input {height: 30px; padding: 0; box-sizing: border;}
+    .printPage input {min-height: 30px; padding: 0; box-sizing: border;}
 }
-//.grayTable th {background-color: #f1f1f1;}
+
 
 /* 모바일 전용 탭 */
 .mobile__tab .swiper-slide { max-width: 13rem; text-align: center;}
@@ -385,11 +312,9 @@ button.mo_only {display: none;}
 @media all and (max-width: 550px) {.content .mobile__tab .swiper .swiper-slide { max-width: 13rem;}}
 
 
+// 모듈 : 아코디언 서브 데이터 토글
 // 모바일 데이터 오픈 내부 내용
 .mobile__con {margin: 3.6rem 0;}
-.public__register__wrap .mo__slide td {min-height: 5.8rem;}
-
-// 모듈 : 아코디언 서브 데이터 토글
 .data--open {position: relative;padding: 2rem 0.8rem;font-size: 1.7rem;}
 .data--open .arrow__wrap {position: absolute;top: 50%;transform: translateY(-50%);right: 1rem;}
 .data--open .arrow__wrap .arrow__top {display: none;width: 1.6rem;height: 1.6rem;background: url(../img/arrow__top-green.svg) no-repeat center;}
@@ -415,17 +340,8 @@ button.mo_only {display: none;}
 .mo__slide > table .t__title {margin-top: 2rem; padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd; display: flex;}
 .mo__slide > table tr td {margin-top: 2rem; display: flex; align-items: center; justify-content: space-between;}
 .mo__slide input {text-align: right;}
+.mo__slide.min__h__58 td {min-height: 5.8rem;}
 .td--separated {padding-top: 2rem; padding-bottom: 3rem; border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; margin-bottom: 0!important;}
-
-
 // 하위 항목 표시
 .child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
-
-// 노동 조합 정보
-.list__btn__group {text-align: right;}
-.list__btn__group button {color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem;  margin-top: 4rem; margin-bottom: 2rem; border-radius: 0.7rem; font-weight: 600;}
-
-.tab__content table tbody .cols2 .must__write {position: absolute; top: 50%; transform: translateY(-50%);}
-.tab__4__table {margin-bottom: 2.8rem;}
-
 

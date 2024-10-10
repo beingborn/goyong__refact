@@ -191,7 +191,6 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .border-middleGray {border-top: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
 
 // 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
-.table__vertical .min__h__box {padding: 0 0.6rem;}
 .table__vertical table thead tr th {border-right: 0.1rem solid #ddd; text-align: center; vertical-align: middle; white-space: normal; word-wrap: break-word; word-break:keep-all} 
 .table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
 .table__vertical thead .min__h__box {padding: 0}
@@ -201,10 +200,11 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__vertical tbody th {vertical-align: middle;} 
 .table__vertical tbody td {vertical-align: middle; width: auto;}  
 .table__vertical tbody td:nth-last-child(1) {border-right:0;} 
+.table__vertical.tight__pd tbody td .min__h__box {padding: 0 0.6rem;} // 공시 및 열람 데이터 간격 조정용
 
 // 가로 테이블 공통 스타일
 .table__horizontal__ex tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; width: 100%; display: flex; align-items: stretch;} 
-.table__horizontal__ex th {width: 19.53%; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center; min-width: 25rem;} 
+.table__horizontal__ex th {width: 25rem; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; display: inline-flex; align-items: center;} 
 .table__horizontal__ex td {width: auto; flex-grow: 1; flex-basis: 0; display: block;} 
 .table__horizontal__ex .half__row td {width: 50%;}
 .table__horizontal__ex input[type="text"] {height: 4rem;  width: 100%; font-size: 1.6rem;}
@@ -214,6 +214,10 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
 .table__horizontal__ex .input-3--flex {display: flex; gap: 1rem; width: 100%;} 
 .table__horizontal__ex .input-3--flex input {flex: 1;}
+
+.table__horizontal__ex.shortTit th {width: 20rem;} // 제목 th가 20rem인 가로 테이블
+.table__horizontal__ex.shortTit2 th {width: 15rem; padding: 0 1.5rem;} // 제목 th가 20rem인 가로 테이블
+
 
 // 모바일용 테이블
 .m__table {display: none;}

@@ -87,7 +87,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .pd--10-l {padding-left: 1rem;}
   .pd--20-l {padding-left: 2rem;}
   .pd--10-r {padding-right: 1rem;}
-  .pd--10-b {padding-bottom: 1rem;}
+  .pd--10-b {padding-bottom: 1rem!important;}
   .pd--24-r {padding-right: 2.4rem;}
   .lg--64-mt {margin-top: 6.4rem;}
   .pd--10-m {padding: 0 1rem;}
@@ -102,7 +102,10 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mg--24-r {margin-right: 2rem;}
   .mt--64 {margin-top: 6.4rem;}
   .mt--24 {margin-top: 2.4rem;}
-  
+  .mb--36 {margin-bottom: 3.6rem;}
+  .mb--64 {margin-bottom: 6.4rem;}
+  .mb--100 {margin-bottom: 10rem;}
+  .mb--250 {margin-bottom: 25rem;}
   .mg--10-b {margin-bottom: 1rem;}
   .mg--16-b {margin-bottom: 1.6rem;}
 
@@ -110,9 +113,11 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mg--40-b {margin-bottom: 4rem;}
   .mg--56-b {margin-bottom: 5.6rem;}
   .mb--60 {margin-bottom: 6rem;}
+  .mb--56 {margin-bottom: 5.6rem;}
   .mg--64-All {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 
-
+  @media all and (max-width: 767px){.sm--mt-36 {margin-top: 3.6rem!important}}
+  @media all and (max-width: 767px){.sm--mb-64 {margin-bottom: 6.4rem!important}}
   /* 헬퍼 라지 Space */
 
   // 태블릿 이상에서만 margin-right를 24px 주는 헬퍼 클래스
@@ -144,18 +149,17 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .flex--start {display: flex; align-items: center; justify-content: start;}
   .flex--column {flex-direction: column;}
   .flex--vertical {display: flex; flex-direction: column;}
+  .flex--noWrap {flex-wrap: nowrap!important;}
 
   // 고정값 제어
   .lg--mw200 {max-width: 20rem;}
   @media all and (max-width: 767px) {.lg--mw200{max-width: none;}}
-
-
   .lg--mw500 {max-width: 50rem;}
   @media all and (max-width: 767px) {.lg--mw500{max-width: none;}}
-
   .lg--miw500 {min-width: 50rem;}
   @media all and (max-width: 767px) {.lg--miw500{min-width: none;}}
 
+  .mw__490 {max-width: 49rem;}
 
 
 
@@ -197,7 +201,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   // wordBreak 
   .wordBreakNormal th {word-break: normal!important;}
   .wordBreakNowrap th {white-space: nowrap!important;}
-
+  .wordBreakKeepAll th {word-break: keep-all;}
 
   // 컬러 제어 
   .txt--navy-00 {color: #003675;}

@@ -221,7 +221,7 @@
               <!-- 탭 콘텐츠 1 (노동조합정보) -->
               <div class="tab">
                 <!-- 도움말 상단 제목 -->
-                <div class="info__tip__box flex--box-c data__header">
+                <div class="info__tip__box flex--box-c mt--64 mb--36">
                     <h2 class="data__title">기본사항</h2>
                   <button type="button" class="info__tip mg--10-l"></button>
                   <!-- 도움말 내부 -->
@@ -256,7 +256,7 @@
                   <!-- ./ 도움말 내부 -->
                 </div>
                 <form action="POST" id="public__register__form">
-                  <div class="table__horizontal__ex" id="main__content">
+                  <div class="table__horizontal__ex shortTit2" id="main__content">
                     <div class="form__table border-top-large">
                       <table>
                         <caption>회계공시등록 폼</caption>
@@ -358,7 +358,7 @@
                         </tr>
                         <tr class="es__date">
                           <th><label for="name4">설립연월일 </label></th>
-                          <td class="td__calender__wrap">
+                          <td class="td__calender__wrap mw__490">
                             <div class="td__container" style="align-items: center">
                               <div class="calender__body">
                                 <input type="text" class="datePicker" id="testPicker" maxlength="10"/>
@@ -367,7 +367,7 @@
                             </div>
                           </td>
                           <th><label for="name5">회계연도</label></th>
-                          <td class="td__year__wrap">
+                          <td class="td__year__wrap mw__490">
                             <div class="td__container">
                               <div class="td__date content">
                                 <select name="d-4-1-" id="d-4-1" class="select--no--style select__renew">
@@ -593,16 +593,16 @@
                 </div>
                 <!-- ./ 하반시 공시 등 근거자료 테이블 -->
                 <!-- 하단 버튼 그룹 -->
-                <div class="function__group btn__half__wrap margin-2">
+                <div class="function__group btn__half__wrap sm--mb-64 mb--250 margin-2">
                   <button type="button" class="btn__control bg--black-00">저장</button>
                   <button onclick="fn_next()" type="button" class="btn__control bg--blue-00">다음</button>
                 </div>
                 <!-- ./ 하단 버튼 그룹 -->
               </div>
               <!-- 회계공시 열람 탭 임시 사용자 디자인 안됌 -->
-              <div class="tab border__input__wrap">
+              <div class="tab">
                 <div>
-                    <div class="flex--box-c data__header">
+                    <div class="flex--box-c data__header mt--64 mb--36">
                         <h2 class="data__title ">공시정보</h2>
                     </div>
                     <!-- 회계공시 > 공시정보 테이블 -->
@@ -617,7 +617,7 @@
                             </td>
                             <th scope="row"><label for="examples1033" class="must__type">회계기간</label></th>
                             <td>
-                              <div class="td__container flex--box-c">
+                              <div class="td__container flex--box-c flex--noWrap">
                                 <div class="calender__body">
                                   <input type="text" class="datePicker" id="testPicker_h" maxlength="10"/>
                                   <label for="testPicker" class="calender__icon mg--10-l"></label>
@@ -667,7 +667,7 @@
                 </div>
                 <div class="w__cont">
                   <div>
-                    <div class="flex--box-c data__header info__tip__box">
+                    <div class="flex--box-c data__header info__tip__box mt--64 mb--36">
                       <h2 class="data__title">자산 및 부채현황</h2>
                       <button type="button" class="info__tip mg--10-l"></button>
                       <div class="tooltip__layer">
@@ -708,10 +708,11 @@
                       </div>
                     </div>
                     <!-- 웹 자산 및 부채 현황 세로형 테이블 -->
-                    <div class="table__vertical table--overflow-x inputBg">
+                    <div class="table__vertical tight__pd table--overflow-x inputBg">
                       <table class="cross__table border-top-large table--fixed miw__1260">
-                        <caption>자산 및 부채현황 {구분, 자산} 세로형 테이블</caption><colgroup>
-                          <col style="width: 20rem;">
+                        <caption>자산 및 부채현황 {구분, 자산} 세로형 테이블</caption>
+                        <colgroup>
+                          <col class="align__cols">
                           <col/>
                           <col/>
                           <col/>
@@ -848,7 +849,7 @@
                   </div>
                 <!-- 수입현황 -->
                 <div class="earn__sit">
-                  <div class="flex--box-c data__header info__tip__box">
+                  <div class="flex--box-c data__header info__tip__box mt--64 mb--36">
                     <h2 class="data__title">수입현황</h2>
                     <button type="button" class="info__tip mg--10-l"></button>
                     <div class="tooltip__layer">
@@ -888,11 +889,11 @@
                     </div>
                   </div>
                   <!-- 웹 수입 현황 테이블 -->
-                  <div class="tab__detail table__vertical table--overflow-x inputBg">
+                  <div class="tab__detail table__vertical tight__pd table--overflow-x inputBg">
                     <table class="cross__table border-top-large table--fixed miw__1800">
                       <caption>수입현황 {구분, 자산}</caption>
                       <colgroup>
-                        <col style="width: 20rem;">
+                        <col class="align__cols">
                         <col/>
                         <col/>
                         <col/>
@@ -1095,7 +1096,7 @@
                 </div>
                 <!-- 지출 현황 -->
                 <div class="expend__sit">
-                  <div class="flex--box-c data__header info__tip__box">
+                  <div class="flex--box-c data__header info__tip__box mt--64 mb--36">
                     <h2 class="data__title">지출현황</h2>
                     <button type="button" class="info__tip mg--10-l"></button>
                     <div class="tooltip__layer">
@@ -1150,11 +1151,11 @@
                     </div>
                   </div>
                   <!-- 웹 지출 현황 테이블 -->
-                  <div class="tab__detail table__vertical border-top-large table--overflow-x inputBg">
+                  <div class="tab__detail table__vertical tight__pd border-top-large table--overflow-x inputBg">
                     <table class="cross__table table--fixed miw__2600">
                       <caption>지출현황</caption>
                       <colgroup>
-                        <col style="width: 20rem;">
+                        <col class="align__cols">
                         <col/>
                         <col/>
                         <col/>
@@ -1503,7 +1504,7 @@
                     </div>
                     <!-- ./ 모바일 자산 및 부채 현황 데이터 슬라이드 제목 -->
                     <!-- 모바일 자산 및 부채 현황 데이터 슬라이드 내용 -->
-                    <div class="mo__slide">
+                    <div class="mo__slide min__h__58">
                       <table>
                         <caption>자산 및 부채현황 내용</caption>
                         <tbody>
@@ -1606,7 +1607,7 @@
                     </div>
                     <!-- ./ 모바일 수입현황 데이터 슬라이드 제목 -->
                     <!-- 모바일 수입현황 데이터 슬라이드 내용 -->
-                    <div class="mo__slide">
+                    <div class="mo__slide min__h__58">
                       <table>
                         <caption>
                           수입 현황 부채현황
@@ -1750,7 +1751,7 @@
                     </div>
                     <!--  ./ 모바일 지출현황 데이터 슬라이드 제목 -->
                     <!--  모바일 지출현황 데이터 슬라이드 내용 -->
-                    <div class="mo__slide">
+                    <div class="mo__slide min__h__58">
                       <table>
                         <caption>지출현황</caption>
                           <tbody>
@@ -1889,7 +1890,7 @@
                 </div>
                 <!-- ./ 주석 테이블 -->
                 <!-- 하단 버튼 그룹 -->
-                <div class="function__group margin-2">
+                <div class="function__group sm--mb-64 mb--250 margin-2">
                   <button onclick="location.href='union__management.html'" type="button" class="btn__control bg--green-02">
                     가맹노조(산하조직)관리
                   </button>
@@ -1975,26 +1976,6 @@
           yearSuffix: "년",
         });
       });
-
-      /** 
-        함수명	: 없음
-        용도    : input value값 너비 조정
-      */
-      // const inputs = document.querySelectorAll('.table__vertical input[type="text"]');
-      // function adjustInputWidth(input) {
-      //   const tempSpan = document.createElement('span');
-      //   tempSpan.style.visibility = 'hidden';  // 화면에 보이지 않게 설정
-      //   tempSpan.style.position = 'absolute';  // 레이아웃에 영향 미치지 않게 설정
-      //   tempSpan.style.whiteSpace = 'pre';     // 공백을 그대로 처리하게 설정
-      //   tempSpan.textContent = input.value; // span에 input의 value 값을 설정
-      //   document.body.appendChild(tempSpan);  // span을 body에 추가하여 너비 계산
-      //   const spanWidth = tempSpan.offsetWidth;
-      //   input.style.width = `${spanWidth + 28}px`; // 계산된 너비를 input에 적용, 여유 공간을 위해 약간의 패딩 추가
-      //   // span 제거
-      //   document.body.removeChild(tempSpan);
-      // }
-      // // 모든 input 요소에 대해 너비 조정
-      // inputs.forEach((input) => adjustInputWidth(input));
     </script>
   </body>
 </html>
