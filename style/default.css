@@ -323,6 +323,10 @@ textarea {
   .sm--mt-36 {
     margin-top: 3.6rem !important;
   }
+  .mg--64-All.sm--36-All {
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+  }
 }
 @media all and (max-width: 767px) {
   .sm--mb-64 {
@@ -1192,6 +1196,7 @@ button {
 
 .btn__control.responsive {
   height: 4rem;
+  font-size: 1.6rem;
 }
 
 @media all and (max-width: 767px) {
@@ -5089,9 +5094,6 @@ button.mo_only {
   }
   .search__form__user.type2 .upload__wrap {
     width: 100%;
-  }
-  .sub1__1__wrap .tab .ly__cont {
-    margin-top: 3.6rem;
   }
   .function__group.margin-2 {
     margin-top: 3.6rem;
