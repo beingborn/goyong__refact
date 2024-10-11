@@ -67,7 +67,7 @@ radioAgree.click(function() {
   radioAgree.addClass('clicked');
 });
 
- 
+
   /* 웹 탭 변환 Open Tab web */
   $('.tab__content .tab').hide().eq(0).show();
   $('.tab__btn button').eq(0).addClass('active');
@@ -90,6 +90,18 @@ radioAgree.click(function() {
   })
 
 
+// 모바일 GNB 스크롤 가능값 바인딩 
+function addMobileLastSubMenuChildPadding() {
+  let lastChild = $('.gnb__body .submenu__wrap > ul:last-child');   // 마지막 서브 메뉴 요소
+  let wholeHeight = $('#gnb2 .submenu__wrap')[0].scrollHeight;      // 전체 서브 메뉴 스크롤 높이
+  let lastChildHeight = lastChild.outerHeight();                   // 마지막 서브 메뉴 높이
+  let lastChildPadding = parseInt(lastChild.css('padding-top'));    // 마지막 서브 메뉴 여백 값
+  let difference = wholeHeight - lastChildHeight;
+  if (lastChild.length) {
+    lastChild.css('padding-bottom', difference + lastChildPadding + 1 + 'px'); // 마지막 서브 메뉴 여백 값 할당 (1은 추가 여백값 할당)
+  }
+}
+addMobileLastSubMenuChildPadding();
 
 
 // 모바일 GNB 토글 및 슬라이드 애니메이션
@@ -125,7 +137,6 @@ $("#gnb2 .menu__wrap a").eq(0).addClass("active");
     event.preventDefault();
     var target = $(this).data('target');
     var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
-
     // submenuWrap 안에서 부드럽게 스크롤 이동
     submenuWrap.animate({ scrollTop: targetOffset });
     $("#gnb2 .menu__wrap a").removeClass("active");
@@ -133,15 +144,6 @@ $("#gnb2 .menu__wrap a").eq(0).addClass("active");
     setTimeout(function(){isScrolling = false;}, 500);
   });
 });
-
-// 모바일 GNB 스크롤 값 바인딩
-  let lastChild = document.querySelector('.gnb__body .submenu__wrap > ul:last-child');
-  let wholeHeight = document.querySelector('#gnb2 .submenu__wrap').scrollHeight;
-  let lastChildHeight = document.querySelector('.gnb__body .submenu__wrap > ul:last-child').scrollHeight;
-  let difference = wholeHeight - lastChildHeight;
-  if (lastChild) {
-      lastChild.style.paddingBottom = difference + 'px';  
-  }
 
 // 모달 닫기 이벤트 핸들러
 $(".modal__close button").click(function () {
@@ -165,6 +167,14 @@ $(document).ready(function () {
   let menuHeight = menuList.innerHeight();
   menuList.css("height", menuHeight);
 });
+
+
+// 테이블 클릭 이벤트  
+$('table.click tr').click(function(){
+  $('table.click tr').removeClass('on');
+  $(this).addClass("on")
+})
+
 
 // 테이블 페이지 네이션 전환
 $(document).ready(function () {

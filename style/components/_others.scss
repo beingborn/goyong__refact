@@ -218,6 +218,9 @@ table caption {position: absolute; top: 0; left: 0; overflow: hidden; width: 0.1
 .table__horizontal__ex.shortTit th {width: 20rem;} // 제목 th가 20rem인 가로 테이블
 .table__horizontal__ex.shortTit2 th {width: 15rem; padding: 0 1.5rem;} // 제목 th가 20rem인 가로 테이블
 
+// 테이블 클릭 이벤트
+table.click tr.on {background: #DDEAF6;}
+table.click tr {cursor: pointer;}
 
 // 모바일용 테이블
 .m__table {display: none;}

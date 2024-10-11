@@ -44,6 +44,8 @@ input[type="radio"].clicked:not(:checked) + label {color: #D8D8D8;}
 .page__title {font-size: 4rem;}
 
 
+
+
 br.onlyMo {display: none;}
 textarea {border: 0.1rem solid #ddd; width: 100%;}
 
@@ -116,8 +118,12 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mb--56 {margin-bottom: 5.6rem;}
   .mg--64-All {margin-top: 6.4rem; margin-bottom: 6.4rem;}
 
-  @media all and (max-width: 767px){.sm--mt-36 {margin-top: 3.6rem!important}   .mg--64-All.sm--36-All{margin-top: 3.6rem; margin-bottom: 3.6rem;}}
-  @media all and (max-width: 767px){.sm--mb-64 {margin-bottom: 6.4rem!important}}
+
+  @media all and (max-width: 767px){
+    .sm--mt-36 {margin-top: 3.6rem!important}   
+    .mg--64-All.sm--36-All{margin-top: 3.6rem; margin-bottom: 3.6rem;}
+    .sm--mb-64 {margin-bottom: 6.4rem!important}
+  }
 
 
   /* 헬퍼 라지 Space */
@@ -154,12 +160,16 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 
   // 고정값 제어
   .lg--mw200 {max-width: 20rem;}
-  @media all and (max-width: 767px) {.lg--mw200{max-width: none;}}
   .lg--mw500 {max-width: 50rem;}
-  @media all and (max-width: 767px) {.lg--mw500{max-width: none;}}
   .lg--miw500 {min-width: 50rem;}
-  @media all and (max-width: 767px) {.lg--miw500{min-width: none;}}
 
+  @media all and (max-width: 767px){
+    .lg--mw200{max-width: auto;}
+    .lg--mw500{max-width: auto;}
+    .lg--miw500{min-width: auto;}
+  }
+  // PC 1440px 이상 부터에서 48rem
+  @media all and (min-width: 1440px){.lg--miw480{min-width: 48rem;}}
   .mw__490 {max-width: 49rem;}
 
 

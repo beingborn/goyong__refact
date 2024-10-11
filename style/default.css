@@ -327,8 +327,6 @@ textarea {
     margin-top: 3.6rem;
     margin-bottom: 3.6rem;
   }
-}
-@media all and (max-width: 767px) {
   .sm--mb-64 {
     margin-bottom: 6.4rem !important;
   }
@@ -433,27 +431,28 @@ textarea {
   max-width: 20rem;
 }
 
-@media all and (max-width: 767px) {
-  .lg--mw200 {
-    max-width: none;
-  }
-}
 .lg--mw500 {
   max-width: 50rem;
 }
 
-@media all and (max-width: 767px) {
-  .lg--mw500 {
-    max-width: none;
-  }
-}
 .lg--miw500 {
   min-width: 50rem;
 }
 
 @media all and (max-width: 767px) {
+  .lg--mw200 {
+    max-width: auto;
+  }
+  .lg--mw500 {
+    max-width: auto;
+  }
   .lg--miw500 {
-    min-width: none;
+    min-width: auto;
+  }
+}
+@media all and (min-width: 1440px) {
+  .lg--miw480 {
+    min-width: 48rem;
   }
 }
 .mw__490 {
@@ -1519,6 +1518,14 @@ table caption {
 .table__horizontal__ex.shortTit2 th {
   width: 15rem;
   padding: 0 1.5rem;
+}
+
+table.click tr.on {
+  background: #DDEAF6;
+}
+
+table.click tr {
+  cursor: pointer;
 }
 
 .m__table {
@@ -3003,11 +3010,19 @@ button.mo_only {
   flex: 1;
 }
 
+.search .input__box.lg--interval__both input {
+  margin: 0 2.4rem;
+}
+
+@media all and (max-width: 767px) {
+  .search .input__box.lg--interval__both input {
+    margin: 0;
+  }
+}
 .search__form__user .search .input__box > input {
   height: 100%;
   flex: 1;
   background: #fff;
-  margin: 0 2.4rem;
 }
 
 .search__form__user .search .select__box > select {
@@ -3239,7 +3254,7 @@ button.mo_only {
   background-size: 2.4rem auto;
 }
 
-.search__form__user.type2 .search .input__box {
+.search .input__box.int {
   margin-right: 2.4rem;
 }
 
@@ -4371,11 +4386,11 @@ button.mo_only {
   .banner__swiper .swiper-button-next, .swiper-button-prev {
     margin-top: -32px;
   }
-  .union__management__wrap .search .input__box, .union__management__wrap .search .preview {
-    min-width: 48rem;
-  }
   .preview {
     min-width: 50rem;
+  }
+  .preview.lg--miw480 {
+    min-width: 48rem;
   }
   .table__horizontal__ex .wide__first td:nth-of-type(1) .td__container {
     min-width: 42rem;

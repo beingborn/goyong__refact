@@ -32,12 +32,10 @@ body {position: relative; }
 #login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
 }
 
-
 // 공통 input 숨기기 / 보기
 .secret__Check {position: relative;}
 .secret__Check .icon__pw-visible {position: absolute; top: 50%; background: none; border: none; cursor: pointer; padding: 0; max-height: 2.4rem;}
 .show__icon {width: 2.4rem; height: 2.4rem;}
-
 
 // 파일 업로드 공통
 .form__table .file__select__container .preview {flex-grow: 1;}
@@ -46,6 +44,8 @@ body {position: relative; }
 
 // 비밀번호 변경 페이지
 .info__change__form {margin-top: 8rem; margin-bottom: 44rem;}
+
+
 
 
 @media all and (min-width: 480px) and (max-width: 1440px) {
