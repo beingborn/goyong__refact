@@ -82,16 +82,6 @@ input[type=radio].clicked:not(:checked) + label {
   color: #D8D8D8;
 }
 
-.lnb__title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.6rem;
-  font-weight: 700;
-}
-
-.code__title {
-  margin-top: 6.4rem;
-}
-
 .flex__title {
   display: flex;
   align-items: center;
@@ -102,7 +92,7 @@ input[type=radio].clicked:not(:checked) + label {
   font-size: 1.6rem;
 }
 
-.page__title {
+.title__lv1 {
   font-size: 4rem;
 }
 
@@ -211,54 +201,48 @@ textarea {
 /* 
   패딩 제어 i가 뒤에 붙을 시 important로 최우선순위 적용
 */
-.pd--10-l {
+.pl--10 {
   padding-left: 1rem;
 }
 
-.pd--20-l {
+.pl--20 {
   padding-left: 2rem;
 }
 
-.pd--10-r {
+.pr--10 {
   padding-right: 1rem;
 }
 
-.pd--10-b {
+.pb--10 {
   padding-bottom: 1rem !important;
 }
 
-.pd--24-r {
+.pr--24 {
   padding-right: 2.4rem;
 }
 
-.lg--64-mt {
-  margin-top: 6.4rem;
-}
-
-.pd--10-m {
+.px--10 {
   padding: 0 1rem;
 }
 
-/* 
-  마진 제어 i가 뒤에 붙을 시 important로 최우선순위 적용
-*/
-.mg--10-l {
+/*  마진 제어 i가 뒤에 붙을 시 important로 최우선순위 적용 */
+.ml--10 {
   margin-left: 1rem;
 }
 
-.mg--20-l {
+.ml--20 {
   margin-left: 2rem;
 }
 
-.mg--10-r {
+.mr--10 {
   margin-right: 1rem;
 }
 
-.mg--20-r {
+.mr--24 {
   margin-right: 2rem;
 }
 
-.mg--24-r {
+.mr--20 {
   margin-right: 2rem;
 }
 
@@ -286,23 +270,19 @@ textarea {
   margin-bottom: 25rem;
 }
 
-.mg--10-b {
+.mb--10 {
   margin-bottom: 1rem;
 }
 
-.mg--16-b {
+.mb--16 {
   margin-bottom: 1.6rem;
 }
 
-.mg--20-b {
-  margin-bottom: 2rem;
-}
-
-.mg--40-b {
+.mb--40 {
   margin-bottom: 4rem;
 }
 
-.mg--56-b {
+.mb--56 {
   margin-bottom: 5.6rem;
 }
 
@@ -314,7 +294,7 @@ textarea {
   margin-bottom: 5.6rem;
 }
 
-.mg--64-All {
+.my--64 {
   margin-top: 6.4rem;
   margin-bottom: 6.4rem;
 }
@@ -323,7 +303,7 @@ textarea {
   .sm--mt-36 {
     margin-top: 3.6rem !important;
   }
-  .mg--64-All.sm--36-All {
+  .my--64.sm--36-All {
     margin-top: 3.6rem;
     margin-bottom: 3.6rem;
   }
@@ -332,6 +312,10 @@ textarea {
   }
 }
 /* 헬퍼 라지 Space */
+.lg--64-mt {
+  margin-top: 6.4rem;
+}
+
 @media all and (min-width: 767px) {
   .tablet-mr-24 {
     margin-right: 2.4rem;
@@ -515,22 +499,7 @@ textarea {
   white-space: nowrap;
 }
 
-.btn--active {
-  background-color: #003675;
-  color: #fff;
-}
-
-.btn--disabled {
-  background-color: #fff;
-  color: #1d1d1d;
-}
-
-.table--overflow-y {
-  height: 30rem;
-  overflow-x: auto;
-}
-
-.table--overflow-x {
+.overflow-xAuto {
   overflow-x: auto;
 }
 
@@ -544,14 +513,6 @@ textarea {
 
 .wordBreakKeepAll th {
   word-break: keep-all;
-}
-
-.txt--navy-00 {
-  color: #003675;
-}
-
-.txt--gray-00 {
-  background-color: #555555;
 }
 
 .relative {
@@ -599,18 +560,18 @@ textarea {
   color: #E71825;
 }
 
-.main__title {
+.title__lv1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.title__lv2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-.main__title__md {
+.title__lv3 {
   font-size: 2.1rem;
-  font-weight: 700;
-}
-
-.main__title__lg {
-  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -2160,7 +2121,7 @@ table.click tr {
 }
 
 .gnb__body .submenu__wrap > ul {
-  padding: 1.6rem 2.4rem;
+  padding: 1.6rem 2.4rem 1.6rem 2.4rem;
   border-bottom: 0.1rem solid #ddd;
 }
 
@@ -2933,7 +2894,7 @@ button.mo_only {
   color: #1D56BC;
 }
 
-.page__title__wrap {
+.title__lv1__wrap {
   margin-top: 8rem;
   margin-bottom: 6.4rem;
 }
@@ -4860,9 +4821,6 @@ button.mo_only {
   .ly__cont {
     margin-top: 3.6rem;
   }
-  .code__title {
-    margin-top: 3.6rem;
-  }
   .btn__down {
     background-color: #246BEB;
     color: #fff;
@@ -4945,7 +4903,7 @@ button.mo_only {
   .breadcrumb {
     margin-bottom: 6.4rem;
   }
-  .page__title__wrap {
+  .title__lv1__wrap {
     display: none;
   }
   .table__title__wrap {

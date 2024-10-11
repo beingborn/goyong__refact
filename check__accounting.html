@@ -205,8 +205,8 @@
                     </nav>
                     <div class="relative">
                         <!-- 페이지 제목 -->
-                        <div class="page__title__wrap">
-                            <h2 class="page__title">회계공시여부조회</h2>
+                        <div class="title__lv1__wrap">
+                            <h2 class="title__lv1">회계공시여부조회</h2>
                         </div>
                         <!-- /. 페이지 제목 -->
                         <!-- 조회 방법 설명 -->
@@ -256,7 +256,7 @@
                                         <label for="searchText" class="blind">질문조회</label>
                                         <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합,산하조직,대표자명,총연맹명,연맹명을 입력하세요." value="">
                                         <div class="flex--box-c btn__con">
-                                            <button type="button" id="" class="btn__control__u bg--mint-00 mg--24-r" onclick="fn_search();">초기화</button>
+                                            <button type="button" id="" class="btn__control__u bg--mint-00 mr--24" onclick="fn_search();">초기화</button>
                                             <button type="button" id="" class="btn__control__u bg--blue-02 tablet-mr-24" onclick="fn_search();">조회</button>
                                             <button type="button" id="" class="openPrint btn__control__u bg--black-00 w__cont" onclick="printOpen();">출력</button>
                                         </div>   
@@ -397,7 +397,7 @@
                         </div>
                     </div>
                     <!-- 웹 페이지 네이션 -->
-                    <div class="pagination w__cont mg--64-All">
+                    <div class="pagination w__cont my--64">
                         <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
                         <div class="page-links">
                             <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
@@ -434,9 +434,9 @@
                         </div>
                     </div>
                     <!-- 도움말 상단 제목 -->
-                    <div class="info__tip__box flex--box-c mg--16-b">
+                    <div class="info__tip__box flex--box-c mb--16">
                         <h2 class="data__title">회계공시여부 정보</h2>
-                        <button type="button" class="info__tip mg--10-l"></button>
+                        <button type="button" class="info__tip ml--10"></button>
                         <!-- 툴팁 내부 내용 -->
                         <div class="tooltip__layer">
                             <div class="tooltip__top flex--box-s">
@@ -460,7 +460,7 @@
                                     <p>
                                         <strong>마</strong>단위노동조합
                                     </p>
-                                    <div class="list pd--20-l">
+                                    <div class="list pl--20">
                                         <p>1) 산업별/업종별 노동조합 : 동종 산업(업종)에 종사하는 근로자들이 직종과 기업을 초월하여 조직한 노동조합</p>
                                         <p>2) 지역별 노동조합 : 일정지역 내의 근로자들이 동일산업 또는 직종 단위로 조직한 노동조합</p>
                                         <p>3) 기업단위 노동조합 : 일반적인 단위노동조합 형태로 특정 기업(사업 또는 사업장)에 소속된 근로자가 직업(종)의 구별없이 개별 기업단위로 조직한 노동조합</p>
