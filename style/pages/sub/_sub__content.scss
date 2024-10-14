@@ -42,9 +42,8 @@ button.mo_only {display: none;}
 .mobile__tab__content { display: none;}
 
 @media all and (max-width: 768px){.sm--pd-24Th th {padding-left: 2.4rem; padding-right: 2.4rem!important}}
-.data__title {text-align: left; position: relative; font-size: 2.5rem; color: #333; font-weight: 700;}
-.data__title.flex--box-s {align-items: baseline;
-}
+
+
 
 // 세로형 테이블 액티브 스타일 적용 
 .table__vertical.lineBg tr.style1 > td {background: #DEEBF7;}

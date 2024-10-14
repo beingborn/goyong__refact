@@ -94,6 +94,22 @@ input[type=radio].clicked:not(:checked) + label {
 
 .title__lv1 {
   font-size: 4rem;
+  font-weight: 700;
+}
+
+.title__lv2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.title__lv3 {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.title__lv4 {
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 br.onlyMo {
@@ -411,6 +427,18 @@ textarea {
   flex-wrap: nowrap !important;
 }
 
+.flex--item-right {
+  margin-left: auto;
+}
+
+.align--bottom-self {
+  align-self: flex-end;
+}
+
+.align--baseline-item {
+  align-items: baseline;
+}
+
 .lg--mw200 {
   max-width: 20rem;
 }
@@ -558,21 +586,6 @@ textarea {
 
 .error-message {
   color: #E71825;
-}
-
-.title__lv1 {
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-.title__lv2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.title__lv3 {
-  font-size: 2.1rem;
-  font-weight: 700;
 }
 
 .ly__cont {
@@ -2822,18 +2835,6 @@ button.mo_only {
     padding-right: 2.4rem !important;
   }
 }
-.data__title {
-  text-align: left;
-  position: relative;
-  font-size: 2.5rem;
-  color: #333;
-  font-weight: 700;
-}
-
-.data__title.flex--box-s {
-  align-items: baseline;
-}
-
 .table__vertical.lineBg tr.style1 > td {
   background: #DEEBF7;
 }
@@ -5134,7 +5135,7 @@ button.mo_only {
   .main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {
     margin-bottom: 6rem;
   }
-  .main__accn__desc__wrap .data__title {
+  .main__accn__desc__wrap .title__lv2 {
     display: none;
   }
   .main__accn__desc__wrap .table__vertical th {

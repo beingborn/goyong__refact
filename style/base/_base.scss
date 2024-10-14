@@ -40,7 +40,12 @@ input[type="radio"].clicked:not(:checked) + label {color: #D8D8D8;}
 
 .flex__title { display: flex; align-items: center; justify-content: space-between;}
 .flex__title span {font-size: 1.6rem;}
-.title__lv1 {font-size: 4rem;}
+
+  // el : 제목
+.title__lv1 {font-size: 4rem; font-weight: 700;}
+.title__lv2 {font-size: 2.5rem; font-weight: 700;}
+.title__lv3 {font-size: 2.1rem; font-weight: 700;}
+.title__lv4 {font-size: 1.7rem; font-weight: 400;}
 
 
 
@@ -102,7 +107,6 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mr--10 {margin-right: 1rem;}
   .mr--24 {margin-right: 2rem;}
   .mr--20 {margin-right: 2rem;}
-
   .mt--64 {margin-top: 6.4rem;}
   .mt--24 {margin-top: 2.4rem;}
 
@@ -113,14 +117,11 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .mb--250 {margin-bottom: 25rem;}
   .mb--10 {margin-bottom: 1rem;}
   .mb--16 {margin-bottom: 1.6rem;}
-
-  
   .mb--40 {margin-bottom: 4rem;}
   .mb--56 {margin-bottom: 5.6rem;}
   .mb--60 {margin-bottom: 6rem;}
   .mb--56 {margin-bottom: 5.6rem;}
   .my--64 {margin-top: 6.4rem; margin-bottom: 6.4rem;}
-
 
   @media all and (max-width: 767px){
     .sm--mt-36 {margin-top: 3.6rem!important}   
@@ -128,19 +129,14 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
     .sm--mb-64 {margin-bottom: 6.4rem!important}
   }
 
-
   /* 헬퍼 라지 Space */
   .lg--64-mt {margin-top: 6.4rem;}
-
   // 태블릿 이상에서만 margin-right를 24px 주는 헬퍼 클래스
   @media all and (min-width: 767px){.tablet-mr-24 {margin-right: 2.4rem;}}
-
   .hp--lgSpace {margin-bottom: 25rem;}
   @media all and (max-width: 767px) {.hp--lgSpace{margin-bottom: 6rem;}}
-
   .hp--mdSpace {margin-top: 6.4rem;}
   @media all and (max-width: 767px) {.hp--mdSpace{margin-top: 3.6rem;}}
-
 
   // 테이블 top에 굵은 border 적용
   .border-top-large {border-top: 0.2rem solid #000;}
@@ -161,8 +157,11 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .flex--column {flex-direction: column;}
   .flex--vertical {display: flex; flex-direction: column;}
   .flex--noWrap {flex-wrap: nowrap!important;}
-
-  // 고정값 제어
+  .flex--item-right {margin-left: auto;}
+  .align--bottom-self {align-self: flex-end;}
+  .align--baseline-item {align-items: baseline;}
+  
+  // 고정값 제어 min width, max-width
   .lg--mw200 {max-width: 20rem;}
   .lg--mw500 {max-width: 50rem;}
   .lg--miw500 {min-width: 50rem;}
@@ -176,9 +175,6 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   @media all and (min-width: 1440px){.lg--miw480{min-width: 48rem;}}
   .mw__490 {max-width: 49rem;}
 
-
-
-
   // 넓이 제어
   .width--10 {width: 10%;}
   .width--15 {width: 15%;}
@@ -187,37 +183,26 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
   .width--80 {width: 80%;}
   .width--100 {width: 100%;}
   .width__100 {width: 100%;}
-
   // 높이 제어
   .min--h-4 {min-height: 4rem;}
   .height--100 {height: 100%;}
-
   // 디스플레이 제어
   .display--none {display: none;}
-
   // 컬러 제어
   .bg--f9f9 {background-color: #F9F9FA;}
-
   // 보더 제어
   .border--btm {border-bottom: 0.1rem solid #ddd;}
   .border--r {border-right: 0.1rem solid #ddd;}
-
   // 줄바꿈 제어 
   .txt__noWrap {white-space: nowrap;}
-
-
   // overflow 관련
   .overflow-xAuto {overflow-x: auto;}
-
   // wordBreak 
   .wordBreakNormal th {word-break: normal!important;}
   .wordBreakNowrap th {white-space: nowrap!important;}
   .wordBreakKeepAll th {word-break: keep-all;}
-
   // 포지션 관련
   .relative {position: relative;}
-
-
   // 공통 모달 관련
   .modal__bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1001;}
 
@@ -228,21 +213,12 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
     width: 100%;
     height: 100%;
   }
-
   .m__image {display: none;}
   .m__image img {width: 100%; height: 100%; object-fit: cover; }
   .m__cont {display: none;}
   .pagination.m__cont{display: none;}
-
   // 에러 메세지 관련
   .error-message {color: #E71825;}
-
-  // el : 제목
-  .title__lv1 {font-size: 4rem; font-weight: 700;}
-  .title__lv2 {font-size: 2.5rem; font-weight: 700;}
-  .title__lv3 {font-size: 2.1rem; font-weight: 700;}
-
-
   // layout 
   .ly__cont {margin-top: 6.4rem;}
   .ly__cont2 {padding-top: 3.6rem;}
@@ -254,29 +230,24 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
     font-display: swap;
     src: local('Pretendard GOV ExtraBold'), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../font/woff/PretendardGOV-ExtraBold.woff) format('woff');
   }
-
   @font-face {
     font-family: 'Pretendard GOV';
     font-weight: 700;
     font-display: swap;
     src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
   }
-
   @font-face {
     font-family: 'Pretendard GOV';
     font-weight: 500;
     font-display: swap;
     src: local('Pretendard GOV Medium'), url(../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../font/woff/PretendardGOV-Medium.woff) format('woff');
   }
-
   @font-face {
     font-family: 'Pretendard GOV';
     font-weight: 400;
     font-display: swap;
     src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
   }
-
-
   body {
     font-size: 1.6rem;
       color: #1d1d1d;

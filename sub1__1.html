@@ -251,7 +251,7 @@
               <div class="table__wrapper ly__cont" id="main__content">
                 <!-- 테이블 타이틀 -->
                 <div class="table__title__wrap">
-                  <h2 class="data__title">기본사항</h2>
+                  <h2 class="title__lv2">기본사항</h2>
                 </div>
                 <!-- ./ 테이블 타이틀 -->
                 <!-- 기본 사항 테이블 -->
@@ -410,7 +410,7 @@
                 <!-- ./ 모바일용 노동조합 테이블 -->
                 <!-- 알림톡 테이블 타이틀 -->
                 <div class="mb--16 mt--64">
-                  <h2 class="data__title">알림톡 전송</h2>
+                  <h2 class="title__lv2">알림톡 전송</h2>
                 </div>
                 <!-- ./ 테이블 타이틀 -->
                 <!-- 알림톡 테이블 -->
@@ -447,7 +447,7 @@
                   <button type="button" class="btn__control responsive bg--blue-00">모바일 &larr;&rarr; PC 전환</button>
                 </div>
                 <!-- ./ 상단 버튼 그룹 -->
-                <div class="data__header mb--36"><h2 class="data__title flex--box-s">공시정보 <span class="w__cont" style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2></div>
+                <div class="data__header mb--36"><h2 class="title__lv2 flex--box-s">공시정보</h2></div>
                 <!-- 웹 상단 공시정보 검색 테이블 -->
                 <div class="table__horizontal__ex shortTit w__cont">
                   <table class="border-top-large">
@@ -788,7 +788,7 @@
             <div class="w__cont">
               <div class="ly__cont">
                 <div class="data__header mb--36">
-                  <h2 class="data__title flex--box-s">자산 및 부채 현황 <span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
+                  <h2 class="title__lv2 flex--box-s align--baseline-item">자산 및 부채 현황 <span class="title__lv4">(단위:천원)</span></h2>
                 </div>
                 <!-- 웹용 자산 및 부채현황 테이블 -->
                 <div class="table__vertical tight__pd overflow-xAuto lineBg">
@@ -870,7 +870,7 @@
               <!-- 수입현황 -->
               <div class="ly__cont earn__sit">
                 <div class="data__header mb--36">
-                  <h2 class="data__title flex--box-s">수입현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2>
+                  <h2 class="title__lv2 flex--box-s align--baseline-item">수입현황<span class="title__lv4">(단위:천원)</span></h2>
                 </div>
                 <!-- 웹용 수입현황 테이블 -->
                 <div class="table__vertical tight__pd overflow-xAuto lineBg">
@@ -982,7 +982,7 @@
               <!-- 지출 현황 -->
               <div class="ly__cont expend__sit mb--56">
                 <div class="data__header mb--36">
-                  <h2 class="data__title flex--box-s">지출현황<span style="font-size: 1.7rem; font-weight: 400;">(단위:천원)</span></h2> 
+                  <h2 class="title__lv2 flex--box-s align--baseline-item">지출현황<span class="title__lv4">(단위:천원)</span></h2> 
                 </div>
                 <!-- 웹용 지출현황 테이블 -->
                 <div class="table__vertical tight__pd overflow-xAuto lineBg">
@@ -1380,15 +1380,6 @@
     <script src="js/echarts.min.js"></script>
     <script src="js/default.js"></script>
     <script>
-      /** 
-        함수명	: 없음
-        용도    : 세로형 테이블 클릭 시 배경색 설정
-      */
-      $('.table__vertical tbody tr').click(function(){
-          $(this).css('background-color' , '#DEEBF7');
-          $('.table__vertical tbody tr').not($(this)).css('background-color', 'transparent')
-      })
-
       /** 
         함수명	: 없음
         용도    : 모바일용 (탭) 슬라이더 불러오기
