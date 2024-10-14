@@ -67,83 +67,38 @@ radioAgree.click(function() {
   radioAgree.addClass('clicked');
 });
 
+/* 웹 탭 변환 Open Tab web */
+$('.tab__content .tab').hide().eq(0).show();
+$('.tab__btn button').eq(0).addClass('active');
+$(".tab__wrap .tab__btn button").click(function () {
+  var idx = $(this).parent().index();
+  $(".tab__content .tab").hide();
+  $(".tab__content .tab").eq(idx).fadeIn();
+  $(".tab__btn button").removeClass("active");
+  $(this).addClass("active");
+});
 
-  /* 웹 탭 변환 Open Tab web */
-  $('.tab__content .tab').hide().eq(0).show();
-  $('.tab__btn button').eq(0).addClass('active');
-  $(".tab__wrap .tab__btn button").click(function () {
-    var idx = $(this).parent().index();
-    $(".tab__content .tab").hide();
-    $(".tab__content .tab").eq(idx).fadeIn();
-    $(".tab__btn button").removeClass("active");
-    $(this).addClass("active");
-  });
+/* 모바일 탭 변환 mobile Tab */
+$(".mobile__tab .swiper-slide button").eq(0).addClass('active');
+$(".mobile__tab .swiper-slide button").click(function(){
+  var idx = $(this).parent().index()
+  $(".tab__content .tab").hide();
+  $(".tab__content .tab").eq(idx).fadeIn();
+  $(".mobile__tab .swiper-slide button").removeClass("active")
+  $(this).addClass("active")
+})
 
-  /* 모바일 탭 변환 mobile Tab */
-  $(".mobile__tab .swiper-slide button").eq(0).addClass('active');
-  $(".mobile__tab .swiper-slide button").click(function(){
-    var idx = $(this).parent().index()
-    $(".tab__content .tab").hide();
-    $(".tab__content .tab").eq(idx).fadeIn();
-    $(".mobile__tab .swiper-slide button").removeClass("active")
-    $(this).addClass("active")
-  })
-
-
-// 모바일 GNB 스크롤 가능값 바인딩 
-function addMobileLastSubMenuChildPadding() {
-  let lastChild = $('.gnb__body .submenu__wrap > ul:last-child');   // 마지막 서브 메뉴 요소
-  let wholeHeight = $('#gnb2 .submenu__wrap')[0].scrollHeight;      // 전체 서브 메뉴 스크롤 높이
-  let lastChildHeight = lastChild.outerHeight();                   // 마지막 서브 메뉴 높이
-  let lastChildPadding = parseInt(lastChild.css('padding-top'));    // 마지막 서브 메뉴 여백 값
-  let difference = wholeHeight - lastChildHeight;
-  if (lastChild.length) {
-    lastChild.css('padding-bottom', difference + lastChildPadding + 1 + 'px'); // 마지막 서브 메뉴 여백 값 할당 (1은 추가 여백값 할당)
-  }
-}
-addMobileLastSubMenuChildPadding();
-
-
-// 모바일 GNB 토글 및 슬라이드 애니메이션
-let submenuWrap = $('#gnb2 .submenu__wrap');
+// 모바일 클릭 GNB 이벤트
 let submenuUl = $('.submenu__wrap .submenu');
-
-$(document).ready(function() {
-  let isScrolling = false;
-  // 스크롤 이벤트 핸들러
-  submenuWrap.scroll(function() {
-    if (isScrolling) return;
-    let submenuOffsets = [];
-    $('.submenu__wrap .submenu').each(function(index) {
-        var offsetTop = $(this).position().top + submenuWrap.scrollTop(); // submenu의 위치
-        var offsetBottom = $(this).outerHeight() + offsetTop;
-        submenuOffsets.push(offsetTop); // 배열에 위치 값 저장
-    });
-      // 각 submenu의 위치와 비교하여 active 클래스 추가
-      submenuOffsets.forEach(function(offset, index) {
-          if (submenuWrap.scrollTop() > offset) {
-              // 기존 active 클래스 제거
-              $("#gnb2 .menu__wrap a").removeClass("active");
-              // 해당 인덱스의 메뉴에 active 클래스 추가
-              $("#gnb2 .menu__wrap a").eq(index).addClass("active");
-          }
-      });
-  });
-
-// 모바일 GNB 이벤트
+submenuUl.hide().eq(0).show();
 $("#gnb2 .menu__wrap a").eq(0).addClass("active");
   $("#gnb2 .menu__wrap a").click(function (event) {
-    isScrolling = true;
     event.preventDefault();
-    var target = $(this).data('target');
-    var targetOffset = $('#' + target).position().top + submenuWrap.scrollTop();    // 해당 ID를 가진 요소의 위치 계산 // 상단 부분 + 스크롤 된 값 
-    // submenuWrap 안에서 부드럽게 스크롤 이동
-    submenuWrap.animate({ scrollTop: targetOffset });
+    var idx = $(this).parent().index()
+    submenuUl.hide().eq(idx).fadeIn();
     $("#gnb2 .menu__wrap a").removeClass("active");
     $(this).addClass("active");
-    setTimeout(function(){isScrolling = false;}, 500);
   });
-});
 
 // 모달 닫기 이벤트 핸들러
 $(".modal__close button").click(function () {
@@ -168,20 +123,17 @@ $(document).ready(function () {
   menuList.css("height", menuHeight);
 });
 
-
 // 테이블 클릭 이벤트  
 $('table.click tr').click(function(){
   $('table.click tr').removeClass('on');
   $(this).addClass("on")
 })
 
-
 // 테이블 페이지 네이션 전환
 $(document).ready(function () {
   let tablePagination = $(".pagination .page-link");
   tablePagination.click(function (e) {
     e.preventDefault();
-
     $(this).addClass("active");
     tablePagination.not($(this)).removeClass("active");
   });
