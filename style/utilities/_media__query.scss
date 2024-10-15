@@ -328,8 +328,7 @@
   .table__horizontal__ex .half__row td {width: 100%;}
 
   .btn__half__wrap .function__group .btn__control:nth-of-type(1) {margin-bottom: 1rem;}
-  .main__accn__desc__wrap .desc__banner {flex-direction: column; align-items: flex-start; max-height: none;}
-  .main__accn__desc__wrap .desc__banner {margin-top: 3.6rem; margin-bottom: 3.6rem; padding: 1.4rem 2.4rem;}
+  .desc__banner {flex-direction: column; align-items: flex-start; max-height: none; padding: 1.4rem 2.4rem;}
   .main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {margin-bottom: 6rem;}
   .main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {margin-bottom: 6rem;}
   .main__accn__desc__wrap .title__lv2 {display: none;}
@@ -343,6 +342,7 @@
   .top__visual .main__hero .quick__menu .quick__wrap { width: 9rem; height: 9rem; }
   .manual .tip { object-fit: contain; width: 12rem; height: auto; }
   .banner__text { font-size: 1.5rem; }  
+  .upload__file__name {max-width: 12rem;}
 }
 
 /* 서브 미디어 쿼리 CSS */ 
@@ -358,5 +358,8 @@
   #sub__wrap .content .visual__bg .visual__text p {font-size: 1.7rem;}
   #sub__wrap .content .visual__bg .visual__text {width: calc(100% - 2rem); text-align: center;  left: 50%; top: 50%; transform: translate(-50%, -50%); bottom: auto;      }
 }
+
+
+
 
 

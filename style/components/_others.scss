@@ -100,7 +100,7 @@ input[type="file"]::file-selector-button {
     text-align: center;
     margin-right: 10px;
 }
-.upload__file__name {font-size: 1.6rem; color: #8E8E8E; padding-left: 1rem; font-weight: 400;}
+.upload__file__name {font-size: 1.6rem; color: #8E8E8E; padding-left: 1rem; font-weight: 400; text-overflow: ellipsis; overflow: hidden;}
 .search__form {border-bottom: 0.1rem solid #ddd; background-color: #F9F9FA;}
 .form-input, .form-radio {display: flex; align-items: center; width: 100%; height: 5.8rem;}
 // 노동조합 규약명
@@ -147,9 +147,14 @@ button {cursor: pointer; background: inherit;}
 .bg--green-02 {background-color: #21a366;}
 .bg--mint-00 {background-color: #14bdb3;}
 .bg--transparent-00 {background-color: none;}
-
 .btn__control { color: #fff; border: 0; font-size: 2rem; height: 5.6rem; padding: 0 2rem; border-radius: 0.7rem; font-weight: 400; cursor: pointer;}
 .btn__control.responsive {height: 4rem; font-size: 1.6rem;} // 반응형 버튼 (알림톡 사용)
+
+// 텍스트 색상 변경
+.txt--black-00 {color: #000!important}
+.txt--white-00 {color: #fff!important}
+
+
 @media all and (max-width: 767px){.btn__control.responsive {height: 4.8rem; width: auto; font-size: 1.6rem; padding: 0 1.2rem;}}
 
 

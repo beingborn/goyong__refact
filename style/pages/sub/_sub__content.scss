@@ -185,7 +185,7 @@ button.mo_only {display: none;}
 .accn__desc__wrap .expected__section .title {font-size: 4.8rem; font-weight: 700;}
 
 // 홈 > 시스템안내 > 주요 공시항목 설명
-.main__accn__desc__wrap .desc__banner{margin: 6.4rem 0;}
+// .main__accn__desc__wrap .desc__banner{margin: 6.4rem 0;}
 .main__accn__desc__wrap .image__container {text-align: center; margin: 6.4rem 0;}
 .main__accn__desc__wrap .image__container img {max-width: 100%;}
 .main__accn__desc__wrap .table__vertical thead th {height: 5.8rem;}
@@ -332,6 +332,7 @@ button.mo_only {display: none;}
 // 모바일 슬라이드 액티브 스타일
 .mo__slide > table tbody tr td:first-of-type {margin-top: 2rem; background: #DEEBF7;} // 총계 액티브 스타일
 .mo__slide > table tr.style1 > td {background: #DEEBF7;}
+.mo__slide > table tr.style1 .sub__element {background: transparent;} 
 .mo__slide > table td td:first-of-type {background: #DEEBF7;}
 // 모바일 슬라이드 서브 스타일
 .mo__slide > table .sub__element td {display: flex; align-items: center;}

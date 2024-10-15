@@ -218,7 +218,7 @@ color: #1d1d1d;
 .m-gnb__menu .menu__wrap > ul {background-color: #EAF5F0;}
 .m-gnb__menu .menu__wrap li > a {padding: 2.6rem 2.4rem; font-size: 1.7rem; display: inline-block; width: 100%; font-weight: 700;}
 .m-gnb__menu .menu__wrap li > a.active {background-color: #fff; color: #21A366; font-weight: 700;}
-.gnb__body .submenu__wrap {width: calc(100% - 14rem); flex: 1; height: 100%; overflow-y: scroll; position: relative;}
+.gnb__body .submenu__wrap {width: calc(100% - 14rem); flex: 1; height: 100%; position: relative;}
 .gnb__body .submenu__wrap li a {display: block;}
 .gnb__body .submenu__wrap > ul {padding: 1.6rem 2.4rem 1.6rem 2.4rem; border-bottom: 0.1rem solid #ddd;}
 .gnb__body .submenu__wrap > ul .title {font-size: 1.7rem; font-weight: 700; padding-top: 2.6rem; padding-bottom: 2.6rem; border-bottom: 0.1rem solid #ddd; width: 100%;}

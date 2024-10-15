@@ -972,6 +972,8 @@ input[type=file]::file-selector-button {
   color: #8E8E8E;
   padding-left: 1rem;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .search__form {
@@ -1172,6 +1174,14 @@ button {
 .btn__control.responsive {
   height: 4rem;
   font-size: 1.6rem;
+}
+
+.txt--black-00 {
+  color: #000 !important;
+}
+
+.txt--white-00 {
+  color: #fff !important;
 }
 
 @media all and (max-width: 767px) {
@@ -2127,7 +2137,6 @@ table.click tr {
   width: calc(100% - 14rem);
   flex: 1;
   height: 100%;
-  overflow-y: scroll;
   position: relative;
 }
 
@@ -3371,10 +3380,6 @@ button.mo_only {
   font-weight: 700;
 }
 
-.main__accn__desc__wrap .desc__banner {
-  margin: 6.4rem 0;
-}
-
 .main__accn__desc__wrap .image__container {
   text-align: center;
   margin: 6.4rem 0;
@@ -3918,6 +3923,10 @@ button.mo_only {
 
 .mo__slide > table tr.style1 > td {
   background: #DEEBF7;
+}
+
+.mo__slide > table tr.style1 .sub__element {
+  background: transparent;
 }
 
 .mo__slide > table td td:first-of-type {
@@ -5130,14 +5139,10 @@ button.mo_only {
   .btn__half__wrap .function__group .btn__control:nth-of-type(1) {
     margin-bottom: 1rem;
   }
-  .main__accn__desc__wrap .desc__banner {
+  .desc__banner {
     flex-direction: column;
     align-items: flex-start;
     max-height: none;
-  }
-  .main__accn__desc__wrap .desc__banner {
-    margin-top: 3.6rem;
-    margin-bottom: 3.6rem;
     padding: 1.4rem 2.4rem;
   }
   .main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {
@@ -5173,6 +5178,9 @@ button.mo_only {
   }
   .banner__text {
     font-size: 1.5rem;
+  }
+  .upload__file__name {
+    max-width: 12rem;
   }
 }
 /* 서브 미디어 쿼리 CSS */
