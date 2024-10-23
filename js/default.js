@@ -1,7 +1,6 @@
 /* 스크롤 이벤트 감지해서 헤더 고정 or 숨기기 */
 $(document).ready(function () {
   let lastScrollTop = 0;
-
   $(window).scroll(function () {
     let scrollTop = $(this).scrollTop();
     let headerHeight = $(".header").outerHeight();
