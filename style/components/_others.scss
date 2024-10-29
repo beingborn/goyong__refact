@@ -252,6 +252,9 @@ table.click tr {cursor: pointer;}
 .table__title__wrap .data__number {margin-top: 6.4rem;}
 .table__title {font-size: 2.5rem; font-weight: 700;}
 
+// max-height overflow
+.max-h-overflow {max-height: var(--max-height); overflow-y: auto;}
+
 // 테이블 헬퍼 클래스
 // td의 min-height 적용 이슈로 다음과 같이 적용
 .table--fixed {table-layout: fixed;}
@@ -283,9 +286,21 @@ table.click tr {cursor: pointer;}
 .popupBox {max-width: 60rem; width: 100%; border: .1rem solid #ddd; font-size: 2rem;}
 .popupBox > *:not(.popup__title) {font-weight: 500;}
 .popupBox .popup__title {min-height: 9rem; display: flex; align-items: center;}
-.popupBox.main .popup__title {background-color: #003675; color: #fff; justify-content: center;}
 .popup__title {padding: 0 2rem;}
 .popup__body {padding: 5rem 3rem 0 5rem; font-size: 2rem; min-height: 45.6rem; font-weight: 500;}
 .popup__foot {padding: 1.2rem 2rem;}
-
 .popup__foot button {font-size: 2rem;}
+
+// main용 팝업
+.popupBox.main .popup__title {background-color: #003675; color: #fff; justify-content: center;}
+
+// 쪽지용 팝업
+.popupBox.message .popup__title {background-color: #EDF1F5;}
+
+// 검색용 팝업
+.popupBox.search {max-width: 70rem;}
+.popupBox.search .popup__body {padding: 3rem 3rem 0 3rem;}
+.popupBox.search .btn__control__u {height: 4rem; font-size: 1.5rem; font-weight: 400;}
+.popupBox.search .popup__title {background-color: #CEE6FE;}
+.popup__search__inner {padding: 2rem 3rem; background: #EDF1F5; border-radius: 1.2rem;}
+.popup__search__inner label {font-weight: 700;}

@@ -286,16 +286,24 @@ textarea {
   margin-right: 2rem;
 }
 
+.mt--10 {
+  margin-top: 1rem;
+}
+
+.mt--24 {
+  margin-top: 2.4rem;
+}
+
+.mt--40 {
+  margin-top: 4rem;
+}
+
 .mt--64 {
   margin-top: 6.4rem;
 }
 
 .mt--80 {
   margin-top: 8rem;
-}
-
-.mt--24 {
-  margin-top: 2.4rem;
 }
 
 .mb--36 {
@@ -1672,6 +1680,11 @@ table.click tr {
   font-weight: 700;
 }
 
+.max-h-overflow {
+  max-height: var(--max-height);
+  overflow-y: auto;
+}
+
 .table--fixed {
   table-layout: fixed;
 }
@@ -1774,12 +1787,6 @@ table.click tr {
   align-items: center;
 }
 
-.popupBox.main .popup__title {
-  background-color: #003675;
-  color: #fff;
-  justify-content: center;
-}
-
 .popup__title {
   padding: 0 2rem;
 }
@@ -1797,6 +1804,44 @@ table.click tr {
 
 .popup__foot button {
   font-size: 2rem;
+}
+
+.popupBox.main .popup__title {
+  background-color: #003675;
+  color: #fff;
+  justify-content: center;
+}
+
+.popupBox.message .popup__title {
+  background-color: #EDF1F5;
+}
+
+.popupBox.search {
+  max-width: 70rem;
+}
+
+.popupBox.search .popup__body {
+  padding: 3rem 3rem 0 3rem;
+}
+
+.popupBox.search .btn__control__u {
+  height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.popupBox.search .popup__title {
+  background-color: #CEE6FE;
+}
+
+.popup__search__inner {
+  padding: 2rem 3rem;
+  background: #EDF1F5;
+  border-radius: 1.2rem;
+}
+
+.popup__search__inner label {
+  font-weight: 700;
 }
 
 /****************************************************
@@ -3803,7 +3848,7 @@ button.mo_only {
 .printPage th {
   font-size: 12px;
   padding: 0 4px;
-  max-width: 110px;
+  max-width: 120px;
   min-width: 110px !important;
 }
 

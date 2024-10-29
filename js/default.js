@@ -236,11 +236,19 @@ $(".openPopup").on("click", function(event) {
   $("body").append('<div class="bgPopup"></div>');
 });
 
+// popup bg 클릭 시 팝업 및 배경 비활성화
+$('body').on('click', '.bgPopup', function() {
+  $('#popup').fadeOut()
+  $(this).fadeOut(); 
+});
+
 $("#popup .close").on("click", function(event) { 
   $("#popup").fadeOut(400); 
   $(".bgPopup").fadeOut(400);
   // $this.siblings("input, a, button").focus();
 });
+
+
 
 /* 출력물 조회 */
 var $printThis
