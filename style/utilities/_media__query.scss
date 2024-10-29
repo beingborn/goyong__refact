@@ -208,6 +208,11 @@
 
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+
+  .sm-flex--column {flex-direction: column;}
+  .sm-flex--column > * { width: 100%;}
+
+  .header__gnb {display: none;}
   footer .inner {height: auto;}
   .inner { width: 100%; padding: 0 1.6rem;} 
   .btn__control {width: 100%;}
@@ -242,7 +247,9 @@
 
   // 웹용 컨텐츠, 모바일용 컨텐츠 구분
   .w__cont {display: none;}
+  .w__cont-i {display: none!important;}
   .m__cont {display: block;}
+  .table__horizontal__ex tr.m__cont {display: flex;}
   .pagination.w__cont {display: none;}
   .pagination.m__cont {display: flex;}
 

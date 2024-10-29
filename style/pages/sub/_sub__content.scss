@@ -24,7 +24,7 @@ button.mo_only {display: none;}
 #sub__wrap .sign_up .visual__bg {background-image: url(../img/top_visual_sign_up.jpg);}
 #sub__wrap .union_management .visual__bg {background-image: url(../img/top_visual_union.jpg);}
 #sub__wrap .faq .visual__bg {background-image: url(../img/top_visual_faq.jpg);}
-
+#sub__wrap .visual__bg.sub1 {background-image: url(../img/top_visual_notice.jpg);}
 // 서브 페이지 이미지 텍스트 위치 
 #sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
 #sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
@@ -114,7 +114,6 @@ button.mo_only {display: none;}
 .foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
 .foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center; background-color: transparent;}
 .foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
-.foldStyle__table .preBox {white-space: pre-wrap;}
 .foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
 .foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
 .foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
@@ -233,14 +232,14 @@ button.mo_only {display: none;}
 .td--flex { display: flex; align-items: center; padding-left: 1rem; flex-wrap: nowrap; }
 .td--flex .td--width { width: 100%; display: flex; justify-content: space-between; }
 .must__help__message span, .must__help__message p { font-size: 1.5rem; }
-.btn__check__dup {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000; max-height: 5.6rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;} // width: 10%; color: #000; border: 0.1rem solid #1d1d1d; border-radius: 0.5rem; max-width: 8rem; 
+.btn__s {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000; max-height: 5.6rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;} // width: 10%; color: #000; border: 0.1rem solid #1d1d1d; border-radius: 0.5rem; max-width: 8rem; 
 .must__help__message { margin-top: 2.4rem;}
 .file-upload-wrapper { display: flex; align-items: center; }
 .custom-file-label { background-color: #004A98; color: white; width: 10rem; height: 4rem; line-height: 4rem; cursor: pointer; text-align: center; margin-right: 10px; }
 
 // 입력 폼 스타일
 .form__table .with__submit input[type="text"] { width: calc(90%); }
-.form__table .with__submit .btn__check__dup { width: calc(10% - 1rem); color: #fff; }
+.form__table .with__submit .btn__s { width: calc(10% - 1rem); color: #fff; }
 .form__table .col2__th { flex-direction: column; align-items: flex-start; justify-content: center; min-height: 5.8rem; }
 .form__table .col2__th span { line-height: 150%; text-align: left; }
 .form__table .preview { min-width: auto; }

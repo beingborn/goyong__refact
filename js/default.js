@@ -139,31 +139,6 @@ $(document).ready(function () {
   tablePagination.eq(0).addClass("active");
 });
 
-// 모달 open
-$(document).ready(function () {
-  setModalWidth();
-  $("[data-target]").click(function () {
-    const targetModal = $(this).data("target");
-    setModalWidth(targetModal);
-    $(targetModal).show();
-    $(".modal__bg").show();
-  });
-  $(".modal__close button").click(function () {
-    $(".modal, .modal__bg").hide();
-  });
-  $(".modal__hide").click(function () {
-    const targetModal = $(this).closest(".modal");
-
-    targetModal.hide();
-    $(".modal__bg").hide();
-  });
-  // 모달의 너비를 부모 요소에 맞게 설정하는 함수
-  function setModalWidth(targetModal) {
-    const modalWidth = $(".main__inner").innerWidth() - 20;
-    $(targetModal).css("width", modalWidth);
-  }
-  $(".modal__bg").hide();
-});
 
 // 도움말 버튼 클릭 시 창 팝업
 $(".info__tip").on("click", function (e) {

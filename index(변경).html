@@ -475,12 +475,32 @@
                         </div>
                     </footer>
                     <!-- ./ 푸터 -->
+                    <div id="popup" class="mainPopup">
+                        <h1 class="title">노동조합 회계공시시스템 일시중단 안내</h1>
+                        <div class="body">
+                            노동포털 서버점검에 따라<br /><br />
+                            <strong>'24.3.22.(금) 18:30 ~ 3.25.(월) 8:00</strong> 노동조합 회계공시시스템 서비스가 일시 중단됩니다.<br /><br />
+                            이용에 불편을 드려 죄송하며, 더 나은 서비스로 찾아뵙겠습니다.
+                            <div class="clear buttonRow mb0 ">
+                                <button type="button" class="close" onclick="closeToday()">오늘하루 보지않기</button>
+                                <button type="button" class="close">닫기</button>
+                            </div>
+                        </div>
+                    </div>
                 <div class="gnb__bg"></div>
             </div>
             <!-- 스와이퍼 js cdn -->
             <script src="js/swiper-bundle.min.js"></script>
             <script src="js/default.js"></script>
             <script>
+
+            let popup;
+            $(document).ready(function(){
+                popup = window.open('main__popup.html', '메인용 팝업', 'width=600, height=600')
+            })
+
+
+
             /** 
                 함수명	: 없음
                 용도    : 테이블 선택 데이터 출력, 테이블 옵션 설정

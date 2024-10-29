@@ -82,6 +82,13 @@ input[type=radio].clicked:not(:checked) + label {
   color: #D8D8D8;
 }
 
+.textarea {
+  max-height: 20rem;
+  overflow: auto;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+}
+
 .title__lv1 {
   font-size: 4rem;
   font-weight: 700;
@@ -230,13 +237,41 @@ textarea {
   padding: 0 1rem;
 }
 
+.pd--10 {
+  padding: 1rem;
+}
+
+/* preBox */
+.preBox {
+  white-space: pre-wrap;
+}
+
+/* borderBox */
+.borderBox {
+  border: 0.1rem solid #CBCCCD;
+  border-radius: 0.5rem;
+}
+
+.borderBox.textarea {
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
 /* margin */
 .ml--10 {
   margin-left: 1rem;
 }
 
+.ml--15 {
+  margin-left: 1.5rem;
+}
+
 .ml--20 {
   margin-left: 2rem;
+}
+
+.mt--0 {
+  margin-top: 0 !important;
 }
 
 .mr--10 {
@@ -253,6 +288,10 @@ textarea {
 
 .mt--64 {
   margin-top: 6.4rem;
+}
+
+.mt--80 {
+  margin-top: 8rem;
 }
 
 .mt--24 {
@@ -304,9 +343,32 @@ textarea {
   margin-bottom: 6.4rem;
 }
 
+.gap-10 {
+  gap: 1rem;
+}
+
+.gap-40 {
+  gap: 4rem;
+}
+
+.borderR-7 {
+  border-radius: 0.7rem;
+}
+
+.color-fff {
+  color: #fff;
+}
+
+.color-666 {
+  color: #666666;
+}
+
 @media all and (max-width: 767px) {
   .sm--mt-36 {
     margin-top: 3.6rem !important;
+  }
+  .sm--mb-36 {
+    margin-bottom: 3.6rem !important;
   }
   .my--64.sm--36-All {
     margin-top: 3.6rem;
@@ -400,6 +462,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex-equal > * {
+  flex: 1;
+}
+
+.flex-equal {
+  display: flex;
 }
 
 .flex--grow-100 {
@@ -1443,6 +1513,10 @@ table caption {
   align-items: stretch;
 }
 
+.table__horizontal__ex tr.m__cont {
+  display: none;
+}
+
 .table__horizontal__ex th {
   width: 25rem;
   text-align: left;
@@ -1579,7 +1653,7 @@ table.click tr {
   min-width: 12rem;
 }
 
-.union__management__wrap .table__horizontal__mo .sub__title {
+.table__horizontal__mo.halfTable .sub__title {
   display: inline-block;
   width: 50%;
 }
@@ -1681,6 +1755,48 @@ table.click tr {
 
 .table__vertical:not(.infoTable) tbody tr:hover {
   background-color: #DDEAF6 !important;
+}
+
+.popupBox {
+  max-width: 60rem;
+  width: 100%;
+  border: 0.1rem solid #ddd;
+  font-size: 2rem;
+}
+
+.popupBox > *:not(.popup__title) {
+  font-weight: 500;
+}
+
+.popupBox .popup__title {
+  min-height: 9rem;
+  display: flex;
+  align-items: center;
+}
+
+.popupBox.main .popup__title {
+  background-color: #003675;
+  color: #fff;
+  justify-content: center;
+}
+
+.popup__title {
+  padding: 0 2rem;
+}
+
+.popup__body {
+  padding: 5rem 3rem 0 5rem;
+  font-size: 2rem;
+  min-height: 45.6rem;
+  font-weight: 500;
+}
+
+.popup__foot {
+  padding: 1.2rem 2rem;
+}
+
+.popup__foot button {
+  font-size: 2rem;
 }
 
 /****************************************************
@@ -2794,6 +2910,10 @@ button.mo_only {
   background-image: url(../img/top_visual_faq.jpg);
 }
 
+#sub__wrap .visual__bg.sub1 {
+  background-image: url(../img/top_visual_notice.jpg);
+}
+
 #sub__wrap .content .visual__bg .visual__text {
   position: absolute;
   bottom: 7.2rem;
@@ -3108,10 +3228,6 @@ button.mo_only {
 .foldStyle__table .answer__toggle {
   font-weight: 700;
   text-align: left;
-}
-
-.foldStyle__table .preBox {
-  white-space: pre-wrap;
 }
 
 .foldStyle__table .qna__function__group {
@@ -3537,7 +3653,7 @@ button.mo_only {
   font-size: 1.5rem;
 }
 
-.btn__check__dup {
+.btn__s {
   font-size: 1.6rem;
   padding: 0.8rem 1.2rem;
   border: 0.1rem solid #000;
@@ -3574,7 +3690,7 @@ button.mo_only {
   width: 90%;
 }
 
-.form__table .with__submit .btn__check__dup {
+.form__table .with__submit .btn__s {
   width: calc(10% - 1rem);
   color: #fff;
 }
@@ -4190,7 +4306,7 @@ button.mo_only {
   br.pcOnly {
     display: none;
   }
-  .btn__check__dup {
+  .btn__s {
     min-width: 10rem;
     font-size: 1.9rem;
   }
@@ -4814,6 +4930,15 @@ button.mo_only {
 }
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+  .sm-flex--column {
+    flex-direction: column;
+  }
+  .sm-flex--column > * {
+    width: 100%;
+  }
+  .header__gnb {
+    display: none;
+  }
   footer .inner {
     height: auto;
   }
@@ -4906,8 +5031,14 @@ button.mo_only {
   .w__cont {
     display: none;
   }
+  .w__cont-i {
+    display: none !important;
+  }
   .m__cont {
     display: block;
+  }
+  .table__horizontal__ex tr.m__cont {
+    display: flex;
   }
   .pagination.w__cont {
     display: none;
