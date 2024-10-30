@@ -271,7 +271,6 @@ table.click tr {cursor: pointer;}
 .td__container select {flex: 1 1 calc(33.33% - 1rem); } // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
 .td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
 
-
 // 달력 input의 아이콘 정렬
 .calender__body {position: relative;}
 .calender__body .calender__icon {position: absolute; top: 50%; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; right: 1rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; }
@@ -290,17 +289,18 @@ table.click tr {cursor: pointer;}
 .popup__body {padding: 5rem 3rem 0 5rem; font-size: 2rem; min-height: 45.6rem; font-weight: 500;}
 .popup__foot {padding: 1.2rem 2rem;}
 .popup__foot button {font-size: 2rem;}
-
+.popup__img > img {max-width: 100%; object-fit: cover; height: 100%;}
 // main용 팝업
-.popupBox.main .popup__title {background-color: #003675; color: #fff; justify-content: center;}
-
+.popupBox.main .popup__title {background-color: #21A366; color: #fff; justify-content: center;}
 // 쪽지용 팝업
-.popupBox.message .popup__title {background-color: #EDF1F5;}
-
+.popupBox.message .popup__title {background-color: #EAF5F0;}
 // 검색용 팝업
 .popupBox.search {max-width: 70rem;}
 .popupBox.search .popup__body {padding: 3rem 3rem 0 3rem;}
 .popupBox.search .btn__control__u {height: 4rem; font-size: 1.5rem; font-weight: 400;}
-.popupBox.search .popup__title {background-color: #CEE6FE;}
+.popupBox.search .popup__title {background-color: #C8EDDD;}
 .popup__search__inner {padding: 2rem 3rem; background: #EDF1F5; border-radius: 1.2rem;}
 .popup__search__inner label {font-weight: 700;}
+// imgOnly 용 팝업
+.popup__body.imgOnly {padding: 0;}
+

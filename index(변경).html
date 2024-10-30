@@ -493,14 +493,19 @@
             <script src="js/swiper-bundle.min.js"></script>
             <script src="js/default.js"></script>
             <script>
-
+            
+            // 메인 페이지 팝업 크기 조절 및 출력
             let popup;
             $(document).ready(function(){
-                popup = window.open('main__popup.html', '메인용 팝업', 'width=600, height=600')
+                popup = window.open('main__popup.html', '메인용 팝업', 'width=600, status=no, toolbar=no, menubar=no, resizable=1, height=600')
+                popup.onload = function(){
+                    let contentHeight = popup.document.querySelector('.popupBox').scrollHeight;
+                    let browserUiHeight = popup.outerHeight - popup.innerHeight;
+                    let resizeHeight = contentHeight + browserUiHeight;
+                    popup.resizeTo(600, resizeHeight)
+                }
             })
-
-
-
+            
             /** 
                 함수명	: 없음
                 용도    : 테이블 선택 데이터 출력, 테이블 옵션 설정

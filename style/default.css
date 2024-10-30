@@ -346,6 +346,11 @@ textarea {
   margin-bottom: 5.6rem;
 }
 
+.my--20 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my--64 {
   margin-top: 6.4rem;
   margin-bottom: 6.4rem;
@@ -1806,14 +1811,21 @@ table.click tr {
   font-size: 2rem;
 }
 
+.popup__img > img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 .popupBox.main .popup__title {
-  background-color: #003675;
+  background-color: #21A366;
   color: #fff;
   justify-content: center;
 }
 
 .popupBox.message .popup__title {
-  background-color: #EDF1F5;
+  background-color: #EAF5F0;
 }
 
 .popupBox.search {
@@ -1831,7 +1843,7 @@ table.click tr {
 }
 
 .popupBox.search .popup__title {
-  background-color: #CEE6FE;
+  background-color: #C8EDDD;
 }
 
 .popup__search__inner {
@@ -1842,6 +1854,10 @@ table.click tr {
 
 .popup__search__inner label {
   font-weight: 700;
+}
+
+.popup__body.imgOnly {
+  padding: 0;
 }
 
 /****************************************************
