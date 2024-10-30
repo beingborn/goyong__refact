@@ -175,45 +175,46 @@ $('.secret__Check').each(function(){
 // 노동조합 규약명 추가 및 삭제 함수
 $(document).ready(function () {
   $(".form__body").on("click", ".btn__add", function () {
-    const template = document.getElementById("row-template");
-    const newRow = template.content.cloneNode(true);
-    const fileIndex = `file_${Date.now()}`;
-    const newFileInput = newRow.querySelector(".file__post");
-    newFileInput.id = `profile_pics${fileIndex}`;
-    newRow.querySelector(".btn__file__select").setAttribute("for", `profile_pics${fileIndex}`);
-    newRow.querySelector(".btn__file__select--mo").setAttribute("for", `profile_pics${fileIndex}`);
-    $(".form__body").append(newRow); // 새로운 행 추가
+      const template = document.getElementById("row-template");
+      const newRow = template.content.cloneNode(true);
+      const fileIndex = `file_${Date.now()}`;
+      const newFileInput = newRow.querySelector(".file__post");
+      newFileInput.id = `profile_pics${fileIndex}`;
+      newRow.querySelector(".btn__file__select").setAttribute("for", `profile_pics${fileIndex}`);
+      newRow.querySelector(".btn__file__select--mo").setAttribute("for", `profile_pics${fileIndex}`);
+      $(".form__body").append(newRow); // 새로운 행 추가
     });
 
-    $(".form__body").on("click", ".btn__remove", function () {
-    $(this).closest(".form__row").remove();
-    });
-    });
-
-  // 파일명 함수
-  $(document).ready(function () {
-    let preview = $(".preview");
-    function displayFileNames(event) {
-    let currentInput = $(event.target);
-    let previewBox = currentInput.siblings(".preview");
-    previewBox.empty();
-    const currentFile = currentInput[0].files;
-    if (currentFile.length === 0) {
-    const para = $("<span>").text("아무 파일도 입력되지 않았어요");
-    previewBox.append(para);
-    } else {
-    const fileList = $("<div>");
-    previewBox.append(fileList);
-    for (const file of currentFile) {
-    const listItem = $("<p>").text(file.name).addClass("upload__file__name");
-    fileList.append(listItem);
-    }
-    }
-    }
-      
-    $(document).on('change', '.file__post', displayFileNames)
+      $(".form__body").on("click", ".btn__remove", function () {
+      $(this).closest(".form__row").remove();
+      });
     });
 
+// 파일명 함수
+$(document).ready(function () {
+  let preview = $(".preview");
+
+  function displayFileNames(event) {
+      let currentInput = $(event.target);
+      let previewBox = currentInput.siblings(".preview");
+      previewBox.empty();
+      const currentFile = currentInput[0].files;
+
+      if (currentFile.length === 0) {
+        const para = $("<span>").text("아무 파일도 입력되지 않았어요");
+        previewBox.append(para);
+      } else {
+        const fileList = $("<div>");
+        previewBox.append(fileList);
+
+      for (const file of currentFile) {
+        const listItem = $("<p>").text(file.name).addClass("upload__file__name");
+        fileList.append(listItem);
+      }
+    }
+  }
+  $(document).on('change', '.file__post', displayFileNames)
+});
 
 /** 모바일 슬라이드 토글 */
 let dataOpen = $(".data--open");
@@ -234,27 +235,19 @@ $(".openPopup").on("click", function(event) {
   $this = $(this);
   $("#popup").fadeIn(400).attr("tabindex", 0).show().focus();; 
   $("body").append('<div class="bgPopup"></div>');
+  $('body').addClass('overflow-rock')
 });
 
 // popup bg 클릭 시 팝업 및 배경 비활성화
 $('body').on('click', '.bgPopup', function() {
   $('#popup').fadeOut()
   $(this).fadeOut(); 
+  $('body').removeClass('overflow-rock')
 });
 
 $("#popup .close").on("click", function(event) { 
   $("#popup").fadeOut(400); 
   $(".bgPopup").fadeOut(400);
-  // $this.siblings("input, a, button").focus();
+  $('body').removeClass('overflow-rock')
 });
-
-
-
-/* 출력물 조회 */
-var $printThis
-$(".openPrint").on('click', function(){
-  $printThis = $(this);
-  window.open('print.html', '_blank')
-})
-
 

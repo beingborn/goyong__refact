@@ -596,6 +596,10 @@ textarea {
   overflow-x: auto;
 }
 
+.overflow-rock {
+  overflow: hidden;
+}
+
 /* wordBreak, white-space */
 .txt__noWrap {
   white-space: nowrap;
@@ -5224,7 +5228,7 @@ button.mo_only {
   .notice__detail__wrap .file__header {
     margin-right: auto;
     padding-left: 0;
-    border-right: 0;
+    border-right: 0 !important;
   }
   .notice__detail__wrap .file__wrap .list {
     margin-right: auto;

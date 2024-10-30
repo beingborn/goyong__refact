@@ -153,13 +153,9 @@ button {cursor: pointer; background: inherit;}
 .txt--black-00 {color: #000!important}
 .txt--white-00 {color: #fff!important}
 
-
 @media all and (max-width: 767px){.btn__control.responsive {height: 4.8rem; width: auto; font-size: 1.6rem; padding: 0 1.2rem;}}
-
-
 .function__group {text-align: right;} // 버튼 wrapper
 .function__group .btn__control:not(:last-child) {margin-right: 1rem;}
-
 
 // tab버튼 활성화 스타일
 .sub1__1__wrap .tab__wrap .tab__btn button.active::after,  .main__accn__desc__wrap .tab__btn button.active::after{bottom: 0;}
