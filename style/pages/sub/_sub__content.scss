@@ -102,11 +102,14 @@ button.mo_only {display: none;}
 
 // 구분 선이 없는 테이블 
 .notBorderRight table thead th:not(:first-child), .notBorderRight table tbody td:not(:first-child){border-right: 0;}
+.noborderRightAll * {border-right: 0!important;}
+.noborderAll * {border: 0!important;}
 
 // 홈 > 시스템안내 > 자주묻는 질문
 .qna__container {display: inline-flex; justify-content: center; align-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; color: #fff;}
 .qna__container.question {background-color: #16C273;}
 .qna__container.answer {background-color: #000000;}
+
 // 자주 묻는 질문 테이블
 .foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
 .foldStyle__table tbody tr td {display: flex; align-items: center;}
@@ -143,7 +146,6 @@ button.mo_only {display: none;}
 
 
 // 홈 > 회계공시등록 > 가맹노조(산하조직)관리
-
 .search .input__box.int {margin-right: 2.4rem;}
 .union__management__wrap .btn__file__select {min-width: 9.1rem;}
 .union__management__wrap .upload__wrap {flex-grow: 1;}

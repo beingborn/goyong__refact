@@ -29,6 +29,7 @@ table {
   font-size: 1.6rem;
 }
 
+/* input , select, textarea */
 input, input[type=text], input[type=password], input[type=email], input[type=number],
 input[type=search], input[type=tel], input[type=url], input[type=color], input[type=date],
 input[type=datetime-local], input[type=month], input[type=range], input[type=time],
@@ -176,7 +177,7 @@ textarea {
   z-index: 0;
 }
 
-/* text */
+/* text align */
 .txt--c {
   text-align: center;
 }
@@ -210,6 +211,14 @@ textarea {
 
 .txt--r-i {
   text-align: right !important;
+}
+
+.color-fff {
+  color: #fff;
+}
+
+.color-666 {
+  color: #666666;
 }
 
 /* padding */
@@ -258,6 +267,7 @@ textarea {
 }
 
 /* margin */
+/* margin left */
 .ml--10 {
   margin-left: 1rem;
 }
@@ -270,10 +280,7 @@ textarea {
   margin-left: 2rem;
 }
 
-.mt--0 {
-  margin-top: 0 !important;
-}
-
+/* margin right */
 .mr--10 {
   margin-right: 1rem;
 }
@@ -284,6 +291,11 @@ textarea {
 
 .mr--20 {
   margin-right: 2rem;
+}
+
+/* margin top */
+.mt--0 {
+  margin-top: 0 !important;
 }
 
 .mt--10 {
@@ -306,6 +318,7 @@ textarea {
   margin-top: 8rem;
 }
 
+/* margin bottom */
 .mb--36 {
   margin-bottom: 3.6rem;
 }
@@ -366,14 +379,6 @@ textarea {
 
 .borderR-7 {
   border-radius: 0.7rem;
-}
-
-.color-fff {
-  color: #fff;
-}
-
-.color-666 {
-  color: #666666;
 }
 
 @media all and (max-width: 767px) {
@@ -3239,6 +3244,14 @@ button.mo_only {
 
 .notBorderRight table thead th:not(:first-child), .notBorderRight table tbody td:not(:first-child) {
   border-right: 0;
+}
+
+.noborderRightAll * {
+  border-right: 0 !important;
+}
+
+.noborderAll * {
+  border: 0 !important;
 }
 
 .qna__container {
