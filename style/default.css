@@ -680,6 +680,15 @@ textarea {
   padding-top: 3.6rem;
 }
 
+/* font-weight */
+.font-thin {
+  font-weight: 400 !important;
+}
+
+.font-thin td, .font-thin th {
+  font-weight: 400;
+}
+
 /* font */
 @font-face {
   font-family: "Pretendard GOV";
