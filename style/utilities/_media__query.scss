@@ -215,15 +215,18 @@
   .header__gnb {display: none;}
   footer .inner {height: auto;}
   .inner { width: 100%; padding: 0 1.6rem;} 
-  .btn__control {width: 100%;}
   .header__btm {height: 6.4rem;}
   .tab__wrap {padding: 0;}
   .calender__body {width: 100%;}
   .preview {height: 4.8rem;}
-  .btn__add, .btn__remove {height: 4.8rem;}
   .ly__cont {margin-top: 3.6rem;}
 
+  // button
+  .btn__s.height--res-768 {height: 5.6rem;} // 2024.11.04 이민혁 반응형 버튼 높이 위해 이민혁 추가
   .btn__down {background-color: #246BEB; color: #fff; border: 0;}
+  .btn__add, .btn__remove {height: 4.8rem;}
+  .btn__control {width: 100%;}
+
   .login__page #login__body {padding-top: 0;}
   input[type="text"], select {min-height: 4.8rem;}
   .count__group .count:nth-child(1), .count__group .count:nth-child(2) { margin-bottom: 1.6rem; }
