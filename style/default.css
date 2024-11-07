@@ -4121,6 +4121,10 @@ button.mo_only {
   font-size: 1.7rem;
 }
 
+.mo__slide > table tr.is-open td {
+  display: flex;
+}
+
 .mo__slide > table th {
   background: transparent;
 }
@@ -4170,10 +4174,29 @@ button.mo_only {
 }
 
 .mo__slide > table .t__title {
-  margin-top: 2rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 0.1rem solid #ddd;
   display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mo__slide > table tr.is-open .t__title.arrow::after {
+  transform: rotate(180deg);
+}
+
+.t__title.arrow::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/acordian__arrow__down.png) no-repeat center;
+  align-self: center;
+}
+
+.t__title.arrow > span {
+  margin-left: auto;
+  margin-right: 0.8rem;
 }
 
 .mo__slide > table tr td {
@@ -4181,6 +4204,7 @@ button.mo_only {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  display: none;
 }
 
 .mo__slide input {

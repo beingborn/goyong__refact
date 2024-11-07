@@ -216,18 +216,6 @@ $(document).ready(function () {
   $(document).on('change', '.file__post', displayFileNames)
 });
 
-/** 모바일 슬라이드 토글 */
-let dataOpen = $(".data--open");
-$(document).ready(function () {
-  dataOpen.click(function () {
-    var currentSlide = $(this).next(".mo__slide");
-    $(this).next(".mo__slide").slideToggle();
-    $(this).toggleClass("on").siblings().removeClass("on");
-    dataOpen.not($(this)).removeClass('on');
-    $(".mo__slide").not(currentSlide).slideUp();
-  });
-  $(".mo__slide").slideUp();
-});
 
 /* Modal */
 var $this;
@@ -250,4 +238,25 @@ $("#popup .close").on("click", function(event) {
   $(".bgPopup").fadeOut(400);
   $('body').removeClass('overflow-rock')
 });
+
+
+/** 모바일 슬라이드 토글 */
+let dataOpen = $(".data--open");
+$(document).ready(function () {
+  dataOpen.click(function () {
+    var currentSlide = $(this).next(".mo__slide");
+    $(this).next(".mo__slide").slideToggle();
+    $(this).toggleClass("on").siblings().removeClass("on");
+    dataOpen.not($(this)).removeClass('on');
+    $(".mo__slide").not(currentSlide).slideUp();
+  });
+  $(".mo__slide").slideUp();
+});
+
+/* t-title modal */
+$('.mo__slide > table .t__title').on('click', function(){
+  /* 클릭 시 자신을 포함한 tr을 찾아 해당 요소 내부에 td 모두 display block */
+  let parentTr = $(this).closest('tr');
+  parentTr.toggleClass('is-open')
+})
 
